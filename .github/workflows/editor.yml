@@ -44,7 +44,7 @@ jobs:
 
       - name: Exécuter le moteur
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY_QPC || secrets.GEMINI_API_KEY }}
           MODE: ${{ inputs.mode }}
         run: |
           args=""
