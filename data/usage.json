@@ -119,14 +119,89 @@
       "inputTokens": 930,
       "outputTokens": 56,
       "costUsd": 0.000419
+    },
+    {
+      "ts": "2026-10-24T22:36:12.871Z",
+      "date": "2026-10-25",
+      "month": "2026-10",
+      "runId": "20261024223451-849a",
+      "purpose": "generate",
+      "model": "gemini-3.8-flash",
+      "params": {
+        "temperature": 1,
+        "maxOutputTokens": 4096
+      },
+      "inputTokens": 3771,
+      "outputTokens": 2699,
+      "costUsd": 0.025899
+    },
+    {
+      "ts": "2026-10-24T22:36:13.603Z",
+      "date": "2026-10-25",
+      "month": "2026-10",
+      "runId": "20261024223451-849a",
+      "purpose": "judge",
+      "model": "gemini-3.5-flash-lite",
+      "params": {
+        "temperature": 0.2,
+        "maxOutputTokens": 1024
+      },
+      "inputTokens": 1102,
+      "outputTokens": 56,
+      "costUsd": 0.000471
+    },
+    {
+      "ts": "2026-10-24T22:41:14.614Z",
+      "date": "2026-10-25",
+      "month": "2026-10",
+      "runId": "20261024223451-849a",
+      "purpose": "generate",
+      "model": "gemini-3.8-flash",
+      "params": {
+        "temperature": 1,
+        "maxOutputTokens": 4096
+      },
+      "inputTokens": 3860,
+      "outputTokens": 4081,
+      "costUsd": 0.036398
+    },
+    {
+      "ts": "2026-10-24T22:42:39.519Z",
+      "date": "2026-10-25",
+      "month": "2026-10",
+      "runId": "20261024223451-849a",
+      "purpose": "generate",
+      "model": "gemini-3.8-flash",
+      "params": {
+        "temperature": 1,
+        "maxOutputTokens": 4096
+      },
+      "inputTokens": 3929,
+      "outputTokens": 2447,
+      "costUsd": 0.024246
+    },
+    {
+      "ts": "2026-10-24T22:42:40.237Z",
+      "date": "2026-10-25",
+      "month": "2026-10",
+      "runId": "20261024223451-849a",
+      "purpose": "judge",
+      "model": "gemini-3.5-flash-lite",
+      "params": {
+        "temperature": 0.2,
+        "maxOutputTokens": 1024
+      },
+      "inputTokens": 872,
+      "outputTokens": 56,
+      "costUsd": 0.000402
     }
   ],
   "monthly": {
     "2026-10": {
-      "costUsd": 0.090194,
-      "inputTokens": 15794,
-      "outputTokens": 9688,
-      "calls": 8
+      "costUsd": 0.17761,
+      "inputTokens": 29328,
+      "outputTokens": 19027,
+      "calls": 13
     }
   }
 }

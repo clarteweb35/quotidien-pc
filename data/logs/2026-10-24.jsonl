@@ -65,3 +65,28 @@
 {"ts":"2026-10-24T21:56:57.096Z","runId":"20261024215540-995b","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":930,"outputTokens":56,"costUsd":0.000419}
 {"ts":"2026-10-24T21:56:57.097Z","runId":"20261024215540-995b","level":"info","event":"judge.result","slot":"2026-10-24#x3","attempt":1,"humor":8,"coherence":9,"risk":1,"issues":[]}
 {"ts":"2026-10-24T21:56:57.099Z","runId":"20261024215540-995b","level":"info","event":"publish.ok","slot":"2026-10-24#x3","id":"163b795065ef","slug":"elections-en-ligne-un-protocole-officiel-exigera-une","url":"/articles/elections-en-ligne-un-protocole-officiel-exigera-une/","attempt":1,"dryRun":false}
+{"ts":"2026-10-24T22:34:52.314Z","runId":"20261024223451-849a","level":"info","event":"cycle.start","date":"2026-10-25","due":["2026-10-25#x1","2026-10-25#x2"],"remainingToday":8,"dryRun":false}
+{"ts":"2026-10-24T22:34:52.911Z","runId":"20261024223451-849a","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":32,"kept":25}
+{"ts":"2026-10-24T22:34:52.912Z","runId":"20261024223451-849a","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-10-24T22:34:52.912Z","runId":"20261024223451-849a","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":20}
+{"ts":"2026-10-24T22:34:52.912Z","runId":"20261024223451-849a","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":21}
+{"ts":"2026-10-24T22:34:52.912Z","runId":"20261024223451-849a","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":16}
+{"ts":"2026-10-24T22:34:52.912Z","runId":"20261024223451-849a","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":6}
+{"ts":"2026-10-24T22:34:52.912Z","runId":"20261024223451-849a","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":12}
+{"ts":"2026-10-24T22:34:52.913Z","runId":"20261024223451-849a","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":7}
+{"ts":"2026-10-24T22:34:52.913Z","runId":"20261024223451-849a","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":9}
+{"ts":"2026-10-24T22:34:52.913Z","runId":"20261024223451-849a","level":"info","event":"collect.done","items":132}
+{"ts":"2026-10-24T22:34:52.955Z","runId":"20261024223451-849a","level":"info","event":"topic.selection","slot":"2026-10-25#x1","candidates":132,"rejected":18,"chosen":"Présidentielle au Brésil : face à Flávio Bolsonaro, Lula retrouve du répondant","score":7}
+{"ts":"2026-10-24T22:36:12.872Z","runId":"20261024223451-849a","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.8-flash","inputTokens":3771,"outputTokens":2699,"costUsd":0.025899}
+{"ts":"2026-10-24T22:36:13.604Z","runId":"20261024223451-849a","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":1102,"outputTokens":56,"costUsd":0.000471}
+{"ts":"2026-10-24T22:36:13.604Z","runId":"20261024223451-849a","level":"info","event":"judge.result","slot":"2026-10-25#x1","attempt":1,"humor":7,"coherence":9,"risk":0,"issues":[]}
+{"ts":"2026-10-24T22:36:13.607Z","runId":"20261024223451-849a","level":"info","event":"publish.ok","slot":"2026-10-25#x1","id":"960c9e87e0d0","slug":"debats-une-enquete-confirme-scientifiquement-qu-avoir-une","url":"/articles/debats-une-enquete-confirme-scientifiquement-qu-avoir-une/","attempt":1,"dryRun":false}
+{"ts":"2026-10-24T22:36:13.607Z","runId":"20261024223451-849a","level":"info","event":"cycle.spacing","waitMinutes":4}
+{"ts":"2026-10-24T22:40:13.753Z","runId":"20261024223451-849a","level":"info","event":"topic.selection","slot":"2026-10-25#x2","candidates":132,"rejected":18,"chosen":"Ultra-trail : l'incroyable exploit d'Hugo Deck à la Diagonale des Fous","score":6}
+{"ts":"2026-10-24T22:40:16.150Z","runId":"20261024223451-849a","level":"warn","event":"gemini.retry","purpose":"generate","status":503,"attempt":1,"delayMs":4407}
+{"ts":"2026-10-24T22:41:14.615Z","runId":"20261024223451-849a","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.8-flash","inputTokens":3860,"outputTokens":4081,"costUsd":0.036398}
+{"ts":"2026-10-24T22:41:14.615Z","runId":"20261024223451-849a","level":"warn","event":"generate.malformed","slot":"2026-10-25#x2","attempt":1,"error":"Generation interrompue (finishReason=MAX_TOKENS)"}
+{"ts":"2026-10-24T22:42:39.519Z","runId":"20261024223451-849a","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.8-flash","inputTokens":3929,"outputTokens":2447,"costUsd":0.024246}
+{"ts":"2026-10-24T22:42:40.237Z","runId":"20261024223451-849a","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":872,"outputTokens":56,"costUsd":0.000402}
+{"ts":"2026-10-24T22:42:40.238Z","runId":"20261024223451-849a","level":"info","event":"judge.result","slot":"2026-10-25#x2","attempt":2,"humor":8,"coherence":9,"risk":1,"issues":[]}
+{"ts":"2026-10-24T22:42:40.239Z","runId":"20261024223451-849a","level":"info","event":"publish.ok","slot":"2026-10-25#x2","id":"90c80c93d34b","slug":"diagonale-des-fous-le-monde-du-sport-fascine-par-l-art-de","url":"/articles/diagonale-des-fous-le-monde-du-sport-fascine-par-l-art-de/","attempt":2,"dryRun":false}

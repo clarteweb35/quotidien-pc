@@ -1,0 +1,111 @@
+{
+  "date": "2026-10-25",
+  "target": 8,
+  "publishedCount": 2,
+  "articles": [
+    {
+      "id": "960c9e87e0d0",
+      "ref": "261025-X1",
+      "title": "Débats : une enquête confirme scientifiquement qu’avoir une réponse évite les silences gênants",
+      "category": "societe",
+      "slug": "debats-une-enquete-confirme-scientifiquement-qu-avoir-une"
+    },
+    {
+      "id": "90c80c93d34b",
+      "ref": "261025-X2",
+      "title": "Diagonale des Fous : le monde du sport fasciné par l'art de gravir 10 000 mètres pour éviter de prendre le car",
+      "category": "sport",
+      "slug": "diagonale-des-fous-le-monde-du-sport-fascine-par-l-art-de"
+    }
+  ],
+  "slots": [
+    {
+      "idx": 0,
+      "hhmm": "07:00",
+      "status": "pending",
+      "attempts": 0
+    },
+    {
+      "idx": 1,
+      "hhmm": "09:00",
+      "status": "pending",
+      "attempts": 0
+    },
+    {
+      "idx": 2,
+      "hhmm": "11:00",
+      "status": "pending",
+      "attempts": 0
+    },
+    {
+      "idx": 3,
+      "hhmm": "13:00",
+      "status": "pending",
+      "attempts": 0
+    },
+    {
+      "idx": 4,
+      "hhmm": "15:00",
+      "status": "pending",
+      "attempts": 0
+    },
+    {
+      "idx": 5,
+      "hhmm": "17:30",
+      "status": "pending",
+      "attempts": 0
+    },
+    {
+      "idx": 6,
+      "hhmm": "19:30",
+      "status": "pending",
+      "attempts": 0
+    },
+    {
+      "idx": 7,
+      "hhmm": "21:30",
+      "status": "pending",
+      "attempts": 0
+    },
+    {
+      "idx": "x1",
+      "hhmm": "manuel",
+      "attempts": 1,
+      "status": "published",
+      "startedAt": "2026-10-24T22:34:52.914Z",
+      "articleId": "960c9e87e0d0",
+      "publishedAt": "2026-10-24T22:34:52.914Z",
+      "topicId": "43812540832e",
+      "lastError": null
+    },
+    {
+      "idx": "x2",
+      "hhmm": "manuel",
+      "attempts": 1,
+      "status": "published",
+      "startedAt": "2026-10-24T22:40:13.707Z",
+      "articleId": "90c80c93d34b",
+      "publishedAt": "2026-10-24T22:40:13.707Z",
+      "topicId": "e7cc9330e19e",
+      "lastError": null
+    }
+  ],
+  "rejections": 0,
+  "quarantined": 0,
+  "api": {
+    "calls": 5,
+    "inputTokens": 13534,
+    "outputTokens": 9339,
+    "costUsd": 0.087416,
+    "dailyCapUsd": 1,
+    "monthCostUsd": 0.17761,
+    "monthlyCapUsd": 15
+  },
+  "paused": false,
+  "lastRun": {
+    "at": "2026-10-24T22:34:51.905Z",
+    "runId": "20261024223451-849a",
+    "published": 2,
+    "stopped": null
+  }
+}
