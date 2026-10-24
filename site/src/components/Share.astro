@@ -1,0 +1,76 @@
+---
+import { siFacebook, siX, siWhatsapp, siBluesky, siTelegram } from 'simple-icons';
+import { siteName } from '../lib/site';
+
+interface Props { title: string; url: string; id?: string }
+const { title, url, id = 'share' } = Astro.props;
+
+// Le texte partage rappelle la nature satirique: sur un reseau, seul le titre est visible.
+const text = `${title} (article satirique, ${siteName})`;
+const u = encodeURIComponent(url);
+const t = encodeURIComponent(text);
+const targets = [
+  { name: 'Facebook', icon: siFacebook.path, href: `https://www.facebook.com/sharer/sharer.php?u=${u}` },
+  { name: 'X', icon: siX.path, href: `https://twitter.com/intent/tweet?url=${u}&text=${t}` },
+  { name: 'WhatsApp', icon: siWhatsapp.path, href: `https://wa.me/?text=${encodeURIComponent(`${text} ${url}`)}` },
+  { name: 'Bluesky', icon: siBluesky.path, href: `https://bsky.app/intent/compose?text=${encodeURIComponent(`${text} ${url}`)}` },
+  { name: 'Telegram', icon: siTelegram.path, href: `https://t.me/share/url?url=${u}&text=${t}` },
+];
+const mail = `mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(`${text}\n\n${url}`)}`;
+---
+<div class="share" id={id} data-url={url} data-title={title} data-text={text}>
+  <span class="share-label">Partager</span>
+  <ul>
+    {targets.map((s) => (
+      <li>
+        <a href={s.href} target="_blank" rel="noopener noreferrer" aria-label={`Partager sur ${s.name}`} title={s.name}>
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d={s.icon} fill="currentColor" /></svg>
+        </a>
+      </li>
+    ))}
+    <li>
+      <a href={mail} aria-label="Envoyer par e-mail" title="E-mail">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1.6 2L12 12.4 19.4 7zM4 8.9V17h16V8.9l-8 5.8z" fill="currentColor" /></svg>
+      </a>
+    </li>
+    <li>
+      <button type="button" class="share-copy" aria-label="Copier le lien" title="Copier le lien">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" /><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" /></g></svg>
+      </button>
+    </li>
+    <li class="share-native-wrap" hidden>
+      <button type="button" class="share-native" aria-label="Partager avec une application" title="Partager…">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M18 16a3 3 0 0 0-2.1.9l-6.9-4a3.2 3.2 0 0 0 0-1.8l6.9-4A3 3 0 1 0 15 5a3 3 0 0 0 .1.9l-6.9 4a3 3 0 1 0 0 4.2l6.9 4A3 3 0 1 0 18 16z" fill="currentColor" /></svg>
+      </button>
+    </li>
+  </ul>
+  <span class="share-status" role="status" aria-live="polite"></span>
+</div>
+
+<script>
+  // Ameliorations facultatives: sans JavaScript, les liens de partage fonctionnent quand meme.
+  document.querySelectorAll<HTMLElement>('.share').forEach((box) => {
+    if ((box as HTMLElement & { _init?: boolean })._init) return;
+    (box as HTMLElement & { _init?: boolean })._init = true;
+    const status = box.querySelector<HTMLElement>('.share-status')!;
+    const say = (msg: string) => { status.textContent = msg; setTimeout(() => { status.textContent = ''; }, 2500); };
+    const data = box.dataset as { url: string; title: string; text: string };
+
+    box.querySelector('.share-copy')?.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(data.url);
+        say('Lien copié');
+      } catch {
+        window.prompt('Copiez ce lien :', data.url);
+      }
+    });
+
+    if (typeof navigator.share === 'function') {
+      const wrap = box.querySelector<HTMLElement>('.share-native-wrap');
+      if (wrap) wrap.hidden = false;
+      box.querySelector('.share-native')?.addEventListener('click', async () => {
+        try { await navigator.share({ title: data.title, text: data.text, url: data.url }); } catch { /* annule par l'utilisateur */ }
+      });
+    }
+  });
+</script>
