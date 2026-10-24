@@ -206,3 +206,18 @@ test('identite: le nom du journal est celui de la marque dans la configuration e
   assert.equal(ctx.cfg.editorial.logoName.sub, 'PRESQUE CERTAIN');
   cleanup(ctx);
 });
+
+test('extra --count 3: trois articles dans un lancement, references distinctes, plafond quotidien respecte', async () => {
+  const ctx = makeCtx({ at: '2026-10-24T05:05:00Z' });
+  ctx.extra = true;
+  ctx.count = 3;
+  const r = await runCycle(ctx);
+  assert.equal(r.published.length, 3);
+  assert.deepEqual(r.published.map((p) => p.ref).sort(), ['261024-X1', '261024-X2', '261024-X3']);
+  ctx.count = 9; // demande excessive: borne a 4, puis au plafond du jour
+  ctx.cfg.schedule.maxPerDay = 5;
+  const r2 = await runCycle(ctx);
+  assert.equal(r2.published.length, 2); // 5 - 3 deja publies
+  assert.equal(ctx.store.publishedCount('2026-10-24'), 5);
+  cleanup(ctx);
+});

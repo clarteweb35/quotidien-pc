@@ -37,7 +37,9 @@ import Base from '../../layouts/Base.astro';
         <div id="dash">Chargement…</div>
         <button id="toggle-pause"></button>
         <button class="alt" id="run-now">Lancer un cycle maintenant</button>
-        <button class="alt" id="run-extra">Générer un article supplémentaire</button>
+        <label for="extra-count" style="display:inline">Articles supplémentaires :</label>
+        <select id="extra-count" style="width:auto"><option>1</option><option>2</option><option>3</option><option>4</option></select>
+        <button class="alt" id="run-extra">Les générer maintenant</button>
         <button class="alt" id="run-dry">Essai à blanc (sans publication)</button>
         <div id="runmsg" class="hint"></div>
       </section>
@@ -193,7 +195,7 @@ import Base from '../../layouts/Base.astro';
         await writeJson('config/control.json', c, 'admin: ' + (c.paused ? 'suspension' : 'reprise') + ' de l\'automatisation');
       });
       $('run-now').addEventListener('click', () => dispatch({ mode: 'normal' }).catch((e) => say('runmsg', e.message, false)));
-      $('run-extra').addEventListener('click', () => dispatch({ mode: 'extra' }).catch((e) => say('runmsg', e.message, false)));
+      $('run-extra').addEventListener('click', () => dispatch({ mode: 'extra', count: $('extra-count').value }).catch((e) => say('runmsg', e.message, false)));
       $('run-dry').addEventListener('click', () => dispatch({ mode: 'dry-run' }).catch((e) => say('runmsg', e.message, false)));
       guard('save-schedule', async () => {
         const slots = $('slots').value.split(',').map((s) => s.trim()).filter(Boolean);

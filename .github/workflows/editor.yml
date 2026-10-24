@@ -13,6 +13,11 @@ on:
         type: choice
         default: normal
         options: [normal, extra, dry-run, force-catchup]
+      count:
+        description: 'Nombre d''articles à publier (mode extra uniquement, 1 à 4, dans la limite de 8 par jour)'
+        type: choice
+        default: '1'
+        options: ['1', '2', '3', '4']
 
 # Un seul cycle à la fois, sans jamais en annuler un en cours (verrou contre les exécutions simultanées).
 concurrency:
@@ -25,7 +30,7 @@ permissions:
 jobs:
   engine:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     permissions:
       contents: write
       issues: write
@@ -49,10 +54,11 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY_QPC || secrets.GEMINI_API_KEY }}
           MODE: ${{ inputs.mode }}
+          COUNT: ${{ inputs.count }}
         run: |
           args=""
           case "$MODE" in
-            extra) args="--extra" ;;
+            extra) args="--extra --count ${COUNT:-1}" ;;
             dry-run) args="--dry-run" ;;
             force-catchup) args="--force-catchup" ;;
           esac

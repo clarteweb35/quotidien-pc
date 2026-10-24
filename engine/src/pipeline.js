@@ -43,8 +43,11 @@ export async function runCycle(ctx) {
       result.stopped = 'daily_cap';
       return result;
     }
-    const n = Object.keys(store.state.slots[date] ?? {}).filter((k) => k.startsWith('x')).length + 1;
-    slots = [{ idx: `x${n}`, hhmm: 'manuel', key: `${date}#x${n}` }];
+    // Jusqu'a ctx.count articles (1 a 4) dans ce lancement, sans jamais depasser le plafond quotidien.
+    const wanted = Math.max(1, Math.min(Number(ctx.count) || 1, 4, remainingToday));
+    const used = Object.keys(store.state.slots[date] ?? {}).filter((k) => /^x\d+$/.test(k)).map((k) => Number(k.slice(1)));
+    const first = (used.length ? Math.max(...used) : 0) + 1;
+    slots = Array.from({ length: wanted }, (_, i) => ({ idx: `x${first + i}`, hhmm: 'manuel', key: `${date}#x${first + i}` }));
   } else {
     slots = due;
   }

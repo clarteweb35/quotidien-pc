@@ -51,6 +51,7 @@ async function main() {
       }
       const ctx = buildContext({ mock, dryRun: flag('dry-run') });
       ctx.extra = flag('extra');
+      ctx.count = Number(opt('count') ?? 1);
       ctx.forceCatchup = flag('force-catchup');
       const release = ctx.store.acquireLock();
       try {
@@ -180,7 +181,7 @@ async function main() {
 
     default:
       console.log(`Usage: node engine/src/cli.js <commande>
-  run [--dry-run] [--extra] [--force-catchup] [--mock]   Exécute un cycle (créneaux dus)
+  run [--dry-run] [--extra [--count N]] [--force-catchup] [--mock]   Exécute un cycle (créneaux dus ; --extra --count 3 = 3 articles de plus)
   simulate [--date AAAA-MM-JJ] [--keep] [--verbose]       Journée complète simulée (faux Gemini, aucun effet réel)
   report [AAAA-MM-JJ]                                     Bilan quotidien
   check-config                                            Valide la configuration
