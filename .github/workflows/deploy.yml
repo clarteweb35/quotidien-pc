@@ -1,0 +1,82 @@
+name: Déploiement du site
+
+# Variables du dépôt (Settings > Secrets and variables > Actions > Variables) :
+#   SITE_URL        URL publique, ex. https://votre-domaine.fr
+#   SITE_BASE       '/' avec domaine personnalisé (défaut) ; '/nom-du-depot/' sinon
+#   CUSTOM_DOMAIN   (optionnel) domaine personnalisé GitHub Pages
+#   DEPLOY_TARGET   'github-pages' (défaut) ou 'ovh-ftp' (hébergement OVH, voir docs/DEPLOIEMENT.md)
+on:
+  push:
+    branches: [main]
+    paths: ['site/**', 'config/categories.json', 'config/editorial.json', 'package.json']
+  workflow_call:
+  workflow_dispatch:
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Construire le site
+        env:
+          SITE_URL: ${{ vars.SITE_URL }}
+          SITE_BASE: ${{ vars.SITE_BASE }}
+        run: npm run site:build
+      - name: Domaine personnalisé
+        if: ${{ vars.CUSTOM_DOMAIN != '' }}
+        run: echo "${{ vars.CUSTOM_DOMAIN }}" > site/dist/CNAME
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/dist
+      - uses: actions/upload-artifact@v4
+        with:
+          name: site-dist
+          path: site/dist
+          retention-days: 7
+
+  pages:
+    needs: build
+    if: ${{ vars.DEPLOY_TARGET != 'ovh-ftp' }}
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+
+  ovh-ftp:
+    needs: build
+    if: ${{ vars.DEPLOY_TARGET == 'ovh-ftp' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: site-dist
+          path: dist
+      - uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.OVH_FTP_HOST }}
+          username: ${{ secrets.OVH_FTP_USER }}
+          password: ${{ secrets.OVH_FTP_PASSWORD }}
+          protocol: ftps
+          local-dir: ./dist/
+          server-dir: ${{ vars.OVH_FTP_DIR || 'www/' }}

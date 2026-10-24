@@ -1,0 +1,14 @@
+{
+  "note": "Flux RSS publics de syndication. Seuls titre, resume court et URL sont lus: le texte des articles source n'est jamais reproduit. Verifiez les conditions d'utilisation de chaque flux avant mise en production. Un flux en erreur est ignore sans bloquer le cycle.",
+  "feeds": [
+    { "id": "franceinfo-une", "name": "franceinfo", "url": "https://www.franceinfo.fr/titres.rss", "category": "societe", "enabled": true },
+    { "id": "lemonde-une", "name": "Le Monde", "url": "https://www.lemonde.fr/rss/une.xml", "category": "societe", "enabled": true },
+    { "id": "liberation", "name": "Libération", "url": "https://www.liberation.fr/arc/outboundfeeds/rss-all/collection/accueil-une/?outputType=xml", "category": "societe", "enabled": true },
+    { "id": "france24", "name": "France 24", "url": "https://www.france24.com/fr/rss", "category": "monde", "enabled": true },
+    { "id": "lemonde-eco", "name": "Le Monde - Économie", "url": "https://www.lemonde.fr/economie/rss_full.xml", "category": "economie", "enabled": true },
+    { "id": "lemonde-pixels", "name": "Le Monde - Pixels", "url": "https://www.lemonde.fr/pixels/rss_full.xml", "category": "tech", "enabled": true },
+    { "id": "lemonde-culture", "name": "Le Monde - Culture", "url": "https://www.lemonde.fr/culture/rss_full.xml", "category": "culture", "enabled": true },
+    { "id": "lemonde-sport", "name": "Le Monde - Sport", "url": "https://www.lemonde.fr/sport/rss_full.xml", "category": "sport", "enabled": true },
+    { "id": "lemonde-planete", "name": "Le Monde - Planète", "url": "https://www.lemonde.fr/planete/rss_full.xml", "category": "environnement", "enabled": true }
+  ]
+}

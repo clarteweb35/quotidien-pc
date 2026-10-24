@@ -1,0 +1,16 @@
+---
+import Base from '../../layouts/Base.astro';
+import Card from '../../components/Card.astro';
+import { allArticles } from '../../lib/site';
+
+export async function getStaticPaths() {
+  const articles = await allArticles();
+  const tags = [...new Set(articles.flatMap((a) => a.data.tags))];
+  return tags.map((tag) => ({ params: { tag }, props: { tag, items: articles.filter((a) => a.data.tags.includes(tag)) } }));
+}
+const { tag, items } = Astro.props;
+---
+<Base title={`#${tag}`} description={`Articles sur le thème « ${tag} ».`}>
+  <div class="page-head"><span class="kicker">Mot-clé</span><h1>#{tag}</h1></div>
+  <div class="grid">{items.map((a) => <Card article={a} />)}</div>
+</Base>

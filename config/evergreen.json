@@ -1,0 +1,25 @@
+{
+  "note": "Reserve de themes intemporels. Aucun evenement reel n'est invente: ce sont des situations de societe generiques.",
+  "themes": [
+    { "id": "ev-reunion-mail", "category": "societe", "theme": "La réunion qui aurait pu être un e-mail, et l'e-mail qui aurait pu ne pas exister" },
+    { "id": "ev-wifi-train", "category": "societe", "theme": "Le Wi-Fi du train, ce mythe fondateur du voyageur français" },
+    { "id": "ev-boulangerie-file", "category": "societe", "theme": "La file d'attente de la boulangerie le dimanche matin comme institution sociale" },
+    { "id": "ev-dossier-administratif", "category": "societe", "theme": "Le formulaire qui demande un justificatif de l'existence d'un autre justificatif" },
+    { "id": "ev-appli-notifs", "category": "tech", "theme": "Les notifications d'applications qui ont des opinions sur notre mode de vie" },
+    { "id": "ev-mot-de-passe", "category": "tech", "theme": "Le mot de passe qui doit contenir une majuscule, un chiffre et une raison de vivre" },
+    { "id": "ev-ia-assistant", "category": "tech", "theme": "L'assistant virtuel qui s'excuse de ne pas comprendre pour la septième fois" },
+    { "id": "ev-meteo-conversation", "category": "societe", "theme": "La météo, dernier sujet de conversation consensuel de l'ascenseur" },
+    { "id": "ev-rentree", "category": "societe", "theme": "La rentrée, ses bonnes résolutions et leur durée de vie moyenne" },
+    { "id": "ev-trottoir", "category": "societe", "theme": "Le débat national sur le partage du trottoir" },
+    { "id": "ev-comite", "category": "politique", "theme": "Le comité chargé d'étudier l'opportunité de créer un comité" },
+    { "id": "ev-rapport", "category": "politique", "theme": "Le rapport de 400 pages qui conclut qu'il faudra un second rapport" },
+    { "id": "ev-inflation-caddie", "category": "economie", "theme": "Le caddie qui rétrécit plus vite que les prévisions ne l'avaient annoncé" },
+    { "id": "ev-teletravail", "category": "economie", "theme": "Le télétravail et la redécouverte du voisinage à 11 heures du matin" },
+    { "id": "ev-sport-commentaire", "category": "sport", "theme": "Le commentateur sportif qui découvre que le ballon est rond, une fois de plus" },
+    { "id": "ev-festival-ete", "category": "culture", "theme": "Le festival d'été et sa programmation de têtes d'affiche toutes plus inattendues les unes que les autres" },
+    { "id": "ev-recyclage", "category": "environnement", "theme": "Le tri sélectif et la poubelle jaune qui juge nos choix" },
+    { "id": "ev-ventilateur", "category": "environnement", "theme": "Le ventilateur, grand gagnant silencieux de chaque été" },
+    { "id": "ev-sommet", "category": "monde", "theme": "Le sommet international dont la photo de famille est le principal résultat concret" },
+    { "id": "ev-rentree-litteraire", "category": "culture", "theme": "La rentrée littéraire et ses 500 romans dont un seul sera lu jusqu'au bout" }
+  ]
+}

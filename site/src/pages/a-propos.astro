@@ -1,0 +1,20 @@
+---
+import Base from '../layouts/Base.astro';
+import { siteName, satireNotice } from '../lib/site';
+---
+<Base title="À propos" description={`Qui fait ${siteName} ? Personne de sérieux.`}>
+  <div class="prose">
+    <div class="page-head"><h1>À propos</h1></div>
+    <p><strong>{siteName}</strong> est un journal satirique francophone. Chaque jour, une rédaction automatisée s'inspire de l'actualité et des travers de notre époque pour en faire des fictions humoristiques.</p>
+    <h2>Notre méthode</h2>
+    <p>Les textes sont rédigés avec l'aide d'une intelligence artificielle générative, puis soumis à une série de contrôles automatiques : détection des doublons, vérification du format, recherche de citations attribuées à des personnes réelles, évaluation des risques. Un article qui échoue à ces contrôles n'est pas publié.</p>
+    <h2>Nos règles</h2>
+    <ul>
+      <li>La satire vise les institutions, les discours et les comportements collectifs, pas les personnes vulnérables.</li>
+      <li>Nous n'inventons jamais de citation attribuée à une personne réelle.</li>
+      <li>Nous ne traitons pas les drames et les faits divers douloureux.</li>
+      <li>Tout article est clairement signalé comme satirique.</li>
+    </ul>
+    <div class="satire-box"><strong>Rappel.</strong> {satireNotice}</div>
+  </div>
+</Base>

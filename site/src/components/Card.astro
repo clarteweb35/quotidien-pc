@@ -1,0 +1,26 @@
+---
+import { category, formatDate, url, type Article } from '../lib/site';
+interface Props { article: Article; lead?: boolean }
+const { article, lead = false } = Astro.props;
+const d = article.data;
+const cat = category(d.category);
+const href = url(`articles/${d.slug}/`);
+---
+{lead ? (
+  <article class="lead">
+    <div>
+      <a class="kicker" href={url(`rubrique/${cat.slug}/`)}>{cat.name}</a>
+      <h2><a href={href}>{d.title}</a></h2>
+      <p>{d.chapo}</p>
+      <div class="meta">{formatDate(d.publishedAt)}</div>
+    </div>
+    <a href={href} tabindex="-1" aria-hidden="true"><div class="cover" style={`--c:${cat.color}`}><span>{cat.name}</span></div></a>
+  </article>
+) : (
+  <article class="card">
+    <a href={href} tabindex="-1" aria-hidden="true"><div class="cover" style={`--c:${cat.color}`}><span>{cat.name}</span></div></a>
+    <h3><a href={href}>{d.title}</a></h3>
+    <p>{d.chapo}</p>
+    <div class="meta">{formatDate(d.publishedAt)}</div>
+  </article>
+)}

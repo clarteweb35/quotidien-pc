@@ -1,0 +1,22 @@
+---
+import Base from '../layouts/Base.astro';
+import { siteName, satireNotice } from '../lib/site';
+---
+<Base title="Mentions légales" description="Mentions légales et avertissement satirique.">
+  <div class="prose">
+    <div class="page-head"><h1>Mentions légales</h1></div>
+    <p><em>Modèle à compléter : la loi française impose d'identifier l'éditeur du site et son hébergeur.</em></p>
+    <h2>Éditeur</h2>
+    <p>[Nom ou raison sociale, adresse, e-mail de contact, directeur de la publication]</p>
+    <h2>Hébergement</h2>
+    <p>[Nom et adresse de l'hébergeur — par exemple GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis, si le site est servi par GitHub Pages]</p>
+    <h2>Nature du contenu</h2>
+    <p>{satireNotice}</p>
+    <h2>Contenus générés par IA</h2>
+    <p>Les articles de {siteName} sont rédigés avec l'aide d'une intelligence artificielle générative. Ils sont publiés après des contrôles automatiques.</p>
+    <h2>Signaler un contenu</h2>
+    <p>Pour demander la modification ou le retrait d'un contenu, écrivez à [adresse de contact]. Nous répondons rapidement.</p>
+    <h2>Données personnelles</h2>
+    <p>Ce site ne dépose aucun cookie de suivi et ne collecte aucune donnée personnelle.</p>
+  </div>
+</Base>

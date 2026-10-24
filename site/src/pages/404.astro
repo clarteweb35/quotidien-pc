@@ -1,0 +1,11 @@
+---
+import Base from '../layouts/Base.astro';
+import { url } from '../lib/site';
+---
+<Base title="Page introuvable" noindex>
+  <div class="empty">
+    <h1>404 — Cette page n'existe pas</h1>
+    <p>Contrairement à nos articles, cette absence est bien réelle.</p>
+    <p><a href={url()}>Retour à la une</a></p>
+  </div>
+</Base>

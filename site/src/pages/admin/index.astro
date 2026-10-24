@@ -1,0 +1,232 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+<Base title="Administration" noindex csp="default-src 'none'; script-src 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src https://api.github.com; base-uri 'none'; form-action 'none'">
+  <style>
+    .adm { font-family: var(--sans); font-size: .92rem; line-height: 1.5; }
+    .adm h1 { font-size: 1.8rem; } .adm h2 { font-size: 1.15rem; margin: 0 0 8px; }
+    .adm section { border: 1px solid var(--rule); padding: 14px 16px; margin: 14px 0; background: var(--paper-2); }
+    .adm label { display: block; font-weight: 600; margin: 10px 0 4px; }
+    .adm input, .adm textarea, .adm select { width: 100%; padding: 8px; font: inherit; background: var(--paper); color: var(--ink); border: 1px solid var(--rule); }
+    .adm textarea { min-height: 180px; font-family: ui-monospace, Consolas, monospace; font-size: .82rem; }
+    .adm button { padding: 8px 14px; font: 600 .88rem var(--sans); cursor: pointer; background: var(--ink); color: var(--paper); border: 0; margin: 8px 8px 0 0; }
+    .adm button.alt { background: transparent; color: var(--ink); border: 1px solid var(--ink); }
+    .adm .row { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
+    .adm table { width: 100%; border-collapse: collapse; } .adm td, .adm th { text-align: left; padding: 4px 8px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+    .adm .ok { color: #15803d; } .adm .ko { color: var(--accent); } .adm pre { white-space: pre-wrap; max-height: 320px; overflow: auto; font-size: .78rem; }
+    .adm .hint { color: var(--ink-2); font-size: .82rem; }
+  </style>
+  <div class="adm">
+    <h1>Administration</h1>
+    <p class="hint">Cette page ne contient aucun secret. Elle agit sur le dépôt GitHub avec <strong>votre</strong> jeton personnel (limité à ce dépôt), conservé uniquement dans l'onglet courant. Sans jeton valide, elle ne peut rien lire ni modifier.</p>
+
+    <section id="login">
+      <h2>Connexion</h2>
+      <div class="row">
+        <div><label for="repo">Dépôt (compte/nom)</label><input id="repo" placeholder="moncompte/quotidien-pc" autocomplete="off" /></div>
+        <div><label for="branch">Branche</label><input id="branch" value="main" /></div>
+      </div>
+      <label for="token">Jeton GitHub à granularité fine (Contents + Actions : lecture/écriture)</label>
+      <input id="token" type="password" autocomplete="off" />
+      <button id="connect">Se connecter</button><span id="loginmsg" class="hint"></span>
+    </section>
+
+    <div id="app" hidden>
+      <section>
+        <h2>Tableau de bord</h2>
+        <div id="dash">Chargement…</div>
+        <button id="toggle-pause"></button>
+        <button class="alt" id="run-now">Lancer un cycle maintenant</button>
+        <button class="alt" id="run-extra">Générer un article supplémentaire</button>
+        <button class="alt" id="run-dry">Essai à blanc (sans publication)</button>
+        <div id="runmsg" class="hint"></div>
+      </section>
+
+      <section>
+        <h2>Calendrier</h2>
+        <label for="slots">Créneaux (heure de Paris, séparés par des virgules, format HH:MM)</label><input id="slots" />
+        <div class="row">
+          <div><label for="maxPerDay">Maximum par jour</label><input id="maxPerDay" type="number" min="1" max="24" /></div>
+          <div><label for="catchup">Rattrapage (minutes)</label><input id="catchup" type="number" min="0" max="720" /></div>
+          <div><label for="perRun">Maximum par exécution</label><input id="perRun" type="number" min="1" max="8" /></div>
+        </div>
+        <button id="save-schedule">Enregistrer le calendrier</button>
+      </section>
+
+      <section>
+        <h2>Budget API</h2>
+        <div class="row">
+          <div><label for="daily">Plafond quotidien (USD)</label><input id="daily" type="number" step="0.05" min="0.05" /></div>
+          <div><label for="monthly">Plafond mensuel (USD)</label><input id="monthly" type="number" step="0.5" min="0.5" /></div>
+          <div><label for="gen">Modèle de rédaction</label><input id="gen" /></div>
+          <div><label for="judge">Modèle de relecture</label><input id="judge" /></div>
+        </div>
+        <p class="hint">Un modèle absent de la table des tarifs (config/engine.json) bloque le moteur : ajoutez son tarif avant de le changer.</p>
+        <button id="save-budget">Enregistrer</button>
+      </section>
+
+      <section>
+        <h2>Éditorial (instructions Gemini, fichiers config/prompts/)</h2>
+        <label>Rubriques prioritaires</label><div id="prio"></div>
+        <label for="gprompt">Instructions de rédaction (Gemini)</label><textarea id="gprompt"></textarea>
+        <label for="jprompt">Instructions de relecture (second appel)</label><textarea id="jprompt"></textarea>
+        <button id="save-editorial">Enregistrer l'éditorial</button>
+      </section>
+
+      <section><h2>Articles publiés</h2><div id="articles">…</div></section>
+      <section><h2>Quarantaine et rejets</h2><div id="quarantine">…</div></section>
+      <section><h2>Journal (avertissements et erreurs)</h2><pre id="logs">…</pre></section>
+    </div>
+  </div>
+
+  <script is:inline>
+    (function () {
+      const $ = (id) => document.getElementById(id);
+      const API = 'https://api.github.com';
+      const S = { repo: '', branch: 'main', token: '' };
+      const store = {
+        get(k) { try { return sessionStorage.getItem(k) || ''; } catch { return ''; } },
+        set(k, v) { try { sessionStorage.setItem(k, v); } catch {} },
+      };
+      const b64d = (s) => new TextDecoder().decode(Uint8Array.from(atob(s.replace(/\n/g, '')), (c) => c.charCodeAt(0)));
+      const b64e = (s) => { const b = new TextEncoder().encode(s); let r = ''; b.forEach((x) => (r += String.fromCharCode(x))); return btoa(r); };
+      const el = (tag, text, cls) => { const e = document.createElement(tag); if (text !== undefined) e.textContent = text; if (cls) e.className = cls; return e; };
+
+      async function gh(path, opts = {}) {
+        const res = await fetch(API + '/repos/' + S.repo + path, {
+          ...opts,
+          headers: { Accept: 'application/vnd.github+json', Authorization: 'Bearer ' + S.token, 'X-GitHub-Api-Version': '2022-11-28', ...(opts.headers || {}) },
+        });
+        if (!res.ok) throw new Error('GitHub ' + res.status + ' : ' + (await res.text()).slice(0, 200));
+        return res.status === 204 ? null : res.json();
+      }
+      async function readFile(path) {
+        const j = await gh('/contents/' + path + '?ref=' + encodeURIComponent(S.branch));
+        return { text: b64d(j.content), sha: j.sha };
+      }
+      async function readJson(path, fallback) {
+        try { const f = await readFile(path); return { data: JSON.parse(f.text), sha: f.sha }; } catch (e) { if (fallback !== undefined) return { data: fallback, sha: null }; throw e; }
+      }
+      async function writeJson(path, data, message) {
+        const cur = await readJson(path);
+        await gh('/contents/' + path, { method: 'PUT', body: JSON.stringify({ message, content: b64e(JSON.stringify(data, null, 2) + '\n'), sha: cur.sha, branch: S.branch }) });
+      }
+      async function writeText(path, text, message) {
+        const cur = await readFile(path);
+        await gh('/contents/' + path, { method: 'PUT', body: JSON.stringify({ message, content: b64e(text), sha: cur.sha, branch: S.branch }) });
+      }
+      const say = (id, msg, ok) => { const e = $(id); e.textContent = msg; e.className = ok === false ? 'ko' : ok ? 'ok' : 'hint'; };
+
+      function parisDate() {
+        return new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Paris' }).format(new Date());
+      }
+
+      async function dispatch(inputs) {
+        await gh('/actions/workflows/editor.yml/dispatches', { method: 'POST', body: JSON.stringify({ ref: S.branch, inputs }) });
+        say('runmsg', 'Exécution demandée. Suivez-la dans l\'onglet Actions du dépôt (quelques secondes avant son démarrage).', true);
+      }
+
+      async function load() {
+        const [control, schedule, engine, editorial, cats] = await Promise.all([
+          readJson('config/control.json'), readJson('config/schedule.json'), readJson('config/engine.json'),
+          readJson('config/editorial.json'), readJson('config/categories.json'),
+        ]);
+        S.cfg = { control, schedule, engine, editorial };
+
+        const date = parisDate();
+        const report = (await readJson('data/reports/' + date + '.json', null)).data;
+        const dash = $('dash'); dash.textContent = '';
+        dash.append(el('p', control.data.paused ? 'Automatisation EN PAUSE' + (control.data.pauseReason ? ' : ' + control.data.pauseReason : '') : 'Automatisation active', control.data.paused ? 'ko' : 'ok'));
+        if (report) {
+          dash.append(el('p', report.publishedCount + ' / ' + report.target + ' articles publiés le ' + date + ' — coût API : ' + report.api.costUsd + ' USD (plafond ' + report.api.dailyCapUsd + ') — mois : ' + report.api.monthCostUsd + ' / ' + report.api.monthlyCapUsd + ' USD'));
+          const t = el('table'); t.append(Object.assign(el('tr'), {}));
+          report.slots.forEach((s) => { const tr = el('tr'); [s.hhmm, s.status, 'essais ' + (s.attempts || 0), s.lastError || ''].forEach((v) => tr.append(el('td', String(v)))); t.append(tr); });
+          dash.append(t);
+        } else dash.append(el('p', 'Aucun bilan pour aujourd\'hui (le moteur n\'a pas encore tourné).', 'hint'));
+        $('toggle-pause').textContent = control.data.paused ? 'Reprendre l\'automatisation' : 'Suspendre l\'automatisation';
+
+        $('slots').value = schedule.data.slots.join(', ');
+        $('maxPerDay').value = schedule.data.maxPerDay; $('catchup').value = schedule.data.catchupMinutes; $('perRun').value = schedule.data.maxPublicationsPerRun;
+        $('daily').value = engine.data.budget.dailyUsd; $('monthly').value = engine.data.budget.monthlyUsd;
+        $('gen').value = engine.data.gemini.generatorModel; $('judge').value = engine.data.gemini.judgeModel;
+        S.files = { gen: 'config/' + editorial.data.generatorPromptFile, judge: 'config/' + editorial.data.judgePromptFile };
+        $('gprompt').value = (await readFile(S.files.gen)).text; $('jprompt').value = (await readFile(S.files.judge)).text;
+        const prio = $('prio'); prio.textContent = '';
+        cats.data.categories.forEach((c) => {
+          const l = el('label'); l.style.fontWeight = '400'; l.style.display = 'inline-block'; l.style.marginRight = '14px';
+          const cb = document.createElement('input'); cb.type = 'checkbox'; cb.value = c.slug; cb.style.width = 'auto'; cb.checked = editorial.data.priorityCategories.includes(c.slug);
+          l.append(cb, ' ' + c.name); prio.append(l);
+        });
+
+        const list = await gh('/contents/site/src/content/articles?ref=' + encodeURIComponent(S.branch)).catch(() => []);
+        const arts = $('articles'); arts.textContent = '';
+        const files = list.filter((f) => f.name.endsWith('.md')).sort((a, b) => b.name.localeCompare(a.name)).slice(0, 40);
+        arts.append(el('p', files.length + ' derniers articles (affichés : les 40 plus récents)', 'hint'));
+        const ul = el('ul'); files.forEach((f) => ul.append(el('li', f.name.replace(/\.md$/, '')))); arts.append(ul);
+
+        const q = (await readJson('data/quarantine.json', { items: [], history: [] })).data;
+        const qb = $('quarantine'); qb.textContent = '';
+        qb.append(el('p', q.items.filter((i) => i.status === 'quarantined').length + ' en quarantaine. Publier ou écarter : voir le guide (commande « quarantine » du moteur).', 'hint'));
+        const qt = el('table');
+        q.history.slice(-15).reverse().forEach((h) => { const tr = el('tr'); [h.ts.slice(0, 16), h.slot, h.topic, (h.reasons || []).join(', ')].forEach((v) => tr.append(el('td', String(v)))); qt.append(tr); });
+        qb.append(qt);
+
+        const logText = await readFile('data/logs/' + date + '.jsonl').then((f) => f.text).catch(() => '');
+        const rows = logText.split('\n').filter(Boolean).map((l) => { try { return JSON.parse(l); } catch { return null; } }).filter((r) => r && (r.level === 'warn' || r.level === 'error'));
+        $('logs').textContent = rows.slice(-60).map((r) => r.ts.slice(11, 19) + ' ' + r.level.toUpperCase() + ' ' + r.event + ' ' + JSON.stringify(Object.fromEntries(Object.entries(r).filter(([k]) => !['ts', 'runId', 'level', 'event'].includes(k))))).join('\n') || 'Aucun avertissement aujourd\'hui.';
+      }
+
+      async function connect() {
+        S.repo = $('repo').value.trim(); S.branch = $('branch').value.trim() || 'main'; S.token = $('token').value.trim() || store.get('lgn_token');
+        if (!/^[\w.-]+\/[\w.-]+$/.test(S.repo) || !S.token) return say('loginmsg', 'Renseignez le dépôt et le jeton.', false);
+        try {
+          say('loginmsg', 'Connexion…');
+          await load();
+          store.set('lgn_token', S.token); store.set('lgn_repo', S.repo); store.set('lgn_branch', S.branch);
+          $('token').value = ''; $('app').hidden = false; say('loginmsg', 'Connecté à ' + S.repo, true);
+        } catch (e) { say('loginmsg', e.message, false); }
+      }
+
+      const guard = (id, fn) => $(id).addEventListener('click', async () => { try { await fn(); await load(); } catch (e) { say('runmsg', e.message, false); } });
+      guard('toggle-pause', async () => {
+        const c = S.cfg.control.data; c.paused = !c.paused; c.pauseReason = c.paused ? 'Suspendu depuis l\'administration' : '';
+        await writeJson('config/control.json', c, 'admin: ' + (c.paused ? 'suspension' : 'reprise') + ' de l\'automatisation');
+      });
+      $('run-now').addEventListener('click', () => dispatch({ mode: 'normal' }).catch((e) => say('runmsg', e.message, false)));
+      $('run-extra').addEventListener('click', () => dispatch({ mode: 'extra' }).catch((e) => say('runmsg', e.message, false)));
+      $('run-dry').addEventListener('click', () => dispatch({ mode: 'dry-run' }).catch((e) => say('runmsg', e.message, false)));
+      guard('save-schedule', async () => {
+        const slots = $('slots').value.split(',').map((s) => s.trim()).filter(Boolean);
+        if (!slots.every((s) => /^([01]\d|2[0-3]):[0-5]\d$/.test(s))) throw new Error('Créneaux invalides (HH:MM).');
+        if (new Set(slots).size !== slots.length) throw new Error('Créneaux en double.');
+        const max = Number($('maxPerDay').value);
+        if (slots.length > max) throw new Error('Plus de créneaux que le maximum quotidien.');
+        const d = { ...S.cfg.schedule.data, slots: slots.sort(), maxPerDay: max, catchupMinutes: Number($('catchup').value), maxPublicationsPerRun: Number($('perRun').value) };
+        await writeJson('config/schedule.json', d, 'admin: calendrier éditorial');
+        say('runmsg', 'Calendrier enregistré.', true);
+      });
+      guard('save-budget', async () => {
+        const d = S.cfg.engine.data; const daily = Number($('daily').value), monthly = Number($('monthly').value);
+        if (!(daily > 0 && monthly >= daily)) throw new Error('Le plafond mensuel doit être supérieur ou égal au plafond quotidien.');
+        d.budget.dailyUsd = daily; d.budget.monthlyUsd = monthly; d.gemini.generatorModel = $('gen').value.trim(); d.gemini.judgeModel = $('judge').value.trim();
+        if (!d.gemini.pricesUsdPerMillionTokens[d.gemini.generatorModel] || !d.gemini.pricesUsdPerMillionTokens[d.gemini.judgeModel]) throw new Error('Tarif manquant pour un des modèles : ajoutez-le dans config/engine.json.');
+        await writeJson('config/engine.json', d, 'admin: budget et modèles');
+        say('runmsg', 'Budget enregistré.', true);
+      });
+      guard('save-editorial', async () => {
+        const d = S.cfg.editorial.data;
+        d.priorityCategories = [...document.querySelectorAll('#prio input:checked')].map((c) => c.value);
+        const g = $('gprompt').value, j = $('jprompt').value;
+        if (g.length < 500 || !g.includes(d.publicationName)) throw new Error('Instructions de rédaction trop courtes ou sans le nom du journal.');
+        if (!j.trim()) throw new Error('Instructions de relecture vides.');
+        await writeJson('config/editorial.json', d, 'admin: rubriques prioritaires');
+        await writeText(S.files.gen, g, 'admin: instructions de rédaction');
+        await writeText(S.files.judge, j, 'admin: instructions de relecture');
+        say('runmsg', 'Éditorial enregistré.', true);
+      });
+      $('connect').addEventListener('click', connect);
+      $('repo').value = store.get('lgn_repo'); $('branch').value = store.get('lgn_branch') || 'main';
+      if (store.get('lgn_token') && store.get('lgn_repo')) connect();
+    })();
+  </script>
+</Base>

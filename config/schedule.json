@@ -1,0 +1,7 @@
+{
+  "timezone": "Europe/Paris",
+  "slots": ["07:00", "09:00", "11:00", "13:00", "15:00", "17:30", "19:30", "21:30"],
+  "maxPerDay": 8,
+  "catchupMinutes": 150,
+  "maxPublicationsPerRun": 2
+}

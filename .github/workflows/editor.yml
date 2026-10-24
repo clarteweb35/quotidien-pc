@@ -1,0 +1,107 @@
+name: Rédaction automatique
+
+# Exécute le moteur éditorial. Le cron GitHub peut avoir du retard (parfois plusieurs minutes) ou sauter
+# une exécution en période de charge : le moteur rattrape les créneaux manqués dans la limite configurée.
+on:
+  schedule:
+    # 5h-21h UTC = 6h/7h à 22h/23h à Paris selon la saison. Minutes décalées pour éviter l'heure pile (congestion).
+    - cron: '7,37 5-21 * * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Mode d''exécution'
+        type: choice
+        default: normal
+        options: [normal, extra, dry-run, force-catchup]
+
+# Un seul cycle à la fois, sans jamais en annuler un en cours (verrou contre les exécutions simultanées).
+concurrency:
+  group: editor
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  engine:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+      issues: write
+    outputs:
+      published: ${{ steps.commit.outputs.published }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+
+      - name: Vérifier la configuration
+        run: node engine/src/cli.js check-config
+
+      - name: Exécuter le moteur
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          MODE: ${{ inputs.mode }}
+        run: |
+          args=""
+          case "$MODE" in
+            extra) args="--extra" ;;
+            dry-run) args="--dry-run" ;;
+            force-catchup) args="--force-catchup" ;;
+          esac
+          node engine/src/cli.js run $args
+
+      - name: Enregistrer les résultats (commit)
+        id: commit
+        run: |
+          git config user.name "quotidien-pc-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A data site/src/content/articles
+          if git diff --cached --quiet; then
+            echo "published=false" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          if git diff --cached --name-only -- site/src/content/articles | grep -q .; then
+            echo "published=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "published=false" >> "$GITHUB_OUTPUT"
+          fi
+          git commit -m "editor: cycle $(date -u +%Y-%m-%dT%H:%MZ)"
+          for i in 1 2 3; do
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            sleep $((i * 5))
+          done
+          echo "Échec de la publication git" >&2; exit 1
+
+      - name: Alertes
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          JOB_STATUS: ${{ job.status }}
+        run: |
+          set +e
+          node engine/src/cli.js alerts --out alert.md
+          code=$?
+          if [ "$JOB_STATUS" != "success" ]; then
+            echo "- Le workflow a échoué : ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}" >> alert.md
+            code=3
+          fi
+          if [ "$code" = "3" ]; then
+            gh label create alerte-moteur --color B60205 --description "Alerte du moteur éditorial" 2>/dev/null
+            n=$(gh issue list --label alerte-moteur --state open --json number --jq '.[0].number')
+            if [ -n "$n" ]; then gh issue comment "$n" --body-file alert.md
+            else gh issue create --title "Alerte du moteur éditorial" --label alerte-moteur --body-file alert.md; fi
+          fi
+
+  deploy:
+    needs: engine
+    if: needs.engine.outputs.published == 'true'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/deploy.yml
+    secrets: inherit

@@ -1,0 +1,21 @@
+{
+  "publicationName": "Le Quotidien Presque Certain",
+  "logoName": { "main": "Le Quotidien", "sub": "PRESQUE CERTAIN" },
+  "tagline": "L’information, à peu près. Les faits, on verra demain.",
+  "satireNotice": "Le Quotidien Presque Certain est un journal satirique. Cet article est une œuvre d'humour et de fiction : les situations, propos et personnages décrits sont inventés ou déformés à des fins parodiques. Il ne rapporte pas des faits réels.",
+  "satireDisclaimerShort": "Article satirique et fictif, conçu à des fins humoristiques.",
+  "generatorPromptFile": "prompts/generator.md",
+  "judgePromptFile": "prompts/judge.md",
+  "priorityCategories": ["politique", "societe", "tech"],
+  "priorityBoost": 1.5,
+  "recentTitlesInPrompt": 30,
+  "angleHints": [
+    "communiqué officiel pris au pied de la lettre",
+    "reportage solennel sur un non-événement",
+    "enquête qui conclut à l'évidence avec une rigueur disproportionnée",
+    "dépêche d'agence où la logique est poussée jusqu'au bout",
+    "chronique grave d'un expert manifestement fictif",
+    "bilan chiffré dont l'absurdité est assumée",
+    "compte rendu d'une réunion où personne ne dit rien de précis"
+  ]
+}

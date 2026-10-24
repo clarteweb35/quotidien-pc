@@ -1,0 +1,9 @@
+node_modules/
+site/dist/
+site/.astro/
+data/.lock
+data/*.tmp
+.env
+.env.*
+!.env.example
+*.log

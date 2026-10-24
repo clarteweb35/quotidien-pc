@@ -1,0 +1,19 @@
+{
+  "name": "quotidien-pc",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "workspaces": ["site"],
+  "scripts": {
+    "engine": "node engine/src/cli.js",
+    "simulate": "node engine/src/cli.js simulate",
+    "test": "node --test \"engine/test/*.test.js\"",
+    "site:dev": "npm run dev -w site",
+    "site:build": "npm run build -w site"
+  },
+  "dependencies": {
+    "@google/genai": "^1.0.0",
+    "fast-xml-parser": "^5.0.0"
+  }
+}

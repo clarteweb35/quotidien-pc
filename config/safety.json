@@ -1,0 +1,21 @@
+{
+  "note": "Listes modifiables. Comparaison sans accents ni majuscules. 'sensitiveTopicKeywords' exclut un sujet source; 'blockedOutputPatterns' (regex) bloque un article genere; 'protectedNames' = personnes pour lesquelles aucune citation ne doit jamais apparaitre.",
+  "keywordSyntax": "mot entier (pluriel en s accepte) ; un * final = prefixe ; plusieurs mots = expression",
+  "sensitiveTopicKeywords": [
+    "mort", "morte", "decede*", "deces", "tue", "tuee", "meurtre*", "assassin*", "homicide*", "mortel*", "mortelle*",
+    "attentat*", "terroris*", "fusillade*", "massacre*", "genocide*", "otage*", "bombard*", "guerre*", "victime*",
+    "viol", "violee", "violences sexuelles", "agression sexuelle", "pedophil*", "pedocrimin*", "inceste", "suicide*",
+    "noyade*", "noye", "enfant", "bebe", "mineur", "mineure", "disparition", "disparu*", "kidnapp*", "enleve*",
+    "feminicide*", "cancer*", "deuil", "hommage", "obseques", "funerailles", "naufrage*", "seisme*", "tremblement de terre",
+    "tsunami*", "bless*", "decapit*", "torture*", "prison a vie", "reclusion criminelle", "mise en examen"
+  ],
+  "blockedOutputPatterns": [
+    "\\b(il faut|faut|fallait) (tuer|exterminer|eliminer|pendre|lyncher)\\b",
+    "\\bappel (au|a) (meurtre|la haine|la violence)\\b",
+    "\\bsale (arabe|juif|noir|pede|tapette|negre|bougnoule)\\b",
+    "\\b(negre|bougnoule|youpin|tapette|pede)s?\\b",
+    "\\b(soigner|guerir) (le|son) cancer avec\\b",
+    "\\bne (vaccinez|vote[zr]) pas\\b"
+  ],
+  "protectedNames": []
+}

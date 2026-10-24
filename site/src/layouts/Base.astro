@@ -1,0 +1,86 @@
+---
+import '../styles/global.css';
+import { categories, siteName, tagline, logoName, url } from '../lib/site';
+
+interface Props {
+  title?: string;
+  description?: string;
+  type?: 'website' | 'article';
+  noindex?: boolean;
+  current?: string;
+  jsonLd?: object;
+  csp?: string;
+  ogImage?: string;
+}
+const { title, description = tagline, type = 'website', noindex = false, current = '', jsonLd, csp, ogImage } = Astro.props;
+const fullTitle = title ? `${title} — ${siteName}` : `${siteName} — ${tagline}`;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const share = new URL(ogImage ?? url('brand/og-default.png'), Astro.site).toString();
+const today = new Intl.DateTimeFormat('fr-FR', { timeZone: 'Europe/Paris', dateStyle: 'full' }).format(new Date());
+---
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {csp && <meta http-equiv="Content-Security-Policy" content={csp} />}
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    <link rel="alternate" type="application/rss+xml" title={siteName} href={url('rss.xml')} />
+    <link rel="icon" href={url('favicon.svg')} type="image/svg+xml" />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:type" content={type} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:image" content={share} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={`${siteName} — ${tagline}`} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={share} />
+    <meta name="theme-color" content="#faf7f2" />
+    {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+  </head>
+  <body>
+    <a class="skip" href="#contenu">Aller au contenu</a>
+    <div class="strip">Journal satirique — tout ce que vous lisez ici est faux, sauf l'envie de rire</div>
+    <header class="wrap masthead">
+      <a href={url()} aria-label={`${siteName} — retour à la une`}>
+        <picture>
+          <source srcset={url('brand/logo-1100.webp')} type="image/webp" />
+          <img class="logo" src={url('brand/logo-1100.png')} width="1100" height="367" alt={`${logoName.main} ${logoName.sub.toLowerCase()} — ${tagline}`} fetchpriority="high" />
+        </picture>
+      </a>
+      <p class="date">{today}</p>
+    </header>
+    <nav class="nav" aria-label="Rubriques">
+      <div class="wrap">
+        <ul>
+          <li><a href={url()} aria-current={current === 'home' ? 'page' : undefined}>À la une</a></li>
+          {categories.map((c) => (
+            <li><a href={url(`rubrique/${c.slug}/`)} aria-current={current === c.slug ? 'page' : undefined}>{c.name}</a></li>
+          ))}
+        </ul>
+      </div>
+    </nav>
+    <main id="contenu" class="wrap"><slot /></main>
+    <footer>
+      <div class="wrap cols">
+        <div>
+          <a class="wordmark" href={url()}><b>{logoName.main}</b><i>{logoName.sub}</i></a><br /><br />
+          Journal satirique. Les articles sont des fictions humoristiques.<br />
+          Ils ne rapportent pas des faits réels.
+        </div>
+        <ul>
+          <li><a href={url('a-propos/')}>À propos</a></li>
+          <li><a href={url('mentions-legales/')}>Mentions légales</a></li>
+          <li><a href={url('rss.xml')}>Flux RSS</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

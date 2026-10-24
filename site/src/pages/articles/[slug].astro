@@ -1,0 +1,51 @@
+---
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { allArticles, category, formatDateTime, readingMinutes, satireNotice, siteName, url } from '../../lib/site';
+
+export async function getStaticPaths() {
+  const articles = await allArticles();
+  return articles.map((a) => ({ params: { slug: a.data.slug }, props: { article: a } }));
+}
+const { article } = Astro.props;
+const d = article.data;
+const cat = category(d.category);
+const { Content } = await render(article);
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SatiricalArticle',
+  headline: d.title,
+  description: d.description,
+  datePublished: d.publishedAt.toISOString(),
+  inLanguage: 'fr-FR',
+  articleSection: cat.name,
+  keywords: d.tags.join(', '),
+  author: { '@type': 'Organization', name: siteName },
+  publisher: { '@type': 'Organization', name: siteName },
+  mainEntityOfPage: new URL(Astro.url.pathname, Astro.site).toString(),
+};
+---
+<Base title={d.title} description={d.description} type="article" current={cat.slug} jsonLd={jsonLd} ogImage={url(`og/${d.slug}.png`)}>
+  <article class="article">
+    <a class="kicker" href={url(`rubrique/${cat.slug}/`)}>{cat.name}</a>
+    <h1>{d.title}</h1>
+    <p class="chapo">{d.chapo}</p>
+    <div class="meta">
+      Publié le <time datetime={d.publishedAt.toISOString()}>{formatDateTime(d.publishedAt)}</time> · {readingMinutes(article.body)} min de lecture · <strong>Satire</strong>
+    </div>
+    <div class="satire-box" role="note"><strong>Article satirique.</strong> {satireNotice}</div>
+    <div class="body"><Content /></div>
+    {d.tags.length > 0 && (
+      <ul class="tags" aria-label="Mots-clés">
+        {d.tags.map((t) => <li><a href={url(`tag/${encodeURIComponent(t)}/`)}>#{t}</a></li>)}
+      </ul>
+    )}
+    {d.sources.length > 0 && (
+      <p class="sources">
+        Actualité ayant inspiré cette fiction :
+        {d.sources.map((s) => <> <a href={s.url} rel="noopener nofollow external">{s.name}</a></>)}.
+        Le contenu ci-dessus est entièrement parodique.
+      </p>
+    )}
+  </article>
+</Base>

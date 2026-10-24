@@ -1,0 +1,55 @@
+{
+  "gemini": {
+    "generatorModel": "gemini-3.8-flash",
+    "judgeModel": "gemini-3.5-flash-lite",
+    "generator": { "temperature": 1.0, "maxOutputTokens": 4096 },
+    "judge": { "temperature": 0.2, "maxOutputTokens": 1024 },
+    "maxInputChars": 12000,
+    "maxRetries": 3,
+    "retryBaseDelayMs": 4000,
+    "requestTimeoutMs": 90000,
+    "minDelayBetweenCallsMs": 1500,
+    "pricesUsdPerMillionTokens": {
+      "gemini-3.8-flash": { "input": 1.5, "output": 7.5 },
+      "gemini-3.5-flash-lite": { "input": 0.3, "output": 2.5 }
+    },
+    "pricesNote": "A VERIFIER sur https://ai.google.dev/gemini-api/docs/pricing. Valeurs prudentes (tarif le plus eleve annonce). Un modele absent de cette table bloque le moteur."
+  },
+  "budget": {
+    "dailyUsd": 1.0,
+    "monthlyUsd": 15.0
+  },
+  "collection": {
+    "maxItemAgeHours": 36,
+    "maxItemsPerFeed": 25,
+    "fetchTimeoutMs": 15000,
+    "userAgent": "LeGrandNimporteBot/1.0 (satire; lecture de flux RSS publics)"
+  },
+  "topics": {
+    "minRelevanceScore": 3,
+    "dedupSimilarityThreshold": 0.55,
+    "topicMemoryDays": 14,
+    "evergreenWhenNoTopic": true
+  },
+  "validation": {
+    "titleMinChars": 20,
+    "titleMaxChars": 120,
+    "chapoMinChars": 60,
+    "chapoMaxChars": 320,
+    "bodyMinWords": 280,
+    "bodyMaxWords": 900,
+    "seoDescriptionMaxChars": 160,
+    "maxTags": 6,
+    "titleSimilarityBlock": 0.7,
+    "bodySimilarityBlock": 0.5,
+    "minJudgeHumor": 5,
+    "minJudgeCoherence": 6,
+    "maxJudgeRisk": 4,
+    "maxGenerationAttempts": 2,
+    "maxQuarantineRetries": 1
+  },
+  "retention": {
+    "logDays": 30,
+    "quarantineDays": 30
+  }
+}

@@ -1,0 +1,21 @@
+---
+import Base from '../../layouts/Base.astro';
+import Card from '../../components/Card.astro';
+import { allArticles, categories } from '../../lib/site';
+
+export function getStaticPaths() {
+  return categories.map((c) => ({ params: { slug: c.slug }, props: { cat: c } }));
+}
+const { cat } = Astro.props;
+const articles = (await allArticles()).filter((a) => a.data.category === cat.slug);
+---
+<Base title={cat.name} description={cat.description} current={cat.slug}>
+  <div class="page-head">
+    <span class="kicker">Rubrique</span>
+    <h1>{cat.name}</h1>
+    <p class="meta">{cat.description}</p>
+  </div>
+  {articles.length === 0 ? <p class="empty">Rien à signaler dans cette rubrique. Pour l'instant.</p> : (
+    <div class="grid">{articles.map((a) => <Card article={a} />)}</div>
+  )}
+</Base>

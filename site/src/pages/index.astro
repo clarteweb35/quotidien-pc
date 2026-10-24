@@ -1,0 +1,33 @@
+---
+import Base from '../layouts/Base.astro';
+import Card from '../components/Card.astro';
+import { allArticles, categories, category, url, siteName } from '../lib/site';
+
+const articles = await allArticles();
+const [lead, ...rest] = articles;
+const latest = rest.slice(0, 9);
+const sections = categories
+  .map((c) => ({ c, items: rest.filter((a) => a.data.category === c.slug).slice(0, 3) }))
+  .filter((s) => s.items.length);
+---
+<Base current="home">
+  {!lead ? (
+    <p class="empty">Le journal est en cours d'impression. Les premiers articles arrivent très bientôt.</p>
+  ) : (
+    <>
+      <Card article={lead} lead />
+      {latest.length > 0 && (
+        <>
+          <h2 class="section-title">Dernières nouvelles (inventées)</h2>
+          <div class="grid">{latest.map((a) => <Card article={a} />)}</div>
+        </>
+      )}
+      {sections.map(({ c, items }) => (
+        <>
+          <h2 class="section-title"><a href={url(`rubrique/${c.slug}/`)} style="color:inherit;text-decoration:none">{c.name}</a></h2>
+          <div class="grid">{items.map((a) => <Card article={a} />)}</div>
+        </>
+      ))}
+    </>
+  )}
+</Base>
