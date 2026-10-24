@@ -1,7 +1,7 @@
 {
-  "note": "Informations legales affichees sur le site (pied de page et page Mentions legales). Un champ vide n'est pas affiche. Un editeur professionnel doit en principe indiquer son identite complete (nom ou denomination, adresse, directeur de la publication, numero d'immatriculation): completez-les avant la mise en ligne publique.",
+  "note": "Informations legales affichees sur le site. Un champ vide n'est pas affiche. publisherStatus: 'non_professional' (editeur non professionnel: identite non publiee, transmise a l'hebergeur) ou 'professional' (adresse, immatriculation et directeur de la publication a afficher). Passer en 'professional' des qu'il y a des revenus (publicite, affiliation, sponsoring).",
   "publisherName": "Clarté Web",
-  "publisherUrl": "",
+  "publisherUrl": "https://clarte-web.fr",
   "publisherAddress": "",
   "publisherRegistration": "",
   "publicationDirector": "",
@@ -16,5 +16,6 @@
     "measurementId": "",
     "note": "Identifiant de mesure GA4 (format G-XXXXXXXXXX). Tant qu'il est vide, aucun script Google n'est charge et aucun bandeau n'est affiche."
   },
-  "updatedAt": "2026-10-25"
+  "updatedAt": "2026-10-25",
+  "publisherStatus": "non_professional"
 }

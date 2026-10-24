@@ -17,3 +17,8 @@ test('identifiant Google Analytics: vide ou au format GA4 (G-XXXXXXXX)', () => {
   assert.ok(legal.analytics.measurementId === '' || /^G-[A-Z0-9]{6,12}$/.test(legal.analytics.measurementId));
   if (legal.publisherUrl) assert.match(legal.publisherUrl, /^https:\/\//);
 });
+
+test('statut de l\'editeur explicite et lien Clarte Web en https', () => {
+  assert.ok(['professional', 'non_professional'].includes(legal.publisherStatus));
+  assert.equal(legal.publisherUrl, 'https://clarte-web.fr');
+});

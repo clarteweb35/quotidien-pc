@@ -1,7 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import { siteName, satireNotice, url } from '../lib/site';
-import { publisher, contactEmail, host, updatedAt, analyticsId, analyticsName } from '../lib/legal';
+import { publisher, contactEmail, host, updatedAt, analyticsId, analyticsName, nonProfessional } from '../lib/legal';
 const mailto = `mailto:${contactEmail}`;
 const updated = new Intl.DateTimeFormat('fr-FR', { dateStyle: 'long', timeZone: 'Europe/Paris' }).format(new Date(`${updatedAt}T12:00:00Z`));
 ---
@@ -12,8 +12,11 @@ const updated = new Intl.DateTimeFormat('fr-FR', { dateStyle: 'long', timeZone: 
     <h2>Éditeur du site</h2>
     <p>
       Le site <strong>{siteName}</strong> est édité par
-      {publisher.url ? <a href={publisher.url} rel="noopener">{publisher.name}</a> : <strong>{publisher.name}</strong>}.
+      {publisher.url ? <a href={publisher.url} rel="noopener">{publisher.name}</a> : <strong>{publisher.name}</strong>}{nonProfessional ? ', à titre non professionnel' : ''}.
     </p>
+    {nonProfessional && (
+      <p>Conformément à l'article 6, III, 2 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, l'éditeur, qui agit à titre non professionnel, a choisi de ne pas rendre public son nom ; ses éléments d'identification ont été communiqués à l'hébergeur ci-dessous. Le site ne comporte ni publicité ni vente.</p>
+    )}
     <ul>
       {publisher.address && <li>Adresse : {publisher.address}</li>}
       {publisher.registration && <li>Immatriculation : {publisher.registration}</li>}

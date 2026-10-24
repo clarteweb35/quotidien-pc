@@ -7,6 +7,7 @@ export const publisher = {
   registration: legal.publisherRegistration || null,
   director: legal.publicationDirector || null,
 };
+export const nonProfessional: boolean = legal.publisherStatus === 'non_professional';
 export const contactEmail: string = legal.contactEmail;
 export const host = legal.host;
 export const updatedAt: string = legal.updatedAt;
