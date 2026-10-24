@@ -1,7 +1,9 @@
 ---
 import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
-import { allArticles, category, formatDateTime, readingMinutes, satireNotice, siteName, url } from '../../lib/site';
+import { allArticles, category, formatDateTime, readingMinutes, satireNotice, siteName, url, manualImageCredit } from '../../lib/site';
+import { illustration } from '../../lib/manual';
+import { refOf } from '../../lib/ref';
 
 export async function getStaticPaths() {
   const articles = await allArticles();
@@ -11,6 +13,8 @@ const { article } = Astro.props;
 const d = article.data;
 const cat = category(d.category);
 const { Content } = await render(article);
+const img = await illustration(article, 1280, manualImageCredit);
+const ref = refOf(d);
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'SatiricalArticle',
@@ -22,7 +26,7 @@ const jsonLd = {
   keywords: d.tags.join(', '),
   author: { '@type': 'Organization', name: siteName },
   publisher: { '@type': 'Organization', name: siteName },
-  ...(d.image ? { image: new URL(url(d.image), Astro.site).toString() } : {}),
+  ...(img ? { image: new URL(img.src, Astro.site).toString() } : {}),
   mainEntityOfPage: new URL(Astro.url.pathname, Astro.site).toString(),
 };
 ---
@@ -32,12 +36,12 @@ const jsonLd = {
     <h1>{d.title}</h1>
     <p class="chapo">{d.chapo}</p>
     <div class="meta">
-      Publié le <time datetime={d.publishedAt.toISOString()}>{formatDateTime(d.publishedAt)}</time> · {readingMinutes(article.body)} min de lecture · <strong>Satire</strong>
+      Publié le <time datetime={d.publishedAt.toISOString()}>{formatDateTime(d.publishedAt)}</time> · {readingMinutes(article.body)} min de lecture · <strong>Satire</strong>{ref && <> · <span class="ref" title="Référence de l'article">Réf. {ref}</span></>}
     </div>
-    {d.image && (
+    {img && (
       <figure class="illus">
-        <img src={url(d.image)} alt={d.imageAlt ?? ''} width="1280" height="720" fetchpriority="high" />
-        <figcaption>{d.imageCredit ?? 'Illustration générée par IA'} — dessin satirique, sans rapport avec des faits réels.</figcaption>
+        <img src={img.src} alt={img.alt} width={img.width} height={img.height} fetchpriority="high" />
+        <figcaption>{img.credit} — illustration satirique, sans rapport avec des faits réels.</figcaption>
       </figure>
     )}
     <div class="satire-box" role="note"><strong>Article satirique.</strong> {satireNotice}</div>

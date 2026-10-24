@@ -1,8 +1,9 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { slugify } from './util.js';
+import { refFromSlot } from './refs.js';
 
-const FM_KEYS = ['id', 'title', 'chapo', 'description', 'category', 'tags', 'publishedAt', 'slot', 'kind', 'satire', 'sources', 'model', 'angle'];
+const FM_KEYS = ['id', 'ref', 'title', 'chapo', 'description', 'category', 'tags', 'publishedAt', 'slot', 'kind', 'satire', 'sources', 'model', 'angle'];
 const IMAGE_DIR = 'images/articles';
 
 export function parseArticleFile(raw) {
@@ -26,7 +27,7 @@ export function loadExisting(contentDir, { maxAgeDays = 90, now = new Date() } =
     try {
       const { fm, body } = parseArticleFile(fs.readFileSync(path.join(contentDir, f), 'utf8'));
       if (now.getTime() - Date.parse(fm.publishedAt) > maxAgeDays * 86400000) continue;
-      out.push({ id: fm.id, slot: fm.slot, slug: fm.slug ?? f.replace(/\.md$/, ''), title: fm.title, text: body, category: fm.category, publishedAt: fm.publishedAt, image: fm.image, file: f });
+      out.push({ id: fm.id, slot: fm.slot, slug: fm.slug ?? f.replace(/\.md$/, ''), title: fm.title, text: body, category: fm.category, publishedAt: fm.publishedAt, image: fm.image, ref: fm.ref ?? refFromSlot(fm.slot), imagePrompt: fm.imagePrompt, imageAlt: fm.imageAlt, file: f });
     } catch {
       /* fichier illisible ignore: il sera signale par les tests du site */
     }
@@ -52,6 +53,7 @@ export function publishArticle({ article, topic, id, slotLabel, model, now, cont
   const sources = topic.kind === 'evergreen' ? [] : [{ name: topic.sourceName, title: topic.title, url: topic.url }];
   const fm = {
     id,
+    ref: refFromSlot(slotLabel),
     title: article.title,
     chapo: article.chapo,
     description: article.seo_description,
@@ -67,6 +69,9 @@ export function publishArticle({ article, topic, id, slotLabel, model, now, cont
   };
   const extra = [`slug: ${JSON.stringify(slug)}`];
   let imageFile = null;
+  // Consigne et texte alternatif conserves pour toute illustration deposee plus tard a la main.
+  if (article.image_prompt?.trim()) extra.push(`imagePrompt: ${JSON.stringify(article.image_prompt.trim())}`);
+  if (!image && article.image_alt?.trim()) extra.push(`imageAlt: ${JSON.stringify(article.image_alt.trim())}`);
   if (image && imageDir) {
     // Fichier ecrit avant l'article: un article ne reference jamais une image absente.
     imageFile = `${slug}.webp`;
@@ -92,5 +97,5 @@ export function publishArticle({ article, topic, id, slotLabel, model, now, cont
   // Confirmation: relecture du fichier ecrit.
   const check = parseArticleFile(fs.readFileSync(target, 'utf8'));
   if (check.fm.id !== id || check.fm.slug !== slug || !check.body) throw new Error(`Confirmation de publication echouee pour ${file}`);
-  return { id, slug, file, image: imageFile, urlPath: `/articles/${slug}/`, publishedAt: fm.publishedAt, title: article.title, category: article.category };
+  return { id, ref: fm.ref, slug, file, image: imageFile, urlPath: `/articles/${slug}/`, publishedAt: fm.publishedAt, title: article.title, category: article.category };
 }

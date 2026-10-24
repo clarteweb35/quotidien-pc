@@ -6,6 +6,7 @@ export type Article = CollectionEntry<'articles'>;
 export const categories = categoriesFile.categories as { slug: string; name: string; description: string; color: string }[];
 export const siteName: string = editorial.publicationName;
 export const satireNotice: string = editorial.satireNotice;
+export const manualImageCredit: string = editorial.manualImageCredit;
 export const tagline: string = editorial.tagline;
 export const logoName = editorial.logoName as { main: string; sub: string };
 

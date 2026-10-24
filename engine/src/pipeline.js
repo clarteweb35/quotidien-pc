@@ -6,6 +6,8 @@ import { generateArticle, judgeArticle, judgeIssues, pickAngle } from './editor.
 import { validateArticle, normalizeArticle, feedbackFor } from './validator.js';
 import { publishArticle, loadExisting } from './publisher.js';
 import { illustrate, imageWanted } from './images.js';
+import { listManualImages, renderManualImageList } from './refs.js';
+import fs from 'node:fs';
 import { dueSlots, expireSlots } from './scheduler.js';
 import { BudgetExceededError, QuotaError, FatalGeminiError, MalformedResponseError } from './gemini.js';
 
@@ -223,7 +225,7 @@ export function buildReport({ store, cfg, date, existing }) {
     date,
     target: cfg.schedule.maxPerDay,
     publishedCount: store.publishedCount(date),
-    articles: published.map((e) => ({ id: e.id, title: e.title, category: e.category, slug: e.slug })),
+    articles: published.map((e) => ({ id: e.id, ref: e.ref, title: e.title, category: e.category, slug: e.slug })),
     slots: [...slots, ...extras],
     rejections: store.quarantine.history.filter((h) => h.ts.startsWith(date)).length,
     quarantined: store.quarantine.items.filter((i) => i.status === 'quarantined').length,
@@ -245,6 +247,13 @@ export function writeDailyReport(ctx) {
   const { cfg, store, paths, now } = ctx;
   const { date } = zonedParts(now(), cfg.schedule.timezone);
   const report = buildReport({ store, cfg, date, existing: loadExisting(paths.content, { now: now() }) });
-  if (!ctx.dryRun) writeJson(path.join(paths.data, 'reports', `${date}.json`), report);
+  if (!ctx.dryRun) {
+    writeJson(path.join(paths.data, 'reports', `${date}.json`), report);
+    // Liste de suivi des images a deposer a la main (references, descriptions suggerees).
+    const articles = loadExisting(paths.content, { now: now() });
+    const manual = listManualImages(path.join(paths.siteRoot ?? path.join(paths.root, 'site'), 'src', 'assets', 'manual'));
+    fs.mkdirSync(paths.data, { recursive: true });
+    fs.writeFileSync(path.join(paths.data, 'images-manuelles.md'), renderManualImageList({ articles, manual, cfg }));
+  }
   return report;
 }

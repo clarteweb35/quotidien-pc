@@ -10,6 +10,7 @@ import { GeminiClient } from './gemini.js';
 import { runCycle, writeDailyReport, buildReport } from './pipeline.js';
 import { createFakeSdk, fakeFetcher } from './mock.js';
 import { zonedParts, hhmmToMinutes } from './util.js';
+import { listManualImages, renderManualImageList } from './refs.js';
 import { loadExisting, publishArticle } from './publisher.js';
 import { validateArticle } from './validator.js';
 
@@ -96,6 +97,15 @@ async function main() {
       break;
     }
 
+    case 'refs': {
+      // Liste les references d'articles et indique lesquels attendent une image deposee a la main.
+      const paths = makePaths();
+      const cfg = loadConfig(paths);
+      const manual = listManualImages(path.join(paths.siteRoot, 'src', 'assets', 'manual'));
+      process.stdout.write(renderManualImageList({ articles: loadExisting(paths.content), manual, cfg }));
+      break;
+    }
+
     case 'check-config': {
       const problems = checkConfig(loadConfig());
       if (problems.length) {
@@ -174,6 +184,7 @@ async function main() {
   simulate [--date AAAA-MM-JJ] [--keep] [--verbose]       Journée complète simulée (faux Gemini, aucun effet réel)
   report [AAAA-MM-JJ]                                     Bilan quotidien
   check-config                                            Valide la configuration
+  refs                                                    Références des articles et images à déposer à la main
   alerts [--out fichier]                                  Code 3 si une alerte est active
   quarantine list | release <id> | drop <id>              Gestion de la quarantaine`);
   }
