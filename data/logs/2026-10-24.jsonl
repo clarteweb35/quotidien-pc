@@ -90,3 +90,4 @@
 {"ts":"2026-10-24T22:42:40.237Z","runId":"20261024223451-849a","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":872,"outputTokens":56,"costUsd":0.000402}
 {"ts":"2026-10-24T22:42:40.238Z","runId":"20261024223451-849a","level":"info","event":"judge.result","slot":"2026-10-25#x2","attempt":2,"humor":8,"coherence":9,"risk":1,"issues":[]}
 {"ts":"2026-10-24T22:42:40.239Z","runId":"20261024223451-849a","level":"info","event":"publish.ok","slot":"2026-10-25#x2","id":"90c80c93d34b","slug":"diagonale-des-fous-le-monde-du-sport-fascine-par-l-art-de","url":"/articles/diagonale-des-fous-le-monde-du-sport-fascine-par-l-art-de/","attempt":2,"dryRun":false}
+{"ts":"2026-10-24T23:07:04.831Z","runId":"20261024230704-7e10","level":"info","event":"cycle.start","date":"2026-10-25","due":[],"remainingToday":6,"dryRun":false}
