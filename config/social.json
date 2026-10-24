@@ -1,0 +1,16 @@
+{
+  "note": "Partage automatique sur les reseaux. Un reseau n'est actif que s'il est 'enabled' ET si ses secrets GitHub existent (voir docs/RESEAUX.md). Les secrets ne sont jamais dans ce fichier.",
+  "enabled": true,
+  "onlyWithImage": true,
+  "perDayMax": 4,
+  "minGapMinutes": 90,
+  "maxAgeHours": 72,
+  "windowParis": { "from": "08:00", "to": "22:30" },
+  "hashtags": ["#satire"],
+  "maxFailuresPerArticle": 3,
+  "networks": {
+    "bluesky": { "enabled": true, "service": "https://bsky.social" },
+    "mastodon": { "enabled": false, "instance": "" },
+    "telegram": { "enabled": false, "chatId": "" }
+  }
+}

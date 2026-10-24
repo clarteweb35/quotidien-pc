@@ -1,0 +1,70 @@
+name: Partage sur les réseaux
+
+# Publie les articles illustrés sur les réseaux actifs (voir docs/RESEAUX.md), un article à la fois, une seule fois par réseau.
+# Se déclenche après chaque rédaction ou déploiement, et toutes les 30 minutes pour écouler la file d'attente
+# (le moteur applique lui-même le plafond quotidien, l'espacement et la plage horaire).
+on:
+  workflow_run:
+    workflows: ["Rédaction automatique", "Déploiement du site"]
+    types: [completed]
+    branches: [main]
+  schedule:
+    - cron: '12,42 6-21 * * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Essai à blanc: affiche les publications prévues sans rien envoyer'
+        type: boolean
+        default: true
+
+concurrency:
+  group: social
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  post:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 0 # historique complet: le moteur vérifie que le site en ligne contient l'article et son image
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+
+      - name: Partager
+        env:
+          SITE_URL: ${{ vars.SITE_URL || (vars.CUSTOM_DOMAIN && format('https://{0}', vars.CUSTOM_DOMAIN)) || format('https://{0}.github.io', github.repository_owner) }}
+          SITE_BASE: ${{ vars.SITE_BASE || (vars.CUSTOM_DOMAIN && '/') || format('/{0}/', github.event.repository.name) }}
+          BLUESKY_IDENTIFIER: ${{ secrets.BLUESKY_IDENTIFIER }}
+          BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
+          MASTODON_TOKEN: ${{ secrets.MASTODON_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          DRY: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
+        run: |
+          args=""
+          if [ "$DRY" = "true" ]; then args="--dry-run"; fi
+          node engine/src/cli.js social $args
+
+      - name: Enregistrer les envois (commit)
+        if: ${{ !cancelled() }}
+        run: |
+          git config user.name "quotidien-pc-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/social.json data/logs 2>/dev/null || true
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "social: partage $(date -u +%Y-%m-%dT%H:%MZ)"
+          for i in 1 2 3; do
+            if git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}"; then exit 0; fi
+            git rebase --abort 2>/dev/null || true
+            sleep $((i * 5))
+          done
+          echo "Échec de l'enregistrement de data/social.json" >&2; exit 1

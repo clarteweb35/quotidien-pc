@@ -11,6 +11,7 @@ import { runCycle, writeDailyReport, buildReport } from './pipeline.js';
 import { createFakeSdk, fakeFetcher } from './mock.js';
 import { zonedParts, hhmmToMinutes } from './util.js';
 import { listManualImages, renderManualImageList } from './refs.js';
+import { runSocial, activeNetworks } from './social.js';
 import { loadExisting, publishArticle } from './publisher.js';
 import { validateArticle } from './validator.js';
 
@@ -108,6 +109,21 @@ async function main() {
       break;
     }
 
+    case 'social': {
+      // Partage des articles illustres sur les reseaux actifs. --dry-run: affiche les publications sans rien envoyer.
+      const paths = makePaths();
+      const cfg = loadConfig(paths);
+      const runId = `social-${Date.now()}`;
+      const logger = createLogger({ dataDir: paths.data, runId, filePrefix: 'social-' });
+      const siteUrl = (process.env.SITE_URL || '').replace(/\/$/, '');
+      const siteBaseP = process.env.SITE_BASE || '/';
+      if (!siteUrl) throw new Error('SITE_URL absente (adresse publique du site)');
+      logger.info('social.start', { networks: activeNetworks(cfg, process.env), dryRun: flag('dry-run') });
+      const r = await runSocial({ cfg, paths, logger, siteBase: `${siteUrl}${siteBaseP}`, dryRun: flag('dry-run') });
+      console.log(`\nPartage: ${r.posted.length} publié(s), ${r.skipped.length} ignoré(s), ${r.failed.length} échec(s)`);
+      break;
+    }
+
     case 'check-config': {
       const problems = checkConfig(loadConfig());
       if (problems.length) {
@@ -187,6 +203,7 @@ async function main() {
   report [AAAA-MM-JJ]                                     Bilan quotidien
   check-config                                            Valide la configuration
   refs                                                    Références des articles et images à déposer à la main
+  social [--dry-run]                                      Partage les articles illustrés sur les réseaux actifs
   alerts [--out fichier]                                  Code 3 si une alerte est active
   quarantine list | release <id> | drop <id>              Gestion de la quarantaine`);
   }

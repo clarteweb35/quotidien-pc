@@ -34,6 +34,7 @@ export function loadConfig(paths = makePaths(), env = process.env) {
     sources: f('sources.json').feeds,
     evergreen: f('evergreen.json').themes,
     journalists: f('journalists.json').journalists,
+    social: f('social.json'),
     safety: f('safety.json'),
     control: f('control.json'),
   };
@@ -82,6 +83,11 @@ export function checkConfig(cfg) {
   if (new Set(active.map((j) => j.name)).size !== active.length) problems.push('journalists: nom actif en double');
   for (const j of cfg.journalists) if (!slugs.has(j.desk)) problems.push(`journalists: rubrique inconnue "${j.desk}" pour ${j.name}`);
   for (const c of cfg.categories) if (!active.some((j) => j.desk === c.slug)) problems.push(`journalists: aucun journaliste actif pour la rubrique ${c.slug}`);
+  const so = cfg.social;
+  try { hhmmToMinutes(so.windowParis.from); hhmmToMinutes(so.windowParis.to); } catch (e) { problems.push(`social.windowParis: ${e.message}`); }
+  if (!(so.perDayMax >= 1) || !(so.minGapMinutes >= 0)) problems.push('social: perDayMax >= 1 et minGapMinutes >= 0 requis');
+  if (so.networks.mastodon?.enabled && !so.networks.mastodon.instance) problems.push('social.networks.mastodon: instance manquante');
+  if (so.networks.telegram?.enabled && !so.networks.telegram.chatId) problems.push('social.networks.telegram: chatId manquant');
   if (!cfg.editorial.satireNotice?.trim()) problems.push('editorial.satireNotice est vide');
   if (!cfg.editorial.generatorSystemPrompt || cfg.editorial.generatorSystemPrompt.length < 500) problems.push('prompts/generator.md vide ou trop court');
   if (!cfg.editorial.judgeSystemPrompt) problems.push('prompts/judge.md vide');

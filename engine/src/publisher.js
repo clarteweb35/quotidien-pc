@@ -27,7 +27,7 @@ export function loadExisting(contentDir, { maxAgeDays = 90, now = new Date() } =
     try {
       const { fm, body } = parseArticleFile(fs.readFileSync(path.join(contentDir, f), 'utf8'));
       if (now.getTime() - Date.parse(fm.publishedAt) > maxAgeDays * 86400000) continue;
-      out.push({ id: fm.id, slot: fm.slot, slug: fm.slug ?? f.replace(/\.md$/, ''), title: fm.title, text: body, category: fm.category, publishedAt: fm.publishedAt, image: fm.image, ref: fm.ref ?? refFromSlot(fm.slot), author: fm.author, imagePrompt: fm.imagePrompt, imageAlt: fm.imageAlt, file: f });
+      out.push({ id: fm.id, slot: fm.slot, slug: fm.slug ?? f.replace(/\.md$/, ''), title: fm.title, chapo: fm.chapo, text: body, category: fm.category, publishedAt: fm.publishedAt, image: fm.image, ref: fm.ref ?? refFromSlot(fm.slot), author: fm.author, imagePrompt: fm.imagePrompt, imageAlt: fm.imageAlt, file: f });
     } catch {
       /* fichier illisible ignore: il sera signale par les tests du site */
     }

@@ -9,7 +9,7 @@ export function redact(text) {
 }
 
 /** Journal JSONL (un fichier par jour) + sortie console. Les secrets sont masques. */
-export function createLogger({ dataDir, runId, now = () => new Date(), quiet = false }) {
+export function createLogger({ dataDir, runId, now = () => new Date(), quiet = false, filePrefix = '' }) {
   const entries = [];
   function log(level, event, fields = {}) {
     const ts = now().toISOString();
@@ -17,7 +17,7 @@ export function createLogger({ dataDir, runId, now = () => new Date(), quiet = f
     const line = redact(JSON.stringify(entry));
     entries.push(JSON.parse(line));
     try {
-      appendLine(path.join(dataDir, 'logs', `${ts.slice(0, 10)}.jsonl`), line);
+      appendLine(path.join(dataDir, 'logs', `${filePrefix}${ts.slice(0, 10)}.jsonl`), line);
     } catch {
       /* le journal ne doit jamais faire echouer un cycle */
     }

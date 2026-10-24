@@ -32,6 +32,8 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - name: Identifier le commit construit
+        run: echo "BUILD_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
       - name: Construire le site
         env:
           # Valeurs déduites si les variables ne sont pas définies: domaine personnalisé => racine ; sinon github.io/<depot>/
