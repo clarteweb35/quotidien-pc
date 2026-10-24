@@ -1,5 +1,6 @@
 ---
 id: "223f27f9707d"
+author: "Marion Lefebvre"
 title: "Management : il réalise une danse libre de quarante minutes sans aborder l’ordre du jour"
 chapo: "Inspiré par l’élégance du patinage sur glace, un cadre francilien a exécuté une prestation verbale d’une fluidité remarquable lors d'un comité de pilotage. Quarante minutes de circonvolutions aériennes sans prononcer un seul mot intelligible sur le budget."
 description: "Un cadre supérieur réalise l'exploit d'occuper une réunion entière avec une danse libre managériale évitant soigneusement tout sujet concret."

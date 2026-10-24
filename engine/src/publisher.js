@@ -3,7 +3,7 @@ import path from 'node:path';
 import { slugify } from './util.js';
 import { refFromSlot } from './refs.js';
 
-const FM_KEYS = ['id', 'ref', 'title', 'chapo', 'description', 'category', 'tags', 'publishedAt', 'slot', 'kind', 'satire', 'sources', 'model', 'angle'];
+const FM_KEYS = ['id', 'ref', 'author', 'title', 'chapo', 'description', 'category', 'tags', 'publishedAt', 'slot', 'kind', 'satire', 'sources', 'model', 'angle'];
 const IMAGE_DIR = 'images/articles';
 
 export function parseArticleFile(raw) {
@@ -27,7 +27,7 @@ export function loadExisting(contentDir, { maxAgeDays = 90, now = new Date() } =
     try {
       const { fm, body } = parseArticleFile(fs.readFileSync(path.join(contentDir, f), 'utf8'));
       if (now.getTime() - Date.parse(fm.publishedAt) > maxAgeDays * 86400000) continue;
-      out.push({ id: fm.id, slot: fm.slot, slug: fm.slug ?? f.replace(/\.md$/, ''), title: fm.title, text: body, category: fm.category, publishedAt: fm.publishedAt, image: fm.image, ref: fm.ref ?? refFromSlot(fm.slot), imagePrompt: fm.imagePrompt, imageAlt: fm.imageAlt, file: f });
+      out.push({ id: fm.id, slot: fm.slot, slug: fm.slug ?? f.replace(/\.md$/, ''), title: fm.title, text: body, category: fm.category, publishedAt: fm.publishedAt, image: fm.image, ref: fm.ref ?? refFromSlot(fm.slot), author: fm.author, imagePrompt: fm.imagePrompt, imageAlt: fm.imageAlt, file: f });
     } catch {
       /* fichier illisible ignore: il sera signale par les tests du site */
     }
@@ -45,7 +45,7 @@ function uniqueSlug(base, existing, id) {
 /**
  * Ecrit l'article puis le relit pour confirmer. Idempotent: meme id => meme fichier (ecrasement identique).
  */
-export function publishArticle({ article, topic, id, slotLabel, model, now, contentDir, existing, image = null, imageDir = null }) {
+export function publishArticle({ article, topic, id, slotLabel, model, now, contentDir, existing, image = null, imageDir = null, author = null }) {
   const date = now.toISOString().slice(0, 10);
   const prior = existing.find((e) => e.id === id);
   const slug = prior ? prior.slug : uniqueSlug(slugify(article.title), existing, id);
@@ -54,6 +54,7 @@ export function publishArticle({ article, topic, id, slotLabel, model, now, cont
   const fm = {
     id,
     ref: refFromSlot(slotLabel),
+    author: author ?? null,
     title: article.title,
     chapo: article.chapo,
     description: article.seo_description,

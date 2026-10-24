@@ -1,5 +1,6 @@
 import { normalizeText, titleSimilarity, bodySimilarity, wordCount, shingles } from './util.js';
 import { checkArticleShape, QUALITY_KEYS } from './schema.js';
+import { FAKE_TESTIMONY, journalistNamesIn } from './authors.js';
 
 const CAP = '[A-ZÀ-ÖØ-Þ][a-zà-öø-ÿ\'’-]+';
 const NAME_RE = new RegExp(`\\b${CAP}(?:[ \\u00a0]+(?:de |du |des |van |von |le |la )?${CAP})+`, 'gu');
@@ -114,6 +115,11 @@ export function validateArticle({ article, topic, cfg, existing = [], protectedE
   for (const p of cfg.safety.blockedOutputPatterns) {
     if (new RegExp(p, 'iu').test(normalizeText(all)) || new RegExp(p, 'iu').test(all)) add('motif_interdit', `Motif interdit: ${p}`);
   }
+
+  // La signature est un personnage fictif: elle ne figure pas dans le texte et n'a ni enquete ni rencontre de temoin.
+  if (FAKE_TESTIMONY.test(all)) add('signature_temoignage_invente', 'Le texte pretend a une enquete, un envoye special ou un temoin rencontre: la signature est fictive, ne pas inventer de temoignage');
+  const named = journalistNamesIn(text + ' ' + article.chapo, cfg);
+  if (named.length) add('signature_dans_le_texte', `Nom de journaliste de la redaction cite dans le texte (${named.join(', ')}): ne pas les mettre en scene`);
 
   // Citations attribuees a des personnes reelles (noms issus de la source ou liste protegee).
   const aliases = [...protectedAliases(topic, cfg.safety), ...protectedExtra.map(normalizeText)];

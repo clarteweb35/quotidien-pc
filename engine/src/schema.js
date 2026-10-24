@@ -15,6 +15,7 @@ export function articleSchema(categorySlugs) {
       seo_description: { type: 'string' },
       angle: { type: 'string', description: 'angle humoristique retenu, en une phrase' },
       fictional_elements: { type: 'array', items: { type: 'string' } },
+      author: { type: 'string', description: 'nom exact du journaliste signataire, dans la liste de la rubrique' },
       image_prompt: { type: 'string', description: 'scene a illustrer, en francais, sans personne reelle ni texte' },
       image_alt: { type: 'string', description: "texte alternatif de l'illustration, 125 caracteres maximum" },
       quality_checks: {
@@ -31,7 +32,7 @@ export function articleSchema(categorySlugs) {
         },
       },
     },
-    required: ['status', 'rejection_reason', 'title', 'chapo', 'category', 'tags', 'seo_description', 'angle', 'fictional_elements', 'image_prompt', 'image_alt', 'quality_checks', 'body'],
+    required: ['status', 'rejection_reason', 'title', 'chapo', 'category', 'tags', 'seo_description', 'angle', 'fictional_elements', 'author', 'image_prompt', 'image_alt', 'quality_checks', 'body'],
   };
 }
 
@@ -57,6 +58,7 @@ export function checkArticleShape(a, categorySlugs) {
   if (a.status === 'rejected') return errs; // un rejet n'a pas besoin du reste
   for (const k of ['title', 'chapo', 'category', 'seo_description', 'angle']) if (!str(k)) errs.push(`champ_manquant:${k}`);
   if (str('category') && !categorySlugs.includes(a.category)) errs.push('categorie_inconnue');
+  if (a.author !== undefined && typeof a.author !== 'string') errs.push('champ_author_invalide');
   if (typeof a.image_prompt !== 'string' || typeof a.image_alt !== 'string') errs.push('champs_image_manquants');
   if (!Array.isArray(a.fictional_elements)) errs.push('elements_fictifs_manquants');
   if (!a.quality_checks || QUALITY_KEYS.some((k) => typeof a.quality_checks[k] !== 'boolean')) errs.push('controles_qualite_manquants');

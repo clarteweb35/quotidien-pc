@@ -1,11 +1,13 @@
 ---
 import { category, formatDate, url, manualImageCredit, type Article } from '../lib/site';
 import { illustration } from '../lib/manual';
+import { journalist } from '../lib/authors';
 interface Props { article: Article; lead?: boolean }
 const { article, lead = false } = Astro.props;
 const d = article.data;
 const cat = category(d.category);
 const href = url(`articles/${d.slug}/`);
+const who = journalist(d.author);
 const img = await illustration(article, lead ? 1280 : 800, manualImageCredit);
 ---
 {lead ? (
@@ -14,6 +16,7 @@ const img = await illustration(article, lead ? 1280 : 800, manualImageCredit);
       <a class="kicker" href={url(`rubrique/${cat.slug}/`)}>{cat.name}</a>
       <h2><a href={href}>{d.title}</a></h2>
       <p>{d.chapo}</p>
+      {who && <p class="byline">Par {who.name}</p>}
       <div class="meta">{formatDate(d.publishedAt)}</div>
     </div>
     <a href={href} tabindex="-1" aria-hidden="true">{img ? <img class="photo" src={img.src} alt="" width={img.width} height={img.height} fetchpriority="high" /> : <div class="cover" style={`--c:${cat.color}`}><span>{cat.name}</span></div>}</a>
@@ -23,6 +26,7 @@ const img = await illustration(article, lead ? 1280 : 800, manualImageCredit);
     <a href={href} tabindex="-1" aria-hidden="true">{img ? <img class="photo" src={img.src} alt="" width={img.width} height={img.height} loading="lazy" /> : <div class="cover" style={`--c:${cat.color}`}><span>{cat.name}</span></div>}</a>
     <h3><a href={href}>{d.title}</a></h3>
     <p>{d.chapo}</p>
+    {who && <p class="byline">Par {who.name}</p>}
     <div class="meta">{formatDate(d.publishedAt)}</div>
   </article>
 )}

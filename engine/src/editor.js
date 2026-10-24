@@ -1,3 +1,4 @@
+import { rosterPrompt } from './authors.js';
 import { articleSchema, judgeSchema, checkJudgeShape } from './schema.js';
 import { bodyToText } from './validator.js';
 import { MalformedResponseError } from './gemini.js';
@@ -7,7 +8,7 @@ export function pickAngle(cfg, rng = Math.random) {
   return hints[Math.floor(rng() * hints.length)];
 }
 
-export function buildGenerationPrompt({ topic, angle, feedback, todayLabel, recentTitles = [] }) {
+export function buildGenerationPrompt({ topic, angle, feedback, todayLabel, recentTitles = [], roster = '' }) {
   const lines = [`Date du jour : ${todayLabel}.`, ''];
   if (topic.kind === 'evergreen') {
     lines.push(
@@ -28,6 +29,7 @@ export function buildGenerationPrompt({ topic, angle, feedback, todayLabel, rece
     );
   }
   lines.push(`ANGLE SUGGÉRÉ : ${angle}`, `RUBRIQUE SUGGÉRÉE : ${topic.category}`);
+  if (roster) lines.push('', roster);
   if (recentTitles.length) {
     lines.push('', 'HISTORIQUE DES PUBLICATIONS RÉCENTES (donnée du système ; évite tout titre, angle ou ressort comique similaire) :', ...recentTitles.map((t) => `- ${t}`));
   }
@@ -38,12 +40,13 @@ export function buildGenerationPrompt({ topic, angle, feedback, todayLabel, rece
 }
 
 export async function generateArticle({ client, cfg, topic, angle, feedback, todayLabel, recentTitles }) {
+  const roster = rosterPrompt(cfg);
   const g = cfg.engine.gemini;
   const { data, usage } = await client.generateJson({
     purpose: 'generate',
     model: g.generatorModel,
     system: cfg.editorial.generatorSystemPrompt,
-    prompt: buildGenerationPrompt({ topic, angle, feedback, todayLabel, recentTitles }),
+    prompt: buildGenerationPrompt({ topic, angle, feedback, todayLabel, recentTitles, roster }),
     schema: articleSchema(cfg.categories.map((c) => c.slug)),
     params: g.generator,
   });

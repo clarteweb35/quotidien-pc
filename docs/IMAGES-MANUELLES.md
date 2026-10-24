@@ -29,3 +29,9 @@ Pour remplacer une image : déposez un fichier du même nom. Pour la retirer : s
 - Si votre image est générée par une IA ou représente une personne réelle, ne la présentez pas comme une photo : mentionnez-le dans la légende (`manualImageCredit`), et évitez tout visage de personne réelle ou toute fausse photo d'actualité.
 - Vérifiez que vous avez les droits sur l'image (créée par vous, ou libre de droits avec la mention requise).
 - Vous pouvez ajouter l'image **avant** la publication si vous connaissez la référence du créneau (par ex. `261025-03` pour le 3e créneau du 25 octobre) : elle apparaîtra dès que l'article existera.
+
+## Pièges rencontrés
+- **Le bon dossier** est `site/src/assets/manual/` (et non `site/public/`) : seul ce dossier est optimisé (WebP, tailles adaptées) et rattaché à l'article par sa référence.
+- **Les fichiers `.jfif`** (export fréquent des outils d'images) sont du JPEG : renommez-les en `.jpg` (`261024-X1.jfif` → `261024-X1.jpg`). Le site ne lit pas l'extension `.jfif`.
+- **Une image portrait** est recadrée au centre en 16:9 : vous perdez le haut et le bas. Demandez à votre outil un format paysage 16:9 (1408×768 convient très bien).
+- Les images étant générées par IA, la légende affichée est « Illustration générée par IA · Le Quotidien Presque Certain » (réglable : `manualImageCredit` dans `config/editorial.json`).

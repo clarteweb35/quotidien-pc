@@ -99,3 +99,12 @@ footer ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 16px; f
 .illus figcaption { font: .78rem/1.4 var(--sans); color: var(--ink-2); margin-top: 6px; }
 
 .ref { font-variant-numeric: tabular-nums; letter-spacing: .04em; color: var(--ink-2); }
+
+/* Signature et page « La rédaction » */
+.byline { font: .88rem/1.4 var(--sans); color: var(--ink); margin: 0 0 6px; letter-spacing: .01em; }
+.byline a { color: inherit; font-weight: 700; text-decoration: none; border-bottom: 1px solid var(--accent); }
+.card .byline, .lead .byline { font-size: .78rem; color: var(--ink-2); margin: 0 0 4px; }
+.team { list-style: none; padding: 0; margin: 0 0 8px; }
+.team li { padding: 10px 0; border-bottom: 1px solid var(--rule); scroll-margin-top: 16px; }
+.team li:target { background: var(--paper-2); }
+.team p { margin: 4px 0 0; color: var(--ink-2); font-size: .98rem; }

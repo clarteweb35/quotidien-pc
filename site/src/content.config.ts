@@ -26,6 +26,7 @@ const articles = defineCollection({
     model: z.string().optional(),
     angle: z.string().optional(),
     ref: z.string().optional(),
+    author: z.string().optional(),
     imagePrompt: z.string().optional(),
     image: z.string().regex(/^images\/articles\/[a-z0-9-]+\.webp$/).optional(),
     imageAlt: z.string().optional(),

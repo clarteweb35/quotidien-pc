@@ -1,5 +1,6 @@
 ---
 id: "a10a651e50b1"
+author: "Thomas Théorie"
 title: "Colère sociale : le gouvernement teste un baromètre d’apaisement chiffré au décibel près"
 chapo: "Face aux cortèges du samedi, les ministères planchent sur une grille de conversion inédite : combien de centimes de SMIC faut-il injecter pour faire taire un mégaphone, et quelle couche de peinture sur un lycée permet de récupérer un rond-point ?"
 description: "Face aux manifestations, l'exécutif affine un baromètre mathématique pour convertir chaque concession sociale en minutes de calme dans la rue."

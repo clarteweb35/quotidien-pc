@@ -51,6 +51,7 @@ export function fakeArticleFor(prompt, categories) {
     status: 'ready_for_review',
     rejection_reason: '',
     fictional_elements: ['cellule de réflexion imaginaire', 'porte-parole fictif'],
+    author: '',
     image_prompt: "Une salle de réunion vide où une pile de dossiers penche dangereusement près d'une plante verte, vue de dos",
     image_alt: "Dessin d'une salle de réunion vide et d'une pile de dossiers penchée",
     quality_checks: { facts_verified: true, fiction_clearly_satirical: true, no_invented_quotes: true, no_personal_attack: true, original_angle: true, no_known_duplicate: true },

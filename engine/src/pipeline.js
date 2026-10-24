@@ -6,6 +6,7 @@ import { generateArticle, judgeArticle, judgeIssues, pickAngle } from './editor.
 import { validateArticle, normalizeArticle, feedbackFor } from './validator.js';
 import { publishArticle, loadExisting } from './publisher.js';
 import { illustrate, imageWanted } from './images.js';
+import { resolveAuthor } from './authors.js';
 import { listManualImages, renderManualImageList } from './refs.js';
 import fs from 'node:fs';
 import { dueSlots, expireSlots } from './scheduler.js';
@@ -182,7 +183,9 @@ async function processSlot(ctx, slot, items) {
     let image = null;
     if (imageWanted({ cfg, slot, existing, now })) image = await illustrate({ client, cfg, article, topic, logger, slotKey: slot.key });
     const imageDir = ctx.dryRun ? path.join(paths.data, 'dry-run', 'images') : path.join(paths.siteRoot ?? path.join(paths.root, 'site'), 'public', 'images', 'articles');
-    const pub = publishArticle({ article, topic, id, slotLabel: slot.key, model: cfg.engine.gemini.generatorModel, now, contentDir, existing, image, imageDir });
+    const signed = resolveAuthor({ proposed: article.author, category: article.category }, cfg);
+    if (signed && !signed.chosenByModel) logger.warn('author.default', { slot: slot.key, proposed: article.author ?? null, used: signed.name });
+    const pub = publishArticle({ article, topic, id, slotLabel: slot.key, model: cfg.engine.gemini.generatorModel, now, contentDir, existing, image, imageDir, author: signed?.name ?? null });
     if (!ctx.dryRun) {
       store.setSlot(date, slot.idx, { status: 'published', articleId: id, publishedAt: pub.publishedAt, topicId: topic.id, lastError: null });
       store.markTopic(topic.id, { status: 'used', usedAt: now.toISOString() });

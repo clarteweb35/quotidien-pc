@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import { siteName, satireNotice } from '../lib/site';
+import { siteName, satireNotice, url } from '../lib/site';
 ---
 <Base title="À propos" description={`Qui fait ${siteName} ? Personne de sérieux.`}>
   <div class="prose">
@@ -14,6 +14,7 @@ import { siteName, satireNotice } from '../lib/site';
       <li>Nous n'inventons jamais de citation attribuée à une personne réelle.</li>
       <li>Nous ne traitons pas les drames et les faits divers douloureux.</li>
       <li>Tout article est clairement signalé comme satirique.</li>
+      <li>Les signatures sont celles de <a href={url('redaction/')}>personnages fictifs</a> : un journaliste du journal n'a jamais enquêté, rencontré un témoin ni obtenu un document.</li>
     </ul>
     <div class="satire-box"><strong>Rappel.</strong> {satireNotice}</div>
   </div>

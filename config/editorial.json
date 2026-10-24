@@ -3,7 +3,7 @@
   "logoName": { "main": "Le Quotidien", "sub": "PRESQUE CERTAIN" },
   "tagline": "L’information, à peu près. Les faits, on verra demain.",
   "satireNotice": "Le Quotidien Presque Certain est un journal satirique. Cet article est une œuvre d'humour et de fiction : les situations, propos et personnages décrits sont inventés ou déformés à des fins parodiques. Il ne rapporte pas des faits réels.",
-  "manualImageCredit": "Illustration : Le Quotidien Presque Certain",
+  "manualImageCredit": "Illustration générée par IA · Le Quotidien Presque Certain",
   "satireDisclaimerShort": "Article satirique et fictif, conçu à des fins humoristiques.",
   "generatorPromptFile": "prompts/generator.md",
   "judgePromptFile": "prompts/judge.md",

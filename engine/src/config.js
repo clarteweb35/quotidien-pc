@@ -33,6 +33,7 @@ export function loadConfig(paths = makePaths(), env = process.env) {
     categories: f('categories.json').categories,
     sources: f('sources.json').feeds,
     evergreen: f('evergreen.json').themes,
+    journalists: f('journalists.json').journalists,
     safety: f('safety.json'),
     control: f('control.json'),
   };
@@ -77,6 +78,10 @@ export function checkConfig(cfg) {
     if (im.perDayMax > im.slotIndexes.length) problems.push('images.perDayMax superieur au nombre de creneaux illustres');
   }
   if (!(cfg.engine.budget.dailyUsd > 0) || !(cfg.engine.budget.monthlyUsd > 0)) problems.push('budget: plafonds quotidien et mensuel doivent etre > 0');
+  const active = cfg.journalists.filter((j) => j.active);
+  if (new Set(active.map((j) => j.name)).size !== active.length) problems.push('journalists: nom actif en double');
+  for (const j of cfg.journalists) if (!slugs.has(j.desk)) problems.push(`journalists: rubrique inconnue "${j.desk}" pour ${j.name}`);
+  for (const c of cfg.categories) if (!active.some((j) => j.desk === c.slug)) problems.push(`journalists: aucun journaliste actif pour la rubrique ${c.slug}`);
   if (!cfg.editorial.satireNotice?.trim()) problems.push('editorial.satireNotice est vide');
   if (!cfg.editorial.generatorSystemPrompt || cfg.editorial.generatorSystemPrompt.length < 500) problems.push('prompts/generator.md vide ou trop court');
   if (!cfg.editorial.judgeSystemPrompt) problems.push('prompts/judge.md vide');
