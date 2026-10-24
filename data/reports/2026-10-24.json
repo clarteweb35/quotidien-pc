@@ -1,0 +1,99 @@
+{
+  "date": "2026-10-24",
+  "target": 8,
+  "publishedCount": 1,
+  "articles": [
+    {
+      "id": "a10a651e50b1",
+      "title": "Colère sociale : le gouvernement teste un baromètre d’apaisement chiffré au décibel près",
+      "category": "societe",
+      "slug": "colere-sociale-le-gouvernement-teste-un-barometre-d"
+    }
+  ],
+  "slots": [
+    {
+      "idx": 0,
+      "hhmm": "07:00",
+      "attempts": 0,
+      "status": "abandoned",
+      "lastError": "fenetre_de_rattrapage_depassee"
+    },
+    {
+      "idx": 1,
+      "hhmm": "09:00",
+      "attempts": 0,
+      "status": "abandoned",
+      "lastError": "fenetre_de_rattrapage_depassee"
+    },
+    {
+      "idx": 2,
+      "hhmm": "11:00",
+      "attempts": 0,
+      "status": "abandoned",
+      "lastError": "fenetre_de_rattrapage_depassee"
+    },
+    {
+      "idx": 3,
+      "hhmm": "13:00",
+      "attempts": 0,
+      "status": "abandoned",
+      "lastError": "fenetre_de_rattrapage_depassee"
+    },
+    {
+      "idx": 4,
+      "hhmm": "15:00",
+      "attempts": 0,
+      "status": "abandoned",
+      "lastError": "fenetre_de_rattrapage_depassee"
+    },
+    {
+      "idx": 5,
+      "hhmm": "17:30",
+      "attempts": 0,
+      "status": "abandoned",
+      "lastError": "fenetre_de_rattrapage_depassee"
+    },
+    {
+      "idx": 6,
+      "hhmm": "19:30",
+      "attempts": 0,
+      "status": "abandoned",
+      "lastError": "fenetre_de_rattrapage_depassee"
+    },
+    {
+      "idx": 7,
+      "hhmm": "21:30",
+      "status": "pending",
+      "attempts": 0
+    },
+    {
+      "idx": "x1",
+      "hhmm": "manuel",
+      "attempts": 1,
+      "status": "published",
+      "startedAt": "2026-10-24T21:27:18.568Z",
+      "articleId": "a10a651e50b1",
+      "publishedAt": "2026-10-24T21:27:18.568Z",
+      "topicId": "efb1ec70fc50",
+      "lastError": null
+    }
+  ],
+  "rejections": 0,
+  "quarantined": 0,
+  "api": {
+    "calls": 4,
+    "inputTokens": 7861,
+    "outputTokens": 3696,
+    "costUsd": 0.036255,
+    "dailyCapUsd": 1,
+    "monthCostUsd": 0.036255,
+    "monthlyCapUsd": 15
+  },
+  "paused": false,
+  "lastRun": {
+    "at": "2026-10-24T21:27:17.198Z",
+    "runId": "20261024212717-3c06",
+    "published": 1,
+    "stopped": null
+  }
+}

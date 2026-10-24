@@ -1,0 +1,307 @@
+{
+  "version": 1,
+  "topics": {
+    "dd981066d6d3": {
+      "title": "Mobilisation en baisse, près de 1 000 interpellations, deux blessés graves… Ce qu'il faut retenir de cette nouvelle journée de manifestation contre la vie chère",
+      "url": "https://www.franceinfo.fr/societe/manifestations/mobilisation-en-baisse-pres-de-1-000-interpellations-deux-blesses-graves-ce-qu-il-faut-retenir-de-cette-nouvelle-journee-de-manifestation-contre-la-vie-chere-partout-en-france_8252476.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-24T21:27:18.568Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "5667e3c820eb": {
+      "title": "\"Il était de ceux qui donnent l'exemple\" : qui était Pengo Bossio Wangi, le jeune homme tué lors de l'attentat raciste de Trappes ?",
+      "url": "https://www.franceinfo.fr/faits-divers/terrorisme/attentat-raciste-a-trappes/il-etait-de-ceux-qui-donnent-l-exemple-qui-etait-pengo-bossio-wangi-le-jeune-homme-tue-lors-de-l-attentat-raciste-de-trappes_8252407.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-24T21:27:18.568Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "fa539832b1fe": {
+      "title": "\"Je n'ai pas l'impression d'être en vie\" : une rescapée de l'explosion de la rue de Trévise raconte son long combat",
+      "url": "https://www.franceinfo.fr/faits-divers/explosion-d-un-immeuble-a-paris/je-n-ai-pas-l-impression-d-etre-en-vie-et-je-n-ai-pas-envie-d-etre-en-vie-le-temoignage-d-une-rescapee-de-l-explosion-de-la-rue-de-trevise_8252500.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-24T21:27:18.568Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "842a29c78230": {
+      "title": "Incendie de la mairie de Limoges : le principal suspect va faire appel de sa mise en examen et de son placement en détention provisoire",
+      "url": "https://www.franceinfo.fr/societe/mobilisation-du-17-octobre/incendie-de-la-mairie-de-limoges-le-principal-suspect-va-faire-appel-de-sa-mise-en-examen-et-de-son-placement-en-detention-provisoire_8252542.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-24T21:27:18.568Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "4ef6d4fdfad0": {
+      "title": "Les houthis du Yémen disent avoir ciblé trois aéroports et des installations pétrolières en Arabie saoudite",
+      "url": "https://www.franceinfo.fr/monde/proche-orient/yemen/les-houthis-du-yemen-disent-avoir-cible-trois-aeroports-et-des-installations-petrolieres-en-arabie-saoudite_8252248.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-24T21:27:18.568Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "a666c7d0f63b": {
+      "title": "Ce que l'on sait de Kévin T., l'homme de 39 ans soupçonné de l'attaque terroriste qui fait un mort et plusieurs blessés graves à Trappes et La Verrière",
+      "url": "https://www.franceinfo.fr/faits-divers/terrorisme/attaque-a-trappes/ce-que-l-on-sait-de-kevin-t-l-homme-de-39-ans-soupconne-de-l-attaque-terroriste-qui-fait-un-mort-et-plusieurs-blesses-graves-a-trappes-et-la-verriere_8250916.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-24T21:27:18.568Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "30d7a8a89450": {
+      "title": "Une enquête de l'IGPN ouverte concernant un photographe blessé à Paris par une grenade policière lors d'une manifestation du 17 octobre",
+      "url": "https://www.franceinfo.fr/societe/manifestations/manifestations-du-17-octobre-une-enquete-de-l-igpn-ouverte-concernant-un-photographe-blesse-par-une-grenade-policiere_8252251.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-24T21:27:18.568Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "6d05079713dc": {
+      "title": "Le bilan de l'attaque contre une église en Jordanie s'alourdit à neuf morts",
+      "url": "https://www.franceinfo.fr/monde/moyen-orient/le-bilan-de-l-attaque-contre-une-eglise-en-jordanie-s-alourdit-a-neuf-morts_8252329.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-24T21:27:18.568Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "64d937464f75": {
+      "title": "\"J'ai mal à mon Trappes\" : Jamel Debbouze, Issa Doumbia, La Fouine et Enora Malagré expriment leur soutien à \"leur ville\" après l'attentat raciste",
+      "url": "https://www.franceinfo.fr/culture/j-ai-mal-a-mon-trappes-jamel-debbouze-issa-doumbia-la-fouine-et-enora-malagre-expriment-leur-soutien-a-leur-ville-apres-l-attentat-raciste_8252233.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-24T21:27:18.568Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "68b46c994cb6": {
+      "title": "Attentat raciste de Trappes : le tireur présumé a dit avoir voulu venger les commerçants pillés le 17 octobre et avoir ciblé des personnes selon leur couleur de peau",
+      "url": "https://www.lemonde.fr/societe/article/2026/10/24/attentat-raciste-de-trappes-le-tireur-presume-a-dit-avoir-voulu-venger-les-commercants-pilles-le-17-octobre-et-avoir-cible-des-personnes-de-couleur_6799689_3224.html",
+      "category": "societe",
+      "seenAt": "2026-10-24T21:27:18.568Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "a2997982e947": {
+      "title": "Avant le match de NFL au Stade de France, la tournée qui voulait introduire le football américain en France, en 1938",
+      "url": "https://www.lemonde.fr/sport/article/2026/10/24/avant-le-match-de-nfl-au-stade-de-france-la-tournee-qui-voulait-introduire-le-football-americain-en-france-en-1938_6799721_3242.html",
+      "category": "societe",
+      "seenAt": "2026-10-24T21:27:18.568Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "fb3c86500675": {
+      "title": "EN DIRECT, guerre en Ukraine : un drone à l’origine inconnue retrouvé en Lettonie",
+      "url": "https://www.lemonde.fr/international/live/2026/10/24/en-direct-guerre-en-ukraine-un-drone-a-l-origine-inconnue-retrouve-en-lettonie_6796922_3210.html",
+      "category": "societe",
+      "seenAt": "2026-10-24T21:27:18.568Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "735cf138c445": {
+      "title": "Au Yémen, des frappes saoudiennes font au moins quatre morts à Sanaa, capitale aux mains des houthistes",
+      "url": "https://www.lemonde.fr/international/article/2026/10/24/au-yemen-des-frappes-saoudiennes-font-au-moins-quatre-morts-a-sanaa-capitale-aux-mains-des-houthistes_6799703_3210.html",
+      "category": "societe",
+      "seenAt": "2026-10-24T21:27:18.568Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "5d01e153a272": {
+      "title": "Attentat raciste dans les Yvelines : le livre de Hitler «Mein Kampf» retrouvé au domicile du tireur",
+      "url": "https://www.liberation.fr/societe/police-justice/en-direct-attaque-dans-les-yvelines-un-club-mma-francilien-rend-hommage-a-pengo-le-jeune-homme-de-26-ans-tue-a-trappes-20261024_QFOWDJ375JGU5CQVNCE3TCO2OM/",
+      "category": "societe",
+      "seenAt": "2026-10-24T21:27:18.568Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "b35152f3af33": {
+      "title": "«Un combattant dur, mais avec un grand cœur» : Pengo Bossio Wangi, passionné de MMA, tué dans l’attentat de Trappes",
+      "url": "https://www.liberation.fr/societe/un-combattant-dur-mais-avec-un-grand-coeur-pengo-bossio-wangi-passionne-de-mma-tue-dans-lattentat-de-trappes-20261024_YZ5N5SVHMBFITICHRX2ACRJ7QQ/",
+      "category": "societe",
+      "seenAt": "2026-10-24T21:27:18.568Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "ceb20159ad21": {
+      "title": "Après l’attentat de Trappes, les mots sains du maire Ali Rabeh sur la responsabilité des médias face au racisme",
+      "url": "https://www.liberation.fr/idees-et-debats/opinions/apres-lattentat-de-trappes-les-mots-sains-du-maire-ali-rabeh-sur-la-responsabilite-des-medias-face-au-racisme-20261024_OLCW4ADRWFCNHPHOURAEUZFWQ4/",
+      "category": "societe",
+      "seenAt": "2026-10-24T21:27:18.568Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "5a00b18f4937": {
+      "title": "Motivations du suspect, profil de la victime, état de santé des blessés… Ce que l’on sait ce samedi de l’attaque raciste dans les Yvelines",
+      "url": "https://www.liberation.fr/societe/police-justice/motivations-du-suspect-profil-de-la-victime-etat-de-sante-des-blesses-ce-que-lon-sait-ce-samedi-de-lattaque-raciste-dans-les-yvelines-20261024_ZEXTBXBQPJBSTCEJ5JPENIN3KI/",
+      "category": "societe",
+      "seenAt": "2026-10-24T21:27:18.568Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "062b5c238345": {
+      "title": "Vaccin à ARN messager contre le mélanome : «C’est l’une des avancées les plus significatives depuis l’avènement de l’immunothérapie»",
+      "url": "https://www.liberation.fr/societe/sante/vaccin-a-arn-messager-contre-le-melanome-cest-lune-des-avancees-les-plus-significatives-depuis-lavenement-de-limmunotherapie-20261024_77CV5BIAUNFBDGKBHLG6L45RXE/",
+      "category": "societe",
+      "seenAt": "2026-10-24T21:27:18.568Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "e26d4b65c8b2": {
+      "title": "Terrorisme d’extrême droite : «La tendance actuelle est la tentative d’actes individuels»",
+      "url": "https://www.liberation.fr/societe/police-justice/terrorisme-dextreme-droite-la-tendance-actuelle-est-la-tentative-dactes-individuels-20261024_NREFUAPD65FZBERA62QZBRRP6I/",
+      "category": "societe",
+      "seenAt": "2026-10-24T21:27:18.568Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "23d8e7eb06f6": {
+      "title": "En France, la garde à vue du suspect de l’attaque de Trappes prolongée",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261024-en-france-la-garde-%C3%A0-vue-du-suspect-de-l-attaque-de-trappes-prolong%C3%A9e",
+      "category": "monde",
+      "seenAt": "2026-10-24T21:27:18.568Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "286631c796c2": {
+      "title": "L’armée israélienne mène une vaste opération en Cisjordanie après la mort de deux soldats",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261024-l-arm%C3%A9e-isra%C3%A9lienne-m%C3%A8ne-une-vaste-op%C3%A9ration-en-cisjordanie-apr%C3%A8s-la-mort-de-deux-soldats",
+      "category": "monde",
+      "seenAt": "2026-10-24T21:27:18.568Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "15f02eb46b68": {
+      "title": "Mobilisation du 24 octobre : le cortège parisien défile sur un parcours qui fait débat",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261024-mobilisation-du-24-octobre-le-cort%C3%A8ge-parisien-d%C3%A9file-sur-un-parcours-qui-fait-d%C3%A9bat",
+      "category": "monde",
+      "seenAt": "2026-10-24T21:27:18.568Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "513d4433103e": {
+      "title": "Neuf ans après l’incendie dramatique de la tour Grenfell, à Londres, la très lente mise aux normes des immeubles britanniques",
+      "url": "https://www.lemonde.fr/economie/article/2026/10/24/neuf-ans-apres-l-incendie-dramatique-de-la-tour-grenfell-a-londres-la-tres-lente-mise-aux-normes-des-immeubles-britanniques_6799682_3234.html",
+      "category": "economie",
+      "seenAt": "2026-10-24T21:27:18.568Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "1e1a1e230b90": {
+      "title": "Microsoft veut fermer Arkane, studio de jeu vidéo lyonnais, où 217 emplois sont menacés",
+      "url": "https://www.lemonde.fr/pixels/article/2026/10/23/microsoft-veut-fermer-arkane-studio-de-jeu-video-lyonnais-ou-217-emplois-sont-menaces_6799072_4408996.html",
+      "category": "economie",
+      "seenAt": "2026-10-24T21:27:18.568Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "d1d6d6b5d45e": {
+      "title": "Attentat raciste de Trappes : un homme portant le même prénom que le suspect accusé à tort sur les réseaux sociaux",
+      "url": "https://www.lemonde.fr/pixels/article/2026/10/24/attentat-raciste-de-trappes-un-homme-portant-le-meme-prenom-que-le-suspect-accuse-a-tort-sur-les-reseaux-sociaux_6799693_4408996.html",
+      "category": "tech",
+      "seenAt": "2026-10-24T21:27:18.568Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "7da447b725db": {
+      "title": "Le beau livre « Dessins, encres & gouaches » réunit des œuvres inédites et inattendues de Georges Perec",
+      "url": "https://www.lemonde.fr/livres/article/2026/10/24/le-beau-livre-dessins-encres-gouaches-reunit-des-uvres-inedites-et-inattendues-de-georges-perec_6799660_3260.html",
+      "category": "culture",
+      "seenAt": "2026-10-24T21:27:18.568Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "01e2f132043c": {
+      "title": "Au Cenquatre, à Paris, le regard de Walid Raad sur les blessures du Liban",
+      "url": "https://www.lemonde.fr/culture/article/2026/10/23/au-cenquatre-a-paris-le-regard-de-walid-raad-sur-les-blessures-du-liban_6799104_3246.html",
+      "category": "culture",
+      "seenAt": "2026-10-24T21:27:18.568Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "da974c65f70b": {
+      "title": "Comment protéger nos enfants des pesticides ?",
+      "url": "https://www.lemonde.fr/intimites/article/2026/10/24/comment-proteger-nos-enfants-des-pesticides_6799676_6190330.html",
+      "category": "environnement",
+      "seenAt": "2026-10-24T21:27:18.568Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "b81300dfb217": {
+      "title": "Tempête Austen : trois départements du nord de la France restent en vigilance orange, 242 000 foyers privés d’électricité",
+      "url": "https://www.lemonde.fr/planete/article/2026/10/23/tempete-austen-trois-departements-du-nord-de-la-france-restent-en-vigilance-orange-242-000-foyers-prives-d-electricite_6799023_3245.html",
+      "category": "environnement",
+      "seenAt": "2026-10-24T21:27:18.568Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "a200edccf895": {
+      "title": "Le Népal, après le « tsunami des montagnes », ne veut pas rebâtir à l’identique : « Si nous reconstruisons les routes au même endroit, les populations s’installeront à proximité »",
+      "url": "https://www.lemonde.fr/planete/article/2026/10/23/le-nepal-apres-le-tsunami-des-montagnes-ne-veut-pas-rebatir-a-l-identique-si-nous-reconstruisons-les-routes-au-meme-endroit-les-populations-s-installeront-a-proximite_6799073_3244.html",
+      "category": "environnement",
+      "seenAt": "2026-10-24T21:27:18.568Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "efb1ec70fc50": {
+      "title": "Réformer Parcoursup, prendre soin des lycées, augmenter le SMIC… Quelles pistes pour calmer la colère des manifestants ?",
+      "url": "https://www.franceinfo.fr/replay-jt/france-2/20-heures/reformer-parcoursup-prendre-soin-des-lycees-augmenter-le-smic-quelles-pistes-pour-calmer-la-colere_8252509.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-24T21:27:18.568Z",
+      "status": "used",
+      "usedAt": "2026-10-24T21:27:18.568Z"
+    }
+  },
+  "slots": {
+    "2026-10-24": {
+      "0": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "1": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "2": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "3": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "4": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "5": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "6": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "x1": {
+        "attempts": 1,
+        "status": "published",
+        "startedAt": "2026-10-24T21:27:18.568Z",
+        "articleId": "a10a651e50b1",
+        "publishedAt": "2026-10-24T21:27:18.568Z",
+        "topicId": "efb1ec70fc50",
+        "lastError": null
+      }
+    }
+  },
+  "lastRun": {
+    "at": "2026-10-24T21:27:17.198Z",
+    "runId": "20261024212717-3c06",
+    "published": 1,
+    "stopped": null
+  }
+}

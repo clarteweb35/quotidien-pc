@@ -15,3 +15,20 @@
 {"ts":"2026-10-24T21:20:14.832Z","runId":"20261024211905-4a79","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":1043,"outputTokens":56,"costUsd":0.000453}
 {"ts":"2026-10-24T21:20:14.832Z","runId":"20261024211905-4a79","level":"info","event":"judge.result","slot":"2026-10-24#7","attempt":1,"humor":8,"coherence":9,"risk":0,"issues":[]}
 {"ts":"2026-10-24T21:20:14.834Z","runId":"20261024211905-4a79","level":"info","event":"publish.ok","slot":"2026-10-24#7","id":"32684ec74bbf","slug":"une-etude-de-600-pages-suggere-un-lien-discret-entre-le","url":"/articles/une-etude-de-600-pages-suggere-un-lien-discret-entre-le/","attempt":1,"dryRun":true}
+{"ts":"2026-10-24T21:27:17.426Z","runId":"20261024212717-3c06","level":"warn","event":"cycle.slots_abandoned","count":7}
+{"ts":"2026-10-24T21:27:17.428Z","runId":"20261024212717-3c06","level":"info","event":"cycle.start","date":"2026-10-24","due":["2026-10-24#x1"],"remainingToday":8,"dryRun":false}
+{"ts":"2026-10-24T21:27:18.566Z","runId":"20261024212717-3c06","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":32,"kept":25}
+{"ts":"2026-10-24T21:27:18.566Z","runId":"20261024212717-3c06","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-10-24T21:27:18.566Z","runId":"20261024212717-3c06","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":20}
+{"ts":"2026-10-24T21:27:18.566Z","runId":"20261024212717-3c06","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":21}
+{"ts":"2026-10-24T21:27:18.566Z","runId":"20261024212717-3c06","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":16}
+{"ts":"2026-10-24T21:27:18.567Z","runId":"20261024212717-3c06","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":7}
+{"ts":"2026-10-24T21:27:18.567Z","runId":"20261024212717-3c06","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":12}
+{"ts":"2026-10-24T21:27:18.567Z","runId":"20261024212717-3c06","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":7}
+{"ts":"2026-10-24T21:27:18.567Z","runId":"20261024212717-3c06","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":9}
+{"ts":"2026-10-24T21:27:18.567Z","runId":"20261024212717-3c06","level":"info","event":"collect.done","items":133}
+{"ts":"2026-10-24T21:27:18.584Z","runId":"20261024212717-3c06","level":"info","event":"topic.selection","slot":"2026-10-24#x1","candidates":133,"rejected":46,"chosen":"Réformer Parcoursup, prendre soin des lycées, augmenter le SMIC… Quelles pistes pour calmer la colère des manifestants ?","score":8.5}
+{"ts":"2026-10-24T21:27:49.191Z","runId":"20261024212717-3c06","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.8-flash","inputTokens":2861,"outputTokens":1764,"costUsd":0.017522}
+{"ts":"2026-10-24T21:27:50.040Z","runId":"20261024212717-3c06","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":1092,"outputTokens":83,"costUsd":0.000535}
+{"ts":"2026-10-24T21:27:50.040Z","runId":"20261024212717-3c06","level":"info","event":"judge.result","slot":"2026-10-24#x1","attempt":1,"humor":7,"coherence":9,"risk":1,"issues":[]}
+{"ts":"2026-10-24T21:27:50.042Z","runId":"20261024212717-3c06","level":"info","event":"publish.ok","slot":"2026-10-24#x1","id":"a10a651e50b1","slug":"colere-sociale-le-gouvernement-teste-un-barometre-d","url":"/articles/colere-sociale-le-gouvernement-teste-un-barometre-d/","attempt":1,"dryRun":false}
