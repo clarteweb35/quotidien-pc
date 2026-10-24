@@ -33,6 +33,9 @@ jobs:
       published: ${{ steps.commit.outputs.published }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Toujours la pointe de la branche: un « Re-run » GitHub rejouerait sinon l'ancien commit (ancien état => créneaux déjà pris ignorés).
+          ref: ${{ github.ref_name }}
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -71,10 +74,14 @@ jobs:
           fi
           git commit -m "editor: cycle $(date -u +%Y-%m-%dT%H:%MZ)"
           for i in 1 2 3; do
-            git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            if git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}"; then exit 0; fi
+            git rebase --abort 2>/dev/null || true
             sleep $((i * 5))
           done
-          echo "Échec de la publication git" >&2; exit 1
+          # Rien ne doit se perdre: le travail est sauvegardé sur une branche de secours, à examiner à la main.
+          git push origin "HEAD:refs/heads/editor-recovery-${GITHUB_RUN_ID}" || true
+          echo "Échec de l'enregistrement sur ${GITHUB_REF_NAME}; travail sauvegardé sur la branche editor-recovery-${GITHUB_RUN_ID}" >&2
+          exit 1
 
       - name: Alertes
         if: always()
