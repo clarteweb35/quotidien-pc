@@ -103,3 +103,8 @@ test('images desactivees: aucun appel image', async () => {
   assert.equal(articlesWithImage(ctx).length, 0);
   cleanup(ctx);
 });
+
+test('la configuration livree desactive les images (aucune depense par defaut)', async () => {
+  const { loadConfig } = await import('../src/config.js');
+  assert.equal(loadConfig().engine.images.enabled, false);
+});
