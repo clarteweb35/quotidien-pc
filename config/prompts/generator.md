@@ -139,6 +139,8 @@ Tu réponds uniquement par un objet JSON conforme au schéma imposé par l'API. 
 - `status` : "ready_for_review" ou "rejected". Si "rejected", renseigne `rejection_reason` ; les autres champs peuvent rester vides.
 - `title`, `chapo` (le chapô), `category` (une rubrique de la liste autorisée), `tags` (3 à 5 mots-clés courts), `seo_description` (160 caractères maximum), `angle` (l'idée centrale en une phrase).
 - `body` : tableau de blocs `{ "kind": "p" | "h2", "text": "..." }`. **Texte brut uniquement** : pas de HTML, pas de Markdown, pas de lien, pas d'URL. Les intertitres sont des blocs "h2".
+- `image_prompt` : description visuelle d'une scène à illustrer (une à deux phrases, en français, 20 à 400 caractères) : objets, lieu, ambiance, personnages **génériques ou vus de dos**. Jamais de personne réelle, jamais de texte ni de logo, jamais le mot « photo ». Style dessin de presse : le système l'applique.
+- `image_alt` : texte alternatif de l'illustration pour l'accessibilité (10 à 125 caractères), décrivant ce qu'on voit.
 - `fictional_elements` : liste des éléments inventés pour la satire (personnages, institutions, chiffres, scènes).
 - `quality_checks` : tes six auto-vérifications (`facts_verified`, `fiction_clearly_satirical`, `no_invented_quotes`, `no_personal_attack`, `original_angle`, `no_known_duplicate`). Mets `false` honnêtement si un point n'est pas satisfait. Ces champs sont des déclarations : le moteur les recontrôle de son côté et ne les considère jamais comme une preuve.
 - Le slug, l'avertissement satirique et les références de source sont ajoutés par le système.

@@ -2,22 +2,34 @@
   "gemini": {
     "generatorModel": "gemini-3.8-flash",
     "judgeModel": "gemini-3.5-flash-lite",
-    "generator": { "temperature": 1.0, "maxOutputTokens": 4096 },
-    "judge": { "temperature": 0.2, "maxOutputTokens": 1024 },
+    "generator": {
+      "temperature": 1,
+      "maxOutputTokens": 4096
+    },
+    "judge": {
+      "temperature": 0.2,
+      "maxOutputTokens": 1024
+    },
     "maxInputChars": 12000,
     "maxRetries": 3,
     "retryBaseDelayMs": 4000,
     "requestTimeoutMs": 90000,
     "minDelayBetweenCallsMs": 1500,
     "pricesUsdPerMillionTokens": {
-      "gemini-3.8-flash": { "input": 1.5, "output": 7.5 },
-      "gemini-3.5-flash-lite": { "input": 0.3, "output": 2.5 }
+      "gemini-3.8-flash": {
+        "input": 1.5,
+        "output": 7.5
+      },
+      "gemini-3.5-flash-lite": {
+        "input": 0.3,
+        "output": 2.5
+      }
     },
     "pricesNote": "A VERIFIER sur https://ai.google.dev/gemini-api/docs/pricing. Valeurs prudentes (tarif le plus eleve annonce). Un modele absent de cette table bloque le moteur."
   },
   "budget": {
-    "dailyUsd": 1.0,
-    "monthlyUsd": 15.0
+    "dailyUsd": 1,
+    "monthlyUsd": 15
   },
   "collection": {
     "maxItemAgeHours": 36,
@@ -51,5 +63,27 @@
   "retention": {
     "logDays": 30,
     "quarantineDays": 30
+  },
+  "images": {
+    "enabled": true,
+    "perDayMax": 2,
+    "slotIndexes": [
+      1,
+      5
+    ],
+    "api": "interactions",
+    "model": "gemini-3.1-flash-lite-image",
+    "aspectRatio": "16:9",
+    "imageSize": "1K",
+    "priceUsdPerImage": 0.0336,
+    "priceNote": "A VERIFIER sur https://ai.google.dev/gemini-api/docs/pricing (tarif 1K de gemini-3.1-flash-lite-image au 24/10/2026). Pas de niveau gratuit pour les images.",
+    "maxRetries": 1,
+    "timeoutMs": 90000,
+    "promptMaxChars": 500,
+    "outputWidth": 1280,
+    "webpQuality": 82,
+    "credit": "Illustration générée par IA",
+    "styleGuide": "Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.",
+    "constraints": "Contraintes absolues : aucun texte, aucune lettre, aucun logo ni marque ; aucune personne réelle ni visage reconnaissable (personnages génériques ou vus de dos) ; pas de photographie, pas de rendu photoréaliste ; aucune violence ni nudité."
   }
 }

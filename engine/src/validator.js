@@ -14,7 +14,7 @@ const clean = (s) => String(s ?? '').replace(/[\u0000-\u0008\u000b\u000c\u000e-\
 export function normalizeArticle(a, cfg) {
   const v = cfg.engine.validation;
   const out = { ...a };
-  for (const k of ['title', 'chapo', 'seo_description', 'angle', 'category']) if (typeof out[k] === 'string') out[k] = clean(out[k]);
+  for (const k of ['title', 'chapo', 'seo_description', 'angle', 'category', 'image_prompt', 'image_alt']) if (typeof out[k] === 'string') out[k] = clean(out[k]);
   if (Array.isArray(out.tags)) {
     out.tags = [...new Set(out.tags.map((t) => clean(t).toLowerCase()).filter((t) => t && t.length <= 30 && /^[\p{L}\p{N}][\p{L}\p{N} '’-]*$/u.test(t)))].slice(0, v.maxTags);
   }

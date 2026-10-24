@@ -69,7 +69,7 @@ async function main() {
       // Journee complete simulee: faux Gemini, faux flux, repertoires temporaires. Aucune publication reelle.
       const date = opt('date') ?? new Date().toISOString().slice(0, 10);
       const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'lgn-sim-'));
-      const paths = { ...makePaths(), data: path.join(tmp, 'data'), content: path.join(tmp, 'articles') };
+      const paths = { ...makePaths(), data: path.join(tmp, 'data'), content: path.join(tmp, 'articles'), siteRoot: path.join(tmp, 'site') };
       let t = Date.parse(`${date}T00:00:00Z`) - 2 * 3600e3;
       const now = () => new Date(t);
       const ctx = buildContext({ mock: true, now, paths, quietLogs: !flag('verbose') });

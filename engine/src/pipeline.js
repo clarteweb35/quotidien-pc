@@ -5,6 +5,7 @@ import { pickNewsTopic, pickEvergreen } from './topics.js';
 import { generateArticle, judgeArticle, judgeIssues, pickAngle } from './editor.js';
 import { validateArticle, normalizeArticle, feedbackFor } from './validator.js';
 import { publishArticle, loadExisting } from './publisher.js';
+import { illustrate, imageWanted } from './images.js';
 import { dueSlots, expireSlots } from './scheduler.js';
 import { BudgetExceededError, QuotaError, FatalGeminiError, MalformedResponseError } from './gemini.js';
 
@@ -176,7 +177,10 @@ async function processSlot(ctx, slot, items) {
     }
 
     // --- publication ---
-    const pub = publishArticle({ article, topic, id, slotLabel: slot.key, model: cfg.engine.gemini.generatorModel, now, contentDir, existing });
+    let image = null;
+    if (imageWanted({ cfg, slot, existing, now })) image = await illustrate({ client, cfg, article, topic, logger, slotKey: slot.key });
+    const imageDir = ctx.dryRun ? path.join(paths.data, 'dry-run', 'images') : path.join(paths.siteRoot ?? path.join(paths.root, 'site'), 'public', 'images', 'articles');
+    const pub = publishArticle({ article, topic, id, slotLabel: slot.key, model: cfg.engine.gemini.generatorModel, now, contentDir, existing, image, imageDir });
     if (!ctx.dryRun) {
       store.setSlot(date, slot.idx, { status: 'published', articleId: id, publishedAt: pub.publishedAt, topicId: topic.id, lastError: null });
       store.markTopic(topic.id, { status: 'used', usedAt: now.toISOString() });

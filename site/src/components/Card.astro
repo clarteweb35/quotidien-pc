@@ -14,11 +14,11 @@ const href = url(`articles/${d.slug}/`);
       <p>{d.chapo}</p>
       <div class="meta">{formatDate(d.publishedAt)}</div>
     </div>
-    <a href={href} tabindex="-1" aria-hidden="true"><div class="cover" style={`--c:${cat.color}`}><span>{cat.name}</span></div></a>
+    <a href={href} tabindex="-1" aria-hidden="true">{d.image ? <img class="photo" src={url(d.image)} alt="" width="1280" height="720" fetchpriority="high" /> : <div class="cover" style={`--c:${cat.color}`}><span>{cat.name}</span></div>}</a>
   </article>
 ) : (
   <article class="card">
-    <a href={href} tabindex="-1" aria-hidden="true"><div class="cover" style={`--c:${cat.color}`}><span>{cat.name}</span></div></a>
+    <a href={href} tabindex="-1" aria-hidden="true">{d.image ? <img class="photo" src={url(d.image)} alt="" width="1280" height="720" loading="lazy" /> : <div class="cover" style={`--c:${cat.color}`}><span>{cat.name}</span></div>}</a>
     <h3><a href={href}>{d.title}</a></h3>
     <p>{d.chapo}</p>
     <div class="meta">{formatDate(d.publishedAt)}</div>

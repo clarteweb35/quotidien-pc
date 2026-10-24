@@ -29,14 +29,26 @@ function wrap(text: string, max: number, lines: number): string[] {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const articles = await allArticles();
-  return articles.map((a) => ({ params: { slug: a.data.slug }, props: { title: a.data.title, cat: category(a.data.category) } }));
+  return articles.map((a) => ({ params: { slug: a.data.slug }, props: { title: a.data.title, cat: category(a.data.category), image: a.data.image ?? null } }));
 };
 
 export const GET: APIRoute = async ({ props }) => {
-  const { title, cat } = props as { title: string; cat: { name: string } };
+  const { title, cat, image } = props as { title: string; cat: { name: string }; image: string | null };
   const logoFile = [path.resolve(process.cwd(), 'public/brand/logo-1100.png'), path.resolve(process.cwd(), 'site/public/brand/logo-1100.png')].find(fs.existsSync);
   if (!logoFile) throw new Error('logo-1100.png introuvable (node scripts/make-brand-assets.mjs)');
   const logo = await sharp(logoFile).resize({ width: 480 }).toBuffer();
+  const illus = image ? [path.resolve(process.cwd(), 'public', image), path.resolve(process.cwd(), 'site/public', image)].find(fs.existsSync) : undefined;
+  if (illus) {
+    // Illustration plein cadre + bandeau ivoire avec le logo (identite identique aux autres images de partage).
+    const band = Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="130"><rect width="${W}" height="130" fill="#faf7f2"/><rect y="0" width="${W}" height="4" fill="#8f1d17"/><text x="${W - 40}" y="62" text-anchor="end" font-family="Georgia,'DejaVu Serif',serif" font-size="20" letter-spacing="4" fill="#8f1d17">${esc(cat.name.toUpperCase())}</text><text x="${W - 40}" y="94" text-anchor="end" font-family="Georgia,'DejaVu Serif',serif" font-size="16" letter-spacing="3" fill="#4a463d">ARTICLE SATIRIQUE · ILLUSTRATION IA</text></svg>`);
+    const photo = await sharp(illus).resize(W, H - 130, { fit: 'cover' }).toBuffer();
+    const small = await sharp(logoFile).resize({ height: 104 }).toBuffer();
+    const out = await sharp({ create: { width: W, height: H, channels: 3, background: '#faf7f2' } })
+      .composite([{ input: photo, left: 0, top: 0 }, { input: band, left: 0, top: H - 130 }, { input: small, left: 40, top: H - 118 }])
+      .png({ compressionLevel: 9 })
+      .toBuffer();
+    return new Response(out, { headers: { 'content-type': 'image/png' } });
+  }
   const lines = wrap(title, 27, 4);
   const startY = 415 - (lines.length - 1) * 29;
   const text = lines.map((l, i) => `<text x="${W / 2}" y="${startY + i * 58}" text-anchor="middle">${esc(l)}</text>`).join('');

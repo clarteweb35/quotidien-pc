@@ -11,6 +11,7 @@ export function makePaths(root = ROOT, env = process.env) {
     root,
     config: path.join(root, 'config'),
     data: env.LGN_DATA_DIR ? path.resolve(env.LGN_DATA_DIR) : path.join(root, 'data'),
+    siteRoot: env.LGN_SITE_ROOT ? path.resolve(env.LGN_SITE_ROOT) : path.join(root, 'site'),
     content: env.LGN_CONTENT_DIR
       ? path.resolve(env.LGN_CONTENT_DIR)
       : path.join(root, 'site', 'src', 'content', 'articles'),
@@ -68,6 +69,13 @@ export function checkConfig(cfg) {
   for (const t of cfg.evergreen) if (!slugs.has(t.category)) problems.push(`evergreen ${t.id}: rubrique inconnue "${t.category}"`);
   for (const f of cfg.sources) if (!slugs.has(f.category)) problems.push(`source ${f.id}: rubrique inconnue "${f.category}"`);
   for (const c of cfg.editorial.priorityCategories) if (!slugs.has(c)) problems.push(`priorityCategories: rubrique inconnue "${c}"`);
+  const im = cfg.engine.images;
+  if (im?.enabled) {
+    if (!(im.priceUsdPerImage > 0)) problems.push('images.priceUsdPerImage doit etre > 0 (verifier le tarif)');
+    if (!im.model) problems.push('images.model manquant');
+    if (im.slotIndexes.some((i) => !Number.isInteger(i) || i < 0 || i >= cfg.schedule.slots.length)) problems.push('images.slotIndexes: indice de creneau invalide');
+    if (im.perDayMax > im.slotIndexes.length) problems.push('images.perDayMax superieur au nombre de creneaux illustres');
+  }
   if (!(cfg.engine.budget.dailyUsd > 0) || !(cfg.engine.budget.monthlyUsd > 0)) problems.push('budget: plafonds quotidien et mensuel doivent etre > 0');
   if (!cfg.editorial.satireNotice?.trim()) problems.push('editorial.satireNotice est vide');
   if (!cfg.editorial.generatorSystemPrompt || cfg.editorial.generatorSystemPrompt.length < 500) problems.push('prompts/generator.md vide ou trop court');

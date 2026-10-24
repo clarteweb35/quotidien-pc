@@ -71,7 +71,7 @@ export class GeminiClient {
    * @param {{purpose:string, model:string, system:string, prompt:string, schema:object, params:object}} req
    * @returns {Promise<{data:object, usage:object}>}
    */
-  async generateJson({ purpose, model, system, prompt, schema, params }) {
+  async generateJson({ purpose, model, system, prompt, schema, params, image }) {
     const g = this.cfg.engine.gemini;
     let text = prompt;
     if (text.length > g.maxInputChars) {
@@ -80,7 +80,9 @@ export class GeminiClient {
     }
     const prices = g.pricesUsdPerMillionTokens;
     // Estimation pessimiste avant l'appel: 1 jeton ~ 3 caracteres, sortie au maximum autorise.
-    const estimate = computeCostUsd(prices, model, Math.ceil((text.length + system.length) / 3), params.maxOutputTokens);
+    const estimate = computeCostUsd(prices, model, Math.ceil((text.length + system.length) / 3) + (image ? 2000 : 0), params.maxOutputTokens);
+    // Entree multimodale (relecture d'une illustration): texte + image en base64.
+    const contents = image ? [{ role: 'user', parts: [{ text }, { inlineData: { mimeType: image.mimeType, data: image.data } }] }] : text;
     this.assertBudget(estimate);
 
     const { extraConfig = {}, ...gen } = params;
@@ -100,7 +102,7 @@ export class GeminiClient {
       if (wait > 0) await this.sleep(wait);
       this.lastCallAt = Date.now();
       try {
-        const res = await this.ai.models.generateContent({ model, contents: text, config });
+        const res = await this.ai.models.generateContent({ model, contents, config });
         return this.#handle(res, { purpose, model, params: gen, prices });
       } catch (err) {
         if (err instanceof MalformedResponseError || err instanceof BudgetExceededError || err instanceof FatalGeminiError) throw err;

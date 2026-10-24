@@ -91,3 +91,9 @@ footer ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 16px; f
   .grid { grid-template-columns: 1fr; }
 }
 :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+/* Illustrations generees par IA (dessin de presse) */
+.photo { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 2px; background: var(--paper-2); }
+.illus { margin: 24px 0 0; }
+.illus img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 2px; background: var(--paper-2); }
+.illus figcaption { font: .78rem/1.4 var(--sans); color: var(--ink-2); margin-top: 6px; }

@@ -3,6 +3,7 @@ import path from 'node:path';
 import { slugify } from './util.js';
 
 const FM_KEYS = ['id', 'title', 'chapo', 'description', 'category', 'tags', 'publishedAt', 'slot', 'kind', 'satire', 'sources', 'model', 'angle'];
+const IMAGE_DIR = 'images/articles';
 
 export function parseArticleFile(raw) {
   const m = /^---\n([\s\S]*?)\n---\n([\s\S]*)$/.exec(raw.replace(/\r\n/g, '\n'));
@@ -25,7 +26,7 @@ export function loadExisting(contentDir, { maxAgeDays = 90, now = new Date() } =
     try {
       const { fm, body } = parseArticleFile(fs.readFileSync(path.join(contentDir, f), 'utf8'));
       if (now.getTime() - Date.parse(fm.publishedAt) > maxAgeDays * 86400000) continue;
-      out.push({ id: fm.id, slot: fm.slot, slug: fm.slug ?? f.replace(/\.md$/, ''), title: fm.title, text: body, category: fm.category, publishedAt: fm.publishedAt, file: f });
+      out.push({ id: fm.id, slot: fm.slot, slug: fm.slug ?? f.replace(/\.md$/, ''), title: fm.title, text: body, category: fm.category, publishedAt: fm.publishedAt, image: fm.image, file: f });
     } catch {
       /* fichier illisible ignore: il sera signale par les tests du site */
     }
@@ -43,7 +44,7 @@ function uniqueSlug(base, existing, id) {
 /**
  * Ecrit l'article puis le relit pour confirmer. Idempotent: meme id => meme fichier (ecrasement identique).
  */
-export function publishArticle({ article, topic, id, slotLabel, model, now, contentDir, existing }) {
+export function publishArticle({ article, topic, id, slotLabel, model, now, contentDir, existing, image = null, imageDir = null }) {
   const date = now.toISOString().slice(0, 10);
   const prior = existing.find((e) => e.id === id);
   const slug = prior ? prior.slug : uniqueSlug(slugify(article.title), existing, id);
@@ -64,7 +65,16 @@ export function publishArticle({ article, topic, id, slotLabel, model, now, cont
     model,
     angle: article.angle,
   };
-  const lines = ['---', ...FM_KEYS.map((k) => `${k}: ${JSON.stringify(fm[k])}`), `slug: ${JSON.stringify(slug)}`, '---', ''];
+  const extra = [`slug: ${JSON.stringify(slug)}`];
+  let imageFile = null;
+  if (image && imageDir) {
+    // Fichier ecrit avant l'article: un article ne reference jamais une image absente.
+    imageFile = `${slug}.webp`;
+    fs.mkdirSync(imageDir, { recursive: true });
+    fs.writeFileSync(path.join(imageDir, imageFile), image.buffer);
+    extra.push(`image: ${JSON.stringify(`${IMAGE_DIR}/${imageFile}`)}`, `imageAlt: ${JSON.stringify(image.alt)}`, `imageCredit: ${JSON.stringify(image.credit)}`);
+  }
+  const lines = ['---', ...FM_KEYS.map((k) => `${k}: ${JSON.stringify(fm[k])}`), ...extra, '---', ''];
   const body = article.body
     .map((b) => {
       const t = b.text.replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -82,5 +92,5 @@ export function publishArticle({ article, topic, id, slotLabel, model, now, cont
   // Confirmation: relecture du fichier ecrit.
   const check = parseArticleFile(fs.readFileSync(target, 'utf8'));
   if (check.fm.id !== id || check.fm.slug !== slug || !check.body) throw new Error(`Confirmation de publication echouee pour ${file}`);
-  return { id, slug, file, urlPath: `/articles/${slug}/`, publishedAt: fm.publishedAt, title: article.title, category: article.category };
+  return { id, slug, file, image: imageFile, urlPath: `/articles/${slug}/`, publishedAt: fm.publishedAt, title: article.title, category: article.category };
 }

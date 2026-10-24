@@ -51,6 +51,8 @@ export function fakeArticleFor(prompt, categories) {
     status: 'ready_for_review',
     rejection_reason: '',
     fictional_elements: ['cellule de réflexion imaginaire', 'porte-parole fictif'],
+    image_prompt: "Une salle de réunion vide où une pile de dossiers penche dangereusement près d'une plante verte, vue de dos",
+    image_alt: "Dessin d'une salle de réunion vide et d'une pile de dossiers penchée",
     quality_checks: { facts_verified: true, fiction_clearly_satirical: true, no_invented_quotes: true, no_personal_attack: true, original_angle: true, no_known_duplicate: true },
     title: `Simulation ${seed.slice(0, 4)} : ${short} préoccupe une cellule de réflexion imaginaire`,
     chapo: `Une cellule de réflexion tout droit sortie de notre imagination s'empare de la question avec le plus grand sérieux, pour une fois.`,
@@ -66,18 +68,30 @@ export function fakeArticleFor(prompt, categories) {
  * @param {{script?:(req:{kind:'generate'|'judge', n:number, prompt:string})=>any}} opts
  * script peut retourner: un objet (reponse JSON), une chaine (texte brut), ou lever une erreur ({status}).
  */
-export function createFakeSdk({ categories, script } = {}) {
-  const counters = { generate: 0, judge: 0, total: 0 };
+export function createFakeSdk({ categories, script, imageScript } = {}) {
+  const counters = { generate: 0, judge: 0, image: 0, image_judge: 0, total: 0 };
   return {
     counters,
+    interactions: {
+      async create({ input }) {
+        counters.image++;
+        const custom = imageScript ? await imageScript({ n: counters.image, prompt: input }) : undefined;
+        if (custom === 'empty') return {};
+        const sharp = (await import('sharp')).default;
+        const png = await sharp({ create: { width: 64, height: 36, channels: 3, background: '#8f1d17' } }).png().toBuffer();
+        return { output_image: { data: png.toString('base64'), mime_type: 'image/png' } };
+      },
+    },
     models: {
       async generateContent({ contents, config }) {
-        const kind = config.responseJsonSchema?.properties?.humor ? 'judge' : 'generate';
+        const props = config.responseJsonSchema?.properties ?? {};
+        const kind = props.real_person_likeness ? 'image_judge' : props.humor ? 'judge' : 'generate';
         counters[kind]++;
         counters.total++;
         let payload;
         const custom = script ? script({ kind, n: counters[kind], prompt: contents }) : undefined;
         if (custom !== undefined) payload = custom;
+        else if (kind === 'image_judge') payload = { ok: true, real_person_likeness: false, text_or_logo: false, photorealistic_news_look: false, disturbing: false, problems: [] };
         else if (kind === 'judge') payload = { humor: 7, coherence: 8, risk: 1, problems: [], real_person_quote: false, defamation_risk: false };
         else payload = fakeArticleFor(contents, categories);
         const text = typeof payload === 'string' ? payload : JSON.stringify(payload);
