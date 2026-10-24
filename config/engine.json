@@ -65,7 +65,7 @@
     "quarantineDays": 30
   },
   "images": {
-    "enabled": true,
+    "enabled": false,
     "perDayMax": 2,
     "slotIndexes": [
       1,
