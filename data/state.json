@@ -248,6 +248,14 @@
       "seenAt": "2026-10-24T21:27:18.568Z",
       "status": "used",
       "usedAt": "2026-10-24T21:27:18.568Z"
+    },
+    "6efb8986b4b1": {
+      "title": "Pour leur reprise, Laurence Fournier Beaudry et Guillaume Cizeron offrent une magnifique danse libre et survolent le Grand Prix de France",
+      "url": "https://www.franceinfo.fr/sports/sports-d-hiver/patinage-artistique/video-laurence-fournier-beaudry-et-guillaume-cizeron-remportent-facilement-leur-competition-de-reprise-avec-une-magnifique-danse-libre-a-angers_8252320.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-24T21:37:59.196Z",
+      "status": "used",
+      "usedAt": "2026-10-24T21:37:59.196Z"
     }
   },
   "slots": {
@@ -295,12 +303,21 @@
         "publishedAt": "2026-10-24T21:27:18.568Z",
         "topicId": "efb1ec70fc50",
         "lastError": null
+      },
+      "x2": {
+        "attempts": 1,
+        "status": "published",
+        "startedAt": "2026-10-24T21:37:59.196Z",
+        "articleId": "223f27f9707d",
+        "publishedAt": "2026-10-24T21:37:59.196Z",
+        "topicId": "6efb8986b4b1",
+        "lastError": null
       }
     }
   },
   "lastRun": {
-    "at": "2026-10-24T21:27:17.198Z",
-    "runId": "20261024212717-3c06",
+    "at": "2026-10-24T21:37:58.788Z",
+    "runId": "20261024213758-bd28",
     "published": 1,
     "stopped": null
   }

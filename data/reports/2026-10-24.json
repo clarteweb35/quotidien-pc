@@ -1,13 +1,19 @@
 {
   "date": "2026-10-24",
   "target": 8,
-  "publishedCount": 1,
+  "publishedCount": 2,
   "articles": [
     {
       "id": "a10a651e50b1",
       "title": "Colère sociale : le gouvernement teste un baromètre d’apaisement chiffré au décibel près",
       "category": "societe",
       "slug": "colere-sociale-le-gouvernement-teste-un-barometre-d"
+    },
+    {
+      "id": "223f27f9707d",
+      "title": "Management : il réalise une danse libre de quarante minutes sans aborder l’ordre du jour",
+      "category": "societe",
+      "slug": "management-il-realise-une-danse-libre-de-quarante-minutes"
     }
   ],
   "slots": [
@@ -76,23 +82,34 @@
       "publishedAt": "2026-10-24T21:27:18.568Z",
       "topicId": "efb1ec70fc50",
       "lastError": null
+    },
+    {
+      "idx": "x2",
+      "hhmm": "manuel",
+      "attempts": 1,
+      "status": "published",
+      "startedAt": "2026-10-24T21:37:59.196Z",
+      "articleId": "223f27f9707d",
+      "publishedAt": "2026-10-24T21:37:59.196Z",
+      "topicId": "6efb8986b4b1",
+      "lastError": null
     }
   ],
   "rejections": 0,
   "quarantined": 0,
   "api": {
-    "calls": 4,
-    "inputTokens": 7861,
-    "outputTokens": 3696,
-    "costUsd": 0.036255,
+    "calls": 6,
+    "inputTokens": 11783,
+    "outputTokens": 5691,
+    "costUsd": 0.055596,
     "dailyCapUsd": 1,
-    "monthCostUsd": 0.036255,
+    "monthCostUsd": 0.055596,
     "monthlyCapUsd": 15
   },
   "paused": false,
   "lastRun": {
-    "at": "2026-10-24T21:27:17.198Z",
-    "runId": "20261024212717-3c06",
+    "at": "2026-10-24T21:37:58.788Z",
+    "runId": "20261024213758-bd28",
     "published": 1,
     "stopped": null
   }

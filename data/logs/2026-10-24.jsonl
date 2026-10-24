@@ -32,3 +32,19 @@
 {"ts":"2026-10-24T21:27:50.040Z","runId":"20261024212717-3c06","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":1092,"outputTokens":83,"costUsd":0.000535}
 {"ts":"2026-10-24T21:27:50.040Z","runId":"20261024212717-3c06","level":"info","event":"judge.result","slot":"2026-10-24#x1","attempt":1,"humor":7,"coherence":9,"risk":1,"issues":[]}
 {"ts":"2026-10-24T21:27:50.042Z","runId":"20261024212717-3c06","level":"info","event":"publish.ok","slot":"2026-10-24#x1","id":"a10a651e50b1","slug":"colere-sociale-le-gouvernement-teste-un-barometre-d","url":"/articles/colere-sociale-le-gouvernement-teste-un-barometre-d/","attempt":1,"dryRun":false}
+{"ts":"2026-10-24T21:37:58.824Z","runId":"20261024213758-bd28","level":"info","event":"cycle.start","date":"2026-10-24","due":["2026-10-24#x2"],"remainingToday":7,"dryRun":false}
+{"ts":"2026-10-24T21:37:59.194Z","runId":"20261024213758-bd28","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":32,"kept":25}
+{"ts":"2026-10-24T21:37:59.195Z","runId":"20261024213758-bd28","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-10-24T21:37:59.195Z","runId":"20261024213758-bd28","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":20}
+{"ts":"2026-10-24T21:37:59.195Z","runId":"20261024213758-bd28","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":21}
+{"ts":"2026-10-24T21:37:59.195Z","runId":"20261024213758-bd28","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":16}
+{"ts":"2026-10-24T21:37:59.195Z","runId":"20261024213758-bd28","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":7}
+{"ts":"2026-10-24T21:37:59.195Z","runId":"20261024213758-bd28","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":12}
+{"ts":"2026-10-24T21:37:59.195Z","runId":"20261024213758-bd28","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":7}
+{"ts":"2026-10-24T21:37:59.196Z","runId":"20261024213758-bd28","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":9}
+{"ts":"2026-10-24T21:37:59.196Z","runId":"20261024213758-bd28","level":"info","event":"collect.done","items":133}
+{"ts":"2026-10-24T21:37:59.225Z","runId":"20261024213758-bd28","level":"info","event":"topic.selection","slot":"2026-10-24#x2","candidates":133,"rejected":16,"chosen":"Pour leur reprise, Laurence Fournier Beaudry et Guillaume Cizeron offrent une magnifique danse libre et survolent le Grand Prix de France","score":6.3}
+{"ts":"2026-10-24T21:38:35.172Z","runId":"20261024213758-bd28","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.8-flash","inputTokens":3026,"outputTokens":1909,"costUsd":0.018857}
+{"ts":"2026-10-24T21:38:36.160Z","runId":"20261024213758-bd28","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":896,"outputTokens":86,"costUsd":0.000484}
+{"ts":"2026-10-24T21:38:36.160Z","runId":"20261024213758-bd28","level":"info","event":"judge.result","slot":"2026-10-24#x2","attempt":1,"humor":8,"coherence":9,"risk":1,"issues":[]}
+{"ts":"2026-10-24T21:38:36.162Z","runId":"20261024213758-bd28","level":"info","event":"publish.ok","slot":"2026-10-24#x2","id":"223f27f9707d","slug":"management-il-realise-une-danse-libre-de-quarante-minutes","url":"/articles/management-il-realise-une-danse-libre-de-quarante-minutes/","attempt":1,"dryRun":false}
