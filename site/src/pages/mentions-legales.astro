@@ -1,22 +1,56 @@
 ---
 import Base from '../layouts/Base.astro';
-import { siteName, satireNotice } from '../lib/site';
+import { siteName, satireNotice, url } from '../lib/site';
+import { publisher, contactEmail, host, updatedAt, analyticsId, analyticsName } from '../lib/legal';
+const mailto = `mailto:${contactEmail}`;
+const updated = new Intl.DateTimeFormat('fr-FR', { dateStyle: 'long', timeZone: 'Europe/Paris' }).format(new Date(`${updatedAt}T12:00:00Z`));
 ---
-<Base title="Mentions légales" description="Mentions légales et avertissement satirique.">
+<Base title="Mentions légales" description="Mentions légales, hébergeur, données personnelles et avertissement satirique.">
   <div class="prose">
-    <div class="page-head"><h1>Mentions légales</h1></div>
-    <p><em>Modèle à compléter : la loi française impose d'identifier l'éditeur du site et son hébergeur.</em></p>
-    <h2>Éditeur</h2>
-    <p>[Nom ou raison sociale, adresse, e-mail de contact, directeur de la publication]</p>
-    <h2>Hébergement</h2>
-    <p>[Nom et adresse de l'hébergeur — par exemple GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis, si le site est servi par GitHub Pages]</p>
+    <div class="page-head"><h1>Mentions légales</h1><p class="meta">Dernière mise à jour : {updated}</p></div>
+
+    <h2>Éditeur du site</h2>
+    <p>
+      Le site <strong>{siteName}</strong> est édité par
+      {publisher.url ? <a href={publisher.url} rel="noopener">{publisher.name}</a> : <strong>{publisher.name}</strong>}.
+    </p>
+    <ul>
+      {publisher.address && <li>Adresse : {publisher.address}</li>}
+      {publisher.registration && <li>Immatriculation : {publisher.registration}</li>}
+      {publisher.director && <li>Directeur de la publication : {publisher.director}</li>}
+      <li>Contact : <a href={mailto}>{contactEmail}</a></li>
+    </ul>
+
+    <h2>Hébergeur</h2>
+    <p>
+      Le site est hébergé par <a href={host.url} rel="noopener">{host.name}</a>, {host.address}.
+    </p>
+
     <h2>Nature du contenu</h2>
     <p>{satireNotice}</p>
-    <h2>Contenus générés par IA</h2>
-    <p>Les articles de {siteName} sont rédigés avec l'aide d'une intelligence artificielle générative. Ils sont publiés après des contrôles automatiques.</p>
-    <h2>Signaler un contenu</h2>
-    <p>Pour demander la modification ou le retrait d'un contenu, écrivez à [adresse de contact]. Nous répondons rapidement.</p>
-    <h2>Données personnelles</h2>
-    <p>Ce site ne dépose aucun cookie de suivi et ne collecte aucune donnée personnelle.</p>
+    <p>Les signatures des articles sont celles de <a href={url('redaction/')}>personnages fictifs</a>. Les textes sont rédigés avec l'aide d'une intelligence artificielle générative, puis soumis à des contrôles automatiques avant publication. Les illustrations sont générées par intelligence artificielle ; elles représentent des scènes imaginaires et ne sont pas des photographies.</p>
+
+    <h2>Propriété intellectuelle</h2>
+    <p>Les textes, illustrations, logo et éléments graphiques de {siteName} sont protégés. Toute reproduction, même partielle, nécessite l'autorisation préalable de l'éditeur, sauf courte citation accompagnée d'un lien vers l'article d'origine.</p>
+
+    <h2>Signalement, rectification et droit de réponse</h2>
+    <p>Pour demander la modification ou le retrait d'un contenu, ou pour exercer un droit de réponse, écrivez à <a href={mailto}>{contactEmail}</a> en indiquant l'adresse de la page concernée et le motif de votre demande. Nous répondons dans les meilleurs délais.</p>
+
+    <h2 id="donnees">Données personnelles et cookies</h2>
+    {analyticsId ? (
+      <>
+        <p><strong>Mesure d'audience.</strong> Avec votre accord, le site utilise {analyticsName} (Google LLC) pour mesurer sa fréquentation : pages vues, provenance, type d'appareil. Cela dépose des cookies sur votre appareil et transmet des données (adresse IP tronquée, identifiants de cookies, pages consultées) à Google, qui peut les traiter hors de l'Union européenne.</p>
+        <ul>
+          <li><strong>Base légale :</strong> votre consentement. Sans votre accord, aucun script Google n'est chargé et aucun cookie n'est déposé.</li>
+          <li><strong>Durée :</strong> les cookies ont une durée de vie limitée ; votre choix est conservé dans votre navigateur.</li>
+          <li><strong>Retirer ou modifier votre choix :</strong> <a href="#cookies" data-open-consent>gérer mes cookies</a>. Refuser est aussi simple qu'accepter.</li>
+        </ul>
+      </>
+    ) : (
+      <p>Ce site ne dépose aucun cookie de suivi et ne collecte aucune donnée personnelle à des fins de mesure d'audience.</p>
+    )}
+    <p><strong>Hébergement.</strong> Comme tout serveur web, l'hébergeur ({host.name}) peut enregistrer des données techniques de connexion (adresse IP, date, page demandée) pour assurer la sécurité et le fonctionnement du service.</p>
+    <p><strong>Vos droits.</strong> Vous disposez d'un droit d'accès, de rectification, d'effacement, d'opposition et de limitation du traitement de vos données. Pour les exercer : <a href={mailto}>{contactEmail}</a>. Vous pouvez aussi saisir la CNIL (<a href="https://www.cnil.fr" rel="noopener">cnil.fr</a>).</p>
+    <p>Le journal ne contient aucun formulaire, compte utilisateur ni système de commentaires : l'éditeur ne collecte directement aucune autre donnée personnelle.</p>
   </div>
 </Base>

@@ -119,3 +119,12 @@ footer ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 16px; f
 @media (min-width: 640px) {
   .article .body p { text-align: justify; text-justify: inter-word; hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 7 3 3; }
 }
+
+/* Bandeau de consentement (mesure d'audience) */
+.consent { position: fixed; inset: auto 12px 12px 12px; max-width: 760px; margin: 0 auto; z-index: 50; background: var(--paper); color: var(--ink); border: 2px solid var(--ink); box-shadow: 0 6px 24px rgb(0 0 0 / .25); padding: 14px 16px; font: .88rem/1.5 var(--sans); }
+.consent[hidden] { display: none; }
+.consent p { margin: 0 0 10px; }
+.consent-actions { display: flex; gap: 10px; justify-content: flex-end; }
+.consent button { font: 700 .88rem var(--sans); padding: 9px 18px; min-width: 110px; cursor: pointer; border: 2px solid var(--ink); background: var(--paper); color: var(--ink); }
+.consent button#consent-accept { background: var(--ink); color: var(--paper); }
+@media (max-width: 480px) { .consent-actions button { flex: 1; } }

@@ -1,0 +1,20 @@
+{
+  "note": "Informations legales affichees sur le site (pied de page et page Mentions legales). Un champ vide n'est pas affiche. Un editeur professionnel doit en principe indiquer son identite complete (nom ou denomination, adresse, directeur de la publication, numero d'immatriculation): completez-les avant la mise en ligne publique.",
+  "publisherName": "Clarté Web",
+  "publisherUrl": "",
+  "publisherAddress": "",
+  "publisherRegistration": "",
+  "publicationDirector": "",
+  "contactEmail": "clarte.web35+qpc@gmail.com",
+  "host": {
+    "name": "GitHub, Inc. (service GitHub Pages)",
+    "address": "88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis",
+    "url": "https://pages.github.com"
+  },
+  "analytics": {
+    "provider": "Google Analytics 4",
+    "measurementId": "",
+    "note": "Identifiant de mesure GA4 (format G-XXXXXXXXXX). Tant qu'il est vide, aucun script Google n'est charge et aucun bandeau n'est affiche."
+  },
+  "updatedAt": "2026-10-25"
+}

@@ -1,0 +1,57 @@
+---
+import { analyticsId } from '../lib/legal';
+import { url } from '../lib/site';
+const privacy = url('mentions-legales/#donnees');
+---
+{analyticsId && (
+  <>
+    <div id="consent" class="consent" role="region" aria-label="Cookies et mesure d'audience" hidden>
+      <p>Nous mesurons l'audience du site avec Google Analytics. Des cookies ne sont déposés <strong>que si vous acceptez</strong>. Vous pouvez changer d'avis à tout moment. <a href={privacy}>En savoir plus</a></p>
+      <div class="consent-actions">
+        <button type="button" id="consent-refuse">Refuser</button>
+        <button type="button" id="consent-accept">Accepter</button>
+      </div>
+    </div>
+    <script is:inline define:vars={{ id: analyticsId }}>
+      (function () {
+        var KEY = 'qpc_consent';
+        var box = document.getElementById('consent');
+        var read = function () { try { return localStorage.getItem(KEY); } catch (e) { return null; } };
+        var write = function (v) { try { localStorage.setItem(KEY, v); } catch (e) {} };
+        var loaded = false;
+        function load() {
+          if (loaded) return; loaded = true;
+          window['ga-disable-' + id] = false;
+          window.dataLayer = window.dataLayer || [];
+          window.gtag = function () { window.dataLayer.push(arguments); };
+          window.gtag('js', new Date());
+          window.gtag('config', id, { anonymize_ip: true });
+          var s = document.createElement('script');
+          s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(id);
+          document.head.appendChild(s);
+        }
+        function purge() {
+          window['ga-disable-' + id] = true; // coupe toute collecte restante
+          var host = location.hostname.split('.');
+          var domains = [location.hostname, '.' + location.hostname, '.' + host.slice(-2).join('.')];
+          document.cookie.split(';').forEach(function (c) {
+            var n = c.split('=')[0].trim();
+            if (n === '_ga' || n.indexOf('_ga_') === 0 || n === '_gid' || n.indexOf('_gat') === 0) {
+              domains.forEach(function (d) { document.cookie = n + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=' + d; });
+              document.cookie = n + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
+            }
+          });
+        }
+        function show() { box.hidden = false; }
+        function hide() { box.hidden = true; }
+        var v = read();
+        if (v === 'granted') load(); else if (v !== 'denied') show();
+        document.getElementById('consent-accept').addEventListener('click', function () { write('granted'); hide(); load(); });
+        document.getElementById('consent-refuse').addEventListener('click', function () { write('denied'); hide(); purge(); });
+        document.addEventListener('click', function (e) {
+          if (e.target && e.target.closest && e.target.closest('[data-open-consent]')) { e.preventDefault(); show(); }
+        });
+      })();
+    </script>
+  </>
+)}

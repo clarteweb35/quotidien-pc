@@ -1,6 +1,8 @@
 ---
 import '../styles/global.css';
 import { categories, siteName, tagline, logoName, url } from '../lib/site';
+import { publisher, analyticsId } from '../lib/legal';
+import Consent from '../components/Consent.astro';
 
 interface Props {
   title?: string;
@@ -73,15 +75,18 @@ const today = new Intl.DateTimeFormat('fr-FR', { timeZone: 'Europe/Paris', dateS
         <div>
           <a class="wordmark" href={url()}><b>{logoName.main}</b><i>{logoName.sub}</i></a><br /><br />
           Journal satirique. Les articles sont des fictions humoristiques.<br />
-          Ils ne rapportent pas des faits réels.
+          Ils ne rapportent pas des faits réels.<br />
+          Site édité par {publisher.url ? <a href={publisher.url} rel="noopener">{publisher.name}</a> : publisher.name}.
         </div>
         <ul>
           <li><a href={url('redaction/')}>La rédaction</a></li>
           <li><a href={url('a-propos/')}>À propos</a></li>
           <li><a href={url('mentions-legales/')}>Mentions légales</a></li>
           <li><a href={url('rss.xml')}>Flux RSS</a></li>
+          {analyticsId && !csp && <li><a href={url('mentions-legales/#donnees')} data-open-consent>Gérer mes cookies</a></li>}
         </ul>
       </div>
     </footer>
+    {!csp && !noindex && <Consent />}
   </body>
 </html>
