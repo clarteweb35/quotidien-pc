@@ -97,3 +97,11 @@ test('analyse RSS et Atom', () => {
   const atom = '<feed><entry><title>T</title><link rel="alternate" href="https://x.test/2"/><updated>2026-10-24T08:00:00Z</updated></entry></feed>';
   assert.equal(parseFeed(atom, feed)[0].url, 'https://x.test/2');
 });
+
+test('entites HTML du flux decodees (et non supprimees): accents conserves, balises retirees', () => {
+  const feed = { id: 'f', name: 'F', category: 'societe' };
+  const rss = '<rss><channel><item><title>R&amp;eacute;former Parcoursup, lyc&amp;eacute;es &amp;amp; SMIC : la col&amp;egrave;re</title><link>https://x.test/1</link><description>&amp;lt;p&amp;gt;L&amp;rsquo;&amp;eacute;t&amp;eacute; &amp;#233;trange&amp;lt;/p&amp;gt;</description></item></channel></rss>';
+  const [it] = parseFeed(rss, feed);
+  assert.equal(it.title, 'Réformer Parcoursup, lycées & SMIC : la colère');
+  assert.equal(it.summary, 'L’été étrange');
+});

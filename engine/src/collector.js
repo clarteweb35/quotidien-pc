@@ -10,8 +10,32 @@ const text = (x) => {
   return String(x);
 };
 
+const NAMED = {
+  amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ', laquo: '«', raquo: '»', rsquo: '’', lsquo: '‘', ldquo: '“', rdquo: '”',
+  hellip: '…', ndash: '–', mdash: '—', euro: '€', oelig: 'œ', OElig: 'Œ', agrave: 'à', acirc: 'â', ccedil: 'ç', eacute: 'é', egrave: 'è',
+  ecirc: 'ê', euml: 'ë', icirc: 'î', iuml: 'ï', ocirc: 'ô', ugrave: 'ù', ucirc: 'û', uuml: 'ü', Eacute: 'É', Egrave: 'È', Agrave: 'À', Ccedil: 'Ç',
+};
+
+/** Decode les entites HTML (nommees francaises courantes et numeriques); une entite inconnue est supprimee. */
+export function decodeEntities(s) {
+  return String(s).replace(/&(#x[0-9a-f]+|#\d+|[a-z]+[0-9]*);/gi, (m, e) => {
+    if (e[0] === '#') {
+      const code = e[1].toLowerCase() === 'x' ? parseInt(e.slice(2), 16) : parseInt(e.slice(1), 10);
+      return code > 31 && code < 0x110000 ? String.fromCodePoint(code) : ' ';
+    }
+    return NAMED[e] ?? NAMED[e.toLowerCase()] ?? ' ';
+  });
+}
+
 export function cleanText(s, max = 400) {
-  return String(s).replace(/<[^>]*>/g, ' ').replace(/&[a-z#0-9]+;/gi, ' ').replace(/\s+/g, ' ').trim().slice(0, max);
+  // Le parseur XML decode un premier niveau d'entites; certains flux (franceinfo) en encodent deux fois: on decode jusqu'a stabilite.
+  let t = String(s);
+  for (let i = 0; i < 3; i++) {
+    const next = decodeEntities(t.replace(/<[^>]*>/g, ' '));
+    if (next === t) break;
+    t = next;
+  }
+  return t.replace(/[<>]/g, ' ').replace(/\s+/g, ' ').trim().slice(0, max);
 }
 
 /** Analyse un document RSS 2.0 ou Atom et retourne des elements normalises. */
