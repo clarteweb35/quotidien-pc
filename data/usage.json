@@ -1,0 +1,42 @@
+{
+  "entries": [
+    {
+      "ts": "2026-10-24T21:20:09.848Z",
+      "date": "2026-10-24",
+      "month": "2026-10",
+      "runId": "20261024211905-4a79",
+      "purpose": "generate",
+      "model": "gemini-3.8-flash",
+      "params": {
+        "temperature": 1,
+        "maxOutputTokens": 4096
+      },
+      "inputTokens": 2865,
+      "outputTokens": 1793,
+      "costUsd": 0.017745
+    },
+    {
+      "ts": "2026-10-24T21:20:14.832Z",
+      "date": "2026-10-24",
+      "month": "2026-10",
+      "runId": "20261024211905-4a79",
+      "purpose": "judge",
+      "model": "gemini-3.5-flash-lite",
+      "params": {
+        "temperature": 0.2,
+        "maxOutputTokens": 1024
+      },
+      "inputTokens": 1043,
+      "outputTokens": 56,
+      "costUsd": 0.000453
+    }
+  ],
+  "monthly": {
+    "2026-10": {
+      "costUsd": 0.018198,
+      "inputTokens": 3908,
+      "outputTokens": 1849,
+      "calls": 2
+    }
+  }
+}
