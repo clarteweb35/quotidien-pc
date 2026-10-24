@@ -108,3 +108,14 @@ footer ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 16px; f
 .team li { padding: 10px 0; border-bottom: 1px solid var(--rule); scroll-margin-top: 16px; }
 .team li:target { background: var(--paper-2); }
 .team p { margin: 4px 0 0; color: var(--ink-2); font-size: .98rem; }
+
+/* Sans illustration: pas de cadre colore, uniquement du texte (la rubrique reste visible) */
+.lead.no-media { grid-template-columns: 1fr; }
+.lead.no-media h2 { max-width: 28ch; }
+.card.no-media { border-top: 3px solid var(--ink); padding-top: 10px; }
+.card.no-media .kicker { display: inline-block; }
+
+/* Articles: texte justifie avec coupures de mots (francais); alignement a gauche sur petit ecran */
+@media (min-width: 640px) {
+  .article .body p { text-align: justify; text-justify: inter-word; hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 7 3 3; }
+}

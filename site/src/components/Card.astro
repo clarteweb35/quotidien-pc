@@ -11,7 +11,7 @@ const who = journalist(d.author);
 const img = await illustration(article, lead ? 1280 : 800, manualImageCredit);
 ---
 {lead ? (
-  <article class="lead">
+  <article class:list={['lead', { 'no-media': !img }]}>
     <div>
       <a class="kicker" href={url(`rubrique/${cat.slug}/`)}>{cat.name}</a>
       <h2><a href={href}>{d.title}</a></h2>
@@ -19,11 +19,11 @@ const img = await illustration(article, lead ? 1280 : 800, manualImageCredit);
       {who && <p class="byline">Par {who.name}</p>}
       <div class="meta">{formatDate(d.publishedAt)}</div>
     </div>
-    <a href={href} tabindex="-1" aria-hidden="true">{img ? <img class="photo" src={img.src} alt="" width={img.width} height={img.height} fetchpriority="high" /> : <div class="cover" style={`--c:${cat.color}`}><span>{cat.name}</span></div>}</a>
+    {img && <a href={href} tabindex="-1" aria-hidden="true"><img class="photo" src={img.src} alt="" width={img.width} height={img.height} fetchpriority="high" /></a>}
   </article>
 ) : (
-  <article class="card">
-    <a href={href} tabindex="-1" aria-hidden="true">{img ? <img class="photo" src={img.src} alt="" width={img.width} height={img.height} loading="lazy" /> : <div class="cover" style={`--c:${cat.color}`}><span>{cat.name}</span></div>}</a>
+  <article class:list={['card', { 'no-media': !img }]}>
+    {img ? <a href={href} tabindex="-1" aria-hidden="true"><img class="photo" src={img.src} alt="" width={img.width} height={img.height} loading="lazy" /></a> : <a class="kicker" href={url(`rubrique/${cat.slug}/`)}>{cat.name}</a>}
     <h3><a href={href}>{d.title}</a></h3>
     <p>{d.chapo}</p>
     {who && <p class="byline">Par {who.name}</p>}

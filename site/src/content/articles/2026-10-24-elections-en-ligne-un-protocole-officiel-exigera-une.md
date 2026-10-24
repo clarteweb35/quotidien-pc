@@ -1,6 +1,7 @@
 ---
 id: "163b795065ef"
 ref: "261024-X3"
+author: "Léa Baudry"
 title: "Élections en ligne : un protocole officiel exigera une dissertation en trois parties avant chaque tweet politique"
 chapo: "Pour assainir le débat démocratique et freiner les campagnes de harcèlement numérique qui polluent les périodes électorales, une commission envisage de soumettre tout commentaire public à une obligation préalable de thèse, antithèse et synthèse."
 description: "Une directive satirique propose d'exiger une dissertation philosophique avant chaque publication politique en ligne pour calmer les ardeurs électorales."
