@@ -52,6 +52,7 @@ async function main() {
       const ctx = buildContext({ mock, dryRun: flag('dry-run') });
       ctx.extra = flag('extra');
       ctx.count = Number(opt('count') ?? 1);
+      ctx.spacingMs = Math.min(Math.max(Number(opt('spacing') ?? 0), 0), 10) * 60000; // minutes entre deux articles (0 a 10)
       ctx.forceCatchup = flag('force-catchup');
       const release = ctx.store.acquireLock();
       try {
@@ -181,7 +182,7 @@ async function main() {
 
     default:
       console.log(`Usage: node engine/src/cli.js <commande>
-  run [--dry-run] [--extra [--count N]] [--force-catchup] [--mock]   Exécute un cycle (créneaux dus ; --extra --count 3 = 3 articles de plus)
+  run [--dry-run] [--extra [--count N] [--spacing MIN]] [--force-catchup] [--mock]   Exécute un cycle (créneaux dus ; --extra --count 8 --spacing 3 = 8 articles espacés de 3 min)
   simulate [--date AAAA-MM-JJ] [--keep] [--verbose]       Journée complète simulée (faux Gemini, aucun effet réel)
   report [AAAA-MM-JJ]                                     Bilan quotidien
   check-config                                            Valide la configuration

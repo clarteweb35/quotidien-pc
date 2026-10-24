@@ -221,3 +221,27 @@ test('extra --count 3: trois articles dans un lancement, references distinctes, 
   assert.equal(ctx.store.publishedCount('2026-10-24'), 5);
   cleanup(ctx);
 });
+
+test('rafale espacee: pause entre chaque article (jamais apres le dernier), plafond respecte', async () => {
+  const ctx = makeCtx({ at: '2026-10-24T05:05:00Z' });
+  const pauses = [];
+  ctx.sleep = async (ms) => { pauses.push(ms); };
+  ctx.extra = true;
+  ctx.count = 4;
+  ctx.spacingMs = 3 * 60000;
+  const r = await runCycle(ctx);
+  assert.equal(r.published.length, 4);
+  assert.deepEqual(pauses, [180000, 180000, 180000]);
+  cleanup(ctx);
+});
+
+test('sans espacement: aucune pause', async () => {
+  const ctx = makeCtx({ at: '2026-10-24T05:05:00Z' });
+  const pauses = [];
+  ctx.sleep = async (ms) => { pauses.push(ms); };
+  ctx.extra = true;
+  ctx.count = 3;
+  await runCycle(ctx);
+  assert.deepEqual(pauses, []);
+  cleanup(ctx);
+});

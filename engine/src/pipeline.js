@@ -1,5 +1,5 @@
 import path from 'node:path';
-import { zonedParts, sha1, writeJson, round } from './util.js';
+import { zonedParts, sha1, writeJson, round, sleep } from './util.js';
 import { collect } from './collector.js';
 import { pickNewsTopic, pickEvergreen } from './topics.js';
 import { generateArticle, judgeArticle, judgeIssues, pickAngle } from './editor.js';
@@ -43,8 +43,8 @@ export async function runCycle(ctx) {
       result.stopped = 'daily_cap';
       return result;
     }
-    // Jusqu'a ctx.count articles (1 a 4) dans ce lancement, sans jamais depasser le plafond quotidien.
-    const wanted = Math.max(1, Math.min(Number(ctx.count) || 1, 4, remainingToday));
+    // Jusqu'a ctx.count articles (1 a 8) dans ce lancement, sans jamais depasser le plafond quotidien.
+    const wanted = Math.max(1, Math.min(Number(ctx.count) || 1, 8, remainingToday));
     const used = Object.keys(store.state.slots[date] ?? {}).filter((k) => /^x\d+$/.test(k)).map((k) => Number(k.slice(1)));
     const first = (used.length ? Math.max(...used) : 0) + 1;
     slots = Array.from({ length: wanted }, (_, i) => ({ idx: `x${first + i}`, hhmm: 'manuel', key: `${date}#x${first + i}` }));
@@ -67,6 +67,11 @@ export async function runCycle(ctx) {
     try {
       const out = await processSlot(ctx, slot, items);
       (out.published ? result.published : result.failed).push(out);
+      // Rafale espacee: pause entre deux articles pour que les heures de publication ne soient pas identiques.
+      if (ctx.extra && ctx.spacingMs > 0 && slot !== slots[slots.length - 1]) {
+        logger.info('cycle.spacing', { waitMinutes: ctx.spacingMs / 60000 });
+        await (ctx.sleep ?? sleep)(ctx.spacingMs);
+      }
     } catch (err) {
       // Erreurs qui interrompent tout le cycle (budget, quota, cle invalide).
       if (err instanceof BudgetExceededError) result.stopped = 'budget';
