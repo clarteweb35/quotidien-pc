@@ -22,10 +22,10 @@ export async function illustration(article: Article, width: number, manualCredit
   const alt = d.imageAlt ?? `Illustration : ${d.title}`;
   const manual = manualEntry(article);
   if (manual) {
-    // Recadrage 16:9 au centre (une image portrait est coupee), sans jamais agrandir l'original.
+    // Recadrage 16:9 sur la zone la plus saillante (visage, details); une image portrait est coupee, sans jamais agrandir l'original.
     const w = Math.min(width, manual.meta.width);
     const h = Math.round((w * 9) / 16);
-    const img = await getImage({ src: manual.meta, width: w, height: h, fit: 'cover', position: 'center', format: 'webp', quality: 80 });
+    const img = await getImage({ src: manual.meta, width: w, height: h, fit: 'cover', position: 'attention', format: 'webp', quality: 80 });
     return { src: img.src, width: w, height: h, alt, credit: manualCredit, manualKey: manual.key };
   }
   if (d.image) return { src: url(d.image), width: 1280, height: 720, alt, credit: d.imageCredit ?? 'Illustration générée par IA', manualKey: null };
