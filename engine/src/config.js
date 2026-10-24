@@ -63,7 +63,7 @@ export function checkConfig(cfg) {
   }
   if (!(s.maxPerDay >= 1)) problems.push('schedule.maxPerDay doit etre >= 1');
   const prices = cfg.engine.gemini.pricesUsdPerMillionTokens;
-  for (const m of [cfg.engine.gemini.generatorModel, cfg.engine.gemini.judgeModel]) {
+  for (const m of [cfg.engine.gemini.generatorModel, cfg.engine.gemini.judgeModel, cfg.engine.gemini.generatorFallbackModel].filter(Boolean)) {
     if (!prices[m]) problems.push(`Aucun tarif configure pour le modele "${m}" (engine.json > gemini.pricesUsdPerMillionTokens)`);
   }
   const slugs = new Set(cfg.categories.map((c) => c.slug));

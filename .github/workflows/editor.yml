@@ -72,6 +72,8 @@ jobs:
 
       - name: Enregistrer les résultats (commit)
         id: commit
+        # Meme si le moteur s'arrete en erreur, les articles deja publies pendant ce lancement ne doivent pas etre perdus.
+        if: ${{ !cancelled() }}
         run: |
           git config user.name "quotidien-pc-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -117,7 +119,7 @@ jobs:
 
   deploy:
     needs: engine
-    if: needs.engine.outputs.published == 'true'
+    if: ${{ !cancelled() && needs.engine.outputs.published == 'true' }}
     permissions:
       contents: read
       pages: write

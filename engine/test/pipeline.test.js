@@ -5,6 +5,7 @@ import path from 'node:path';
 import { makeCtx, cleanup, fakeArticleFor } from './helpers.js';
 import { runCycle } from '../src/pipeline.js';
 import { dueSlots } from '../src/scheduler.js';
+import { parseArticleFile } from '../src/publisher.js';
 
 // 2026-10-24: Paris = UTC+2. 09:05Z = 11:05 Paris -> creneaux 07:00, 09:00, 11:00 dus (fenetre de rattrapage 150 min).
 
@@ -243,5 +244,46 @@ test('sans espacement: aucune pause', async () => {
   ctx.count = 3;
   await runCycle(ctx);
   assert.deepEqual(pauses, []);
+  cleanup(ctx);
+});
+
+const err504 = () => { const e = new Error('{"error":{"code":504,"status":"DEADLINE_EXCEEDED"}}'); e.status = 504; return e; };
+
+test('panne passagere de Gemini (504 persistant, sans modele de secours): arret "gemini_unavailable", pas "fatal"', async () => {
+  const ctx = makeCtx({ mutateCfg: (c) => { c.engine.gemini.generatorFallbackModel = null; }, script: ({ kind }) => { if (kind === 'generate') throw err504(); } });
+  const r = await runCycle(ctx);
+  assert.equal(r.stopped, 'gemini_unavailable');
+  assert.equal(ctx.sdk.counters.generate, ctx.cfg.engine.gemini.maxRetries + 1);
+  assert.equal(r.published.length, 0);
+  cleanup(ctx);
+});
+
+test('modele principal en 504: bascule sur le modele de secours et publie (modele reel enregistre)', async () => {
+  const ctx = makeCtx({ at: '2026-10-24T05:05:00Z', script: ({ kind, model }) => { if (kind === 'generate' && model === 'gemini-3.8-flash') throw err504(); } });
+  const r = await runCycle(ctx);
+  assert.equal(r.published.length, 1);
+  const f = ctx.articles()[0];
+  assert.equal(parseArticleFile(fs.readFileSync(path.join(ctx.paths.content, f), 'utf8')).fm.model, 'gemini-3.6-flash');
+  assert.ok(ctx.logger.entries.some((e) => e.event === 'gemini.fallback_model'));
+  cleanup(ctx);
+});
+
+test('principal et secours indisponibles: arret propre, rien de publie', async () => {
+  const ctx = makeCtx({ script: ({ kind }) => { if (kind === 'generate') throw err504(); } });
+  const r = await runCycle(ctx);
+  assert.equal(r.stopped, 'gemini_unavailable');
+  assert.equal(r.published.length, 0);
+  cleanup(ctx);
+});
+
+test('rafale: un article publie avant la panne est conserve', async () => {
+  let n = 0;
+  const ctx = makeCtx({ at: '2026-10-24T05:05:00Z', mutateCfg: (c) => { c.engine.gemini.generatorFallbackModel = null; }, script: ({ kind }) => { if (kind === 'generate' && ++n > 1) throw err504(); } });
+  ctx.extra = true;
+  ctx.count = 3;
+  const r = await runCycle(ctx);
+  assert.equal(r.published.length, 1);
+  assert.equal(r.stopped, 'gemini_unavailable');
+  assert.equal(ctx.articles().length, 1);
   cleanup(ctx);
 });

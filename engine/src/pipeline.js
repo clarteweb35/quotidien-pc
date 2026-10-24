@@ -10,7 +10,7 @@ import { resolveAuthor } from './authors.js';
 import { listManualImages, renderManualImageList } from './refs.js';
 import fs from 'node:fs';
 import { dueSlots, expireSlots } from './scheduler.js';
-import { BudgetExceededError, QuotaError, FatalGeminiError, MalformedResponseError } from './gemini.js';
+import { BudgetExceededError, QuotaError, FatalGeminiError, UnavailableError, MalformedResponseError } from './gemini.js';
 
 const frDate = (d, tz) => new Intl.DateTimeFormat('fr-FR', { timeZone: tz, dateStyle: 'full' }).format(d);
 
@@ -76,6 +76,7 @@ export async function runCycle(ctx) {
       // Erreurs qui interrompent tout le cycle (budget, quota, cle invalide).
       if (err instanceof BudgetExceededError) result.stopped = 'budget';
       else if (err instanceof QuotaError) result.stopped = 'quota';
+      else if (err instanceof UnavailableError) result.stopped = 'gemini_unavailable';
       else if (err instanceof FatalGeminiError) result.stopped = 'gemini_fatal';
       else throw err;
       logger.error('cycle.stopped', { reason: result.stopped, error: err.message });
@@ -136,6 +137,7 @@ async function processSlot(ctx, slot, items) {
   const angle = pickAngle(cfg, ctx.rng);
   const id = sha1(`${slot.key}|${topic.id}`);
   let feedback = '';
+  let usedModel = cfg.engine.gemini.generatorModel;
   let last = null; // dernier article genere, conserve en quarantaine si tout echoue
   let lastIssues = [];
   let lastJudge = null;
@@ -143,7 +145,7 @@ async function processSlot(ctx, slot, items) {
   for (let attempt = 1; attempt <= v.maxGenerationAttempts; attempt++) {
     let article;
     try {
-      ({ article } = await generateArticle({ client, cfg, topic, angle, feedback, todayLabel: frDate(now, tz), recentTitles: existing.slice().sort((a, b) => b.publishedAt.localeCompare(a.publishedAt)).slice(0, cfg.editorial.recentTitlesInPrompt ?? 30).map((e) => e.title) }));
+      ({ article, model: usedModel } = await generateArticle({ client, cfg, topic, angle, feedback, todayLabel: frDate(now, tz), recentTitles: existing.slice().sort((a, b) => b.publishedAt.localeCompare(a.publishedAt)).slice(0, cfg.editorial.recentTitlesInPrompt ?? 30).map((e) => e.title) }));
     } catch (err) {
       if (!(err instanceof MalformedResponseError)) throw err;
       lastIssues = [{ code: 'reponse_malformee', msg: err.message }];
@@ -193,7 +195,7 @@ async function processSlot(ctx, slot, items) {
     const imageDir = ctx.dryRun ? path.join(paths.data, 'dry-run', 'images') : path.join(paths.siteRoot ?? path.join(paths.root, 'site'), 'public', 'images', 'articles');
     const signed = resolveAuthor({ proposed: article.author, category: article.category }, cfg);
     if (signed && !signed.chosenByModel) logger.warn('author.default', { slot: slot.key, proposed: article.author ?? null, used: signed.name });
-    const pub = publishArticle({ article, topic, id, slotLabel: slot.key, model: cfg.engine.gemini.generatorModel, now, contentDir, existing, image, imageDir, author: signed?.name ?? null });
+    const pub = publishArticle({ article, topic, id, slotLabel: slot.key, model: usedModel, now, contentDir, existing, image, imageDir, author: signed?.name ?? null });
     if (!ctx.dryRun) {
       store.setSlot(date, slot.idx, { status: 'published', articleId: id, publishedAt: pub.publishedAt, topicId: topic.id, lastError: null });
       store.markTopic(topic.id, { status: 'used', usedAt: now.toISOString() });

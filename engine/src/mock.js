@@ -84,13 +84,13 @@ export function createFakeSdk({ categories, script, imageScript } = {}) {
       },
     },
     models: {
-      async generateContent({ contents, config }) {
+      async generateContent({ model, contents, config }) {
         const props = config.responseJsonSchema?.properties ?? {};
         const kind = props.real_person_likeness ? 'image_judge' : props.humor ? 'judge' : 'generate';
         counters[kind]++;
         counters.total++;
         let payload;
-        const custom = script ? script({ kind, n: counters[kind], prompt: contents }) : undefined;
+        const custom = script ? script({ kind, n: counters[kind], prompt: contents, model }) : undefined;
         if (custom !== undefined) payload = custom;
         else if (kind === 'image_judge') payload = { ok: true, real_person_likeness: false, text_or_logo: false, photorealistic_news_look: false, disturbing: false, problems: [] };
         else if (kind === 'judge') payload = { humor: 7, coherence: 8, risk: 1, problems: [], real_person_quote: false, defamation_risk: false };

@@ -8,6 +8,10 @@ export class BudgetExceededError extends Error {
 export class QuotaError extends Error {
   constructor(msg) { super(msg); this.name = 'QuotaError'; }
 }
+/** Service Gemini indisponible ou trop lent (5xx, delai depasse, reseau) apres les nouvelles tentatives: panne passagere, pas une erreur de configuration. */
+export class UnavailableError extends Error {
+  constructor(msg) { super(msg); this.name = 'UnavailableError'; }
+}
 /** Cle invalide, permission refusee, modele inconnu: inutile de reessayer. */
 export class FatalGeminiError extends Error {
   constructor(msg) { super(msg); this.name = 'FatalGeminiError'; }
@@ -105,7 +109,7 @@ export class GeminiClient {
         const res = await this.ai.models.generateContent({ model, contents, config });
         return this.#handle(res, { purpose, model, params: gen, prices });
       } catch (err) {
-        if (err instanceof MalformedResponseError || err instanceof BudgetExceededError || err instanceof FatalGeminiError) throw err;
+        if (err instanceof MalformedResponseError || err instanceof BudgetExceededError || err instanceof FatalGeminiError || err instanceof UnavailableError) throw err;
         lastErr = err;
         const status = err?.status ?? err?.code;
         if (status === 401 || status === 403 || status === 404 || status === 400) {
@@ -120,7 +124,7 @@ export class GeminiClient {
     }
     const status = lastErr?.status ?? lastErr?.code;
     if (status === 429) throw new QuotaError(`Quota Gemini epuise ou limite de debit (HTTP 429): ${String(lastErr.message).slice(0, 200)}`);
-    throw new FatalGeminiError(`Echec Gemini apres ${g.maxRetries + 1} tentatives: ${String(lastErr?.message).slice(0, 300)}`);
+    throw new UnavailableError(`Gemini indisponible apres ${g.maxRetries + 1} tentatives (${status ?? 'reseau'}): ${String(lastErr?.message).slice(0, 300)}`);
   }
 
   #handle(res, { purpose, model, params, prices }) {

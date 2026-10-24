@@ -1,7 +1,7 @@
 import { rosterPrompt } from './authors.js';
 import { articleSchema, judgeSchema, checkJudgeShape } from './schema.js';
 import { bodyToText } from './validator.js';
-import { MalformedResponseError } from './gemini.js';
+import { MalformedResponseError, UnavailableError } from './gemini.js';
 
 export function pickAngle(cfg, rng = Math.random) {
   const hints = cfg.editorial.angleHints;
@@ -42,15 +42,30 @@ export function buildGenerationPrompt({ topic, angle, feedback, todayLabel, rece
 export async function generateArticle({ client, cfg, topic, angle, feedback, todayLabel, recentTitles }) {
   const roster = rosterPrompt(cfg);
   const g = cfg.engine.gemini;
-  const { data, usage } = await client.generateJson({
+  const call = (model) => client.generateJson({
     purpose: 'generate',
-    model: g.generatorModel,
+    model,
     system: cfg.editorial.generatorSystemPrompt,
     prompt: buildGenerationPrompt({ topic, angle, feedback, todayLabel, recentTitles, roster }),
     schema: articleSchema(cfg.categories.map((c) => c.slug)),
     params: g.generator,
   });
-  return { article: data, usage };
+  try {
+    const { data, usage } = await call(g.generatorModel);
+    return { article: data, usage, model: g.generatorModel };
+  } catch (err) {
+    // Modele principal indisponible: un essai avec le modele de secours (s'il est configure et different).
+    const fb = g.generatorFallbackModel;
+    if (!(err instanceof UnavailableError) || !fb || fb === g.generatorModel) throw err;
+    client.logger.warn('gemini.fallback_model', { from: g.generatorModel, to: fb });
+    try {
+      const { data, usage } = await call(fb);
+      return { article: data, usage, model: fb };
+    } catch (err2) {
+      if (err2 instanceof UnavailableError || err2.name === 'FatalGeminiError') throw err; // on remonte la panne du modele principal
+      throw err2;
+    }
+  }
 }
 
 /** Second appel: evaluation humoristique et de risque. Aide a la decision, jamais une preuve de veracite. */
