@@ -1,16 +1,25 @@
 {
   "date": "2026-10-24",
   "target": 8,
-  "publishedCount": 2,
+  "publishedCount": 3,
   "articles": [
     {
       "id": "a10a651e50b1",
+      "ref": "261024-X1",
       "title": "Colère sociale : le gouvernement teste un baromètre d’apaisement chiffré au décibel près",
       "category": "societe",
       "slug": "colere-sociale-le-gouvernement-teste-un-barometre-d"
     },
     {
+      "id": "163b795065ef",
+      "ref": "261024-X3",
+      "title": "Élections en ligne : un protocole officiel exigera une dissertation en trois parties avant chaque tweet politique",
+      "category": "tech",
+      "slug": "elections-en-ligne-un-protocole-officiel-exigera-une"
+    },
+    {
       "id": "223f27f9707d",
+      "ref": "261024-X2",
       "title": "Management : il réalise une danse libre de quarante minutes sans aborder l’ordre du jour",
       "category": "societe",
       "slug": "management-il-realise-une-danse-libre-de-quarante-minutes"
@@ -93,23 +102,34 @@
       "publishedAt": "2026-10-24T21:37:59.196Z",
       "topicId": "6efb8986b4b1",
       "lastError": null
+    },
+    {
+      "idx": "x3",
+      "hhmm": "manuel",
+      "attempts": 1,
+      "status": "published",
+      "startedAt": "2026-10-24T21:55:41.452Z",
+      "articleId": "163b795065ef",
+      "publishedAt": "2026-10-24T21:55:41.452Z",
+      "topicId": "49ba27d35cc4",
+      "lastError": null
     }
   ],
   "rejections": 0,
   "quarantined": 0,
   "api": {
-    "calls": 6,
-    "inputTokens": 11783,
-    "outputTokens": 5691,
-    "costUsd": 0.055596,
+    "calls": 8,
+    "inputTokens": 15794,
+    "outputTokens": 9688,
+    "costUsd": 0.090194,
     "dailyCapUsd": 1,
-    "monthCostUsd": 0.055596,
+    "monthCostUsd": 0.090194,
     "monthlyCapUsd": 15
   },
   "paused": false,
   "lastRun": {
-    "at": "2026-10-24T21:37:58.788Z",
-    "runId": "20261024213758-bd28",
+    "at": "2026-10-24T21:55:40.610Z",
+    "runId": "20261024215540-995b",
     "published": 1,
     "stopped": null
   }
