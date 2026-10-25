@@ -20,7 +20,7 @@
     { "id": "zerotache", "nom": "Zéro-Tâche SAS", "slogan": "Automatiser l'inutile, enfin.", "palette": "bleu" },
     { "id": "bpcc", "nom": "Bureau paritaire de certification des certifications", "slogan": "Certifié, donc certifiant.", "palette": "vert" },
     { "id": "concept", "nom": "Agence Espace & Concept", "slogan": "Des mètres carrés qui sont avant tout des idées.", "palette": "rouge" },
-    { "id": "zerolarme", "nom": "Assurance Zéro Larme", "palette": "bleu" },
+    { "id": "zerolarme", "nom": "Assurance Zéro Larme", "palette": "bleu", "logo": "zerolarme.webp" },
     { "id": "teflonhuman", "nom": "Teflon Human Corp", "palette": "vert" },
     { "id": "trobo", "nom": "Agile TroBo", "palette": "rouge" },
     { "id": "miraculex", "nom": "Miraculex®", "slogan": "Le miracle, mais en flacon.", "palette": "or" }

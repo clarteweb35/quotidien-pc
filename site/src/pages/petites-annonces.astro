@@ -53,6 +53,7 @@ const texteRecherche = (a: (typeof annonces)[number]) => [a.titre, a.texte, a.co
         return (
           <article class={`pa pa-${a.format}${a.format === 'encart' && ann ? ` pal-${ann.palette}` : ''}`} data-cat={a.cat} data-texte={texteRecherche(a)} id={a.id}>
             {a.format === 'vedette' && <p class="pa-vedette-bandeau">À la une des annonces</p>}
+            {a.format === 'encart' && ann?.logo && <img class="pa-logo" src={url(`annonces/${ann.logo}`)} width="104" height="104" alt={`Logo de ${ann.nom}`} loading="lazy" />}
             {a.format === 'encart' && ann && <p class="pa-marque">{ann.nom}</p>}
             <p class="pa-meta"><span class="pa-badge">{nomCategorie(a.cat)}</span> <span class="pa-ref">Réf. {a.ref}</span>{a.reel && <span class="pa-reel">Vraie annonce</span>}</p>
             <h3 class="pa-titre">{a.reel && a.url ? <a href={a.url} target="_blank" rel="noopener">{a.titre}</a> : a.titre}</h3>
@@ -139,6 +140,7 @@ const texteRecherche = (a: (typeof annonces)[number]) => [a.titre, a.texte, a.co
   .pa-encart .pa-badge { color: inherit; }
   .pa-encart .pa-conditions { color: inherit; opacity: .9; font-size: .64rem; line-height: 1.35; }
   .pa-accroche-pub { font: italic 700 1.02rem/1.35 var(--serif); margin: 0 0 8px !important; }
+  .pa-logo { float: right; width: 104px; height: 104px; margin: -4px 0 6px 10px; border-radius: 50%; border: 2px solid var(--paper); object-fit: cover; }
   .pa-slogan { font: italic .8rem var(--serif); margin-top: 8px !important; }
   .pal-ink { background: #16140f; color: #faf7f2; }
   .pal-bleu { background: #1c3a57; color: #f4f8fb; }

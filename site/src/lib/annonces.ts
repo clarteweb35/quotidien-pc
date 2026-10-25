@@ -6,7 +6,7 @@ export interface Annonce {
   annonceur?: string; image?: string; imageAlt?: string;
   reel?: boolean; url?: string; site?: string; lien?: string; // vraie annonce: renvoie vers un vrai site
 }
-export interface Annonceur { id: string; nom: string; slogan?: string; palette: string }
+export interface Annonceur { id: string; nom: string; slogan?: string; palette: string; logo?: string }
 
 export const rubrique = { titre: data.titre, accroche: data.accroche, intro: data.intro, mention: data.mention, mentionReelle: data.mentionReelle };
 export const categoriesAnnonces = data.categories as { slug: string; name: string }[];

@@ -24,12 +24,20 @@ export const portraits = {
   '25': [5, 215, 105, H], '26': [6, 1190, 615, H], '27': [6, 1175, 385, H], '28': [2, 250, 110, H], '29': [5, 1175, 390, H],
   '30': [5, 210, 655, H], '31': [6, 1170, 105, H], '32': [2, 245, 645, H], '34': [6, 705, 390, H], '35': [2, 705, 645, H],
   '36': [2, 1185, 645, H],
+  // portraits des annonces hommes/hommes et femmes/femmes (planches 21 a 24)
+  'b4-71km': [2, 705, 385, H], 'n7y-16c': [3, 705, 95, H], 't6w-824': [4, 1170, 645, H], 'd8-4x07': [5, 205, 385, H],
+  's1k-63b': [3, 1165, 385, H], 'x2k-860s': [3, 245, 640, H],
   'k7-492b': [6, 700, 615, H], 'q3l-058': [2, 245, 390, H], 'x91-t4c': [3, 705, 400, H], 'r2m-71z': [3, 1170, 640, H],
   '4hb-60w': [2, 1165, 100, H], 'v8-d33k': [5, 700, 110, H],
 };
 // Planches 19 (indice 0) en 5 x 3: la tuile (colonne, ligne) -> centre approximatif du visage
 const grille5 = (c, l) => [88 + c * 249 + 117, 55 + l * 226 + 100];
-const tuile5 = { '3': [0, 2, 2], '5': [0, 4, 1], '15': [0, 2, 0], '23': [0, 3, 0] };
+// ref -> [planche, colonne, ligne]
+const tuile5 = {
+  '3': [0, 2, 2], '5': [0, 4, 1], '15': [0, 2, 0], '23': [0, 3, 0],
+  'f9-30qz': [0, 0, 1], 'u4y-70d': [0, 1, 0], 'w6-282ka': [0, 0, 0], 'a5-640zl': [0, 1, 1], 'c2m-47x': [0, 4, 2], 'l5-208rt': [0, 1, 2],
+  'j2-559hd': [1, 0, 2], 'g9n-31t': [1, 2, 2],
+};
 for (const [ref, [pl, c, l]] of Object.entries(tuile5)) { const [x, y] = grille5(c, l); portraits[ref] = [pl, x, y, 190]; }
 
 const meta = await Promise.all(planches.map((f) => sharp(f).metadata()));

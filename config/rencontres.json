@@ -9,6 +9,8 @@
   "categories": [
     { "slug": "hf", "nom": "Hommes cherchent femmes" },
     { "slug": "fh", "nom": "Femmes cherchent hommes" },
+    { "slug": "hh", "nom": "Hommes cherchent hommes" },
+    { "slug": "ff", "nom": "Femmes cherchent femmes" },
     { "slug": "intellectuelles", "nom": "Affinités intellectuelles" },
     { "slug": "improbables", "nom": "Unions improbables" },
     { "slug": "desesperes", "nom": "Cas désespérés" }
@@ -235,6 +237,116 @@
       "ref": "V8-D33K", "photo": "v8-d33k.webp", "cat": "intellectuelles", "profil": "Femme 29 ans, romancière jeunesse, rêveuse et passionnée de chats",
       "texte": "Douce, créative et légèrement étourdie. J'aime le thé à la camomille, les librairies anciennes et m'endormir devant des films en noir et blanc. Recherche jeune homme attentionné, patient et romantique pour écrire notre propre histoire. Important : vous devez accepter de relire mes ébauches chaque soir à 23h et d'émettre des critiques uniquement élogieuses sous peine de crise d'angoisse foudroyante.",
       "recherche": "Homme 28-35 ans, admiratif, au sommeil léger."
+    },
+    {
+      "ref": "B4-71KM", "cat": "hh", "photo": "b4-71km.webp", "profil": "Homme 43 ans, fonctionnaire territorial, discret et méthodique",
+      "texte": "Homme calme, stable et soigneusement organisé. J'apprécie les promenades au bord de l'eau, les repas préparés à l'avance et les dimanches sans obligation sociale. Je recherche un compagnon sincère pour construire une relation durable. Je précise que mon appartement est classé par zones fonctionnelles et que toute modification de l'emplacement des objets devra faire l'objet d'une concertation préalable.",
+      "recherche": "Homme 38-48 ans, patient, respectueux des plans de rangement."
+    },
+    {
+      "ref": "F9-30QZ", "cat": "hh", "photo": "f9-30qz.webp", "profil": "Homme 35 ans, informaticien, romantique à sa manière",
+      "texte": "Passionné de cinéma, de cuisine asiatique et de discussions nocturnes sur l'avenir de l'humanité. Je souhaite rencontrer un homme avec qui partager tendresse et complicité. Je suis affectueux, fidèle et toujours disponible, sauf pendant les mises à jour critiques, les sauvegardes et les trois jours qui suivent une migration de serveur.",
+      "recherche": "Homme 30-42 ans, compréhensif, sachant reconnaître une urgence informatique."
+    },
+    {
+      "ref": "T6W-824", "cat": "hh", "photo": "t6w-824.webp", "profil": "Homme 58 ans, ancien commerçant, épicurien prudent",
+      "texte": "Veuf depuis plusieurs années, je souhaite retrouver le plaisir des sorties à deux, des marchés du dimanche et des repas qui s'éternisent. J'aime les gens francs et les comptes bien tenus. Je possède une collection de 214 tire-bouchons, que je considère comme un patrimoine affectif. Toute plaisanterie sur cette collection sera considérée comme un signe d'incompatibilité majeure.",
+      "recherche": "Homme 52-64 ans, amateur de bonne chère et de collections raisonnables."
+    },
+    {
+      "ref": "J2-559HD", "cat": "hh", "photo": "j2-559hd.webp", "profil": "Homme 29 ans, professeur de philosophie, idéaliste exigeant",
+      "texte": "Je cherche un compagnon capable de parler d'amour sans employer le mot « compliqué » toutes les trois phrases. Sensible, cultivé et légèrement insomniaque, je crois aux sentiments durables, à la poésie et aux cafés où l'on refait le monde. Je précise toutefois que je peux consacrer une soirée entière à démontrer qu'un message envoyé à 22 h 17 ne signifie pas nécessairement ce que vous pensez.",
+      "recherche": "Homme 27-36 ans, ouvert au débat et peu pressé d'avoir raison."
+    },
+    {
+      "ref": "N7Y-16C", "cat": "hh", "photo": "n7y-16c.webp", "profil": "Homme 47 ans, artisan, manuel et sentimental",
+      "texte": "J'aime restaurer les meubles anciens, cuisiner le dimanche et partir à l'improviste, à condition que l'improvisation ait été planifiée la veille. Je recherche un homme tendre, fiable et prêt à partager les petits bonheurs du quotidien. Je possède déjà tous les outils nécessaires à une vie commune, y compris ceux dont personne ne connaît l'usage.",
+      "recherche": "Homme 40-52 ans, affectueux, acceptant qu'une étagère puisse devenir un projet de couple."
+    },
+    {
+      "ref": "D8-4X07", "cat": "hh", "photo": "d8-4x07.webp", "profil": "Homme 39 ans, divorcé, père d'un chat très sélectif",
+      "texte": "Dynamique, affectueux et amateur de randonnées, je cherche un compagnon pour partager voyages, sorties culturelles et soirées tranquilles. Mon chat, Gaston, est un membre à part entière du foyer. Il n'est pas agressif : il exprime simplement son opinion avec une précision qui peut surprendre. Une période d'observation de plusieurs semaines sera nécessaire avant toute validation définitive.",
+      "recherche": "Homme 35-45 ans, patient, sachant vivre avec un comité d'accueil à moustaches."
+    },
+    {
+      "ref": "H3Q-95V", "cat": "hh", "profil": "Homme 62 ans, retraité, ancien passionné de danse",
+      "texte": "J'ai toujours aimé la musique, les voyages organisés et les conversations sans arrière-pensée. Je souhaite rencontrer un homme élégant, tendre et d'humeur égale. Je suis prêt à reprendre la danse de salon, sous réserve que nous choisissions ensemble les cours, le professeur, la tenue et le degré acceptable de proximité avec les autres participants.",
+      "recherche": "Homme 58-68 ans, conciliant, capable de négocier un tango."
+    },
+    {
+      "ref": "L5-208RT", "cat": "hh", "photo": "l5-208rt.webp", "profil": "Homme 33 ans, consultant indépendant, disponible sous conditions",
+      "texte": "Souriant, sportif et curieux, je cherche une relation sérieuse avec un homme qui apprécie les week-ends à la campagne et les dîners improvisés. Mon activité professionnelle me permet une grande liberté, sauf lorsque mes clients ont besoin de moi, ce qui survient généralement au moment où je pose mon téléphone. Je promets néanmoins d'essayer de regarder mon compagnon pendant les repas.",
+      "recherche": "Homme 29-40 ans, autonome, doté d'une bonne tolérance aux notifications."
+    },
+    {
+      "ref": "S1K-63B", "cat": "hh", "photo": "s1k-63b.webp", "profil": "Homme 51 ans, bibliothécaire, sentimental et réservé",
+      "texte": "Amoureux des livres, des promenades automnales et des petits-déjeuners silencieux, je recherche un compagnon pour une relation tendre et durable. J'aime les personnes qui savent écouter et respecter les moments de calme. Je possède une bibliothèque classée par auteur, époque et couleur de reliure. Je ne suis pas rigide, mais les livres déplacés sans autorisation peuvent provoquer chez moi une tristesse durable.",
+      "recherche": "Homme 45-57 ans, doux, soigneux et lecteur occasionnel ou confirmé."
+    },
+    {
+      "ref": "Z7-91PW", "cat": "hh", "profil": "Homme 41 ans, amateur de gastronomie, cœur généreux",
+      "texte": "J'aime recevoir, découvrir de nouveaux restaurants et préparer des plats qui nécessitent plusieurs heures de cuisson. Je souhaite rencontrer un homme chaleureux, curieux et prêt à construire une vie à deux. Je cuisine volontiers pour mon compagnon, mais je tiens à préciser que mes recettes sont le fruit d'années de recherche et que « un peu plus de sel » n'est pas une critique culinaire recevable.",
+      "recherche": "Homme 36-47 ans, gourmand, diplomate et respectueux des chefs amateurs."
+    },
+    {
+      "ref": "C2M-47X", "cat": "ff", "photo": "c2m-47x.webp", "profil": "Femme 37 ans, architecte d'intérieur, indépendante et sensible",
+      "texte": "J'aime les maisons lumineuses, les expositions, les plantes vertes et les longues discussions autour d'un verre. Je cherche une femme avec qui partager un quotidien complice et des projets communs. Mon sens de l'esthétique est développé : je ne juge pas les gens à leur intérieur, mais je remarque immédiatement les rideaux, les luminaires et les meubles qui ne sont pas à la bonne échelle.",
+      "recherche": "Femme 32-43 ans, affectueuse, ouverte à une légère évolution de son salon."
+    },
+    {
+      "ref": "P8-135GE", "cat": "ff", "profil": "Femme 52 ans, infirmière, généreuse mais organisée",
+      "texte": "Après des années consacrées aux autres, j'aimerais rencontrer une femme qui sache prendre soin de moi autant que je saurai prendre soin d'elle. J'aime les balades, les repas familiaux et les soirées au calme. Je suis attentive, sans être intrusive : je remarque simplement quand quelqu'un dit « ça va » avec une voix qui indique clairement le contraire.",
+      "recherche": "Femme 47-58 ans, sincère, capable d'exprimer ses besoins sans questionnaire préalable."
+    },
+    {
+      "ref": "U4Y-70D", "cat": "ff", "photo": "u4y-70d.webp", "profil": "Femme 30 ans, musicienne, passionnée et imprévisible",
+      "texte": "Je vis au rythme des concerts, des répétitions et des idées qui surgissent à des heures peu raisonnables. Je recherche une compagne tendre, curieuse et indépendante, qui aime la musique sans exiger que je baisse le volume à chaque changement d'émotion. Je promets de faire des efforts pour les horaires, à condition que les horaires fassent également un effort pour moi.",
+      "recherche": "Femme 27-38 ans, sensible, tolérante au bruit et aux réveils tardifs."
+    },
+    {
+      "ref": "W6-282KA", "cat": "ff", "photo": "w6-282ka.webp", "profil": "Femme 64 ans, retraitée de l'enseignement, esprit vif",
+      "texte": "Cultivée, active et toujours curieuse, j'apprécie les musées, les jardins remarquables et les voyages bien documentés. Je souhaite rencontrer une femme avec qui partager découvertes et affection. J'aime les conversations stimulantes, mais je reconnais avoir conservé quelques réflexes professionnels : les affirmations non vérifiées, les dates approximatives et les conclusions hâtives peuvent entraîner une demande de justification.",
+      "recherche": "Femme 59-70 ans, cultivée, patiente et peu intimidée par les notes de bas de page."
+    },
+    {
+      "ref": "G9N-31T", "cat": "ff", "photo": "g9n-31t.webp", "profil": "Femme 44 ans, cheffe de projet, sentimentale et pragmatique",
+      "texte": "Je cherche une femme pour construire une relation stable, avec de la tendresse, de l'humour et une vraie communication. J'apprécie les escapades, les soirées entre amis et les projets à deux. Pour éviter les malentendus, je propose un point hebdomadaire de quinze minutes sur l'état de notre relation, avec possibilité de prolongation en cas de sujet bloquant.",
+      "recherche": "Femme 38-50 ans, communicante, ponctuelle et familière des réunions courtes."
+    },
+    {
+      "ref": "A5-640ZL", "cat": "ff", "photo": "a5-640zl.webp", "profil": "Femme 35 ans, maraîchère, proche de la nature",
+      "texte": "J'aime les légumes de saison, les matins frais et les journées qui se terminent avec la satisfaction du travail accompli. Je recherche une compagne douce, drôle et prête à découvrir la vie à la campagne. Je suis spontanée, mais je tiens à préciser que les vacances doivent être compatibles avec les semis, les récoltes et les périodes où les courgettes décident toutes de mûrir le même jour.",
+      "recherche": "Femme 30-42 ans, nature, adaptable et disposée à recevoir des légumes en quantité."
+    },
+    {
+      "ref": "E3R-98B", "cat": "ff", "profil": "Femme 48 ans, restauratrice de meubles anciens, caractère affirmé",
+      "texte": "Indépendante, créative et fidèle en amitié comme en amour, je cherche une femme avec qui partager sorties, voyages et projets de rénovation. J'aime redonner vie aux objets et je crois que les relations demandent le même soin. Je ne suis pas susceptible, mais je peux expliquer pendant une heure pourquoi une commode du XIXe siècle mérite davantage de respect que votre meuble en kit.",
+      "recherche": "Femme 42-55 ans, curieuse, tolérante à la poussière et aux explications historiques."
+    },
+    {
+      "ref": "Y1-754CQ", "cat": "ff", "profil": "Femme 28 ans, juriste, romantique et prudente",
+      "texte": "Je crois aux rencontres sincères, aux promenades sans téléphone et aux petits gestes qui font les grandes histoires. Je cherche une compagne drôle, honnête et affectueuse. J'ai le sens du compromis, à condition que les engagements pris soient respectés et que les promesses ne comportent pas de clauses implicites. Un premier rendez-vous autour d'un café me paraît idéal pour vérifier que nos attentes sont compatibles.",
+      "recherche": "Femme 27-36 ans, fiable, transparente et sans antécédents de promesses non tenues."
+    },
+    {
+      "ref": "M7T-26H", "cat": "ff", "profil": "Femme 57 ans, ancienne responsable administrative, cœur disponible",
+      "texte": "Je suis calme, attentive et attachée aux traditions qui ont du bon : les repas partagés, les cartes envoyées pour les fêtes et les appels qui ne se limitent pas à un pouce levé. Je cherche une femme pour profiter de la vie, voyager et construire une complicité durable. Je conserve toutefois un agenda très précis et considère qu'une invitation sans date ni heure relève davantage de la déclaration d'intention que du rendez-vous.",
+      "recherche": "Femme 52-64 ans, affectueuse, fiable et capable de confirmer sa présence."
+    },
+    {
+      "ref": "Q9-413NV", "cat": "ff", "profil": "Femme 40 ans, photographe, rêveuse et exigeante",
+      "texte": "J'aime les paysages, les brocantes et les instants simples que l'on ne pense pas à photographier. Je cherche une femme sincère, curieuse et prête à partager des aventures, grandes ou petites. Je ne demande pas à ma compagne d'aimer poser devant l'objectif. En revanche, je souhaite qu'elle comprenne que la lumière était absolument parfaite à 6 h 12 et qu'il serait regrettable de rester au lit.",
+      "recherche": "Femme 35-47 ans, spontanée, matinale à l'occasion et peu hostile aux levers de soleil."
+    },
+    {
+      "ref": "X2K-860S", "cat": "ff", "photo": "x2k-860s.webp", "profil": "Femme 46 ans, présidente d'association, dévouée et débordée",
+      "texte": "Investie dans la vie locale, j'aime organiser des événements, rencontrer des gens et défendre les causes qui me tiennent à cœur. Je recherche une compagne compréhensive avec qui partager des moments de douceur loin des réunions. Je suis disponible pour une relation sérieuse dès que mon agenda associatif le permet, soit généralement entre deux assemblées générales, un vide-greniers et la préparation du prochain bulletin municipal.",
+      "recherche": "Femme 40-52 ans, patiente, sociable et peu effrayée par les comptes rendus."
+    },
+    {
+      "ref": "R6-59FJD", "cat": "ff", "profil": "Femme 33 ans, pâtissière, tendre et perfectionniste",
+      "texte": "Je suis une femme chaleureuse qui aime faire plaisir, préparer des desserts et recevoir les gens que j'aime. Je cherche une compagne avec qui partager une vie simple, drôle et gourmande. Je ne suis pas exigeante sur les goûts de chacune, mais je considère qu'un fondant au chocolat doit avoir un cœur coulant. Toute personne affirmant le contraire pourra naturellement être entendue, dans un cadre strictement contradictoire.",
+      "recherche": "Femme 30-42 ans, gourmande, bienveillante et ouverte au débat pâtissier."
     }
   ]
 }
