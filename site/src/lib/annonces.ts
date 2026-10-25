@@ -11,7 +11,7 @@ export interface Annonceur { id: string; nom: string; slogan?: string; palette: 
 
 export interface Partenaire {
   nom: string; mention: string; slogan: string; texte: string; details: { label: string; texte: string }[];
-  citation: string; auteur: string; image: string; imageAlt: string; lien: string; lienTexte: string;
+  citation: string; auteur: string; image: string; imageAlt: string; lien?: string; lienTexte?: string;
 }
 export const partenaire = (data as { partenaire?: Partenaire }).partenaire ?? null;
 

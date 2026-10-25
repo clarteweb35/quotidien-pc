@@ -7,9 +7,9 @@
   "mentionReelle": "Seules font exception les annonces signalées « Vraie annonce » : celles-là présentent de vrais sites, qui sont, eux, parfaitement sérieux.",
   "partenaire": {
     "nom": "Agence « Rencontres & affinités »",
-    "mention": "Partenaire officiel des petites annonces du cœur du Quotidien Presque Certain",
+    "mention": "Partenaire officiel des petites annonces du cœur",
     "slogan": "Parce que l'amour ne prévient pas (ou si peu).",
-    "texte": "Depuis 1987, notre directrice, Madame de Valmorin, passe au peigne fin les cœurs solitaires et les espérances légèrement trop optimistes. Ici, pas d'algorithme froid ni de promesses intenables : uniquement du papier glacé, de l'encre indélébile et des critères de compatibilité rigoureusement subjectifs.",
+    "texte": "Depuis 1987, notre directrice, Madame de Valmorin, passe au peigne fin les cœurs solitaires et les espérances légèrement trop optimistes. Ici, des algorithmes froids et des promesses intenables : du papier glacé, de l'encre indélébile et des critères de compatibilité rigoureusement subjectifs.",
     "details": [
       { "label": "La promesse", "texte": "Des profils authentiques, des attentes ordinaires, et ce petit détail à la troisième ligne (comme un léger casier judiciaire ou une collection de tasses à thé usagées) qui change tout." },
       { "label": "La méthode", "texte": "Un entretien préalable autour d'un thé un peu tiède, suivi d'une vérification manuelle de vos affinités." }
@@ -17,9 +17,7 @@
     "citation": "Parce qu'une fausse joie vaut toujours mieux qu'une solitude prolongée.",
     "auteur": "Madame de Valmorin, Directrice",
     "image": "valmorin.webp",
-    "imageAlt": "Portrait fictif (image générée par IA) de Madame de Valmorin, directrice de l'agence, assise à son bureau et écrivant sur une fiche",
-    "lien": "petites-annonces/",
-    "lienTexte": "Parcourir les petites annonces du journal"
+    "imageAlt": "Portrait fictif (image générée par IA) de Madame de Valmorin, directrice de l'agence, assise à son bureau et écrivant sur une fiche"
   },
   "manchetteRencontres": {
     "texte": "Retrouvez les annonces de l'Agence « Rencontres & affinités », sélectionnées par Madame de Valmorin.",
@@ -46,7 +44,7 @@
     { "id": "zerolarme", "nom": "Assurance Zéro Larme", "palette": "bleu", "logo": "zerolarme.webp" },
     { "id": "teflonhuman", "nom": "Teflon Human Corp", "palette": "vert" },
     { "id": "trobo", "nom": "Agile TroBo", "palette": "rouge" },
-    { "id": "miraculex", "nom": "Miraculex®", "slogan": "Le miracle, mais en flacon.", "palette": "or" }
+    { "id": "miraculex", "nom": "Miraculex®", "slogan": "Le miracle, mais en flacon.", "palette": "or", "logo": "miraculex.webp" }
   ],
   "annonces": [
     {

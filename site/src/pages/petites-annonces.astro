@@ -1,11 +1,14 @@
 ---
 import Base from '../layouts/Base.astro';
-import { rubrique, categoriesAnnonces, annonces, annonceurs, nomCategorie, manchetteRencontres } from '../lib/annonces';
+import { rubrique, categoriesAnnonces, annonces, annonceurs, manchetteRencontres } from '../lib/annonces';
 import { contactEmail } from '../lib/legal';
 import { url } from '../lib/site';
+import AnnonceCarte from '../components/AnnonceCarte.astro';
 
 const compte = (slug: string) => annonces.filter((a) => a.cat === slug).length;
-const texteRecherche = (a: (typeof annonces)[number]) => [a.titre, a.texte, a.conditions, a.prix, nomCategorie(a.cat), annonceurs.get(a.annonceur ?? '')?.nom].filter(Boolean).join(' ');
+// Les encarts publicitaires passent en haut de page (bandeau defilant); les autres annonces restent dans les colonnes.
+const pubs = annonces.filter((a) => a.format === 'encart');
+const autres = annonces.filter((a) => a.format !== 'encart');
 ---
 <Base title={rubrique.titre} description={`${rubrique.accroche} ${annonces.length} annonces fictives et satiriques.`} current="annonces">
   <div class="page-head">
@@ -22,6 +25,13 @@ const texteRecherche = (a: (typeof annonces)[number]) => [a.titre, a.texte, a.co
       <a href={url(manchetteRencontres.lien)}>{manchetteRencontres.lienTexte} →</a>
     </aside>
   )}
+
+  <section class="pa-pubs-section" id="pa-pubs-section" aria-labelledby="pa-titre-pubs">
+    <h2 id="pa-titre-pubs" class="pa-titre-section">Publicités</h2>
+    <div class="pa-pubs" id="pa-pubs" tabindex="0" role="region" aria-label="Publicités, défilement horizontal">
+      {pubs.map((a) => <AnnonceCarte a={a} />)}
+    </div>
+  </section>
 
   <section class="pa-outils" aria-label="Filtrer les annonces">
     <div class="pa-filtres" role="group" aria-label="Catégories">
@@ -56,26 +66,7 @@ const texteRecherche = (a: (typeof annonces)[number]) => [a.titre, a.texte, a.co
   <section aria-labelledby="pa-titre-liste">
     <h2 id="pa-titre-liste" class="visuellement-cache">Les annonces</h2>
     <div class="pa-colonnes" id="pa-liste">
-      {annonces.map((a) => {
-        const ann = a.annonceur ? annonceurs.get(a.annonceur) : undefined;
-        return (
-          <article class={`pa pa-${a.format}${a.format === 'encart' && ann ? ` pal-${ann.palette}` : ''}`} data-cat={a.cat} data-texte={texteRecherche(a)} id={a.id}>
-            {a.format === 'vedette' && <p class="pa-vedette-bandeau">À la une des annonces</p>}
-            {a.format === 'encart' && ann?.logo && <img class="pa-logo" src={url(`annonces/${ann.logo}`)} width="104" height="104" alt={`Logo de ${ann.nom}`} loading="lazy" />}
-            {a.format === 'encart' && ann && <p class="pa-marque">{ann.nom}</p>}
-            <p class="pa-meta"><span class="pa-badge">{nomCategorie(a.cat)}</span> <span class="pa-ref">Réf. {a.ref}</span>{a.reel && <span class="pa-reel">Vraie annonce</span>}</p>
-            <h3 class="pa-titre">{a.reel && a.url ? <a href={a.url} target="_blank" rel="noopener">{a.titre}</a> : a.titre}</h3>
-            {a.image && <img class:list={['pa-image', a.imageType === 'portrait' && 'pa-image-portrait']} src={url(`annonces/${a.image}`)} width={a.imageType === 'portrait' ? 84 : 112} height={a.imageType === 'portrait' ? 105 : 112} alt={a.imageAlt ?? ''} loading="lazy" />}
-            {a.accroche && <p class="pa-accroche-pub">{a.accroche}</p>}
-            {a.prix && <p class="pa-prix">{a.prix}</p>}
-            <p class="pa-texte">{a.texte}</p>
-            {a.conditions && <p class="pa-conditions">{a.conditions}</p>}
-            {a.reel && a.url && <p class="pa-lien"><a href={a.url} target="_blank" rel="noopener">{a.lien ?? 'Voir le site'} →</a> <span>{a.site}</span></p>}
-            {ann && a.format !== 'encart' && <p class="pa-annonceur">{ann.logo && <img class="pa-logo-mini" src={url(`annonces/${ann.logo}`)} width="40" height="40" alt={`Logo de ${ann.nom}`} loading="lazy" />}Annonce passée par <strong>{ann.nom}</strong>{ann.slogan && <> — <em>{ann.slogan}</em></>}</p>}
-            {a.format === 'encart' && ann?.slogan && <p class="pa-slogan">{ann.slogan}</p>}
-          </article>
-        );
-      })}
+      {autres.map((a) => <AnnonceCarte a={a} />)}
     </div>
     <p class="pa-vide" id="pa-vide" hidden>Aucune annonce ne correspond à votre recherche. C'est sans doute la meilleure offre du jour.</p>
   </section>
@@ -83,7 +74,7 @@ const texteRecherche = (a: (typeof annonces)[number]) => [a.titre, a.texte, a.co
   <aside class="pa-mention" role="note">{rubrique.mention} {rubrique.mentionReelle}</aside>
 </Base>
 
-<style>
+<style is:global>
   .visuellement-cache { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
   .pa-accroche { font: italic 1.25rem/1.4 var(--serif); margin: 4px 0 8px; }
   .pa-outils { margin: 18px 0 8px; font-family: var(--sans); }
@@ -149,6 +140,13 @@ const texteRecherche = (a: (typeof annonces)[number]) => [a.titre, a.texte, a.co
   .pa-encart .pa-conditions { color: inherit; opacity: .9; font-size: .64rem; line-height: 1.35; }
   .pa-accroche-pub { font: italic 700 1.02rem/1.35 var(--serif); margin: 0 0 8px !important; }
   .pa-logo { float: right; width: 104px; height: 104px; margin: -4px 0 6px 10px; border-radius: 50%; border: 2px solid var(--paper); object-fit: cover; }
+  /* Publicites en haut de page: bande defilante horizontale */
+  .pa-pubs-section { margin: 18px 0 4px; }
+  .pa-pubs-section[hidden] { display: none; }
+  .pa-titre-section { font: 800 .8rem var(--sans); letter-spacing: .16em; text-transform: uppercase; margin: 0 0 8px; padding-top: 8px; border-top: 3px solid var(--ink); }
+  .pa-pubs { display: flex; gap: 16px; overflow-x: auto; padding-bottom: 10px; scroll-snap-type: x proximity; }
+  .pa-pubs .pa { flex: 0 0 min(300px, 86%); margin: 0; scroll-snap-align: start; }
+  .pa-pubs:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
   /* Manchette de renvoi vers la rubrique Rencontres */
   .pa-manchette { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin: 20px 0 4px; padding: 10px 14px; background: #16140f; color: #faf7f2; border: 2px solid #c89658; font-family: var(--sans); }
   .pa-manchette-photo { width: 56px; height: 70px; object-fit: cover; object-position: 50% 12%; border: 1px solid #faf7f2; }
@@ -169,7 +167,8 @@ const texteRecherche = (a: (typeof annonces)[number]) => [a.titre, a.texte, a.co
 
 <script>
   const norm = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
-  const cartes = Array.from(document.querySelectorAll<HTMLElement>('#pa-liste .pa'));
+  const cartes = Array.from(document.querySelectorAll<HTMLElement>('#pa-pubs .pa, #pa-liste .pa'));
+  const sectionPubs = document.getElementById('pa-pubs-section')!;
   const boutons = Array.from(document.querySelectorAll<HTMLButtonElement>('.pa-filtre'));
   const champ = document.getElementById('pa-recherche') as HTMLInputElement;
   const compteur = document.getElementById('pa-compteur')!;
@@ -184,6 +183,7 @@ const texteRecherche = (a: (typeof annonces)[number]) => [a.titre, a.texte, a.co
       c.hidden = !ok;
       if (ok) n++;
     }
+    sectionPubs.hidden = !cartes.some((c) => c.closest('#pa-pubs') && !c.hidden);
     compteur.textContent = n + (n > 1 ? ' annonces' : ' annonce');
     vide.hidden = n > 0;
   }

@@ -24,7 +24,7 @@ import { partenaire } from '../lib/annonces';
           {partenaire.details.map((d) => <><dt>{d.label} :</dt><dd>{d.texte}</dd></>)}
         </dl>
         <blockquote><p>« {partenaire.citation} »</p><footer>— {partenaire.auteur}</footer></blockquote>
-        <p class="pa-partenaire-lien"><a href={url(partenaire.lien)}>{partenaire.lienTexte} →</a></p>
+        {partenaire.lien && <p class="pa-partenaire-lien"><a href={url(partenaire.lien)}>{partenaire.lienTexte} →</a></p>}
       </div>
     </aside>
   )}

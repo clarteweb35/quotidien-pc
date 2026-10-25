@@ -1,0 +1,24 @@
+---
+// Une annonce de la page « Petites annonces » (tous formats). Les styles .pa-* sont globaux, dans petites-annonces.astro.
+import { annonceurs, nomCategorie, type Annonce } from '../lib/annonces';
+import { url } from '../lib/site';
+interface Props { a: Annonce }
+const { a } = Astro.props;
+const ann = a.annonceur ? annonceurs.get(a.annonceur) : undefined;
+const texteRecherche = [a.titre, a.texte, a.conditions, a.prix, nomCategorie(a.cat), ann?.nom].filter(Boolean).join(' ');
+---
+    <article class={`pa pa-${a.format}${a.format === 'encart' && ann ? ` pal-${ann.palette}` : ''}`} data-cat={a.cat} data-texte={texteRecherche} id={a.id}>
+      {a.format === 'vedette' && <p class="pa-vedette-bandeau">À la une des annonces</p>}
+      {a.format === 'encart' && ann?.logo && <img class="pa-logo" src={url(`annonces/${ann.logo}`)} width="104" height="104" alt={`Logo de ${ann.nom}`} loading="lazy" />}
+      {a.format === 'encart' && ann && <p class="pa-marque">{ann.nom}</p>}
+      <p class="pa-meta"><span class="pa-badge">{nomCategorie(a.cat)}</span> <span class="pa-ref">Réf. {a.ref}</span>{a.reel && <span class="pa-reel">Vraie annonce</span>}</p>
+      <h3 class="pa-titre">{a.reel && a.url ? <a href={a.url} target="_blank" rel="noopener">{a.titre}</a> : a.titre}</h3>
+      {a.image && <img class:list={['pa-image', a.imageType === 'portrait' && 'pa-image-portrait']} src={url(`annonces/${a.image}`)} width={a.imageType === 'portrait' ? 84 : 112} height={a.imageType === 'portrait' ? 105 : 112} alt={a.imageAlt ?? ''} loading="lazy" />}
+      {a.accroche && <p class="pa-accroche-pub">{a.accroche}</p>}
+      {a.prix && <p class="pa-prix">{a.prix}</p>}
+      <p class="pa-texte">{a.texte}</p>
+      {a.conditions && <p class="pa-conditions">{a.conditions}</p>}
+      {a.reel && a.url && <p class="pa-lien"><a href={a.url} target="_blank" rel="noopener">{a.lien ?? 'Voir le site'} →</a> <span>{a.site}</span></p>}
+      {ann && a.format !== 'encart' && <p class="pa-annonceur">{ann.logo && <img class="pa-logo-mini" src={url(`annonces/${ann.logo}`)} width="40" height="40" alt={`Logo de ${ann.nom}`} loading="lazy" />}Annonce passée par <strong>{ann.nom}</strong>{ann.slogan && <> — <em>{ann.slogan}</em></>}</p>}
+      {a.format === 'encart' && ann?.slogan && <p class="pa-slogan">{ann.slogan}</p>}
+    </article>

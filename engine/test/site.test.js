@@ -70,8 +70,10 @@ test('petites annonces: page, menu, donnees coherentes et mention obligatoire', 
   assert.ok(html.includes('coïncidence presque certaine'), 'mention fictive');
   assert.ok(html.includes('sélectionnées par Madame de Valmorin') && html.includes('href="/rencontres/"'), 'manchette de renvoi vers les rencontres');
   assert.ok(!html.includes('Partenaire officiel'), 'le bandeau partenaire est sur la page Rencontres, pas ici');
+  assert.ok(data.annonceurs.find((a) => a.id === 'miraculex').logo, 'logo Miraculex');
   assert.ok(fs.existsSync(path.join(ROOT, 'site/public/annonces', data.partenaire.image)), 'portrait du partenaire');
   assert.equal((html.match(/class="pa pa-/g) || []).length, data.annonces.length);
+  assert.ok(html.indexOf('id="pa-pubs"') < html.indexOf('id="pa-liste"') && html.indexOf('id="pa-pubs"') < html.indexOf('class="pa-outils"'), 'les pubs sont en haut de page, avant les filtres');
   // Les vraies annonces sont toujours etiquetees, avec lien https cliquable et texte visible.
   const vraies = data.annonces.filter((a) => a.reel);
   assert.ok(vraies.length >= 6);
@@ -99,7 +101,8 @@ test('rencontres: references uniques, photos existantes, page et menu', () => {
   const html = page('rencontres');
   assert.equal((html.match(/class="rc-ref/g) || []).length, data.annonces.length);
   assert.ok(html.includes('RÉF. 001') && html.includes('fictives et satiriques'));
-  assert.ok(html.includes('Partenaire officiel') && html.includes('Madame de Valmorin'), 'bandeau partenaire sur la page Rencontres');
+  assert.ok(html.includes('Partenaire officiel des petites annonces du cœur<') && html.includes('Madame de Valmorin'), 'bandeau partenaire sur la page Rencontres');
+  assert.ok(!html.includes('Parcourir les petites annonces du journal') && html.includes('Ici, des algorithmes froids'), 'textes du bandeau');
   assert.ok(!/href="(mailto|tel):/.test(html.slice(html.indexOf('rc-sommaire'), html.indexOf('rc-mention'))), 'aucun lien vers des coordonnees');
   assert.ok(page('.').includes('href="/rencontres/"'), 'lien dans le menu');
 });
