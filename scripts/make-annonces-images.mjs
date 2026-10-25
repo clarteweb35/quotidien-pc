@@ -1,12 +1,12 @@
 // Vignettes des petites annonces (photographies d'objets fournies par l'editeur), redimensionnees pour l'affichage (2x de 96 px).
-// Usage: node scripts/make-annonces-images.mjs <chaise> <patate> <trophee> <parfum>
-// Sortie: site/public/annonces/{chaise,patate,trophee,parfum}.webp
+// Usage: node scripts/make-annonces-images.mjs <chaise> <patate> <trophee> <parfum> [<cloche>]
+// Sortie: site/public/annonces/{chaise,patate,trophee,parfum,cloche}.webp
 // Le fond blanc est masque a l'affichage (mix-blend-mode: multiply); le trophee, fourni avec un damier de transparence incruste,
 // est nettoye ici: les pixels gris/blancs presque neutres redeviennent blancs.
 import path from 'node:path';
 import sharp from 'sharp';
 
-const [chaise, patate, trophee, parfum] = process.argv.slice(2);
+const [chaise, patate, trophee, parfum, cloche] = process.argv.slice(2);
 if (!parfum) { console.error('Usage: node scripts/make-annonces-images.mjs <chaise> <patate> <trophee> <parfum>'); process.exit(2); }
 const out = path.resolve('site/public/annonces');
 const cote = 192;
@@ -28,4 +28,8 @@ await vignette(chaise, 'chaise.webp');
 await vignette(patate, 'patate.webp');
 await sansDamier(trophee, 'trophee.webp');
 await vignette(parfum, 'parfum.webp');
-console.log('4 vignettes dans', out);
+if (cloche) {
+  // Photo large (1408 x 768): carre centre sur la cloche.
+  await sharp(cloche).extract({ left: 590, top: 50, width: 680, height: 680 }).resize(cote, cote).webp({ quality: 84 }).toFile(path.join(out, 'cloche.webp'));
+}
+console.log(cloche ? '5 vignettes dans' : '4 vignettes dans', out);

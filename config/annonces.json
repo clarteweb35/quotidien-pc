@@ -293,6 +293,7 @@
     },
     {
       "id": "pa-027", "cat": "offres", "format": "encart", "ref": "PA-027", "annonceur": "miraculex",
+      "image": "cloche.webp", "imageAlt": "Photographie d'une cloche de comptoir en laiton et cuivre posée sur un meuble en bois",
       "titre": "Le Pack Tranquillité Totale",
       "prix": "9,99 €/mois",
       "texte": "Sérénité garantie sous réserve de conditions indépendantes de notre volonté. Interlocuteur dédié, joignable aux horaires auxquels il ne répond pas. Traitement prioritaire selon l'ordre de priorité applicable.",

@@ -5,7 +5,7 @@
   "descriptionSeo": "Petites annonces de rencontres insolites : des annonces sentimentales humoristiques, fictives, dans l'esprit des rubriques matrimoniales d'un journal satirique.",
   "intro": "Rencontres, affinités et petites annonces de cœur, comme autrefois dans la presse imprimée : des personnes sincères, des attentes ordinaires, et, quelque part vers la troisième ligne, un détail qui change tout.",
   "chapeau": "Les réponses ne sont pas transmises : toutes les annonces ci-dessous sont fictives, et personne n'a jamais rien promis à personne.",
-  "mention": "Annonces fictives et satiriques. Les profils ne correspondent à aucune personne réelle ni à aucun inscrit, et les références (RÉF.) sont de simples numéros d'imprimerie : elles ne permettent de joindre personne.",
+  "mention": "Annonces fictives et satiriques ; les portraits, lorsqu'il y en a, sont des illustrations fictives générées par intelligence artificielle. Les profils ne correspondent à aucune personne réelle ni à aucun inscrit, et les références (RÉF.) sont de simples numéros d'imprimerie : elles ne permettent de joindre personne.",
   "categories": [
     { "slug": "hf", "nom": "Hommes cherchent femmes" },
     { "slug": "fh", "nom": "Femmes cherchent hommes" },
@@ -15,91 +15,91 @@
   ],
   "annonces": [
     {
-      "ref": 1, "cat": "hf", "profil": "Homme, 48 ans, fonctionnaire territorial",
+      "ref": 1, "photo": "1.webp", "cat": "hf", "profil": "Homme, 48 ans, fonctionnaire territorial",
       "texte": "Recherche personne compréhensive, appréciant les longues promenades en forêt et les silences administratifs. Je possède un sens aigu de l'organisation et souhaite rencontrer quelqu'un capable de m'émouvoir sans recourir à un formulaire Cerfa.",
       "recherche": "Personne sérieuse, ponctuelle, sachant remplir un accusé de réception.",
       "formule": "Réponse appréciée sous quinzaine, délai de rigueur."
     },
     {
-      "ref": 2, "cat": "hf", "profil": "Homme, 52 ans, éleveur de lapins nains",
+      "ref": 2, "photo": "2.webp", "cat": "hf", "profil": "Homme, 52 ans, éleveur de lapins nains",
       "texte": "Sérieux, ponctuel, propriétaire d'une grange que l'on dit très charmante. J'aime les foires agricoles et la lecture attentive des notices. Je ne supporte pas les retards, sauf les miens.",
       "recherche": "Compagne douce, de préférence capable de dormir à proximité de soixante lapins.",
       "formule": "Photographie non exigée. Certificat de bonne vue souhaité."
     },
     {
-      "ref": 3, "cat": "hf", "profil": "Homme, 39 ans, contrôleur de gestion",
+      "ref": 3, "photo": "3.webp", "cat": "hf", "profil": "Homme, 39 ans, contrôleur de gestion",
       "texte": "Je pratique la randonnée avec feuille de route et la tendresse avec des indicateurs. Situation stable, budget équilibré, quelques écarts émotionnels en fin d'exercice.",
       "recherche": "Une femme souple comme un prévisionnel, pour un suivi mensuel de nos sentiments.",
       "formule": "Les non-réponses seront provisionnées."
     },
     {
-      "ref": 4, "cat": "hf", "profil": "Homme, 61 ans, retraité des transports en commun",
+      "ref": 4, "photo": "4.webp", "cat": "hf", "profil": "Homme, 61 ans, retraité des transports en commun",
       "texte": "Compostée depuis longtemps, ma situation est stable. J'apprécie les trajets sans correspondance, les quais déserts et le silence qui précède une annonce.",
       "recherche": "Dame souhaitant voyager en seconde classe affective, titre de transport valable pour la vie.",
       "formule": "Aucun voyageur sans billet ne sera retenu."
     },
     {
-      "ref": 5, "cat": "hf", "profil": "Homme, 44 ans, géomètre",
+      "ref": 5, "photo": "5.webp", "cat": "hf", "profil": "Homme, 44 ans, géomètre",
       "texte": "Un mètre quatre-vingts, au centimètre près. Droit dans ses bottes, sans angle mort, attaché aux limites de propriété et aux bornes de repère.",
       "recherche": "Compagne franche, bornée uniquement quand il le faut.",
       "formule": "Plan de situation à joindre à la réponse."
     },
     {
-      "ref": 6, "cat": "fh", "profil": "Femme, 45 ans, responsable qualité",
+      "ref": 6, "photo": "6.webp", "cat": "fh", "profil": "Femme, 45 ans, responsable qualité",
       "texte": "Cuisine, voyage et lit les notices jusqu'au bout. Ne supporte ni les approximations ni les à-peu-près, sauf dans les petites annonces.",
       "recherche": "Homme sans non-conformité, apte à supporter un audit annuel de la relation.",
       "formule": "Écarter les réponses sans accusé de réception."
     },
     {
-      "ref": 7, "cat": "fh", "profil": "Femme, 58 ans, institutrice retirée",
+      "ref": 7, "photo": "7.webp", "cat": "fh", "profil": "Femme, 58 ans, institutrice retirée",
       "texte": "Patiente mais ferme. J'aime les promenades en rang par deux, les stylos plume et le calme des fins de journée. Je corrige encore les fautes d'orthographe, par réflexe plus que par plaisir.",
       "recherche": "Monsieur sachant ranger ses affaires, poser une question sans couper la parole et lever le doigt avant de rire.",
       "formule": "Les ratures seront comptées."
     },
     {
-      "ref": 8, "cat": "fh", "profil": "Femme, 37 ans, apicultrice",
+      "ref": 8, "photo": "8.webp", "cat": "fh", "profil": "Femme, 37 ans, apicultrice",
       "texte": "Je vis au milieu de quarante mille ouvrières, qui travaillent plus que moi et ne se plaignent pas.",
       "recherche": "Homme capable de rester tranquille au milieu d'un essaim. Si vous craignez les piqûres, abstenez-vous ; si vous craignez le silence, aussi.",
       "formule": "Réponse sous forme de miel, de préférence toutes fleurs."
     },
     {
-      "ref": 9, "cat": "fh", "profil": "Femme, 50 ans, conductrice de car scolaire",
+      "ref": 9, "photo": "9.webp", "cat": "fh", "profil": "Femme, 50 ans, conductrice de car scolaire",
       "texte": "Je conduis lentement et je pense vite. Trente ans de trajets m'ont appris que tout le monde descend un jour, mais rarement à l'arrêt prévu.",
       "recherche": "Homme sachant s'arrêter au bon endroit et attendre que tout le monde soit assis.",
       "formule": "Pas de passager clandestin."
     },
     {
-      "ref": 10, "cat": "fh", "profil": "Femme, 42 ans, standardiste",
+      "ref": 10, "photo": "10.webp", "cat": "fh", "profil": "Femme, 42 ans, standardiste",
       "texte": "Voix posée, écoute attentive, patience de professionnelle. Je sais mettre en attente sans offenser et transférer sans fâcher.",
       "recherche": "Homme qui décroche à la première sonnerie et ne dit jamais « ce n'est pas mon service ».",
       "formule": "Merci de ne pas rappeler : je vous rappellerai."
     },
     {
-      "ref": 11, "cat": "intellectuelles", "profil": "Homme, 55 ans, professeur de philosophie en disponibilité",
+      "ref": 11, "photo": "11.webp", "cat": "intellectuelles", "profil": "Homme, 55 ans, professeur de philosophie en disponibilité",
       "texte": "La rencontre est un concept, comme le jeudi. Je cherche à vérifier l'un par l'autre, en trois parties, sur deux colonnes.",
       "recherche": "Interlocutrice capable de soutenir six heures de conversation sur l'existence du jeudi.",
       "formule": "Réponses attendues sous forme de dissertation (introduction, développement, conclusion)."
     },
     {
-      "ref": 12, "cat": "intellectuelles", "profil": "Personne, 33 ans, archiviste municipale",
+      "ref": 12, "photo": "12.webp", "cat": "intellectuelles", "profil": "Personne, 33 ans, archiviste municipale",
       "texte": "Mes souvenirs sont classés par ordre alphabétique, avec cote, date et état de conservation. Je n'ai aucune passion non référencée.",
       "recherche": "Autre archiviste, pour ranger côte à côte nos fonds respectifs.",
       "formule": "Conservation préventive assurée des deux côtés."
     },
     {
-      "ref": 13, "cat": "intellectuelles", "profil": "Homme, 47 ans, correcteur de presse",
+      "ref": 13, "photo": "13.webp", "cat": "intellectuelles", "profil": "Homme, 47 ans, correcteur de presse",
       "texte": "Je pardonne tout, sauf le point-virgule mal placé. La sensibilité est une affaire de ponctuation, et l'amour une question de virgule.",
       "recherche": "Compagne qui ne confonde pas « quant à » et « quand à », ni ses sentiments avec ses habitudes.",
       "formule": "Les majuscules sont facultatives, la correction ne l'est pas."
     },
     {
-      "ref": 14, "cat": "intellectuelles", "profil": "Femme, 62 ans, docteure en linguistique",
+      "ref": 14, "photo": "14.webp", "cat": "intellectuelles", "profil": "Femme, 62 ans, docteure en linguistique",
       "texte": "Un adverbe bien placé peut transformer une vie. J'en suis la preuve, bien que je ne puisse la produire.",
       "recherche": "Homme prêt à écouter qu'un adverbe, parfois, suffit.",
       "formule": "Ni orateur, ni muet : un conjoint pour la virgule."
     },
     {
-      "ref": 15, "cat": "improbables", "profil": "Homme, 52 ans, collectionneur de timbres",
+      "ref": 15, "photo": "15.webp", "cat": "improbables", "profil": "Homme, 52 ans, collectionneur de timbres",
       "texte": "Une collection de grande valeur, patiemment classée, que je souhaite partager avec une personne sensible au dentelé.",
       "recherche": "Femme de lettres (ou d'enveloppes), pour une union tamponnée.",
       "formule": "Frais de port partagés. Pas de réponse en lettre non affranchie."
@@ -117,7 +117,7 @@
       "formule": "Union à remontage manuel."
     },
     {
-      "ref": 18, "cat": "improbables", "profil": "Femme, 36 ans, cartomancienne",
+      "ref": 18, "photo": "18.webp", "cat": "improbables", "profil": "Femme, 36 ans, cartomancienne",
       "texte": "Je sais déjà que vous allez répondre à cette annonce, et ce que vous allez dire. Je sais aussi que cela se passera mal, puis très bien, puis mal.",
       "recherche": "Homme n'aimant pas les surprises.",
       "formule": "Ne vous donnez pas la peine de répondre : je sais."
@@ -129,7 +129,7 @@
       "formule": "Réponse appréciée, même négative, même tardive."
     },
     {
-      "ref": 20, "cat": "desesperes", "profil": "Femme, 59 ans, abonnée à la rubrique",
+      "ref": 20, "photo": "20.webp", "cat": "desesperes", "profil": "Femme, 59 ans, abonnée à la rubrique",
       "texte": "J'ai déjà répondu à quarante-sept annonces, toutes les miennes. Je n'ai reçu qu'une réponse, d'ailleurs en retard.",
       "recherche": "Quelqu'un d'autre pour répondre à la suivante.",
       "formule": "Pas de réponse automatique, merci."
@@ -141,49 +141,49 @@
       "formule": "Récompense : un peu de reconnaissance, ou ce qu'on aura retrouvé."
     },
     {
-      "ref": 22, "cat": "desesperes", "profil": "Célibataire endurci, 70 ans, par principe",
+      "ref": 22, "photo": "22.webp", "cat": "desesperes", "profil": "Célibataire endurci, 70 ans, par principe",
       "texte": "J'ai toujours refusé de me marier, de me lier et de me fiancer. Ma position est sans appel, et je m'y tiens depuis longtemps.",
       "recherche": "Personne capable de me faire changer d'avis. Aucune candidature ne sera acceptée, ce serait contraire à mes principes.",
       "formule": "Réponses non souhaitées, mais attendues."
     },
     {
-      "ref": 23, "cat": "hf", "profil": "Homme de 51 ans, sentimental et prévoyant",
+      "ref": 23, "photo": "23.webp", "cat": "hf", "profil": "Homme de 51 ans, sentimental et prévoyant",
       "texte": "Divorcé, bonne présentation, aime les promenades, les repas en famille et les dimanches tranquilles. Recherche femme affectueuse, sachant apprécier les petites attentions et les projets à deux. Je possède une maison, un jardin et un barbecue qui fonctionne depuis 2018 sans incident. Souhaite construire une relation durable fondée sur la confiance. J'aimerais toutefois que notre première dispute ait lieu avant l'achat des meubles communs, pour faciliter la répartition."
     },
     {
-      "ref": 24, "cat": "fh", "profil": "Femme de 44 ans, indépendante et curieuse",
+      "ref": 24, "photo": "24.webp", "cat": "fh", "profil": "Femme de 44 ans, indépendante et curieuse",
       "texte": "Active, sociable, aime voyager sans programme trop chargé et découvrir de nouvelles cuisines. Recherche homme cultivé, capable d'écouter sans préparer sa réponse pendant que je parle. J'apprécie l'humour, la tendresse et les personnes qui savent reconnaître leurs torts. Je ne demande pas la perfection, seulement une certaine cohérence entre les promesses et les actes. Les hommes qui disent « on verra » à propos de tout sont priés de préciser à quelle échéance."
     },
     {
-      "ref": 25, "cat": "hf", "profil": "Veuf de 67 ans, jardinier amateur",
+      "ref": 25, "photo": "25.webp", "cat": "hf", "profil": "Veuf de 67 ans, jardinier amateur",
       "texte": "Retraité, calme, non-fumeur, cuisine correctement et entretient soigneusement ses rosiers. Recherche compagne pour partager sorties, petits voyages et soirées au coin du feu. Je suis disposé à découvrir vos passions, même si je ne comprends pas encore la peinture contemporaine. En revanche, je tiens à conserver mon potager dans son état actuel. Une relation sérieuse est envisageable avec une personne qui accepte que les tomates bénéficient d'une priorité saisonnière."
     },
     {
-      "ref": 26, "cat": "fh", "profil": "Femme de 38 ans, romantique mais lucide",
+      "ref": 26, "photo": "26.webp", "cat": "fh", "profil": "Femme de 38 ans, romantique mais lucide",
       "texte": "Aime les lettres manuscrites, les fleurs sans occasion particulière et les conversations qui se prolongent après minuit. Recherche homme capable de surprendre sans organiser chaque surprise trois semaines à l'avance. Je souhaite une relation sincère, avec de l'écoute et quelques projets communs. J'ai déjà essayé les applications de rencontres, mais les conversations y ressemblent trop souvent à des entretiens d'embauche. Si vous demandez mes trois principales qualités, merci de commencer par me dire les vôtres."
     },
     {
-      "ref": 27, "cat": "hf", "profil": "Homme de 56 ans, bricoleur confirmé",
+      "ref": 27, "photo": "27.webp", "cat": "hf", "profil": "Homme de 56 ans, bricoleur confirmé",
       "texte": "Veuf, propriétaire, amateur de pêche et de réparations domestiques. Je sais monter une armoire, refaire une étagère et identifier un bruit suspect dans une chaudière. Recherche femme douce et indépendante pour partager les plaisirs simples de la vie. Je suis très disponible, sauf le samedi matin, réservé aux travaux urgents, et le dimanche après-midi, consacré aux travaux devenus urgents pendant le samedi matin. Je peux faire une exception pour une personne sachant utiliser un niveau à bulle."
     },
     {
-      "ref": 28, "cat": "intellectuelles", "profil": "Femme de 59 ans, ancienne enseignante",
+      "ref": 28, "photo": "28.webp", "cat": "intellectuelles", "profil": "Femme de 59 ans, ancienne enseignante",
       "texte": "Retraitée depuis peu, passionnée de lecture, de théâtre et de voyages culturels. Recherche compagnon cultivé, tendre et curieux, qui ne confonde pas désaccord et faute de raisonnement. J'aime les discussions animées, mais je sais aussi apprécier le silence. Je ne corrige plus les copies depuis deux ans et souhaite éviter de reprendre cette habitude dans ma vie privée. Toutefois, une faute dans un SMS de déclaration d'amour restera difficile à ignorer."
     },
     {
-      "ref": 29, "cat": "hf", "profil": "Homme de 42 ans, cuisinier amateur",
+      "ref": 29, "photo": "29.webp", "cat": "hf", "profil": "Homme de 42 ans, cuisinier amateur",
       "texte": "Célibataire, sportif occasionnel, aime recevoir des amis et préparer de bons petits plats. Recherche partenaire gourmande, spontanée et capable de rire de ses propres défauts. Je maîtrise trois recettes, dont une qui impressionne toujours les invités. J'aimerais rencontrer quelqu'un avec qui partager les repas, les vacances et les projets d'avenir. Je précise que je cuisine volontiers, mais que je considère le fait de demander « qu'est-ce qu'on mange ce soir ? » comme une prise de responsabilité à part entière."
     },
     {
-      "ref": 30, "cat": "fh", "profil": "Femme de 48 ans, passionnée de voyages",
+      "ref": 30, "photo": "30.webp", "cat": "fh", "profil": "Femme de 48 ans, passionnée de voyages",
       "texte": "Dynamique, curieuse, apprécie les destinations méconnues et les hébergements qui ont une histoire. Recherche homme ouvert d'esprit, capable de faire une valise sans emporter quatre chargeurs dont il ignore l'utilité. Je préfère les escapades improvisées aux séjours organisés minute par minute. Je ne suis pas exigeante sur le confort, à condition qu'il y ait une fenêtre, de l'eau chaude et une possibilité raisonnable de rentrer. Les amateurs de camping extrême peuvent joindre une liste de leurs dernières expéditions."
     },
     {
-      "ref": 31, "cat": "hf", "profil": "Homme de 63 ans, discret et méthodique",
+      "ref": 31, "photo": "31.webp", "cat": "hf", "profil": "Homme de 63 ans, discret et méthodique",
       "texte": "Retraité du secteur bancaire, aime la marche, les mots croisés et les petits-déjeuners prolongés. Recherche femme sérieuse, agréable et indépendante, pour relation durable. Je suis fidèle, ponctuel et rarement de mauvaise humeur. J'ai pris l'habitude de noter mes dépenses et mes rendez-vous, ce qui m'évite les oublis. Je suis prêt à partager mon quotidien, mais pas nécessairement mon agenda papier : il contient des informations confidentielles sur mes propres habitudes, dont certaines me surprennent encore."
     },
     {
-      "ref": 32, "cat": "fh", "profil": "Femme de 35 ans, artiste dans l'âme",
+      "ref": 32, "photo": "32.webp", "cat": "fh", "profil": "Femme de 35 ans, artiste dans l'âme",
       "texte": "Créative, sensible, aime la musique, les brocantes et les objets dont personne ne connaît l'usage. Recherche homme patient, affectueux et doté d'un minimum d'imagination. Mon appartement est accueillant, même si certaines œuvres en cours occupent actuellement la table de la cuisine. Je rêve d'une relation dans laquelle chacun puisse être lui-même. Je précise cependant que « c'est original » n'est pas une critique constructive, et que « je ne comprends pas » peut parfois constituer un excellent début de conversation."
     },
     {
@@ -191,15 +191,15 @@
       "texte": "Célibataire, stable, honnête et attaché aux traditions. Recherche femme sensible, appréciant les promenades, les repas simples et les conversations sans précipitation. Je suis capable de prendre des décisions importantes, à condition de disposer de toutes les informations nécessaires. Je ne fuis pas l'engagement : je souhaite simplement définir clairement son périmètre, sa durée et les modalités de renouvellement. Si notre rencontre se passe bien, je suis disposé à envisager une seconde rencontre après validation de la première."
     },
     {
-      "ref": 34, "cat": "fh", "profil": "Femme de 52 ans, indépendante et organisée",
+      "ref": 34, "photo": "34.webp", "cat": "fh", "profil": "Femme de 52 ans, indépendante et organisée",
       "texte": "Divorcée, aime le jardinage, les animaux et les soirées entre amis. Recherche compagnon fiable, tendre et suffisamment autonome pour ne pas considérer une machine à laver comme une installation industrielle complexe. Je ne cherche pas un homme parfait, mais quelqu'un qui sache participer à la vie quotidienne sans attendre de recevoir des instructions détaillées. Je suis prête à faire des compromis, notamment sur le choix des films. Pour le thermostat, en revanche, la négociation devra être menée avec sérieux."
     },
     {
-      "ref": 35, "cat": "intellectuelles", "profil": "Homme de 39 ans, écrivain à ses heures",
+      "ref": 35, "photo": "35.webp", "cat": "intellectuelles", "profil": "Homme de 39 ans, écrivain à ses heures",
       "texte": "Passionné de littérature, de cinéma et de longues discussions sur le sens de l'existence. Recherche compagne affectueuse, curieuse et indulgente envers les périodes de doute créatif. Je travaille actuellement sur un roman ambitieux dont la fin reste à écrire depuis trois ans. J'apprécie les encouragements, mais aussi les avis sincères. Si vous aimez lire, je pourrai vous confier mon manuscrit. Je recherche surtout une personne capable de dire « j'ai beaucoup aimé » sans avoir nécessairement terminé le chapitre deux."
     },
     {
-      "ref": 36, "cat": "fh", "profil": "Femme de 61 ans, épicurienne raisonnable",
+      "ref": 36, "photo": "36.webp", "cat": "fh", "profil": "Femme de 61 ans, épicurienne raisonnable",
       "texte": "Aime les marchés, les restaurants chaleureux, les promenades au bord de l'eau et les conversations spontanées. Recherche homme bienveillant, drôle et disponible pour partager les bons moments de la vie. Je n'ai pas besoin d'un grand voyage pour être heureuse : un déjeuner réussi peut suffire. Je suis ouverte aux nouvelles expériences, dans la limite du raisonnable. Si vous me proposez un saut en parachute au premier rendez-vous, je préférerai que nous commencions par un café, afin de vérifier que nous avons la même définition du mot « raisonnable »."
     },
     {
@@ -207,32 +207,32 @@
       "texte": "Célibataire, bon caractère, aime les animaux, les repas conviviaux et les projets qui aboutissent. Recherche femme sincère, tendre et capable d'apprécier un homme imparfait mais volontaire. J'ai appris de mes relations précédentes et je suis prêt à repartir sur de bonnes bases. Je ne promets pas de changer du tout au tout, mais je peux améliorer certains points avec un accompagnement adapté. Je souhaite une relation simple, sans jeux ni complications. Si vous aimez les gens qui reconnaissent leurs erreurs, nous avons déjà un sujet de conversation : je suis arrivé en retard à mon dernier rendez-vous amoureux."
     },
     {
-      "ref": "K7-492B", "cat": "hf", "profil": "Homme 54 ans, posé, propriétaire, cherche compagne pour projets d'avenir",
+      "ref": "K7-492B", "photo": "k7-492b.webp", "cat": "hf", "profil": "Homme 54 ans, posé, propriétaire, cherche compagne pour projets d'avenir",
       "texte": "Veuf d'esprit, retraité anticipé de la fonction publique, méticuleux. Aime la marche active, les buissons bien taillés et le silence après 20h. Possède maison de caractère avec dépendances. Désire rencontrer dame calme, aimant le jardinage et la cuisine du terroir, non fumeuse. Une tolérance particulière sera accordée aux personnes acceptant de signer une convention d'occupation à titre gratuit avant tout rapprochement physique.",
       "recherche": "Dame 48-55 ans, ordonnée, sachant tenir un registre."
     },
     {
-      "ref": "Q3L-058", "cat": "improbables", "profil": "Femme 41 ans, artiste peintre, épicurienne et spontanée",
+      "ref": "Q3L-058", "photo": "q3l-058.webp", "cat": "improbables", "profil": "Femme 41 ans, artiste peintre, épicurienne et spontanée",
       "texte": "Passionnée par la couleur, le théâtre contemporain et les longues promenades en forêt sous la pluie. Je cherche un homme chaleureux, ouvert d'esprit, aimant les dîners improvisés et la poésie engagée. Vous êtes sensible, cultivé et capable de supporter mon ex-mari qui vit toujours dans le cabanon au fond du jardin pour des raisons purement administratives et d'isolation phonique.",
       "recherche": "Homme 38-48 ans, tolérant, pas trop regardant sur la territorialité."
     },
     {
-      "ref": "X91-T4C", "cat": "hf", "profil": "Homme 36 ans, ingénieur méthodes, esprit structuré et romantique",
+      "ref": "X91-T4C", "photo": "x91-t4c.webp", "cat": "hf", "profil": "Homme 36 ans, ingénieur méthodes, esprit structuré et romantique",
       "texte": "Dynamique, attentif et sportif. J'aime les randonnées programmées, les plats équilibrés et les soirées au calme. Je recherche une jeune femme douce pour bâtir une relation durable basant son fonctionnement sur l'amélioration continue. Souhaite effectuer un premier rendez-vous de 45 minutes pour évaluer nos synergies respectives. Merci de venir munie d'une pièce d'identité et de deux références consultables.",
       "recherche": "Femme 30-40 ans, ponctuelle, avec un sens aigu de l'optimisation."
     },
     {
-      "ref": "R2M-71Z", "cat": "fh", "profil": "Dame 62 ans, passionnée de patrimoine local et de botanique",
+      "ref": "R2M-71Z", "photo": "r2m-71z.webp", "cat": "fh", "profil": "Dame 62 ans, passionnée de patrimoine local et de botanique",
       "texte": "Élégante, cultivée, dynamique. Investie dans la vie associative locale et la sauvegarde des lavoirs anciens. Recherche monsieur courtois, amateur de brocantes, de tisanes et de visites guidées. Idéalement véhiculé. Les candidatures des personnes possédant un nettoyeur haute pression Kärcher de plus de 160 bars seront traitées en priorité absolue pour la rénovation de ma terrasse en pierre.",
       "recherche": "Monsieur 60-70 ans, serviable, équipement outillage bienvenu."
     },
     {
-      "ref": "4HB-60W", "cat": "hf", "profil": "Homme 48 ans, artisan menuisier, simple et authentique",
+      "ref": "4HB-60W", "photo": "4hb-60w.webp", "cat": "hf", "profil": "Homme 48 ans, artisan menuisier, simple et authentique",
       "texte": "Travailleur, honnête, épicurien à ses heures. J'aime le bois bien travaillé, les viandes en sauce et la belote. Cherche compagne sincère pour partager sorties, repas dominicaux et moments de complicité. Je ne demande rien d'exceptionnel, seulement quelqu'un de gentil qui ne remettra pas en question l'alignement des étagères du salon que j'ai mis sept ans à régler au niveau à bulle.",
       "recherche": "Femme 40-52 ans, bienveillante et peu critique sur l'aménagement d'intérieur."
     },
     {
-      "ref": "V8-D33K", "cat": "intellectuelles", "profil": "Femme 29 ans, romancière jeunesse, rêveuse et passionnée de chats",
+      "ref": "V8-D33K", "photo": "v8-d33k.webp", "cat": "intellectuelles", "profil": "Femme 29 ans, romancière jeunesse, rêveuse et passionnée de chats",
       "texte": "Douce, créative et légèrement étourdie. J'aime le thé à la camomille, les librairies anciennes et m'endormir devant des films en noir et blanc. Recherche jeune homme attentionné, patient et romantique pour écrire notre propre histoire. Important : vous devez accepter de relire mes ébauches chaque soir à 23h et d'émettre des critiques uniquement élogieuses sous peine de crise d'angoisse foudroyante.",
       "recherche": "Homme 28-35 ans, admiratif, au sommeil léger."
     }

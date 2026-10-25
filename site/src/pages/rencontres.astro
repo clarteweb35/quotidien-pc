@@ -28,7 +28,7 @@ import { url } from '../lib/site';
             <article class="rc" id={ancreRef(r.ref)}>
               <p class="rc-ref"><a href={`#${ancreRef(r.ref)}`}>{refTexte(r.ref)}</a></p>
               <div class="rc-corps">
-                {photo && <img class="rc-photo" src={url(photo)} width="64" height="80" alt={r.photoAlt ?? 'Illustration fictive du profil'} loading="lazy" />}
+                {photo && <img class="rc-photo" src={url(photo)} width="72" height="90" alt={r.photoAlt ?? 'Portrait fictif généré par IA'} loading="lazy" />}
                 <h3 class="rc-profil">{r.profil}</h3>
                 <p>{r.texte}</p>
                 {r.recherche && <p class="rc-recherche"><strong>Recherche :</strong> {r.recherche}</p>}
