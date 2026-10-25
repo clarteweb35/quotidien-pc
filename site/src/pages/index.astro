@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import Card from '../components/Card.astro';
+import Marches from '../components/Marches.astro';
 import { allArticles, categories, category, url, siteName, manualImageCredit } from '../lib/site';
 import { illustration } from '../lib/manual';
 
@@ -32,15 +33,16 @@ const siteLd = {
       {flash.length > 1 && (
         <div class="flash" role="region" aria-label="Derniers titres">
           <span class="flash-label">À l'instant</span>
-          <div class="flash-track">
+          <div class="flash-viewport"><div class="flash-track">
             {[0, 1].map((copy) => (
               <ul class="flash-list" aria-hidden={copy === 1 ? 'true' : undefined}>
                 {flash.map((a) => <li><a href={url(`articles/${a.data.slug}/`)} tabindex={copy === 1 ? -1 : undefined}>{a.data.title}</a></li>)}
               </ul>
             ))}
-          </div>
+          </div></div>
         </div>
       )}
+      <Marches />
       <Card article={lead} lead />
       {latest.length > 0 && (
         <>

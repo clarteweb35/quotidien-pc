@@ -78,8 +78,8 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.15; }
 .prose { max-width: 720px; margin: 0 auto; }
 .empty { text-align: center; padding: 60px 0; color: var(--ink-2); }
 
-main { padding-bottom: 36px; }
-footer { border-top: 3px double var(--ink); padding: 14px 0 18px; font: .85rem/1.6 var(--sans); color: var(--ink-2); }
+main { padding-bottom: 64px; }
+footer { border-top: 3px double var(--ink); padding: 10px 0 10px; font: .85rem/1.6 var(--sans); color: var(--ink-2); }
 footer .cols { display: flex; flex-wrap: wrap; gap: 16px 40px; justify-content: space-between; }
 footer .brand { display: flex; align-items: center; gap: 16px; }
 footer .brand p { margin: 0; font-size: .78rem; line-height: 1.45; padding-left: 16px; border-left: 1px solid var(--rule); }
@@ -167,6 +167,8 @@ footer ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 16px; f
 /* Animations sobres: aucune librairie, aucun JavaScript, hauteurs fixes (pas de decalage de mise en page), coupees si l'utilisateur prefere moins de mouvement. */
 .flash { display: flex; align-items: stretch; margin: 14px 0 20px; border: 1px solid var(--ink); overflow: hidden; font: .85rem/1 var(--sans); height: 36px; }
 .flash-label { flex: none; display: grid; place-items: center; padding: 0 12px; background: var(--accent); color: #fff; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; font-size: .72rem; }
+.flash-viewport { flex: 1; min-width: 0; overflow: hidden; display: flex; align-items: center; }
+.flash-label { position: relative; z-index: 1; }
 .flash-track { display: flex; width: max-content; animation: flash-scroll 80s linear infinite; }
 .flash:hover .flash-track, .flash:focus-within .flash-track { animation-play-state: paused; }
 .flash-list { display: flex; flex: none; margin: 0; padding: 0; list-style: none; }
@@ -211,4 +213,8 @@ footer ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 16px; f
   .progress { display: none; }
   @view-transition { navigation: none; }
 }
-footer .copyright { margin: 10px auto 0; padding-top: 8px; border-top: 1px solid var(--rule); font-size: .75rem; text-align: center; }
+footer .copyright { margin: 6px auto 0; padding-top: 6px; border-top: 1px solid var(--rule); font-size: .75rem; text-align: center; }
+footer .wordmark b { font-size: 1.6rem; }
+footer .wordmark i { font-size: .5rem; margin-top: 4px; padding-top: 4px; }
+footer .brand { gap: 12px; }
+footer .brand p { padding-left: 12px; }

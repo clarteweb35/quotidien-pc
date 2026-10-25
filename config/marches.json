@@ -14,7 +14,12 @@
     { "symbol": "MC.PA", "label": "LVMH", "kind": "stock" },
     { "symbol": "TTE.PA", "label": "TotalEnergies", "kind": "stock" },
     { "symbol": "AIR.PA", "label": "Airbus", "kind": "stock" },
-    { "symbol": "OR.PA", "label": "L'Oréal", "kind": "stock" }
+    { "symbol": "OR.PA", "label": "L'Oréal", "kind": "stock" },
+    { "symbol": "SAN.PA", "label": "Sanofi", "kind": "stock" },
+    { "symbol": "BNP.PA", "label": "BNP Paribas", "kind": "stock" },
+    { "symbol": "SU.PA", "label": "Schneider Electric", "kind": "stock" },
+    { "symbol": "SAF.PA", "label": "Safran", "kind": "stock" },
+    { "symbol": "CS.PA", "label": "AXA", "kind": "stock" }
   ],
   "history": [
     { "month": 5, "day": 17, "year": 1792, "text": "Vingt-quatre courtiers signent l'accord du Buttonwood, sous un arbre de Wall Street : la future Bourse de New York est née." },

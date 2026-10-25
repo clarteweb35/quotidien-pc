@@ -57,7 +57,8 @@ const today = new Intl.DateTimeFormat('fr-FR', { timeZone: 'Europe/Paris', dateS
           <img class="logo" src={url('brand/logo-1100.png')} width="1100" height="367" alt={`${logoName.main} ${logoName.sub.toLowerCase()} — ${tagline}`} fetchpriority="high" />
         </picture>
       </a>
-      <p class="date">{today}</p>
+      <p class="date"><span id="today">{today}</span><span id="clock"></span></p>
+      <script is:inline>{`(function(){var c=document.getElementById("clock");if(!c)return;var f=new Intl.DateTimeFormat("fr-FR",{timeZone:"Europe/Paris",hour:"2-digit",minute:"2-digit"});function t(){c.textContent=" · "+f.format(new Date()).replace(":"," h ")}t();setInterval(t,15000)})()`}</script>
     </header>
     <nav class="nav" aria-label="Rubriques">
       <div class="wrap">
