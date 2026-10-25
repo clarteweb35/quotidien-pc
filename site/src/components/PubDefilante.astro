@@ -1,0 +1,57 @@
+---
+// Une seule publicite fictive en bandeau defilant, au milieu de la page « Petites annonces ». Annonce differente a chaque chargement (JavaScript);
+// le HTML contient une annonce par defaut pour les lecteurs sans JavaScript.
+import { pubsCompactes } from '../lib/annonces';
+import { url } from '../lib/site';
+const p = pubsCompactes[0] ?? null;
+const donnees = { base: url(''), pubs: pubsCompactes };
+---
+{p && (
+  <aside class="pub-def" id="pub-def" aria-label="Publicité fictive">
+    <span class="pub-def-label">Publicité fictive</span>
+    <div class="pub-def-viewport">
+      <div class="pub-def-track">
+        {[0, 1].map((copie) => (
+          <a class="pub-def-texte" href={url(`petites-annonces/#${p.id}`)} aria-hidden={copie === 1 ? 'true' : undefined} tabindex={copie === 1 ? -1 : undefined}>
+            <b class="pd-marque" hidden={!p.marque}>{p.marque}</b>
+            <span class="pd-titre">{p.titre}</span>
+            <i class="pd-accroche" hidden={!p.accroche}>{p.accroche}</i>
+            <span class="pd-prix" hidden={!p.prix}>{p.prix}</span>
+            <span class="pd-texte">{p.texte}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+    <script type="application/json" id="pub-def-data" set:html={JSON.stringify(donnees)} />
+  </aside>
+)}
+<script>
+  const brut = document.getElementById('pub-def-data')?.textContent;
+  if (brut) {
+    const { base, pubs } = JSON.parse(brut) as { base: string; pubs: { id: string; marque: string; titre: string; accroche: string; prix: string; texte: string }[] };
+    const p = pubs[Math.floor(Math.random() * pubs.length)];
+    document.querySelectorAll<HTMLAnchorElement>('#pub-def .pub-def-texte').forEach((a) => {
+      a.href = base + 'petites-annonces/#' + p.id;
+      const t = (sel: string, v: string) => { const e = a.querySelector<HTMLElement>(sel); if (e) { e.textContent = v; e.hidden = !v; } };
+      t('.pd-marque', p.marque); t('.pd-titre', p.titre); t('.pd-accroche', p.accroche); t('.pd-prix', p.prix); t('.pd-texte', p.texte);
+    });
+  }
+</script>
+<style>
+  .pub-def { display: flex; align-items: stretch; margin: 4px 0 26px; border: 1px solid var(--ink); border-top: 3px double var(--ink); background: var(--paper-2); height: 44px; overflow: hidden; font-family: var(--sans); }
+  .pub-def-label { flex: none; display: grid; place-items: center; padding: 0 12px; background: var(--ink); color: var(--paper); font: 700 .64rem var(--sans); letter-spacing: .12em; text-transform: uppercase; position: relative; z-index: 1; }
+  .pub-def-viewport { flex: 1; min-width: 0; overflow: hidden; display: flex; align-items: center; }
+  .pub-def-track { display: flex; width: max-content; animation: pub-def-scroll 55s linear infinite; }
+  .pub-def:hover .pub-def-track, .pub-def:focus-within .pub-def-track { animation-play-state: paused; }
+  .pub-def-texte { display: flex; align-items: baseline; gap: 14px; flex: none; padding: 0 40px 0 22px; white-space: nowrap; color: var(--ink); text-decoration: none; font-size: .88rem; }
+  .pub-def-texte [hidden] { display: none; }
+  .pub-def-texte > *:not([hidden])::after { content: '◆'; margin-left: 14px; color: var(--accent); font-size: .55rem; font-style: normal; }
+  .pub-def-texte > *:last-child::after { content: none; }
+  .pd-marque { font-weight: 800; letter-spacing: .1em; text-transform: uppercase; font-size: .72rem; }
+  .pd-titre { font: 700 1rem var(--serif); }
+  .pd-accroche { font-family: var(--serif); }
+  .pd-prix { font-weight: 700; }
+  .pub-def-texte:hover .pd-titre, .pub-def-texte:focus-visible .pd-titre { text-decoration: underline; }
+  @keyframes pub-def-scroll { to { transform: translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce) { .pub-def-track { animation: none; } .pub-def-viewport { overflow-x: auto; } }
+</style>

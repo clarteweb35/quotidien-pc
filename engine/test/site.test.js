@@ -73,7 +73,8 @@ test('petites annonces: page, menu, donnees coherentes et mention obligatoire', 
   assert.ok(data.annonceurs.find((a) => a.id === 'miraculex').logo, 'logo Miraculex');
   assert.ok(fs.existsSync(path.join(ROOT, 'site/public/annonces', data.partenaire.image)), 'portrait du partenaire');
   assert.equal((html.match(/class="pa pa-/g) || []).length, data.annonces.length);
-  assert.ok(html.indexOf('id="pa-pubs"') < html.indexOf('id="pa-liste"') && html.indexOf('id="pa-pubs"') < html.indexOf('class="pa-outils"'), 'les pubs sont en haut de page, avant les filtres');
+  assert.equal((html.match(/id="pub-def"/g) || []).length, 1, 'une seule pub defilante');
+  assert.ok(html.indexOf('id="pa-liste"') < html.indexOf('id="pub-def"') && html.indexOf('id="pub-def"') < html.indexOf('id="pa-liste-2"'), 'la pub defilante est au milieu des annonces');
   // Les vraies annonces sont toujours etiquetees, avec lien https cliquable et texte visible.
   const vraies = data.annonces.filter((a) => a.reel);
   assert.ok(vraies.length >= 6);

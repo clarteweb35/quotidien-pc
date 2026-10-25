@@ -5,11 +5,12 @@ import { contactEmail } from '../lib/legal';
 import { url } from '../lib/site';
 import AnnonceCarte from '../components/AnnonceCarte.astro';
 import BandeauRencontres from '../components/BandeauRencontres.astro';
+import PubDefilante from '../components/PubDefilante.astro';
 
 const compte = (slug: string) => annonces.filter((a) => a.cat === slug).length;
-// Les encarts publicitaires passent en haut de page (bandeau defilant); les autres annonces restent dans les colonnes.
-const pubs = annonces.filter((a) => a.format === 'encart');
-const autres = annonces.filter((a) => a.format !== 'encart');
+const milieu = Math.ceil(annonces.length / 2);
+const premieres = annonces.slice(0, milieu);
+const dernieres = annonces.slice(milieu);
 ---
 <Base title={rubrique.titre} description={`${rubrique.accroche} ${annonces.length} annonces fictives et satiriques.`} current="annonces">
   <div class="page-head">
@@ -20,13 +21,6 @@ const autres = annonces.filter((a) => a.format !== 'encart');
   </div>
 
   <BandeauRencontres />
-
-  <section class="pa-pubs-section" id="pa-pubs-section" aria-labelledby="pa-titre-pubs">
-    <h2 id="pa-titre-pubs" class="pa-titre-section">Publicités</h2>
-    <div class="pa-pubs" id="pa-pubs" tabindex="0" role="region" aria-label="Publicités, défilement horizontal">
-      {pubs.map((a) => <AnnonceCarte a={a} />)}
-    </div>
-  </section>
 
   <section class="pa-outils" aria-label="Filtrer les annonces">
     <div class="pa-filtres" role="group" aria-label="Catégories">
@@ -61,7 +55,11 @@ const autres = annonces.filter((a) => a.format !== 'encart');
   <section aria-labelledby="pa-titre-liste">
     <h2 id="pa-titre-liste" class="visuellement-cache">Les annonces</h2>
     <div class="pa-colonnes" id="pa-liste">
-      {autres.map((a) => <AnnonceCarte a={a} />)}
+      {premieres.map((a) => <AnnonceCarte a={a} />)}
+    </div>
+    <PubDefilante />
+    <div class="pa-colonnes" id="pa-liste-2">
+      {dernieres.map((a) => <AnnonceCarte a={a} />)}
     </div>
     <p class="pa-vide" id="pa-vide" hidden>Aucune annonce ne correspond à votre recherche. C'est sans doute la meilleure offre du jour.</p>
   </section>
@@ -93,8 +91,9 @@ const autres = annonces.filter((a) => a.format !== 'encart');
   .pa-form button { justify-self: start; font: 700 .9rem var(--sans); padding: 8px 16px; border: 2px solid var(--ink); background: var(--ink); color: var(--paper); cursor: pointer; }
 
   /* Colonnes de journal: les annonces s'ecoulent comme sur une page de petites annonces papier */
-  .pa-colonnes { column-width: 270px; column-gap: 26px; column-rule: 1px solid var(--rule); margin-top: 18px; }
-  .pa { break-inside: avoid; margin: 0 0 20px; font-family: var(--serif); overflow-wrap: anywhere; }
+  /* Alignement: un seul rythme (--pa-gap entre annonces, --pa-pad dans les cadres) et un seul bord de texte: les cadres (vedette, encart) debordent dans la gouttiere */
+  .pa-colonnes { --pa-gap: 22px; --pa-pad: 12px; column-width: 270px; column-gap: 40px; column-rule: 1px solid var(--rule); margin-top: 18px; }
+  .pa { break-inside: avoid; margin: 0 0 var(--pa-gap); font-family: var(--serif); overflow-wrap: anywhere; }
   .pa[hidden] { display: none; }
   .pa p { margin: 0; }
   .pa-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; font: .66rem var(--sans); color: var(--ink-2); margin-bottom: 4px; }
@@ -112,20 +111,20 @@ const autres = annonces.filter((a) => a.format !== 'encart');
   .pa-lien span { color: var(--ink-2); font-size: .72rem; margin-left: 4px; }
   .pa-image { float: right; margin: 0 0 6px 10px; width: 112px; height: 112px; object-fit: contain; mix-blend-mode: multiply; } /* le fond blanc des photos d'objets disparait sur le papier */
 
-  .pa-classique { padding-bottom: 14px; border-bottom: 1px solid var(--rule); }
-  .pa-court { padding: 0 0 12px; border-bottom: 1px dotted var(--ink); }
+  .pa-classique { padding-bottom: var(--pa-pad); border-bottom: 1px solid var(--rule); }
+  .pa-court { padding: 0 0 var(--pa-pad); border-bottom: 1px dotted var(--ink); }
   .pa-court .pa-titre { display: inline; font-size: .95rem; text-transform: uppercase; letter-spacing: .02em; }
   .pa-court .pa-titre::after { content: ' — '; }
   .pa-court .pa-meta { margin-bottom: 2px; }
   .pa-court .pa-prix, .pa-court .pa-texte { display: inline; }
   .pa-court .pa-prix { margin: 0 4px 0 0; font-size: .85rem; }
-  .pa-vedette { padding: 12px 14px 14px; border: 3px double var(--ink); background: var(--paper-2); }
+  .pa-vedette { padding: var(--pa-pad); margin-left: calc(-1 * (var(--pa-pad) + 3px)); margin-right: calc(-1 * (var(--pa-pad) + 3px)); border: 3px double var(--ink); background: var(--paper-2); }
   .pa-vedette-bandeau { font: 800 .62rem var(--sans); letter-spacing: .14em; text-transform: uppercase; color: #fff; background: var(--accent); display: inline-block; padding: 2px 8px; margin-bottom: 6px; }
   .pa-vedette .pa-titre { font-size: 1.3rem; }
   .pa-vedette .pa-image { width: 136px; height: 136px; }
 
   /* Encarts publicitaires */
-  .pa-encart { padding: 14px 14px 12px; border: 2px solid currentColor; }
+  .pa-encart { padding: var(--pa-pad); margin-left: calc(-1 * (var(--pa-pad) + 2px)); margin-right: calc(-1 * (var(--pa-pad) + 2px)); border: 2px solid currentColor; }
   .pa-marque { font: 800 .74rem var(--sans); letter-spacing: .18em; text-transform: uppercase; margin-bottom: 8px !important; padding-bottom: 6px; border-bottom: 1px solid currentColor; }
   .pa-encart .pa-titre { font-size: 1.2rem; }
   .pa-encart .pa-image { mix-blend-mode: normal; border: 2px solid var(--paper); background: var(--paper); object-fit: cover; }
@@ -135,13 +134,6 @@ const autres = annonces.filter((a) => a.format !== 'encart');
   .pa-encart .pa-conditions { color: inherit; opacity: .9; font-size: .64rem; line-height: 1.35; }
   .pa-accroche-pub { font: italic 700 1.02rem/1.35 var(--serif); margin: 0 0 8px !important; }
   .pa-logo { float: right; width: 104px; height: 104px; margin: -4px 0 6px 10px; border-radius: 50%; border: 2px solid var(--paper); object-fit: cover; }
-  /* Publicites en haut de page: bande defilante horizontale */
-  .pa-pubs-section { margin: 18px 0 4px; }
-  .pa-pubs-section[hidden] { display: none; }
-  .pa-titre-section { font: 800 .8rem var(--sans); letter-spacing: .16em; text-transform: uppercase; margin: 0 0 8px; padding-top: 8px; border-top: 3px solid var(--ink); }
-  .pa-pubs { display: flex; gap: 16px; overflow-x: auto; padding-bottom: 10px; scroll-snap-type: x proximity; }
-  .pa-pubs .pa { flex: 0 0 min(300px, 86%); margin: 0; scroll-snap-align: start; }
-  .pa-pubs:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
   .pa-slogan { font: italic .8rem var(--serif); margin-top: 8px !important; }
   .pal-ink { background: #16140f; color: #faf7f2; }
   .pal-bleu { background: #1c3a57; color: #f4f8fb; }
@@ -156,8 +148,8 @@ const autres = annonces.filter((a) => a.format !== 'encart');
 
 <script>
   const norm = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
-  const cartes = Array.from(document.querySelectorAll<HTMLElement>('#pa-pubs .pa, #pa-liste .pa'));
-  const sectionPubs = document.getElementById('pa-pubs-section')!;
+  const cartes = Array.from(document.querySelectorAll<HTMLElement>('.pa-colonnes .pa'));
+  const pubDef = document.getElementById('pub-def');
   const boutons = Array.from(document.querySelectorAll<HTMLButtonElement>('.pa-filtre'));
   const champ = document.getElementById('pa-recherche') as HTMLInputElement;
   const compteur = document.getElementById('pa-compteur')!;
@@ -172,7 +164,7 @@ const autres = annonces.filter((a) => a.format !== 'encart');
       c.hidden = !ok;
       if (ok) n++;
     }
-    sectionPubs.hidden = !cartes.some((c) => c.closest('#pa-pubs') && !c.hidden);
+    if (pubDef) pubDef.hidden = cat !== 'toutes' || !!q; // la pub du milieu n'a de sens que sur la liste complete
     compteur.textContent = n + (n > 1 ? ' annonces' : ' annonce');
     vide.hidden = n > 0;
   }

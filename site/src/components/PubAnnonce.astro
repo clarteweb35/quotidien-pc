@@ -1,38 +1,53 @@
 ---
-// Publicite fictive tiree des petites annonces (celles marquees "pub": true), choisie de facon deterministe selon l'article.
-import { annonces, annonceurs } from '../lib/annonces';
+// Publicite fictive tiree des petites annonces (marquees "pub": true). Le HTML contient une annonce par defaut (choisie selon l'article, pour les
+// lecteurs sans JavaScript); au chargement, le navigateur en tire une AUTRE au hasard parmi toutes.
+import { pubsCompactes } from '../lib/annonces';
 import { url } from '../lib/site';
 interface Props { seed: string }
 const { seed } = Astro.props;
-const pubs = annonces.filter((a) => a.pub && !a.reel);
 let h = 0;
 for (const c of seed) h = (h * 31 + c.charCodeAt(0)) >>> 0;
-const a = pubs.length ? pubs[h % pubs.length] : null;
-const ann = a?.annonceur ? annonceurs.get(a.annonceur) : undefined;
+const p = pubsCompactes.length ? pubsCompactes[h % pubsCompactes.length] : null;
+const donnees = { base: url(''), pubs: pubsCompactes };
 ---
-{a && (
+{p && (
   <aside class="pub" aria-label="Publicité fictive">
-    <p class="pub-label">Publicité fictive · <a href={url(`petites-annonces/#${a.id}`)}>Petites annonces</a></p>
+    <p class="pub-label">Publicité fictive · <a data-pub-lien href={url(`petites-annonces/#${p.id}`)}>Petites annonces</a></p>
     <div class="pub-corps">
-      {ann?.logo && <img class="pub-logo" src={url(`annonces/${ann.logo}`)} width="64" height="64" alt={`Logo de ${ann.nom}`} loading="lazy" />}
+      <img class="pub-logo" src={p.logo ? url(`annonces/${p.logo}`) : undefined} width="64" height="64" alt={p.marque ? `Logo de ${p.marque}` : ''} hidden={!p.logo} />
       <div>
-        {ann && <p class="pub-marque">{ann.nom}</p>}
-        <h3 class="pub-titre">{a.titre}</h3>
-        {a.accroche && <p class="pub-accroche">{a.accroche}</p>}
-        {a.prix && <p class="pub-prix">{a.prix}</p>}
-        <p class="pub-texte">{a.texte}</p>
-        {a.conditions && <p class="pub-conditions">{a.conditions}</p>}
-        <p class="pub-lien"><a href={url(`petites-annonces/#${a.id}`)}>Voir l'annonce →</a></p>
+        <p class="pub-marque" hidden={!p.marque}>{p.marque}</p>
+        <h3 class="pub-titre">{p.titre}</h3>
+        <p class="pub-accroche" hidden={!p.accroche}>{p.accroche}</p>
+        <p class="pub-prix" hidden={!p.prix}>{p.prix}</p>
+        <p class="pub-texte">{p.texte}</p>
+        <p class="pub-conditions" hidden={!p.conditions}>{p.conditions}</p>
+        <p class="pub-lien"><a data-pub-lien href={url(`petites-annonces/#${p.id}`)}>Voir l'annonce →</a></p>
       </div>
     </div>
+    <script type="application/json" id="pub-data" set:html={JSON.stringify(donnees)} />
   </aside>
 )}
+<script>
+  const brut = document.getElementById('pub-data')?.textContent;
+  const box = document.querySelector<HTMLElement>('.pub');
+  if (brut && box) {
+    const { base, pubs } = JSON.parse(brut) as { base: string; pubs: { id: string; marque: string; logo: string; titre: string; accroche: string; prix: string; texte: string; conditions: string }[] };
+    const p = pubs[Math.floor(Math.random() * pubs.length)];
+    const texte = (sel: string, v: string) => { const e = box.querySelector<HTMLElement>(sel); if (e) { e.textContent = v; e.hidden = !v; } };
+    texte('.pub-marque', p.marque); texte('.pub-titre', p.titre); texte('.pub-accroche', p.accroche); texte('.pub-prix', p.prix); texte('.pub-texte', p.texte); texte('.pub-conditions', p.conditions);
+    const logo = box.querySelector<HTMLImageElement>('.pub-logo');
+    if (logo) { logo.hidden = !p.logo; if (p.logo) { logo.src = base + 'annonces/' + p.logo; logo.alt = 'Logo de ' + p.marque; } }
+    box.querySelectorAll<HTMLAnchorElement>('a[data-pub-lien]').forEach((a) => { a.href = base + 'petites-annonces/#' + p.id; });
+  }
+</script>
 <style>
   .pub { margin: 18px 0 18px; padding: 10px 14px 12px; border: 1px solid var(--ink); border-top: 3px double var(--ink); background: var(--paper-2); font-family: var(--sans); }
   .pub-label { margin: 0 0 8px; font: 700 .64rem var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--ink-2); }
   .pub-label a { color: inherit; }
   .pub-corps { display: flex; gap: 12px; align-items: flex-start; }
   .pub-logo { flex: none; width: 64px; height: 64px; border-radius: 50%; border: 1px solid var(--rule); background: #fff; }
+  .pub-logo[hidden], .pub p[hidden] { display: none; }
   .pub-marque { margin: 0; font: 800 .7rem var(--sans); letter-spacing: .14em; text-transform: uppercase; }
   .pub-titre { margin: 2px 0 4px; font: 700 1.1rem/1.25 var(--serif); }
   .pub-accroche { margin: 0 0 4px; font: italic 700 .95rem var(--serif); }

@@ -24,3 +24,10 @@ export const annonces = data.annonces as Annonce[];
 
 /** Libelle de la categorie d'une annonce (badge). */
 export const nomCategorie = (slug: string) => categoriesAnnonces.find((c) => c.slug === slug)?.name ?? slug;
+
+/** Publicites fictives (annonces marquees "pub", hors vraies annonces), sous une forme compacte pour le tirage au sort a chaque chargement. */
+export interface PubCompacte { id: string; marque: string; logo: string; titre: string; accroche: string; prix: string; texte: string; conditions: string }
+export const pubsCompactes: PubCompacte[] = annonces.filter((a) => a.pub && !a.reel).map((a) => {
+  const ann = a.annonceur ? annonceurs.get(a.annonceur) : undefined;
+  return { id: a.id, marque: ann?.nom ?? '', logo: ann?.logo ?? '', titre: a.titre, accroche: a.accroche ?? '', prix: a.prix ?? '', texte: a.texte, conditions: a.conditions ?? '' };
+});
