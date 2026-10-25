@@ -71,8 +71,44 @@ export function fakeArticleFor(prompt, categories) {
  * @param {{script?:(req:{kind:'generate'|'judge', n:number, prompt:string})=>any}} opts
  * script peut retourner: un objet (reponse JSON), une chaine (texte brut), ou lever une erreur ({status}).
  */
+/** Annonces factices (simulation et tests): chaque annonce a un titre et des phrases differents, conformes aux controles du moteur. */
+export function fakeAnnoncesFor(prompt, schema) {
+  const n = Number(/Nombre d'annonces à écrire : (\d+)/.exec(prompt)?.[1] ?? 1);
+  const item = schema.properties.annonces.items.properties;
+  const cats = item.cat.enum;
+  const rencontres = !!item.profil;
+  const seed = parseInt(sha1(prompt, 8), 16);
+  const objets = ['une brouette', 'un tabouret', 'un aquarium', 'une machine à coudre', 'un vélo', 'une lampe de bureau', 'un trombone géant', 'un fauteuil roulant de bureau', 'un tapis', 'une cafetière', 'un classeur', 'un parasol'];
+  const metiers = ['archiviste', 'géomètre', 'sommelier', 'opticien', 'bibliothécaire', 'plombier', 'jardinier', 'comptable', 'brodeur', 'horloger', 'clarinettiste', 'facteur'];
+  const traits = ['discret', 'rêveur', 'méthodique', 'bavard', 'prudent', 'distrait', 'tendre', 'têtu'];
+  const phrase = (k) => SENTENCES[(seed + k * 7) % SENTENCES.length];
+  const annonces = Array.from({ length: n }, (_, i) => {
+    const mot = `zz${sha1(`${seed}-${i}`, 5)}`;
+    const cat = cats[i % cats.length];
+    if (rencontres) {
+      return {
+        cat,
+        profil: `Personne de ${30 + ((seed + i * 5) % 30)} ans, ${metiers[(seed + i * 5) % metiers.length]} ${traits[(seed + i * 3) % traits.length]} ${mot}`,
+        texte: `${phrase(i * 2)} ${phrase(i * 2 + 1)}`,
+        recherche: `Personne ${traits[(seed + i) % traits.length]}, ${metiers[(seed + i * 2) % metiers.length]} de préférence.`,
+        formule: 'Réponse appréciée sous quinzaine.',
+      };
+    }
+    return {
+      cat,
+      format: i % 2 ? 'court' : 'classique',
+      titre: `À céder : ${objets[(seed + i * 5) % objets.length]} ${mot}`,
+      prix: `${10 + i} €`,
+      texte: phrase(i * 3),
+      conditions: i % 2 ? '' : 'Ni repris ni échangé, sous aucun prétexte.',
+      annonceur: '',
+    };
+  });
+  return { annonces };
+}
+
 export function createFakeSdk({ categories, script, imageScript } = {}) {
-  const counters = { generate: 0, judge: 0, image: 0, image_judge: 0, total: 0 };
+  const counters = { generate: 0, judge: 0, image: 0, image_judge: 0, annonces: 0, total: 0 };
   return {
     counters,
     interactions: {
@@ -88,13 +124,14 @@ export function createFakeSdk({ categories, script, imageScript } = {}) {
     models: {
       async generateContent({ model, contents, config }) {
         const props = config.responseJsonSchema?.properties ?? {};
-        const kind = props.real_person_likeness ? 'image_judge' : props.humor ? 'judge' : 'generate';
+        const kind = props.real_person_likeness ? 'image_judge' : props.humor ? 'judge' : props.annonces ? 'annonces' : 'generate';
         counters[kind]++;
         counters.total++;
         let payload;
         const custom = script ? script({ kind, n: counters[kind], prompt: contents, model }) : undefined;
         if (custom !== undefined) payload = custom;
         else if (kind === 'image_judge') payload = { ok: true, real_person_likeness: false, text_or_logo: false, photorealistic_news_look: false, disturbing: false, problems: [] };
+        else if (kind === 'annonces') payload = fakeAnnoncesFor(contents, config.responseJsonSchema);
         else if (kind === 'judge') payload = { humor: 7, coherence: 8, risk: 1, problems: [], real_person_quote: false, defamation_risk: false };
         else payload = fakeArticleFor(contents, categories);
         const text = typeof payload === 'string' ? payload : JSON.stringify(payload);

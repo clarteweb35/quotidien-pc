@@ -14,7 +14,7 @@ Spécification fonctionnelle : [.ai/SPEC_FONCTIONNALITES.md](.ai/SPEC_FONCTIONNA
 - `data/` : état du moteur, quarantaine, coûts, bilans, journaux. **Écrit par le moteur**, jamais à la main (sauf `data/images-manuelles.md`).
 - `site/src/` : `pages/` (accueil, articles, rubriques, tags, rédaction, compteurs, plan du site, mentions légales, admin, flux RSS, sitemap), `components/`, `lib/`, `layouts/Base.astro` (en-tête, menu, pied de page), `styles/global.css`, `content/articles/*.md` (articles publiés).
 - `scripts/` : génération des visuels de marque, des portraits et des photos de bureaux (`make-*.mjs`, sources fournies en argument).
-- `.github/workflows/` : `editor.yml` (cron du moteur), `deploy.yml` (build et mise en ligne), `ci.yml` (tests), `social.yml`.
+- `.github/workflows/` : `editor.yml` (cron du moteur), `annonces.yml` (génération d'annonces à la demande), `deploy.yml` (build et mise en ligne), `ci.yml` (tests), `social.yml`.
 
 ## Commandes
 

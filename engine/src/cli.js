@@ -12,6 +12,7 @@ import { createFakeSdk, fakeFetcher } from './mock.js';
 import { zonedParts, hhmmToMinutes } from './util.js';
 import { listManualImages, renderManualImageList } from './refs.js';
 import { runSocial, activeNetworks } from './social.js';
+import { genererAnnonces, TYPES as TYPES_ANNONCES, MAX_PAR_LOT } from './annonces.js';
 import { loadExisting, publishArticle } from './publisher.js';
 import { validateArticle } from './validator.js';
 
@@ -121,6 +122,27 @@ async function main() {
       logger.info('social.start', { networks: activeNetworks(cfg, process.env), dryRun: flag('dry-run') });
       const r = await runSocial({ cfg, paths, logger, siteBase: `${siteUrl}${siteBaseP}`, dryRun: flag('dry-run') });
       console.log(`\nPartage: ${r.posted.length} publié(s), ${r.skipped.length} ignoré(s), ${r.failed.length} échec(s)`);
+      break;
+    }
+
+    case 'annonces': {
+      // Generation a la demande: node engine/src/cli.js annonces --type petites|rencontres [--count 8] [--dry-run] [--mock]
+      const type = opt('type');
+      if (!TYPES_ANNONCES[type]) { console.error('Usage: annonces --type petites|rencontres [--count N] [--dry-run] [--mock]'); process.exit(2); }
+      const mock = flag('mock');
+      if (!mock && !process.env.GEMINI_API_KEY) { console.error('GEMINI_API_KEY absente. Utilisez --mock pour tester sans API.'); process.exit(2); }
+      const ctx = buildContext({ mock, dryRun: flag('dry-run') });
+      const release = ctx.store.acquireLock();
+      try {
+        const count = Math.min(Math.max(Number(opt('count') ?? 8), 1), MAX_PAR_LOT);
+        const { ajoutees, refusees } = await genererAnnonces({ ctx, type, count });
+        ctx.store.saveUsage();
+        console.log(`${ajoutees.length} annonce(s) ${flag('dry-run') ? 'générée(s) à blanc' : 'ajoutée(s)'} (${TYPES_ANNONCES[type].etiquette}), ${refusees.length} refusée(s).`);
+        for (const a of ajoutees) console.log(`  + ${a.ref ?? a.id} ${a.titre ?? a.profil}`);
+        for (const r of refusees) console.log(`  - ${r.titre ?? '(réponse inexploitable)'}: ${r.motifs.join(', ')}`);
+      } finally {
+        release();
+      }
       break;
     }
 

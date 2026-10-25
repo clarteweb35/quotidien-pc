@@ -111,3 +111,11 @@
 {"ts":"2026-10-25T20:47:00.958Z","runId":"20261025204423-8cf2","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":1053,"outputTokens":95,"costUsd":0.000553}
 {"ts":"2026-10-25T20:47:00.958Z","runId":"20261025204423-8cf2","level":"info","event":"judge.result","slot":"2026-10-25#6","attempt":1,"humor":8,"coherence":9,"risk":1,"issues":[]}
 {"ts":"2026-10-25T20:47:00.960Z","runId":"20261025204423-8cf2","level":"info","event":"publish.ok","slot":"2026-10-25#6","id":"5ca6e3b8dc08","slug":"pourquoi-se-plaindre-des-pfas-quand-ils-rendent-nos","url":"/articles/pourquoi-se-plaindre-des-pfas-quand-ils-rendent-nos/","attempt":1,"dryRun":false}
+{"ts":"2026-10-25T22:08:28.008Z","runId":"20261025220827-d1a6","level":"info","event":"gemini.call","purpose":"annonces","model":"gemini-3.8-flash","inputTokens":1662,"outputTokens":420,"costUsd":0.005643}
+{"ts":"2026-10-25T22:08:28.036Z","runId":"20261025220827-d1a6","level":"info","event":"annonces.lot","type":"petites","demandees":4,"retenues":1,"refusees":3}
+{"ts":"2026-10-25T22:08:28.497Z","runId":"20261025220828-c545","level":"info","event":"gemini.call","purpose":"annonces","model":"gemini-3.8-flash","inputTokens":1854,"outputTokens":791,"costUsd":0.008714}
+{"ts":"2026-10-25T22:08:28.542Z","runId":"20261025220828-c545","level":"info","event":"annonces.lot","type":"rencontres","demandees":5,"retenues":0,"refusees":5}
+{"ts":"2026-10-25T22:08:49.345Z","runId":"20261025220849-7fe9","level":"info","event":"gemini.call","purpose":"annonces","model":"gemini-3.8-flash","inputTokens":1677,"outputTokens":589,"costUsd":0.006933}
+{"ts":"2026-10-25T22:08:49.387Z","runId":"20261025220849-7fe9","level":"info","event":"annonces.lot","type":"petites","demandees":6,"retenues":6,"refusees":0}
+{"ts":"2026-10-25T22:08:49.813Z","runId":"20261025220849-7790","level":"info","event":"gemini.call","purpose":"annonces","model":"gemini-3.8-flash","inputTokens":1868,"outputTokens":921,"costUsd":0.00971}
+{"ts":"2026-10-25T22:08:49.887Z","runId":"20261025220849-7790","level":"info","event":"annonces.lot","type":"rencontres","demandees":6,"retenues":6,"refusees":0}

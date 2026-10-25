@@ -1,0 +1,88 @@
+name: Nouvelles annonces
+
+# Génère à la demande un lot de petites annonces et/ou d'annonces de rencontres (Gemini), les ajoute à
+# config/annonces.json et config/rencontres.json, puis redéploie le site. Jamais déclenché automatiquement :
+# onglet Actions > « Nouvelles annonces » > Run workflow. Les annonces générées portent "auto": true.
+on:
+  workflow_dispatch:
+    inputs:
+      type:
+        description: 'Quoi générer'
+        type: choice
+        default: les-deux
+        options: [les-deux, petites, rencontres]
+      count:
+        description: 'Nombre d''annonces par type (24 au maximum)'
+        type: choice
+        default: '8'
+        options: ['4', '8', '12', '16', '24']
+
+# Même verrou que le moteur éditorial : jamais deux écritures simultanées dans le dépôt.
+concurrency:
+  group: editor
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  annonces:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    outputs:
+      ajoute: ${{ steps.commit.outputs.ajoute }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Vérifier la configuration
+        run: node engine/src/cli.js check-config
+
+      - name: Générer les annonces
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY_QPC || secrets.GEMINI_API_KEY }}
+          TYPE: ${{ inputs.type }}
+          COUNT: ${{ inputs.count }}
+        run: |
+          if [ "$TYPE" = "petites" ] || [ "$TYPE" = "les-deux" ]; then node engine/src/cli.js annonces --type petites --count "$COUNT"; fi
+          if [ "$TYPE" = "rencontres" ] || [ "$TYPE" = "les-deux" ]; then node engine/src/cli.js annonces --type rencontres --count "$COUNT"; fi
+
+      - name: Enregistrer les résultats (commit)
+        id: commit
+        if: ${{ !cancelled() }}
+        run: |
+          git config user.name "quotidien-pc-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A data config/annonces.json config/rencontres.json
+          if git diff --cached --quiet; then
+            echo "ajoute=false" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          if git diff --cached --name-only -- config/annonces.json config/rencontres.json | grep -q .; then
+            echo "ajoute=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ajoute=false" >> "$GITHUB_OUTPUT"
+          fi
+          git commit -m "annonces: lot genere $(date -u +%Y-%m-%dT%H:%MZ)"
+          for i in 1 2 3; do
+            if git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}"; then exit 0; fi
+            git rebase --abort 2>/dev/null || true
+            sleep $((i * 5))
+          done
+          git push origin "HEAD:refs/heads/annonces-recovery-${GITHUB_RUN_ID}" || true
+          echo "Échec de l'enregistrement; travail sauvegardé sur la branche annonces-recovery-${GITHUB_RUN_ID}" >&2
+          exit 1
+
+  deploy:
+    needs: annonces
+    if: ${{ !cancelled() && needs.annonces.outputs.ajoute == 'true' }}
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/deploy.yml
+    secrets: inherit
