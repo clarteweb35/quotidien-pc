@@ -78,8 +78,12 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.15; }
 .prose { max-width: 720px; margin: 0 auto; }
 .empty { text-align: center; padding: 60px 0; color: var(--ink-2); }
 
-footer { border-top: 3px double var(--ink); padding: 24px 0 40px; font: .85rem/1.6 var(--sans); color: var(--ink-2); }
+main { padding-bottom: 36px; }
+footer { border-top: 3px double var(--ink); padding: 14px 0 18px; font: .85rem/1.6 var(--sans); color: var(--ink-2); }
 footer .cols { display: flex; flex-wrap: wrap; gap: 16px 40px; justify-content: space-between; }
+footer .brand { display: flex; align-items: center; gap: 16px; }
+footer .brand p { margin: 0; font-size: .78rem; line-height: 1.45; padding-left: 16px; border-left: 1px solid var(--rule); }
+footer .cols { align-items: center; }
 footer ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 16px; flex-wrap: wrap; }
 
 @media (max-width: 860px) {
@@ -157,3 +161,5 @@ footer ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 16px; f
 .recrute { margin-top: 28px; padding: 16px 18px; border: 2px solid var(--ink); background: var(--paper-2); }
 .recrute h2 { margin-top: 0; }
 .recrute p:last-child { margin-bottom: 0; }
+.avatar-sm { width: 40px; height: 40px; vertical-align: middle; margin-right: 8px; display: inline-block; }
+.fake-mail { text-decoration: underline dotted; text-underline-offset: 3px; }

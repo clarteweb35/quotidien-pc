@@ -4,7 +4,7 @@ import Base from '../../layouts/Base.astro';
 import { allArticles, category, formatDateTime, readingMinutes, satireNotice, siteName, url, manualImageCredit } from '../../lib/site';
 import { illustration } from '../../lib/manual';
 import { refOf } from '../../lib/ref';
-import { journalist, deskLabel, authorSlug } from '../../lib/authors';
+import { journalist, deskLabel, authorSlug, portrait } from '../../lib/authors';
 import Share from '../../components/Share.astro';
 
 export async function getStaticPaths() {
@@ -18,6 +18,7 @@ const { Content } = await render(article);
 const img = await illustration(article, 1280, manualImageCredit);
 const ref = refOf(d);
 const who = journalist(d.author);
+const photo = who ? portrait(who.name) : null;
 const minutes = readingMinutes(article.body);
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
 const jsonLd = {
@@ -41,6 +42,7 @@ const jsonLd = {
     <h1>{d.title}</h1>
     <p class="chapo">{d.chapo}</p>
     <p class="byline">
+      {photo && <img class="avatar avatar-sm" src={url(photo)} width="40" height="40" alt={`Portrait fictif de ${who!.name} (image générée par IA)`} />}
       {who ? <>Par <a href={url(`redaction/#${authorSlug(who.name)}`)}>{who.name}</a> · {deskLabel(d.category)}</> : <>Par la rédaction</>} · Lecture : {minutes} min
     </p>
     <div class="meta">

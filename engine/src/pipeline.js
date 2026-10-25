@@ -1,7 +1,7 @@
 import path from 'node:path';
 import { zonedParts, sha1, writeJson, round, sleep } from './util.js';
 import { collect } from './collector.js';
-import { pickNewsTopic, pickEvergreen } from './topics.js';
+import { pickNewsTopic, pickEvergreen, nextCategory } from './topics.js';
 import { generateArticle, judgeArticle, judgeIssues, pickAngle } from './editor.js';
 import { validateArticle, normalizeArticle, feedbackFor } from './validator.js';
 import { publishArticle, loadExisting } from './publisher.js';
@@ -116,21 +116,28 @@ async function processSlot(ctx, slot, items) {
   }
 
   // --- choix du sujet ---
+  // Rotation des rubriques: on sert d'abord la rubrique la moins publiee (actu de ses flux, sinon theme intemporel),
+  // et seulement a defaut n'importe quel sujet.
+  const target = cfg.engine.topics.rotateCategories ? nextCategory({ existing, cfg, now }) : null;
   let topic = null;
-  const { topic: news, rejected } = pickNewsTopic({
-    items,
-    store,
-    publishedTitles: existing.map((e) => e.title),
-    cfg,
-    now,
-    categoryCountsToday,
-  });
-  logger.info('topic.selection', { slot: slot.key, candidates: items.length, rejected: rejected.length, chosen: news?.title ?? null, score: news?.score });
-  if (news) topic = { ...news, kind: 'news' };
-  else if (cfg.engine.topics.evergreenWhenNoTopic) {
-    topic = pickEvergreen({ store, cfg, now, categoryCountsToday, rng: ctx.rng });
-    if (topic) logger.warn('topic.evergreen_fallback', { slot: slot.key, theme: topic.title });
+  for (const only of target ? [target, null] : [null]) {
+    const { topic: news, rejected } = pickNewsTopic({
+      items,
+      store,
+      publishedTitles: existing.map((e) => e.title),
+      cfg,
+      now,
+      categoryCountsToday,
+      onlyCategory: only,
+    });
+    logger.info('topic.selection', { slot: slot.key, target: only, candidates: items.length, rejected: rejected.length, chosen: news?.title ?? null, score: news?.score });
+    if (news) { topic = { ...news, kind: 'news' }; break; }
+    if (cfg.engine.topics.evergreenWhenNoTopic) {
+      topic = pickEvergreen({ store, cfg, now, categoryCountsToday, rng: ctx.rng, onlyCategory: only });
+      if (topic) { logger.warn('topic.evergreen_fallback', { slot: slot.key, theme: topic.title, target: only }); break; }
+    }
   }
+  if (topic && target && topic.category === target) topic.forcedCategory = target;
   if (!topic) return fail(ctx, slot, 'aucun_sujet', [{ code: 'aucun_sujet', msg: 'Aucun sujet disponible' }]);
   store.markTopic(topic.id, { title: topic.title, url: topic.url, category: topic.category, seenAt: now.toISOString(), status: 'in_progress' });
 
@@ -162,6 +169,10 @@ async function processSlot(ctx, slot, items) {
     }
 
     article = normalizeArticle(article, cfg);
+    if (topic.forcedCategory && article.category !== topic.forcedCategory) {
+      logger.warn('category.forced', { slot: slot.key, proposed: article.category, used: topic.forcedCategory });
+      article.category = topic.forcedCategory;
+    }
     last = article;
     const det = validateArticle({ article, topic, cfg, existing });
     if (!det.ok) {

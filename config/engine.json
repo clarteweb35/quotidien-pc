@@ -46,7 +46,9 @@
     "minRelevanceScore": 3,
     "dedupSimilarityThreshold": 0.55,
     "topicMemoryDays": 14,
-    "evergreenWhenNoTopic": true
+    "evergreenWhenNoTopic": true,
+    "rotateCategories": true,
+    "rotationWindowHours": 36
   },
   "validation": {
     "titleMinChars": 20,

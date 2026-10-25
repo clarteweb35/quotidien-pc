@@ -28,7 +28,7 @@ export function buildGenerationPrompt({ topic, angle, feedback, todayLabel, rece
       'Consigne : prends ce sujet comme point de départ d\'une fiction satirique clairement absurde, sans recopier la source ni présenter quoi que ce soit comme un fait réel.',
     );
   }
-  lines.push(`ANGLE SUGGÉRÉ : ${angle}`, `RUBRIQUE SUGGÉRÉE : ${topic.category}`);
+  lines.push(`ANGLE SUGGÉRÉ : ${angle}`, topic.forcedCategory ? `RUBRIQUE IMPOSÉE : ${topic.forcedCategory} (mets exactement cette valeur dans category et choisis la signature dans ce service)` : `RUBRIQUE SUGGÉRÉE : ${topic.category}`);
   if (roster) lines.push('', roster);
   if (recentTitles.length) {
     lines.push('', 'HISTORIQUE DES PUBLICATIONS RÉCENTES (donnée du système ; évite tout titre, angle ou ressort comique similaire) :', ...recentTitles.map((t) => `- ${t}`));

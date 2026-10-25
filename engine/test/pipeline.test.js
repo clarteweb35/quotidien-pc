@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { makeCtx, cleanup, fakeArticleFor } from './helpers.js';
 import { runCycle } from '../src/pipeline.js';
+import { loadExisting } from '../src/publisher.js';
 import { dueSlots } from '../src/scheduler.js';
 import { parseArticleFile } from '../src/publisher.js';
 
@@ -302,4 +303,30 @@ test('purge: journaux et bilans trop anciens supprimes, recents conserves', asyn
   assert.equal(has('logs', '2026-10-20.jsonl'), true);
   assert.equal(has('reports', '2025-01-01.json'), false);
   assert.equal(has('reports', '2026-10-20.json'), true);
+});
+
+test('rotation: chaque creneau sert une rubrique differente, la moins publiee d abord', async () => {
+  const ctx = makeCtx({ at: '2026-10-24T09:05:00Z', mutateCfg: (c) => { c.engine.topics.rotateCategories = true; c.schedule.maxPublicationsPerRun = 10; } });
+  await runCycle(ctx);
+  const cats = loadExisting(ctx.paths.content, { now: ctx.now() }).map((a) => a.category);
+  assert.ok(cats.length >= 2);
+  assert.equal(new Set(cats).size, cats.length, `rubriques distinctes: ${cats.join(', ')}`);
+  cleanup(ctx);
+});
+
+test('nextCategory: la rubrique la moins publiee sur la fenetre, a egalite la plus ancienne', async () => {
+  const { nextCategory } = await import('../src/topics.js');
+  const ctx = makeCtx();
+  const now = new Date('2026-10-25T10:00:00Z');
+  const art = (category, at) => ({ category, publishedAt: at });
+  const all = ctx.cfg.categories.map((c) => c.slug);
+  // Toutes servies une fois sauf 'monde' => monde.
+  const existing = all.filter((s) => s !== 'monde').map((s, i) => art(s, `2026-10-25T0${i}:00:00Z`));
+  assert.equal(nextCategory({ existing, cfg: ctx.cfg, now }), 'monde');
+  // Toutes servies une fois: la plus anciennement servie passe en premier.
+  const once = all.map((s, i) => art(s, `2026-10-25T0${i}:00:00Z`));
+  assert.equal(nextCategory({ existing: once, cfg: ctx.cfg, now }), all[0]);
+  // Un article hors fenetre (plus de 36 h) ne compte pas.
+  assert.equal(nextCategory({ existing: [art(all[0], '2026-10-20T00:00:00Z')], cfg: ctx.cfg, now }), all[1]);
+  cleanup(ctx);
 });

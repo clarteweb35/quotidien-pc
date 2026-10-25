@@ -15,6 +15,7 @@ export function makeCtx({ at = '2026-10-24T09:05:00Z', script, imageScript, muta
   const cfg = loadConfig(paths, {});
   cfg.engine.gemini.minDelayBetweenCallsMs = 0;
   cfg.engine.gemini.retryBaseDelayMs = 1;
+  cfg.engine.topics.rotateCategories = false; // les tests historiques supposent la categorie du flux; la rotation a ses propres tests
   cfg.engine.images.enabled = true; // la config livree les desactive (payantes): les tests les activent explicitement
   mutateCfg?.(cfg);
   let t = Date.parse(at);
