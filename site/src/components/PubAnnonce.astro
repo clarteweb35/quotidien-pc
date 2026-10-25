@@ -1,0 +1,44 @@
+---
+// Publicite fictive tiree des petites annonces (celles marquees "pub": true), choisie de facon deterministe selon l'article.
+import { annonces, annonceurs } from '../lib/annonces';
+import { url } from '../lib/site';
+interface Props { seed: string }
+const { seed } = Astro.props;
+const pubs = annonces.filter((a) => a.pub && !a.reel);
+let h = 0;
+for (const c of seed) h = (h * 31 + c.charCodeAt(0)) >>> 0;
+const a = pubs.length ? pubs[h % pubs.length] : null;
+const ann = a?.annonceur ? annonceurs.get(a.annonceur) : undefined;
+---
+{a && (
+  <aside class="pub" aria-label="Publicité fictive">
+    <p class="pub-label">Publicité fictive · <a href={url(`petites-annonces/#${a.id}`)}>Petites annonces</a></p>
+    <div class="pub-corps">
+      {ann?.logo && <img class="pub-logo" src={url(`annonces/${ann.logo}`)} width="64" height="64" alt={`Logo de ${ann.nom}`} loading="lazy" />}
+      <div>
+        {ann && <p class="pub-marque">{ann.nom}</p>}
+        <h3 class="pub-titre">{a.titre}</h3>
+        {a.accroche && <p class="pub-accroche">{a.accroche}</p>}
+        {a.prix && <p class="pub-prix">{a.prix}</p>}
+        <p class="pub-texte">{a.texte}</p>
+        {a.conditions && <p class="pub-conditions">{a.conditions}</p>}
+        <p class="pub-lien"><a href={url(`petites-annonces/#${a.id}`)}>Voir l'annonce →</a></p>
+      </div>
+    </div>
+  </aside>
+)}
+<style>
+  .pub { margin: 30px 0 6px; padding: 10px 14px 12px; border: 1px solid var(--ink); border-top: 3px double var(--ink); background: var(--paper-2); font-family: var(--sans); }
+  .pub-label { margin: 0 0 8px; font: 700 .64rem var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--ink-2); }
+  .pub-label a { color: inherit; }
+  .pub-corps { display: flex; gap: 12px; align-items: flex-start; }
+  .pub-logo { flex: none; width: 64px; height: 64px; border-radius: 50%; border: 1px solid var(--rule); background: #fff; }
+  .pub-marque { margin: 0; font: 800 .7rem var(--sans); letter-spacing: .14em; text-transform: uppercase; }
+  .pub-titre { margin: 2px 0 4px; font: 700 1.1rem/1.25 var(--serif); }
+  .pub-accroche { margin: 0 0 4px; font: italic 700 .95rem var(--serif); }
+  .pub-prix { margin: 0 0 4px; font-weight: 700; font-size: .9rem; }
+  .pub-texte { margin: 0; font: .92rem/1.5 var(--serif); }
+  .pub-conditions { margin: 4px 0 0; font-size: .68rem; color: var(--ink-2); line-height: 1.4; }
+  .pub-lien { margin: 6px 0 0; font-size: .8rem; }
+  .pub-lien a { color: var(--link); font-weight: 700; }
+</style>

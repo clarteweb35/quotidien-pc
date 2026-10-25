@@ -68,7 +68,8 @@ test('petites annonces: page, menu, donnees coherentes et mention obligatoire', 
   const html = page('petites-annonces');
   assert.ok(html.includes('Toutes les annonces') && html.includes('Déposer une annonce'));
   assert.ok(html.includes('coïncidence presque certaine'), 'mention fictive');
-  assert.ok(html.includes('Madame de Valmorin') && html.includes('href="/rencontres/"'), 'partenaire et lien vers les rencontres');
+  assert.ok(html.includes('sélectionnées par Madame de Valmorin') && html.includes('href="/rencontres/"'), 'manchette de renvoi vers les rencontres');
+  assert.ok(!html.includes('Partenaire officiel'), 'le bandeau partenaire est sur la page Rencontres, pas ici');
   assert.ok(fs.existsSync(path.join(ROOT, 'site/public/annonces', data.partenaire.image)), 'portrait du partenaire');
   assert.equal((html.match(/class="pa pa-/g) || []).length, data.annonces.length);
   // Les vraies annonces sont toujours etiquetees, avec lien https cliquable et texte visible.
@@ -98,8 +99,34 @@ test('rencontres: references uniques, photos existantes, page et menu', () => {
   const html = page('rencontres');
   assert.equal((html.match(/class="rc-ref/g) || []).length, data.annonces.length);
   assert.ok(html.includes('RÉF. 001') && html.includes('fictives et satiriques'));
+  assert.ok(html.includes('Partenaire officiel') && html.includes('Madame de Valmorin'), 'bandeau partenaire sur la page Rencontres');
   assert.ok(!/href="(mailto|tel):/.test(html.slice(html.indexOf('rc-sommaire'), html.indexOf('rc-mention'))), 'aucun lien vers des coordonnees');
   assert.ok(page('.').includes('href="/rencontres/"'), 'lien dans le menu');
+});
+
+test('accueil: La Manchette de la Manchette; articles: publicite fictive tiree des petites annonces', () => {
+  const home = page('.');
+  assert.ok(home.includes('La Manchette de la Manchette') && home.includes('href="/rubrique/editos/"'), 'manchette de l\'edito du jour');
+  const data = JSON.parse(fs.readFileSync(path.join(ROOT, 'config/annonces.json'), 'utf8'));
+  assert.ok(data.annonces.filter((a) => a.pub && !a.reel).length >= 5, 'au moins 5 annonces utilisables comme publicites');
+  const slug = fs.readdirSync(path.join(ROOT, 'site/src/content/articles')).find((f) => f.endsWith('.md'));
+  const fm = fs.readFileSync(path.join(ROOT, 'site/src/content/articles', slug), 'utf8');
+  const s = /^slug: "([^"]+)"/m.exec(fm)[1];
+  const art = page(`articles/${s}`);
+  assert.ok(art.includes('Publicité fictive') && art.includes('href="/petites-annonces/#pa-'), 'publicite fictive dans l\'article');
+});
+
+test('contenu: jamais plus d\'un edito par jour (heure de Paris)', () => {
+  const dir = path.join(ROOT, 'site/src/content/articles');
+  const parJour = {};
+  for (const f of fs.readdirSync(dir).filter((x) => x.endsWith('.md'))) {
+    const t = fs.readFileSync(path.join(dir, f), 'utf8');
+    if (!/^category: "editos"/m.test(t)) continue;
+    const at = /^publishedAt: "([^"]+)"/m.exec(t)[1];
+    const jour = new Intl.DateTimeFormat('fr-CA', { timeZone: 'Europe/Paris' }).format(new Date(at));
+    parJour[jour] = (parJour[jour] ?? 0) + 1;
+  }
+  for (const [jour, n] of Object.entries(parJour)) assert.ok(n <= 1, `${n} editos le ${jour}`);
 });
 
 test.after(() => fs.rmSync(out, { recursive: true, force: true }));

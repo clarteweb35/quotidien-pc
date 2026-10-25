@@ -346,3 +346,21 @@ test('editos: la rubrique est servie, signee par le redacteur en chef, avec le f
   assert.ok(prompts.some((p) => p.includes('FORMAT ÉDITO')));
   cleanup(ctx);
 });
+
+test('un seul edito par jour: la rubrique saturee n\'est ni ciblee ni tiree au sort', async () => {
+  const { nextCategory, pickEvergreen, categorieSaturee } = await import('../src/topics.js');
+  const ctx = makeCtx();
+  const now = new Date('2026-10-25T10:00:00Z');
+  assert.equal(ctx.cfg.engine.topics.maxPerCategoryPerDay.editos, 1);
+  assert.ok(categorieSaturee(ctx.cfg, 'editos', { editos: 1 }));
+  assert.ok(!categorieSaturee(ctx.cfg, 'editos', {}));
+  // editos serait la rubrique la moins publiee (une fois chaque autre), mais elle est saturee aujourd'hui
+  const autres = ctx.cfg.categories.filter((c) => c.slug !== 'editos').map((c, i) => ({ category: c.slug, publishedAt: `2026-10-25T0${i}:00:00Z` }));
+  assert.equal(nextCategory({ existing: autres, cfg: ctx.cfg, now }), 'editos');
+  assert.notEqual(nextCategory({ existing: autres, cfg: ctx.cfg, now, countsToday: { editos: 1 } }), 'editos');
+  for (let i = 0; i < 300; i++) {
+    const t = pickEvergreen({ store: ctx.store, cfg: ctx.cfg, now, categoryCountsToday: { editos: 1 }, rng: Math.random });
+    assert.notEqual(t?.category, 'editos');
+  }
+  cleanup(ctx);
+});

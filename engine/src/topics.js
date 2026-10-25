@@ -42,6 +42,12 @@ export function scoreItem(item, { cfg, now, categoryCountsToday = {} }) {
  * Choisit le meilleur sujet d'actualite non traite, non sensible et non redondant.
  * Retourne { topic, rejected } ; topic = null si rien de convenable.
  */
+/** Vrai si la rubrique a atteint son plafond quotidien (ex. un seul edito par jour: topics.maxPerCategoryPerDay). */
+export function categorieSaturee(cfg, slug, countsToday = {}) {
+  const max = cfg.engine.topics.maxPerCategoryPerDay?.[slug];
+  return max !== undefined && (countsToday[slug] ?? 0) >= max;
+}
+
 export function pickNewsTopic({ items, store, publishedTitles, cfg, now, categoryCountsToday, onlyCategory = null }) {
   const t = cfg.engine.topics;
   const compiled = compileKeywords(cfg.safety.sensitiveTopicKeywords);
@@ -55,6 +61,7 @@ export function pickNewsTopic({ items, store, publishedTitles, cfg, now, categor
   const allowed = new Set([onlyCategory, ...(cfg.categories.find((c) => c.slug === onlyCategory)?.sourceCategories ?? [])]);
   for (const it of items) {
     if (onlyCategory && !allowed.has(it.category)) continue;
+    if (categorieSaturee(cfg, it.category, categoryCountsToday)) continue;
     const known = store.topic(it.id);
     if (known?.usedAt || known?.status === 'excluded') continue;
     const sensitive = findSensitive(`${it.title} ${it.summary}`, compiled);
@@ -84,6 +91,7 @@ export function pickEvergreen({ store, cfg, now, categoryCountsToday = {}, rng =
   const memoryMs = cfg.engine.topics.topicMemoryDays * 2 * 86400000;
   const available = cfg.evergreen.filter((e) => {
     if (onlyCategory && e.category !== onlyCategory) return false;
+    if (categorieSaturee(cfg, e.category, categoryCountsToday)) return false;
     const used = store.topic(e.id)?.usedAt;
     return !used || now.getTime() - Date.parse(used) > memoryMs;
   });
@@ -98,10 +106,12 @@ export function pickEvergreen({ store, cfg, now, categoryCountsToday = {}, rng =
  * Rubrique a servir au prochain creneau: celle qui a le moins d'articles sur la fenetre glissante (rotationWindowHours),
  * a egalite la plus anciennement servie, puis l'ordre du fichier des rubriques. Garantit que toutes les rubriques existent.
  */
-export function nextCategory({ existing, cfg, now }) {
+export function nextCategory({ existing, cfg, now, countsToday = {} }) {
   const windowMs = (cfg.engine.topics.rotationWindowHours ?? 36) * 3600000;
   const recent = existing.filter((e) => now.getTime() - Date.parse(e.publishedAt) < windowMs);
-  const stats = cfg.categories.map((c, order) => {
+  const ouvertes = cfg.categories.filter((c) => !categorieSaturee(cfg, c.slug, countsToday));
+  const stats = (ouvertes.length ? ouvertes : cfg.categories).map((c) => {
+    const order = cfg.categories.indexOf(c);
     const mine = existing.filter((e) => e.category === c.slug);
     return {
       slug: c.slug,

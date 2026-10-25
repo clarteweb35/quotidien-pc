@@ -6,6 +6,7 @@ import { illustration } from '../../lib/manual';
 import { refOf } from '../../lib/ref';
 import { journalist, deskLabel, authorSlug, portrait } from '../../lib/authors';
 import Share from '../../components/Share.astro';
+import PubAnnonce from '../../components/PubAnnonce.astro';
 
 export async function getStaticPaths() {
   const articles = await allArticles();
@@ -62,6 +63,7 @@ const jsonLd = {
     <div class="body"><Content /></div>
     {isEdito && who && <p class="edito-signature">— {who.name}, rédacteur en chef</p>}
     <Share title={d.title} url={canonicalUrl} id="share-bottom" />
+    <PubAnnonce seed={d.slug} />
     {d.tags.length > 0 && (
       <ul class="tags" aria-label="Mots-clés">
         {d.tags.map((t) => <li><a href={url(`tag/${encodeURIComponent(t)}/`)}>#{t}</a></li>)}

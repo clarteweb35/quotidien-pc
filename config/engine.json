@@ -48,7 +48,8 @@
     "topicMemoryDays": 14,
     "evergreenWhenNoTopic": true,
     "rotateCategories": true,
-    "rotationWindowHours": 36
+    "rotationWindowHours": 36,
+    "maxPerCategoryPerDay": { "editos": 1 }
   },
   "validation": {
     "titleMinChars": 20,

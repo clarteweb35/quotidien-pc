@@ -1,7 +1,7 @@
 import path from 'node:path';
 import { zonedParts, sha1, writeJson, round, sleep } from './util.js';
 import { collect } from './collector.js';
-import { pickNewsTopic, pickEvergreen, nextCategory } from './topics.js';
+import { pickNewsTopic, pickEvergreen, nextCategory, categorieSaturee } from './topics.js';
 import { generateArticle, judgeArticle, judgeIssues, pickAngle } from './editor.js';
 import { validateArticle, normalizeArticle, feedbackFor } from './validator.js';
 import { publishArticle, loadExisting } from './publisher.js';
@@ -118,7 +118,7 @@ async function processSlot(ctx, slot, items) {
   // --- choix du sujet ---
   // Rotation des rubriques: on sert d'abord la rubrique la moins publiee (actu de ses flux, sinon theme intemporel),
   // et seulement a defaut n'importe quel sujet.
-  const target = cfg.engine.topics.rotateCategories ? nextCategory({ existing, cfg, now }) : null;
+  const target = cfg.engine.topics.rotateCategories ? nextCategory({ existing, cfg, now, countsToday: categoryCountsToday }) : null;
   let topic = null;
   for (const only of target ? [target, null] : [null]) {
     const { topic: news, rejected } = pickNewsTopic({
@@ -169,6 +169,11 @@ async function processSlot(ctx, slot, items) {
     }
 
     article = normalizeArticle(article, cfg);
+    // Plafond quotidien (un seul edito par jour): le modele ne peut pas choisir de lui-meme une rubrique saturee.
+    if (!topic.forcedCategory && categorieSaturee(cfg, article.category, categoryCountsToday) && !categorieSaturee(cfg, topic.category, categoryCountsToday)) {
+      logger.warn('category.capped', { slot: slot.key, proposed: article.category, used: topic.category });
+      article.category = topic.category;
+    }
     if (topic.forcedCategory && article.category !== topic.forcedCategory) {
       logger.warn('category.forced', { slot: slot.key, proposed: article.category, used: topic.forcedCategory });
       article.category = topic.forcedCategory;

@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro';
 import { page, rencontres, parCategorie, refTexte, ancreRef, photoExistante } from '../lib/rencontres';
 import { url } from '../lib/site';
+import { partenaire } from '../lib/annonces';
 ---
 <Base title={page.titreSeo} description={page.descriptionSeo} current="rencontres">
   <div class="page-head">
@@ -10,6 +11,23 @@ import { url } from '../lib/site';
     <p class="rc-intro">{page.intro}</p>
     <p class="meta">{page.chapeau}</p>
   </div>
+
+  {partenaire && (
+    <aside class="pa-partenaire" aria-labelledby="pa-partenaire-titre">
+      <img class="pa-partenaire-photo" src={url(`annonces/${partenaire.image}`)} width="160" height="200" alt={partenaire.imageAlt} loading="lazy" />
+      <div class="pa-partenaire-corps">
+        <p class="pa-partenaire-mention">{partenaire.mention}</p>
+        <h2 id="pa-partenaire-titre">{partenaire.nom}</h2>
+        <p class="pa-partenaire-slogan">{partenaire.slogan}</p>
+        <p>{partenaire.texte}</p>
+        <dl>
+          {partenaire.details.map((d) => <><dt>{d.label} :</dt><dd>{d.texte}</dd></>)}
+        </dl>
+        <blockquote><p>« {partenaire.citation} »</p><footer>— {partenaire.auteur}</footer></blockquote>
+        <p class="pa-partenaire-lien"><a href={url(partenaire.lien)}>{partenaire.lienTexte} →</a></p>
+      </div>
+    </aside>
+  )}
 
   <nav class="rc-sommaire" aria-label="Sections de la rubrique">
     <ul>
@@ -45,6 +63,25 @@ import { url } from '../lib/site';
 </Base>
 
 <style>
+  /* Partenaire de la rubrique: bandeau pleine largeur, sur fond sombre comme un encart de couverture */
+  .pa-partenaire { display: grid; grid-template-columns: 160px 1fr; gap: 0 22px; margin: 22px 0 6px; padding: 18px 20px; background: #16140f; color: #faf7f2; border: 3px double #c89658; }
+  .pa-partenaire-photo { width: 160px; height: 200px; object-fit: cover; object-position: 50% 12%; border: 2px solid #faf7f2; }
+  .pa-partenaire-mention { margin: 0 0 4px; font: 800 .66rem var(--sans); letter-spacing: .14em; text-transform: uppercase; color: #e8c58f; }
+  .pa-partenaire h2 { font: 700 1.55rem/1.2 var(--serif); margin: 0 0 4px; }
+  .pa-partenaire-slogan { margin: 0 0 10px; font: italic 1.02rem var(--serif); color: #e8c58f; }
+  .pa-partenaire-corps p { margin: 0 0 10px; font-size: .96rem; line-height: 1.5; }
+  .pa-partenaire dl { margin: 0 0 10px; font-size: .92rem; line-height: 1.5; }
+  .pa-partenaire dt { font: 800 .7rem var(--sans); letter-spacing: .08em; text-transform: uppercase; color: #e8c58f; margin-top: 6px; }
+  .pa-partenaire dd { margin: 0; }
+  .pa-partenaire blockquote { margin: 12px 0 8px; padding-left: 12px; border-left: 3px solid #c89658; font: italic 1.02rem/1.45 var(--serif); }
+  .pa-partenaire blockquote p { margin: 0 0 2px; }
+  .pa-partenaire blockquote footer { font: .78rem var(--sans); font-style: normal; color: #e8c58f; }
+  .pa-partenaire-lien { margin: 8px 0 0 !important; }
+  .pa-partenaire-lien a { display: inline-block; padding: 6px 12px; border: 2px solid #faf7f2; color: #faf7f2; font: 700 .85rem var(--sans); text-decoration: none; }
+  .pa-partenaire-lien a:hover, .pa-partenaire-lien a:focus-visible { background: #faf7f2; color: #16140f; }
+  @media (max-width: 640px) { .pa-partenaire { grid-template-columns: 1fr; } .pa-partenaire-photo { width: 120px; height: 150px; margin-bottom: 12px; } }
+  .pa-image-portrait { width: 84px; height: 105px; mix-blend-mode: normal; object-fit: cover; border: 1px solid var(--ink); }
+  .pa-logo-mini { float: left; width: 40px; height: 40px; margin: 0 8px 2px 0; border-radius: 50%; border: 1px solid var(--rule); background: #fff; }
   .rc-intro { font: italic 1.2rem/1.45 var(--serif); margin: 4px 0 8px; max-width: 46rem; }
   .rc-sommaire { margin: 18px 0 8px; padding: 10px 14px; border-top: 3px double var(--ink); border-bottom: 1px solid var(--rule); font-family: var(--sans); }
   .rc-sommaire ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: .88rem; }

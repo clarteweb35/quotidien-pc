@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import Card from '../components/Card.astro';
 import Marches from '../components/Marches.astro';
 import Gimmick from '../components/Gimmick.astro';
+import ManchetteEdito from '../components/ManchetteEdito.astro';
 import { allArticles, url, siteName, manualImageCredit } from '../lib/site';
 import { illustration } from '../lib/manual';
 
@@ -43,6 +44,7 @@ const siteLd = {
         </div>
       )}
       <Marches reverse limit={6} />
+      <ManchetteEdito />
       <Card article={lead} lead />
       <Gimmick slug="monde" pill limit={6} />
       {latest.length > 0 && (

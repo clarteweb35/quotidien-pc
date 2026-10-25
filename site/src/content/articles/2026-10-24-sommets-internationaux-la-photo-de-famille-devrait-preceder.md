@@ -1,14 +1,14 @@
 ---
 id: "6caf25b90a2b"
-ref: "261025-X5"
+ref: "261024-X4"
 author: "Jean-Eudes de la Manchette"
 title: "Sommets internationaux : la photo de famille devrait précéder la réunion"
 chapo: "À la fin de chaque sommet, la même rangée de sourires alignés sur trois étages. Notre rédacteur en chef n'a rien contre la photographie, mais tout contre sa place dans l'emploi du temps, et il le dit avec fermeté."
 description: "Édito satirique : pourquoi la photo de famille des sommets internationaux devrait être prise avant la réunion. Un avis ferme, mal informé et protocolaire."
 category: "editos"
 tags: ["édito","sommets","diplomatie","protocole","opinion"]
-publishedAt: "2026-10-25T22:05:06.083Z"
-slot: "2026-10-25#x5"
+publishedAt: "2026-10-24T07:10:00.000Z"
+slot: "2026-10-24#x4"
 kind: "evergreen"
 satire: true
 sources: []
