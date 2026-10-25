@@ -1,0 +1,30 @@
+---
+import { loadHeadlines, anniversary, marchesEnabled } from '../lib/marches';
+const headlines = marchesEnabled ? await loadHeadlines() : [];
+const anniv = marchesEnabled ? anniversary() : null;
+---
+{(headlines.length > 0 || anniv) && (
+  <section class="extras">
+    {headlines.length > 0 && (
+      <div>
+        <h2>À lire ailleurs <span class="tag-real">actualité réelle</span></h2>
+        <ul>{headlines.map((h) => <li><a href={h.url} rel="noopener" target="_blank">{h.title}</a></li>)}</ul>
+        <p class="meta">Titres du fil économie du Monde, avec lien vers la source.</p>
+      </div>
+    )}
+    {anniv && (
+      <div class="hist">
+        <h2>Il y a {anniv.years} ans <span class="tag-real">histoire réelle</span></h2>
+        <p><strong>{anniv.date}.</strong> {anniv.text}</p>
+      </div>
+    )}
+  </section>
+)}
+<style>
+  .extras { display: grid; grid-template-columns: 2fr 1fr; gap: 28px; margin: 36px 0 8px; padding-top: 18px; border-top: 3px double var(--ink); }
+  h2 { font-size: 1.15rem; margin: 0 0 10px; }
+  .tag-real { font: .68rem var(--sans); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-2); border: 1px solid var(--rule); padding: 1px 6px; margin-left: 6px; vertical-align: middle; }
+  ul { margin: 0 0 6px; padding-left: 18px; } li { margin-bottom: 6px; }
+  .hist p { margin: 0; }
+  @media (max-width: 820px) { .extras { grid-template-columns: 1fr; } }
+</style>

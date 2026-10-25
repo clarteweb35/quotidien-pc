@@ -115,9 +115,9 @@ footer ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 16px; f
 .card.no-media { border-top: 3px solid var(--ink); padding-top: 10px; }
 .card.no-media .kicker { display: inline-block; }
 
-/* Articles: texte justifie avec coupures de mots (francais); alignement a gauche sur petit ecran */
-@media (min-width: 640px) {
-  .article .body p { text-align: justify; text-justify: inter-word; hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 7 3 3; }
+/* Texte justifie avec coupures de mots (francais), y compris sur mobile: titres, chapos et corps d'article */
+.article h1, .article .chapo, .article .body p, .lead h2, .lead p, .card h3, .card p {
+  text-align: justify; text-justify: inter-word; hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 7 3 3;
 }
 
 /* Bandeau de consentement (mesure d'audience) */

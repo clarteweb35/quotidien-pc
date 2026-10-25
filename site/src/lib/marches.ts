@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import cfg from '../../../config/marches.json';
 
-export interface Quote { label: string; kind: string; price: number; change: number; currency: string; time: Date }
+export interface Quote { symbol: string; label: string; kind: string; price: number; change: number; currency: string; time: Date }
 export interface Headline { title: string; url: string; date: Date | null }
 export interface Anniversary { years: number; date: string; text: string }
 
@@ -45,7 +45,7 @@ export async function loadQuotes(): Promise<Quote[]> {
       const price = Number(m.regularMarketPrice);
       const prev = Number(m.chartPreviousClose ?? m.previousClose);
       if (!Number.isFinite(price) || !Number.isFinite(prev) || prev === 0) return null;
-      return { label: q.label, kind: q.kind, price, change: ((price - prev) / prev) * 100, currency: m.currency ?? '', time: new Date(Number(m.regularMarketTime) * 1000) };
+      return { symbol: q.symbol, label: q.label, kind: q.kind, price, change: ((price - prev) / prev) * 100, currency: m.currency ?? '', time: new Date(Number(m.regularMarketTime) * 1000) };
     } catch { return null; }
   }));
   return withCache('quotes', out.filter((q): q is Quote => q !== null), (q) => ({ ...q, time: new Date(q.time) }));
@@ -89,3 +89,6 @@ export function anniversary(now = new Date()): Anniversary | null {
 }
 
 export const fmtNum = (n: number, digits = 2) => new Intl.NumberFormat('fr-FR', { minimumFractionDigits: digits, maximumFractionDigits: digits }).format(n);
+
+/** Page publique de la valeur chez la source (lien externe). */
+export const quoteUrl = (symbol: string) => `https://finance.yahoo.com/quote/${encodeURIComponent(symbol)}/`;
