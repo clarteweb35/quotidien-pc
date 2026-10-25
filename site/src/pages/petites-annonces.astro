@@ -1,0 +1,188 @@
+---
+import Base from '../layouts/Base.astro';
+import { rubrique, categoriesAnnonces, annonces, annonceurs, nomCategorie } from '../lib/annonces';
+import { contactEmail } from '../lib/legal';
+import { url } from '../lib/site';
+
+const compte = (slug: string) => annonces.filter((a) => a.cat === slug).length;
+const texteRecherche = (a: (typeof annonces)[number]) => [a.titre, a.texte, a.conditions, a.prix, nomCategorie(a.cat), annonceurs.get(a.annonceur ?? '')?.nom].filter(Boolean).join(' ');
+---
+<Base title={rubrique.titre} description={`${rubrique.accroche} ${annonces.length} annonces fictives et satiriques.`} current="annonces">
+  <div class="page-head">
+    <span class="kicker">Rubrique</span>
+    <h1>{rubrique.titre}</h1>
+    <p class="pa-accroche">{rubrique.accroche}</p>
+    <p class="meta">{rubrique.intro}</p>
+  </div>
+
+  <section class="pa-outils" aria-label="Filtrer les annonces">
+    <div class="pa-filtres" role="group" aria-label="Catégories">
+      <button type="button" class="pa-filtre" data-cat="toutes" aria-pressed="true">Toutes les annonces <span class="pa-n">{annonces.length}</span></button>
+      {categoriesAnnonces.map((c) => <button type="button" class="pa-filtre" data-cat={c.slug} aria-pressed="false">{c.name} <span class="pa-n">{compte(c.slug)}</span></button>)}
+    </div>
+    <div class="pa-ligne">
+      <label class="pa-recherche">
+        <span>Rechercher</span>
+        <input type="search" id="pa-recherche" placeholder="chaise, stage, réunion…" autocomplete="off" />
+      </label>
+      <p class="pa-compteur" id="pa-compteur" role="status" aria-live="polite">{annonces.length} annonces</p>
+      <details class="pa-depot" id="pa-depot">
+        <summary>Déposer une annonce</summary>
+        <div class="pa-depot-corps">
+          <p><strong>Comment ça marche ?</strong> Vous rédigez votre proposition ici ; le bouton ouvre votre messagerie avec le message prêt à partir pour <a href={`mailto:${contactEmail}`}>{contactEmail}</a>. La rédaction lit tout, ne publie rien automatiquement et ne répond pas à toutes les propositions.</p>
+          <p class="meta">Ce formulaire n'enregistre rien sur ce site : aucun serveur ne reçoit votre texte. N'indiquez ni coordonnées personnelles ni offre réelle : les annonces de cette rubrique sont satiriques.</p>
+          <form id="pa-form" class="pa-form">
+            <label>Titre de l'annonce <input type="text" name="titre" maxlength="90" required /></label>
+            <label>Catégorie
+              <select name="cat">{categoriesAnnonces.map((c) => <option value={c.name}>{c.name}</option>)}</select>
+            </label>
+            <label>Texte <textarea name="texte" rows="4" maxlength="500" required></textarea></label>
+            <label>Prix (facultatif) <input type="text" name="prix" maxlength="40" /></label>
+            <button type="submit">Ouvrir ma messagerie</button>
+          </form>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section aria-labelledby="pa-titre-liste">
+    <h2 id="pa-titre-liste" class="visuellement-cache">Les annonces</h2>
+    <div class="pa-colonnes" id="pa-liste">
+      {annonces.map((a) => {
+        const ann = a.annonceur ? annonceurs.get(a.annonceur) : undefined;
+        return (
+          <article class={`pa pa-${a.format}${a.format === 'encart' && ann ? ` pal-${ann.palette}` : ''}`} data-cat={a.cat} data-texte={texteRecherche(a)} id={a.id}>
+            {a.format === 'vedette' && <p class="pa-vedette-bandeau">À la une des annonces</p>}
+            {a.format === 'encart' && ann && <p class="pa-marque">{ann.nom}</p>}
+            <p class="pa-meta"><span class="pa-badge">{nomCategorie(a.cat)}</span> <span class="pa-ref">Réf. {a.ref}</span></p>
+            <h3 class="pa-titre">{a.titre}</h3>
+            {a.image && <img class="pa-image" src={url(`annonces/${a.image}`)} width="84" height="84" alt={a.imageAlt ?? ''} loading="lazy" />}
+            {a.prix && <p class="pa-prix">{a.prix}</p>}
+            <p class="pa-texte">{a.texte}</p>
+            {a.conditions && <p class="pa-conditions">{a.conditions}</p>}
+            {ann && a.format !== 'encart' && <p class="pa-annonceur">Annonce passée par <strong>{ann.nom}</strong> — <em>{ann.slogan}</em></p>}
+            {a.format === 'encart' && ann && <p class="pa-slogan">{ann.slogan}</p>}
+          </article>
+        );
+      })}
+    </div>
+    <p class="pa-vide" id="pa-vide" hidden>Aucune annonce ne correspond à votre recherche. C'est sans doute la meilleure offre du jour.</p>
+  </section>
+
+  <aside class="pa-mention" role="note">{rubrique.mention}</aside>
+</Base>
+
+<style>
+  .visuellement-cache { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .pa-accroche { font: italic 1.25rem/1.4 var(--serif); margin: 4px 0 8px; }
+  .pa-outils { margin: 18px 0 8px; font-family: var(--sans); }
+  .pa-filtres { display: flex; flex-wrap: wrap; gap: 8px; }
+  .pa-filtre { font: 600 .82rem var(--sans); padding: 7px 12px; border: 1.5px solid var(--ink); background: var(--paper); color: var(--ink); cursor: pointer; }
+  .pa-filtre:hover, .pa-filtre:focus-visible { background: var(--paper-2); }
+  .pa-filtre[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+  .pa-n { font-weight: 400; opacity: .75; margin-left: 2px; }
+  .pa-ligne { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; margin-top: 14px; }
+  .pa-recherche { display: flex; align-items: center; gap: 8px; font-size: .85rem; }
+  .pa-recherche input { font: .9rem var(--sans); padding: 7px 10px; border: 1.5px solid var(--ink); background: #fff; min-width: 220px; }
+  .pa-compteur { margin: 0; font-size: .85rem; color: var(--ink-2); }
+  .pa-depot { margin-left: auto; }
+  .pa-depot summary { cursor: pointer; list-style: none; font: 700 .85rem var(--sans); padding: 8px 14px; border: 2px solid var(--accent); color: var(--accent); background: var(--paper); }
+  .pa-depot summary::-webkit-details-marker { display: none; }
+  .pa-depot[open] summary { background: var(--accent); color: #fff; }
+  .pa-depot-corps { margin-top: 10px; padding: 14px 16px; border: 1px solid var(--rule); background: #fff; max-width: 640px; font-size: .9rem; line-height: 1.5; }
+  .pa-form { display: grid; gap: 10px; margin-top: 8px; }
+  .pa-form label { display: grid; gap: 4px; font-weight: 600; font-size: .85rem; }
+  .pa-form input, .pa-form select, .pa-form textarea { font: .9rem var(--sans); padding: 7px 9px; border: 1.5px solid var(--ink); background: #fff; }
+  .pa-form button { justify-self: start; font: 700 .9rem var(--sans); padding: 8px 16px; border: 2px solid var(--ink); background: var(--ink); color: var(--paper); cursor: pointer; }
+
+  /* Colonnes de journal: les annonces s'ecoulent comme sur une page de petites annonces papier */
+  .pa-colonnes { column-width: 270px; column-gap: 26px; column-rule: 1px solid var(--rule); margin-top: 18px; }
+  .pa { break-inside: avoid; margin: 0 0 20px; font-family: var(--serif); overflow-wrap: anywhere; }
+  .pa[hidden] { display: none; }
+  .pa p { margin: 0; }
+  .pa-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; font: .66rem var(--sans); color: var(--ink-2); margin-bottom: 4px; }
+  .pa-badge { font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
+  .pa-titre { font: 700 1.08rem/1.25 var(--serif); margin: 0 0 4px; }
+  .pa-prix { font: 700 .95rem var(--sans); margin-bottom: 4px; }
+  .pa-texte { font-size: .96rem; line-height: 1.5; }
+  .pa-conditions { font: .72rem/1.4 var(--sans); color: var(--ink-2); margin-top: 6px; }
+  .pa-annonceur { font: .72rem/1.4 var(--sans); color: var(--ink-2); margin-top: 6px; border-top: 1px dotted var(--rule); padding-top: 4px; }
+  .pa-image { float: right; margin: 0 0 6px 10px; width: 84px; height: 84px; }
+
+  .pa-classique { padding-bottom: 14px; border-bottom: 1px solid var(--rule); }
+  .pa-court { padding: 0 0 12px; border-bottom: 1px dotted var(--ink); }
+  .pa-court .pa-titre { display: inline; font-size: .95rem; text-transform: uppercase; letter-spacing: .02em; }
+  .pa-court .pa-titre::after { content: ' — '; }
+  .pa-court .pa-meta { margin-bottom: 2px; }
+  .pa-court .pa-prix, .pa-court .pa-texte { display: inline; }
+  .pa-court .pa-prix { margin: 0 4px 0 0; font-size: .85rem; }
+  .pa-vedette { padding: 12px 14px 14px; border: 3px double var(--ink); background: var(--paper-2); }
+  .pa-vedette-bandeau { font: 800 .62rem var(--sans); letter-spacing: .14em; text-transform: uppercase; color: #fff; background: var(--accent); display: inline-block; padding: 2px 8px; margin-bottom: 6px; }
+  .pa-vedette .pa-titre { font-size: 1.3rem; }
+  .pa-vedette .pa-image { width: 96px; height: 96px; }
+
+  /* Encarts publicitaires */
+  .pa-encart { padding: 14px 14px 12px; border: 2px solid currentColor; }
+  .pa-marque { font: 800 .74rem var(--sans); letter-spacing: .18em; text-transform: uppercase; margin-bottom: 8px !important; padding-bottom: 6px; border-bottom: 1px solid currentColor; }
+  .pa-encart .pa-titre { font-size: 1.2rem; }
+  .pa-encart .pa-prix { display: inline-block; font-size: 1rem; padding: 3px 10px; margin: 2px 0 8px; background: var(--paper); color: var(--ink); }
+  .pa-encart .pa-meta, .pa-encart .pa-ref { color: inherit; opacity: .85; }
+  .pa-encart .pa-badge { color: inherit; }
+  .pa-encart .pa-conditions { color: inherit; opacity: .9; font-size: .64rem; line-height: 1.35; }
+  .pa-slogan { font: italic .8rem var(--serif); margin-top: 8px !important; }
+  .pal-ink { background: #16140f; color: #faf7f2; }
+  .pal-bleu { background: #1c3a57; color: #f4f8fb; }
+  .pal-vert { background: #1f4a2c; color: #f3f8f3; }
+  .pal-rouge { background: #7a1a16; color: #fbf3f2; }
+  .pal-or { background: #5c4310; color: #fbf3da; }
+
+  .pa-vide { margin: 24px 0; font-style: italic; }
+  .pa-mention { margin: 28px 0 0; padding: 10px 14px; border-top: 1px solid var(--rule); font: .78rem/1.5 var(--sans); color: var(--ink-2); text-align: center; }
+  @media (max-width: 560px) { .pa-depot { margin-left: 0; width: 100%; } .pa-recherche input { min-width: 0; width: 100%; } .pa-recherche { width: 100%; } }
+</style>
+
+<script>
+  const norm = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+  const cartes = Array.from(document.querySelectorAll<HTMLElement>('#pa-liste .pa'));
+  const boutons = Array.from(document.querySelectorAll<HTMLButtonElement>('.pa-filtre'));
+  const champ = document.getElementById('pa-recherche') as HTMLInputElement;
+  const compteur = document.getElementById('pa-compteur')!;
+  const vide = document.getElementById('pa-vide')!;
+  let cat = 'toutes';
+
+  function filtre() {
+    const q = norm(champ.value.trim());
+    let n = 0;
+    for (const c of cartes) {
+      const ok = (cat === 'toutes' || c.dataset.cat === cat) && (!q || norm(c.dataset.texte ?? '').includes(q));
+      c.hidden = !ok;
+      if (ok) n++;
+    }
+    compteur.textContent = n + (n > 1 ? ' annonces' : ' annonce');
+    vide.hidden = n > 0;
+  }
+  for (const b of boutons) {
+    b.addEventListener('click', () => {
+      cat = b.dataset.cat!;
+      boutons.forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+      filtre();
+    });
+  }
+  champ.addEventListener('input', filtre);
+  // Liens profonds: ?cat=immobilier et ?q=chaise
+  const params = new URLSearchParams(location.search);
+  const catUrl = params.get('cat');
+  if (catUrl) { const b = boutons.find((x) => x.dataset.cat === catUrl); if (b) b.click(); }
+  if (params.get('q')) { champ.value = params.get('q')!; filtre(); }
+
+  // Depot: pas de serveur. Le formulaire prepare un e-mail (mailto) que l'utilisateur envoie lui-meme; rien n'est enregistre ni publie.
+  const form = document.getElementById('pa-form') as HTMLFormElement;
+  const adresse = (document.querySelector('#pa-depot a[href^="mailto:"]') as HTMLAnchorElement).getAttribute('href')!;
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const d = new FormData(form);
+    const sujet = `[Petites annonces] ${d.get('titre')}`;
+    const corps = `Catégorie : ${d.get('cat')}\nTitre : ${d.get('titre')}\nPrix : ${d.get('prix') || '(sans prix)'}\n\n${d.get('texte')}\n\n— Proposition d'annonce fictive et satirique, à relire avant toute publication.`;
+    window.location.href = `${adresse}?subject=${encodeURIComponent(sujet)}&body=${encodeURIComponent(corps)}`;
+  });
+</script>

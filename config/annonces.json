@@ -1,0 +1,245 @@
+{
+  "note": "Rubrique 'Petites annonces' (page /petites-annonces/). Toutes les annonces sont FICTIVES et satiriques. Pour en ajouter: ajouter un objet dans 'annonces' (id unique 'pa-NNN', 'cat' = slug d'une categorie, 'format' = classique | court | vedette | encart). Aucune coordonnee reelle: chaque annonce est identifiee par sa reference. 'image' (facultatif) = fichier de site/public/annonces/ avec 'imageAlt'. 'annonceur' (facultatif) = id d'un annonceur recurrent.",
+  "titre": "Petites annonces",
+  "accroche": "Les bonnes affaires, les grands projets et les petites entourloupes.",
+  "intro": "Comme dans la presse locale, tout paraît presque normal au premier regard. C'est en lisant jusqu'au bout, conditions comprises, que les ennuis commencent. Les annonceurs sont fictifs, les prix sont précis, et aucune offre n'est valable nulle part.",
+  "mention": "Les annonces publiées dans cette rubrique sont fictives et satiriques. Toute ressemblance avec une offre existante serait une coïncidence presque certaine.",
+  "categories": [
+    { "slug": "objets", "name": "Objets & occasions" },
+    { "slug": "emploi", "name": "Emploi & recrutement" },
+    { "slug": "services", "name": "Services improbables" },
+    { "slug": "immobilier", "name": "Immobilier" },
+    { "slug": "rencontres", "name": "Rencontres & vie sociale" },
+    { "slug": "publicites", "name": "Publicités" },
+    { "slug": "offres", "name": "Offres douteuses" },
+    { "slug": "administration", "name": "Administration & vie publique" }
+  ],
+  "annonceurs": [
+    { "id": "evidence", "nom": "Cabinet Évidence & Associés", "slogan": "Nous confirmons ce que vous pensiez déjà.", "palette": "ink" },
+    { "id": "zerotache", "nom": "Zéro-Tâche SAS", "slogan": "Automatiser l'inutile, enfin.", "palette": "bleu" },
+    { "id": "bpcc", "nom": "Bureau paritaire de certification des certifications", "slogan": "Certifié, donc certifiant.", "palette": "vert" },
+    { "id": "concept", "nom": "Agence Espace & Concept", "slogan": "Des mètres carrés qui sont avant tout des idées.", "palette": "rouge" },
+    { "id": "miraculex", "nom": "Miraculex®", "slogan": "Le miracle, mais en flacon.", "palette": "or" }
+  ],
+  "annonces": [
+    {
+      "id": "pa-001", "cat": "objets", "format": "classique", "ref": "PA-001",
+      "titre": "Chaise fonctionnelle, sauf pour s'asseoir",
+      "prix": "15 €",
+      "texte": "Vends chaise ancienne en excellent état visuel. L'assise présente une légère instabilité que le vendeur préfère qualifier de dynamisme postural. À retirer sur place, de préférence debout.",
+      "conditions": "Ni échangée ni reprise. Les chutes ne sont pas comprises dans le prix.",
+      "image": "chaise.svg", "imageAlt": "Dessin au trait d'une chaise dont le dossier et les pieds penchent un peu"
+    },
+    {
+      "id": "pa-002", "cat": "objets", "format": "vedette", "ref": "PA-002",
+      "titre": "Pomme de terre à fort potentiel",
+      "prix": "Faire offre",
+      "texte": "Tubercule de caractère, encore inexploité. Idéal pour projet agricole, reconversion professionnelle ou diversification patrimoniale. Dossier de présentation de 47 pages disponible sur demande, avec sommaire et sommaire du sommaire.",
+      "conditions": "Offres inférieures à 3 € traitées avec le mépris qu'elles méritent.",
+      "image": "patate.svg", "imageAlt": "Dessin au trait d'une pomme de terre ronde avec quelques yeux et une petite pousse"
+    },
+    {
+      "id": "pa-003", "cat": "objets", "format": "classique", "ref": "PA-003",
+      "titre": "Trophée de participation à vendre",
+      "prix": "80 €",
+      "texte": "Remis lors d'une compétition dont personne ne se souvient. Gravure personnalisable. Convient parfaitement à une personne souhaitant valoriser un bilan annuel globalement satisfaisant.",
+      "conditions": "Plaque « Meilleur effort » en option : 12 € le mot.",
+      "image": "trophee.svg", "imageAlt": "Dessin au trait d'une coupe avec deux anses, une étoile et un socle"
+    },
+    {
+      "id": "pa-004", "cat": "objets", "format": "court", "ref": "PA-004",
+      "titre": "Lot de trois promesses électorales",
+      "prix": "12 € le lot",
+      "texte": "Non utilisées, quelques traces d'usure. Vendues dans leur emballage d'origine (une estrade)."
+    },
+    {
+      "id": "pa-005", "cat": "objets", "format": "court", "ref": "PA-005",
+      "titre": "Parapluie à usage unique",
+      "prix": "4 €",
+      "texte": "Le premier usage ne fut pas concluant. Vendu en l'état, c'est-à-dire plié."
+    },
+    {
+      "id": "pa-006", "cat": "objets", "format": "classique", "ref": "PA-006",
+      "titre": "Meuble donné contre attestation de gratuité",
+      "prix": "Gratuit*",
+      "texte": "Commode en bon état à donner à toute personne capable de produire une attestation prouvant que la gratuité a bien été constatée. Formulaire à retirer au guichet, en deux exemplaires, dont un pour le meuble.",
+      "conditions": "*Frais de dossier : 18,50 €. Le meuble reste gratuit, c'est le dossier qui coûte."
+    },
+    {
+      "id": "pa-007", "cat": "emploi", "format": "classique", "ref": "PA-007",
+      "titre": "Cherche stagiaire pour remplacer un stagiaire",
+      "prix": "Gratification selon le budget",
+      "texte": "Vous aimez apprendre, transmettre vos connaissances et former votre propre remplaçant avant la fin de votre convention ? Rejoignez une équipe dynamique dont la structure hiérarchique reste à déterminer.",
+      "conditions": "Poste à pourvoir immédiatement, ou avant, selon la disponibilité du calendrier."
+    },
+    {
+      "id": "pa-008", "cat": "emploi", "format": "vedette", "ref": "PA-008",
+      "titre": "Directeur de la stratégie recherché",
+      "prix": "Rémunération : voir stratégie",
+      "texte": "Notre groupe recrute un directeur de la stratégie chargé d'expliquer pourquoi aucune stratégie n'a été définie. Vous présenterez chaque trimestre un diaporama de 60 pages démontrant que cela va dans le bon sens. Profil attendu : bac +5, sang-froid, goût de l'horizon.",
+      "conditions": "Ce poste n'a pas été créé. Il a été « positionné »."
+    },
+    {
+      "id": "pa-009", "cat": "emploi", "format": "classique", "ref": "PA-009",
+      "titre": "Testeur de salles de réunion",
+      "prix": "11,43 €/h",
+      "texte": "Vous vous asseyez dans chaque salle de l'entreprise, vous constatez qu'il manque un câble et vous le consignez dans un rapport de trois pages. Expérience souhaitée du rétroprojecteur qui refuse de s'allumer.",
+      "conditions": "Casque anti-bruit de couloir fourni. Café non fourni."
+    },
+    {
+      "id": "pa-010", "cat": "emploi", "format": "court", "ref": "PA-010",
+      "titre": "Relecteur d'offre d'emploi",
+      "prix": "9,90 € l'offre",
+      "texte": "Cherche personne pour relire l'offre d'emploi qui cherche une personne pour relire des offres d'emploi."
+    },
+    {
+      "id": "pa-011", "cat": "services", "format": "classique", "ref": "PA-011", "annonceur": "evidence",
+      "titre": "Consultant en réunions qui auraient pu être un mail",
+      "prix": "À partir de 25 €",
+      "texte": "J'interviens avant, pendant et après votre réunion afin de produire une synthèse de ce qui aurait pu être décidé en trois lignes. Forfait cinq heures, compte rendu inclus.",
+      "conditions": "Le compte rendu du compte rendu est facturé à part."
+    },
+    {
+      "id": "pa-012", "cat": "services", "format": "classique", "ref": "PA-012",
+      "titre": "Location d'ami pour déménagements et photos de groupe",
+      "prix": "35 € la demi-journée",
+      "texte": "Disponible les week-ends pour porter, sourire et dire « on se voit bientôt » sur la photo. Aucune relation ne sera entretenue après la prestation, sauf option « anniversaire ».",
+      "conditions": "Les canapés d'angle sont considérés comme un déménagement supplémentaire."
+    },
+    {
+      "id": "pa-013", "cat": "services", "format": "court", "ref": "PA-013",
+      "titre": "Classement de dossiers non traités",
+      "prix": "2,40 € le dossier",
+      "texte": "Nous classons vos dossiers sans jamais les traiter. Livraison sous forme de pile bien droite."
+    },
+    {
+      "id": "pa-014", "cat": "services", "format": "classique", "ref": "PA-014",
+      "titre": "Rédaction de courriers de réclamation",
+      "prix": "39 € le courrier",
+      "texte": "Vous n'avez pas obtenu de réponse à votre dernier courrier ? Nous rédigeons pour vous un nouveau courrier demandant pourquoi le précédent n'a pas reçu de réponse. Formule premium avec accusé de réception moral.",
+      "conditions": "Les réponses éventuelles ne sont pas garanties, et ne sont pas non plus exclues."
+    },
+    {
+      "id": "pa-015", "cat": "services", "format": "classique", "ref": "PA-015", "annonceur": "evidence",
+      "titre": "Transformation des problèmes en opportunités de réflexion",
+      "prix": "180 € la séance",
+      "texte": "Vous avez un problème ? Nous vous en proposons deux, plus intéressants, et un tableau pour les comparer. Séance de 90 minutes, dont 85 de prise de notes.",
+      "conditions": "Le problème initial n'est pas résolu : il est « positionné »."
+    },
+    {
+      "id": "pa-016", "cat": "immobilier", "format": "vedette", "ref": "PA-016", "annonceur": "concept",
+      "titre": "Studio de 4 m², ambiance loft",
+      "prix": "450 €/mois",
+      "texte": "Espace optimisé, circulation verticale recommandée. Cuisine ouverte sur le séjour, le bureau et la chambre. Eau et électricité disponibles à proximité, selon la définition retenue. Visite en trois minutes, quatre avec les accompagnateurs.",
+      "conditions": "Charges : 63 € (lumière naturelle incluse, à condition d'être debout près de la fenêtre)."
+    },
+    {
+      "id": "pa-017", "cat": "immobilier", "format": "classique", "ref": "PA-017", "annonceur": "concept",
+      "titre": "Terrain constructible à 40 %",
+      "prix": "49 800 €",
+      "texte": "Parcelle de 300 m², dont 120 m² constructibles et 180 m² d'excellentes perspectives. Viabilisation à venir, sans date. Vue dégagée sur l'ensemble du terrain voisin, qui l'est moins.",
+      "conditions": "Les 60 % restants sont constructibles en théorie, interdits en pratique."
+    },
+    {
+      "id": "pa-018", "cat": "immobilier", "format": "court", "ref": "PA-018", "annonceur": "concept",
+      "titre": "Appartement lumineux",
+      "prix": "720 €/mois",
+      "texte": "Lumineux dès le lever du soleil, selon la saison, l'orientation et votre définition du lumineux."
+    },
+    {
+      "id": "pa-019", "cat": "rencontres", "format": "court", "ref": "PA-019",
+      "titre": "Homme sérieux cherche personne capable de choisir un restaurant",
+      "prix": "Gratuit",
+      "texte": "Décision attendue en moins de 45 minutes. Pas sérieux s'abstenir, et pas non plus ceux qui répondent « comme tu veux »."
+    },
+    {
+      "id": "pa-020", "cat": "rencontres", "format": "classique", "ref": "PA-020",
+      "titre": "Échange cours de fiscalité contre cours de relativisation",
+      "prix": "Troc",
+      "texte": "Comptable retraité propose une heure d'explication sur la déclaration de revenus. Recherche, en contrepartie, une personne capable de lui expliquer pourquoi ce n'est pas si grave.",
+      "conditions": "Séances en alternance : fiscalité les jours pairs, relativisation les jours impairs."
+    },
+    {
+      "id": "pa-021", "cat": "rencontres", "format": "court", "ref": "PA-021",
+      "titre": "Covoiturage circulaire",
+      "prix": "Partage des frais",
+      "texte": "Cherche covoiturage pour aller chercher quelqu'un qui cherche un covoiturage."
+    },
+    {
+      "id": "pa-022", "cat": "publicites", "format": "encart", "ref": "PA-022", "annonceur": "miraculex",
+      "titre": "Le Parfum de Réussite®",
+      "prix": "29,90 €",
+      "texte": "Une fragrance subtile qui donne l'impression d'avoir compris le dossier. Tenue exceptionnelle en réunion.",
+      "conditions": "Ne garantit ni compétence réelle ni augmentation salariale. Peut provoquer une confiance injustifiée. Ne pas utiliser avant un entretien d'embauche, pendant un entretien d'embauche, ni après."
+    },
+    {
+      "id": "pa-023", "cat": "publicites", "format": "encart", "ref": "PA-023", "annonceur": "zerotache",
+      "titre": "RappelPhone+ : l'application qui vous rappelle de ne pas utiliser votre téléphone",
+      "prix": "Gratuit, puis 4,99 €/mois",
+      "texte": "Notifications intelligentes, statistiques de déconnexion et tableau de bord du temps perdu à consulter votre tableau de bord. Abonnement premium pour recevoir moins de notifications, sauf celles qui annoncent la réduction des notifications.",
+      "conditions": "Essai gratuit de 7 jours, renouvelable tacitement 8 fois. Résiliation par courrier, depuis l'application."
+    },
+    {
+      "id": "pa-024", "cat": "publicites", "format": "encart", "ref": "PA-024", "annonceur": "zerotache",
+      "titre": "Silence Premium",
+      "prix": "7,50 €/mois",
+      "texte": "Profitez d'un silence exclusif, sans interruption. La formule gratuite inclut une publicité sonore pour la formule payante.",
+      "conditions": "Le silence est livré sous réserve de voisins disponibles."
+    },
+    {
+      "id": "pa-025", "cat": "publicites", "format": "classique", "ref": "PA-025",
+      "titre": "Montre connectée « Temps Perdu »",
+      "prix": "149 €",
+      "texte": "Elle mesure le temps que vous passez à consulter les statistiques de votre montre connectée. Autonomie : une journée, soit exactement le temps de la regarder.",
+      "conditions": "Bracelet en option. Statistiques du bracelet non disponibles."
+    },
+    {
+      "id": "pa-026", "cat": "publicites", "format": "classique", "ref": "PA-026",
+      "titre": "Formation : devenez influenceur en 4 semaines",
+      "prix": "590 €",
+      "texte": "Apprenez à réunir une communauté, puis à lui vendre cette formation. En supplément, la formation « Comment vendre la formation » est proposée à 890 €, hors communauté.",
+      "conditions": "Résultats non garantis, cohérence entre les deux formations non plus."
+    },
+    {
+      "id": "pa-027", "cat": "offres", "format": "encart", "ref": "PA-027", "annonceur": "miraculex",
+      "titre": "Le Pack Tranquillité Totale",
+      "prix": "9,99 €/mois",
+      "texte": "Sérénité garantie sous réserve de conditions indépendantes de notre volonté. Interlocuteur dédié, joignable aux horaires auxquels il ne répond pas. Traitement prioritaire selon l'ordre de priorité applicable.",
+      "conditions": "Engagement de 24 mois. La tranquillité s'entend à l'exclusion des événements, des échéances et des courriers recommandés."
+    },
+    {
+      "id": "pa-028", "cat": "offres", "format": "classique", "ref": "PA-028",
+      "titre": "Assurance contre les mauvaises nouvelles",
+      "prix": "13,20 €/mois",
+      "texte": "Vous êtes indemnisé dès que l'on vous annonce une mauvaise nouvelle, sous réserve qu'elle soit confirmée par écrit, en recommandé, par la personne qui vous l'annonce.",
+      "conditions": "Les bonnes nouvelles sont exclues du contrat, y compris les fausses bonnes nouvelles."
+    },
+    {
+      "id": "pa-029", "cat": "offres", "format": "vedette", "ref": "PA-029",
+      "titre": "-100 % sur tout le magasin",
+      "prix": "0 €*",
+      "texte": "Cette semaine seulement, tout est offert dans nos rayons. Pour en profiter, présentez-vous en caisse sans rien acheter, munie de la carte de fidélité que vous n'avez pas encore.",
+      "conditions": "*Remise valable uniquement sur les articles que vous ne prendrez pas. Hors frais de dossier, de présentation, de remise et de caisse."
+    },
+    {
+      "id": "pa-030", "cat": "administration", "format": "classique", "ref": "PA-030", "annonceur": "bpcc",
+      "titre": "Certification des organismes de certification",
+      "prix": "2 400 € HT",
+      "texte": "Votre organisme de certification est-il certifié ? Nous délivrons le label « Certifié par un organisme certifié », valable douze mois, renouvelable après audit de l'organisme qui nous a certifiés.",
+      "conditions": "Les audits sont réalisés par un auditeur lui-même en cours de certification."
+    },
+    {
+      "id": "pa-031", "cat": "administration", "format": "classique", "ref": "PA-031", "annonceur": "bpcc",
+      "titre": "Attestation d'attestation",
+      "prix": "18 € le timbre fiscal",
+      "texte": "Pour justifier que vous avez bien fourni l'attestation demandée, munissez-vous d'une attestation de dépôt. Délai de traitement : de 6 à 9 mois, prolongeable de la durée de traitement du délai.",
+      "conditions": "Pièces à joindre : l'original, la copie de l'original, l'original de la copie."
+    },
+    {
+      "id": "pa-032", "cat": "administration", "format": "court", "ref": "PA-032", "annonceur": "evidence",
+      "titre": "Confirmation de ce que vous pensiez",
+      "prix": "120 € la page",
+      "texte": "Rapport de six pages concluant que vous aviez raison, assorti de trois recommandations évidentes."
+    }
+  ]
+}

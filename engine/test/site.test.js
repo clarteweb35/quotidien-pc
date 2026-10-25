@@ -54,4 +54,21 @@ test('jeux et editos: pages construites et menu complet', () => {
   assert.ok(menu.indexOf('>Compteurs<') < menu.indexOf('>Éditos<') && menu.indexOf('>Éditos<') < menu.indexOf('>Jeux<'), 'ordre du menu: Compteurs, Éditos, Jeux');
 });
 
+test('petites annonces: page, menu, donnees coherentes et mention obligatoire', () => {
+  const data = JSON.parse(fs.readFileSync(path.join(ROOT, 'config/annonces.json'), 'utf8'));
+  const slugs = new Set(data.categories.map((c) => c.slug));
+  assert.ok(data.annonces.length >= 20, 'au moins 20 annonces');
+  assert.equal(new Set(data.annonces.map((a) => a.id)).size, data.annonces.length, 'identifiants uniques');
+  for (const a of data.annonces) {
+    assert.ok(slugs.has(a.cat), `categorie inconnue: ${a.id}`);
+    if (a.annonceur) assert.ok(data.annonceurs.some((x) => x.id === a.annonceur), `annonceur inconnu: ${a.id}`);
+    if (a.image) assert.ok(fs.existsSync(path.join(ROOT, 'site/public/annonces', a.image)), `image absente: ${a.image}`);
+  }
+  const html = page('petites-annonces');
+  assert.ok(html.includes('Toutes les annonces') && html.includes('Déposer une annonce'));
+  assert.ok(html.includes('coïncidence presque certaine'), 'mention fictive');
+  assert.equal((html.match(/class="pa pa-/g) || []).length, data.annonces.length);
+  assert.ok(page('.').includes('>Petites annonces<'), 'lien dans le menu');
+});
+
 test.after(() => fs.rmSync(out, { recursive: true, force: true }));
