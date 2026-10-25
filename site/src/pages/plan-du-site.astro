@@ -1,0 +1,41 @@
+---
+import Base from '../layouts/Base.astro';
+import { allArticles, categories, formatDate, url } from '../lib/site';
+
+const articles = await allArticles();
+const tags = [...new Set(articles.flatMap((a) => a.data.tags))].sort((a, b) => a.localeCompare(b, 'fr'));
+const pages = [
+  ['À la une', ''],
+  ['La rédaction', 'redaction/'],
+  ['À propos', 'a-propos/'],
+  ['Mentions légales', 'mentions-legales/'],
+];
+---
+<Base title="Plan du site" description="Toutes les rubriques, pages et articles du journal, au même endroit.">
+  <div class="prose">
+    <div class="page-head"><h1>Plan du site</h1><p class="meta">{articles.length} articles, {categories.length} rubriques.</p></div>
+
+    <h2>Pages</h2>
+    <ul>
+      {pages.map(([name, path]) => <li><a href={url(path)}>{name}</a></li>)}
+      <li><a href={url('rss.xml')}>Flux RSS</a></li>
+    </ul>
+
+    <h2>Rubriques</h2>
+    <ul>
+      {categories.map((c) => <li><a href={url(`rubrique/${c.slug}/`)}>{c.name}</a> — {c.description}</li>)}
+    </ul>
+
+    <h2>Tous les articles</h2>
+    <ul>
+      {articles.map((a) => <li><a href={url(`articles/${a.data.slug}/`)}>{a.data.title}</a> <span class="meta">· {formatDate(a.data.publishedAt)}</span></li>)}
+    </ul>
+
+    {tags.length > 0 && (
+      <>
+        <h2>Mots-clés</h2>
+        <ul class="tags">{tags.map((t) => <li><a href={url(`tag/${encodeURIComponent(t)}/`)}>#{t}</a></li>)}</ul>
+      </>
+    )}
+  </div>
+</Base>

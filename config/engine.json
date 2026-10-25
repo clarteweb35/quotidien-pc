@@ -67,6 +67,7 @@
   },
   "retention": {
     "logDays": 30,
+    "reportDays": 180,
     "quarantineDays": 30
   },
   "images": {

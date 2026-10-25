@@ -14,8 +14,16 @@ const latest = rest.slice(0, 9);
 const sections = categories
   .map((c) => ({ c, items: rest.filter((a) => a.data.category === c.slug).slice(0, 3) }))
   .filter((s) => s.items.length);
+const siteLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: siteName,
+  url: new URL(url(), Astro.site).toString(),
+  inLanguage: 'fr-FR',
+  description: 'Journal satirique : tous les articles sont des fictions humoristiques.',
+};
 ---
-<Base current="home">
+<Base current="home" jsonLd={siteLd}>
   {!lead ? (
     <p class="empty">Le journal est en cours d'impression. Les premiers articles arrivent très bientôt.</p>
   ) : (

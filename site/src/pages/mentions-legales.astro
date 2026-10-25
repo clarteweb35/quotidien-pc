@@ -1,8 +1,9 @@
 ---
 import Base from '../layouts/Base.astro';
 import { siteName, satireNotice, url } from '../lib/site';
-import { publisher, contactEmail, host, updatedAt, analyticsId, analyticsName, nonProfessional } from '../lib/legal';
+import { publisher, contactEmail, reportEmail, host, updatedAt, analyticsId, analyticsName, nonProfessional } from '../lib/legal';
 const mailto = `mailto:${contactEmail}`;
+const reportMailto = `mailto:${reportEmail}`;
 const updated = new Intl.DateTimeFormat('fr-FR', { dateStyle: 'long', timeZone: 'Europe/Paris' }).format(new Date(`${updatedAt}T12:00:00Z`));
 ---
 <Base title="Mentions légales" description="Mentions légales, hébergeur, données personnelles et avertissement satirique.">
@@ -37,7 +38,7 @@ const updated = new Intl.DateTimeFormat('fr-FR', { dateStyle: 'long', timeZone: 
     <p>Les textes, illustrations, logo et éléments graphiques de {siteName} sont protégés. Toute reproduction, même partielle, nécessite l'autorisation préalable de l'éditeur, sauf courte citation accompagnée d'un lien vers l'article d'origine.</p>
 
     <h2>Signalement, rectification et droit de réponse</h2>
-    <p>Pour demander la modification ou le retrait d'un contenu, ou pour exercer un droit de réponse, écrivez à <a href={mailto}>{contactEmail}</a> en indiquant l'adresse de la page concernée et le motif de votre demande. Nous répondons dans les meilleurs délais.</p>
+    <p>Pour demander la modification ou le retrait d'un contenu, ou pour exercer un droit de réponse, écrivez à <a href={reportMailto}>{reportEmail}</a> en indiquant l'adresse de la page concernée et le motif de votre demande. Nous répondons dans les meilleurs délais.</p>
 
     <h2 id="donnees">Données personnelles et cookies</h2>
     {analyticsId ? (

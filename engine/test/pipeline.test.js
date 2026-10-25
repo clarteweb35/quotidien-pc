@@ -287,3 +287,19 @@ test('rafale: un article publie avant la panne est conserve', async () => {
   assert.equal(ctx.articles().length, 1);
   cleanup(ctx);
 });
+
+test('purge: journaux et bilans trop anciens supprimes, recents conserves', async () => {
+  const fs = await import('node:fs');
+  const path = await import('node:path');
+  const ctx = makeCtx();
+  for (const [dir, name] of [['logs', '2026-01-01.jsonl'], ['logs', '2026-10-20.jsonl'], ['reports', '2025-01-01.json'], ['reports', '2026-10-20.json']]) {
+    fs.mkdirSync(path.join(ctx.paths.data, dir), { recursive: true });
+    fs.writeFileSync(path.join(ctx.paths.data, dir, name), '{}');
+  }
+  ctx.store.pruneFiles('2026-10-25', { logDays: 30, reportDays: 180 });
+  const has = (d, n) => fs.existsSync(path.join(ctx.paths.data, d, n));
+  assert.equal(has('logs', '2026-01-01.jsonl'), false);
+  assert.equal(has('logs', '2026-10-20.jsonl'), true);
+  assert.equal(has('reports', '2025-01-01.json'), false);
+  assert.equal(has('reports', '2026-10-20.json'), true);
+});

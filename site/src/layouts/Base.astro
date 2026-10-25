@@ -53,7 +53,7 @@ const today = new Intl.DateTimeFormat('fr-FR', { timeZone: 'Europe/Paris', dateS
     <header class="wrap masthead">
       <a href={url()} aria-label={`${siteName} — retour à la une`}>
         <picture>
-          <source srcset={url('brand/logo-1100.webp')} type="image/webp" />
+          <source srcset={`${url('brand/logo-720.webp')} 720w, ${url('brand/logo-1100.webp')} 1100w`} sizes="(min-width: 760px) 721px, 100vw" type="image/webp" />
           <img class="logo" src={url('brand/logo-1100.png')} width="1100" height="367" alt={`${logoName.main} ${logoName.sub.toLowerCase()} — ${tagline}`} fetchpriority="high" />
         </picture>
       </a>
@@ -82,6 +82,7 @@ const today = new Intl.DateTimeFormat('fr-FR', { timeZone: 'Europe/Paris', dateS
           <li><a href={url('redaction/')}>La rédaction</a></li>
           <li><a href={url('a-propos/')}>À propos</a></li>
           <li><a href={url('mentions-legales/')}>Mentions légales</a></li>
+          <li><a href={url('plan-du-site/')}>Plan du site</a></li>
           <li><a href={url('rss.xml')}>Flux RSS</a></li>
           {analyticsId && !csp && <li><a href={url('mentions-legales/#donnees')} data-open-consent>Gérer mes cookies</a></li>}
         </ul>

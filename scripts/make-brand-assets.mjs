@@ -16,6 +16,7 @@ const ivoryLayer = await sharp({ create: { width: 1100, height: Math.round((724 
 const logo = await sharp(header).composite([{ input: ivoryLayer, blend: 'multiply' }]).png({ compressionLevel: 9, palette: true, quality: 90 }).toBuffer();
 await sharp(logo).toFile(path.join(out, 'logo-1100.png'));
 await sharp(logo).webp({ lossless: true }).toFile(path.join(out, 'logo-1100.webp'));
+await sharp(logo).resize({ width: 720 }).webp({ lossless: true }).toFile(path.join(out, 'logo-720.webp')); // variante mobile (srcset)
 
 // Image de partage par defaut 1200x630: logo centre sur papier ivoire, filets rouge sombre, mention satirique.
 const W = 1200, H = 630;

@@ -19,11 +19,11 @@ const img = await illustration(article, lead ? 1280 : 800, manualImageCredit);
       {who && <p class="byline">Par {who.name}</p>}
       <div class="meta">{formatDate(d.publishedAt)}</div>
     </div>
-    {img && <a href={href} tabindex="-1" aria-hidden="true"><img class="photo" src={img.src} alt="" width={img.width} height={img.height} fetchpriority="high" /></a>}
+    {img && <a href={href} tabindex="-1" aria-hidden="true"><img class="photo" src={img.src} srcset={img.srcset} sizes="(min-width: 1000px) 660px, 100vw" alt="" width={img.width} height={img.height} fetchpriority="high" /></a>}
   </article>
 ) : (
   <article class:list={['card', { 'no-media': !img }]}>
-    {img ? <a href={href} tabindex="-1" aria-hidden="true"><img class="photo" src={img.src} alt="" width={img.width} height={img.height} loading="lazy" /></a> : <a class="kicker" href={url(`rubrique/${cat.slug}/`)}>{cat.name}</a>}
+    {img ? <a href={href} tabindex="-1" aria-hidden="true"><img class="photo" src={img.src} srcset={img.srcset} sizes="(min-width: 1000px) 360px, 100vw" alt="" width={img.width} height={img.height} loading="lazy" /></a> : <a class="kicker" href={url(`rubrique/${cat.slug}/`)}>{cat.name}</a>}
     <h3><a href={href}>{d.title}</a></h3>
     <p>{d.chapo}</p>
     {who && <p class="byline">Par {who.name}</p>}

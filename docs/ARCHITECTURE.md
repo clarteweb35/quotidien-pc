@@ -91,3 +91,14 @@ Relecteur Gemini : humour, cohérence, risque, citation à une personne réelle,
 - Le site est statique : aucune API ni base à attaquer. Le contenu des articles est du texte brut échappé.
 - Administration : la page `/admin/` ne contient aucun secret. Elle appelle `api.github.com` avec **votre** jeton à granularité fine, limité à ce dépôt, gardé dans l'onglet (sessionStorage). L'autorité est celle de GitHub (2FA, révocation du jeton). Une CSP restreint la page à `api.github.com`. Un visiteur sans jeton ne peut rien faire.
 - Les flux RSS sont traités comme des données : le prompt demande d'ignorer toute instruction qu'ils contiendraient, et la sortie est de toute façon validée.
+
+## Site public : référencement, performance, marchés
+
+| Sujet | Mise en œuvre |
+|---|---|
+| Moteurs de recherche | `sitemap-index.xml` avec `lastmod` des articles (date de publication), `robots.txt`, URL canoniques, Open Graph, JSON-LD `SatiricalArticle` (articles) et `WebSite` (accueil) |
+| Lecteurs | rubriques, tags, flux RSS, **plan du site** (`/plan-du-site/`) lié dans le pied de page |
+| Performance | images en `srcset` (demi-taille pour mobile), logo `logo-720.webp`, CSS en ligne (aucune requête bloquante). Limite : GitHub Pages impose un cache de 10 min ; un CDN devant le domaine (ex. Cloudflare) permettrait un cache long sur `/_astro/` et `/brand/` |
+| Rubrique Économie | bloc « Marchés » (`config/marches.json`, `site/src/lib/marches.ts`) : cotations Yahoo Finance récupérées à la construction, titres du fil éco, repère historique. Dernier bon résultat gardé 48 h dans `site/.cache/` (cache Actions). Redéploiement planifié 3 fois par jour en semaine |
+| Hygiène des données | `data/logs` purgé après 30 jours, `data/reports` après 180 jours (`retention` dans `config/engine.json`) |
+| Tests du site | `engine/test/site.test.js` construit le site hors ligne (`MARCHES_OFFLINE=1`) et vérifie les pages clés |

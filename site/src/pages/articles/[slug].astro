@@ -49,7 +49,7 @@ const jsonLd = {
     <Share title={d.title} url={canonicalUrl} id="share-top" />
     {img && (
       <figure class="illus">
-        <img src={img.src} alt={img.alt} width={img.width} height={img.height} fetchpriority="high" />
+        <img src={img.src} srcset={img.srcset} sizes="(min-width: 760px) 720px, 100vw" alt={img.alt} width={img.width} height={img.height} fetchpriority="high" />
         <figcaption>{img.credit} — illustration satirique, sans rapport avec des faits réels.</figcaption>
       </figure>
     )}

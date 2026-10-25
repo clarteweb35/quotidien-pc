@@ -14,7 +14,7 @@ export function manualEntry(article: Article) {
   return ref ? byRef.get(ref.toUpperCase()) ?? null : null;
 }
 
-export interface Illustration { src: string; width: number; height: number; alt: string; credit: string; manualKey: string | null }
+export interface Illustration { src: string; srcset?: string; width: number; height: number; alt: string; credit: string; manualKey: string | null }
 
 /** Illustration d'un article: image deposee a la main (prioritaire), sinon image generee par le moteur, sinon rien. */
 export async function illustration(article: Article, width: number, manualCredit: string): Promise<Illustration | null> {
@@ -26,7 +26,11 @@ export async function illustration(article: Article, width: number, manualCredit
     const w = Math.min(width, manual.meta.width);
     const h = Math.round((w * 9) / 16);
     const img = await getImage({ src: manual.meta, width: w, height: h, fit: 'cover', position: 'attention', format: 'webp', quality: 80 });
-    return { src: img.src, width: w, height: h, alt, credit: manualCredit, manualKey: manual.key };
+    // Variante reduite pour les ecrans etroits (srcset): PageSpeed signalait des images 2x trop lourdes.
+    const small = Math.round(w / 2);
+    const half = small >= 320 ? await getImage({ src: manual.meta, width: small, height: Math.round((small * 9) / 16), fit: 'cover', position: 'attention', format: 'webp', quality: 80 }) : null;
+    const srcset = half ? `${half.src} ${small}w, ${img.src} ${w}w` : undefined;
+    return { src: img.src, srcset, width: w, height: h, alt, credit: manualCredit, manualKey: manual.key };
   }
   if (d.image) return { src: url(d.image), width: 1280, height: 720, alt, credit: d.imageCredit ?? 'Illustration générée par IA', manualKey: null };
   return null;

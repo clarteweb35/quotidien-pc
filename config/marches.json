@@ -1,0 +1,32 @@
+{
+  "note": "Bloc 'Marches' de la rubrique Economie. Cotations recuperees a la construction du site (Yahoo Finance, endpoint public non officiel, donnees differees, a titre indicatif). Si la recuperation echoue, la ligne ou le bloc est masque. 'enabled: false' coupe tout le bloc.",
+  "enabled": true,
+  "feedUrl": "https://www.lemonde.fr/economie/rss_full.xml",
+  "feedName": "Le Monde - Économie",
+  "headlines": 5,
+  "quotes": [
+    { "symbol": "^FCHI", "label": "CAC 40", "kind": "index" },
+    { "symbol": "^STOXX50E", "label": "Euro Stoxx 50", "kind": "index" },
+    { "symbol": "^GSPC", "label": "S&P 500", "kind": "index" },
+    { "symbol": "EURUSD=X", "label": "Euro / dollar", "kind": "fx" },
+    { "symbol": "BZ=F", "label": "Pétrole (Brent)", "kind": "commodity" },
+    { "symbol": "GC=F", "label": "Or (once)", "kind": "commodity" },
+    { "symbol": "MC.PA", "label": "LVMH", "kind": "stock" },
+    { "symbol": "TTE.PA", "label": "TotalEnergies", "kind": "stock" },
+    { "symbol": "AIR.PA", "label": "Airbus", "kind": "stock" },
+    { "symbol": "OR.PA", "label": "L'Oréal", "kind": "stock" }
+  ],
+  "history": [
+    { "month": 5, "day": 17, "year": 1792, "text": "Vingt-quatre courtiers signent l'accord du Buttonwood, sous un arbre de Wall Street : la future Bourse de New York est née." },
+    { "month": 9, "day": 24, "year": 1869, "text": "Le « vendredi noir » de l'or : une tentative d'accaparement du marché américain de l'or s'effondre et fait plonger la Bourse." },
+    { "month": 10, "day": 24, "year": 1929, "text": "« Jeudi noir » à Wall Street : la panique de la Bourse de New York ouvre la voie à la crise des années 1930." },
+    { "month": 7, "day": 22, "year": 1944, "text": "Fin de la conférence de Bretton Woods : le dollar devient la pièce maîtresse du système monétaire mondial." },
+    { "month": 1, "day": 1, "year": 1960, "text": "Le « nouveau franc » entre en vigueur en France : cent anciens francs valent désormais un franc." },
+    { "month": 8, "day": 15, "year": 1971, "text": "Le président Nixon suspend la convertibilité du dollar en or. Les monnaies se mettent à flotter." },
+    { "month": 10, "day": 19, "year": 1987, "text": "« Lundi noir » : le Dow Jones perd plus de 22 % en une séance, la plus forte chute quotidienne de son histoire." },
+    { "month": 9, "day": 16, "year": 1992, "text": "« Mercredi noir » : la livre sterling quitte le système monétaire européen sous la pression des marchés." },
+    { "month": 3, "day": 10, "year": 2000, "text": "Le Nasdaq atteint son sommet de la bulle internet, avant de perdre près de 80 % de sa valeur en deux ans." },
+    { "month": 1, "day": 1, "year": 2002, "text": "Pièces et billets en euros entrent en circulation dans douze pays européens." },
+    { "month": 9, "day": 15, "year": 2008, "text": "La banque américaine Lehman Brothers dépose le bilan : la crise financière devient mondiale." }
+  ]
+}

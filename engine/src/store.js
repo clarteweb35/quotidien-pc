@@ -84,6 +84,20 @@ export class Store {
     const qd = cfg.engine.retention.quarantineDays;
     this.quarantine.items = this.quarantine.items.filter((i) => i.status === 'quarantined' || !older(i.createdAt.slice(0, 10), qd));
     this.usage.entries = this.usage.entries.filter((e) => !older(e.date, 62));
+    if (this.persist) this.pruneFiles(todayIso, cfg.engine.retention);
+  }
+
+  /** Supprime les journaux (logDays) et bilans quotidiens (reportDays) trop anciens; le nom du fichier porte la date. */
+  pruneFiles(todayIso, retention) {
+    const t = Date.parse(todayIso + 'T00:00:00Z');
+    for (const [dir, days] of [['logs', retention.logDays], ['reports', retention.reportDays ?? 180]]) {
+      const folder = path.join(this.paths.data, dir);
+      if (!fs.existsSync(folder)) continue;
+      for (const f of fs.readdirSync(folder)) {
+        const m = /^(?:[a-z-]+)?(\d{4}-\d{2}-\d{2})\.(?:jsonl|json)$/.exec(f);
+        if (m && t - Date.parse(m[1] + 'T00:00:00Z') > days * 86400000) fs.rmSync(path.join(folder, f), { force: true });
+      }
+    }
   }
 
   /** Le cout reel d'un appel est toujours enregistre, meme en simulation a blanc (dry-run). */

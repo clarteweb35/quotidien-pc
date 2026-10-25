@@ -8,7 +8,9 @@ name: Déploiement du site
 on:
   push:
     branches: [main]
-    paths: ['site/**', 'config/categories.json', 'config/editorial.json', 'package.json']
+    paths: ['site/**', 'config/categories.json', 'config/editorial.json', 'config/marches.json', 'config/legal.json', 'package.json']
+  schedule:
+    - cron: '15 7,12,17 * * 1-5'   # rafraichit les cours de la rubrique Economie
   workflow_call:
   workflow_dispatch:
 
@@ -48,6 +50,12 @@ jobs:
           echo "Adresse du site: $url$base"
       - name: Identifier le commit construit
         run: echo "BUILD_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+      - name: Restaurer les derniers cours connus
+        uses: actions/cache@v4
+        with:
+          path: site/.cache
+          key: marches-${{ github.run_id }}
+          restore-keys: marches-
       - name: Construire le site
         run: npm run site:build
       - name: Domaine personnalisé

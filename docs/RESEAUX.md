@@ -30,7 +30,7 @@ Bluesky est un réseau social gratuit proche de Twitter/X : on publie de courts 
 
 ### 1. Créer le compte
 1. Allez sur https://bsky.app puis **Create account**.
-2. Choisissez l'hébergeur par défaut (**Bluesky Social**), saisissez un e-mail (vous pouvez utiliser `clarte.web35+qpc@gmail.com`) et un mot de passe.
+2. Choisissez l'hébergeur par défaut (**Bluesky Social**), saisissez un e-mail (par exemple `redaction@quotidien-pc.fr`) et un mot de passe.
 3. Choisissez un **identifiant** (handle), par exemple `quotidien-pc.bsky.social`. Notez-le exactement.
 4. Validez l'e-mail reçu.
 

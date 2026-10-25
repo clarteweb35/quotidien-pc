@@ -7,3 +7,4 @@ data/*.tmp
 .env.*
 !.env.example
 *.log
+site/.cache/
