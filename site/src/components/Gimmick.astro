@@ -208,9 +208,14 @@ const icones = ['☀️', '⛅', '☁️', '🌧️', '⛈️', '❄️', '🌪�
   const absurdes = ['🐴', '🍹', '🦆', '🧀', '🚲', '🎺', '🥐', '🛸', '🐌', '🍕', '🦕', '🪑'];
   const caps = document.querySelectorAll<HTMLElement>('[data-gm="cap"]');
   if (caps.length) {
+    // Les icones et temperatures ne changent jamais sous les yeux du visiteur: seulement quand la capitale est hors de l'ecran (defilement).
+    const visibles = new Set<Element>();
+    const io = new IntersectionObserver((entrees) => entrees.forEach((e) => (e.isIntersecting ? visibles.add(e.target) : visibles.delete(e.target))));
+    caps.forEach((li) => io.observe(li));
     setInterval(() => {
       caps.forEach((li) => {
-        if (Math.random() < 0.35) {
+        if (visibles.has(li)) return;
+        if (Math.random() < 0.5) {
           const liste = Math.random() < 0.22 ? absurdes : icones;
           li.querySelector('.cap-ico')!.textContent = liste[Math.floor(Math.random() * liste.length)];
           const t = +li.dataset.t! + Math.round((Math.random() - 0.5) * 8);
