@@ -8,7 +8,7 @@
   "scripts": {
     "engine": "node engine/src/cli.js",
     "simulate": "node engine/src/cli.js simulate",
-    "test": "node --test \"engine/test/*.test.js\"",
+    "test": "node --test --test-concurrency=1 \"engine/test/*.test.js\"",
     "site:dev": "npm run dev -w site",
     "site:build": "npm run build -w site"
   },
