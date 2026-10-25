@@ -193,3 +193,21 @@ footer ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 16px; f
   .card .photo, .card h3 a { transition: none; }
   .card:hover .photo { transform: none; }
 }
+
+/* Barre de progression de lecture (Chrome/Edge: liee au defilement, sans JavaScript) */
+.progress { display: none; }
+@supports (animation-timeline: scroll()) {
+  .progress { display: block; position: fixed; top: 0; left: 0; width: 100%; height: 4px; z-index: 40; background: var(--accent); transform-origin: 0 50%; transform: scaleX(0); animation: read-progress linear both; animation-timeline: scroll(root); }
+}
+@keyframes read-progress { to { transform: scaleX(1); } }
+
+/* Transitions entre pages (Chrome/Edge 126+, navigation dans le site): fondu court; ignore ailleurs */
+@view-transition { navigation: auto; }
+::view-transition-old(root) { animation: 180ms ease-out both vt-out; }
+::view-transition-new(root) { animation: 260ms ease-in both vt-in; }
+@keyframes vt-out { to { opacity: 0; } }
+@keyframes vt-in { from { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .progress { display: none; }
+  @view-transition { navigation: none; }
+}

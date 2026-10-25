@@ -37,6 +37,7 @@ const jsonLd = {
 };
 ---
 <Base title={d.title} description={d.description} type="article" current={cat.slug} jsonLd={jsonLd} ogImage={url(`og/${d.slug}.png`)}>
+  <div class="progress" aria-hidden="true"></div>
   <article class="article">
     <a class="kicker" href={url(`rubrique/${cat.slug}/`)}>{cat.name}</a>
     <h1>{d.title}</h1>
