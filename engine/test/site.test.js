@@ -80,4 +80,22 @@ test('petites annonces: page, menu, donnees coherentes et mention obligatoire', 
   assert.ok(page('.').includes('>Petites annonces<'), 'lien dans le menu');
 });
 
+test('rencontres: references uniques, photos existantes, page et menu', () => {
+  const data = JSON.parse(fs.readFileSync(path.join(ROOT, 'config/rencontres.json'), 'utf8'));
+  const refs = data.annonces.map((a) => a.ref);
+  assert.equal(new Set(refs).size, refs.length, 'references uniques');
+  assert.ok(refs.every((r) => Number.isInteger(r) && r > 0));
+  const slugs = new Set(data.categories.map((c) => c.slug));
+  for (const a of data.annonces) {
+    assert.ok(slugs.has(a.cat), `categorie inconnue: RÉF. ${a.ref}`);
+    if (a.photo) assert.ok(fs.existsSync(path.join(ROOT, 'site/public/rencontres', a.photo)), `photo absente: ${a.photo}`);
+  }
+  assert.ok(data.descriptionSeo.length <= 160, 'meta description <= 160 caracteres');
+  const html = page('rencontres');
+  assert.equal((html.match(/class="rc-ref/g) || []).length, data.annonces.length);
+  assert.ok(html.includes('RÉF. 001') && html.includes('fictives et satiriques'));
+  assert.ok(!/href="(mailto|tel):/.test(html.slice(html.indexOf('rc-sommaire'), html.indexOf('rc-mention'))), 'aucun lien vers des coordonnees');
+  assert.ok(page('.').includes('href="/rencontres/"'), 'lien dans le menu');
+});
+
 test.after(() => fs.rmSync(out, { recursive: true, force: true }));

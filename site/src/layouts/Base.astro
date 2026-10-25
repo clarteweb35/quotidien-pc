@@ -79,6 +79,7 @@ const today = new Intl.DateTimeFormat('fr-FR', { timeZone: 'Europe/Paris', dateS
             <li><a href={url(`rubrique/${c.slug}/`)} aria-current={current === c.slug ? 'page' : undefined}>{c.name}</a></li>
           ))}
           <li><a href={url('petites-annonces/')} aria-current={current === 'annonces' ? 'page' : undefined}>Petites annonces</a></li>
+          <li><a href={url('rencontres/')} aria-current={current === 'rencontres' ? 'page' : undefined}>Rencontres</a></li>
           <li><a href={url('jeux/')} aria-current={current === 'jeux' ? 'page' : undefined}>Jeux</a></li>
         </ul>
       </div>

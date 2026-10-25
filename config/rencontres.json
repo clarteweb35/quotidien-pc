@@ -1,0 +1,150 @@
+{
+  "note": "Rubrique 'Rencontres & affinites' (page /rencontres/). Toutes les annonces sont FICTIVES et satiriques; aucune coordonnee, aucun formulaire, aucune messagerie. 'ref' = numero unique et STABLE (ne jamais renumeroter, ne jamais reutiliser un numero retire). Pour ajouter une annonce: prendre le numero suivant, choisir 'cat' parmi 'categories'. Pour en retirer une: supprimer son objet (les autres references ne changent pas). Photo (facultative): 'photo' = fichier de site/public/rencontres/ + 'photoAlt'; une photo introuvable est simplement omise. Les portraits doivent etre des illustrations fictives.",
+  "titre": "Rencontres & affinités",
+  "titreSeo": "Rencontres & affinités : petites annonces de rencontres insolites",
+  "descriptionSeo": "Petites annonces de rencontres insolites : des annonces sentimentales humoristiques, fictives, dans l'esprit des rubriques matrimoniales d'un journal satirique.",
+  "intro": "Rencontres, affinités et petites annonces de cœur, comme autrefois dans la presse imprimée : des personnes sincères, des attentes ordinaires, et, quelque part vers la troisième ligne, un détail qui change tout.",
+  "chapeau": "Les réponses ne sont pas transmises : toutes les annonces ci-dessous sont fictives, et personne n'a jamais rien promis à personne.",
+  "mention": "Annonces fictives et satiriques. Les profils ne correspondent à aucune personne réelle ni à aucun inscrit, et les références (RÉF.) sont de simples numéros d'imprimerie : elles ne permettent de joindre personne.",
+  "categories": [
+    { "slug": "hf", "nom": "Hommes cherchent femmes" },
+    { "slug": "fh", "nom": "Femmes cherchent hommes" },
+    { "slug": "intellectuelles", "nom": "Affinités intellectuelles" },
+    { "slug": "improbables", "nom": "Unions improbables" },
+    { "slug": "desesperes", "nom": "Cas désespérés" }
+  ],
+  "annonces": [
+    {
+      "ref": 1, "cat": "hf", "profil": "Homme, 48 ans, fonctionnaire territorial",
+      "texte": "Recherche personne compréhensive, appréciant les longues promenades en forêt et les silences administratifs. Je possède un sens aigu de l'organisation et souhaite rencontrer quelqu'un capable de m'émouvoir sans recourir à un formulaire Cerfa.",
+      "recherche": "Personne sérieuse, ponctuelle, sachant remplir un accusé de réception.",
+      "formule": "Réponse appréciée sous quinzaine, délai de rigueur."
+    },
+    {
+      "ref": 2, "cat": "hf", "profil": "Homme, 52 ans, éleveur de lapins nains",
+      "texte": "Sérieux, ponctuel, propriétaire d'une grange que l'on dit très charmante. J'aime les foires agricoles et la lecture attentive des notices. Je ne supporte pas les retards, sauf les miens.",
+      "recherche": "Compagne douce, de préférence capable de dormir à proximité de soixante lapins.",
+      "formule": "Photographie non exigée. Certificat de bonne vue souhaité."
+    },
+    {
+      "ref": 3, "cat": "hf", "profil": "Homme, 39 ans, contrôleur de gestion",
+      "texte": "Je pratique la randonnée avec feuille de route et la tendresse avec des indicateurs. Situation stable, budget équilibré, quelques écarts émotionnels en fin d'exercice.",
+      "recherche": "Une femme souple comme un prévisionnel, pour un suivi mensuel de nos sentiments.",
+      "formule": "Les non-réponses seront provisionnées."
+    },
+    {
+      "ref": 4, "cat": "hf", "profil": "Homme, 61 ans, retraité des transports en commun",
+      "texte": "Compostée depuis longtemps, ma situation est stable. J'apprécie les trajets sans correspondance, les quais déserts et le silence qui précède une annonce.",
+      "recherche": "Dame souhaitant voyager en seconde classe affective, titre de transport valable pour la vie.",
+      "formule": "Aucun voyageur sans billet ne sera retenu."
+    },
+    {
+      "ref": 5, "cat": "hf", "profil": "Homme, 44 ans, géomètre",
+      "texte": "Un mètre quatre-vingts, au centimètre près. Droit dans ses bottes, sans angle mort, attaché aux limites de propriété et aux bornes de repère.",
+      "recherche": "Compagne franche, bornée uniquement quand il le faut.",
+      "formule": "Plan de situation à joindre à la réponse."
+    },
+    {
+      "ref": 6, "cat": "fh", "profil": "Femme, 45 ans, responsable qualité",
+      "texte": "Cuisine, voyage et lit les notices jusqu'au bout. Ne supporte ni les approximations ni les à-peu-près, sauf dans les petites annonces.",
+      "recherche": "Homme sans non-conformité, apte à supporter un audit annuel de la relation.",
+      "formule": "Écarter les réponses sans accusé de réception."
+    },
+    {
+      "ref": 7, "cat": "fh", "profil": "Femme, 58 ans, institutrice retirée",
+      "texte": "Patiente mais ferme. J'aime les promenades en rang par deux, les stylos plume et le calme des fins de journée. Je corrige encore les fautes d'orthographe, par réflexe plus que par plaisir.",
+      "recherche": "Monsieur sachant ranger ses affaires, poser une question sans couper la parole et lever le doigt avant de rire.",
+      "formule": "Les ratures seront comptées."
+    },
+    {
+      "ref": 8, "cat": "fh", "profil": "Femme, 37 ans, apicultrice",
+      "texte": "Je vis au milieu de quarante mille ouvrières, qui travaillent plus que moi et ne se plaignent pas.",
+      "recherche": "Homme capable de rester tranquille au milieu d'un essaim. Si vous craignez les piqûres, abstenez-vous ; si vous craignez le silence, aussi.",
+      "formule": "Réponse sous forme de miel, de préférence toutes fleurs."
+    },
+    {
+      "ref": 9, "cat": "fh", "profil": "Femme, 50 ans, conductrice de car scolaire",
+      "texte": "Je conduis lentement et je pense vite. Trente ans de trajets m'ont appris que tout le monde descend un jour, mais rarement à l'arrêt prévu.",
+      "recherche": "Homme sachant s'arrêter au bon endroit et attendre que tout le monde soit assis.",
+      "formule": "Pas de passager clandestin."
+    },
+    {
+      "ref": 10, "cat": "fh", "profil": "Femme, 42 ans, standardiste",
+      "texte": "Voix posée, écoute attentive, patience de professionnelle. Je sais mettre en attente sans offenser et transférer sans fâcher.",
+      "recherche": "Homme qui décroche à la première sonnerie et ne dit jamais « ce n'est pas mon service ».",
+      "formule": "Merci de ne pas rappeler : je vous rappellerai."
+    },
+    {
+      "ref": 11, "cat": "intellectuelles", "profil": "Homme, 55 ans, professeur de philosophie en disponibilité",
+      "texte": "La rencontre est un concept, comme le jeudi. Je cherche à vérifier l'un par l'autre, en trois parties, sur deux colonnes.",
+      "recherche": "Interlocutrice capable de soutenir six heures de conversation sur l'existence du jeudi.",
+      "formule": "Réponses attendues sous forme de dissertation (introduction, développement, conclusion)."
+    },
+    {
+      "ref": 12, "cat": "intellectuelles", "profil": "Personne, 33 ans, archiviste municipale",
+      "texte": "Mes souvenirs sont classés par ordre alphabétique, avec cote, date et état de conservation. Je n'ai aucune passion non référencée.",
+      "recherche": "Autre archiviste, pour ranger côte à côte nos fonds respectifs.",
+      "formule": "Conservation préventive assurée des deux côtés."
+    },
+    {
+      "ref": 13, "cat": "intellectuelles", "profil": "Homme, 47 ans, correcteur de presse",
+      "texte": "Je pardonne tout, sauf le point-virgule mal placé. La sensibilité est une affaire de ponctuation, et l'amour une question de virgule.",
+      "recherche": "Compagne qui ne confonde pas « quant à » et « quand à », ni ses sentiments avec ses habitudes.",
+      "formule": "Les majuscules sont facultatives, la correction ne l'est pas."
+    },
+    {
+      "ref": 14, "cat": "intellectuelles", "profil": "Femme, 62 ans, docteure en linguistique",
+      "texte": "Un adverbe bien placé peut transformer une vie. J'en suis la preuve, bien que je ne puisse la produire.",
+      "recherche": "Homme prêt à écouter qu'un adverbe, parfois, suffit.",
+      "formule": "Ni orateur, ni muet : un conjoint pour la virgule."
+    },
+    {
+      "ref": 15, "cat": "improbables", "profil": "Homme, 52 ans, collectionneur de timbres",
+      "texte": "Une collection de grande valeur, patiemment classée, que je souhaite partager avec une personne sensible au dentelé.",
+      "recherche": "Femme de lettres (ou d'enveloppes), pour une union tamponnée.",
+      "formule": "Frais de port partagés. Pas de réponse en lettre non affranchie."
+    },
+    {
+      "ref": 16, "cat": "improbables", "profil": "Homme, 49 ans, éleveur de moutons",
+      "texte": "Cent vingt brebis, aucune conversation. Je ne sais pas parler, mais je sais être là.",
+      "recherche": "Bergère à temps plein, expérience du silence exigée, laine fournie.",
+      "formule": "Les moutons ont donné leur accord."
+    },
+    {
+      "ref": 17, "cat": "improbables", "profil": "Homme, 46 ans, mécanicien de précision",
+      "texte": "Je règle les mouvements au centième de millimètre et les disputes au dixième de seconde.",
+      "recherche": "Horlogère patiente, capable de prendre son temps avec moi sans le perdre.",
+      "formule": "Union à remontage manuel."
+    },
+    {
+      "ref": 18, "cat": "improbables", "profil": "Femme, 36 ans, cartomancienne",
+      "texte": "Je sais déjà que vous allez répondre à cette annonce, et ce que vous allez dire. Je sais aussi que cela se passera mal, puis très bien, puis mal.",
+      "recherche": "Homme n'aimant pas les surprises.",
+      "formule": "Ne vous donnez pas la peine de répondre : je sais."
+    },
+    {
+      "ref": 19, "cat": "desesperes", "profil": "Homme, 51 ans, ayant tout essayé sauf rester chez lui",
+      "texte": "Randonnée, sociétés savantes, atelier de poterie, conférence sur la fiscalité, rien n'y a fait. J'ai conservé mon optimisme dans un tiroir.",
+      "recherche": "Quelqu'un, n'importe qui, prêt à lire cette annonce jusqu'au bout.",
+      "formule": "Réponse appréciée, même négative, même tardive."
+    },
+    {
+      "ref": 20, "cat": "desesperes", "profil": "Femme, 59 ans, abonnée à la rubrique",
+      "texte": "J'ai déjà répondu à quarante-sept annonces, toutes les miennes. Je n'ai reçu qu'une réponse, d'ailleurs en retard.",
+      "recherche": "Quelqu'un d'autre pour répondre à la suivante.",
+      "formule": "Pas de réponse automatique, merci."
+    },
+    {
+      "ref": 21, "cat": "desesperes", "profil": "Homme, 44 ans, distrait",
+      "texte": "J'ai égaré mes clés, mes lunettes et le calendrier de mes engagements sentimentaux. Je ne sais plus très bien où j'en suis, ni pourquoi j'ai ouvert ce journal à cette page.",
+      "recherche": "Personne attentive pour retrouver mes clés, mes lunettes et, si possible, ma vie.",
+      "formule": "Récompense : un peu de reconnaissance, ou ce qu'on aura retrouvé."
+    },
+    {
+      "ref": 22, "cat": "desesperes", "profil": "Célibataire endurci, 70 ans, par principe",
+      "texte": "J'ai toujours refusé de me marier, de me lier et de me fiancer. Ma position est sans appel, et je m'y tiens depuis longtemps.",
+      "recherche": "Personne capable de me faire changer d'avis. Aucune candidature ne sera acceptée, ce serait contraire à mes principes.",
+      "formule": "Réponses non souhaitées, mais attendues."
+    }
+  ]
+}
