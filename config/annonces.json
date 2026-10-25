@@ -20,6 +20,9 @@
     { "id": "zerotache", "nom": "Zéro-Tâche SAS", "slogan": "Automatiser l'inutile, enfin.", "palette": "bleu" },
     { "id": "bpcc", "nom": "Bureau paritaire de certification des certifications", "slogan": "Certifié, donc certifiant.", "palette": "vert" },
     { "id": "concept", "nom": "Agence Espace & Concept", "slogan": "Des mètres carrés qui sont avant tout des idées.", "palette": "rouge" },
+    { "id": "zerolarme", "nom": "Assurance Zéro Larme", "palette": "bleu" },
+    { "id": "teflonhuman", "nom": "Teflon Human Corp", "palette": "vert" },
+    { "id": "trobo", "nom": "Agile TroBo", "palette": "rouge" },
     { "id": "miraculex", "nom": "Miraculex®", "slogan": "Le miracle, mais en flacon.", "palette": "or" }
   ],
   "annonces": [
@@ -40,6 +43,11 @@
       "image": "patate.svg", "imageAlt": "Dessin au trait d'une pomme de terre ronde avec quelques yeux et une petite pousse"
     },
     {
+      "id": "pa-039", "cat": "objets", "format": "classique", "ref": "PA-039",
+      "titre": "Vends Renault Zoé de 2013",
+      "texte": "Batterie vendue avec le véhicule — oui, c'est possible. Prévoir une petite révision : depuis la dernière mise à jour de la borne, le système d'exploitation ne parle plus que le vieux breton."
+    },
+    {
       "id": "pa-003", "cat": "objets", "format": "classique", "ref": "PA-003",
       "titre": "Trophée de participation à vendre",
       "prix": "80 €",
@@ -54,10 +62,20 @@
       "texte": "Non utilisées, quelques traces d'usure. Vendues dans leur emballage d'origine (une estrade)."
     },
     {
+      "id": "pa-040", "cat": "objets", "format": "classique", "ref": "PA-040",
+      "titre": "À céder : lot de 400 post-it « Spécifications Agile »",
+      "texte": "Utilisés une seule fois lors d'une intervention de plomberie d'urgence. Mots-clés inscrits : « KPI Fuite », « Sprint Évier », « Retrospective Siphon ». Légèrement humidifiés, mais encore collants."
+    },
+    {
       "id": "pa-005", "cat": "objets", "format": "court", "ref": "PA-005",
       "titre": "Parapluie à usage unique",
       "prix": "4 €",
       "texte": "Le premier usage ne fut pas concluant. Vendu en l'état, c'est-à-dire plié."
+    },
+    {
+      "id": "pa-041", "cat": "objets", "format": "court", "ref": "PA-041",
+      "titre": "Échange 7 000 m² de forêt dans le Morbihan",
+      "texte": "Recherche une méthode infaillible pour faire pleurer un auteur de science-fiction devant son manuscrit, sans utiliser d'oignon."
     },
     {
       "id": "pa-006", "cat": "objets", "format": "classique", "ref": "PA-006",
@@ -81,11 +99,21 @@
       "conditions": "Ce poste n'a pas été créé. Il a été « positionné »."
     },
     {
+      "id": "pa-043", "cat": "emploi", "format": "classique", "ref": "PA-043",
+      "titre": "Cherche plombier senior certifié Scrum Master",
+      "texte": "Pour un projet d'étanchéité sous évier en trois sprints de 45 minutes. Débutants acceptés s'ils possèdent une expérience en Daily Stand-up de salle de bain."
+    },
+    {
       "id": "pa-009", "cat": "emploi", "format": "classique", "ref": "PA-009",
       "titre": "Testeur de salles de réunion",
       "prix": "11,43 €/h",
       "texte": "Vous vous asseyez dans chaque salle de l'entreprise, vous constatez qu'il manque un câble et vous le consignez dans un rapport de trois pages. Expérience souhaitée du rétroprojecteur qui refuse de s'allumer.",
       "conditions": "Casque anti-bruit de couloir fourni. Café non fourni."
+    },
+    {
+      "id": "pa-044", "cat": "emploi", "format": "classique", "ref": "PA-044",
+      "titre": "Recherche cobaye pour test d'imperméabilité",
+      "texte": "Vous avez consommé des PFAS entre 2015 et 2026 ? Venez tester votre niveau de déperlance naturelle sous nos douches de laboratoire. Rémunération en savon neutre."
     },
     {
       "id": "pa-010", "cat": "emploi", "format": "court", "ref": "PA-010",
@@ -99,6 +127,11 @@
       "prix": "À partir de 25 €",
       "texte": "J'interviens avant, pendant et après votre réunion afin de produire une synthèse de ce qui aurait pu être décidé en trois lignes. Forfait cinq heures, compte rendu inclus.",
       "conditions": "Le compte rendu du compte rendu est facturé à part."
+    },
+    {
+      "id": "pa-045", "cat": "services", "format": "classique", "ref": "PA-045",
+      "titre": "Coach en noms concrets",
+      "texte": "Propose des sessions de formation de cinq heures pour commissions culturelles et théâtrales. Apprenez à utiliser au moins un nom commun au cours d'un débat."
     },
     {
       "id": "pa-012", "cat": "services", "format": "classique", "ref": "PA-012",
@@ -146,6 +179,11 @@
       "prix": "450 €/mois",
       "texte": "Espace optimisé, circulation verticale recommandée. Cuisine ouverte sur le séjour, le bureau et la chambre. Eau et électricité disponibles à proximité, selon la définition retenue. Visite en trois minutes, quatre avec les accompagnateurs.",
       "conditions": "Charges : 63 € (lumière naturelle incluse, à condition d'être debout près de la fenêtre)."
+    },
+    {
+      "id": "pa-042", "cat": "immobilier", "format": "classique", "ref": "PA-042",
+      "titre": "Vends studio en bois de 23 m² — état neuf",
+      "texte": "Idéal pour le télétravail, l'hébergement LMNP ou les réunions secrètes d'une commission théâtrale. Capacité : cinq personnes en crise d'abstraction."
     },
     {
       "id": "pa-017", "cat": "immobilier", "format": "classique", "ref": "PA-017", "annonceur": "concept",
@@ -207,6 +245,12 @@
       "conditions": "Essai gratuit de 7 jours, renouvelable tacitement 8 fois. Résiliation par courrier, depuis l'application."
     },
     {
+      "id": "pa-046", "cat": "publicites", "format": "encart", "ref": "PA-046", "annonceur": "zerolarme",
+      "titre": "Assurance « Zéro Larme » pour éditeurs",
+      "accroche": "Votre sérénité éditoriale est notre priorité.",
+      "texte": "Couvrez vos pertes en cas de soumission de romans écrits par IA. Notre détecteur de sel certifie l'authenticité biologique de l'auteur en dix secondes."
+    },
+    {
       "id": "pa-024", "cat": "publicites", "format": "encart", "ref": "PA-024", "annonceur": "zerotache",
       "titre": "Silence Premium",
       "prix": "7,50 €/mois",
@@ -228,11 +272,23 @@
       "conditions": "Bracelet en option. Statistiques du bracelet non disponibles."
     },
     {
+      "id": "pa-047", "cat": "publicites", "format": "encart", "ref": "PA-047", "annonceur": "teflonhuman",
+      "titre": "Teflon Human Corp",
+      "accroche": "Marre de vous sécher après la pluie ?",
+      "texte": "Adoptez le mode de vie PFAS. 100 % étanche, 0 % d'effort."
+    },
+    {
       "id": "pa-026", "cat": "publicites", "format": "classique", "ref": "PA-026",
       "titre": "Formation : devenez influenceur en 4 semaines",
       "prix": "590 €",
       "texte": "Apprenez à réunir une communauté, puis à lui vendre cette formation. En supplément, la formation « Comment vendre la formation » est proposée à 890 €, hors communauté.",
       "conditions": "Résultats non garantis, cohérence entre les deux formations non plus."
+    },
+    {
+      "id": "pa-048", "cat": "publicites", "format": "encart", "ref": "PA-048", "annonceur": "trobo",
+      "titre": "Cabinet de conseil « Agile TroBo »",
+      "accroche": "Votre bricolage mérite une gouvernance à la hauteur de ses risques.",
+      "texte": "Nous transformons vos travaux de bricolage dominicaux en projets industriels complexes avec des tableaux Kanban sur mesure."
     },
     {
       "id": "pa-027", "cat": "offres", "format": "encart", "ref": "PA-027", "annonceur": "miraculex",

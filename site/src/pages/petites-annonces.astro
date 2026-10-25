@@ -57,12 +57,13 @@ const texteRecherche = (a: (typeof annonces)[number]) => [a.titre, a.texte, a.co
             <p class="pa-meta"><span class="pa-badge">{nomCategorie(a.cat)}</span> <span class="pa-ref">Réf. {a.ref}</span>{a.reel && <span class="pa-reel">Vraie annonce</span>}</p>
             <h3 class="pa-titre">{a.reel && a.url ? <a href={a.url} target="_blank" rel="noopener">{a.titre}</a> : a.titre}</h3>
             {a.image && <img class="pa-image" src={url(`annonces/${a.image}`)} width="84" height="84" alt={a.imageAlt ?? ''} loading="lazy" />}
+            {a.accroche && <p class="pa-accroche-pub">{a.accroche}</p>}
             {a.prix && <p class="pa-prix">{a.prix}</p>}
             <p class="pa-texte">{a.texte}</p>
             {a.conditions && <p class="pa-conditions">{a.conditions}</p>}
             {a.reel && a.url && <p class="pa-lien"><a href={a.url} target="_blank" rel="noopener">{a.lien ?? 'Voir le site'} →</a> <span>{a.site}</span></p>}
-            {ann && a.format !== 'encart' && <p class="pa-annonceur">Annonce passée par <strong>{ann.nom}</strong> — <em>{ann.slogan}</em></p>}
-            {a.format === 'encart' && ann && <p class="pa-slogan">{ann.slogan}</p>}
+            {ann && a.format !== 'encart' && <p class="pa-annonceur">Annonce passée par <strong>{ann.nom}</strong>{ann.slogan && <> — <em>{ann.slogan}</em></>}</p>}
+            {a.format === 'encart' && ann?.slogan && <p class="pa-slogan">{ann.slogan}</p>}
           </article>
         );
       })}
@@ -136,6 +137,7 @@ const texteRecherche = (a: (typeof annonces)[number]) => [a.titre, a.texte, a.co
   .pa-encart .pa-meta, .pa-encart .pa-ref { color: inherit; opacity: .85; }
   .pa-encart .pa-badge { color: inherit; }
   .pa-encart .pa-conditions { color: inherit; opacity: .9; font-size: .64rem; line-height: 1.35; }
+  .pa-accroche-pub { font: italic 700 1.02rem/1.35 var(--serif); margin: 0 0 8px !important; }
   .pa-slogan { font: italic .8rem var(--serif); margin-top: 8px !important; }
   .pal-ink { background: #16140f; color: #faf7f2; }
   .pal-bleu { background: #1c3a57; color: #f4f8fb; }
