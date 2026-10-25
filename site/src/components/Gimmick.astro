@@ -30,7 +30,7 @@ const icones = ['☀️', '⛅', '☁️', '🌧️', '⛈️', '❄️', '🌪�
     <div class="gm-viewport"><div class="gm-track">
       {[0, 1].map((copy) => (
         <ul class="gm-list" aria-hidden={copy === 1 ? 'true' : undefined}>
-          {pmu.map((g) => <li><b>{g.who}</b> ({g.ville}) vient de {g.win ? 'gagner' : 'perdre'} <span class={g.win ? 'gm-gain' : 'gm-loss'}>{g.amount} €</span></li>)}
+          {pmu.map((g) => <li><b>{g.who}</b> ({g.ville}) {g.win ? 'gains de' : 'perte de'} <span class={g.win ? 'gm-gain' : 'gm-loss'}>{g.amount} €</span></li>)}
         </ul>
       ))}
     </div></div>
