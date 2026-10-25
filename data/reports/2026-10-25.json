@@ -1,7 +1,7 @@
 {
   "date": "2026-10-25",
   "target": 8,
-  "publishedCount": 7,
+  "publishedCount": 8,
   "articles": [
     {
       "id": "960c9e87e0d0",
@@ -37,6 +37,13 @@
       "title": "Maintien de l’ordre : la Préfecture salue un bilan comptable d’une précision exemplaire",
       "category": "politique",
       "slug": "maintien-de-l-ordre-la-prefecture-salue-un-bilan-comptable"
+    },
+    {
+      "id": "5ca6e3b8dc08",
+      "ref": "261025-07",
+      "title": "« Pourquoi se plaindre des PFAS quand ils rendent nos organismes totalement déperlants ? », s'interroge un expert",
+      "category": "environnement",
+      "slug": "pourquoi-se-plaindre-des-pfas-quand-ils-rendent-nos"
     },
     {
       "id": "856f2cd37b20",
@@ -115,8 +122,13 @@
     {
       "idx": 6,
       "hhmm": "19:30",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 1,
+      "status": "published",
+      "startedAt": "2026-10-25T20:44:24.458Z",
+      "articleId": "5ca6e3b8dc08",
+      "publishedAt": "2026-10-25T20:44:24.458Z",
+      "topicId": "c160dc1fb53e",
+      "lastError": null
     },
     {
       "idx": 7,
@@ -161,18 +173,18 @@
   "rejections": 0,
   "quarantined": 0,
   "api": {
-    "calls": 15,
-    "inputTokens": 37663,
-    "outputTokens": 23885,
-    "costUsd": 0.225193,
+    "calls": 17,
+    "inputTokens": 42729,
+    "outputTokens": 27796,
+    "costUsd": 0.260386,
     "dailyCapUsd": 1,
-    "monthCostUsd": 0.315387,
+    "monthCostUsd": 0.35058,
     "monthlyCapUsd": 15
   },
   "paused": false,
   "lastRun": {
-    "at": "2026-10-25T17:48:05.588Z",
-    "runId": "20261025174805-162c",
+    "at": "2026-10-25T20:44:23.552Z",
+    "runId": "20261025204423-8cf2",
     "published": 1,
     "stopped": null
   }

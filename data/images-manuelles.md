@@ -3,7 +3,12 @@
 Nommez votre image **exactement comme la référence** (ex. `261024-X1.jpg`) et déposez-la dans `site/src/assets/manual/`.
 Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large minimum.
 
-## Sans image (4)
+## Sans image (5)
+
+### `261025-07` — « Pourquoi se plaindre des PFAS quand ils rendent nos organismes totalement déperlants ? », s'interroge un expert
+- Rubrique : environnement
+- Description suggérée : Illustration au style dessin de presse montrant une silhouette de citoyen sous une averse, sur lequel les gouttes d'eau rebondissent parfaitement comme sur une poêle antiadhésive, dans un décor urbain pluvieux.
+- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
 ### `261025-06` — Théâtre : une commission passe cinq heures à débattre de l'extravagance sans réussir à employer un seul nom concret
 - Rubrique : culture

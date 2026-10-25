@@ -448,6 +448,14 @@
       "seenAt": "2026-10-25T17:48:06.343Z",
       "status": "used",
       "usedAt": "2026-10-25T17:48:06.343Z"
+    },
+    "c160dc1fb53e": {
+      "title": "« L’usine Chemours a apporté des emplois. Mais à quel prix ? » : les PFAS et leurs dégâts au cœur du récit « Facteur X » dont « Le Monde » dévoile les extraits",
+      "url": "https://www.lemonde.fr/idees/article/2026/10/25/l-usine-chemours-a-apporte-des-emplois-mais-a-quel-prix-les-pfas-et-leurs-degats-au-c-ur-du-recit-facteur-x-dont-le-monde-devoile-les-extraits_6800107_3232.html",
+      "category": "environnement",
+      "seenAt": "2026-10-25T20:44:24.458Z",
+      "status": "used",
+      "usedAt": "2026-10-25T20:44:24.458Z"
     }
   },
   "slots": {
@@ -562,6 +570,15 @@
         "topicId": "160a76077c21",
         "lastError": null
       },
+      "6": {
+        "attempts": 1,
+        "status": "published",
+        "startedAt": "2026-10-25T20:44:24.458Z",
+        "articleId": "5ca6e3b8dc08",
+        "publishedAt": "2026-10-25T20:44:24.458Z",
+        "topicId": "c160dc1fb53e",
+        "lastError": null
+      },
       "x1": {
         "attempts": 1,
         "status": "published",
@@ -592,8 +609,8 @@
     }
   },
   "lastRun": {
-    "at": "2026-10-25T17:48:05.588Z",
-    "runId": "20261025174805-162c",
+    "at": "2026-10-25T20:44:23.552Z",
+    "runId": "20261025204423-8cf2",
     "published": 1,
     "stopped": null
   }

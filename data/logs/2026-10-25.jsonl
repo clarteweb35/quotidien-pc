@@ -88,3 +88,26 @@
 {"ts":"2026-10-25T17:52:09.650Z","runId":"20261025174805-162c","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":895,"outputTokens":77,"costUsd":0.000461}
 {"ts":"2026-10-25T17:52:09.650Z","runId":"20261025174805-162c","level":"info","event":"judge.result","slot":"2026-10-25#5","attempt":1,"humor":7,"coherence":9,"risk":1,"issues":[]}
 {"ts":"2026-10-25T17:52:09.652Z","runId":"20261025174805-162c","level":"info","event":"publish.ok","slot":"2026-10-25#5","id":"fd6cc0d79717","slug":"theatre-une-commission-passe-cinq-heures-a-debattre-de-l","url":"/articles/theatre-une-commission-passe-cinq-heures-a-debattre-de-l/","attempt":1,"dryRun":false}
+{"ts":"2026-10-25T20:44:23.562Z","runId":"20261025204423-8cf2","level":"info","event":"cycle.start","date":"2026-10-25","due":["2026-10-25#6"],"remainingToday":1,"dryRun":false}
+{"ts":"2026-10-25T20:44:24.457Z","runId":"20261025204423-8cf2","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":31,"kept":25}
+{"ts":"2026-10-25T20:44:24.457Z","runId":"20261025204423-8cf2","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-10-25T20:44:24.457Z","runId":"20261025204423-8cf2","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":18}
+{"ts":"2026-10-25T20:44:24.457Z","runId":"20261025204423-8cf2","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":24}
+{"ts":"2026-10-25T20:44:24.457Z","runId":"20261025204423-8cf2","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":16}
+{"ts":"2026-10-25T20:44:24.457Z","runId":"20261025204423-8cf2","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":20,"kept":20}
+{"ts":"2026-10-25T20:44:24.457Z","runId":"20261025204423-8cf2","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":13}
+{"ts":"2026-10-25T20:44:24.457Z","runId":"20261025204423-8cf2","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":10}
+{"ts":"2026-10-25T20:44:24.457Z","runId":"20261025204423-8cf2","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":2}
+{"ts":"2026-10-25T20:44:24.457Z","runId":"20261025204423-8cf2","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":8}
+{"ts":"2026-10-25T20:44:24.457Z","runId":"20261025204423-8cf2","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":10}
+{"ts":"2026-10-25T20:44:24.457Z","runId":"20261025204423-8cf2","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":4}
+{"ts":"2026-10-25T20:44:24.457Z","runId":"20261025204423-8cf2","level":"info","event":"collect.done","items":166}
+{"ts":"2026-10-25T20:44:24.465Z","runId":"20261025204423-8cf2","level":"info","event":"topic.selection","slot":"2026-10-25#6","target":"environnement","candidates":166,"rejected":2,"chosen":"« L’usine Chemours a apporté des emplois. Mais à quel prix ? » : les PFAS et leurs dégâts au cœur du récit « Facteur X » dont « Le Monde » dévoile les extraits","score":5}
+{"ts":"2026-10-25T20:44:24.915Z","runId":"20261025204423-8cf2","level":"warn","event":"gemini.retry","purpose":"generate","status":503,"attempt":1,"delayMs":4253}
+{"ts":"2026-10-25T20:44:29.631Z","runId":"20261025204423-8cf2","level":"warn","event":"gemini.retry","purpose":"generate","status":503,"attempt":2,"delayMs":8868}
+{"ts":"2026-10-25T20:44:39.379Z","runId":"20261025204423-8cf2","level":"warn","event":"gemini.retry","purpose":"generate","status":503,"attempt":3,"delayMs":16707}
+{"ts":"2026-10-25T20:46:24.694Z","runId":"20261025204423-8cf2","level":"warn","event":"gemini.fallback_model","from":"gemini-3.8-flash","to":"gemini-3.6-flash"}
+{"ts":"2026-10-25T20:46:47.058Z","runId":"20261025204423-8cf2","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4013,"outputTokens":3816,"costUsd":0.03464}
+{"ts":"2026-10-25T20:47:00.958Z","runId":"20261025204423-8cf2","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":1053,"outputTokens":95,"costUsd":0.000553}
+{"ts":"2026-10-25T20:47:00.958Z","runId":"20261025204423-8cf2","level":"info","event":"judge.result","slot":"2026-10-25#6","attempt":1,"humor":8,"coherence":9,"risk":1,"issues":[]}
+{"ts":"2026-10-25T20:47:00.960Z","runId":"20261025204423-8cf2","level":"info","event":"publish.ok","slot":"2026-10-25#6","id":"5ca6e3b8dc08","slug":"pourquoi-se-plaindre-des-pfas-quand-ils-rendent-nos","url":"/articles/pourquoi-se-plaindre-des-pfas-quand-ils-rendent-nos/","attempt":1,"dryRun":false}
