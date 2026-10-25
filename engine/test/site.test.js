@@ -113,6 +113,9 @@ test('accueil: La Manchette de la Manchette; articles: publicite fictive tiree d
   assert.ok(home.indexOf('La Manchette de la Manchette') < home.indexOf('class="flash"'), 'la manchette est au-dessus du fil À l\'instant');
   assert.ok(home.includes('sélectionnées par Madame de Valmorin') && home.includes('href="/rencontres/"'), 'bandeau Rencontres sur l\'accueil');
   const debut = home.indexOf('Dernières nouvelles');
+  const apresTitre = home.slice(debut);
+  const avantBandeau = apresTitre.slice(0, apresTitre.indexOf('class="bandeau-rc'));
+  assert.equal((avantBandeau.match(/<article class="card/g) || []).length, 6, 'le bandeau Rencontres vient après les 6 premières dernières nouvelles');
   assert.ok(debut > 0 && !home.slice(debut).includes('class="card edito'), 'pas d\'edito dans Dernières nouvelles');
   const data = JSON.parse(fs.readFileSync(path.join(ROOT, 'config/annonces.json'), 'utf8'));
   assert.ok(data.annonces.filter((a) => a.pub && !a.reel).length >= 5, 'au moins 5 annonces utilisables comme publicites');

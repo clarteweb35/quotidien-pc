@@ -46,13 +46,14 @@ const siteLd = {
         </div>
       )}
       <Marches reverse limit={6} />
-      <BandeauRencontres />
       <Card article={lead} lead />
       <Gimmick slug="monde" pill limit={6} />
       {latest.length > 0 && (
         <>
           <h2 class="section-title">Dernières nouvelles (inventées)</h2>
-          <div class="grid">{latest.map((a) => <Card article={a} />)}</div>
+          <div class="grid">{latest.slice(0, 6).map((a) => <Card article={a} />)}</div>
+          <BandeauRencontres />
+          {latest.length > 6 && <div class="grid">{latest.slice(6).map((a) => <Card article={a} />)}</div>}
         </>
       )}
     </>
