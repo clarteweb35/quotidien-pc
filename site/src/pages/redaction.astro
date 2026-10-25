@@ -67,6 +67,10 @@ const backstage = staff('coulisses');
     {secretariat.length > 0 && (
       <section>
         <h2>Secrétariat</h2>
+        <figure class="bureau">
+          <img src={url('redaction/bureaux/secretariat.webp')} width="800" height="450" loading="lazy" alt="Le bureau d'accueil, vide, sous le logo du journal" />
+          <figcaption>{shotCaption('secretariat')}</figcaption>
+        </figure>
         <ul class="team">
           {secretariat.map((p: any) => (
             <li id={authorSlug(p.name)}>

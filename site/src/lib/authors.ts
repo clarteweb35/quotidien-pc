@@ -45,6 +45,6 @@ export const lucasBureau = { alt: "Un minuscule bureau sous un escalier, entour�
 /** Heure de prise de vue de chaque photo de bureau (16 h 53 pour la premiere, une minute de plus a chaque photo, 17 h 02 pour la derniere). */
 export const bureauTime: Record<string, string> = {
   politique: '16 h 53', economie: '16 h 54', 'societe-culture': '16 h 55', tech: '16 h 56', monde: '16 h 57', sport: '16 h 58',
-  'faits-divers': '16 h 59', juridique: '17 h 00', 'vie-entreprise': '17 h 01', lucas: '17 h 02',
+  secretariat: '16 h 59', lucas: '17 h 02',
 };
 export const shotCaption = (file: string) => `Photographie prise à ${bureauTime[file]} : les bureaux étaient vides.`;
