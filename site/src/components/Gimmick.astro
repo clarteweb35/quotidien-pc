@@ -11,7 +11,8 @@ const prenoms = ['Maurice', 'Josette', 'Gérard', 'Huguette', 'Raymond', 'Odette
 const lettres = 'ABCDEFGHJKLMNPRSTV';
 const villes = ['Vitré', 'Rennes', 'Domagné', 'Laval', 'Fougères', 'Nantes', 'Saint-Malo', 'Lorient', 'Angers', 'Le Mans', 'Cholet', 'Châteaubriant', 'Lille', 'Roubaix', 'Dijon', 'Limoges', 'Tarbes', 'Albi', 'Nîmes', 'Béziers', 'Saint-Étienne', 'Brive', 'Épinal', 'Charleville'];
 // Plus de perdants que de gagnants: 2 sur 3 perdent (de 50 à 876 €), les autres gagnent de 3 à 58 €.
-const eur = (n: number) => n.toLocaleString('fr-FR', { minimumFractionDigits: Number.isInteger(n) ? 0 : 2, maximumFractionDigits: 2 });
+const eur = (n: number) => n.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+const cents = () => Math.floor(rnd() * 100) / 100; // centimes systematiques
 const pmu = Array.from({ length: 30 }, (_, i) => {
   const win = i % 3 === 1; // un gain toutes les trois lignes: jamais de longue serie de pertes, mais deux perdants pour un gagnant
   return {
@@ -19,7 +20,7 @@ const pmu = Array.from({ length: 30 }, (_, i) => {
     ville: villes[Math.floor(rnd() * villes.length)],
     win,
     // Gains: souvent des miettes (0,10 a 2 €), parfois de 3 a 58 €.
-    amount: win ? (rnd() < 0.45 ? Math.round((0.1 + rnd() * 1.9) * 100) / 100 : 3 + Math.floor(rnd() * 56)) : rnd() < 0.8 ? 10 + Math.floor(rnd() * 89) : 99 + Math.floor(rnd() * 778), // pertes: surtout 10 a 98 €, parfois jusqu'a 876 €
+    amount: win ? (rnd() < 0.45 ? Math.round((0.1 + rnd() * 1.9) * 100) / 100 : 3 + Math.floor(rnd() * 56) + cents()) : (rnd() < 0.8 ? 10 + Math.floor(rnd() * 89) : 99 + Math.floor(rnd() * 778)) + cents(), // pertes: surtout 10 a 98 €, parfois jusqu'a 876 €
   };
 });
 
