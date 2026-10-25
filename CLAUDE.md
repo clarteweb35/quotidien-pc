@@ -28,6 +28,7 @@ Spécification fonctionnelle : [.ai/SPEC_FONCTIONNALITES.md](.ai/SPEC_FONCTIONNA
 - Le journal est **satirique et fictif**. Jamais de citation inventée attribuée à une personne réelle, jamais de sujet sensible (drames, faits divers douloureux), jamais présenter une fiction comme un fait réel. Les journalistes sont des **personnages fictifs** ; leurs portraits et les photos de bureaux sont **générés par IA** et signalés comme tels.
 - Le **vrai** (cours de bourse, scores sportifs, titres d'actualité) est affiché avec une étiquette « données réelles, hors satire » et un lien vers la source ; le **faux** (compteurs, gains PMU, météo bidon…) ne doit jamais être présenté comme réel. La pastille « Fiction » est obligatoire quand du faux côtoie du vrai (Économie, Sport, accueil, Compteurs).
 - Ne jamais afficher un score de qualité (EcoIndex, Website Carbon, PageSpeed) non vérifié : les valeurs et la date sont des constantes dans `Base.astro` (`quality`, `qualityDate`), à mettre à jour après chaque nouvelle mesure.
+- Dans Petites annonces, une annonce qui renvoie vers un **vrai site** porte `reel: true` et l'étiquette « Vraie annonce » : elle n'est jamais présentée comme fictive (identification de la publicité, cf. mentions légales).
 - Ne pas contourner les contrôles du moteur (validateur, relecteur, quarantaine, plafonds de budget).
 - L'adresse `recrutement@quotidien-pc.fr` est **fictive** (précisé dans les mentions légales) ; `redaction@` et `postmaster@` sont réelles.
 

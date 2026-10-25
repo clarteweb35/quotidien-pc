@@ -68,6 +68,15 @@ test('petites annonces: page, menu, donnees coherentes et mention obligatoire', 
   assert.ok(html.includes('Toutes les annonces') && html.includes('Déposer une annonce'));
   assert.ok(html.includes('coïncidence presque certaine'), 'mention fictive');
   assert.equal((html.match(/class="pa pa-/g) || []).length, data.annonces.length);
+  // Les vraies annonces sont toujours etiquetees, avec lien https cliquable et texte visible.
+  const vraies = data.annonces.filter((a) => a.reel);
+  assert.ok(vraies.length >= 6);
+  for (const a of vraies) {
+    assert.match(a.url, /^https:\/\//, a.id);
+    assert.ok(html.includes(`href="${a.url}"`), `lien absent: ${a.id}`);
+  }
+  assert.equal((html.match(/>Vraie annonce</g) || []).length, vraies.length);
+  assert.ok(html.includes('Seules font exception'), 'la mention signale les vraies annonces');
   assert.ok(page('.').includes('>Petites annonces<'), 'lien dans le menu');
 });
 

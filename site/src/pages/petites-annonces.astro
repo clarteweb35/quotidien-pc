@@ -54,12 +54,13 @@ const texteRecherche = (a: (typeof annonces)[number]) => [a.titre, a.texte, a.co
           <article class={`pa pa-${a.format}${a.format === 'encart' && ann ? ` pal-${ann.palette}` : ''}`} data-cat={a.cat} data-texte={texteRecherche(a)} id={a.id}>
             {a.format === 'vedette' && <p class="pa-vedette-bandeau">À la une des annonces</p>}
             {a.format === 'encart' && ann && <p class="pa-marque">{ann.nom}</p>}
-            <p class="pa-meta"><span class="pa-badge">{nomCategorie(a.cat)}</span> <span class="pa-ref">Réf. {a.ref}</span></p>
-            <h3 class="pa-titre">{a.titre}</h3>
+            <p class="pa-meta"><span class="pa-badge">{nomCategorie(a.cat)}</span> <span class="pa-ref">Réf. {a.ref}</span>{a.reel && <span class="pa-reel">Vraie annonce</span>}</p>
+            <h3 class="pa-titre">{a.reel && a.url ? <a href={a.url} target="_blank" rel="noopener">{a.titre}</a> : a.titre}</h3>
             {a.image && <img class="pa-image" src={url(`annonces/${a.image}`)} width="84" height="84" alt={a.imageAlt ?? ''} loading="lazy" />}
             {a.prix && <p class="pa-prix">{a.prix}</p>}
             <p class="pa-texte">{a.texte}</p>
             {a.conditions && <p class="pa-conditions">{a.conditions}</p>}
+            {a.reel && a.url && <p class="pa-lien"><a href={a.url} target="_blank" rel="noopener">{a.lien ?? 'Voir le site'} →</a> <span>{a.site}</span></p>}
             {ann && a.format !== 'encart' && <p class="pa-annonceur">Annonce passée par <strong>{ann.nom}</strong> — <em>{ann.slogan}</em></p>}
             {a.format === 'encart' && ann && <p class="pa-slogan">{ann.slogan}</p>}
           </article>
@@ -69,7 +70,7 @@ const texteRecherche = (a: (typeof annonces)[number]) => [a.titre, a.texte, a.co
     <p class="pa-vide" id="pa-vide" hidden>Aucune annonce ne correspond à votre recherche. C'est sans doute la meilleure offre du jour.</p>
   </section>
 
-  <aside class="pa-mention" role="note">{rubrique.mention}</aside>
+  <aside class="pa-mention" role="note">{rubrique.mention} {rubrique.mentionReelle}</aside>
 </Base>
 
 <style>
@@ -107,6 +108,12 @@ const texteRecherche = (a: (typeof annonces)[number]) => [a.titre, a.texte, a.co
   .pa-texte { font-size: .96rem; line-height: 1.5; }
   .pa-conditions { font: .72rem/1.4 var(--sans); color: var(--ink-2); margin-top: 6px; }
   .pa-annonceur { font: .72rem/1.4 var(--sans); color: var(--ink-2); margin-top: 6px; border-top: 1px dotted var(--rule); padding-top: 4px; }
+  .pa-reel { font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: #15803d; border: 1px solid #15803d; padding: 0 5px; }
+  .pa-titre a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  .pa-titre a:hover, .pa-titre a:focus-visible { text-decoration-thickness: 2px; color: var(--accent); }
+  .pa-lien { margin-top: 8px !important; font: .8rem var(--sans); }
+  .pa-lien a { font-weight: 700; color: var(--link); }
+  .pa-lien span { color: var(--ink-2); font-size: .72rem; margin-left: 4px; }
   .pa-image { float: right; margin: 0 0 6px 10px; width: 84px; height: 84px; }
 
   .pa-classique { padding-bottom: 14px; border-bottom: 1px solid var(--rule); }

@@ -1,9 +1,10 @@
 {
-  "note": "Rubrique 'Petites annonces' (page /petites-annonces/). Toutes les annonces sont FICTIVES et satiriques. Pour en ajouter: ajouter un objet dans 'annonces' (id unique 'pa-NNN', 'cat' = slug d'une categorie, 'format' = classique | court | vedette | encart). Aucune coordonnee reelle: chaque annonce est identifiee par sa reference. 'image' (facultatif) = fichier de site/public/annonces/ avec 'imageAlt'. 'annonceur' (facultatif) = id d'un annonceur recurrent.",
+  "note": "Rubrique 'Petites annonces' (page /petites-annonces/). Toutes les annonces sont FICTIVES et satiriques. Pour en ajouter: ajouter un objet dans 'annonces' (id unique 'pa-NNN'; 'reel: true' + 'url' + 'site' + 'lien' = VRAIE annonce, toujours etiquetee « Vraie annonce » et jamais presentee comme fictive, 'cat' = slug d'une categorie, 'format' = classique | court | vedette | encart). Aucune coordonnee reelle: chaque annonce est identifiee par sa reference. 'image' (facultatif) = fichier de site/public/annonces/ avec 'imageAlt'. 'annonceur' (facultatif) = id d'un annonceur recurrent.",
   "titre": "Petites annonces",
   "accroche": "Les bonnes affaires, les grands projets et les petites entourloupes.",
   "intro": "Comme dans la presse locale, tout paraît presque normal au premier regard. C'est en lisant jusqu'au bout, conditions comprises, que les ennuis commencent. Les annonceurs sont fictifs, les prix sont précis, et aucune offre n'est valable nulle part.",
   "mention": "Les annonces publiées dans cette rubrique sont fictives et satiriques. Toute ressemblance avec une offre existante serait une coïncidence presque certaine.",
+  "mentionReelle": "Seules font exception les annonces signalées « Vraie annonce » : celles-là présentent de vrais sites, qui sont, eux, parfaitement sérieux.",
   "categories": [
     { "slug": "objets", "name": "Objets & occasions" },
     { "slug": "emploi", "name": "Emploi & recrutement" },
@@ -107,6 +108,12 @@
       "conditions": "Les canapés d'angle sont considérés comme un déménagement supplémentaire."
     },
     {
+      "id": "pa-034", "cat": "services", "format": "classique", "ref": "PA-034", "reel": true,
+      "titre": "Clarté Web : un site vitrine clair pour votre activité",
+      "texte": "Artisans, commerçants, indépendants : création de sites vitrines légers et adaptés aux mobiles, présentation de vos prestations, référencement naturel local et accompagnement pour votre fiche Google. Un interlocuteur unique, des explications sans jargon.",
+      "url": "https://clarte-web.fr/", "site": "clarte-web.fr", "lien": "Voir Clarté Web"
+    },
+    {
       "id": "pa-013", "cat": "services", "format": "court", "ref": "PA-013",
       "titre": "Classement de dossiers non traités",
       "prix": "2,40 € le dossier",
@@ -118,6 +125,13 @@
       "prix": "39 € le courrier",
       "texte": "Vous n'avez pas obtenu de réponse à votre dernier courrier ? Nous rédigeons pour vous un nouveau courrier demandant pourquoi le précédent n'a pas reçu de réponse. Formule premium avec accusé de réception moral.",
       "conditions": "Les réponses éventuelles ne sont pas garanties, et ne sont pas non plus exclues."
+    },
+    {
+      "id": "pa-036", "cat": "services", "format": "classique", "ref": "PA-036", "reel": true,
+      "titre": "Arc-en-Ciel Services : ménage, jardin et accompagnement à domicile",
+      "texte": "Ménage régulier ou ponctuel, tonte, taille et entretien des espaces verts, accompagnement pour les courses, les sorties, les rendez-vous et certaines démarches administratives courantes : plusieurs prestations, un seul interlocuteur.",
+      "conditions": "Crédit d'impôt de 50 % sur les prestations éligibles, selon les conditions en vigueur.",
+      "url": "https://www.arc-en-ciel-services.fr/", "site": "arc-en-ciel-services.fr", "lien": "Découvrir Arc-en-Ciel Services"
     },
     {
       "id": "pa-015", "cat": "services", "format": "classique", "ref": "PA-015", "annonceur": "evidence",
@@ -141,6 +155,13 @@
       "conditions": "Les 60 % restants sont constructibles en théorie, interdits en pratique."
     },
     {
+      "id": "pa-033", "cat": "immobilier", "format": "classique", "ref": "PA-033", "reel": true,
+      "titre": "Le Relais de Chaumeré : un gîte indépendant en Haute-Bretagne",
+      "prix": "Ouverture prévue en 2027",
+      "texte": "Un studio meublé pour quelques nuits, en escapade ou en déplacement professionnel : cuisine équipée, literie de qualité, Internet haut débit. Le site propose déjà des idées de sorties et de bonnes adresses pour explorer la Haute-Bretagne.",
+      "url": "https://www.le-relais-de-chaumere.fr/", "site": "le-relais-de-chaumere.fr", "lien": "Découvrir le Relais de Chaumeré"
+    },
+    {
       "id": "pa-018", "cat": "immobilier", "format": "court", "ref": "PA-018", "annonceur": "concept",
       "titre": "Appartement lumineux",
       "prix": "720 €/mois",
@@ -158,6 +179,12 @@
       "prix": "Troc",
       "texte": "Comptable retraité propose une heure d'explication sur la déclaration de revenus. Recherche, en contrepartie, une personne capable de lui expliquer pourquoi ce n'est pas si grave.",
       "conditions": "Séances en alternance : fiscalité les jours pairs, relativisation les jours impairs."
+    },
+    {
+      "id": "pa-038", "cat": "rencontres", "format": "classique", "ref": "PA-038", "reel": true,
+      "titre": "Tro-Dro : l'agenda local et les infos pratiques près de chez vous",
+      "texte": "Marchés, brocantes, concerts, spectacles, ateliers, food trucks et rendez-vous culturels, mais aussi pharmacies de garde et prix des carburants : un portail qui réunit plusieurs sources pour trouver une idée de sortie. L'agenda évolue régulièrement.",
+      "url": "https://tro-dro.fr/", "site": "tro-dro.fr", "lien": "Consulter l'agenda Tro-Dro"
     },
     {
       "id": "pa-021", "cat": "rencontres", "format": "court", "ref": "PA-021",
@@ -185,6 +212,13 @@
       "prix": "7,50 €/mois",
       "texte": "Profitez d'un silence exclusif, sans interruption. La formule gratuite inclut une publicité sonore pour la formule payante.",
       "conditions": "Le silence est livré sous réserve de voisins disponibles."
+    },
+    {
+      "id": "pa-037", "cat": "publicites", "format": "classique", "ref": "PA-037", "reel": true,
+      "titre": "Une vie de foot : écrivez toute une carrière de footballeur",
+      "prix": "Jeu en phase de test",
+      "texte": "Un jeu de simulation de carrière : faites évoluer votre joueur, des premiers défis aux plus hautes ambitions, au fil de vos choix et de votre progression. Le jeu est en test : essayez-le et partagez vos retours pour l'améliorer.",
+      "url": "https://football-life-pink.vercel.app/", "site": "football-life-pink.vercel.app", "lien": "Jouer à Une vie de foot"
     },
     {
       "id": "pa-025", "cat": "publicites", "format": "classique", "ref": "PA-025",
@@ -227,6 +261,13 @@
       "prix": "2 400 € HT",
       "texte": "Votre organisme de certification est-il certifié ? Nous délivrons le label « Certifié par un organisme certifié », valable douze mois, renouvelable après audit de l'organisme qui nous a certifiés.",
       "conditions": "Les audits sont réalisés par un auditeur lui-même en cours de certification."
+    },
+    {
+      "id": "pa-035", "cat": "administration", "format": "classique", "ref": "PA-035", "reel": true,
+      "titre": "Repères de Droit : comprendre ses droits et préparer ses démarches",
+      "texte": "Un outil d'information juridique pour les particuliers : explications en langage simple, parcours guidé pour explorer sa situation (dépôt de garantie, désaccord avec un propriétaire, démarche administrative), liste des documents à réunir et des questions à poser à un professionnel.",
+      "conditions": "Information indicative, appuyée sur des sources officielles. Outil d'information et de vulgarisation : ne remplace pas la consultation d'un avocat.",
+      "url": "https://reperesdedroit.fr/", "site": "reperesdedroit.fr", "lien": "Ouvrir Repères de Droit"
     },
     {
       "id": "pa-031", "cat": "administration", "format": "classique", "ref": "PA-031", "annonceur": "bpcc",
