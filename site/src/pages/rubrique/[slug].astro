@@ -21,7 +21,7 @@ const articles = (await allArticles()).filter((a) => a.data.category === cat.slu
   </div>
   {cat.slug === 'economie' && <Marches />}
   {cat.slug === 'sport' && <Resultats />}
-  <Gimmick slug={cat.slug} />
+  <Gimmick slug={cat.slug} pill={['economie', 'sport'].includes(cat.slug)} />
   {articles.length === 0 ? <p class="empty">Rien à signaler dans cette rubrique. Pour l'instant.</p> : (
     <div class="grid">{articles.map((a) => <Card article={a} />)}</div>
   )}

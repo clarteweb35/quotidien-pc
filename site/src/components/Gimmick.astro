@@ -1,8 +1,9 @@
 ---
 // Bandeaux satiriques par rubrique. Tout est FICTIF et annoncé comme tel (pastille « Fiction »). Aucune donnée réelle, aucune requête réseau.
 import { url } from '../lib/site';
-interface Props { slug: string }
-const { slug } = Astro.props;
+// pill: pastille « Fiction », utile seulement quand du reel est affiche a cote (Economie, Sport, accueil, page Compteurs).
+interface Props { slug: string; pill?: boolean }
+const { slug, pill = false } = Astro.props;
 
 // Générateur pseudo-aléatoire à graine (build) : même heure de build => mêmes valeurs.
 const seeded = (seed: number) => () => { seed = (seed + 0x6d2b79f5) | 0; let t = Math.imul(seed ^ (seed >>> 15), 1 | seed); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
@@ -30,7 +31,7 @@ const icones = ['☀️', '⛅', '☁️', '🌧️', '⛈️', '❄️', '🌪�
 ---
 {slug === 'economie' && (
   <section class="gm gm-pmu" aria-label="Gains et pertes PMU du jour (fiction)">
-    <div class="gm-head"><span class="gm-pill">Fiction</span><strong>Gains et pertes PMU du jour</strong><span class="gm-note">noms, villes et montants bidon</span></div>
+    <div class="gm-head">{pill && <span class="gm-pill">Fiction</span>}<strong>Gains et pertes PMU du jour</strong><span class="gm-note">noms, villes et montants bidon</span></div>
     <div class="gm-viewport"><div class="gm-track">
       {[0, 1].map((copy) => (
         <ul class="gm-list" aria-hidden={copy === 1 ? 'true' : undefined}>
@@ -43,7 +44,7 @@ const icones = ['☀️', '⛅', '☁️', '🌧️', '⛈️', '❄️', '🌪�
 
 {slug === 'politique' && (
   <section class="gm gm-regle" aria-label="Règle de tweets favorables (fiction)">
-    <div class="gm-head"><span class="gm-pill">Fiction</span><strong>Part de tweets favorables</strong><span class="gm-note">sondage de <span data-gm="question">la question 145-B du 13 avril</span> (sujet non communiqué) · résultats bidon</span></div>
+    <div class="gm-head">{pill && <span class="gm-pill">Fiction</span>}<strong>Part de tweets favorables</strong><span class="gm-note">sondage de <span data-gm="question">la question 145-B du 13 avril</span> (sujet non communiqué) · résultats bidon</span></div>
     <div class="regle" data-gm="regle">
       <div class="regle-bar"><div class="regle-cursor" style="left:50%"><img class="regle-tete" src={url('redaction/lucas-dumond.webp')} width="38" height="38" alt="Tête de Lucas D., qui indique la valeur" /><span class="regle-val">50,0 %</span></div></div>
       <div class="regle-scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100</span></div>
@@ -53,7 +54,7 @@ const icones = ['☀️', '⛅', '☁️', '🌧️', '⛈️', '❄️', '🌪�
 
 {slug === 'monde' && (
   <section class="gm gm-meteo" aria-label="Météo des capitales (fiction)">
-    <div class="gm-head"><span class="gm-pill">Fiction</span><strong>Météo des capitales</strong><span class="gm-note">températures inventées</span></div>
+    <div class="gm-head">{pill && <span class="gm-pill">Fiction</span>}<strong>Météo des capitales</strong><span class="gm-note">températures inventées</span></div>
     <div class="gm-viewport"><div class="gm-track">
       {[0, 1].map((copy) => (
         <ul class="gm-list" aria-hidden={copy === 1 ? 'true' : undefined}>
@@ -66,14 +67,14 @@ const icones = ['☀️', '⛅', '☁️', '🌧️', '⛈️', '❄️', '🌪�
 
 {slug === 'environnement' && (
   <section class="gm gm-compteur" aria-label="Compteur de forêt amazonienne rasée (fiction)">
-    <div class="gm-head"><span class="gm-pill">Fiction</span><strong>Forêt amazonienne rasée depuis minuit</strong><span class="gm-note">estimation inventée, remise à zéro à minuit</span></div>
+    <div class="gm-head">{pill && <span class="gm-pill">Fiction</span>}<strong>Forêt amazonienne rasée depuis minuit</strong><span class="gm-note">estimation inventée, remise à zéro à minuit</span></div>
     <p class="compteur"><span data-gm="counter" data-mode="day" data-lo="1.2" data-hi="3.2" data-dec="1">0</span> <abbr title="hectares">ha</abbr></p>
   </section>
 )}
 
 {slug === 'culture' && (
   <section class="gm gm-compteur" aria-label="Compteur d'heures de chômage des intermittents (fiction)">
-    <div class="gm-head"><span class="gm-pill">Fiction</span><strong>Heures de chômage à indemniser aux intermittents ce mois-ci</strong><span class="gm-note">chiffre inventé, remis à zéro le 1<sup>er</sup> du mois</span></div>
+    <div class="gm-head">{pill && <span class="gm-pill">Fiction</span>}<strong>Heures de chômage à indemniser aux intermittents ce mois-ci</strong><span class="gm-note">chiffre inventé, remis à zéro le 1<sup>er</sup> du mois</span></div>
     <p class="compteur"><span data-gm="counter" data-mode="month" data-lo="3" data-hi="7" data-dec="0">0</span> <abbr title="heures">h</abbr></p>
   </section>
 )}
@@ -81,11 +82,11 @@ const icones = ['☀️', '⛅', '☁️', '🌧️', '⛈️', '❄️', '🌪�
 {slug === 'societe' && (
   <>
     <section class="gm" aria-label="Attente à la préfecture (fiction)">
-      <div class="gm-head"><span class="gm-pill">Fiction</span><strong>Attente moyenne à la préfecture</strong><span class="gm-note">chiffre inventé, il remonte tout seul</span></div>
+      <div class="gm-head">{pill && <span class="gm-pill">Fiction</span>}<strong>Attente moyenne à la préfecture</strong><span class="gm-note">chiffre inventé, il remonte tout seul</span></div>
       <p class="compteur"><span data-gm="attente">3 h 12</span></p>
     </section>
     <section class="gm" aria-label="Réunions qui auraient pu être un e-mail (fiction)">
-      <div class="gm-head"><span class="gm-pill">Fiction</span><strong>Réunions d'aujourd'hui qui auraient pu être un e-mail</strong><span class="gm-note">remis à zéro à minuit</span></div>
+      <div class="gm-head">{pill && <span class="gm-pill">Fiction</span>}<strong>Réunions d'aujourd'hui qui auraient pu être un e-mail</strong><span class="gm-note">remis à zéro à minuit</span></div>
       <p class="compteur"><span data-gm="counter" data-mode="day" data-lo="0.01" data-hi="0.05" data-dec="0">0</span></p>
     </section>
   </>
@@ -94,11 +95,11 @@ const icones = ['☀️', '⛅', '☁️', '🌧️', '⛈️', '❄️', '🌪�
 {slug === 'tech' && (
   <>
     <section class="gm" aria-label="Statut des serveurs (fiction)">
-      <div class="gm-head"><span class="gm-pill">Fiction</span><strong>Statut des serveurs</strong></div>
+      <div class="gm-head">{pill && <span class="gm-pill">Fiction</span>}<strong>Statut des serveurs</strong></div>
       <p class="statut"><span class="statut-pastille" data-gm="statut-pastille"></span><span data-gm="statut-texte">Tout fonctionne (probablement)</span></p>
     </section>
     <section class="gm" aria-label="Mise à jour en cours (fiction)">
-      <div class="gm-head"><span class="gm-pill">Fiction</span><strong>Mise à jour en cours</strong><span class="gm-note" data-gm="maj-texte">1 % — plus que quelques minutes</span></div>
+      <div class="gm-head">{pill && <span class="gm-pill">Fiction</span>}<strong>Mise à jour en cours</strong><span class="gm-note" data-gm="maj-texte">1 % — plus que quelques minutes</span></div>
       <div class="maj"><div class="maj-barre" data-gm="maj-barre" style="width:1%"></div></div>
     </section>
   </>
@@ -107,11 +108,11 @@ const icones = ['☀️', '⛅', '☁️', '🌧️', '⛈️', '❄️', '🌪�
 {slug === 'sport' && (
   <>
     <section class="gm" aria-label="C'est la faute à l'arbitre (fiction)">
-      <div class="gm-head"><span class="gm-pill">Fiction</span><strong>« C'est la faute à l'arbitre » depuis minuit</strong><span class="gm-note">remis à zéro à minuit</span></div>
+      <div class="gm-head">{pill && <span class="gm-pill">Fiction</span>}<strong>« C'est la faute à l'arbitre » depuis minuit</strong><span class="gm-note">remis à zéro à minuit</span></div>
       <p class="compteur"><span data-gm="counter" data-mode="day" data-lo="0.005" data-hi="0.03" data-dec="0">0</span></p>
     </section>
     <section class="gm" aria-label="Chrono d'après-match (fiction)">
-      <div class="gm-head"><span class="gm-pill">Fiction</span><strong>Temps écoulé depuis le dernier « on a manqué de réussite »</strong></div>
+      <div class="gm-head">{pill && <span class="gm-pill">Fiction</span>}<strong>Temps écoulé depuis le dernier « on a manqué de réussite »</strong></div>
       <p class="compteur"><span data-gm="chrono">00:00:00</span></p>
     </section>
   </>
@@ -120,11 +121,11 @@ const icones = ['☀️', '⛅', '☁️', '🌧️', '⛈️', '❄️', '🌪�
 {slug === 'culture' && (
   <>
     <section class="gm" aria-label="Bande-annonce (fiction)">
-      <div class="gm-head"><span class="gm-pill">Fiction</span><strong>Bande-annonce permanente</strong><span class="gm-note">film inventé, nouveau à chaque chargement</span></div>
+      <div class="gm-head">{pill && <span class="gm-pill">Fiction</span>}<strong>Bande-annonce permanente</strong><span class="gm-note">film inventé, nouveau à chaque chargement</span></div>
       <p class="trailer"><em>Dans un monde…</em> <strong data-gm="trailer">Le Retour du Retour</strong></p>
     </section>
     <section class="gm" aria-label="Lu ou acheté (fiction)">
-      <div class="gm-head"><span class="gm-pill">Fiction</span><strong>« Je l'ai lu » contre « Je l'ai acheté »</strong><span class="gm-note">pourcentages inventés</span></div>
+      <div class="gm-head">{pill && <span class="gm-pill">Fiction</span>}<strong>« Je l'ai lu » contre « Je l'ai acheté »</strong><span class="gm-note">pourcentages inventés</span></div>
       <div class="duel" data-gm="duel">
         <div class="duel-ligne"><span>Je l'ai acheté</span><div class="duel-piste"><div class="duel-barre achete" style="width:92%"></div></div><b data-gm="duel-achete">92 %</b></div>
         <div class="duel-ligne"><span>Je l'ai lu</span><div class="duel-piste"><div class="duel-barre lu" style="width:11%"></div></div><b data-gm="duel-lu">11 %</b></div>
@@ -135,7 +136,7 @@ const icones = ['☀️', '⛅', '☁️', '🌧️', '⛈️', '❄️', '🌪�
 
 {slug === 'accueil' && (
   <section class="gm" aria-label="Prévision et horoscope (fiction)">
-    <div class="gm-head"><span class="gm-pill">Fiction</span><strong>Demain, en une ligne</strong></div>
+    <div class="gm-head">{pill && <span class="gm-pill">Fiction</span>}<strong>Demain, en une ligne</strong></div>
     <p class="une-ligne" data-gm="prevision">À peu près pareil, mais en pire ou en mieux.</p>
     <div class="gm-head gm-head-bas"><strong>Horoscope de la rédaction</strong><span class="gm-note" data-gm="signe">Balance</span></div>
     <p class="une-ligne" data-gm="horoscope">Aujourd'hui, un dossier avancera sans vous.</p>
@@ -144,14 +145,14 @@ const icones = ['☀️', '⛅', '☁️', '🌧️', '⛈️', '❄️', '🌪�
 
 {slug === 'redaction' && (
   <section class="gm" aria-label="Cafés de Lucas (fiction)">
-    <div class="gm-head"><span class="gm-pill">Fiction</span><strong>Cafés préparés par Lucas aujourd'hui</strong><span class="gm-note">dont <span data-gm="buvables">0</span> buvable(s)</span></div>
+    <div class="gm-head">{pill && <span class="gm-pill">Fiction</span>}<strong>Cafés préparés par Lucas aujourd'hui</strong><span class="gm-note">dont <span data-gm="buvables">0</span> buvable(s)</span></div>
     <p class="compteur"><span data-gm="counter" data-mode="day" data-lo="0.003" data-hi="0.012" data-dec="0">0</span></p>
   </section>
 )}
 
 {slug === 'mentions' && (
   <section class="gm" aria-label="Lecture des mentions légales (fiction)">
-    <div class="gm-head"><span class="gm-pill">Fiction</span><strong>Avez-vous lu les mentions légales ?</strong></div>
+    <div class="gm-head">{pill && <span class="gm-pill">Fiction</span>}<strong>Avez-vous lu les mentions légales ?</strong></div>
     <div class="lu-zone" data-gm="lu-zone"><button type="button" class="lu-bouton" data-gm="lu-bouton">J'ai lu les mentions légales</button><span class="lu-retour" data-gm="lu-retour" role="status"></span></div>
   </section>
 )}
