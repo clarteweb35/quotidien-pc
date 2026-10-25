@@ -82,8 +82,8 @@ const icones = ['☀️', '⛅', '☁️', '🌧️', '⛈️', '❄️', '🌪�
 {slug === 'societe' && (
   <>
     <section class="gm" aria-label="Attente à la préfecture (fiction)">
-      <div class="gm-head">{pill && <span class="gm-pill">Fiction</span>}<strong>Attente moyenne à la préfecture</strong><span class="gm-note">chiffre inventé, il remonte tout seul</span></div>
-      <p class="compteur"><span data-gm="attente">3 h 12</span></p>
+      <div class="gm-head">{pill && <span class="gm-pill">Fiction</span>}<strong>Attente moyenne à la préfecture</strong><span class="gm-note">chiffre inventé · guichets ouverts de 9 h 30 à 11 h 30 et de 14 h à 16 h 30, sinon 0</span></div>
+      <p class="compteur"><span data-gm="attente">3 h 12</span> <small data-gm="attente-etat"></small></p>
     </section>
     <section class="gm" aria-label="Réunions qui auraient pu être un e-mail (fiction)">
       <div class="gm-head">{pill && <span class="gm-pill">Fiction</span>}<strong>Réunions d'aujourd'hui qui auraient pu être un e-mail</strong><span class="gm-note">remis à zéro à minuit</span></div>
@@ -220,10 +220,19 @@ const icones = ['☀️', '⛅', '☁️', '🌧️', '⛈️', '❄️', '🌪�
     }, 2500);
   }
 
-  // Attente a la prefecture: remonte toute seule, retombe d'un coup de temps en temps.
+  // Attente a la prefecture: remonte toute seule, retombe d'un coup de temps en temps; 0 hors des heures d'ouverture (Paris).
   document.querySelectorAll<HTMLElement>('[data-gm="attente"]').forEach((el) => {
+    const etat = document.querySelector<HTMLElement>('[data-gm="attente-etat"]');
     let min = 192;
-    const show = () => { el.textContent = Math.floor(min / 60) + ' h ' + String(Math.round(min % 60)).padStart(2, '0'); };
+    const ouvert = () => {
+      const t = paris(), m = t.h * 60 + t.min;
+      return (m >= 570 && m < 690) || (m >= 840 && m < 990);
+    };
+    const show = () => {
+      const o = ouvert();
+      el.textContent = o ? Math.floor(min / 60) + ' h ' + String(Math.round(min % 60)).padStart(2, '0') : '0';
+      if (etat) etat.textContent = o ? '' : '(guichets fermés)';
+    };
     show();
     setInterval(() => { min = Math.random() < 0.08 ? 40 + Math.random() * 60 : Math.min(340, min + 1 + Math.random() * 4); show(); }, 3500);
   });
@@ -270,13 +279,13 @@ const icones = ['☀️', '⛅', '☁️', '🌧️', '⛈️', '❄️', '🌪�
   const livreTitre = document.querySelector<HTMLElement>('[data-gm="livre-titre"]');
   const livreAuteur = document.querySelector<HTMLElement>('[data-gm="livre-auteur"]');
   if (livreTitre && livreAuteur) {
-    const pick = <T,>(l: T[]) => l[Math.floor(Math.random() * l.length)];
-    const debuts = ['Les Vacances du', 'Le Silence du', 'Mémoires d'un', 'La Dernière Réunion du', 'Petit Traité du', 'L'Ascension du', 'Le Journal intime d'un', 'Voyage au bout du'];
+    const un = <T,>(l: T[]) => l[Math.floor(Math.random() * l.length)];
+    const debuts = ['Les Vacances du', 'Le Silence du', 'Mémoires d’un', 'La Dernière Réunion du', 'Petit Traité du', 'L’Ascension du', 'Le Journal intime d’un', 'Voyage au bout du'];
     const fins = ['Rond-point', 'Photocopieur', 'Tableur', 'Parapluie', 'Ascenseur', 'Voisin du dessus', 'Pot de départ', 'Code postal', 'Lundi matin'];
     const prenoms = ['Gérard', 'Odile', 'Anselme', 'Bérengère', 'Hippolyte', 'Prudence', 'Octave', 'Clotilde'];
     const noms = ['Plumeau', 'Marmelade', 'Bouchardon', 'Cornichon', 'Tapioca', 'Boulanger-Lenteur', 'Pastèque', 'Gribouille'];
-    livreTitre.textContent = '« ' + pick(debuts) + ' ' + pick(fins) + ' »';
-    livreAuteur.textContent = pick(prenoms) + ' ' + pick(noms);
+    livreTitre.textContent = '« ' + un(debuts) + ' ' + un(fins) + ' »';
+    livreAuteur.textContent = un(prenoms) + ' ' + un(noms);
   }
 
   // Lu / acheté: l'écart bouge un peu de temps en temps.
@@ -334,6 +343,7 @@ const icones = ['☀️', '⛅', '☁️', '🌧️', '⛈️', '❄️', '🌪�
   .compteur { margin: 0; padding: 8px 12px 10px; font: 700 2rem/1 var(--serif); font-variant-numeric: tabular-nums; }
   .cafe { display: flex; align-items: center; gap: 12px; }
   .cafe-tete { max-width: none; width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent); background: var(--paper); }
+  .compteur small { font: .8rem var(--sans); color: var(--ink-2); font-weight: 400; }
   .compteur abbr { font-size: 1rem; text-decoration: none; color: var(--ink-2); }
   .regle { padding: 36px 14px 10px; }
   .regle-scale { display: flex; justify-content: space-between; font-size: .66rem; color: var(--ink-2); margin-top: 3px; }
