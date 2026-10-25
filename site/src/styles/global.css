@@ -121,8 +121,8 @@ footer ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 16px; f
 .card.no-media { border-top: 3px solid var(--ink); padding-top: 10px; }
 .card.no-media .kicker { display: inline-block; }
 
-/* Texte justifie avec coupures de mots (francais), y compris sur mobile: titres, chapos et corps d'article */
-.article h1, .article .chapo, .article .body p, .lead h2, .lead p, .card h3, .card p {
+/* Corps d'article justifie avec coupures de mots (francais), y compris sur mobile; titres et chapos restent alignes a gauche */
+.article .body p {
   text-align: justify; text-justify: inter-word; hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 7 3 3;
 }
 
