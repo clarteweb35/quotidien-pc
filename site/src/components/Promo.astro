@@ -1,0 +1,16 @@
+---
+import { pickPromo, promoLabel } from '../lib/promos';
+interface Props { placement: 'home' | 'article'; seed: string }
+const { placement, seed } = Astro.props;
+const promo = pickPromo(placement, seed);
+---
+{promo && (
+  <aside class:list={['promo', `promo-${placement}`]} aria-label={promoLabel}>
+    <span class="promo-label">{promoLabel}</span>
+    <a class="promo-body" href={promo.url} target="_blank" rel="noopener">
+      <strong>{promo.title}</strong>
+      <span class="promo-text">{promo.text}</span>
+      <span class="promo-cta">{promo.cta} →</span>
+    </a>
+  </aside>
+)}

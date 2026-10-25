@@ -1,0 +1,65 @@
+{
+  "note": "EN PAUSE: brouillon d'exemples a remplacer par les pages que l'editeur veut promouvoir. Annonces d'autopromotion: encarts qui renvoient vers d'autres sites de l'editeur. Pas de regie publicitaire, pas de cookie, pas de suivi. Chaque encart est etiquete 'Publicite'. 'enabled: false' = non affiche. 'placements': 'home' (accueil) et/ou 'article' (fin d'article). Un encart est choisi par page de facon deterministe parmi ceux qui sont actifs.",
+  "enabled": false,
+  "label": "Publicité · un autre site de l'éditeur",
+  "promos": [
+    {
+      "id": "voyages-malins",
+      "enabled": true,
+      "title": "Voyage Malin",
+      "text": "Bons plans week-end à moins de 200 €, au départ de Rennes et Nantes. Repérés et vérifiés chaque jour.",
+      "cta": "Voir les bons plans",
+      "url": "https://voyagesmalins.fr",
+      "placements": [
+        "home",
+        "article"
+      ]
+    },
+    {
+      "id": "tro-dro",
+      "enabled": true,
+      "title": "Que faire aujourd'hui ?",
+      "text": "L'agenda local : braderies, brocantes et événements autour de Domagné, Vitré et Rennes.",
+      "cta": "Ouvrir l'agenda",
+      "url": "https://tro-dro.fr",
+      "placements": [
+        "home",
+        "article"
+      ]
+    },
+    {
+      "id": "une-vie-de-foot",
+      "enabled": true,
+      "title": "Une vie de foot",
+      "text": "Un jeu de carrière de footballeur, à jouer dans le navigateur.",
+      "cta": "Jouer",
+      "url": "https://football-life-pink.vercel.app",
+      "placements": [
+        "home",
+        "article"
+      ]
+    },
+    {
+      "id": "a3pc",
+      "enabled": false,
+      "title": "A3PC",
+      "text": "L'association qui fait vivre le pays de Chaumeré, à Domagné : fêtes de village, patrimoine, artisans et gîtes locaux.",
+      "cta": "Découvrir l'association",
+      "url": "https://a3pc.fr",
+      "placements": [
+        "home"
+      ]
+    },
+    {
+      "id": "clarte-web",
+      "enabled": false,
+      "title": "Clarté Web",
+      "text": "Création de sites vitrines et référencement local pour les artisans et commerçants.",
+      "cta": "Découvrir",
+      "url": "https://clarte-web.fr",
+      "placements": [
+        "home"
+      ]
+    }
+  ]
+}
