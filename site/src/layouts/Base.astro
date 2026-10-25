@@ -89,6 +89,7 @@ const today = new Intl.DateTimeFormat('fr-FR', { timeZone: 'Europe/Paris', dateS
           {analyticsId && !csp && <li><a href={url('mentions-legales/#donnees')} data-open-consent>Gérer mes cookies</a></li>}
         </ul>
       </div>
+      <p class="wrap copyright">© {new Date().getFullYear()} {publisher.url ? <a href={publisher.url} rel="noopener">clarté-web.fr</a> : 'clarté-web.fr'} – Tous droits réservés.</p>
     </footer>
     {!csp && !noindex && <Consent />}
   </body>

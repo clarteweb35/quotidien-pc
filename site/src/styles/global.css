@@ -211,3 +211,4 @@ footer ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 16px; f
   .progress { display: none; }
   @view-transition { navigation: none; }
 }
+footer .copyright { margin: 10px auto 0; padding-top: 8px; border-top: 1px solid var(--rule); font-size: .75rem; text-align: center; }
