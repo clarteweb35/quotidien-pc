@@ -84,7 +84,8 @@ test('rencontres: references uniques, photos existantes, page et menu', () => {
   const data = JSON.parse(fs.readFileSync(path.join(ROOT, 'config/rencontres.json'), 'utf8'));
   const refs = data.annonces.map((a) => a.ref);
   assert.equal(new Set(refs).size, refs.length, 'references uniques');
-  assert.ok(refs.every((r) => Number.isInteger(r) && r > 0));
+  assert.ok(refs.every((r) => (Number.isInteger(r) && r > 0) || /^[A-Z0-9][A-Z0-9-]{3,11}$/.test(r)), 'references: entier ou code alphanumerique');
+  assert.equal(new Set(refs.map((r) => String(r).toLowerCase())).size, refs.length, 'ancres uniques');
   const slugs = new Set(data.categories.map((c) => c.slug));
   for (const a of data.annonces) {
     assert.ok(slugs.has(a.cat), `categorie inconnue: RÉF. ${a.ref}`);

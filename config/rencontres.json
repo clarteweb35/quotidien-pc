@@ -1,5 +1,5 @@
 {
-  "note": "Rubrique 'Rencontres & affinites' (page /rencontres/). Toutes les annonces sont FICTIVES et satiriques; aucune coordonnee, aucun formulaire, aucune messagerie. 'ref' = numero unique et STABLE (ne jamais renumeroter, ne jamais reutiliser un numero retire). Pour ajouter une annonce: prendre le numero suivant, choisir 'cat' parmi 'categories'. Pour en retirer une: supprimer son objet (les autres references ne changent pas). Photo (facultative): 'photo' = fichier de site/public/rencontres/ + 'photoAlt'; une photo introuvable est simplement omise. Les portraits doivent etre des illustrations fictives.",
+  "note": "Rubrique 'Rencontres & affinites' (page /rencontres/). Toutes les annonces sont FICTIVES et satiriques; aucune coordonnee, aucun formulaire, aucune messagerie. 'ref' = reference unique et STABLE: numero (1 a 37, imprime « RÉF. 001 ») ou code alphanumerique bidon (« RÉF. K7-492B »); ne jamais la changer ni reutiliser une reference retiree. Pour ajouter une annonce: inventer un code alphanumerique unique (ex. 'M5-80PX') ou prendre le numero suivant, choisir 'cat' parmi 'categories'. Pour en retirer une: supprimer son objet (les autres references ne changent pas). Photo (facultative): 'photo' = fichier de site/public/rencontres/ + 'photoAlt'; une photo introuvable est simplement omise. Les portraits doivent etre des illustrations fictives.",
   "titre": "Rencontres & affinités",
   "titreSeo": "Rencontres & affinités : petites annonces de rencontres insolites",
   "descriptionSeo": "Petites annonces de rencontres insolites : des annonces sentimentales humoristiques, fictives, dans l'esprit des rubriques matrimoniales d'un journal satirique.",
@@ -205,6 +205,36 @@
     {
       "ref": 37, "cat": "desesperes", "profil": "Homme de 54 ans, optimiste malgré l'expérience",
       "texte": "Célibataire, bon caractère, aime les animaux, les repas conviviaux et les projets qui aboutissent. Recherche femme sincère, tendre et capable d'apprécier un homme imparfait mais volontaire. J'ai appris de mes relations précédentes et je suis prêt à repartir sur de bonnes bases. Je ne promets pas de changer du tout au tout, mais je peux améliorer certains points avec un accompagnement adapté. Je souhaite une relation simple, sans jeux ni complications. Si vous aimez les gens qui reconnaissent leurs erreurs, nous avons déjà un sujet de conversation : je suis arrivé en retard à mon dernier rendez-vous amoureux."
+    },
+    {
+      "ref": "K7-492B", "cat": "hf", "profil": "Homme 54 ans, posé, propriétaire, cherche compagne pour projets d'avenir",
+      "texte": "Veuf d'esprit, retraité anticipé de la fonction publique, méticuleux. Aime la marche active, les buissons bien taillés et le silence après 20h. Possède maison de caractère avec dépendances. Désire rencontrer dame calme, aimant le jardinage et la cuisine du terroir, non fumeuse. Une tolérance particulière sera accordée aux personnes acceptant de signer une convention d'occupation à titre gratuit avant tout rapprochement physique.",
+      "recherche": "Dame 48-55 ans, ordonnée, sachant tenir un registre."
+    },
+    {
+      "ref": "Q3L-058", "cat": "improbables", "profil": "Femme 41 ans, artiste peintre, épicurienne et spontanée",
+      "texte": "Passionnée par la couleur, le théâtre contemporain et les longues promenades en forêt sous la pluie. Je cherche un homme chaleureux, ouvert d'esprit, aimant les dîners improvisés et la poésie engagée. Vous êtes sensible, cultivé et capable de supporter mon ex-mari qui vit toujours dans le cabanon au fond du jardin pour des raisons purement administratives et d'isolation phonique.",
+      "recherche": "Homme 38-48 ans, tolérant, pas trop regardant sur la territorialité."
+    },
+    {
+      "ref": "X91-T4C", "cat": "hf", "profil": "Homme 36 ans, ingénieur méthodes, esprit structuré et romantique",
+      "texte": "Dynamique, attentif et sportif. J'aime les randonnées programmées, les plats équilibrés et les soirées au calme. Je recherche une jeune femme douce pour bâtir une relation durable basant son fonctionnement sur l'amélioration continue. Souhaite effectuer un premier rendez-vous de 45 minutes pour évaluer nos synergies respectives. Merci de venir munie d'une pièce d'identité et de deux références consultables.",
+      "recherche": "Femme 30-40 ans, ponctuelle, avec un sens aigu de l'optimisation."
+    },
+    {
+      "ref": "R2M-71Z", "cat": "fh", "profil": "Dame 62 ans, passionnée de patrimoine local et de botanique",
+      "texte": "Élégante, cultivée, dynamique. Investie dans la vie associative locale et la sauvegarde des lavoirs anciens. Recherche monsieur courtois, amateur de brocantes, de tisanes et de visites guidées. Idéalement véhiculé. Les candidatures des personnes possédant un nettoyeur haute pression Kärcher de plus de 160 bars seront traitées en priorité absolue pour la rénovation de ma terrasse en pierre.",
+      "recherche": "Monsieur 60-70 ans, serviable, équipement outillage bienvenu."
+    },
+    {
+      "ref": "4HB-60W", "cat": "hf", "profil": "Homme 48 ans, artisan menuisier, simple et authentique",
+      "texte": "Travailleur, honnête, épicurien à ses heures. J'aime le bois bien travaillé, les viandes en sauce et la belote. Cherche compagne sincère pour partager sorties, repas dominicaux et moments de complicité. Je ne demande rien d'exceptionnel, seulement quelqu'un de gentil qui ne remettra pas en question l'alignement des étagères du salon que j'ai mis sept ans à régler au niveau à bulle.",
+      "recherche": "Femme 40-52 ans, bienveillante et peu critique sur l'aménagement d'intérieur."
+    },
+    {
+      "ref": "V8-D33K", "cat": "intellectuelles", "profil": "Femme 29 ans, romancière jeunesse, rêveuse et passionnée de chats",
+      "texte": "Douce, créative et légèrement étourdie. J'aime le thé à la camomille, les librairies anciennes et m'endormir devant des films en noir et blanc. Recherche jeune homme attentionné, patient et romantique pour écrire notre propre histoire. Important : vous devez accepter de relire mes ébauches chaque soir à 23h et d'émettre des critiques uniquement élogieuses sous peine de crise d'angoisse foudroyante.",
+      "recherche": "Homme 28-35 ans, admiratif, au sommeil léger."
     }
   ]
 }

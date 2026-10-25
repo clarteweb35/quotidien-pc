@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import { page, rencontres, parCategorie, refTexte, photoExistante } from '../lib/rencontres';
+import { page, rencontres, parCategorie, refTexte, ancreRef, photoExistante } from '../lib/rencontres';
 import { url } from '../lib/site';
 ---
 <Base title={page.titreSeo} description={page.descriptionSeo} current="rencontres">
@@ -15,7 +15,7 @@ import { url } from '../lib/site';
     <ul>
       {parCategorie.map((c) => <li><a href={`#${c.slug}`}>{c.nom}</a> <span>({c.annonces.length})</span></li>)}
     </ul>
-    <p>{rencontres.length} annonces, de <strong>{refTexte(Math.min(...rencontres.map((r) => r.ref)))}</strong> à <strong>{refTexte(Math.max(...rencontres.map((r) => r.ref)))}</strong>.</p>
+    <p>{rencontres.length} annonces fictives, chacune dotée d'une référence d'imprimerie qui ne permet de joindre personne.</p>
   </nav>
 
   {parCategorie.map((c) => (
@@ -25,8 +25,8 @@ import { url } from '../lib/site';
         {c.annonces.map((r) => {
           const photo = photoExistante(r);
           return (
-            <article class="rc" id={`ref-${String(r.ref).padStart(3, '0')}`}>
-              <p class="rc-ref"><a href={`#ref-${String(r.ref).padStart(3, '0')}`}>{refTexte(r.ref)}</a></p>
+            <article class="rc" id={ancreRef(r.ref)}>
+              <p class="rc-ref"><a href={`#${ancreRef(r.ref)}`}>{refTexte(r.ref)}</a></p>
               <div class="rc-corps">
                 {photo && <img class="rc-photo" src={url(photo)} width="64" height="80" alt={r.photoAlt ?? 'Illustration fictive du profil'} loading="lazy" />}
                 <h3 class="rc-profil">{r.profil}</h3>
@@ -54,7 +54,7 @@ import { url } from '../lib/site';
   .rc-section { margin-top: 30px; scroll-margin-top: 12px; }
   .rc-rubrique { font: 800 .85rem var(--sans); letter-spacing: .14em; text-transform: uppercase; margin: 0 0 4px; padding: 6px 0; border-top: 3px solid var(--ink); border-bottom: 1px solid var(--ink); }
   .rc-colonnes { column-width: 300px; column-gap: 30px; column-rule: 1px solid var(--rule); }
-  .rc { break-inside: avoid; display: grid; grid-template-columns: 4.6rem 1fr; gap: 0 10px; padding: 12px 0; border-bottom: 1px dotted var(--ink); font-family: var(--serif); }
+  .rc { break-inside: avoid; display: grid; grid-template-columns: 5.4rem 1fr; gap: 0 10px; padding: 12px 0; border-bottom: 1px dotted var(--ink); font-family: var(--serif); }
   .rc-ref { margin: 0; font: 800 .72rem/1.3 var(--sans); letter-spacing: .06em; }
   .rc-ref a { color: var(--accent); text-decoration: none; border-bottom: 1px solid currentColor; }
   .rc-corps p { margin: 0 0 6px; font-size: .98rem; line-height: 1.5; }
