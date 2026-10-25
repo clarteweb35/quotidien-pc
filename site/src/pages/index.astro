@@ -4,6 +4,7 @@ import Card from '../components/Card.astro';
 import Marches from '../components/Marches.astro';
 import Gimmick from '../components/Gimmick.astro';
 import ManchetteEdito from '../components/ManchetteEdito.astro';
+import BandeauRencontres from '../components/BandeauRencontres.astro';
 import { allArticles, url, siteName, manualImageCredit } from '../lib/site';
 import { illustration } from '../lib/manual';
 
@@ -15,7 +16,7 @@ const lead = articles.find((a) => illustrated.has(a.id)) ?? articles[0];
 const rest = articles.filter((a) => a !== lead);
 // Page volontairement legere: EcoIndex compte les elements du DOM (cible: moins de ~350 pour rester en A). Donc 7 dernieres nouvelles,
 // quelques valeurs et villes dans les bandeaux, et pas d'extraits par rubrique (le menu les propose deja). Ne pas grossir sans re-mesurer.
-const latest = rest.slice(0, 7);
+const latest = rest.filter((a) => a.data.category !== 'editos').slice(0, 7);
 const flash = articles.slice(0, 5);
 const siteLd = {
   '@context': 'https://schema.org',
@@ -31,6 +32,7 @@ const siteLd = {
     <p class="empty">Le journal est en cours d'impression. Les premiers articles arrivent très bientôt.</p>
   ) : (
     <>
+      <ManchetteEdito />
       {flash.length > 1 && (
         <div class="flash" role="region" aria-label="Derniers titres">
           <span class="flash-label">À l'instant</span>
@@ -44,7 +46,7 @@ const siteLd = {
         </div>
       )}
       <Marches reverse limit={6} />
-      <ManchetteEdito />
+      <BandeauRencontres />
       <Card article={lead} lead />
       <Gimmick slug="monde" pill limit={6} />
       {latest.length > 0 && (

@@ -110,6 +110,10 @@ test('rencontres: references uniques, photos existantes, page et menu', () => {
 test('accueil: La Manchette de la Manchette; articles: publicite fictive tiree des petites annonces', () => {
   const home = page('.');
   assert.ok(home.includes('La Manchette de la Manchette') && home.includes('href="/rubrique/editos/"'), 'manchette de l\'edito du jour');
+  assert.ok(home.indexOf('La Manchette de la Manchette') < home.indexOf('class="flash"'), 'la manchette est au-dessus du fil À l\'instant');
+  assert.ok(home.includes('sélectionnées par Madame de Valmorin') && home.includes('href="/rencontres/"'), 'bandeau Rencontres sur l\'accueil');
+  const debut = home.indexOf('Dernières nouvelles');
+  assert.ok(debut > 0 && !home.slice(debut).includes('class="card edito'), 'pas d\'edito dans Dernières nouvelles');
   const data = JSON.parse(fs.readFileSync(path.join(ROOT, 'config/annonces.json'), 'utf8'));
   assert.ok(data.annonces.filter((a) => a.pub && !a.reel).length >= 5, 'au moins 5 annonces utilisables comme publicites');
   const slug = fs.readdirSync(path.join(ROOT, 'site/src/content/articles')).find((f) => f.endsWith('.md'));

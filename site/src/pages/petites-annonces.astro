@@ -1,9 +1,10 @@
 ---
 import Base from '../layouts/Base.astro';
-import { rubrique, categoriesAnnonces, annonces, annonceurs, manchetteRencontres } from '../lib/annonces';
+import { rubrique, categoriesAnnonces, annonces } from '../lib/annonces';
 import { contactEmail } from '../lib/legal';
 import { url } from '../lib/site';
 import AnnonceCarte from '../components/AnnonceCarte.astro';
+import BandeauRencontres from '../components/BandeauRencontres.astro';
 
 const compte = (slug: string) => annonces.filter((a) => a.cat === slug).length;
 // Les encarts publicitaires passent en haut de page (bandeau defilant); les autres annonces restent dans les colonnes.
@@ -18,13 +19,7 @@ const autres = annonces.filter((a) => a.format !== 'encart');
     <p class="meta">{rubrique.intro}</p>
   </div>
 
-  {manchetteRencontres && (
-    <aside class="pa-manchette" aria-label="Annonces de rencontres">
-      <img class="pa-manchette-photo" src={url(`annonces/${manchetteRencontres.image}`)} width="56" height="70" alt={manchetteRencontres.imageAlt} loading="lazy" />
-      <p>{manchetteRencontres.texte}</p>
-      <a href={url(manchetteRencontres.lien)}>{manchetteRencontres.lienTexte} →</a>
-    </aside>
-  )}
+  <BandeauRencontres />
 
   <section class="pa-pubs-section" id="pa-pubs-section" aria-labelledby="pa-titre-pubs">
     <h2 id="pa-titre-pubs" class="pa-titre-section">Publicités</h2>
@@ -147,12 +142,6 @@ const autres = annonces.filter((a) => a.format !== 'encart');
   .pa-pubs { display: flex; gap: 16px; overflow-x: auto; padding-bottom: 10px; scroll-snap-type: x proximity; }
   .pa-pubs .pa { flex: 0 0 min(300px, 86%); margin: 0; scroll-snap-align: start; }
   .pa-pubs:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-  /* Manchette de renvoi vers la rubrique Rencontres */
-  .pa-manchette { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin: 20px 0 4px; padding: 10px 14px; background: #16140f; color: #faf7f2; border: 2px solid #c89658; font-family: var(--sans); }
-  .pa-manchette-photo { width: 56px; height: 70px; object-fit: cover; object-position: 50% 12%; border: 1px solid #faf7f2; }
-  .pa-manchette p { margin: 0; flex: 1 1 260px; font: italic 1.05rem/1.4 var(--serif); }
-  .pa-manchette a { color: #faf7f2; font: 700 .85rem var(--sans); text-decoration: none; border: 2px solid #faf7f2; padding: 6px 12px; }
-  .pa-manchette a:hover, .pa-manchette a:focus-visible { background: #faf7f2; color: #16140f; }
   .pa-slogan { font: italic .8rem var(--serif); margin-top: 8px !important; }
   .pal-ink { background: #16140f; color: #faf7f2; }
   .pal-bleu { background: #1c3a57; color: #f4f8fb; }

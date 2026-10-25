@@ -1,0 +1,20 @@
+---
+// « Retrouvez les annonces de l'Agence Rencontres & affinites, selectionnees par Madame de Valmorin » + lien vers /rencontres/.
+// Affiche sur l'accueil et sur la page Petites annonces. Donnees: manchetteRencontres dans config/annonces.json.
+import { manchetteRencontres as m } from '../lib/annonces';
+import { url } from '../lib/site';
+---
+{m && (
+  <aside class="bandeau-rc" aria-label="Annonces de rencontres">
+    <img class="bandeau-rc-photo" src={url(`annonces/${m.image}`)} width="56" height="70" alt={m.imageAlt} loading="lazy" />
+    <p>{m.texte}</p>
+    <a href={url(m.lien)}>{m.lienTexte} →</a>
+  </aside>
+)}
+<style>
+  .bandeau-rc { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin: 18px 0 6px; padding: 10px 14px; background: #16140f; color: #faf7f2; border: 2px solid #c89658; font-family: var(--sans); }
+  .bandeau-rc-photo { width: 56px; height: 70px; object-fit: cover; object-position: 50% 12%; border: 1px solid #faf7f2; }
+  .bandeau-rc p { margin: 0; flex: 1 1 260px; font: italic 1.05rem/1.4 var(--serif); }
+  .bandeau-rc a { color: #faf7f2; font: 700 .85rem var(--sans); text-decoration: none; border: 2px solid #faf7f2; padding: 6px 12px; }
+  .bandeau-rc a:hover, .bandeau-rc a:focus-visible { background: #faf7f2; color: #16140f; }
+</style>
