@@ -100,12 +100,14 @@ const icones = ['☀️', '⛅', '☁️', '🌧️', '⛈️', '❄️', '🌪�
     tick(); setInterval(tick, 1000);
   });
 
-  // Règle de tweets favorables (bidon) : le curseur bouge de temps en temps (toutes les 5 à 11 s), et la question du sondage change parfois.
+  // Règle de tweets favorables (bidon) : le curseur bouge de temps en temps (toutes les 5 à 11 s) ; la question du sondage change à chaque chargement de la page.
   const mois = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
   const pick = (n: number) => Math.floor(Math.random() * n);
   document.querySelectorAll<HTMLElement>('[data-gm="regle"]').forEach((el) => {
     const cursor = el.querySelector<HTMLElement>('.regle-cursor')!, val = el.querySelector<HTMLElement>('.regle-val')!;
     const question = document.querySelector<HTMLElement>('[data-gm="question"]');
+    // La question du sondage ne change qu'au chargement de la page.
+    if (question) question.textContent = `la question ${1 + pick(399)}-${'ABCDEF'[pick(6)]} du ${1 + pick(28)} ${mois[pick(12)]}`;
     let v = 50;
     const fmt = new Intl.NumberFormat('fr-FR', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
     const step = () => {
@@ -113,7 +115,6 @@ const icones = ['☀️', '⛅', '☁️', '🌧️', '⛈️', '❄️', '🌪�
       v = Math.min(94, Math.max(6, v));
       cursor.style.left = v + '%';
       val.textContent = fmt.format(v) + ' %';
-      if (question && Math.random() < 0.4) question.textContent = `la question ${1 + pick(399)}-${'ABCDEF'[pick(6)]} du ${1 + pick(28)} ${mois[pick(12)]}`;
       setTimeout(step, 5000 + Math.random() * 6000);
     };
     step();
