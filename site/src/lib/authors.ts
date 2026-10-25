@@ -39,13 +39,8 @@ export function portrait(name: string): string | null {
 export const bureauByDesk: Record<string, string> = {
   politique: 'politique', tech: 'tech', economie: 'economie', societe: 'societe-culture', culture: 'societe-culture', sport: 'sport', monde: 'monde',
 };
-/** Bureaux sans service de rubrique, montres dans « Secretariat et coulisses ». */
-export const coulisses = [
-  { file: 'faits-divers', label: 'Faits divers', alt: "Salle d'enquête aux néons froids, mur de liège couvert de coupures de presse reliées par des fils rouges" },
-  { file: 'juridique', label: 'Juridique', alt: 'Bureau paysager du service juridique, bibliothèques de codes reliés et classeurs de couleur' },
-  { file: 'vie-entreprise', label: "Vie de l'entreprise", alt: "Espace détente voisin des bureaux : grande table, cafetière filtre, panneau de notes et petit barbecue sur une étagère" },
-  { file: 'lucas', label: 'Le bureau de Lucas D.', alt: "Un minuscule bureau sous un escalier, entouré de piles de cartons d'archives et d'une mer de tasses" },
-];
+/** Bureau de Lucas, montre dans « Coulisses ». */
+export const lucasBureau = { alt: "Un minuscule bureau sous un escalier, entouré de piles de cartons d'archives et d'une mer de tasses" };
 
 /** Heure de prise de vue de chaque photo de bureau (16 h 53 pour la premiere, une minute de plus a chaque photo, 17 h 02 pour la derniere). */
 export const bureauTime: Record<string, string> = {
