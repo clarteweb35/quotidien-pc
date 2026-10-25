@@ -1,5 +1,7 @@
 ---
 import { loadQuotes, marchesEnabled, fmtNum, quoteUrl, type Quote } from '../lib/marches';
+interface Props { reverse?: boolean }
+const { reverse = false } = Astro.props;
 const quotes = marchesEnabled ? await loadQuotes() : [];
 const stamp = quotes.length ? new Intl.DateTimeFormat('fr-FR', { dateStyle: 'long', timeStyle: 'short', timeZone: 'Europe/Paris' }).format(new Date(Math.max(...quotes.map((q) => q.time.getTime())))) : '';
 const sign = (n: number) => (n > 0 ? '+' : n < 0 ? '−' : '');
@@ -9,7 +11,7 @@ const price = (q: Quote) => (q.kind === 'index' ? fmtNum(q.price, 0) : q.kind ==
   <section class="bandeau" aria-label="Cours des marchés (données réelles)">
     <div class="bd-head"><strong>Marchés</strong> <span>données réelles, hors satire</span></div>
     <div class="bd-viewport">
-      <div class="bd-track">
+      <div class:list={['bd-track', reverse && 'rev']}>
         {[0, 1].map((copy) => (
           <ul class="bd-list" aria-hidden={copy === 1 ? 'true' : undefined}>
             {quotes.map((q) => (
@@ -37,6 +39,7 @@ const price = (q: Quote) => (q.kind === 'index' ? fmtNum(q.price, 0) : q.kind ==
   .bd-viewport:hover .bd-track, .bd-viewport:focus-within .bd-track { animation-play-state: paused; }
   .bd-list { list-style: none; margin: 0; padding: 0; display: flex; flex: none; }
   .bd-list li { flex: none; min-width: 150px; border-left: 3px solid var(--rule); margin: 4px 14px; }
+  .bd-track.rev { animation-direction: reverse; }
   @keyframes bd-scroll { to { transform: translateX(-50%); } }
   @media (prefers-reduced-motion: reduce) { .bd-track { animation: none; } .bd-viewport { overflow-x: auto; } }
   .bd-list li.up { border-left-color: #15803d; } .bd-list li.down { border-left-color: #b3261e; }

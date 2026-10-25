@@ -1,0 +1,145 @@
+---
+// Bandeaux satiriques par rubrique. Tout est FICTIF et annoncé comme tel (pastille « Fiction »). Aucune donnée réelle, aucune requête réseau.
+interface Props { slug: string }
+const { slug } = Astro.props;
+
+// Générateur pseudo-aléatoire à graine (build) : même heure de build => mêmes valeurs.
+const seeded = (seed: number) => () => { seed = (seed + 0x6d2b79f5) | 0; let t = Math.imul(seed ^ (seed >>> 15), 1 | seed); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+const rnd = seeded(Math.floor(Date.now() / 3600000));
+
+const prenoms = ['Maurice', 'Josette', 'Gérard', 'Huguette', 'Raymond', 'Odette', 'Roger', 'Ginette', 'Bernard', 'Colette', 'Jean-Claude', 'Yvette', 'Michel', 'Paulette', 'Fernand', 'Simone', 'Lucien', 'Monique', 'Gaston', 'Denise', 'Marcel', 'Jeannine', 'Albert', 'Micheline'];
+const lettres = 'ABCDEFGHJKLMNPRSTV';
+const pmu = Array.from({ length: 24 }, () => ({
+  who: `${prenoms[Math.floor(rnd() * prenoms.length)]} ${lettres[Math.floor(rnd() * lettres.length)]}.`,
+  gain: 3 + Math.floor(rnd() * 56),
+}));
+
+const capitales: [string, number][] = [['Paris', 14], ['Berne', 9], ['Oslo', 4], ['Madrid', 19], ['Tokyo', 17], ['Ottawa', 6], ['Canberra', 23], ['Nairobi', 24], ['Lima', 20], ['Reykjavik', 3], ['Le Caire', 28], ['Wellington', 13], ['Brasilia', 26], ['Vienne', 8], ['Hanoï', 27], ['Dublin', 10]];
+const icones = ['☀️', '⛅', '☁️', '🌧️', '⛈️', '❄️', '🌪️', '🌈'];
+---
+{slug === 'economie' && (
+  <section class="gm gm-pmu" aria-label="Gains PMU du jour (fiction)">
+    <div class="gm-head"><span class="gm-pill">Fiction</span><strong>Gains PMU du jour</strong></div>
+    <div class="gm-viewport"><div class="gm-track">
+      {[0, 1].map((copy) => (
+        <ul class="gm-list" aria-hidden={copy === 1 ? 'true' : undefined}>
+          {pmu.map((g) => <li><b>{g.who}</b> vient de gagner <span class="gm-gain">{g.gain} €</span></li>)}
+        </ul>
+      ))}
+    </div></div>
+  </section>
+)}
+
+{slug === 'politique' && (
+  <section class="gm gm-regle" aria-label="Règle de tweets favorables (fiction)">
+    <div class="gm-head"><span class="gm-pill">Fiction</span><strong>Part de tweets favorables</strong><span class="gm-note">sondage de la question 145-B du 13 avril (sujet non communiqué)</span></div>
+    <div class="regle" data-gm="regle">
+      <div class="regle-scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100</span></div>
+      <div class="regle-bar"><div class="regle-cursor" style="left:50%"><span class="regle-val">50,0 %</span></div></div>
+    </div>
+  </section>
+)}
+
+{slug === 'monde' && (
+  <section class="gm gm-meteo" aria-label="Météo des capitales (fiction)">
+    <div class="gm-head"><span class="gm-pill">Fiction</span><strong>Météo des capitales</strong><span class="gm-note">températures inventées</span></div>
+    <div class="gm-viewport"><div class="gm-track">
+      {[0, 1].map((copy) => (
+        <ul class="gm-list" aria-hidden={copy === 1 ? 'true' : undefined}>
+          {capitales.map(([nom, t], i) => <li data-gm="cap" data-t={t}><b>{nom}</b> <span class="cap-ico">{icones[(i * 3) % icones.length]}</span> <span class="cap-t">{t} °C</span></li>)}
+        </ul>
+      ))}
+    </div></div>
+  </section>
+)}
+
+{slug === 'environnement' && (
+  <section class="gm gm-compteur" aria-label="Compteur de forêt amazonienne rasée (fiction)">
+    <div class="gm-head"><span class="gm-pill">Fiction</span><strong>Forêt amazonienne rasée depuis minuit</strong><span class="gm-note">estimation inventée, remise à zéro à minuit</span></div>
+    <p class="compteur"><span data-gm="counter" data-mode="day" data-lo="1.2" data-hi="3.2" data-dec="1">0</span> <abbr title="hectares">ha</abbr></p>
+  </section>
+)}
+
+{slug === 'culture' && (
+  <section class="gm gm-compteur" aria-label="Compteur d'heures de chômage des intermittents (fiction)">
+    <div class="gm-head"><span class="gm-pill">Fiction</span><strong>Heures de chômage à indemniser aux intermittents ce mois-ci</strong><span class="gm-note">chiffre inventé, remis à zéro le 1<sup>er</sup> du mois</span></div>
+    <p class="compteur"><span data-gm="counter" data-mode="month" data-lo="3" data-hi="7" data-dec="0">0</span> <abbr title="heures">h</abbr></p>
+  </section>
+)}
+
+<script>
+  const paris = () => {
+    const p = Object.fromEntries(new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Paris', year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false }).formatToParts(new Date()).map((x) => [x.type, +x.value]));
+    return { y: p.year, m: p.month, d: p.day, h: p.hour % 24, min: p.minute, s: p.second };
+  };
+  const rng = (seed: number) => { let t = (seed + 0x6d2b79f5) | 0; t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+
+  // Compteurs (jour ou mois) : cumul d'un débit par minute pseudo-aléatoire mais déterministe => même valeur pour tous, remise à zéro à minuit / le 1er.
+  document.querySelectorAll<HTMLElement>('[data-gm="counter"]').forEach((el) => {
+    const lo = +el.dataset.lo!, hi = +el.dataset.hi!, dec = +el.dataset.dec!, month = el.dataset.mode === 'month';
+    const fmt = new Intl.NumberFormat('fr-FR', { minimumFractionDigits: dec, maximumFractionDigits: dec });
+    const tick = () => {
+      const t = paris();
+      const n = (month ? (t.d - 1) * 1440 : 0) + t.h * 60 + t.min;
+      const base = t.y * 10000 + t.m * 100 + (month ? 0 : t.d);
+      let sum = 0;
+      for (let i = 0; i < n; i++) sum += lo + (hi - lo) * rng(base * 100000 + i);
+      sum += (lo + (hi - lo) * rng(base * 100000 + n)) * (t.s / 60);
+      el.textContent = fmt.format(sum * (month ? 60 : 1));
+    };
+    tick(); setInterval(tick, 1000);
+  });
+
+  // Règle de tweets favorables : marche aléatoire rappelée vers 50 %.
+  document.querySelectorAll<HTMLElement>('[data-gm="regle"]').forEach((el) => {
+    const cursor = el.querySelector<HTMLElement>('.regle-cursor')!, val = el.querySelector<HTMLElement>('.regle-val')!;
+    let v = 50;
+    const fmt = new Intl.NumberFormat('fr-FR', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+    const step = () => {
+      v += (50 - v) * 0.08 + (Math.random() - 0.5) * 14;
+      v = Math.min(92, Math.max(8, v));
+      cursor.style.left = v + '%';
+      val.textContent = fmt.format(v) + ' %';
+    };
+    step(); setInterval(step, 1400);
+  });
+
+  // Météo des capitales : icône et température qui changent.
+  const icones = ['☀️', '⛅', '☁️', '🌧️', '⛈️', '❄️', '🌪️', '🌈'];
+  const caps = document.querySelectorAll<HTMLElement>('[data-gm="cap"]');
+  if (caps.length) {
+    setInterval(() => {
+      caps.forEach((li) => {
+        if (Math.random() < 0.35) {
+          li.querySelector('.cap-ico')!.textContent = icones[Math.floor(Math.random() * icones.length)];
+          const t = +li.dataset.t! + Math.round((Math.random() - 0.5) * 8);
+          li.querySelector('.cap-t')!.textContent = t + ' °C';
+        }
+      });
+    }, 2500);
+  }
+</script>
+
+<style>
+  .gm { margin: 12px 0 6px; border: 1px solid var(--ink); background: rgba(255,255,255,.45); font-family: var(--sans); }
+  .gm-head { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; padding: 6px 10px; font-size: .85rem; border-bottom: 1px solid var(--rule); }
+  .gm-pill { font-size: .62rem; letter-spacing: .08em; text-transform: uppercase; background: var(--ink); color: var(--paper); padding: 2px 6px; }
+  .gm-note { color: var(--ink-2); font-size: .74rem; }
+  .gm-viewport { overflow: hidden; height: 34px; display: flex; align-items: center; }
+  .gm-track { display: flex; width: max-content; animation: gm-scroll 70s linear infinite; }
+  .gm-viewport:hover .gm-track { animation-play-state: paused; }
+  .gm-list { display: flex; flex: none; margin: 0; padding: 0; list-style: none; }
+  .gm-list li { padding: 0 20px; white-space: nowrap; font-size: .88rem; }
+  .gm-list li::after { content: '◆'; margin-left: 20px; color: var(--accent); font-size: .55rem; }
+  .gm-gain { color: #15803d; font-weight: 700; }
+  .cap-ico { display: inline-block; min-width: 1.4em; }
+  @keyframes gm-scroll { to { transform: translateX(-50%); } }
+  .compteur { margin: 0; padding: 8px 12px 10px; font: 700 2rem/1 var(--serif); font-variant-numeric: tabular-nums; }
+  .compteur abbr { font-size: 1rem; text-decoration: none; color: var(--ink-2); }
+  .regle { padding: 8px 14px 30px; }
+  .regle-scale { display: flex; justify-content: space-between; font-size: .66rem; color: var(--ink-2); }
+  .regle-bar { position: relative; height: 12px; margin-top: 3px; background: repeating-linear-gradient(90deg, var(--ink) 0 1px, transparent 1px 10%), linear-gradient(90deg, #b3261e33, #15803d33); border: 1px solid var(--ink); }
+  .regle-cursor { position: absolute; top: -6px; width: 0; height: 24px; border-left: 3px solid var(--accent); transition: left 1.2s ease-in-out; }
+  .regle-val { position: absolute; top: 24px; left: 0; transform: translateX(-50%); font-size: .8rem; font-weight: 700; white-space: nowrap; }
+  @media (prefers-reduced-motion: reduce) { .gm-track { animation: none; } .gm-viewport { overflow-x: auto; } .regle-cursor { transition: none; } }
+</style>
