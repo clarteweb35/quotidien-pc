@@ -24,7 +24,7 @@
 ### 2.1 Pages
 | Page | Contenu | État |
 |---|---|---|
-| Accueil `/` | fil « À l'instant » (titres qui défilent) ; bandeau des cours (sens inverse) ; article à la une ; météo des capitales (bidon, 6 villes) ; prévision et horoscope (bidon) ; 7 dernières nouvelles (pas d'extraits par rubrique : le menu les propose, et la page reste légère) | ✅ |
+| Accueil `/` | fil « À l'instant » (titres qui défilent) ; bandeau des cours (sens inverse) ; article à la une ; météo des capitales (bidon, 6 villes) ; 7 dernières nouvelles (pas d'extraits par rubrique : le menu les propose, et la page reste légère) | ✅ |
 | Article `/articles/<slug>/` | titre, chapô, signature avec petit portrait, illustration, corps justifié, partage, mots-clés, sources, barre de progression de lecture, JSON-LD `SatiricalArticle` | ✅ |
 | Rubrique `/rubrique/<slug>/` | 8 rubriques ; bandeaux propres à chaque rubrique (voir 2.3) | ✅ |
 | Compteurs `/compteurs/` | toutes les jauges : **d'abord les fictives**, **ensuite les réelles** (cours, scores), chaque partie étiquetée | ✅ |
@@ -59,8 +59,7 @@ Données **fictives** (pastille « Fiction » seulement quand du réel est à c�
 | Société | attente moyenne à la préfecture ; réunions qui auraient pu être un e-mail |
 | Tech & Sciences | statut des serveurs (parfois orange) ; mise à jour bloquée à 99 % |
 | Sport | « c'est la faute à l'arbitre » depuis minuit ; chrono depuis le dernier « on a manqué de réussite » |
-| Accueil | prévision du lendemain, horoscope de la rédaction |
-| Rédaction | cafés préparés par Lucas (dont quelques buvables) |
+| Compteurs (uniquement) | cafés préparés par Lucas, avec une scène en boucle (prépare, goûte, vide, recommence) |
 | Mentions légales | bouton « J'ai lu les mentions légales » qui esquive la souris |
 
 Les compteurs « depuis minuit / ce mois-ci » sont déterministes (même valeur pour tous les visiteurs).

@@ -135,15 +135,6 @@ const icones = ['☀️', '⛅', '☁️', '🌧️', '⛈️', '❄️', '🌪�
   </>
 )}
 
-{slug === 'accueil' && (
-  <section class="gm" aria-label="Prévision et horoscope (fiction)">
-    <div class="gm-head">{pill && <span class="gm-pill">Fiction</span>}<strong>Demain, en une ligne</strong></div>
-    <p class="une-ligne" data-gm="prevision">À peu près pareil, mais en pire ou en mieux.</p>
-    <div class="gm-head gm-head-bas"><strong>Horoscope de la rédaction</strong><span class="gm-note" data-gm="signe">Balance</span></div>
-    <p class="une-ligne" data-gm="horoscope">Aujourd'hui, un dossier avancera sans vous.</p>
-  </section>
-)}
-
 {slug === 'redaction' && (
   <section class="gm" aria-label="Cafés de Lucas (fiction)">
     <div class="gm-head">{pill && <span class="gm-pill">Fiction</span>}<strong>Cafés préparés par Lucas aujourd'hui</strong><span class="gm-note">dont <span data-gm="buvables">0</span> buvable(s)</span></div>
@@ -300,17 +291,6 @@ const icones = ['☀️', '⛅', '☁️', '🌧️', '⛈️', '❄️', '🌪�
     boucle();
   });
 
-  // Accueil: previsions et horoscope, une phrase par chargement.
-  const choix = <T,>(l: T[]) => l[Math.floor(Math.random() * l.length)];
-  const prev = document.querySelector<HTMLElement>('[data-gm="prevision"]');
-  if (prev) prev.textContent = choix(['À peu près pareil, mais en pire ou en mieux.', 'Quelques éclaircies, sous réserve de nuages.', 'Il fera le temps qu\'il fera, avec une marge d\'erreur confortable.', 'Probablement demain.', 'Variable, comme les promesses.']);
-  const signe = document.querySelector<HTMLElement>('[data-gm="signe"]');
-  const horo = document.querySelector<HTMLElement>('[data-gm="horoscope"]');
-  if (signe && horo) {
-    signe.textContent = choix(['Bélier', 'Taureau', 'Gémeaux', 'Cancer', 'Lion', 'Vierge', 'Balance', 'Scorpion', 'Sagittaire', 'Capricorne', 'Verseau', 'Poissons']);
-    horo.textContent = choix(['Aujourd\'hui, un dossier avancera sans vous.', 'Une réunion tombera à l\'eau, un café aussi.', 'Vous aurez raison, mais pas au bon moment.', 'Un collègue vous dira « tu as vu mon mail ? ». Non.', 'Jour idéal pour reporter à demain.']);
-  }
-
   // Cafes de Lucas: quelques-uns seulement sont buvables.
   document.querySelectorAll<HTMLElement>('[data-gm="buvables"]').forEach((el) => {
     const n = Number(el.closest('section')?.querySelector('[data-gm="counter"]')?.textContent?.replace(/\D/g, '') || 0);
@@ -388,8 +368,6 @@ const icones = ['☀️', '⛅', '☁️', '🌧️', '⛈️', '❄️', '🌪�
   .duel-piste { height: 12px; background: var(--paper-2); border: 1px solid var(--rule); }
   .duel-barre { height: 100%; transition: width 1.6s ease-in-out; }
   .duel-barre.achete { background: #1f5f8b; } .duel-barre.lu { background: #b3261e; }
-  .une-ligne { margin: 0; padding: 8px 12px 10px; font: italic 1.02rem/1.4 var(--serif); }
-  .gm-head-bas { border-top: 1px solid var(--rule); }
   .lu-zone { padding: 14px 12px 16px; min-height: 64px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px; overflow: hidden; }
   .lu-bouton { font: 600 .9rem var(--sans); padding: 8px 16px; border: 2px solid var(--ink); background: var(--paper); color: var(--ink); cursor: pointer; transition: transform .25s ease; }
   .lu-bouton:hover, .lu-bouton:focus-visible { background: var(--ink); color: var(--paper); }
