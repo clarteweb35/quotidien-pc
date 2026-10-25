@@ -1,9 +1,11 @@
 ---
 import { loadQuotes, marchesEnabled, fmtNum, quoteUrl, type Quote } from '../lib/marches';
-interface Props { reverse?: boolean }
-const { reverse = false } = Astro.props;
-const quotes = marchesEnabled ? await loadQuotes() : [];
-const stamp = quotes.length ? new Intl.DateTimeFormat('fr-FR', { dateStyle: 'long', timeStyle: 'short', timeZone: 'Europe/Paris' }).format(new Date(Math.max(...quotes.map((q) => q.time.getTime())))) : '';
+// reverse: sens inverse du fil « A l'instant » (accueil). limit: nombre de valeurs affichees (l'accueil en garde peu, pour alleger la page: EcoIndex compte les elements du DOM).
+interface Props { reverse?: boolean; limit?: number }
+const { reverse = false, limit } = Astro.props;
+const all = marchesEnabled ? await loadQuotes() : [];
+const quotes = limit ? all.slice(0, limit) : all;
+const stamp = all.length ? new Intl.DateTimeFormat('fr-FR', { dateStyle: 'long', timeStyle: 'short', timeZone: 'Europe/Paris' }).format(new Date(Math.max(...all.map((q) => q.time.getTime())))) : '';
 const sign = (n: number) => (n > 0 ? '+' : n < 0 ? '−' : '');
 const price = (q: Quote) => (q.kind === 'index' ? fmtNum(q.price, 0) : q.kind === 'fx' ? fmtNum(q.price, 4) : `${fmtNum(q.price)} ${q.currency === 'EUR' ? '€' : q.currency === 'USD' ? '$' : q.currency}`);
 ---
@@ -13,17 +15,15 @@ const price = (q: Quote) => (q.kind === 'index' ? fmtNum(q.price, 0) : q.kind ==
     <div class="bd-viewport">
       <div class:list={['bd-track', reverse && 'rev']}>
         {[0, 1].map((copy) => (
-          <ul class="bd-list" aria-hidden={copy === 1 ? 'true' : undefined}>
+          <div class="bd-list" aria-hidden={copy === 1 ? 'true' : undefined}>
             {quotes.map((q) => (
-              <li class:list={[q.change > 0 && 'up', q.change < 0 && 'down']}>
-                <a href={quoteUrl(q.symbol)} target="_blank" rel="noopener" tabindex={copy === 1 ? -1 : undefined} title={`${q.label} sur Yahoo Finance`}>
-                  <span class="bd-name">{q.label}</span>
-                  <span class="bd-price">{price(q)}</span>
-                  <span class="bd-chg">{q.change > 0 ? '▲' : q.change < 0 ? '▼' : '■'} {sign(q.change)}{fmtNum(Math.abs(q.change))} %</span>
-                </a>
-              </li>
+              <a class:list={['bd-item', q.change > 0 && 'up', q.change < 0 && 'down']} href={quoteUrl(q.symbol)} target="_blank" rel="noopener" tabindex={copy === 1 ? -1 : undefined} title={`${q.label} sur Yahoo Finance`}>
+                <span class="bd-name">{q.label}</span>
+                <span class="bd-price">{price(q)}</span>
+                <span class="bd-chg">{q.change > 0 ? '▲' : q.change < 0 ? '▼' : '■'} {sign(q.change)}{fmtNum(Math.abs(q.change))} %</span>
+              </a>
             ))}
-          </ul>
+          </div>
         ))}
       </div>
     </div>
@@ -37,14 +37,13 @@ const price = (q: Quote) => (q.kind === 'index' ? fmtNum(q.price, 0) : q.kind ==
   .bd-viewport { overflow: hidden; padding: 4px 0; }
   .bd-track { display: flex; width: max-content; animation: bd-scroll 60s linear infinite; }
   .bd-viewport:hover .bd-track, .bd-viewport:focus-within .bd-track { animation-play-state: paused; }
-  .bd-list { list-style: none; margin: 0; padding: 0; display: flex; flex: none; }
-  .bd-list li { flex: none; min-width: 150px; border-left: 3px solid var(--rule); margin: 4px 14px; }
   .bd-track.rev { animation-direction: reverse; }
+  .bd-list { display: flex; flex: none; }
+  .bd-item { display: grid; flex: none; min-width: 150px; margin: 4px 14px; padding: 2px 8px; border-left: 3px solid var(--rule); color: inherit; text-decoration: none; }
+  .bd-item.up { border-left-color: #15803d; } .bd-item.down { border-left-color: #b3261e; }
+  .bd-item:hover .bd-name { text-decoration: underline; }
   @keyframes bd-scroll { to { transform: translateX(-50%); } }
   @media (prefers-reduced-motion: reduce) { .bd-track { animation: none; } .bd-viewport { overflow-x: auto; } }
-  .bd-list li.up { border-left-color: #15803d; } .bd-list li.down { border-left-color: #b3261e; }
-  .bd-list a { display: grid; padding: 2px 8px; color: inherit; text-decoration: none; }
-  .bd-list a:hover .bd-name { text-decoration: underline; }
   .bd-name { font-size: .72rem; color: var(--ink-2); text-transform: uppercase; letter-spacing: .04em; }
   .bd-price { font-weight: 700; font-variant-numeric: tabular-nums; }
   .bd-chg { font-size: .8rem; font-variant-numeric: tabular-nums; }

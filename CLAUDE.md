@@ -35,7 +35,7 @@ Spécification fonctionnelle : [.ai/SPEC_FONCTIONNALITES.md](.ai/SPEC_FONCTIONNA
 - Langue : français (UI, commentaires, docs). Vouvoiement dans l'interface.
 - Style : CSS dans `global.css` et blocs `<style>` de composants Astro ; JS vanilla, **aucune librairie ni dépendance ajoutée** ; animations en CSS pur, désactivées si l'utilisateur demande de réduire les animations.
 - Accessibilité : conserver `aria-*`, `role`, `alt` (les portraits et photos IA ont un alt explicite), liens externes en `rel="noopener"`.
-- Performance : garder les scores PageSpeed (99-100) ; pas d'image ni de script externe ; hauteurs fixes pour les bandeaux animés (pas de décalage de mise en page).
+- Performance : garder les scores PageSpeed (99-100) et **EcoIndex en A : moins de ~350 éléments du DOM sur l'accueil** (compter les balises avant de grossir la page ; les bandeaux défilants doublent leur contenu) ; pas d'image ni de script externe ; hauteurs fixes pour les bandeaux animés (pas de décalage de mise en page).
 - Commentaires de code courts, en français, qui expliquent le pourquoi.
 
 ## Travailler ici (important)

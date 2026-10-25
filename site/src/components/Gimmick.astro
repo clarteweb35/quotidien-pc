@@ -2,8 +2,8 @@
 // Bandeaux satiriques par rubrique. Tout est FICTIF et annoncé comme tel (pastille « Fiction »). Aucune donnée réelle, aucune requête réseau.
 import { url } from '../lib/site';
 // pill: pastille « Fiction », utile seulement quand du reel est affiche a cote (Economie, Sport, accueil, page Compteurs).
-interface Props { slug: string; pill?: boolean }
-const { slug, pill = false } = Astro.props;
+interface Props { slug: string; pill?: boolean; limit?: number }
+const { slug, pill = false, limit } = Astro.props;
 
 // Générateur pseudo-aléatoire à graine (build) : même heure de build => mêmes valeurs.
 const seeded = (seed: number) => () => { seed = (seed + 0x6d2b79f5) | 0; let t = Math.imul(seed ^ (seed >>> 15), 1 | seed); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
@@ -58,7 +58,7 @@ const icones = ['☀️', '⛅', '☁️', '🌧️', '⛈️', '❄️', '🌪�
     <div class="gm-viewport"><div class="gm-track">
       {[0, 1].map((copy) => (
         <ul class="gm-list" aria-hidden={copy === 1 ? 'true' : undefined}>
-          {capitales.map(([nom, t], i) => <li data-gm="cap" data-t={t}><b>{nom}</b> <span class="cap-ico">{icones[(i * 3) % icones.length]}</span> <span class="cap-t">{t} °C</span></li>)}
+          {capitales.slice(0, limit ?? capitales.length).map(([nom, t], i) => <li data-gm="cap" data-t={t}><b>{nom}</b> <span class="cap-m">{icones[(i * 3) % icones.length]} {t} °C</span></li>)}
         </ul>
       ))}
     </div></div>
@@ -217,9 +217,8 @@ const icones = ['☀️', '⛅', '☁️', '🌧️', '⛈️', '❄️', '🌪�
         if (visibles.has(li)) return;
         if (Math.random() < 0.5) {
           const liste = Math.random() < 0.22 ? absurdes : icones;
-          li.querySelector('.cap-ico')!.textContent = liste[Math.floor(Math.random() * liste.length)];
           const t = +li.dataset.t! + Math.round((Math.random() - 0.5) * 8);
-          li.querySelector('.cap-t')!.textContent = t + ' °C';
+          li.querySelector('.cap-m')!.textContent = liste[Math.floor(Math.random() * liste.length)] + ' ' + t + ' °C';
         }
       });
     }, 2500);
@@ -343,7 +342,6 @@ const icones = ['☀️', '⛅', '☁️', '🌧️', '⛈️', '❄️', '🌪�
   .gm-list li::after { content: '◆'; margin-left: 20px; color: var(--accent); font-size: .55rem; }
   .gm-gain { color: #15803d; font-weight: 700; }
   .gm-loss { color: #b3261e; font-weight: 700; }
-  .cap-ico { display: inline-block; min-width: 1.4em; }
   @keyframes gm-scroll { to { transform: translateX(-50%); } }
   .compteur { margin: 0; padding: 8px 12px 10px; font: 700 2rem/1 var(--serif); font-variant-numeric: tabular-nums; }
   .cafe { display: flex; align-items: center; gap: 12px; }

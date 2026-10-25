@@ -171,10 +171,9 @@ footer ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 16px; f
 .flash-label { position: relative; z-index: 1; }
 .flash-track { display: flex; width: max-content; animation: flash-scroll 80s linear infinite; }
 .flash:hover .flash-track, .flash:focus-within .flash-track { animation-play-state: paused; }
-.flash-list { display: flex; flex: none; margin: 0; padding: 0; list-style: none; }
-.flash-list li { display: flex; align-items: center; padding: 0 22px; white-space: nowrap; }
-.flash-list li::after { content: '◆'; margin-left: 22px; color: var(--accent); font-size: .6rem; }
-.flash-list a { color: var(--ink); text-decoration: none; }
+.flash-list { display: flex; flex: none; }
+.flash-list a { display: flex; align-items: center; padding: 0 22px; white-space: nowrap; color: var(--ink); text-decoration: none; }
+.flash-list a::after { content: '◆'; margin-left: 22px; color: var(--accent); font-size: .6rem; }
 .flash-list a:hover { text-decoration: underline; }
 @keyframes flash-scroll { to { transform: translateX(-50%); } }
 

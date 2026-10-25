@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 import Card from '../components/Card.astro';
 import Marches from '../components/Marches.astro';
 import Gimmick from '../components/Gimmick.astro';
-import { allArticles, categories, category, url, siteName, manualImageCredit } from '../lib/site';
+import { allArticles, url, siteName, manualImageCredit } from '../lib/site';
 import { illustration } from '../lib/manual';
 
 const articles = await allArticles();
@@ -12,11 +12,10 @@ const illustrated = new Set<string>();
 for (const a of articles) if (await illustration(a, 800, manualImageCredit)) illustrated.add(a.id);
 const lead = articles.find((a) => illustrated.has(a.id)) ?? articles[0];
 const rest = articles.filter((a) => a !== lead);
-const latest = rest.slice(0, 9);
-const sections = categories
-  .map((c) => ({ c, items: rest.filter((a) => a.data.category === c.slug).slice(0, 3) }))
-  .filter((s) => s.items.length);
-const flash = articles.slice(0, 8);
+// Page volontairement legere: EcoIndex compte les elements du DOM (cible: moins de ~350 pour rester en A). Donc 7 dernieres nouvelles,
+// quelques valeurs et villes dans les bandeaux, et pas d'extraits par rubrique (le menu les propose deja). Ne pas grossir sans re-mesurer.
+const latest = rest.slice(0, 7);
+const flash = articles.slice(0, 5);
 const siteLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
@@ -36,16 +35,16 @@ const siteLd = {
           <span class="flash-label">À l'instant</span>
           <div class="flash-viewport"><div class="flash-track">
             {[0, 1].map((copy) => (
-              <ul class="flash-list" aria-hidden={copy === 1 ? 'true' : undefined}>
-                {flash.map((a) => <li><a href={url(`articles/${a.data.slug}/`)} tabindex={copy === 1 ? -1 : undefined}>{a.data.title}</a></li>)}
-              </ul>
+              <div class="flash-list" aria-hidden={copy === 1 ? 'true' : undefined}>
+                {flash.map((a) => <a href={url(`articles/${a.data.slug}/`)} tabindex={copy === 1 ? -1 : undefined}>{a.data.title}</a>)}
+              </div>
             ))}
           </div></div>
         </div>
       )}
-      <Marches reverse />
+      <Marches reverse limit={6} />
       <Card article={lead} lead />
-      <Gimmick slug="monde" pill />
+      <Gimmick slug="monde" pill limit={6} />
       <Gimmick slug="accueil" pill />
       {latest.length > 0 && (
         <>
@@ -53,12 +52,6 @@ const siteLd = {
           <div class="grid">{latest.map((a) => <Card article={a} />)}</div>
         </>
       )}
-      {sections.map(({ c, items }) => (
-        <>
-          <h2 class="section-title"><a href={url(`rubrique/${c.slug}/`)} style="color:inherit;text-decoration:none">{c.name}</a></h2>
-          <div class="grid">{items.map((a) => <Card article={a} />)}</div>
-        </>
-      ))}
     </>
   )}
 </Base>

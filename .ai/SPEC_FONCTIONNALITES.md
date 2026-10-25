@@ -24,7 +24,7 @@
 ### 2.1 Pages
 | Page | Contenu | État |
 |---|---|---|
-| Accueil `/` | fil « À l'instant » (titres qui défilent) ; bandeau des cours (sens inverse) ; article à la une ; météo des capitales (bidon) ; prévision et horoscope (bidon) ; dernières nouvelles ; extraits par rubrique | ✅ |
+| Accueil `/` | fil « À l'instant » (titres qui défilent) ; bandeau des cours (sens inverse) ; article à la une ; météo des capitales (bidon, 6 villes) ; prévision et horoscope (bidon) ; 7 dernières nouvelles (pas d'extraits par rubrique : le menu les propose, et la page reste légère) | ✅ |
 | Article `/articles/<slug>/` | titre, chapô, signature avec petit portrait, illustration, corps justifié, partage, mots-clés, sources, barre de progression de lecture, JSON-LD `SatiricalArticle` | ✅ |
 | Rubrique `/rubrique/<slug>/` | 8 rubriques ; bandeaux propres à chaque rubrique (voir 2.3) | ✅ |
 | Compteurs `/compteurs/` | toutes les jauges : **d'abord les fictives**, **ensuite les réelles** (cours, scores), chaque partie étiquetée | ✅ |
@@ -66,6 +66,7 @@ Données **fictives** (pastille « Fiction » seulement quand du réel est à c�
 Les compteurs « depuis minuit / ce mois-ci » sont déterministes (même valeur pour tous les visiteurs).
 
 ## 3. Référencement, performance, légal
+- **Budget EcoIndex** : le score dépend surtout du nombre d'éléments du DOM (formule publique : 100 − 5·(3·Qdom + 2·Qrequêtes + Qpoids)/6). Mesure du 25/10/2026 : 534 éléments = 73 (B) ; pour rester en A, viser **moins de ~350 éléments** sur l'accueil (mesurable avec Chrome sans interface : `document.querySelectorAll('*').length`). Les bandeaux défilants dupliquent leur liste : limiter le nombre de valeurs.
 - Sitemap + `lastmod`, canonicals, Open Graph, JSON-LD (`SatiricalArticle`, `WebSite`), plan du site, RSS. Google News volontairement non visé (contenu satirique généré par IA). Soumission du sitemap dans la Search Console : à faire une fois (hors dépôt).
 - Images en `srcset`, logo `logo-720.webp`, CSS en ligne. Cache GitHub Pages de 10 min (⚠️ non modifiable sans CDN).
 - Éditeur non professionnel (`config/legal.json`) ; passer en professionnel dès qu'il y a des revenus. Encarts d'autopromotion (`config/promos.json`) désactivés et non branchés.
