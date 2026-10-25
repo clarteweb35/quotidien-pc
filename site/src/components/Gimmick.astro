@@ -11,13 +11,15 @@ const prenoms = ['Maurice', 'Josette', 'Gérard', 'Huguette', 'Raymond', 'Odette
 const lettres = 'ABCDEFGHJKLMNPRSTV';
 const villes = ['Vitré', 'Rennes', 'Domagné', 'Laval', 'Fougères', 'Nantes', 'Saint-Malo', 'Lorient', 'Angers', 'Le Mans', 'Cholet', 'Châteaubriant', 'Lille', 'Roubaix', 'Dijon', 'Limoges', 'Tarbes', 'Albi', 'Nîmes', 'Béziers', 'Saint-Étienne', 'Brive', 'Épinal', 'Charleville'];
 // Plus de perdants que de gagnants: environ 3 sur 4 perdent (de 50 à 876 €), les autres gagnent de 3 à 58 €.
+const eur = (n: number) => n.toLocaleString('fr-FR', { minimumFractionDigits: Number.isInteger(n) ? 0 : 2, maximumFractionDigits: 2 });
 const pmu = Array.from({ length: 28 }, () => {
   const win = rnd() < 0.25;
   return {
     who: `${prenoms[Math.floor(rnd() * prenoms.length)]} ${lettres[Math.floor(rnd() * lettres.length)]}.`,
     ville: villes[Math.floor(rnd() * villes.length)],
     win,
-    amount: win ? 3 + Math.floor(rnd() * 56) : 50 + Math.floor(rnd() * 827),
+    // Gains: souvent des miettes (0,10 a 2 €), parfois de 3 a 58 €.
+    amount: win ? (rnd() < 0.45 ? Math.round((0.1 + rnd() * 1.9) * 100) / 100 : 3 + Math.floor(rnd() * 56)) : 50 + Math.floor(rnd() * 827),
   };
 });
 
@@ -30,7 +32,7 @@ const icones = ['☀️', '⛅', '☁️', '🌧️', '⛈️', '❄️', '🌪�
     <div class="gm-viewport"><div class="gm-track">
       {[0, 1].map((copy) => (
         <ul class="gm-list" aria-hidden={copy === 1 ? 'true' : undefined}>
-          {pmu.map((g) => <li><b>{g.who}</b> ({g.ville}) {g.win ? 'gains de' : 'perte de'} <span class={g.win ? 'gm-gain' : 'gm-loss'}>{g.amount} €</span></li>)}
+          {pmu.map((g) => <li><b>{g.who}</b> ({g.ville}) {g.win ? 'gains de' : 'perte de'} <span class={g.win ? 'gm-gain' : 'gm-loss'}>{eur(g.amount)} €</span></li>)}
         </ul>
       ))}
     </div></div>
