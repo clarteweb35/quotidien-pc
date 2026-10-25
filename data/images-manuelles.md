@@ -3,7 +3,17 @@
 Nommez votre image **exactement comme la référence** (ex. `261024-X1.jpg`) et déposez-la dans `site/src/assets/manual/`.
 Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large minimum.
 
-## Sans image (1)
+## Sans image (3)
+
+### `261025-05` — Chasse à l'IA dans l'édition : les auteurs désormais sommés de verser une vraie larme sur leur manuscrit
+- Rubrique : monde
+- Description suggérée : Un bureau d'écrivain en désordre avec une machine à écrire ancienne, une tasse de café renversée sur des feuilles de papier et une loupe posée à côté.
+- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
+
+### `261025-04` — Reconversion : déçus par l’IA, d’anciens cadres de la tech tentent d’appliquer le management agile à la plomberie
+- Rubrique : economie
+- Description suggérée : Un artisan en bleu de travail sur un chantier de construction, présentant des graphiques d'entreprise et des tableaux Excel sur une planche en bois posée sur des tréteaux devant ses collègues.
+- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
 ### `261025-02` — Maintien de l’ordre : la Préfecture salue un bilan comptable d’une précision exemplaire
 - Rubrique : politique

@@ -328,6 +328,110 @@
       "seenAt": "2026-10-25T09:44:26.323Z",
       "status": "used",
       "usedAt": "2026-10-25T09:44:26.323Z"
+    },
+    "8e1038a4965f": {
+      "title": "« Je n’ai pas la force de lutter contre l’IA » : face aux ravages de l’automatisation, une partie des jeunes se tourne vers des métiers manuels",
+      "url": "https://www.lemonde.fr/campus/article/2026/10/25/je-n-ai-pas-la-force-de-lutter-contre-l-ia-face-aux-ravages-de-l-automatisation-une-partie-des-jeunes-se-tourne-vers-des-metiers-manuels_6800031_4401467.html",
+      "category": "economie",
+      "seenAt": "2026-10-25T14:17:04.163Z",
+      "status": "used",
+      "usedAt": "2026-10-25T14:17:04.163Z"
+    },
+    "1488ea57e2a8": {
+      "title": "Attentat dans les Yvelines : garde à vue levée, le suspect placé en observation psychiatrique",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261025-attentat-dans-les-yvelines-garde-%C3%A0-vue-lev%C3%A9e-le-suspect-plac%C3%A9-en-observation-psychiatrique",
+      "category": "monde",
+      "seenAt": "2026-10-25T14:20:00.905Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "ad2a232607b7": {
+      "title": "Rwanda : le mystère autour de la mort de l'opposant Robert Kabera",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261025-rwanda-le-myst%C3%A8re-autour-de-la-mort-de-l-opposant-robert-kabera",
+      "category": "monde",
+      "seenAt": "2026-10-25T14:20:00.905Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "4c5faba0b1a3": {
+      "title": "Tchad : l'épidémie de dengue progresse et fait plusieurs dizaines de morts",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261025-tchad-l-%C3%A9pid%C3%A9mie-de-dengue-progresse-et-fait-plusieurs-dizaines-de-morts",
+      "category": "monde",
+      "seenAt": "2026-10-25T14:20:00.905Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "789f6685fff0": {
+      "title": "Mobilisation du 24 octobre : plus de 1 300 interpellations, une cinquantaine de policiers blessés",
+      "url": "https://www.france24.com/fr/france/20261025-mobilisation-du-24-octobre-plus-de-1-300-interpellations-une-cinquantaine-de-policiers-bless%C3%A9s",
+      "category": "monde",
+      "seenAt": "2026-10-25T14:20:00.905Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "c36b13a3099c": {
+      "title": "Attentat dans les Yvelines : le suspect placé en observation psychiatrique",
+      "url": "https://www.france24.com/fr/france/20261025-fusillade-meurtri%C3%A8re-dans-les-yvelines-le-suspect-plac%C3%A9-en-observation-psychiatrique",
+      "category": "monde",
+      "seenAt": "2026-10-25T14:20:00.905Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "685e80caf430": {
+      "title": "En Serbie, des législatives sur fond de rejet du président Aleksandar Vucic",
+      "url": "https://www.france24.com/fr/europe/20261025-en-serbie-des-%C3%A9lections-l%C3%A9gislatives-sous-forme-de-r%C3%A9f%C3%A9rendum-anti-vucic",
+      "category": "monde",
+      "seenAt": "2026-10-25T14:20:00.905Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "93555b4ccc3c": {
+      "title": "« Les câbles sous-marins sont utilisés par la Russie ou la Chine pour affaiblir leurs ennemis et par les géants numériques pour asseoir leur domination »",
+      "url": "https://www.lemonde.fr/idees/article/2026/10/25/les-cables-sous-marins-sont-utilises-par-la-russie-ou-la-chine-pour-affaiblir-leurs-ennemis-et-par-les-geants-numeriques-pour-asseoir-leur-domination_6800072_3232.html",
+      "category": "monde",
+      "seenAt": "2026-10-25T14:20:00.905Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "d9e9d4832194": {
+      "title": "Midterms 2026 : Barack Obama, en campagne pour soutenir les démocrates, attaque le mandat de Donald Trump, marqué par « le chaos, la cruauté, la corruption et l’incompétence »",
+      "url": "https://www.lemonde.fr/international/article/2026/10/25/midterms-2026-barack-obama-en-campagne-pour-soutenir-les-democrates-attaque-le-mandat-de-donald-trump-marque-par-le-chaos-la-cruaute-la-corruption-et-l-incompetence_6800059_3210.html",
+      "category": "monde",
+      "seenAt": "2026-10-25T14:20:00.905Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "19919da5c289": {
+      "title": "En Bulgarie, une élection présidentielle marquée par les craintes et les divisions sur la guerre en Ukraine",
+      "url": "https://www.lemonde.fr/international/article/2026/10/25/en-bulgarie-une-election-presidentielle-marquee-par-les-craintes-et-les-divisions-sur-la-guerre-en-ukraine_6800051_3210.html",
+      "category": "monde",
+      "seenAt": "2026-10-25T14:20:00.905Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "5ed2d9ef80a4": {
+      "title": "En Tanzanie, l’opposant Tundu Lissu menace d’entamer une grève de la faim pour protester contre ses conditions de détention",
+      "url": "https://www.lemonde.fr/afrique/article/2026/10/25/en-tanzanie-l-opposant-tundu-lissu-menace-d-entamer-une-greve-de-la-faim-pour-protester-contre-ses-conditions-de-detention_6800042_3212.html",
+      "category": "monde",
+      "seenAt": "2026-10-25T14:20:00.905Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "791961e12a2a": {
+      "title": "En République du Congo, les Kabila, rebelles de père en fils",
+      "url": "https://www.lemonde.fr/international/article/2026/10/25/en-republique-du-congo-les-kabila-rebelles-de-pere-en-fils_6800041_3210.html",
+      "category": "monde",
+      "seenAt": "2026-10-25T14:20:00.905Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "142919a1219f": {
+      "title": "\"La hantise des éditeurs\" : après l’affaire Thélyson Orélien, la chasse à l’IA s’organise",
+      "url": "https://www.france24.com/fr/culture/20261025-la-hantise-des-%C3%A9diteurs-apr%C3%A8s-l-affaire-th%C3%A9lyson-or%C3%A9lien-la-chasse-%C3%A0-l-ia-s-organise",
+      "category": "monde",
+      "seenAt": "2026-10-25T14:20:00.905Z",
+      "status": "used",
+      "usedAt": "2026-10-25T14:20:00.905Z"
     }
   },
   "slots": {
@@ -410,6 +514,29 @@
         "topicId": "2872055df568",
         "lastError": null
       },
+      "2": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "3": {
+        "attempts": 1,
+        "status": "published",
+        "startedAt": "2026-10-25T14:17:04.163Z",
+        "articleId": "856f2cd37b20",
+        "publishedAt": "2026-10-25T14:17:04.163Z",
+        "topicId": "8e1038a4965f",
+        "lastError": null
+      },
+      "4": {
+        "attempts": 1,
+        "status": "published",
+        "startedAt": "2026-10-25T14:20:00.905Z",
+        "articleId": "88e5ee8f1adb",
+        "publishedAt": "2026-10-25T14:20:00.905Z",
+        "topicId": "142919a1219f",
+        "lastError": null
+      },
       "x1": {
         "attempts": 1,
         "status": "published",
@@ -440,9 +567,9 @@
     }
   },
   "lastRun": {
-    "at": "2026-10-25T09:44:25.327Z",
-    "runId": "20261025094425-19da",
-    "published": 1,
+    "at": "2026-10-25T14:17:03.240Z",
+    "runId": "20261025141703-7385",
+    "published": 2,
     "stopped": null
   }
 }
