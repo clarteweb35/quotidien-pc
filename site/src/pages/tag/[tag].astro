@@ -9,8 +9,10 @@ export async function getStaticPaths() {
   return tags.map((tag) => ({ params: { tag }, props: { tag, items: articles.filter((a) => a.data.tags.includes(tag)) } }));
 }
 const { tag, items } = Astro.props;
+// Page mince (moins de 3 articles): hors de l'index (et du sitemap), mais ses liens restent suivis.
+const noindex = items.length < 3;
 ---
-<Base title={`#${tag}`} description={`Articles sur le thème « ${tag} ».`}>
+<Base title={`#${tag}`} description={`Articles sur le thème « ${tag} ».`} noindex={noindex} follow>
   <div class="page-head"><span class="kicker">Mot-clé</span><h1>#{tag}</h1></div>
   <div class="grid">{items.map((a) => <Card article={a} />)}</div>
 </Base>

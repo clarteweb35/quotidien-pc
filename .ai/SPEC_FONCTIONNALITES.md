@@ -72,7 +72,7 @@ Les compteurs « depuis minuit / ce mois-ci » sont déterministes (même valeur
 
 ## 3. Référencement, performance, légal
 - **Budget EcoIndex** : le score dépend surtout du nombre d'éléments du DOM (formule publique : 100 − 5·(3·Qdom + 2·Qrequêtes + Qpoids)/6). Mesure du 25/10/2026 : 534 éléments = 73 (B) ; pour rester en A, viser **moins de ~350 éléments** sur l'accueil (mesurable avec Chrome sans interface : `document.querySelectorAll('*').length`). Les bandeaux défilants dupliquent leur liste : limiter le nombre de valeurs.
-- Sitemap + `lastmod`, canonicals, Open Graph, JSON-LD (`SatiricalArticle`, `WebSite`), plan du site, RSS. Google News volontairement non visé (contenu satirique généré par IA). Soumission du sitemap dans la Search Console : à faire une fois (hors dépôt).
+- Sitemap + `lastmod`, canonicals, Open Graph, JSON-LD (`Article`, `WebSite`), pages de mots-clés de moins de 3 articles en `noindex, follow` et hors sitemap, bloc « À lire aussi » (3 lectures proches, même rubrique d'abord) en bas des articles, plan du site, RSS. Google News volontairement non visé (contenu satirique généré par IA). Soumission du sitemap dans la Search Console : à faire une fois (hors dépôt).
 - Images en `srcset`, logo `logo-720.webp`, CSS en ligne. Cache GitHub Pages de 10 min (⚠️ non modifiable sans CDN).
 - Éditeur non professionnel (`config/legal.json`) ; passer en professionnel dès qu'il y a des revenus. Encarts d'autopromotion (`config/promos.json`) désactivés et non branchés.
 

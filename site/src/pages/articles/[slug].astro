@@ -7,14 +7,26 @@ import { refOf } from '../../lib/ref';
 import { journalist, deskLabel, authorSlug, portrait } from '../../lib/authors';
 import Share from '../../components/Share.astro';
 import PubAnnonce from '../../components/PubAnnonce.astro';
+import Card from '../../components/Card.astro';
 
 export async function getStaticPaths() {
   const articles = await allArticles();
   return articles.map((a) => ({ params: { slug: a.data.slug }, props: { article: a } }));
 }
 const { article } = Astro.props;
+const all = await allArticles();
 const d = article.data;
 const cat = category(d.category);
+const related = all
+  .filter((candidate) => candidate.id !== article.id)
+  .map((candidate) => ({
+    article: candidate,
+    sameCategory: candidate.data.category === d.category,
+    sharedTags: candidate.data.tags.filter((tag) => d.tags.includes(tag)).length,
+  }))
+  .sort((a, b) => Number(b.sameCategory) - Number(a.sameCategory) || b.sharedTags - a.sharedTags || b.article.data.publishedAt.getTime() - a.article.data.publishedAt.getTime())
+  .slice(0, 3)
+  .map(({ article: candidate }) => candidate);
 const { Content } = await render(article);
 const img = await illustration(article, 1280, manualImageCredit);
 const ref = refOf(d);
@@ -25,7 +37,7 @@ const isEdito = d.category === 'editos';
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'SatiricalArticle',
+  '@type': 'Article',
   headline: d.title,
   description: d.description,
   datePublished: d.publishedAt.toISOString(),
@@ -75,6 +87,12 @@ const jsonLd = {
         {d.sources.map((s) => <> <a href={s.url} rel="noopener nofollow external">{s.name}</a></>)}.
         Le contenu ci-dessus est entièrement parodique.
       </p>
+    )}
+    {related.length > 0 && (
+      <aside class="related" aria-labelledby="related-title">
+        <h2 id="related-title">À lire aussi</h2>
+        <div class="grid">{related.map((item) => <Card article={item} />)}</div>
+      </aside>
     )}
   </article>
 </Base>

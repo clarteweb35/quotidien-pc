@@ -9,12 +9,13 @@ interface Props {
   description?: string;
   type?: 'website' | 'article';
   noindex?: boolean;
+  follow?: boolean; // avec noindex: laisser les robots suivre les liens (pages minces, ex. mots-cles)
   current?: string;
   jsonLd?: object;
   csp?: string;
   ogImage?: string;
 }
-const { title, description = tagline, type = 'website', noindex = false, current = '', jsonLd, csp, ogImage } = Astro.props;
+const { title, description = tagline, type = 'website', noindex = false, follow = false, current = '', jsonLd, csp, ogImage } = Astro.props;
 const fullTitle = title ? `${title} — ${siteName}` : `${siteName} — ${tagline}`;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const share = new URL(ogImage ?? url('brand/og-default.png'), Astro.site).toString();
@@ -36,7 +37,7 @@ const today = new Intl.DateTimeFormat('fr-FR', { timeZone: 'Europe/Paris', dateS
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     {csp && <meta http-equiv="Content-Security-Policy" content={csp} />}
-    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    {noindex && <meta name="robots" content={follow ? 'noindex, follow' : 'noindex, nofollow'} />}
     <link rel="alternate" type="application/rss+xml" title={siteName} href={url('rss.xml')} />
     <link rel="icon" href={url('favicon.svg')} type="image/svg+xml" />
     <meta property="og:site_name" content={siteName} />
@@ -119,6 +120,6 @@ const today = new Intl.DateTimeFormat('fr-FR', { timeZone: 'Europe/Paris', dateS
         </div>
       </div>
     </footer>
-    {!csp && !noindex && <Consent />}
+    {!csp && (follow || !noindex) && <Consent />}
   </body>
 </html>

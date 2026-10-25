@@ -96,7 +96,7 @@ Relecteur Gemini : humour, cohérence, risque, citation à une personne réelle,
 
 | Sujet | Mise en œuvre |
 |---|---|
-| Moteurs de recherche | `sitemap-index.xml` avec `lastmod` des articles (date de publication), `robots.txt`, URL canoniques, Open Graph, JSON-LD `SatiricalArticle` (articles) et `WebSite` (accueil) |
+| Moteurs de recherche | `sitemap-index.xml` avec `lastmod` des articles (date de publication), `robots.txt`, URL canoniques, Open Graph, JSON-LD `Article` (articles) et `WebSite` (accueil) |
 | Lecteurs | rubriques, tags, flux RSS, **plan du site** (`/plan-du-site/`) lié dans le pied de page |
 | Performance | images en `srcset` (demi-taille pour mobile), logo `logo-720.webp`, CSS en ligne (aucune requête bloquante). Limite : GitHub Pages impose un cache de 10 min ; un CDN devant le domaine (ex. Cloudflare) permettrait un cache long sur `/_astro/` et `/brand/` |
 | Rubrique Économie | bloc « Marchés » (`config/marches.json`, `site/src/lib/marches.ts`) : cotations Yahoo Finance récupérées à la construction, titres du fil éco, repère historique. Dernier bon résultat gardé 48 h dans `site/.cache/` (cache Actions). Redéploiement planifié 3 fois par jour en semaine |

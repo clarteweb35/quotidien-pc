@@ -141,4 +141,22 @@ test('contenu: jamais plus d\'un edito par jour (heure de Paris)', () => {
   for (const [jour, n] of Object.entries(parJour)) assert.ok(n <= 1, `${n} editos le ${jour}`);
 });
 
+test('SEO: mots-cles minces en noindex et hors sitemap, lectures proches, schema Article', () => {
+  const dir = path.join(ROOT, 'site/src/content/articles');
+  const compte = new Map();
+  for (const f of fs.readdirSync(dir).filter((x) => x.endsWith('.md'))) {
+    const tags = /^tags:\s*\[(.*)\]\s*$/m.exec(fs.readFileSync(path.join(dir, f), 'utf8'))?.[1];
+    if (tags) for (const t of JSON.parse(`[${tags}]`)) compte.set(t, (compte.get(t) ?? 0) + 1);
+  }
+  const mince = [...compte].find(([, n]) => n < 3)[0];
+  const solide = [...compte].find(([, n]) => n >= 3)?.[0];
+  assert.ok(page(`tag/${mince}`).includes('content="noindex, follow"'), 'mot-cle mince en noindex, follow');
+  const sitemap = fs.readFileSync(path.join(out, 'sitemap-0.xml'), 'utf8');
+  assert.ok(!sitemap.includes(`/tag/${encodeURIComponent(mince)}/`), 'mot-cle mince hors sitemap');
+  if (solide) assert.ok(!page(`tag/${solide}`).includes('noindex'), 'mot-cle fourni indexable');
+  const slug = /^slug: "([^"]+)"/m.exec(fs.readFileSync(path.join(dir, fs.readdirSync(dir).find((x) => x.endsWith('.md'))), 'utf8'))[1];
+  const art = page(`articles/${slug}`);
+  assert.ok(art.includes('À lire aussi') && art.includes('"@type":"Article"') && !art.includes('SatiricalArticle'), 'lectures proches et schema Article');
+});
+
 test.after(() => fs.rmSync(out, { recursive: true, force: true }));
