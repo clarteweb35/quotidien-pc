@@ -226,3 +226,13 @@ footer .quality ul { justify-content: center; gap: 8px 10px; }
 footer .quality a { display: inline-flex; align-items: center; gap: 8px; padding: 3px 4px 3px 12px; border: 1px solid var(--rule); border-radius: 999px; background: var(--paper-2); color: var(--ink); text-decoration: none; font-size: .78rem; }
 footer .quality a:hover, footer .quality a:focus-visible { border-color: var(--ink); }
 footer .quality .q-score { display: inline-grid; place-items: center; min-width: 1.7rem; height: 1.7rem; padding: 0 .4rem; border-radius: 999px; background: #15803d; color: #fff; font-weight: 700; font-size: .78rem; }
+
+/* Derniere ligne du pied de page: copyright a gauche, mesures de qualite alignees a droite */
+footer .bottomline { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px; margin-top: 6px; padding-top: 8px; border-top: 1px solid var(--rule); }
+footer .bottomline .copyright { margin: 0; padding: 0; border: 0; text-align: left; font-size: .75rem; }
+footer .bottomline .quality { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 6px 12px; margin: 0; padding: 0; border: 0; text-align: right; }
+footer .bottomline .quality p { margin: 0; }
+footer .bottomline .quality ul { justify-content: flex-end; }
+@media (max-width: 760px) { footer .bottomline, footer .bottomline .quality { justify-content: center; text-align: center; } footer .bottomline .quality ul { justify-content: center; } }
+footer .wordmark b { white-space: nowrap; }
+footer .brand { flex-wrap: wrap; }
