@@ -1,7 +1,7 @@
 {
   "date": "2026-10-25",
   "target": 8,
-  "publishedCount": 3,
+  "publishedCount": 4,
   "articles": [
     {
       "id": "960c9e87e0d0",
@@ -23,20 +23,33 @@
       "title": "Diagonale des Fous : le monde du sport fasciné par l'art de gravir 10 000 mètres pour éviter de prendre le car",
       "category": "sport",
       "slug": "diagonale-des-fous-le-monde-du-sport-fascine-par-l-art-de"
+    },
+    {
+      "id": "7c36481d02a1",
+      "ref": "261025-02",
+      "title": "Maintien de l’ordre : la Préfecture salue un bilan comptable d’une précision exemplaire",
+      "category": "politique",
+      "slug": "maintien-de-l-ordre-la-prefecture-salue-un-bilan-comptable"
     }
   ],
   "slots": [
     {
       "idx": 0,
       "hhmm": "07:00",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 0,
+      "status": "abandoned",
+      "lastError": "fenetre_de_rattrapage_depassee"
     },
     {
       "idx": 1,
       "hhmm": "09:00",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 1,
+      "status": "published",
+      "startedAt": "2026-10-25T09:44:26.323Z",
+      "articleId": "7c36481d02a1",
+      "publishedAt": "2026-10-25T09:44:26.323Z",
+      "topicId": "2872055df568",
+      "lastError": null
     },
     {
       "idx": 2,
@@ -111,18 +124,18 @@
   "rejections": 0,
   "quarantined": 0,
   "api": {
-    "calls": 7,
-    "inputTokens": 18196,
-    "outputTokens": 11119,
-    "costUsd": 0.106245,
+    "calls": 9,
+    "inputTokens": 23064,
+    "outputTokens": 14123,
+    "costUsd": 0.134536,
     "dailyCapUsd": 1,
-    "monthCostUsd": 0.196439,
+    "monthCostUsd": 0.22473,
     "monthlyCapUsd": 15
   },
   "paused": false,
   "lastRun": {
-    "at": "2026-10-24T23:58:48.534Z",
-    "runId": "20261024235848-bc8a",
+    "at": "2026-10-25T09:44:25.327Z",
+    "runId": "20261025094425-19da",
     "published": 1,
     "stopped": null
   }

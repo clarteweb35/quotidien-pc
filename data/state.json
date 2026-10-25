@@ -312,6 +312,22 @@
       "seenAt": "2026-10-24T23:58:49.352Z",
       "status": "used",
       "usedAt": "2026-10-24T23:58:49.352Z"
+    },
+    "9bfaa3bd521f": {
+      "title": "Mobilisation du 17 octobre : l’homme suspecté d’avoir mis le feu à la mairie de Limoges a été mis en examen pour tentative de meurtre sur des policiers municipaux",
+      "url": "https://www.lemonde.fr/societe/article/2026/10/24/mobilisation-du-17-octobre-l-homme-suspecte-d-avoir-declenche-l-incendie-de-la-mairie-de-limoges-a-ete-mis-en-examen-pour-tentative-de-meurtre-sur-des-policiers_6799692_3224.html",
+      "category": "politique",
+      "seenAt": "2026-10-25T09:44:26.323Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "2872055df568": {
+      "title": "Manifestation du 24 octobre à Paris : 142 personnes interpellées, dont 126 placées en garde à vue, annonce la Préfecture de police",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/25/manifestation-142-personnes-interpellees-dont-120-placees-en-garde-a-vue-a-paris-selon-la-prefecture-de-police_6800057_823448.html",
+      "category": "politique",
+      "seenAt": "2026-10-25T09:44:26.323Z",
+      "status": "used",
+      "usedAt": "2026-10-25T09:44:26.323Z"
     }
   },
   "slots": {
@@ -380,6 +396,20 @@
       }
     },
     "2026-10-25": {
+      "0": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "1": {
+        "attempts": 1,
+        "status": "published",
+        "startedAt": "2026-10-25T09:44:26.323Z",
+        "articleId": "7c36481d02a1",
+        "publishedAt": "2026-10-25T09:44:26.323Z",
+        "topicId": "2872055df568",
+        "lastError": null
+      },
       "x1": {
         "attempts": 1,
         "status": "published",
@@ -410,8 +440,8 @@
     }
   },
   "lastRun": {
-    "at": "2026-10-24T23:58:48.534Z",
-    "runId": "20261024235848-bc8a",
+    "at": "2026-10-25T09:44:25.327Z",
+    "runId": "20261025094425-19da",
     "published": 1,
     "stopped": null
   }
