@@ -9,21 +9,28 @@ const rnd = seeded(Math.floor(Date.now() / 3600000));
 
 const prenoms = ['Maurice', 'Josette', 'Gérard', 'Huguette', 'Raymond', 'Odette', 'Roger', 'Ginette', 'Bernard', 'Colette', 'Jean-Claude', 'Yvette', 'Michel', 'Paulette', 'Fernand', 'Simone', 'Lucien', 'Monique', 'Gaston', 'Denise', 'Marcel', 'Jeannine', 'Albert', 'Micheline'];
 const lettres = 'ABCDEFGHJKLMNPRSTV';
-const pmu = Array.from({ length: 24 }, () => ({
-  who: `${prenoms[Math.floor(rnd() * prenoms.length)]} ${lettres[Math.floor(rnd() * lettres.length)]}.`,
-  gain: 3 + Math.floor(rnd() * 56),
-}));
+const villes = ['Vitré', 'Rennes', 'Domagné', 'Laval', 'Fougères', 'Nantes', 'Saint-Malo', 'Lorient', 'Angers', 'Le Mans', 'Cholet', 'Châteaubriant', 'Lille', 'Roubaix', 'Dijon', 'Limoges', 'Tarbes', 'Albi', 'Nîmes', 'Béziers', 'Saint-Étienne', 'Brive', 'Épinal', 'Charleville'];
+// Plus de perdants que de gagnants: environ 3 sur 4 perdent (de 50 à 876 €), les autres gagnent de 3 à 58 €.
+const pmu = Array.from({ length: 28 }, () => {
+  const win = rnd() < 0.25;
+  return {
+    who: `${prenoms[Math.floor(rnd() * prenoms.length)]} ${lettres[Math.floor(rnd() * lettres.length)]}.`,
+    ville: villes[Math.floor(rnd() * villes.length)],
+    win,
+    amount: win ? 3 + Math.floor(rnd() * 56) : 50 + Math.floor(rnd() * 827),
+  };
+});
 
 const capitales: [string, number][] = [['Paris', 14], ['Berne', 9], ['Oslo', 4], ['Madrid', 19], ['Tokyo', 17], ['Ottawa', 6], ['Canberra', 23], ['Nairobi', 24], ['Lima', 20], ['Reykjavik', 3], ['Le Caire', 28], ['Wellington', 13], ['Brasilia', 26], ['Vienne', 8], ['Hanoï', 27], ['Dublin', 10]];
 const icones = ['☀️', '⛅', '☁️', '🌧️', '⛈️', '❄️', '🌪️', '🌈'];
 ---
 {slug === 'economie' && (
-  <section class="gm gm-pmu" aria-label="Gains PMU du jour (fiction)">
-    <div class="gm-head"><span class="gm-pill">Fiction</span><strong>Gains PMU du jour</strong></div>
+  <section class="gm gm-pmu" aria-label="Gains et pertes PMU du jour (fiction)">
+    <div class="gm-head"><span class="gm-pill">Fiction</span><strong>Gains et pertes PMU du jour</strong><span class="gm-note">noms, villes et montants bidon</span></div>
     <div class="gm-viewport"><div class="gm-track">
       {[0, 1].map((copy) => (
         <ul class="gm-list" aria-hidden={copy === 1 ? 'true' : undefined}>
-          {pmu.map((g) => <li><b>{g.who}</b> vient de gagner <span class="gm-gain">{g.gain} €</span></li>)}
+          {pmu.map((g) => <li><b>{g.who}</b> ({g.ville}) vient de {g.win ? 'gagner' : 'perdre'} <span class={g.win ? 'gm-gain' : 'gm-loss'}>{g.amount} €</span></li>)}
         </ul>
       ))}
     </div></div>
@@ -137,6 +144,7 @@ const icones = ['☀️', '⛅', '☁️', '🌧️', '⛈️', '❄️', '🌪�
   .gm-list li { padding: 0 20px; white-space: nowrap; font-size: .88rem; }
   .gm-list li::after { content: '◆'; margin-left: 20px; color: var(--accent); font-size: .55rem; }
   .gm-gain { color: #15803d; font-weight: 700; }
+  .gm-loss { color: #b3261e; font-weight: 700; }
   .cap-ico { display: inline-block; min-width: 1.4em; }
   @keyframes gm-scroll { to { transform: translateX(-50%); } }
   .compteur { margin: 0; padding: 8px 12px 10px; font: 700 2rem/1 var(--serif); font-variant-numeric: tabular-nums; }
