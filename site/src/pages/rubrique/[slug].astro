@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import Card from '../../components/Card.astro';
 import Marches from '../../components/Marches.astro';
+import Resultats from '../../components/Resultats.astro';
 import Gimmick from '../../components/Gimmick.astro';
 import EcoExtras from '../../components/EcoExtras.astro';
 import { allArticles, categories } from '../../lib/site';
@@ -19,6 +20,7 @@ const articles = (await allArticles()).filter((a) => a.data.category === cat.slu
     <p class="meta">{cat.description}</p>
   </div>
   {cat.slug === 'economie' && <Marches />}
+  {cat.slug === 'sport' && <Resultats />}
   <Gimmick slug={cat.slug} />
   {articles.length === 0 ? <p class="empty">Rien à signaler dans cette rubrique. Pour l'instant.</p> : (
     <div class="grid">{articles.map((a) => <Card article={a} />)}</div>

@@ -1,0 +1,38 @@
+---
+import { loadResults, fmtDay } from '../lib/sport';
+const matches = await loadResults();
+---
+{matches.length > 0 && (
+  <section class="res" aria-label="Résultats du football (données réelles)">
+    <div class="res-head"><strong>Résultats</strong> <span>Ligue 1, Ligue des champions et grands clubs · données réelles, hors satire</span></div>
+    <div class="res-viewport"><div class="res-track">
+      {[0, 1].map((copy) => (
+        <ul class="res-list" aria-hidden={copy === 1 ? 'true' : undefined}>
+          {matches.map((m) => (
+            <li>
+              <span class="res-meta">{m.league} · {fmtDay(m.date)}</span>
+              <span class="res-score">{m.home} <b>{m.hs}–{m.as}</b> {m.away}</span>
+            </li>
+          ))}
+        </ul>
+      ))}
+    </div></div>
+    <p class="res-note">Scores d'après ESPN, à titre indicatif.</p>
+  </section>
+)}
+<style>
+  .res { margin: 16px 0 6px; border-top: 3px solid var(--ink); border-bottom: 1px solid var(--rule); background: rgba(255,255,255,.45); font-family: var(--sans); }
+  .res-head { padding: 6px 10px 0; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); }
+  .res-head strong { color: var(--ink); }
+  .res-viewport { overflow: hidden; padding: 6px 0; }
+  .res-track { display: flex; width: max-content; animation: res-scroll 90s linear infinite; }
+  .res-viewport:hover .res-track { animation-play-state: paused; }
+  .res-list { display: flex; flex: none; margin: 0; padding: 0; list-style: none; }
+  .res-list li { display: grid; padding: 0 22px; border-left: 3px solid var(--rule); margin: 2px 12px; white-space: nowrap; }
+  .res-meta { font-size: .68rem; color: var(--ink-2); text-transform: uppercase; letter-spacing: .04em; }
+  .res-score { font-size: .92rem; }
+  .res-score b { font-variant-numeric: tabular-nums; padding: 0 4px; }
+  .res-note { margin: 0; padding: 0 10px 6px; font-size: .72rem; color: var(--ink-2); }
+  @keyframes res-scroll { to { transform: translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce) { .res-track { animation: none; } .res-viewport { overflow-x: auto; } }
+</style>

@@ -103,3 +103,4 @@ Relecteur Gemini : humour, cohérence, risque, citation à une personne réelle,
 | Hygiène des données | `data/logs` purgé après 30 jours, `data/reports` après 180 jours (`retention` dans `config/engine.json`) |
 | Tests du site | `engine/test/site.test.js` construit le site hors ligne (`MARCHES_OFFLINE=1`) et vérifie les pages clés |
 | Pastilles de qualité | pied de page de `Base.astro` : EcoIndex A, Website Carbon A, PageSpeed 100 (mesures du 25 octobre 2026), en HTML/CSS pur, sans badge ni requête externe. À mettre à jour (constantes `quality` et `qualityDate`) après chaque nouvelle mesure |
+| Rubrique Sport | bloc « Résultats » (`config/sport.json`, `site/src/lib/sport.ts`) : scores ESPN (endpoint public non officiel) des 5 derniers jours à la construction : Ligue 1 et Ligue des champions en entier, grands clubs des autres championnats. Même cache de 48 h et même hors-ligne (`MARCHES_OFFLINE=1`) que les cours |

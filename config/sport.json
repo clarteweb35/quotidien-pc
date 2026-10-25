@@ -1,0 +1,18 @@
+{
+  "note": "Bloc 'Resultats' de la rubrique Sport. Scores recuperes a la construction du site (ESPN, endpoint public non officiel, a titre indicatif). Une ligue en erreur est ignoree. 'allMatches': tous les matchs de la ligue; sinon seuls ceux impliquant un 'bigClubs' (nom d'equipe ESPN) sont gardes.",
+  "enabled": true,
+  "days": 5,
+  "max": 24,
+  "leagues": [
+    { "id": "fra.1", "label": "Ligue 1", "allMatches": true },
+    { "id": "uefa.champions", "label": "Ligue des champions", "allMatches": true },
+    { "id": "eng.1", "label": "Premier League", "allMatches": false },
+    { "id": "esp.1", "label": "Liga", "allMatches": false },
+    { "id": "ita.1", "label": "Serie A", "allMatches": false },
+    { "id": "ger.1", "label": "Bundesliga", "allMatches": false }
+  ],
+  "bigClubs": [
+    "Real Madrid", "Barcelona", "Atlético Madrid", "Manchester City", "Manchester United", "Liverpool", "Arsenal", "Chelsea",
+    "Tottenham Hotspur", "Bayern Munich", "Borussia Dortmund", "Bayer Leverkusen", "Juventus", "Internazionale", "AC Milan", "Napoli", "AS Roma"
+  ]
+}
