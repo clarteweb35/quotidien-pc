@@ -67,6 +67,8 @@ test('petites annonces: page, menu, donnees coherentes et mention obligatoire', 
   const html = page('petites-annonces');
   assert.ok(html.includes('Toutes les annonces') && html.includes('Déposer une annonce'));
   assert.ok(html.includes('coïncidence presque certaine'), 'mention fictive');
+  assert.ok(html.includes('Madame de Valmorin') && html.includes('href="/rencontres/"'), 'partenaire et lien vers les rencontres');
+  assert.ok(fs.existsSync(path.join(ROOT, 'site/public/annonces', data.partenaire.image)), 'portrait du partenaire');
   assert.equal((html.match(/class="pa pa-/g) || []).length, data.annonces.length);
   // Les vraies annonces sont toujours etiquetees, avec lien https cliquable et texte visible.
   const vraies = data.annonces.filter((a) => a.reel);

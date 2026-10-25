@@ -8,6 +8,12 @@ export interface Annonce {
 }
 export interface Annonceur { id: string; nom: string; slogan?: string; palette: string; logo?: string }
 
+export interface Partenaire {
+  nom: string; mention: string; slogan: string; texte: string; details: { label: string; texte: string }[];
+  citation: string; auteur: string; image: string; imageAlt: string; lien: string; lienTexte: string;
+}
+export const partenaire = (data as { partenaire?: Partenaire }).partenaire ?? null;
+
 export const rubrique = { titre: data.titre, accroche: data.accroche, intro: data.intro, mention: data.mention, mentionReelle: data.mentionReelle };
 export const categoriesAnnonces = data.categories as { slug: string; name: string }[];
 export const annonceurs = new Map((data.annonceurs as Annonceur[]).map((a) => [a.id, a]));
