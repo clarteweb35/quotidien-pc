@@ -4,6 +4,8 @@ import { roster, authorSlug, support, portrait, bureauByDesk, lucasBureau, shotC
 import { siteName, url } from '../lib/site';
 const desks = roster();
 const initials = (n: string) => n.split(/[\s-]+/).map((w) => w[0]).slice(0, 2).join('');
+// Jean-Eudes (direction) signe aussi les editos: on ne le repete pas dans un service.
+const desksShown = desks.map((d) => ({ ...d, people: d.people.filter((p) => !support.some((x) => x.section === 'direction' && x.name === p.name)) })).filter((d) => d.people.length);
 const withPhoto = (list: { name: string }[]) => list.map((p) => ({ ...p, photo: portrait(p.name) }));
 const staff = (section: string) => withPhoto(support.filter((p) => p.section === section));
 const direction = staff('direction');
@@ -34,7 +36,7 @@ const backstage = staff('coulisses');
       </section>
     )}
 
-    {desks.map((d) => (
+    {desksShown.map((d) => (
       <section>
         <h2>{d.label}</h2>
         {bureauByDesk[d.cat.slug] && (

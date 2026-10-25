@@ -47,4 +47,11 @@ test('referencement: plan du site, sitemap date, robots et donnees structurees',
   assert.ok(page('.').includes('"@type":"WebSite"'));
 });
 
+test('jeux et editos: pages construites et menu complet', () => {
+  assert.ok(page('jeux').includes('Sudoku'));
+  assert.ok(page('rubrique/editos').includes('Éditos'));
+  const menu = page('.');
+  assert.ok(menu.indexOf('>Compteurs<') < menu.indexOf('>Éditos<') && menu.indexOf('>Éditos<') < menu.indexOf('>Jeux<'), 'ordre du menu: Compteurs, Éditos, Jeux');
+});
+
 test.after(() => fs.rmSync(out, { recursive: true, force: true }));

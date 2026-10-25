@@ -330,3 +330,19 @@ test('nextCategory: la rubrique la moins publiee sur la fenetre, a egalite la pl
   assert.equal(nextCategory({ existing: [art(all[0], '2026-10-20T00:00:00Z')], cfg: ctx.cfg, now }), all[1]);
   cleanup(ctx);
 });
+
+test('editos: la rubrique est servie, signee par le redacteur en chef, avec le format edito dans la consigne', async () => {
+  const prompts = [];
+  const ctx = makeCtx({
+    at: '2026-10-24T20:00:00Z',
+    mutateCfg: (c) => { c.engine.topics.rotateCategories = true; c.schedule.maxPublicationsPerRun = 10; c.schedule.catchupMinutes = 1000; c.categories.sort((a, b) => (b.slug === 'editos') - (a.slug === 'editos')); }, // editos en tete: servie des le premier creneau
+    script: ({ kind, prompt }) => { if (kind === 'generate') prompts.push(prompt); },
+  });
+  await runCycle(ctx);
+  const arts = loadExisting(ctx.paths.content, { now: ctx.now() });
+  const edito = arts.find((a) => a.category === 'editos');
+  assert.ok(edito, `rubriques servies: ${arts.map((a) => a.category).join(', ')}`);
+  assert.equal(edito.author, 'Jean-Eudes de la Manchette');
+  assert.ok(prompts.some((p) => p.includes('FORMAT ÉDITO')));
+  cleanup(ctx);
+});

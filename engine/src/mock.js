@@ -35,7 +35,8 @@ export function seededPick(seed, n) {
     h = (h * 1103515245 + 12345) & 0x7fffffff;
     const base = pool.splice(h % pool.length, 1)[0].split(' ');
     // Mot propre a l'article tous les 5 mots: evite que deux articles simules se ressemblent (artefact du faux modele).
-    out.push(base.flatMap((w, i) => (i % 5 === 4 ? [w, `zz${(h >> (i % 7)) % 997}`] : [w])).join(' '));
+    // Jamais apres le dernier mot: la phrase doit finir par sa ponctuation (sinon le validateur la juge tronquee).
+    out.push(base.flatMap((w, i) => (i % 5 === 4 && i < base.length - 1 ? [w, `zz${(h >> (i % 7)) % 997}`] : [w])).join(' '));
   }
   return out;
 }
@@ -43,7 +44,8 @@ export function seededPick(seed, n) {
 export function fakeArticleFor(prompt, categories) {
   const title = (/(?:Titre|THÈME) : (.+)/.exec(prompt)?.[1] ?? 'un sujet quelconque').trim();
   const seed = sha1(prompt);
-  const cat = categories.includes(/RUBRIQUE SUGGÉRÉE : (\S+)/.exec(prompt)?.[1]) ? /RUBRIQUE SUGGÉRÉE : (\S+)/.exec(prompt)[1] : categories[0];
+  const asked = /RUBRIQUE (?:SUGGÉRÉE|IMPOSÉE) : (\S+)/.exec(prompt)?.[1];
+  const cat = categories.includes(asked) ? asked : categories[0];
   const short = title.split(/\s+/).slice(0, 6).join(' ');
   const body = seededPick(seed, 17).map((text, i) => ({ kind: i === 4 ? 'h2' : 'p', text: i === 4 ? 'Une situation parfaitement maîtrisée' : text }));
   body.splice(5, 0, { kind: 'p', text: `Retour sur le sujet du jour, à savoir ${short}, qui occupe désormais l'essentiel des conversations de machine à café dans un rayon de trente kilomètres.` });

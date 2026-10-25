@@ -26,7 +26,9 @@
 |---|---|---|
 | Accueil `/` | fil « À l'instant » (titres qui défilent) ; bandeau des cours (sens inverse) ; article à la une ; météo des capitales (bidon, 6 villes) ; 7 dernières nouvelles (pas d'extraits par rubrique : le menu les propose, et la page reste légère) | ✅ |
 | Article `/articles/<slug>/` | titre, chapô, signature avec petit portrait, illustration, corps justifié, partage, mots-clés, sources, barre de progression de lecture, JSON-LD `SatiricalArticle` | ✅ |
-| Rubrique `/rubrique/<slug>/` | 8 rubriques ; bandeaux propres à chaque rubrique (voir 2.3) | ✅ |
+| Rubrique `/rubrique/<slug>/` | 9 rubriques (dont Éditos) ; bandeaux propres à chaque rubrique (voir 2.3) | ✅ |
+| Éditos `/rubrique/editos/` | 9e rubrique, placée **après Compteurs** dans le menu : l'avis complètement débile du rédacteur en chef (Jean-Eudes de la Manchette, seul signataire) sur un fait de société ou de politique internationale. Le moteur la sert comme les autres rubriques (rotation), avec des sujets pris dans les flux société et monde (`sourceCategories`), un format édito imposé dans la consigne et trois thèmes intemporels de secours | ✅ |
+| Jeux `/jeux/` | dernier élément du menu : **sudoku** jouable (grilles générées dans le navigateur, solution unique, 3 niveaux, vérifier / indice / solution, clavier, chrono), mémory du bureau, plus ou moins « le budget secret », réflexes « le café est prêt ». Tout en local, sans cookie ni requête externe | ✅ |
 | Compteurs `/compteurs/` | toutes les jauges : **d'abord les fictives**, **ensuite les réelles** (cours, scores), chaque partie étiquetée | ✅ |
 | Rédaction `/redaction/` | Direction (Jean-Eudes de la Manchette), services (portrait de chaque journaliste, photo du bureau « prise à 16 h 53 … 17 h 02, bureaux vides »), Secrétariat, Coulisses (Lucas Dumond), encart de recrutement fictif | ✅ |
 | Plan du site, `sitemap.xml` (+ `sitemap-index.xml`, `lastmod` des articles), `robots.txt`, `rss.xml` | référencement et navigation | ✅ |

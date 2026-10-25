@@ -1,0 +1,318 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Jeux" description="Un vrai sudoku jouable en ligne et trois mini-jeux de bureau, sans inscription, sans publicité et sans cookie." current="jeux">
+  <div class="page-head">
+    <span class="kicker">Pause café</span>
+    <h1>Jeux</h1>
+    <p class="meta">Un vrai sudoku (chaque grille a une solution unique) et trois mini-jeux. Rien n'est enregistré, rien n'est envoyé : tout se passe dans votre navigateur.</p>
+  </div>
+
+  <!-- ===== 1. SUDOKU ===== -->
+  <section class="jeu" id="sudoku" aria-labelledby="t-sudoku">
+    <h2 id="t-sudoku">Sudoku</h2>
+    <div class="sdk-barre">
+      <label>Niveau
+        <select id="sdk-niveau">
+          <option value="40">Facile</option>
+          <option value="32" selected>Moyen</option>
+          <option value="26">Difficile</option>
+        </select>
+      </label>
+      <button type="button" id="sdk-nouveau">Nouvelle grille</button>
+      <button type="button" id="sdk-verifier">Vérifier</button>
+      <button type="button" id="sdk-indice">Indice</button>
+      <button type="button" id="sdk-solution">Solution</button>
+      <span class="sdk-chrono" id="sdk-chrono" aria-live="off">00:00</span>
+    </div>
+    <div class="sdk-plateau" id="sdk-plateau" role="grid" aria-label="Grille de sudoku"></div>
+    <div class="sdk-pave" id="sdk-pave" aria-label="Pavé numérique"></div>
+    <p class="jeu-msg" id="sdk-msg" role="status"></p>
+    <p class="meta">Clavier : flèches pour se déplacer, chiffres 1 à 9 pour jouer, Retour arrière ou 0 pour effacer. Les doublons s'affichent en rouge.</p>
+  </section>
+
+  <!-- ===== 2. MEMORY ===== -->
+  <section class="jeu" id="memory" aria-labelledby="t-memory">
+    <h2 id="t-memory">Mémory du bureau</h2>
+    <p class="meta">Retrouvez les six paires. <span id="mem-coups">0 coup</span></p>
+    <div class="mem-grille" id="mem-grille"></div>
+    <button type="button" id="mem-rejouer">Rejouer</button>
+    <p class="jeu-msg" id="mem-msg" role="status"></p>
+  </section>
+
+  <!-- ===== 3. PLUS OU MOINS ===== -->
+  <section class="jeu" id="plusmoins" aria-labelledby="t-pm">
+    <h2 id="t-pm">Plus ou moins : le budget secret</h2>
+    <p class="meta">Un montant entre 1 et 100 millions d'euros a été « oublié » quelque part. Retrouvez-le.</p>
+    <form id="pm-form" class="pm-form">
+      <label for="pm-saisie">Votre proposition (en millions)</label>
+      <input id="pm-saisie" type="number" inputmode="numeric" min="1" max="100" required />
+      <button type="submit">Proposer</button>
+      <button type="button" id="pm-rejouer">Rejouer</button>
+    </form>
+    <p class="jeu-msg" id="pm-msg" role="status">Faites une proposition.</p>
+  </section>
+
+  <!-- ===== 4. REFLEXES ===== -->
+  <section class="jeu" id="reflexe" aria-labelledby="t-ref">
+    <h2 id="t-ref">Réflexes : le café est prêt</h2>
+    <p class="meta">Cliquez dès que la machine passe au vert. Trop tôt, et le café sera froid.</p>
+    <button type="button" id="ref-bouton" class="ref-bouton" data-etat="repos">Appuyez pour lancer la machine</button>
+    <p class="jeu-msg" id="ref-msg" role="status"></p>
+  </section>
+</Base>
+
+<style is:global>
+  .jeu { margin: 28px 0 8px; padding: 18px 16px 20px; border: 1px solid var(--ink); background: rgba(255,255,255,.45); font-family: var(--sans); }
+  .jeu h2 { margin: 0 0 10px; font-family: var(--serif); }
+  .jeu button, .jeu select, .jeu input { font: 600 .9rem var(--sans); padding: 8px 14px; border: 2px solid var(--ink); background: var(--paper); color: var(--ink); cursor: pointer; }
+  .jeu input { cursor: text; width: 7em; }
+  .jeu button:hover, .jeu button:focus-visible { background: var(--ink); color: var(--paper); }
+  .jeu-msg { min-height: 1.4em; margin: 10px 0 0; font-weight: 600; }
+  .sdk-barre { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; margin-bottom: 12px; }
+  .sdk-barre label { display: flex; align-items: center; gap: 6px; font-size: .9rem; }
+  .sdk-chrono { margin-left: auto; font: 700 1.1rem var(--sans); font-variant-numeric: tabular-nums; }
+  .sdk-plateau { display: grid; grid-template-columns: repeat(9, 1fr); width: min(100%, 460px); aspect-ratio: 1; border: 3px solid var(--ink); background: #fff; margin: 0 auto; }
+  .sdk-plateau .case { all: unset; box-sizing: border-box; display: grid; place-items: center; font: 600 clamp(1rem, 4.5vw, 1.6rem) var(--sans); border: 1px solid var(--rule); cursor: pointer; font-variant-numeric: tabular-nums; }
+  .sdk-plateau .case:nth-child(9n+3), .sdk-plateau .case:nth-child(9n+6) { border-right: 2px solid var(--ink); }
+  .sdk-plateau .case:nth-child(n+19):nth-child(-n+27), .sdk-plateau .case:nth-child(n+46):nth-child(-n+54) { border-bottom: 2px solid var(--ink); }
+  .sdk-plateau .case.donnee { background: #f1ece1; font-weight: 800; }
+  .sdk-plateau .case.meme { background: #e7eef7; }
+  .sdk-plateau .case.sel { background: #fde9a6; outline: 2px solid var(--accent); outline-offset: -2px; }
+  .sdk-plateau .case.conflit { color: #b3261e; background: #fbe3e1; }
+  .sdk-plateau .case.faux { color: #b3261e; text-decoration: underline wavy; }
+  .sdk-plateau .case:not(.donnee) { color: #1f5f8b; }
+  .sdk-pave { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin: 12px auto 0; max-width: 460px; }
+  .sdk-pave button { min-width: 2.6rem; }
+  .mem-grille { display: grid; grid-template-columns: repeat(4, minmax(0, 80px)); gap: 8px; margin: 10px 0 12px; }
+  .mem-carte { height: 80px; font-size: 2rem; padding: 0; }
+  .mem-carte[data-etat="cachee"] { background: var(--ink); color: var(--paper); }
+  .mem-carte[data-etat="trouvee"] { background: #dff0e0; border-color: #15803d; cursor: default; }
+  .pm-form { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; }
+  .ref-bouton { width: 100%; max-width: 420px; padding: 36px 12px !important; font-size: 1.05rem !important; }
+  .ref-bouton[data-etat="attente"] { background: #b3261e !important; color: #fff !important; }
+  .ref-bouton[data-etat="go"] { background: #15803d !important; color: #fff !important; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<script>
+  // ---------- utilitaires ----------
+  const $ = <T extends HTMLElement = HTMLElement>(id: string) => document.getElementById(id) as T;
+  const alea = (n: number) => Math.floor(Math.random() * n);
+  const melange = <T,>(l: T[]) => { const a = l.slice(); for (let i = a.length - 1; i > 0; i--) { const j = alea(i + 1); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+
+  // ================= SUDOKU =================
+  // Chaque grille est generee ici: grille complete aleatoire, puis retrait de cases tant que la solution reste UNIQUE.
+  const MASQUE = 0x3fe; // bits 1 a 9
+  const candidats = (g: number[], i: number) => {
+    const r = Math.floor(i / 9), c = i % 9, br = r - (r % 3), bc = c - (c % 3);
+    let utilise = 0;
+    for (let k = 0; k < 9; k++) utilise |= (1 << g[r * 9 + k]) | (1 << g[k * 9 + c]) | (1 << g[(br + Math.floor(k / 3)) * 9 + bc + (k % 3)]);
+    return ~utilise & MASQUE;
+  };
+  const bits = (m: number) => { let n = 0; while (m) { n += m & 1; m >>= 1; } return n; };
+  // Compte les solutions (jusqu'a `limite`), case la plus contrainte d'abord.
+  function compte(g: number[], limite: number): number {
+    let meilleure = -1, masque = 0, nb = 10;
+    for (let i = 0; i < 81; i++) {
+      if (g[i] !== 0) continue;
+      const m = candidats(g, i), n = bits(m);
+      if (n === 0) return 0;
+      if (n < nb) { nb = n; meilleure = i; masque = m; if (n === 1) break; }
+    }
+    if (meilleure < 0) return 1;
+    let total = 0;
+    for (let d = 1; d <= 9; d++) {
+      if (!(masque & (1 << d))) continue;
+      g[meilleure] = d;
+      total += compte(g, limite - total);
+      if (total >= limite) break;
+    }
+    g[meilleure] = 0;
+    return total;
+  }
+  function remplit(g: number[]): boolean {
+    let meilleure = -1, masque = 0, nb = 10;
+    for (let i = 0; i < 81; i++) {
+      if (g[i] !== 0) continue;
+      const m = candidats(g, i), n = bits(m);
+      if (n === 0) return false;
+      if (n < nb) { nb = n; meilleure = i; masque = m; }
+    }
+    if (meilleure < 0) return true;
+    for (const d of melange([1, 2, 3, 4, 5, 6, 7, 8, 9])) {
+      if (!(masque & (1 << d))) continue;
+      g[meilleure] = d;
+      if (remplit(g)) return true;
+    }
+    g[meilleure] = 0;
+    return false;
+  }
+  function genere(donnees: number) {
+    const solution = new Array(81).fill(0);
+    remplit(solution);
+    const puzzle = solution.slice();
+    let restantes = 81;
+    for (const i of melange(Array.from({ length: 81 }, (_, k) => k))) {
+      if (restantes <= donnees) break;
+      const v = puzzle[i];
+      puzzle[i] = 0;
+      if (compte(puzzle.slice(), 2) !== 1) puzzle[i] = v; else restantes--;
+    }
+    return { puzzle, solution };
+  }
+
+  const plateau = $('sdk-plateau'), pave = $('sdk-pave'), msg = $('sdk-msg'), chrono = $('sdk-chrono');
+  let etat = { puzzle: [] as number[], solution: [] as number[], saisie: [] as number[], sel: -1, debut: 0, fini: false };
+  const cases: HTMLElement[] = [];
+  for (let i = 0; i < 81; i++) {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'case'; b.setAttribute('role', 'gridcell');
+    b.addEventListener('click', () => { etat.sel = i; rend(); });
+    plateau.appendChild(b); cases.push(b);
+  }
+  for (let d = 1; d <= 9; d++) { const b = document.createElement('button'); b.type = 'button'; b.textContent = String(d); b.addEventListener('click', () => joue(d)); pave.appendChild(b); }
+  const eff = document.createElement('button'); eff.type = 'button'; eff.textContent = 'Effacer'; eff.addEventListener('click', () => joue(0)); pave.appendChild(eff);
+
+  const valeur = (i: number) => (etat.puzzle[i] || etat.saisie[i] || 0);
+  const grille = () => Array.from({ length: 81 }, (_, i) => valeur(i));
+  function conflits(): Set<number> {
+    const g = grille(), s = new Set<number>();
+    const groupes: number[][] = [];
+    for (let k = 0; k < 9; k++) {
+      groupes.push(Array.from({ length: 9 }, (_, j) => k * 9 + j), Array.from({ length: 9 }, (_, j) => j * 9 + k),
+        Array.from({ length: 9 }, (_, j) => (Math.floor(k / 3) * 3 + Math.floor(j / 3)) * 9 + (k % 3) * 3 + (j % 3)));
+    }
+    for (const gr of groupes) {
+      const vus = new Map<number, number>();
+      for (const i of gr) { const v = g[i]; if (!v) continue; if (vus.has(v)) { s.add(i); s.add(vus.get(v)!); } else vus.set(v, i); }
+    }
+    return s;
+  }
+  function rend(erreurs: Set<number> = new Set()) {
+    const conf = conflits(), vs = etat.sel >= 0 ? valeur(etat.sel) : 0;
+    cases.forEach((b, i) => {
+      const v = valeur(i);
+      b.textContent = v ? String(v) : '';
+      b.className = 'case' + (etat.puzzle[i] ? ' donnee' : '') + (i === etat.sel ? ' sel' : vs && v === vs ? ' meme' : '') + (conf.has(i) ? ' conflit' : '') + (erreurs.has(i) ? ' faux' : '');
+      b.setAttribute('aria-label', `Ligne ${Math.floor(i / 9) + 1}, colonne ${(i % 9) + 1}, ${v ? 'valeur ' + v : 'vide'}`);
+    });
+  }
+  function joue(d: number) {
+    if (etat.sel < 0 || etat.puzzle[etat.sel] || etat.fini) return;
+    etat.saisie[etat.sel] = d;
+    msg.textContent = '';
+    rend();
+    if (grille().every((v, i) => v === etat.solution[i])) {
+      etat.fini = true;
+      const t = Math.round((Date.now() - etat.debut) / 1000);
+      msg.textContent = `Bravo ! Grille résolue en ${Math.floor(t / 60)} min ${t % 60} s. Votre hiérarchie en sera informée.`;
+    }
+  }
+  function nouvelle() {
+    msg.textContent = 'Génération de la grille…';
+    setTimeout(() => {
+      const { puzzle, solution } = genere(Number((document.getElementById('sdk-niveau') as HTMLSelectElement).value));
+      etat = { puzzle, solution, saisie: new Array(81).fill(0), sel: -1, debut: Date.now(), fini: false };
+      msg.textContent = '';
+      rend();
+    }, 20);
+  }
+  $('sdk-nouveau').addEventListener('click', nouvelle);
+  $('sdk-verifier').addEventListener('click', () => {
+    const faux = new Set<number>();
+    etat.saisie.forEach((v, i) => { if (v && v !== etat.solution[i]) faux.add(i); });
+    rend(faux);
+    msg.textContent = faux.size ? `${faux.size} case(s) incorrecte(s), soulignée(s) en rouge.` : 'Aucune erreur pour l’instant.';
+  });
+  $('sdk-indice').addEventListener('click', () => {
+    const vides = Array.from({ length: 81 }, (_, i) => i).filter((i) => !etat.puzzle[i] && etat.saisie[i] !== etat.solution[i]);
+    if (!vides.length || etat.fini) return;
+    const i = vides[alea(vides.length)];
+    etat.sel = i; etat.saisie[i] = etat.solution[i]; rend();
+    msg.textContent = 'Un indice, offert par la maison (non remboursable).';
+  });
+  $('sdk-solution').addEventListener('click', () => { etat.saisie = etat.solution.slice(); etat.fini = true; rend(); msg.textContent = 'Voici la solution. Personne ne le saura.'; });
+  plateau.addEventListener('keydown', (e) => {
+    const k = (e as KeyboardEvent).key;
+    if (/^[0-9]$/.test(k)) { joue(Number(k)); return; }
+    if (k === 'Backspace' || k === 'Delete') { joue(0); return; }
+    const dep: Record<string, number> = { ArrowLeft: -1, ArrowRight: 1, ArrowUp: -9, ArrowDown: 9 };
+    if (k in dep) {
+      e.preventDefault();
+      const n = (etat.sel < 0 ? 0 : etat.sel) + dep[k];
+      if (n >= 0 && n < 81 && !((k === 'ArrowLeft' && etat.sel % 9 === 0) || (k === 'ArrowRight' && etat.sel % 9 === 8))) { etat.sel = n; rend(); cases[n].focus(); }
+    }
+  });
+  setInterval(() => {
+    if (etat.fini || !etat.debut) return;
+    const t = Math.floor((Date.now() - etat.debut) / 1000);
+    chrono.textContent = String(Math.floor(t / 60)).padStart(2, '0') + ':' + String(t % 60).padStart(2, '0');
+  }, 1000);
+  nouvelle();
+
+  // ================= MEMORY =================
+  const emojis = ['☕', '📎', '🖨️', '🗂️', '🪴', '📠'];
+  const grilleMem = $('mem-grille'), coupsMem = $('mem-coups'), msgMem = $('mem-msg');
+  let ouvertes: HTMLButtonElement[] = [], coups = 0, trouvees = 0, bloque = false;
+  function memory() {
+    grilleMem.textContent = ''; ouvertes = []; coups = 0; trouvees = 0; bloque = false;
+    coupsMem.textContent = '0 coup'; msgMem.textContent = '';
+    for (const e of melange([...emojis, ...emojis])) {
+      const b = document.createElement('button');
+      b.type = 'button'; b.className = 'mem-carte'; b.dataset.etat = 'cachee'; b.dataset.e = e; b.textContent = '?'; b.setAttribute('aria-label', 'Carte cachée');
+      b.addEventListener('click', () => {
+        if (bloque || b.dataset.etat !== 'cachee') return;
+        b.dataset.etat = 'ouverte'; b.textContent = e; b.setAttribute('aria-label', 'Carte ' + e);
+        ouvertes.push(b);
+        if (ouvertes.length < 2) return;
+        coups++; coupsMem.textContent = coups + (coups > 1 ? ' coups' : ' coup');
+        const [a, c] = ouvertes;
+        if (a.dataset.e === c.dataset.e) {
+          a.dataset.etat = c.dataset.etat = 'trouvee'; ouvertes = []; trouvees++;
+          if (trouvees === emojis.length) msgMem.textContent = `Terminé en ${coups} coups. Une promotion n'est pas à exclure (elle l'est).`;
+        } else {
+          bloque = true;
+          setTimeout(() => { for (const x of [a, c]) { x.dataset.etat = 'cachee'; x.textContent = '?'; x.setAttribute('aria-label', 'Carte cachée'); } ouvertes = []; bloque = false; }, 800);
+        }
+      });
+      grilleMem.appendChild(b);
+    }
+  }
+  $('mem-rejouer').addEventListener('click', memory);
+  memory();
+
+  // ================= PLUS OU MOINS =================
+  let secret = 1 + alea(100), essais = 0;
+  const pmMsg = $('pm-msg'), pmSaisie = $<HTMLInputElement>('pm-saisie');
+  $('pm-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const n = Number(pmSaisie.value);
+    if (!Number.isInteger(n) || n < 1 || n > 100) { pmMsg.textContent = 'Un nombre entier de 1 à 100, s’il vous plaît.'; return; }
+    essais++;
+    if (n === secret) pmMsg.textContent = `Trouvé : ${secret} millions, en ${essais} essai${essais > 1 ? 's' : ''}. Le montant a été remis dans le tiroir.`;
+    else pmMsg.textContent = (n < secret ? 'Plus haut (comme les prix).' : 'Plus bas (comme les promesses).') + ` Essai n° ${essais}.`;
+    pmSaisie.select();
+  });
+  $('pm-rejouer').addEventListener('click', () => { secret = 1 + alea(100); essais = 0; pmMsg.textContent = 'Nouveau montant caché. Faites une proposition.'; pmSaisie.value = ''; });
+
+  // ================= REFLEXES =================
+  const bouton = $('ref-bouton'), refMsg = $('ref-msg');
+  let minuteur = 0, top = 0, meilleur = 0;
+  bouton.addEventListener('click', () => {
+    const e = bouton.dataset.etat;
+    if (e === 'repos') {
+      bouton.dataset.etat = 'attente'; bouton.textContent = 'La machine chauffe… patientez';
+      refMsg.textContent = '';
+      minuteur = window.setTimeout(() => { bouton.dataset.etat = 'go'; bouton.textContent = 'MAINTENANT !'; top = performance.now(); }, 1500 + Math.random() * 3500);
+    } else if (e === 'attente') {
+      clearTimeout(minuteur); bouton.dataset.etat = 'repos'; bouton.textContent = 'Appuyez pour relancer la machine';
+      refMsg.textContent = 'Trop tôt : le café est froid, et la machine vexée.';
+    } else {
+      const ms = Math.round(performance.now() - top);
+      bouton.dataset.etat = 'repos'; bouton.textContent = 'Appuyez pour relancer la machine';
+      meilleur = meilleur ? Math.min(meilleur, ms) : ms;
+      refMsg.textContent = `${ms} ms (meilleur : ${meilleur} ms). ` + (ms < 250 ? 'Réflexes de stagiaire en fin de contrat.' : ms < 400 ? 'Honorable pour un lundi.' : 'Le café a eu le temps de refroidir.');
+    }
+  });
+</script>

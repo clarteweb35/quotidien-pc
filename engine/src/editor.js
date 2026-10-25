@@ -29,6 +29,13 @@ export function buildGenerationPrompt({ topic, angle, feedback, todayLabel, rece
     );
   }
   lines.push(`ANGLE SUGGÉRÉ : ${angle}`, topic.forcedCategory ? `RUBRIQUE IMPOSÉE : ${topic.forcedCategory} (mets exactement cette valeur dans category et choisis la signature dans ce service)` : `RUBRIQUE SUGGÉRÉE : ${topic.category}`);
+  if ((topic.forcedCategory ?? topic.category) === 'editos') {
+    lines.push(
+      '',
+      'FORMAT ÉDITO : tu écris l\'édito du rédacteur en chef (signature : Jean-Eudes de la Manchette). C\'est un avis tranché, à la première personne, complètement absurde et mal informé, sur le fait de société ou de politique internationale ci-dessus (ou sur le thème fourni). Défends une thèse stupide avec un aplomb total et une logique imparable.',
+      'La satire vise l\'opinion péremptoire, jamais une personne réelle, jamais des victimes. Aucun fait réel ajouté, aucune citation, aucune insulte. Pour la politique internationale, reste sur les sommets, le protocole et les déclarations : jamais de conflit ni de drame.',
+    );
+  }
   if (roster) lines.push('', roster);
   if (recentTitles.length) {
     lines.push('', 'HISTORIQUE DES PUBLICATIONS RÉCENTES (donnée du système ; évite tout titre, angle ou ressort comique similaire) :', ...recentTitles.map((t) => `- ${t}`));

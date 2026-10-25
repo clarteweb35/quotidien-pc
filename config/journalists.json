@@ -252,6 +252,13 @@
       "bio": "Veille sur la biodiversité et les espèces menacées."
     },
     {
+      "name": "Jean-Eudes de la Manchette",
+      "desk": "editos",
+      "active": true,
+      "beat": "avis tranchés sur la société et le monde, que personne n'a demandés",
+      "bio": "Rédacteur en chef et fondateur autoproclamé. Il a un avis sur tout, y compris sur ce qu'il n'a pas lu."
+    },
+    {
       "name": "Sophie Valençay",
       "desk": "politique",
       "active": false,

@@ -14,7 +14,8 @@ const fm = (ctx) => ctx.articles().map((f) => parseArticleFile(fs.readFileSync(p
 test('chaque rubrique a des journalistes actifs, sans doublon de nom', () => {
   const cfg = makeCtx().cfg;
   assert.deepEqual(checkConfig(cfg), []);
-  for (const c of cfg.categories) assert.ok(activeRoster(cfg, c.slug).length >= 3, c.slug);
+  // Les editos n'ont qu'un signataire: le redacteur en chef.
+  for (const c of cfg.categories) assert.ok(activeRoster(cfg, c.slug).length >= (c.slug === 'editos' ? 1 : 3), c.slug);
   assert.equal(deskLabel(cfg, 'tech'), 'Service tech & sciences');
   assert.ok(rosterPrompt(cfg).includes('Claire Delatour'));
   assert.ok(!rosterPrompt(cfg).includes('Sophie Valençay'), 'les journalistes en reserve ne sont pas proposes');

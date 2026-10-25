@@ -71,10 +71,14 @@ const today = new Intl.DateTimeFormat('fr-FR', { timeZone: 'Europe/Paris', dateS
       <div class="wrap">
         <ul>
           <li><a href={url()} aria-current={current === 'home' ? 'page' : undefined}>À la une</a></li>
-          {categories.map((c) => (
+          {categories.filter((c) => !c.afterCompteurs).map((c) => (
             <li><a href={url(`rubrique/${c.slug}/`)} aria-current={current === c.slug ? 'page' : undefined}>{c.name}</a></li>
           ))}
           <li><a href={url('compteurs/')} aria-current={current === 'compteurs' ? 'page' : undefined}>Compteurs</a></li>
+          {categories.filter((c) => c.afterCompteurs).map((c) => (
+            <li><a href={url(`rubrique/${c.slug}/`)} aria-current={current === c.slug ? 'page' : undefined}>{c.name}</a></li>
+          ))}
+          <li><a href={url('jeux/')} aria-current={current === 'jeux' ? 'page' : undefined}>Jeux</a></li>
         </ul>
       </div>
     </nav>

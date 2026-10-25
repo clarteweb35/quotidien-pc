@@ -20,6 +20,9 @@
     { "id": "ev-recyclage", "category": "environnement", "theme": "Le tri sélectif et la poubelle jaune qui juge nos choix" },
     { "id": "ev-ventilateur", "category": "environnement", "theme": "Le ventilateur, grand gagnant silencieux de chaque été" },
     { "id": "ev-sommet", "category": "monde", "theme": "Le sommet international dont la photo de famille est le principal résultat concret" },
-    { "id": "ev-rentree-litteraire", "category": "culture", "theme": "La rentrée littéraire et ses 500 romans dont un seul sera lu jusqu'au bout" }
+    { "id": "ev-rentree-litteraire", "category": "culture", "theme": "La rentrée littéraire et ses 500 romans dont un seul sera lu jusqu'au bout" },
+    { "id": "ev-edito-rond-point", "category": "editos", "theme": "Mon avis, ferme et mal informé, sur les ronds-points" },
+    { "id": "ev-edito-dimanche", "category": "editos", "theme": "Pourquoi le dimanche devrait être transféré au mardi" },
+    { "id": "ev-edito-bruit-voisins", "category": "editos", "theme": "Le bruit des voisins : une opinion qui ne souffre aucune nuance" }
   ]
 }

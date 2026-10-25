@@ -51,8 +51,10 @@ export function pickNewsTopic({ items, store, publishedTitles, cfg, now, categor
     .map((x) => x.title);
   const rejected = [];
   const candidates = [];
+  // Une rubrique peut puiser ses sujets dans d'autres rubriques (ex. Editos: societe et monde), cf. categories.json.
+  const allowed = new Set([onlyCategory, ...(cfg.categories.find((c) => c.slug === onlyCategory)?.sourceCategories ?? [])]);
   for (const it of items) {
-    if (onlyCategory && it.category !== onlyCategory) continue;
+    if (onlyCategory && !allowed.has(it.category)) continue;
     const known = store.topic(it.id);
     if (known?.usedAt || known?.status === 'excluded') continue;
     const sensitive = findSensitive(`${it.title} ${it.summary}`, compiled);
@@ -71,7 +73,7 @@ export function pickNewsTopic({ items, store, publishedTitles, cfg, now, categor
       rejected.push({ id: it.id, title: it.title, reason: 'score_insuffisant', score });
       continue;
     }
-    candidates.push({ ...it, score });
+    candidates.push({ ...it, score, category: onlyCategory && allowed.has(it.category) ? onlyCategory : it.category });
   }
   candidates.sort((a, b) => b.score - a.score);
   return { topic: candidates[0] ?? null, rejected };
