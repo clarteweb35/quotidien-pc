@@ -5,19 +5,28 @@ import Marches from '../../components/Marches.astro';
 import Resultats from '../../components/Resultats.astro';
 import Gimmick from '../../components/Gimmick.astro';
 import EcoExtras from '../../components/EcoExtras.astro';
-import { allArticles, categories } from '../../lib/site';
+import { allArticles, categories, url } from '../../lib/site';
+import { journalist, portrait } from '../../lib/authors';
 
 export function getStaticPaths() {
   return categories.map((c) => ({ params: { slug: c.slug }, props: { cat: c } }));
 }
 const { cat } = Astro.props;
 const articles = (await allArticles()).filter((a) => a.data.category === cat.slug);
+const editorialiste = cat.slug === 'editos' ? journalist('Jean-Eudes de la Manchette') : null;
+const photoEdito = editorialiste ? portrait(editorialiste.name) : null;
 ---
 <Base title={cat.name} description={cat.description} current={cat.slug}>
   <div class="page-head">
     <span class="kicker">Rubrique</span>
     <h1>{cat.name}</h1>
     <p class="meta">{cat.description}</p>
+    {editorialiste && (
+      <div class="edito-pupitre">
+        {photoEdito && <img class="avatar avatar-lg" src={url(photoEdito)} width="96" height="96" alt={`Portrait fictif de ${editorialiste.name} (image générée par IA)`} />}
+        <p><strong>{editorialiste.name}</strong>, rédacteur en chef et fondateur autoproclamé, signe seul cette page. Ses avis sont tranchés, mal informés et définitifs, sur des sujets de société ou de politique internationale dont il ne maîtrise pas le détail.</p>
+      </div>
+    )}
   </div>
   {cat.slug === 'economie' && <Marches />}
   {cat.slug === 'sport' && <Resultats />}

@@ -20,6 +20,7 @@ const ref = refOf(d);
 const who = journalist(d.author);
 const photo = who ? portrait(who.name) : null;
 const minutes = readingMinutes(article.body);
+const isEdito = d.category === 'editos';
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -38,13 +39,14 @@ const jsonLd = {
 ---
 <Base title={d.title} description={d.description} type="article" current={cat.slug} jsonLd={jsonLd} ogImage={url(`og/${d.slug}.png`)}>
   <div class="progress" aria-hidden="true"></div>
-  <article class="article">
-    <a class="kicker" href={url(`rubrique/${cat.slug}/`)}>{cat.name}</a>
+  <article class:list={['article', isEdito && 'article-edito']}>
+    <a class="kicker" href={url(`rubrique/${cat.slug}/`)}>{isEdito ? 'Édito' : cat.name}</a>
     <h1>{d.title}</h1>
     <p class="chapo">{d.chapo}</p>
+    {isEdito && photo && <img class="avatar avatar-lg edito-portrait" src={url(photo)} width="96" height="96" alt={`Portrait fictif de ${who!.name} (image générée par IA)`} />}
     <p class="byline">
-      {photo && <img class="avatar avatar-sm" src={url(photo)} width="40" height="40" alt={`Portrait fictif de ${who!.name} (image générée par IA)`} />}
-      {who ? <>Par <a href={url(`redaction/#${authorSlug(who.name)}`)}>{who.name}</a> · {deskLabel(d.category)}</> : <>Par la rédaction</>} · Lecture : {minutes} min
+      {!isEdito && photo && <img class="avatar avatar-sm" src={url(photo)} width="40" height="40" alt={`Portrait fictif de ${who!.name} (image générée par IA)`} />}
+      {who ? <>Par <a href={url(`redaction/#${authorSlug(who.name)}`)}>{who.name}</a> · {isEdito ? 'rédacteur en chef' : deskLabel(d.category)}</> : <>Par la rédaction</>} · Lecture : {minutes} min
     </p>
     <div class="meta">
       Publié le <time datetime={d.publishedAt.toISOString()}>{formatDateTime(d.publishedAt)}</time> · <strong>Satire</strong>{ref && <> · <span class="ref" title="Référence de l'article">Réf. {ref}</span></>}
@@ -58,6 +60,7 @@ const jsonLd = {
     )}
     <div class="satire-box" role="note"><strong>Article satirique.</strong> {satireNotice}</div>
     <div class="body"><Content /></div>
+    {isEdito && who && <p class="edito-signature">— {who.name}, rédacteur en chef</p>}
     <Share title={d.title} url={canonicalUrl} id="share-bottom" />
     {d.tags.length > 0 && (
       <ul class="tags" aria-label="Mots-clés">

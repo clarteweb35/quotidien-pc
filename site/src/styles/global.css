@@ -235,3 +235,20 @@ footer .bottomline .quality ul { justify-content: flex-end; }
 @media (max-width: 760px) { footer .bottomline, footer .bottomline .quality { justify-content: center; text-align: center; } footer .bottomline .quality ul { justify-content: center; } }
 footer .wordmark b { white-space: nowrap; }
 footer .brand { flex-wrap: wrap; }
+
+/* Editos: format « tribune » (portrait de l'editorialiste, filets doubles), distinct des articles courants */
+.avatar-md { width: 64px; height: 64px; }
+.avatar-lg { width: 96px; height: 96px; }
+.card.edito { border-top: 4px double var(--ink); padding-top: 10px; background: linear-gradient(180deg, rgba(107, 33, 168, .06), transparent 60%); }
+.card.edito .edito-etiquette { margin: 0 0 6px; }
+.card.edito .kicker { color: #6b21a8; }
+.card.edito .edito-tete { display: flex; gap: 12px; align-items: flex-start; }
+.card.edito h3 { margin-top: 0; font-style: italic; }
+.article-edito { border-top: 4px double var(--ink); border-bottom: 4px double var(--ink); padding: 14px 0 20px; }
+.article-edito .kicker { color: #6b21a8; letter-spacing: .2em; }
+.article-edito h1 { font-style: italic; }
+.article-edito .edito-portrait { float: right; margin: 0 0 8px 14px; }
+.article-edito .body p:first-of-type::first-letter { color: #6b21a8; }
+.edito-signature { text-align: right; font: italic 1.05rem var(--serif); margin: 22px 0 0; }
+.edito-pupitre { display: flex; gap: 16px; align-items: center; margin-top: 14px; padding: 12px 14px; border: 1px solid var(--rule); background: rgba(107, 33, 168, .05); }
+.edito-pupitre p { margin: 0; font: .92rem/1.5 var(--sans); }
