@@ -145,6 +145,66 @@
       "texte": "J'ai toujours refusé de me marier, de me lier et de me fiancer. Ma position est sans appel, et je m'y tiens depuis longtemps.",
       "recherche": "Personne capable de me faire changer d'avis. Aucune candidature ne sera acceptée, ce serait contraire à mes principes.",
       "formule": "Réponses non souhaitées, mais attendues."
+    },
+    {
+      "ref": 23, "cat": "hf", "profil": "Homme de 51 ans, sentimental et prévoyant",
+      "texte": "Divorcé, bonne présentation, aime les promenades, les repas en famille et les dimanches tranquilles. Recherche femme affectueuse, sachant apprécier les petites attentions et les projets à deux. Je possède une maison, un jardin et un barbecue qui fonctionne depuis 2018 sans incident. Souhaite construire une relation durable fondée sur la confiance. J'aimerais toutefois que notre première dispute ait lieu avant l'achat des meubles communs, pour faciliter la répartition."
+    },
+    {
+      "ref": 24, "cat": "fh", "profil": "Femme de 44 ans, indépendante et curieuse",
+      "texte": "Active, sociable, aime voyager sans programme trop chargé et découvrir de nouvelles cuisines. Recherche homme cultivé, capable d'écouter sans préparer sa réponse pendant que je parle. J'apprécie l'humour, la tendresse et les personnes qui savent reconnaître leurs torts. Je ne demande pas la perfection, seulement une certaine cohérence entre les promesses et les actes. Les hommes qui disent « on verra » à propos de tout sont priés de préciser à quelle échéance."
+    },
+    {
+      "ref": 25, "cat": "hf", "profil": "Veuf de 67 ans, jardinier amateur",
+      "texte": "Retraité, calme, non-fumeur, cuisine correctement et entretient soigneusement ses rosiers. Recherche compagne pour partager sorties, petits voyages et soirées au coin du feu. Je suis disposé à découvrir vos passions, même si je ne comprends pas encore la peinture contemporaine. En revanche, je tiens à conserver mon potager dans son état actuel. Une relation sérieuse est envisageable avec une personne qui accepte que les tomates bénéficient d'une priorité saisonnière."
+    },
+    {
+      "ref": 26, "cat": "fh", "profil": "Femme de 38 ans, romantique mais lucide",
+      "texte": "Aime les lettres manuscrites, les fleurs sans occasion particulière et les conversations qui se prolongent après minuit. Recherche homme capable de surprendre sans organiser chaque surprise trois semaines à l'avance. Je souhaite une relation sincère, avec de l'écoute et quelques projets communs. J'ai déjà essayé les applications de rencontres, mais les conversations y ressemblent trop souvent à des entretiens d'embauche. Si vous demandez mes trois principales qualités, merci de commencer par me dire les vôtres."
+    },
+    {
+      "ref": 27, "cat": "hf", "profil": "Homme de 56 ans, bricoleur confirmé",
+      "texte": "Veuf, propriétaire, amateur de pêche et de réparations domestiques. Je sais monter une armoire, refaire une étagère et identifier un bruit suspect dans une chaudière. Recherche femme douce et indépendante pour partager les plaisirs simples de la vie. Je suis très disponible, sauf le samedi matin, réservé aux travaux urgents, et le dimanche après-midi, consacré aux travaux devenus urgents pendant le samedi matin. Je peux faire une exception pour une personne sachant utiliser un niveau à bulle."
+    },
+    {
+      "ref": 28, "cat": "intellectuelles", "profil": "Femme de 59 ans, ancienne enseignante",
+      "texte": "Retraitée depuis peu, passionnée de lecture, de théâtre et de voyages culturels. Recherche compagnon cultivé, tendre et curieux, qui ne confonde pas désaccord et faute de raisonnement. J'aime les discussions animées, mais je sais aussi apprécier le silence. Je ne corrige plus les copies depuis deux ans et souhaite éviter de reprendre cette habitude dans ma vie privée. Toutefois, une faute dans un SMS de déclaration d'amour restera difficile à ignorer."
+    },
+    {
+      "ref": 29, "cat": "hf", "profil": "Homme de 42 ans, cuisinier amateur",
+      "texte": "Célibataire, sportif occasionnel, aime recevoir des amis et préparer de bons petits plats. Recherche partenaire gourmande, spontanée et capable de rire de ses propres défauts. Je maîtrise trois recettes, dont une qui impressionne toujours les invités. J'aimerais rencontrer quelqu'un avec qui partager les repas, les vacances et les projets d'avenir. Je précise que je cuisine volontiers, mais que je considère le fait de demander « qu'est-ce qu'on mange ce soir ? » comme une prise de responsabilité à part entière."
+    },
+    {
+      "ref": 30, "cat": "fh", "profil": "Femme de 48 ans, passionnée de voyages",
+      "texte": "Dynamique, curieuse, apprécie les destinations méconnues et les hébergements qui ont une histoire. Recherche homme ouvert d'esprit, capable de faire une valise sans emporter quatre chargeurs dont il ignore l'utilité. Je préfère les escapades improvisées aux séjours organisés minute par minute. Je ne suis pas exigeante sur le confort, à condition qu'il y ait une fenêtre, de l'eau chaude et une possibilité raisonnable de rentrer. Les amateurs de camping extrême peuvent joindre une liste de leurs dernières expéditions."
+    },
+    {
+      "ref": 31, "cat": "hf", "profil": "Homme de 63 ans, discret et méthodique",
+      "texte": "Retraité du secteur bancaire, aime la marche, les mots croisés et les petits-déjeuners prolongés. Recherche femme sérieuse, agréable et indépendante, pour relation durable. Je suis fidèle, ponctuel et rarement de mauvaise humeur. J'ai pris l'habitude de noter mes dépenses et mes rendez-vous, ce qui m'évite les oublis. Je suis prêt à partager mon quotidien, mais pas nécessairement mon agenda papier : il contient des informations confidentielles sur mes propres habitudes, dont certaines me surprennent encore."
+    },
+    {
+      "ref": 32, "cat": "fh", "profil": "Femme de 35 ans, artiste dans l'âme",
+      "texte": "Créative, sensible, aime la musique, les brocantes et les objets dont personne ne connaît l'usage. Recherche homme patient, affectueux et doté d'un minimum d'imagination. Mon appartement est accueillant, même si certaines œuvres en cours occupent actuellement la table de la cuisine. Je rêve d'une relation dans laquelle chacun puisse être lui-même. Je précise cependant que « c'est original » n'est pas une critique constructive, et que « je ne comprends pas » peut parfois constituer un excellent début de conversation."
+    },
+    {
+      "ref": 33, "cat": "hf", "profil": "Homme de 47 ans, fonctionnaire territorial",
+      "texte": "Célibataire, stable, honnête et attaché aux traditions. Recherche femme sensible, appréciant les promenades, les repas simples et les conversations sans précipitation. Je suis capable de prendre des décisions importantes, à condition de disposer de toutes les informations nécessaires. Je ne fuis pas l'engagement : je souhaite simplement définir clairement son périmètre, sa durée et les modalités de renouvellement. Si notre rencontre se passe bien, je suis disposé à envisager une seconde rencontre après validation de la première."
+    },
+    {
+      "ref": 34, "cat": "fh", "profil": "Femme de 52 ans, indépendante et organisée",
+      "texte": "Divorcée, aime le jardinage, les animaux et les soirées entre amis. Recherche compagnon fiable, tendre et suffisamment autonome pour ne pas considérer une machine à laver comme une installation industrielle complexe. Je ne cherche pas un homme parfait, mais quelqu'un qui sache participer à la vie quotidienne sans attendre de recevoir des instructions détaillées. Je suis prête à faire des compromis, notamment sur le choix des films. Pour le thermostat, en revanche, la négociation devra être menée avec sérieux."
+    },
+    {
+      "ref": 35, "cat": "intellectuelles", "profil": "Homme de 39 ans, écrivain à ses heures",
+      "texte": "Passionné de littérature, de cinéma et de longues discussions sur le sens de l'existence. Recherche compagne affectueuse, curieuse et indulgente envers les périodes de doute créatif. Je travaille actuellement sur un roman ambitieux dont la fin reste à écrire depuis trois ans. J'apprécie les encouragements, mais aussi les avis sincères. Si vous aimez lire, je pourrai vous confier mon manuscrit. Je recherche surtout une personne capable de dire « j'ai beaucoup aimé » sans avoir nécessairement terminé le chapitre deux."
+    },
+    {
+      "ref": 36, "cat": "fh", "profil": "Femme de 61 ans, épicurienne raisonnable",
+      "texte": "Aime les marchés, les restaurants chaleureux, les promenades au bord de l'eau et les conversations spontanées. Recherche homme bienveillant, drôle et disponible pour partager les bons moments de la vie. Je n'ai pas besoin d'un grand voyage pour être heureuse : un déjeuner réussi peut suffire. Je suis ouverte aux nouvelles expériences, dans la limite du raisonnable. Si vous me proposez un saut en parachute au premier rendez-vous, je préférerai que nous commencions par un café, afin de vérifier que nous avons la même définition du mot « raisonnable »."
+    },
+    {
+      "ref": 37, "cat": "desesperes", "profil": "Homme de 54 ans, optimiste malgré l'expérience",
+      "texte": "Célibataire, bon caractère, aime les animaux, les repas conviviaux et les projets qui aboutissent. Recherche femme sincère, tendre et capable d'apprécier un homme imparfait mais volontaire. J'ai appris de mes relations précédentes et je suis prêt à repartir sur de bonnes bases. Je ne promets pas de changer du tout au tout, mais je peux améliorer certains points avec un accompagnement adapté. Je souhaite une relation simple, sans jeux ni complications. Si vous aimez les gens qui reconnaissent leurs erreurs, nous avons déjà un sujet de conversation : je suis arrivé en retard à mon dernier rendez-vous amoureux."
     }
   ]
 }
