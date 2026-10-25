@@ -74,13 +74,13 @@ const texteRecherche = (a: (typeof annonces)[number]) => [a.titre, a.texte, a.co
             {a.format === 'encart' && ann && <p class="pa-marque">{ann.nom}</p>}
             <p class="pa-meta"><span class="pa-badge">{nomCategorie(a.cat)}</span> <span class="pa-ref">Réf. {a.ref}</span>{a.reel && <span class="pa-reel">Vraie annonce</span>}</p>
             <h3 class="pa-titre">{a.reel && a.url ? <a href={a.url} target="_blank" rel="noopener">{a.titre}</a> : a.titre}</h3>
-            {a.image && <img class="pa-image" src={url(`annonces/${a.image}`)} width="112" height="112" alt={a.imageAlt ?? ''} loading="lazy" />}
+            {a.image && <img class:list={['pa-image', a.imageType === 'portrait' && 'pa-image-portrait']} src={url(`annonces/${a.image}`)} width={a.imageType === 'portrait' ? 84 : 112} height={a.imageType === 'portrait' ? 105 : 112} alt={a.imageAlt ?? ''} loading="lazy" />}
             {a.accroche && <p class="pa-accroche-pub">{a.accroche}</p>}
             {a.prix && <p class="pa-prix">{a.prix}</p>}
             <p class="pa-texte">{a.texte}</p>
             {a.conditions && <p class="pa-conditions">{a.conditions}</p>}
             {a.reel && a.url && <p class="pa-lien"><a href={a.url} target="_blank" rel="noopener">{a.lien ?? 'Voir le site'} →</a> <span>{a.site}</span></p>}
-            {ann && a.format !== 'encart' && <p class="pa-annonceur">Annonce passée par <strong>{ann.nom}</strong>{ann.slogan && <> — <em>{ann.slogan}</em></>}</p>}
+            {ann && a.format !== 'encart' && <p class="pa-annonceur">{ann.logo && <img class="pa-logo-mini" src={url(`annonces/${ann.logo}`)} width="40" height="40" alt={`Logo de ${ann.nom}`} loading="lazy" />}Annonce passée par <strong>{ann.nom}</strong>{ann.slogan && <> — <em>{ann.slogan}</em></>}</p>}
             {a.format === 'encart' && ann?.slogan && <p class="pa-slogan">{ann.slogan}</p>}
           </article>
         );
@@ -175,6 +175,8 @@ const texteRecherche = (a: (typeof annonces)[number]) => [a.titre, a.texte, a.co
   .pa-partenaire-lien a { display: inline-block; padding: 6px 12px; border: 2px solid #faf7f2; color: #faf7f2; font: 700 .85rem var(--sans); text-decoration: none; }
   .pa-partenaire-lien a:hover, .pa-partenaire-lien a:focus-visible { background: #faf7f2; color: #16140f; }
   @media (max-width: 640px) { .pa-partenaire { grid-template-columns: 1fr; } .pa-partenaire-photo { width: 120px; height: 150px; margin-bottom: 12px; } }
+  .pa-image-portrait { width: 84px; height: 105px; mix-blend-mode: normal; object-fit: cover; border: 1px solid var(--ink); }
+  .pa-logo-mini { float: left; width: 40px; height: 40px; margin: 0 8px 2px 0; border-radius: 50%; border: 1px solid var(--rule); background: #fff; }
   .pa-slogan { font: italic .8rem var(--serif); margin-top: 8px !important; }
   .pal-ink { background: #16140f; color: #faf7f2; }
   .pal-bleu { background: #1c3a57; color: #f4f8fb; }

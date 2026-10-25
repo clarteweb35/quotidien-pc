@@ -32,10 +32,10 @@
     { "slug": "administration", "name": "Administration & vie publique" }
   ],
   "annonceurs": [
-    { "id": "evidence", "nom": "Cabinet Évidence & Associés", "slogan": "Nous confirmons ce que vous pensiez déjà.", "palette": "ink" },
+    { "id": "evidence", "nom": "Cabinet Évidence & Associés", "slogan": "Nous confirmons ce que vous pensiez déjà.", "palette": "ink", "logo": "evidence.webp" },
     { "id": "zerotache", "nom": "Zéro-Tâche SAS", "slogan": "Automatiser l'inutile, enfin.", "palette": "bleu" },
-    { "id": "bpcc", "nom": "Bureau paritaire de certification des certifications", "slogan": "Certifié, donc certifiant.", "palette": "vert" },
-    { "id": "concept", "nom": "Agence Espace & Concept", "slogan": "Des mètres carrés qui sont avant tout des idées.", "palette": "rouge" },
+    { "id": "bpcc", "nom": "Bureau paritaire de certification des certifications", "slogan": "Certifié, donc certifiant.", "palette": "vert", "logo": "bpcc.webp" },
+    { "id": "concept", "nom": "Agence Espace & Concept", "slogan": "Des mètres carrés qui sont avant tout des idées.", "palette": "rouge", "logo": "concept.webp" },
     { "id": "zerolarme", "nom": "Assurance Zéro Larme", "palette": "bleu", "logo": "zerolarme.webp" },
     { "id": "teflonhuman", "nom": "Teflon Human Corp", "palette": "vert" },
     { "id": "trobo", "nom": "Agile TroBo", "palette": "rouge" },
@@ -139,6 +139,7 @@
     },
     {
       "id": "pa-011", "cat": "services", "format": "classique", "ref": "PA-011", "annonceur": "evidence",
+      "image": "consultant.webp", "imageType": "portrait", "imageAlt": "Portrait fictif (image générée par IA) du consultant en réunions : un homme aux cheveux gris, en costume sombre et cravate bleue",
       "titre": "Consultant en réunions qui auraient pu être un mail",
       "prix": "À partir de 25 €",
       "texte": "J'interviens avant, pendant et après votre réunion afin de produire une synthèse de ce qui aurait pu être décidé en trois lignes. Forfait cinq heures, compte rendu inclus.",
@@ -146,6 +147,7 @@
     },
     {
       "id": "pa-045", "cat": "services", "format": "classique", "ref": "PA-045",
+      "image": "coach-noms.webp", "imageType": "portrait", "imageAlt": "Portrait fictif (image générée par IA) du coach en noms concrets : un homme aux cheveux gris, en veste sombre et cravate bordeaux",
       "titre": "Coach en noms concrets",
       "texte": "Propose des sessions de formation de cinq heures pour commissions culturelles et théâtrales. Apprenez à utiliser au moins un nom commun au cours d'un débat."
     },

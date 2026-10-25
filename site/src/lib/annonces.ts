@@ -3,7 +3,7 @@ import data from '../../../config/annonces.json';
 export interface Annonce {
   id: string; cat: string; format: 'classique' | 'court' | 'vedette' | 'encart'; ref: string;
   titre: string; accroche?: string; prix?: string; texte: string; conditions?: string;
-  annonceur?: string; image?: string; imageAlt?: string;
+  annonceur?: string; image?: string; imageAlt?: string; imageType?: 'portrait';
   reel?: boolean; url?: string; site?: string; lien?: string; // vraie annonce: renvoie vers un vrai site
 }
 export interface Annonceur { id: string; nom: string; slogan?: string; palette: string; logo?: string }

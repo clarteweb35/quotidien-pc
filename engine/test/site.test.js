@@ -64,6 +64,7 @@ test('petites annonces: page, menu, donnees coherentes et mention obligatoire', 
     if (a.annonceur) assert.ok(data.annonceurs.some((x) => x.id === a.annonceur), `annonceur inconnu: ${a.id}`);
     if (a.image) assert.ok(fs.existsSync(path.join(ROOT, 'site/public/annonces', a.image)), `image absente: ${a.image}`);
   }
+  for (const a of data.annonceurs) if (a.logo) assert.ok(fs.existsSync(path.join(ROOT, 'site/public/annonces', a.logo)), `logo absent: ${a.logo}`);
   const html = page('petites-annonces');
   assert.ok(html.includes('Toutes les annonces') && html.includes('Déposer une annonce'));
   assert.ok(html.includes('coïncidence presque certaine'), 'mention fictive');
