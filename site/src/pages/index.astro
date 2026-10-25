@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro';
 import Card from '../components/Card.astro';
 import Marches from '../components/Marches.astro';
+import Gimmick from '../components/Gimmick.astro';
 import { allArticles, categories, category, url, siteName, manualImageCredit } from '../lib/site';
 import { illustration } from '../lib/manual';
 
@@ -44,6 +45,7 @@ const siteLd = {
       )}
       <Marches reverse />
       <Card article={lead} lead />
+      <Gimmick slug="monde" />
       {latest.length > 0 && (
         <>
           <h2 class="section-title">Dernières nouvelles (inventées)</h2>
