@@ -154,3 +154,6 @@ footer ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 16px; f
 .bureaux { display: grid; gap: 12px 16px; grid-template-columns: repeat(2, 1fr); margin-top: 14px; }
 @media (max-width: 560px) { .bureaux { grid-template-columns: 1fr; } }
 .bureau-eco { border: 2px dashed #3f6212; background: rgba(63, 98, 18, .07); color: #2f4a0e; padding: 14px 16px; font: .92rem/1.5 var(--sans); }
+.recrute { margin-top: 28px; padding: 16px 18px; border: 2px solid var(--ink); background: var(--paper-2); }
+.recrute h2 { margin-top: 0; }
+.recrute p:last-child { margin-bottom: 0; }
