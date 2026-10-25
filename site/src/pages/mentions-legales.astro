@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import Gimmick from '../components/Gimmick.astro';
 import { siteName, satireNotice, url } from '../lib/site';
 import { publisher, contactEmail, reportEmail, host, updatedAt, analyticsId, analyticsName, nonProfessional } from '../lib/legal';
 const mailto = `mailto:${contactEmail}`;
@@ -59,5 +60,6 @@ const updated = new Intl.DateTimeFormat('fr-FR', { dateStyle: 'long', timeZone: 
     <p><strong>Hébergement.</strong> Comme tout serveur web, l'hébergeur ({host.name}) peut enregistrer des données techniques de connexion (adresse IP, date, page demandée) pour assurer la sécurité et le fonctionnement du service.</p>
     <p><strong>Vos droits.</strong> Vous disposez d'un droit d'accès, de rectification, d'effacement, d'opposition et de limitation du traitement de vos données. Pour les exercer : <a href={mailto}>{contactEmail}</a>. Vous pouvez aussi saisir la CNIL (<a href="https://www.cnil.fr" rel="noopener">cnil.fr</a>).</p>
     <p>Le journal ne contient aucun formulaire, compte utilisateur ni système de commentaires : l'éditeur ne collecte directement aucune autre donnée personnelle.</p>
+    <Gimmick slug="mentions" />
   </div>
 </Base>

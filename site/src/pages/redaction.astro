@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro';
 import { roster, authorSlug, support, portrait, bureauByDesk, lucasBureau, shotCaption } from '../lib/authors';
 import { siteName, url } from '../lib/site';
+import Gimmick from '../components/Gimmick.astro';
 const desks = roster();
 const initials = (n: string) => n.split(/[\s-]+/).map((w) => w[0]).slice(0, 2).join('');
 const withPhoto = (list: { name: string }[]) => list.map((p) => ({ ...p, photo: portrait(p.name) }));
@@ -86,6 +87,7 @@ const backstage = staff('coulisses');
 
     <section>
       <h2>Coulisses</h2>
+      <Gimmick slug="redaction" />
       <figure class="bureau">
         <img src={url('redaction/bureaux/lucas.webp')} width="800" height="450" loading="lazy" alt={lucasBureau.alt} />
         <figcaption>{shotCaption('lucas')}</figcaption>
