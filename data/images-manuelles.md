@@ -3,7 +3,12 @@
 Nommez votre image **exactement comme la référence** (ex. `261024-X1.jpg`) et déposez-la dans `site/src/assets/manual/`.
 Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large minimum.
 
-## Sans image (3)
+## Sans image (4)
+
+### `261025-06` — Théâtre : une commission passe cinq heures à débattre de l'extravagance sans réussir à employer un seul nom concret
+- Rubrique : culture
+- Description suggérée : Un groupe de critiques théâtraux élégants assis autour d'une grande table en bois verni dans un salon doré, faisant de grands gestes vagues de la main avec un air très inspiré, style dessin de presse.
+- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
 ### `261025-05` — Chasse à l'IA dans l'édition : les auteurs désormais sommés de verser une vraie larme sur leur manuscrit
 - Rubrique : monde

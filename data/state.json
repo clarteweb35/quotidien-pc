@@ -432,6 +432,22 @@
       "seenAt": "2026-10-25T14:20:00.905Z",
       "status": "used",
       "usedAt": "2026-10-25T14:20:00.905Z"
+    },
+    "43261c8b5c60": {
+      "title": "Réalisateur de « Moulin », László Nemes, une histoire familiale percutée par les totalitarismes du XXᵉ siècle",
+      "url": "https://www.lemonde.fr/m-le-mag/article/2026/10/25/realisateur-de-moulin-laszlo-nemes-une-histoire-familiale-percutee-par-les-totalitarismes-du-xx-siecle_6800030_4500055.html",
+      "category": "culture",
+      "seenAt": "2026-10-25T17:48:06.343Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "160a76077c21": {
+      "title": "Dans « Concert très chic », Michel Fau incarne avec dinguerie une diva extravagante",
+      "url": "https://www.lemonde.fr/culture/article/2026/10/25/dans-concert-tres-chic-michel-fau-incarne-avec-dinguerie-une-diva-extravagante_6800083_3246.html",
+      "category": "culture",
+      "seenAt": "2026-10-25T17:48:06.343Z",
+      "status": "used",
+      "usedAt": "2026-10-25T17:48:06.343Z"
     }
   },
   "slots": {
@@ -537,6 +553,15 @@
         "topicId": "142919a1219f",
         "lastError": null
       },
+      "5": {
+        "attempts": 1,
+        "status": "published",
+        "startedAt": "2026-10-25T17:48:06.343Z",
+        "articleId": "fd6cc0d79717",
+        "publishedAt": "2026-10-25T17:48:06.343Z",
+        "topicId": "160a76077c21",
+        "lastError": null
+      },
       "x1": {
         "attempts": 1,
         "status": "published",
@@ -567,9 +592,9 @@
     }
   },
   "lastRun": {
-    "at": "2026-10-25T14:17:03.240Z",
-    "runId": "20261025141703-7385",
-    "published": 2,
+    "at": "2026-10-25T17:48:05.588Z",
+    "runId": "20261025174805-162c",
+    "published": 1,
     "stopped": null
   }
 }

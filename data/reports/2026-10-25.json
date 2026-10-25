@@ -1,7 +1,7 @@
 {
   "date": "2026-10-25",
   "target": 8,
-  "publishedCount": 6,
+  "publishedCount": 7,
   "articles": [
     {
       "id": "960c9e87e0d0",
@@ -44,6 +44,13 @@
       "title": "Reconversion : déçus par l’IA, d’anciens cadres de la tech tentent d’appliquer le management agile à la plomberie",
       "category": "economie",
       "slug": "reconversion-decus-par-l-ia-d-anciens-cadres-de-la-tech"
+    },
+    {
+      "id": "fd6cc0d79717",
+      "ref": "261025-06",
+      "title": "Théâtre : une commission passe cinq heures à débattre de l'extravagance sans réussir à employer un seul nom concret",
+      "category": "culture",
+      "slug": "theatre-une-commission-passe-cinq-heures-a-debattre-de-l"
     }
   ],
   "slots": [
@@ -97,8 +104,13 @@
     {
       "idx": 5,
       "hhmm": "17:30",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 1,
+      "status": "published",
+      "startedAt": "2026-10-25T17:48:06.343Z",
+      "articleId": "fd6cc0d79717",
+      "publishedAt": "2026-10-25T17:48:06.343Z",
+      "topicId": "160a76077c21",
+      "lastError": null
     },
     {
       "idx": 6,
@@ -149,19 +161,19 @@
   "rejections": 0,
   "quarantined": 0,
   "api": {
-    "calls": 13,
-    "inputTokens": 32826,
-    "outputTokens": 20507,
-    "costUsd": 0.194061,
+    "calls": 15,
+    "inputTokens": 37663,
+    "outputTokens": 23885,
+    "costUsd": 0.225193,
     "dailyCapUsd": 1,
-    "monthCostUsd": 0.284255,
+    "monthCostUsd": 0.315387,
     "monthlyCapUsd": 15
   },
   "paused": false,
   "lastRun": {
-    "at": "2026-10-25T14:17:03.240Z",
-    "runId": "20261025141703-7385",
-    "published": 2,
+    "at": "2026-10-25T17:48:05.588Z",
+    "runId": "20261025174805-162c",
+    "published": 1,
     "stopped": null
   }
 }

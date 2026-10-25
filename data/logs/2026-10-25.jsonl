@@ -64,3 +64,27 @@
 {"ts":"2026-10-25T14:21:07.871Z","runId":"20261025141703-7385","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":857,"outputTokens":56,"costUsd":0.000397}
 {"ts":"2026-10-25T14:21:07.872Z","runId":"20261025141703-7385","level":"info","event":"judge.result","slot":"2026-10-25#4","attempt":1,"humor":7,"coherence":9,"risk":0,"issues":[]}
 {"ts":"2026-10-25T14:21:07.873Z","runId":"20261025141703-7385","level":"info","event":"publish.ok","slot":"2026-10-25#4","id":"88e5ee8f1adb","slug":"chasse-a-l-ia-dans-l-edition-les-auteurs-desormais-sommes","url":"/articles/chasse-a-l-ia-dans-l-edition-les-auteurs-desormais-sommes/","attempt":1,"dryRun":false}
+{"ts":"2026-10-25T17:48:05.603Z","runId":"20261025174805-162c","level":"info","event":"cycle.start","date":"2026-10-25","due":["2026-10-25#5"],"remainingToday":2,"dryRun":false}
+{"ts":"2026-10-25T17:48:06.340Z","runId":"20261025174805-162c","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":31,"kept":25}
+{"ts":"2026-10-25T17:48:06.341Z","runId":"20261025174805-162c","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-10-25T17:48:06.341Z","runId":"20261025174805-162c","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":19}
+{"ts":"2026-10-25T17:48:06.341Z","runId":"20261025174805-162c","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":24}
+{"ts":"2026-10-25T17:48:06.341Z","runId":"20261025174805-162c","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":16}
+{"ts":"2026-10-25T17:48:06.341Z","runId":"20261025174805-162c","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":20,"kept":20}
+{"ts":"2026-10-25T17:48:06.342Z","runId":"20261025174805-162c","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":11}
+{"ts":"2026-10-25T17:48:06.342Z","runId":"20261025174805-162c","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":11}
+{"ts":"2026-10-25T17:48:06.342Z","runId":"20261025174805-162c","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":2}
+{"ts":"2026-10-25T17:48:06.342Z","runId":"20261025174805-162c","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":8}
+{"ts":"2026-10-25T17:48:06.342Z","runId":"20261025174805-162c","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":8}
+{"ts":"2026-10-25T17:48:06.342Z","runId":"20261025174805-162c","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":6}
+{"ts":"2026-10-25T17:48:06.342Z","runId":"20261025174805-162c","level":"info","event":"collect.done","items":166}
+{"ts":"2026-10-25T17:48:06.360Z","runId":"20261025174805-162c","level":"info","event":"topic.selection","slot":"2026-10-25#5","target":"culture","candidates":166,"rejected":5,"chosen":"Dans « Concert très chic », Michel Fau incarne avec dinguerie une diva extravagante","score":4}
+{"ts":"2026-10-25T17:49:35.011Z","runId":"20261025174805-162c","level":"warn","event":"gemini.retry","purpose":"generate","status":504,"attempt":1,"delayMs":4067}
+{"ts":"2026-10-25T17:49:43.184Z","runId":"20261025174805-162c","level":"warn","event":"gemini.retry","purpose":"generate","status":503,"attempt":2,"delayMs":8045}
+{"ts":"2026-10-25T17:49:55.790Z","runId":"20261025174805-162c","level":"warn","event":"gemini.retry","purpose":"generate","status":503,"attempt":3,"delayMs":16245}
+{"ts":"2026-10-25T17:51:40.585Z","runId":"20261025174805-162c","level":"warn","event":"gemini.fallback_model","from":"gemini-3.8-flash","to":"gemini-3.6-flash"}
+{"ts":"2026-10-25T17:51:44.891Z","runId":"20261025174805-162c","level":"warn","event":"gemini.retry","purpose":"generate","status":503,"attempt":1,"delayMs":4366}
+{"ts":"2026-10-25T17:52:08.755Z","runId":"20261025174805-162c","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":3942,"outputTokens":3301,"costUsd":0.030671}
+{"ts":"2026-10-25T17:52:09.650Z","runId":"20261025174805-162c","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":895,"outputTokens":77,"costUsd":0.000461}
+{"ts":"2026-10-25T17:52:09.650Z","runId":"20261025174805-162c","level":"info","event":"judge.result","slot":"2026-10-25#5","attempt":1,"humor":7,"coherence":9,"risk":1,"issues":[]}
+{"ts":"2026-10-25T17:52:09.652Z","runId":"20261025174805-162c","level":"info","event":"publish.ok","slot":"2026-10-25#5","id":"fd6cc0d79717","slug":"theatre-une-commission-passe-cinq-heures-a-debattre-de-l","url":"/articles/theatre-une-commission-passe-cinq-heures-a-debattre-de-l/","attempt":1,"dryRun":false}
