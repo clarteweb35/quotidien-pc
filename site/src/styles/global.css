@@ -78,7 +78,7 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.15; }
 .prose { max-width: 720px; margin: 0 auto; }
 .empty { text-align: center; padding: 60px 0; color: var(--ink-2); }
 
-main { padding-bottom: 64px; }
+main#contenu { padding-bottom: 72px; } /* id: plus specifique que .wrap, qui remettait le padding bas a zero */
 footer { border-top: 3px double var(--ink); padding: 10px 0 10px; font: .85rem/1.6 var(--sans); color: var(--ink-2); }
 footer .cols { display: flex; flex-wrap: wrap; gap: 16px 40px; justify-content: space-between; }
 footer .brand { display: flex; align-items: center; gap: 16px; }
