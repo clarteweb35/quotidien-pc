@@ -1,9 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
-import { roster, authorSlug, support, portrait, bureauByDesk, coulisses } from '../lib/authors';
+import { roster, authorSlug, support, portrait, bureauByDesk, coulisses, shotCaption } from '../lib/authors';
 import { siteName, url } from '../lib/site';
 const desks = roster();
-const fixed = 'Photographie prise à 17 h 02 : les bureaux étaient vides.';
 const initials = (n: string) => n.split(/[\s-]+/).map((w) => w[0]).slice(0, 2).join('');
 const withPhoto = (list: { name: string }[]) => list.map((p) => ({ ...p, photo: portrait(p.name) }));
 const staff = (section: string) => withPhoto(support.filter((p) => p.section === section));
@@ -41,8 +40,13 @@ const backstage = staff('coulisses');
         {bureauByDesk[d.cat.slug] && (
           <figure class="bureau">
             <img src={url(`redaction/bureaux/${bureauByDesk[d.cat.slug]}.webp`)} width="800" height="450" loading="lazy" alt={`Le bureau du ${d.label.toLowerCase()}, vide`} />
-            <figcaption>{fixed}</figcaption>
+            <figcaption>{shotCaption(bureauByDesk[d.cat.slug])}</figcaption>
           </figure>
+        )}
+        {d.cat.slug === 'environnement' && (
+          <aside class="bureau bureau-eco" role="note">
+            <strong>Photo du bureau non chargée, pour sauver la planète.</strong> Le service Environnement a exigé de ne pas alourdir le site avec ses images : l'économie est estimée à 40 Ko, soit environ un demi-flocon de glacier. Merci de votre compréhension, et d'éteindre la lumière en partant.
+          </aside>
         )}
         <ul class="team">
           {withPhoto(d.people).map((p: any) => (
@@ -92,7 +96,7 @@ const backstage = staff('coulisses');
         {coulisses.map((c) => (
           <figure class="bureau">
             <img src={url(`redaction/bureaux/${c.file}.webp`)} width="800" height="450" loading="lazy" alt={c.alt} />
-            <figcaption><strong>{c.label}.</strong> {fixed}</figcaption>
+            <figcaption><strong>{c.label}.</strong> {shotCaption(c.file)}</figcaption>
           </figure>
         ))}
       </div>

@@ -46,3 +46,10 @@ export const coulisses = [
   { file: 'vie-entreprise', label: "Vie de l'entreprise", alt: "Espace détente voisin des bureaux : grande table, cafetière filtre, panneau de notes et petit barbecue sur une étagère" },
   { file: 'lucas', label: 'Le bureau de Lucas D.', alt: "Un minuscule bureau sous un escalier, entouré de piles de cartons d'archives et d'une mer de tasses" },
 ];
+
+/** Heure de prise de vue de chaque photo de bureau (16 h 53 pour la premiere, une minute de plus a chaque photo, 17 h 02 pour la derniere). */
+export const bureauTime: Record<string, string> = {
+  politique: '16 h 53', economie: '16 h 54', 'societe-culture': '16 h 55', tech: '16 h 56', monde: '16 h 57', sport: '16 h 58',
+  'faits-divers': '16 h 59', juridique: '17 h 00', 'vie-entreprise': '17 h 01', lucas: '17 h 02',
+};
+export const shotCaption = (file: string) => `Photographie prise à ${bureauTime[file]} : les bureaux étaient vides.`;
