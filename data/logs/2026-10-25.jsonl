@@ -119,3 +119,4 @@
 {"ts":"2026-10-25T22:08:49.387Z","runId":"20261025220849-7fe9","level":"info","event":"annonces.lot","type":"petites","demandees":6,"retenues":6,"refusees":0}
 {"ts":"2026-10-25T22:08:49.813Z","runId":"20261025220849-7790","level":"info","event":"gemini.call","purpose":"annonces","model":"gemini-3.8-flash","inputTokens":1868,"outputTokens":921,"costUsd":0.00971}
 {"ts":"2026-10-25T22:08:49.887Z","runId":"20261025220849-7790","level":"info","event":"annonces.lot","type":"rencontres","demandees":6,"retenues":6,"refusees":0}
+{"ts":"2026-10-25T23:09:56.579Z","runId":"20261025230956-1745","level":"info","event":"cycle.start","date":"2026-10-26","due":[],"remainingToday":8,"dryRun":false}

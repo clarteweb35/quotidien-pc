@@ -1,0 +1,74 @@
+{
+  "date": "2026-10-26",
+  "target": 8,
+  "publishedCount": 0,
+  "articles": [],
+  "slots": [
+    {
+      "idx": 0,
+      "hhmm": "07:00",
+      "status": "pending",
+      "attempts": 0
+    },
+    {
+      "idx": 1,
+      "hhmm": "09:00",
+      "status": "pending",
+      "attempts": 0
+    },
+    {
+      "idx": 2,
+      "hhmm": "11:00",
+      "status": "pending",
+      "attempts": 0
+    },
+    {
+      "idx": 3,
+      "hhmm": "13:00",
+      "status": "pending",
+      "attempts": 0
+    },
+    {
+      "idx": 4,
+      "hhmm": "15:00",
+      "status": "pending",
+      "attempts": 0
+    },
+    {
+      "idx": 5,
+      "hhmm": "17:30",
+      "status": "pending",
+      "attempts": 0
+    },
+    {
+      "idx": 6,
+      "hhmm": "19:30",
+      "status": "pending",
+      "attempts": 0
+    },
+    {
+      "idx": 7,
+      "hhmm": "21:30",
+      "status": "pending",
+      "attempts": 0
+    }
+  ],
+  "rejections": 0,
+  "quarantined": 0,
+  "api": {
+    "calls": 0,
+    "inputTokens": 0,
+    "outputTokens": 0,
+    "costUsd": 0,
+    "dailyCapUsd": 1,
+    "monthCostUsd": 0.38158,
+    "monthlyCapUsd": 15
+  },
+  "paused": false,
+  "lastRun": {
+    "at": "2026-10-25T20:44:23.552Z",
+    "runId": "20261025204423-8cf2",
+    "published": 1,
+    "stopped": null
+  }
+}

@@ -3,35 +3,25 @@
 Nommez votre image **exactement comme la référence** (ex. `261024-X1.jpg`) et déposez-la dans `site/src/assets/manual/`.
 Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large minimum.
 
-## Sans image (5)
+## Sans image (2)
 
-### `261025-07` — « Pourquoi se plaindre des PFAS quand ils rendent nos organismes totalement déperlants ? », s'interroge un expert
-- Rubrique : environnement
-- Description suggérée : Illustration au style dessin de presse montrant une silhouette de citoyen sous une averse, sur lequel les gouttes d'eau rebondissent parfaitement comme sur une poêle antiadhésive, dans un décor urbain pluvieux.
+### `261025-X4` — Pourquoi le dimanche devrait être transféré au mardi
+- Rubrique : editos
+- Description suggérée : Un calendrier mural dont la case du dimanche a été barrée au feutre puis recollée sur celle du mardi, posé sur un bureau en bois, vue de dessus
 - Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
-### `261025-06` — Théâtre : une commission passe cinq heures à débattre de l'extravagance sans réussir à employer un seul nom concret
-- Rubrique : culture
-- Description suggérée : Un groupe de critiques théâtraux élégants assis autour d'une grande table en bois verni dans un salon doré, faisant de grands gestes vagues de la main avec un air très inspiré, style dessin de presse.
+### `261024-X4` — Sommets internationaux : la photo de famille devrait précéder la réunion
+- Rubrique : editos
+- Description suggérée : Une longue rangée de chaises vides alignées sur trois étages devant un mur neutre, vue de dos, avec un appareil photo sur trépied au premier plan
 - Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
-### `261025-05` — Chasse à l'IA dans l'édition : les auteurs désormais sommés de verser une vraie larme sur leur manuscrit
-- Rubrique : monde
-- Description suggérée : Un bureau d'écrivain en désordre avec une machine à écrire ancienne, une tasse de café renversée sur des feuilles de papier et une loupe posée à côté.
-- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
+## Déjà illustrés (11)
 
-### `261025-04` — Reconversion : déçus par l’IA, d’anciens cadres de la tech tentent d’appliquer le management agile à la plomberie
-- Rubrique : economie
-- Description suggérée : Un artisan en bleu de travail sur un chantier de construction, présentant des graphiques d'entreprise et des tableaux Excel sur une planche en bois posée sur des tréteaux devant ses collègues.
-- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
-
-### `261025-02` — Maintien de l’ordre : la Préfecture salue un bilan comptable d’une précision exemplaire
-- Rubrique : politique
-- Description suggérée : Un représentant officiel en costume sombre debout devant un grand tableau noir couvert de formules mathématiques complexes, de graphiques et d'équations relatives au maintien de l'ordre. Dessin satirique de presse, ambiance administrative.
-- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
-
-## Déjà illustrés (6)
-
+- `261025-07` — « Pourquoi se plaindre des PFAS quand ils rendent nos organismes totalement déperlants ? », s'interroge un expert (261025-07.jpg)
+- `261025-06` — Théâtre : une commission passe cinq heures à débattre de l'extravagance sans réussir à employer un seul nom concret (261025-06.jpg)
+- `261025-05` — Chasse à l'IA dans l'édition : les auteurs désormais sommés de verser une vraie larme sur leur manuscrit (261025-05.jpg)
+- `261025-04` — Reconversion : déçus par l’IA, d’anciens cadres de la tech tentent d’appliquer le management agile à la plomberie (261025-04.jpg)
+- `261025-02` — Maintien de l’ordre : la Préfecture salue un bilan comptable d’une précision exemplaire (261025-02.jpg)
 - `261025-X3` — Démocratie : il vote avec deux semaines d'avance pour avoir le temps de contester son propre bulletin (261025-X3.jpg)
 - `261025-X2` — Diagonale des Fous : le monde du sport fasciné par l'art de gravir 10 000 mètres pour éviter de prendre le car (261025-X2.jpg)
 - `261025-X1` — Débats : une enquête confirme scientifiquement qu’avoir une réponse évite les silences gênants (261025-X1.jpg)
