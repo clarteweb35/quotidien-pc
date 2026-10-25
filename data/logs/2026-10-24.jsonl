@@ -91,3 +91,16 @@
 {"ts":"2026-10-24T22:42:40.238Z","runId":"20261024223451-849a","level":"info","event":"judge.result","slot":"2026-10-25#x2","attempt":2,"humor":8,"coherence":9,"risk":1,"issues":[]}
 {"ts":"2026-10-24T22:42:40.239Z","runId":"20261024223451-849a","level":"info","event":"publish.ok","slot":"2026-10-25#x2","id":"90c80c93d34b","slug":"diagonale-des-fous-le-monde-du-sport-fascine-par-l-art-de","url":"/articles/diagonale-des-fous-le-monde-du-sport-fascine-par-l-art-de/","attempt":2,"dryRun":false}
 {"ts":"2026-10-24T23:07:04.831Z","runId":"20261024230704-7e10","level":"info","event":"cycle.start","date":"2026-10-25","due":[],"remainingToday":6,"dryRun":false}
+{"ts":"2026-10-24T23:58:48.562Z","runId":"20261024235848-bc8a","level":"info","event":"cycle.start","date":"2026-10-25","due":["2026-10-25#x3"],"remainingToday":6,"dryRun":false}
+{"ts":"2026-10-24T23:58:49.351Z","runId":"20261024235848-bc8a","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":32,"kept":25}
+{"ts":"2026-10-24T23:58:49.351Z","runId":"20261024235848-bc8a","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-10-24T23:58:49.351Z","runId":"20261024235848-bc8a","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":20}
+{"ts":"2026-10-24T23:58:49.351Z","runId":"20261024235848-bc8a","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":21}
+{"ts":"2026-10-24T23:58:49.351Z","runId":"20261024235848-bc8a","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":17}
+{"ts":"2026-10-24T23:58:49.351Z","runId":"20261024235848-bc8a","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":6}
+{"ts":"2026-10-24T23:58:49.351Z","runId":"20261024235848-bc8a","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":11}
+{"ts":"2026-10-24T23:58:49.351Z","runId":"20261024235848-bc8a","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":8}
+{"ts":"2026-10-24T23:58:49.351Z","runId":"20261024235848-bc8a","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":9}
+{"ts":"2026-10-24T23:58:49.352Z","runId":"20261024235848-bc8a","level":"info","event":"collect.done","items":133}
+{"ts":"2026-10-24T23:58:49.385Z","runId":"20261024235848-bc8a","level":"info","event":"topic.selection","slot":"2026-10-25#x3","candidates":133,"rejected":25,"chosen":"Donald Trump a voté par anticipation en Floride aux élections de mi-mandat","score":6.8}
+{"ts":"2026-10-24T23:58:50.222Z","runId":"20261024235848-bc8a","level":"warn","event":"gemini.retry","purpose":"generate","status":503,"attempt":1,"delayMs":4168}

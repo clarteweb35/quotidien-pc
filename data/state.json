@@ -280,6 +280,38 @@
       "seenAt": "2026-10-24T22:40:13.707Z",
       "status": "used",
       "usedAt": "2026-10-24T22:40:13.707Z"
+    },
+    "89d7ce8ed198": {
+      "title": "L’archidiocèse de New York va verser 800 millions de dollars à plus de 1 300 victimes d’abus sexuels",
+      "url": "https://www.lemonde.fr/international/article/2026/10/25/l-archidiocese-de-new-york-va-verser-800-millions-de-dollars-a-plus-de-1-300-victimes-d-abus-sexuels_6799830_3210.html",
+      "category": "societe",
+      "seenAt": "2026-10-24T23:58:49.352Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "6d44f7aff151": {
+      "title": "Nigeria : au moins vingt morts dans une attaque de « bandits » dans le Nord-Est",
+      "url": "https://www.lemonde.fr/afrique/article/2026/10/25/nigeria-au-moins-vingt-morts-dans-une-attaque-de-bandits-dans-le-nord-est_6799797_3212.html",
+      "category": "societe",
+      "seenAt": "2026-10-24T23:58:49.352Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "59e7e86d0a9e": {
+      "title": "EN DIRECT, guerre en Ukraine : au moins quatre morts dans des frappes russes dans les régions de Dnipropetrovsk et de Kharkiv",
+      "url": "https://www.lemonde.fr/international/live/2026/10/25/en-direct-guerre-en-ukraine-au-moins-quatre-morts-dans-des-frappes-russes-dans-les-regions-de-dnipropetrovsk-et-de-kharkiv_6796922_3210.html",
+      "category": "societe",
+      "seenAt": "2026-10-24T23:58:49.352Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "87197441daf1": {
+      "title": "Donald Trump a voté par anticipation en Floride aux élections de mi-mandat",
+      "url": "https://www.lemonde.fr/international/article/2026/10/25/donald-trump-a-vote-par-anticipation-en-floride-aux-elections-de-mi-mandat_6799764_3210.html",
+      "category": "societe",
+      "seenAt": "2026-10-24T23:58:49.352Z",
+      "status": "used",
+      "usedAt": "2026-10-24T23:58:49.352Z"
     }
   },
   "slots": {
@@ -365,13 +397,22 @@
         "publishedAt": "2026-10-24T22:40:13.707Z",
         "topicId": "e7cc9330e19e",
         "lastError": null
+      },
+      "x3": {
+        "attempts": 1,
+        "status": "published",
+        "startedAt": "2026-10-24T23:58:49.352Z",
+        "articleId": "49b59cc227bd",
+        "publishedAt": "2026-10-24T23:58:49.352Z",
+        "topicId": "87197441daf1",
+        "lastError": null
       }
     }
   },
   "lastRun": {
-    "at": "2026-10-24T22:34:51.905Z",
-    "runId": "20261024223451-849a",
-    "published": 2,
+    "at": "2026-10-24T23:58:48.534Z",
+    "runId": "20261024235848-bc8a",
+    "published": 1,
     "stopped": null
   }
 }

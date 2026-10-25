@@ -1,0 +1,5 @@
+{"ts":"2026-10-25T00:00:23.010Z","runId":"20261024235848-bc8a","level":"warn","event":"gemini.retry","purpose":"generate","status":504,"attempt":2,"delayMs":8600}
+{"ts":"2026-10-25T00:01:55.721Z","runId":"20261024235848-bc8a","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.8-flash","inputTokens":3804,"outputTokens":1683,"costUsd":0.018329}
+{"ts":"2026-10-25T00:01:56.609Z","runId":"20261024235848-bc8a","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":858,"outputTokens":97,"costUsd":0.0005}
+{"ts":"2026-10-25T00:01:56.610Z","runId":"20261024235848-bc8a","level":"info","event":"judge.result","slot":"2026-10-25#x3","attempt":1,"humor":7,"coherence":8,"risk":1,"issues":[]}
+{"ts":"2026-10-25T00:01:56.612Z","runId":"20261024235848-bc8a","level":"info","event":"publish.ok","slot":"2026-10-25#x3","id":"49b59cc227bd","slug":"democratie-il-vote-avec-deux-semaines-d-avance-pour-avoir","url":"/articles/democratie-il-vote-avec-deux-semaines-d-avance-pour-avoir/","attempt":1,"dryRun":false}

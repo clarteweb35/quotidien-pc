@@ -1,7 +1,7 @@
 {
   "date": "2026-10-25",
   "target": 8,
-  "publishedCount": 2,
+  "publishedCount": 3,
   "articles": [
     {
       "id": "960c9e87e0d0",
@@ -9,6 +9,13 @@
       "title": "Débats : une enquête confirme scientifiquement qu’avoir une réponse évite les silences gênants",
       "category": "societe",
       "slug": "debats-une-enquete-confirme-scientifiquement-qu-avoir-une"
+    },
+    {
+      "id": "49b59cc227bd",
+      "ref": "261025-X3",
+      "title": "Démocratie : il vote avec deux semaines d'avance pour avoir le temps de contester son propre bulletin",
+      "category": "societe",
+      "slug": "democratie-il-vote-avec-deux-semaines-d-avance-pour-avoir"
     },
     {
       "id": "90c80c93d34b",
@@ -88,24 +95,35 @@
       "publishedAt": "2026-10-24T22:40:13.707Z",
       "topicId": "e7cc9330e19e",
       "lastError": null
+    },
+    {
+      "idx": "x3",
+      "hhmm": "manuel",
+      "attempts": 1,
+      "status": "published",
+      "startedAt": "2026-10-24T23:58:49.352Z",
+      "articleId": "49b59cc227bd",
+      "publishedAt": "2026-10-24T23:58:49.352Z",
+      "topicId": "87197441daf1",
+      "lastError": null
     }
   ],
   "rejections": 0,
   "quarantined": 0,
   "api": {
-    "calls": 5,
-    "inputTokens": 13534,
-    "outputTokens": 9339,
-    "costUsd": 0.087416,
+    "calls": 7,
+    "inputTokens": 18196,
+    "outputTokens": 11119,
+    "costUsd": 0.106245,
     "dailyCapUsd": 1,
-    "monthCostUsd": 0.17761,
+    "monthCostUsd": 0.196439,
     "monthlyCapUsd": 15
   },
   "paused": false,
   "lastRun": {
-    "at": "2026-10-24T22:34:51.905Z",
-    "runId": "20261024223451-849a",
-    "published": 2,
+    "at": "2026-10-24T23:58:48.534Z",
+    "runId": "20261024235848-bc8a",
+    "published": 1,
     "stopped": null
   }
 }
