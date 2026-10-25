@@ -148,6 +148,7 @@ const icones = ['☀️', '⛅', '☁️', '🌧️', '⛈️', '❄️', '🌪�
   <section class="gm" aria-label="Cafés de Lucas (fiction)">
     <div class="gm-head">{pill && <span class="gm-pill">Fiction</span>}<strong>Cafés préparés par Lucas aujourd'hui</strong><span class="gm-note">dont <span data-gm="buvables">0</span> buvable(s)</span></div>
     <p class="compteur cafe"><img class="cafe-tete" src={url('redaction/lucas-dumond.webp')} width="48" height="48" alt="Lucas D., préposé au café" loading="lazy" /><span data-gm="counter" data-mode="day" data-lo="0.003" data-hi="0.012" data-dec="0">0</span></p>
+    <p class="cafe-etat" data-gm="cafe-etat" aria-live="off">☕ Lucas prépare un café…</p>
   </section>
 )}
 
@@ -176,7 +177,7 @@ const icones = ['☀️', '⛅', '☁️', '🌧️', '⛈️', '❄️', '🌪�
       let sum = 0;
       for (let i = 0; i < n; i++) sum += lo + (hi - lo) * rng(base * 100000 + i);
       sum += (lo + (hi - lo) * rng(base * 100000 + n)) * (t.s / 60);
-      el.textContent = fmt.format(sum);
+      el.textContent = fmt.format(sum + Number(el.dataset.extra || 0));
     };
     tick(); setInterval(tick, 1000);
   });
@@ -316,6 +317,23 @@ const icones = ['☀️', '⛅', '☁️', '🌧️', '⛈️', '❄️', '🌪�
     el.textContent = String(Math.floor(n / 9));
   });
 
+  // Lucas et son café : une petite scène en boucle, qui fait monter le compteur.
+  document.querySelectorAll<HTMLElement>('[data-gm="cafe-etat"]').forEach((etat) => {
+    const section = etat.closest('section')!;
+    const compteur = section.querySelector<HTMLElement>('[data-gm="counter"]')!;
+    const buvables = section.querySelector<HTMLElement>('[data-gm="buvables"]');
+    const scene = [
+      ['☕ Lucas prépare un café…', 0], ['☕ Lucas verse l’eau…', 0], ['😬 Lucas goûte…', 0], ['🚽 Lucas vide la tasse dans l’évier', 0], ['☕ Lucas recommence', 1], ['✅ Café buvable ! (exceptionnel)', 2],
+    ] as const;
+    let i = 0;
+    setInterval(() => {
+      i = (i + 1) % scene.length;
+      etat.textContent = scene[i][0];
+      if (scene[i][1] >= 1) compteur.dataset.extra = String(Number(compteur.dataset.extra || 0) + 1);
+      if (scene[i][1] === 2 && buvables) buvables.textContent = String(Number(buvables.textContent) + 1);
+    }, 3500);
+  });
+
   // Bouton « J'ai lu les mentions legales »: il esquive la souris (jamais le clavier), puis se laisse cliquer.
   document.querySelectorAll<HTMLElement>('[data-gm="lu-bouton"]').forEach((btn) => {
     const retour = document.querySelector<HTMLElement>('[data-gm="lu-retour"]')!;
@@ -347,6 +365,7 @@ const icones = ['☀️', '⛅', '☁️', '🌧️', '⛈️', '❄️', '🌪�
   .cafe { display: flex; align-items: center; gap: 12px; }
   .cafe-tete { max-width: none; width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent); background: var(--paper); }
   .compteur small { font: .8rem var(--sans); color: var(--ink-2); font-weight: 400; }
+  .cafe-etat { margin: 0; padding: 0 12px 10px; font: italic .95rem var(--serif); color: var(--ink-2); min-height: 1.4em; }
   .compteur abbr { font-size: 1rem; text-decoration: none; color: var(--ink-2); }
   .regle { padding: 36px 14px 10px; }
   .regle-scale { display: flex; justify-content: space-between; font-size: .66rem; color: var(--ink-2); margin-top: 3px; }
