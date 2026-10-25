@@ -14,6 +14,7 @@ const latest = rest.slice(0, 9);
 const sections = categories
   .map((c) => ({ c, items: rest.filter((a) => a.data.category === c.slug).slice(0, 3) }))
   .filter((s) => s.items.length);
+const flash = articles.slice(0, 8);
 const siteLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
@@ -28,6 +29,18 @@ const siteLd = {
     <p class="empty">Le journal est en cours d'impression. Les premiers articles arrivent très bientôt.</p>
   ) : (
     <>
+      {flash.length > 1 && (
+        <div class="flash" role="region" aria-label="Derniers titres">
+          <span class="flash-label">À l'instant</span>
+          <div class="flash-track">
+            {[0, 1].map((copy) => (
+              <ul class="flash-list" aria-hidden={copy === 1 ? 'true' : undefined}>
+                {flash.map((a) => <li><a href={url(`articles/${a.data.slug}/`)} tabindex={copy === 1 ? -1 : undefined}>{a.data.title}</a></li>)}
+              </ul>
+            ))}
+          </div>
+        </div>
+      )}
       <Card article={lead} lead />
       {latest.length > 0 && (
         <>

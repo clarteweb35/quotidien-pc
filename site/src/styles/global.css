@@ -163,3 +163,33 @@ footer ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 16px; f
 .recrute p:last-child { margin-bottom: 0; }
 .avatar-sm { width: 40px; height: 40px; vertical-align: middle; margin-right: 8px; display: inline-block; }
 .fake-mail { text-decoration: underline dotted; text-underline-offset: 3px; }
+
+/* Animations sobres: aucune librairie, aucun JavaScript, hauteurs fixes (pas de decalage de mise en page), coupees si l'utilisateur prefere moins de mouvement. */
+.flash { display: flex; align-items: stretch; margin: 14px 0 20px; border: 1px solid var(--ink); overflow: hidden; font: .85rem/1 var(--sans); height: 36px; }
+.flash-label { flex: none; display: grid; place-items: center; padding: 0 12px; background: var(--accent); color: #fff; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; font-size: .72rem; }
+.flash-track { display: flex; width: max-content; animation: flash-scroll 80s linear infinite; }
+.flash:hover .flash-track, .flash:focus-within .flash-track { animation-play-state: paused; }
+.flash-list { display: flex; flex: none; margin: 0; padding: 0; list-style: none; }
+.flash-list li { display: flex; align-items: center; padding: 0 22px; white-space: nowrap; }
+.flash-list li::after { content: '◆'; margin-left: 22px; color: var(--accent); font-size: .6rem; }
+.flash-list a { color: var(--ink); text-decoration: none; }
+.flash-list a:hover { text-decoration: underline; }
+@keyframes flash-scroll { to { transform: translateX(-50%); } }
+
+.card .photo, .lead .photo { transition: transform .5s ease, filter .5s ease; }
+.card a:has(.photo), .lead a:has(.photo) { display: block; overflow: hidden; border-radius: 2px; }
+.card:hover .photo { transform: scale(1.05); filter: saturate(1.1); }
+.card h3 a { background: linear-gradient(var(--accent), var(--accent)) 0 100% / 0 2px no-repeat; transition: background-size .35s ease; }
+.card:hover h3 a { background-size: 100% 2px; text-decoration: none; }
+@keyframes kenburns { from { transform: scale(1); } to { transform: scale(1.06); } }
+.lead .photo { animation: kenburns 14s ease-out forwards; }
+@keyframes rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+@supports (animation-timeline: view()) {
+  .grid .card { animation: rise both linear; animation-timeline: view(); animation-range: entry 0% entry 35%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .flash-track, .lead .photo, .grid .card { animation: none; }
+  .flash { overflow-x: auto; }
+  .card .photo, .card h3 a { transition: none; }
+  .card:hover .photo { transform: none; }
+}
