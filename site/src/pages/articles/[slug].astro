@@ -53,6 +53,7 @@ const jsonLd = {
       Publié le <time datetime={d.publishedAt.toISOString()}>{formatDateTime(d.publishedAt)}</time> · <strong>Satire</strong>{ref && <> · <span class="ref" title="Référence de l'article">Réf. {ref}</span></>}
     </div>
     <Share title={d.title} url={canonicalUrl} id="share-top" />
+    <PubAnnonce seed={d.slug} />
     {img && (
       <figure class="illus">
         <img src={img.src} srcset={img.srcset} sizes="(min-width: 760px) 720px, 100vw" alt={img.alt} width={img.width} height={img.height} fetchpriority="high" />
@@ -63,7 +64,6 @@ const jsonLd = {
     <div class="body"><Content /></div>
     {isEdito && who && <p class="edito-signature">— {who.name}, rédacteur en chef</p>}
     <Share title={d.title} url={canonicalUrl} id="share-bottom" />
-    <PubAnnonce seed={d.slug} />
     {d.tags.length > 0 && (
       <ul class="tags" aria-label="Mots-clés">
         {d.tags.map((t) => <li><a href={url(`tag/${encodeURIComponent(t)}/`)}>#{t}</a></li>)}

@@ -124,6 +124,7 @@ test('accueil: La Manchette de la Manchette; articles: publicite fictive tiree d
   const s = /^slug: "([^"]+)"/m.exec(fm)[1];
   const art = page(`articles/${s}`);
   assert.ok(art.includes('Publicité fictive') && art.includes('href="/petites-annonces/#pa-'), 'publicite fictive dans l\'article');
+  assert.ok(art.indexOf('Publicité fictive') < art.indexOf('class="body"'), 'la pub est en haut de l\'article, avant le texte');
 });
 
 test('contenu: jamais plus d\'un edito par jour (heure de Paris)', () => {
