@@ -1,5 +1,6 @@
 ---
 // Bandeaux satiriques par rubrique. Tout est FICTIF et annoncé comme tel (pastille « Fiction »). Aucune donnée réelle, aucune requête réseau.
+import { url } from '../lib/site';
 interface Props { slug: string }
 const { slug } = Astro.props;
 
@@ -25,7 +26,7 @@ const pmu = Array.from({ length: 30 }, (_, i) => {
 });
 
 const capitales: [string, number][] = [['Paris', 14], ['Berne', 9], ['Oslo', 4], ['Madrid', 19], ['Tokyo', 17], ['Ottawa', 6], ['Canberra', 23], ['Nairobi', 24], ['Lima', 20], ['Reykjavik', 3], ['Le Caire', 28], ['Wellington', 13], ['Brasilia', 26], ['Vienne', 8], ['Hanoï', 27], ['Dublin', 10]];
-const icones = ['☀️', '⛅', '☁️', '🌧️', '⛈️', '❄️', '🌪️', '🌈'];
+const icones = ['☀️', '⛅', '☁️', '🌧️', '⛈️', '❄️', '🌪️', '🌈', '🐴', '🍹'];
 ---
 {slug === 'economie' && (
   <section class="gm gm-pmu" aria-label="Gains et pertes PMU du jour (fiction)">
@@ -44,8 +45,8 @@ const icones = ['☀️', '⛅', '☁️', '🌧️', '⛈️', '❄️', '🌪�
   <section class="gm gm-regle" aria-label="Règle de tweets favorables (fiction)">
     <div class="gm-head"><span class="gm-pill">Fiction</span><strong>Part de tweets favorables</strong><span class="gm-note">sondage de <span data-gm="question">la question 145-B du 13 avril</span> (sujet non communiqué) · résultats bidon</span></div>
     <div class="regle" data-gm="regle">
+      <div class="regle-bar"><div class="regle-cursor" style="left:50%"><img class="regle-tete" src={url('redaction/lucas-dumond.webp')} width="38" height="38" alt="Tête de Lucas D., qui indique la valeur" /><span class="regle-val">50,0 %</span></div></div>
       <div class="regle-scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100</span></div>
-      <div class="regle-bar"><div class="regle-cursor" style="left:50%"><span class="regle-val">50,0 %</span></div></div>
     </div>
   </section>
 )}
@@ -192,6 +193,7 @@ const icones = ['☀️', '⛅', '☁️', '🌧️', '⛈️', '❄️', '🌪�
       v += (50 - v) * 0.15 + (Math.random() - 0.5) * 40;
       v = Math.min(94, Math.max(6, v));
       cursor.style.left = v + '%';
+      cursor.classList.toggle('flip', v > 70);
       val.textContent = fmt.format(v) + ' %';
       setTimeout(step, 5000 + Math.random() * 6000);
     };
@@ -200,12 +202,15 @@ const icones = ['☀️', '⛅', '☁️', '🌧️', '⛈️', '❄️', '🌪�
 
   // Météo des capitales : icône et température qui changent.
   const icones = ['☀️', '⛅', '☁️', '🌧️', '⛈️', '❄️', '🌪️', '🌈'];
+  // De temps en temps, une icone qui n'a rien a voir avec la meteo.
+  const absurdes = ['🐴', '🍹', '🦆', '🧀', '🚲', '🎺', '🥐', '🛸', '🐌', '🍕', '🦕', '🪑'];
   const caps = document.querySelectorAll<HTMLElement>('[data-gm="cap"]');
   if (caps.length) {
     setInterval(() => {
       caps.forEach((li) => {
         if (Math.random() < 0.35) {
-          li.querySelector('.cap-ico')!.textContent = icones[Math.floor(Math.random() * icones.length)];
+          const liste = Math.random() < 0.22 ? absurdes : icones;
+          li.querySelector('.cap-ico')!.textContent = liste[Math.floor(Math.random() * liste.length)];
           const t = +li.dataset.t! + Math.round((Math.random() - 0.5) * 8);
           li.querySelector('.cap-t')!.textContent = t + ' °C';
         }
@@ -279,7 +284,7 @@ const icones = ['☀️', '⛅', '☁️', '🌧️', '⛈️', '❄️', '🌪�
 
   // Cafes de Lucas: quelques-uns seulement sont buvables.
   document.querySelectorAll<HTMLElement>('[data-gm="buvables"]').forEach((el) => {
-    const n = Number(document.querySelector('[data-gm="counter"]')?.textContent?.replace(/\D/g, '') || 0);
+    const n = Number(el.closest('section')?.querySelector('[data-gm="counter"]')?.textContent?.replace(/\D/g, '') || 0);
     el.textContent = String(Math.floor(n / 9));
   });
 
@@ -313,11 +318,13 @@ const icones = ['☀️', '⛅', '☁️', '🌧️', '⛈️', '❄️', '🌪�
   @keyframes gm-scroll { to { transform: translateX(-50%); } }
   .compteur { margin: 0; padding: 8px 12px 10px; font: 700 2rem/1 var(--serif); font-variant-numeric: tabular-nums; }
   .compteur abbr { font-size: 1rem; text-decoration: none; color: var(--ink-2); }
-  .regle { padding: 8px 14px 30px; }
-  .regle-scale { display: flex; justify-content: space-between; font-size: .66rem; color: var(--ink-2); }
-  .regle-bar { position: relative; height: 12px; margin-top: 3px; background: repeating-linear-gradient(90deg, var(--ink) 0 1px, transparent 1px 10%), linear-gradient(90deg, #b3261e, #d9a21f 50%, #15803d); border: 1px solid var(--ink); }
-  .regle-cursor { position: absolute; top: -6px; width: 0; height: 24px; border-left: 3px solid var(--accent); transition: left 1.8s ease-in-out; }
-  .regle-val { position: absolute; top: 24px; left: 0; transform: translateX(-50%); font-size: .8rem; font-weight: 700; white-space: nowrap; }
+  .regle { padding: 52px 14px 10px; }
+  .regle-scale { display: flex; justify-content: space-between; font-size: .66rem; color: var(--ink-2); margin-top: 3px; }
+  .regle-bar { position: relative; height: 12px; background: repeating-linear-gradient(90deg, var(--ink) 0 1px, transparent 1px 10%), linear-gradient(90deg, #b3261e, #d9a21f 50%, #15803d); border: 1px solid var(--ink); }
+  .regle-cursor { position: absolute; top: -4px; width: 0; height: 20px; border-left: 3px solid var(--accent); transition: left 1.8s ease-in-out; }
+  .regle-tete { max-width: none; position: absolute; top: -46px; left: -19px; width: 38px; height: 38px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent); background: var(--paper); }
+  .regle-val { position: absolute; top: -38px; left: 26px; font-size: .85rem; font-weight: 700; white-space: nowrap; }
+  .regle-cursor.flip .regle-val { left: auto; right: 26px; }
   @media (prefers-reduced-motion: reduce) { .gm-track { animation: none; } .gm-viewport { overflow-x: auto; } .regle-cursor { transition: none; } }
 
   .statut { margin: 0; padding: 10px 12px; display: flex; align-items: center; gap: 10px; font-weight: 700; }

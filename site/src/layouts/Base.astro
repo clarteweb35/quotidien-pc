@@ -74,6 +74,7 @@ const today = new Intl.DateTimeFormat('fr-FR', { timeZone: 'Europe/Paris', dateS
           {categories.map((c) => (
             <li><a href={url(`rubrique/${c.slug}/`)} aria-current={current === c.slug ? 'page' : undefined}>{c.name}</a></li>
           ))}
+          <li><a href={url('compteurs/')} aria-current={current === 'compteurs' ? 'page' : undefined}>Compteurs</a></li>
         </ul>
       </div>
     </nav>

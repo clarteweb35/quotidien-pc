@@ -1,0 +1,30 @@
+---
+import Base from '../layouts/Base.astro';
+import Gimmick from '../components/Gimmick.astro';
+import Marches from '../components/Marches.astro';
+import Resultats from '../components/Resultats.astro';
+
+// Toutes les jauges et compteurs du journal, regroupes: d'abord les fausses (inventees), ensuite les vraies (donnees reelles).
+const fictives = ['accueil', 'politique', 'economie', 'monde', 'societe', 'tech', 'sport', 'culture', 'environnement', 'redaction'];
+---
+<Base title="Compteurs" description="Tous les compteurs et jauges du journal : d'abord les faux, inventés de bout en bout, puis les vrais." current="compteurs">
+  <div class="page-head">
+    <span class="kicker">Tableau de bord</span>
+    <h1>Compteurs</h1>
+    <p class="meta">Toutes nos jauges au même endroit. Celles de la première partie sont <strong>entièrement inventées</strong> ; celles de la seconde reposent sur de <strong>vraies données</strong>.</p>
+  </div>
+
+  <h2 class="section-title">Jauges fictives <span class="cpt-tag cpt-faux">Fiction</span></h2>
+  <p class="meta">Chiffres, noms et villes sont bidon. Ne les citez pas.</p>
+  {fictives.map((slug) => <Gimmick slug={slug} />)}
+
+  <h2 class="section-title">Jauges réelles <span class="cpt-tag cpt-vrai">Données réelles</span></h2>
+  <p class="meta">Cours de bourse et scores sportifs récupérés à la construction du site, à titre indicatif. Ils ne sont pas rafraîchis en continu et ne constituent pas un conseil en investissement.</p>
+  <Marches />
+  <Resultats />
+</Base>
+<style>
+  .cpt-tag { font: 700 .68rem var(--sans); letter-spacing: .08em; text-transform: uppercase; padding: 2px 8px; vertical-align: middle; margin-left: 8px; border: 1px solid; }
+  .cpt-faux { color: var(--accent); }
+  .cpt-vrai { color: #15803d; }
+</style>
