@@ -1,10 +1,15 @@
 ---
 import Base from '../layouts/Base.astro';
-import { roster, authorSlug, support, portrait } from '../lib/authors';
+import { roster, authorSlug, support, portrait, bureauByDesk, coulisses } from '../lib/authors';
 import { siteName, url } from '../lib/site';
 const desks = roster();
+const fixed = 'Photographie prise à 17 h 02 : les bureaux étaient vides.';
 const initials = (n: string) => n.split(/[\s-]+/).map((w) => w[0]).slice(0, 2).join('');
-const people = (list: { name: string }[]) => list.map((p) => ({ ...p, photo: portrait(p.name) }));
+const withPhoto = (list: { name: string }[]) => list.map((p) => ({ ...p, photo: portrait(p.name) }));
+const staff = (section: string) => withPhoto(support.filter((p) => p.section === section));
+const direction = staff('direction');
+const secretariat = staff('secretariat');
+const backstage = staff('coulisses');
 ---
 <Base title="La rédaction" description={`L'équipe fictive de ${siteName}, service par service.`}>
   <div class="prose">
@@ -12,12 +17,35 @@ const people = (list: { name: string }[]) => list.map((p) => ({ ...p, photo: por
       <span class="kicker">Qui signe quoi</span>
       <h1>La rédaction</h1>
     </div>
-    <div class="satire-box" role="note"><strong>Précision.</strong> Les journalistes présentés ici sont des <strong>personnages fictifs</strong>, créés pour ce journal satirique. Leurs portraits sont <strong>générés par intelligence artificielle</strong> et ne représentent aucune personne réelle. Ils n'ont rencontré personne, enquêté sur aucun terrain et ne désignent aucune personne réelle. Toute ressemblance avec un journaliste existant serait une coïncidence.</div>
+    <div class="satire-box" role="note"><strong>Précision.</strong> Les journalistes présentés ici sont des <strong>personnages fictifs</strong>, créés pour ce journal satirique. Leurs portraits sont <strong>générés par intelligence artificielle</strong> et ne représentent aucune personne réelle ; il en va de même des photos de bureaux. Ils n'ont rencontré personne, enquêté sur aucun terrain et ne désignent aucune personne réelle. Toute ressemblance avec un journaliste existant serait une coïncidence.</div>
+
+    {direction.length > 0 && (
+      <section>
+        <h2>Direction</h2>
+        <ul class="team">
+          {direction.map((p: any) => (
+            <li id={authorSlug(p.name)}>
+              {p.photo
+                ? <img class="avatar" src={url(p.photo)} width="88" height="88" loading="lazy" alt={`Portrait fictif de ${p.name} (image générée par IA)`} />
+                : <span class="avatar avatar-none" role="img" aria-label={`Photo de ${p.name} non communiquée`}>{initials(p.name)}</span>}
+              <div><strong>{p.name}</strong> — <em>{p.role}</em><p>{p.bio}</p></div>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
     {desks.map((d) => (
       <section>
         <h2>{d.label}</h2>
+        {bureauByDesk[d.cat.slug] && (
+          <figure class="bureau">
+            <img src={url(`redaction/bureaux/${bureauByDesk[d.cat.slug]}.webp`)} width="800" height="450" loading="lazy" alt={`Le bureau du ${d.label.toLowerCase()}, vide`} />
+            <figcaption>{fixed}</figcaption>
+          </figure>
+        )}
         <ul class="team">
-          {people(d.people).map((p: any) => (
+          {withPhoto(d.people).map((p: any) => (
             <li id={authorSlug(p.name)}>
               {p.photo
                 ? <img class="avatar" src={url(p.photo)} width="88" height="88" loading="lazy" alt={`Portrait fictif de ${p.name} (image générée par IA)`} />
@@ -31,21 +59,43 @@ const people = (list: { name: string }[]) => list.map((p) => ({ ...p, photo: por
         </ul>
       </section>
     ))}
-    {support.length > 0 && (
+
+    {secretariat.length > 0 && (
       <section>
-        <h2>Secrétariat et coulisses</h2>
+        <h2>Secrétariat</h2>
         <ul class="team">
-          {people(support).map((p: any) => (
+          {secretariat.map((p: any) => (
             <li id={authorSlug(p.name)}>
-              {p.photo && <img class="avatar" src={url(p.photo)} width="88" height="88" loading="lazy" alt={`Portrait fictif de ${p.name} (image générée par IA)`} />}
-              <div>
-                <strong>{p.name}</strong> — <em>{p.role}</em>
-                {p.bio && <p>{p.bio}</p>}
-              </div>
+              {p.photo
+                ? <img class="avatar" src={url(p.photo)} width="88" height="88" loading="lazy" alt={`Portrait fictif de ${p.name} (image générée par IA)`} />
+                : <span class="avatar avatar-none" title="Photo non communiquée" role="img" aria-label={`Photo de ${p.name} non communiquée`}>{initials(p.name)}</span>}
+              <div><strong>{p.name}</strong> — <em>{p.role}</em><p>{p.bio}</p></div>
             </li>
           ))}
         </ul>
       </section>
     )}
+
+    <section>
+      <h2>Coulisses</h2>
+      <ul class="team">
+        {backstage.map((p: any) => (
+          <li id={authorSlug(p.name)}>
+            {p.photo
+              ? <img class="avatar" src={url(p.photo)} width="88" height="88" loading="lazy" alt={`Portrait fictif de ${p.name} (image générée par IA)`} />
+              : <span class="avatar avatar-none" title="Photo non communiquée" role="img" aria-label={`Photo de ${p.name} non communiquée`}>{initials(p.name)}</span>}
+            <div><strong>{p.name}</strong> — <em>{p.role}</em><p>{p.bio}</p></div>
+          </li>
+        ))}
+      </ul>
+      <div class="bureaux">
+        {coulisses.map((c) => (
+          <figure class="bureau">
+            <img src={url(`redaction/bureaux/${c.file}.webp`)} width="800" height="450" loading="lazy" alt={c.alt} />
+            <figcaption><strong>{c.label}.</strong> {fixed}</figcaption>
+          </figure>
+        ))}
+      </div>
+    </section>
   </div>
 </Base>

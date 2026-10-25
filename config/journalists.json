@@ -1,71 +1,416 @@
 {
   "note": "Journalistes FICTIFS du journal (signatures satiriques). Une rubrique principale par journaliste. Le premier journaliste actif d'une rubrique est le titulaire du service: il signe par defaut. 'active: false' = en reserve (non utilise). Verifiez qu'aucun nom ne designe un journaliste reel connu avant d'activer.",
   "support": [
-    { "name": "Lucas Dumond", "role": "Pôle secrétariat · alternant depuis cinq ans", "bio": "« Votre e-mail vient d'être transmis à Lucas D., actuellement en 5ᵉ année d'alternance consécutive au pôle secrétariat. Il prendra le temps de vous répondre dès qu'il aura fini de recharger la machine à café et de valider son Master 12. »" }
+    {
+      "name": "Jean-Eudes de la Manchette",
+      "section": "direction",
+      "role": "Rédacteur en chef & fondateur autoproclamé",
+      "bio": "Ancien correspondant de guerre pour un journal paroissial, il a survécu à trois conflits armé d'une simple agrafeuse. Renvoyé de tous les grands quotidiens pour « excès de zèle » (et pour avoir tenté de payer ses impôts en tickets-restaurant), il écrit ses éditos sur une machine à écrire sans ruban encreur, car il « sent » l'information. Il traque sans relâche les complots de l'industrie de la biscotte. Presque certain de tout, tout à fait sûr de rien."
+    },
+    {
+      "name": "Véronique Edavina",
+      "section": "secretariat",
+      "role": "Accueil, standard, compta & arbre de Noël",
+      "bio": "Filtrage impitoyable et amie très, très, très proche du rédacteur en chef."
+    },
+    {
+      "name": "Fabienne Poche",
+      "section": "secretariat",
+      "role": "Présence administrative",
+      "bio": "Elle est là. Personne ne sait ce qu'elle fait, mais personne n'ose lui demander."
+    },
+    {
+      "name": "Lucas Dumond",
+      "section": "coulisses",
+      "role": "Alternant (depuis 5 ans)",
+      "bio": "Ne répond jamais aux emails. Tente désespérément de faire un café buvable. « Votre e-mail vient d'être transmis à Lucas D., actuellement en 5ᵉ année d'alternance consécutive au pôle secrétariat. Il prendra le temps de vous répondre dès qu'il aura fini de recharger la machine à café et de valider son Master 12. »"
+    }
   ],
   "journalists": [
-    { "name": "Claire Delatour", "desk": "politique", "active": true, "beat": "annonces gouvernementales, revirements et promesses", "bio": "Suit les annonces gouvernementales, les revirements et les promesses qui engagent surtout ceux qui les écoutent." },
-    { "name": "Thomas Varenne", "desk": "politique", "active": true, "beat": "Parlement et coulisses du pouvoir", "bio": "Couvre l'Assemblée et ses couloirs, où l'on commente longuement ce que l'on vient de ne pas dire." },
-    { "name": "Claire Obscur", "desk": "politique", "active": true, "beat": "affaires troubles et déclarations ambiguës", "bio": "Spécialiste des dossiers dont chacun s'accorde à dire qu'il faut y voir plus clair, sans jamais y voir plus clair." },
-    { "name": "Jean-Michel Démission", "desk": "politique", "active": true, "beat": "crises gouvernementales", "bio": "Veille sur les remaniements, les ultimatums et les phrases commençant par « en toute responsabilité »." },
-
-    { "name": "Marc Delaroche", "desk": "economie", "active": true, "beat": "chiffres, plans d'économies et indicateurs", "bio": "Décrypte les chiffres, les plans d'économies et les indicateurs qui se portent mieux que les personnes qu'ils décrivent." },
-    { "name": "Hélène Vautrin", "desk": "economie", "active": true, "beat": "entreprises et résultats", "bio": "Suit les résultats trimestriels et les « réorganisations » dont personne ne précise l'organisation." },
-    { "name": "Philippe Poche", "desk": "economie", "active": true, "beat": "pouvoir d'achat et fins de mois", "bio": "Compte les centimes du panier de courses avec la rigueur d'un huissier." },
-    { "name": "Jean Fond", "desk": "economie", "active": true, "beat": "finances publiques et investissements", "bio": "Cherche encore où sont passés certains milliards annoncés avec beaucoup d'enthousiasme." },
-
-    { "name": "Marion Lefebvre", "desk": "societe", "active": true, "beat": "habitudes collectives et vie quotidienne", "bio": "Observe les habitudes collectives, des files d'attente aux groupes de discussion de voisins." },
-    { "name": "Alice Renaudin", "desk": "societe", "active": true, "beat": "tendances, modes et réseaux sociaux", "bio": "Traque les nouveaux codes sociaux, les modes passagères et les mots qui ont changé de sens cette semaine." },
-    { "name": "Solange Attente", "desk": "societe", "active": true, "beat": "administrations et services publics", "bio": "Connaît par cœur le numéro de ticket qui précède le sien." },
-    { "name": "Thomas Théorie", "desk": "societe", "active": true, "beat": "experts, sondages et contradictions du quotidien", "bio": "Recueille l'avis des experts sur tout, y compris sur ce que le quotidien montrait déjà très bien tout seul." },
-
-    { "name": "Léa Baudry", "desk": "tech", "active": true, "beat": "innovations et transition numérique", "bio": "S'intéresse aux innovations capables de résoudre des problèmes nouveaux, parfois créés par les innovations précédentes." },
-    { "name": "Hugo Valette", "desk": "tech", "active": true, "beat": "gadgets, applications et abonnements", "bio": "Teste les gadgets, les applications et les abonnements dont on découvre l'utilité en même temps que le prix." },
-    { "name": "Léon Algorithme", "desk": "tech", "active": true, "beat": "intelligence artificielle et numérique", "bio": "Très sérieux sur l'intelligence artificielle, presque trop." },
-    { "name": "Rémi Zéro", "desk": "tech", "active": true, "beat": "bugs, pannes et promesses technologiques", "bio": "Documente les pannes, les mises à jour et les promesses de zéro défaut." },
-
-    { "name": "Alexandre Villedieu", "desk": "monde", "active": true, "beat": "sommets, communiqués et photos de famille", "bio": "Suit les sommets, les communiqués communs et les photos de famille, dans cet ordre d'importance." },
-    { "name": "Diane Montrose", "desk": "monde", "active": true, "beat": "visites officielles et protocole", "bio": "Décrypte les poignées de main, leur durée et le choix des fauteuils." },
-    { "name": "Pierre Ailleurs", "desk": "monde", "active": true, "beat": "crises internationales et diplomatie", "bio": "Spécialiste des situations lointaines qui finissent parfois par se rapprocher." },
-    { "name": "Victor Négociation", "desk": "monde", "active": true, "beat": "sommets et accords internationaux", "bio": "Suit les accords qui n'accordent pas grand-chose, avec une patience de diplomate." },
-
-    { "name": "Juliette Bellune", "desk": "culture", "active": true, "beat": "rentrée culturelle, festivals et expositions", "bio": "Suit les festivals, les expositions et les files d'attente qui précèdent les deux." },
-    { "name": "Martin Deslauriers", "desk": "culture", "active": true, "beat": "cinéma et séries", "bio": "A vu le film, mais pas toujours la fin." },
-    { "name": "Artur Déco", "desk": "culture", "active": true, "beat": "arts, patrimoine et design", "bio": "Arts, patrimoine et design, avec un faible pour les rampes d'escalier." },
-    { "name": "Rémi Censure", "desk": "culture", "active": true, "beat": "polémiques culturelles et liberté d'expression", "bio": "Couvre les polémiques qui éclatent avant que l'œuvre ne soit vue." },
-
-    { "name": "David Lemaître", "desk": "sport", "active": true, "beat": "matchs, classements et déclarations d'après-match", "bio": "Commente les matchs, les classements et les déclarations d'après-match, qui se ressemblent beaucoup." },
-    { "name": "Pauline Roussel", "desk": "sport", "active": true, "beat": "athlétisme, sports d'hiver et disciplines olympiques", "bio": "Suit les disciplines que l'on regarde passionnément tous les quatre ans." },
-    { "name": "Pascal Décisif", "desk": "sport", "active": true, "beat": "résultats et grands rendez-vous", "bio": "Couvre les grands rendez-vous, dont l'issue se joue toujours à très peu." },
-    { "name": "Guy Vite", "desk": "sport", "active": true, "beat": "vitesse, records et chronométrage", "bio": "Spécialiste de la vitesse, des records et du chronomètre." },
-
-    { "name": "Jeanne Rivard", "desk": "environnement", "active": true, "beat": "engagements climatiques et transitions énergétiques", "bio": "Suit les engagements climatiques, les transitions énergétiques et l'écart parfois observé entre les objectifs et le terrain." },
-    { "name": "Maud Kerbrat", "desk": "environnement", "active": true, "beat": "météo, saisons et vie quotidienne", "bio": "Observe les saisons qui se dérèglent et les conversations de voisinage qui en découlent." },
-    { "name": "Yves Verts", "desk": "environnement", "active": true, "beat": "politiques écologiques", "bio": "Suit les politiques écologiques et les mesures annoncées avec beaucoup de vert." },
-    { "name": "Éva Porée", "desk": "environnement", "active": true, "beat": "biodiversité et espèces menacées", "bio": "Veille sur la biodiversité et les espèces menacées." },
-
-    { "name": "Sophie Valençay", "desk": "politique", "active": false, "beat": "politique locale", "bio": "" },
-    { "name": "Hugo Décryptage", "desk": "politique", "active": false, "beat": "analyses politiques", "bio": "Un peu trop fier de ses analyses." },
-    { "name": "Paul Émique", "desk": "politique", "active": false, "beat": "débats qui tournent à l'affrontement", "bio": "" },
-    { "name": "Olivier Descombes", "desk": "economie", "active": false, "beat": "économie générale", "bio": "" },
-    { "name": "Marc Hé", "desk": "economie", "active": false, "beat": "marchés", "bio": "" },
-    { "name": "Aude Économie", "desk": "economie", "active": false, "beat": "économie générale", "bio": "" },
-    { "name": "Julien Courtois", "desk": "societe", "active": false, "beat": "société", "bio": "" },
-    { "name": "Mélanie Doute", "desk": "societe", "active": false, "beat": "sondages et tendances incertaines", "bio": "" },
-    { "name": "Hervé Titude", "desk": "societe", "active": false, "beat": "comportements, mœurs et débats de société", "bio": "" },
-    { "name": "Anaïs Delcourt", "desk": "tech", "active": false, "beat": "technologie", "bio": "" },
-    { "name": "Ada Pté", "desk": "tech", "active": false, "beat": "adaptation permanente de la tech", "bio": "" },
-    { "name": "Alain Térieur", "desk": "tech", "active": false, "beat": "innovations qui promettent de tout changer de l'intérieur", "bio": "" },
-    { "name": "Samuel Vernet", "desk": "monde", "active": false, "beat": "international", "bio": "" },
-    { "name": "Anne Tente", "desk": "monde", "active": false, "beat": "tentatives de rapprochement qui ne tiennent pas", "bio": "" },
-    { "name": "Marc O’Pol", "desk": "monde", "active": false, "beat": "équilibres géopolitiques", "bio": "" },
-    { "name": "Nina Vasseur", "desk": "culture", "active": false, "beat": "culture", "bio": "" },
-    { "name": "Jean Culturé", "desk": "culture", "active": false, "beat": "culture générale", "bio": "" },
-    { "name": "Lola Littéraire", "desk": "culture", "active": false, "beat": "livres et rentrée littéraire", "bio": "" },
-    { "name": "Matthieu Caradec", "desk": "sport", "active": false, "beat": "sport", "bio": "" },
-    { "name": "Marc Hup", "desk": "sport", "active": false, "beat": "transferts et changements de club", "bio": "" },
-    { "name": "Nicolas Aveline", "desk": "environnement", "active": false, "beat": "environnement", "bio": "" },
-    { "name": "Jean Gazon", "desk": "environnement", "active": false, "beat": "agriculture, espaces verts et artificialisation des sols", "bio": "" },
-    { "name": "Sophie Nature", "desk": "environnement", "active": false, "beat": "discours écologiques", "bio": "" }
+    {
+      "name": "Claire Delatour",
+      "desk": "politique",
+      "active": true,
+      "beat": "annonces gouvernementales, revirements et promesses",
+      "bio": "Suit les annonces gouvernementales, les revirements et les promesses qui engagent surtout ceux qui les écoutent."
+    },
+    {
+      "name": "Thomas Varenne",
+      "desk": "politique",
+      "active": true,
+      "beat": "Parlement et coulisses du pouvoir",
+      "bio": "Couvre l'Assemblée et ses couloirs, où l'on commente longuement ce que l'on vient de ne pas dire."
+    },
+    {
+      "name": "Claire Obscur",
+      "desk": "politique",
+      "active": true,
+      "beat": "affaires troubles et déclarations ambiguës",
+      "bio": "Spécialiste des dossiers dont chacun s'accorde à dire qu'il faut y voir plus clair, sans jamais y voir plus clair."
+    },
+    {
+      "name": "Jean-Michel Démission",
+      "desk": "politique",
+      "active": true,
+      "beat": "crises gouvernementales",
+      "bio": "Veille sur les remaniements, les ultimatums et les phrases commençant par « en toute responsabilité »."
+    },
+    {
+      "name": "Marc Delaroche",
+      "desk": "economie",
+      "active": true,
+      "beat": "chiffres, plans d'économies et indicateurs",
+      "bio": "Décrypte les chiffres, les plans d'économies et les indicateurs qui se portent mieux que les personnes qu'ils décrivent."
+    },
+    {
+      "name": "Hélène Vautrin",
+      "desk": "economie",
+      "active": true,
+      "beat": "entreprises et résultats",
+      "bio": "Suit les résultats trimestriels et les « réorganisations » dont personne ne précise l'organisation."
+    },
+    {
+      "name": "Philippe Poche",
+      "desk": "economie",
+      "active": true,
+      "beat": "pouvoir d'achat et fins de mois",
+      "bio": "Compte les centimes du panier de courses avec la rigueur d'un huissier."
+    },
+    {
+      "name": "Jean Fond",
+      "desk": "economie",
+      "active": true,
+      "beat": "finances publiques et investissements",
+      "bio": "Cherche encore où sont passés certains milliards annoncés avec beaucoup d'enthousiasme."
+    },
+    {
+      "name": "Marion Lefebvre",
+      "desk": "societe",
+      "active": true,
+      "beat": "habitudes collectives et vie quotidienne",
+      "bio": "Observe les habitudes collectives, des files d'attente aux groupes de discussion de voisins."
+    },
+    {
+      "name": "Alice Renaudin",
+      "desk": "societe",
+      "active": true,
+      "beat": "tendances, modes et réseaux sociaux",
+      "bio": "Traque les nouveaux codes sociaux, les modes passagères et les mots qui ont changé de sens cette semaine."
+    },
+    {
+      "name": "Solange Attente",
+      "desk": "societe",
+      "active": true,
+      "beat": "administrations et services publics",
+      "bio": "Connaît par cœur le numéro de ticket qui précède le sien."
+    },
+    {
+      "name": "Thomas Théorie",
+      "desk": "societe",
+      "active": true,
+      "beat": "experts, sondages et contradictions du quotidien",
+      "bio": "Recueille l'avis des experts sur tout, y compris sur ce que le quotidien montrait déjà très bien tout seul."
+    },
+    {
+      "name": "Léa Baudry",
+      "desk": "tech",
+      "active": true,
+      "beat": "innovations et transition numérique",
+      "bio": "S'intéresse aux innovations capables de résoudre des problèmes nouveaux, parfois créés par les innovations précédentes."
+    },
+    {
+      "name": "Hugo Valette",
+      "desk": "tech",
+      "active": true,
+      "beat": "gadgets, applications et abonnements",
+      "bio": "Teste les gadgets, les applications et les abonnements dont on découvre l'utilité en même temps que le prix."
+    },
+    {
+      "name": "Léon Algorithme",
+      "desk": "tech",
+      "active": true,
+      "beat": "intelligence artificielle et numérique",
+      "bio": "Très sérieux sur l'intelligence artificielle, presque trop."
+    },
+    {
+      "name": "Rémi Zéro",
+      "desk": "tech",
+      "active": true,
+      "beat": "bugs, pannes et promesses technologiques",
+      "bio": "Documente les pannes, les mises à jour et les promesses de zéro défaut."
+    },
+    {
+      "name": "Alexandre Villedieu",
+      "desk": "monde",
+      "active": true,
+      "beat": "sommets, communiqués et photos de famille",
+      "bio": "Suit les sommets, les communiqués communs et les photos de famille, dans cet ordre d'importance."
+    },
+    {
+      "name": "Diane Montrose",
+      "desk": "monde",
+      "active": true,
+      "beat": "visites officielles et protocole",
+      "bio": "Décrypte les poignées de main, leur durée et le choix des fauteuils."
+    },
+    {
+      "name": "Pierre Ailleurs",
+      "desk": "monde",
+      "active": true,
+      "beat": "crises internationales et diplomatie",
+      "bio": "Spécialiste des situations lointaines qui finissent parfois par se rapprocher."
+    },
+    {
+      "name": "Victor Négociation",
+      "desk": "monde",
+      "active": true,
+      "beat": "sommets et accords internationaux",
+      "bio": "Suit les accords qui n'accordent pas grand-chose, avec une patience de diplomate."
+    },
+    {
+      "name": "Juliette Bellune",
+      "desk": "culture",
+      "active": true,
+      "beat": "rentrée culturelle, festivals et expositions",
+      "bio": "Suit les festivals, les expositions et les files d'attente qui précèdent les deux."
+    },
+    {
+      "name": "Martin Deslauriers",
+      "desk": "culture",
+      "active": true,
+      "beat": "cinéma et séries",
+      "bio": "A vu le film, mais pas toujours la fin."
+    },
+    {
+      "name": "Artur Déco",
+      "desk": "culture",
+      "active": true,
+      "beat": "arts, patrimoine et design",
+      "bio": "Arts, patrimoine et design, avec un faible pour les rampes d'escalier."
+    },
+    {
+      "name": "Rémi Censure",
+      "desk": "culture",
+      "active": true,
+      "beat": "polémiques culturelles et liberté d'expression",
+      "bio": "Couvre les polémiques qui éclatent avant que l'œuvre ne soit vue."
+    },
+    {
+      "name": "David Lemaître",
+      "desk": "sport",
+      "active": true,
+      "beat": "matchs, classements et déclarations d'après-match",
+      "bio": "Commente les matchs, les classements et les déclarations d'après-match, qui se ressemblent beaucoup."
+    },
+    {
+      "name": "Pauline Roussel",
+      "desk": "sport",
+      "active": true,
+      "beat": "athlétisme, sports d'hiver et disciplines olympiques",
+      "bio": "Suit les disciplines que l'on regarde passionnément tous les quatre ans."
+    },
+    {
+      "name": "Pascal Décisif",
+      "desk": "sport",
+      "active": true,
+      "beat": "résultats et grands rendez-vous",
+      "bio": "Couvre les grands rendez-vous, dont l'issue se joue toujours à très peu."
+    },
+    {
+      "name": "Guy Vite",
+      "desk": "sport",
+      "active": true,
+      "beat": "vitesse, records et chronométrage",
+      "bio": "Spécialiste de la vitesse, des records et du chronomètre."
+    },
+    {
+      "name": "Jeanne Rivard",
+      "desk": "environnement",
+      "active": true,
+      "beat": "engagements climatiques et transitions énergétiques",
+      "bio": "Suit les engagements climatiques, les transitions énergétiques et l'écart parfois observé entre les objectifs et le terrain."
+    },
+    {
+      "name": "Maud Kerbrat",
+      "desk": "environnement",
+      "active": true,
+      "beat": "météo, saisons et vie quotidienne",
+      "bio": "Observe les saisons qui se dérèglent et les conversations de voisinage qui en découlent."
+    },
+    {
+      "name": "Yves Verts",
+      "desk": "environnement",
+      "active": true,
+      "beat": "politiques écologiques",
+      "bio": "Suit les politiques écologiques et les mesures annoncées avec beaucoup de vert."
+    },
+    {
+      "name": "Éva Porée",
+      "desk": "environnement",
+      "active": true,
+      "beat": "biodiversité et espèces menacées",
+      "bio": "Veille sur la biodiversité et les espèces menacées."
+    },
+    {
+      "name": "Sophie Valençay",
+      "desk": "politique",
+      "active": false,
+      "beat": "politique locale",
+      "bio": ""
+    },
+    {
+      "name": "Hugo Décryptage",
+      "desk": "politique",
+      "active": false,
+      "beat": "analyses politiques",
+      "bio": "Un peu trop fier de ses analyses."
+    },
+    {
+      "name": "Paul Émique",
+      "desk": "politique",
+      "active": false,
+      "beat": "débats qui tournent à l'affrontement",
+      "bio": ""
+    },
+    {
+      "name": "Olivier Descombes",
+      "desk": "economie",
+      "active": false,
+      "beat": "économie générale",
+      "bio": ""
+    },
+    {
+      "name": "Marc Hé",
+      "desk": "economie",
+      "active": false,
+      "beat": "marchés",
+      "bio": ""
+    },
+    {
+      "name": "Aude Économie",
+      "desk": "economie",
+      "active": false,
+      "beat": "économie générale",
+      "bio": ""
+    },
+    {
+      "name": "Julien Courtois",
+      "desk": "societe",
+      "active": false,
+      "beat": "société",
+      "bio": ""
+    },
+    {
+      "name": "Mélanie Doute",
+      "desk": "societe",
+      "active": false,
+      "beat": "sondages et tendances incertaines",
+      "bio": ""
+    },
+    {
+      "name": "Hervé Titude",
+      "desk": "societe",
+      "active": false,
+      "beat": "comportements, mœurs et débats de société",
+      "bio": ""
+    },
+    {
+      "name": "Anaïs Delcourt",
+      "desk": "tech",
+      "active": false,
+      "beat": "technologie",
+      "bio": ""
+    },
+    {
+      "name": "Ada Pté",
+      "desk": "tech",
+      "active": false,
+      "beat": "adaptation permanente de la tech",
+      "bio": ""
+    },
+    {
+      "name": "Alain Térieur",
+      "desk": "tech",
+      "active": false,
+      "beat": "innovations qui promettent de tout changer de l'intérieur",
+      "bio": ""
+    },
+    {
+      "name": "Samuel Vernet",
+      "desk": "monde",
+      "active": false,
+      "beat": "international",
+      "bio": ""
+    },
+    {
+      "name": "Anne Tente",
+      "desk": "monde",
+      "active": false,
+      "beat": "tentatives de rapprochement qui ne tiennent pas",
+      "bio": ""
+    },
+    {
+      "name": "Marc O’Pol",
+      "desk": "monde",
+      "active": false,
+      "beat": "équilibres géopolitiques",
+      "bio": ""
+    },
+    {
+      "name": "Nina Vasseur",
+      "desk": "culture",
+      "active": false,
+      "beat": "culture",
+      "bio": ""
+    },
+    {
+      "name": "Jean Culturé",
+      "desk": "culture",
+      "active": false,
+      "beat": "culture générale",
+      "bio": ""
+    },
+    {
+      "name": "Lola Littéraire",
+      "desk": "culture",
+      "active": false,
+      "beat": "livres et rentrée littéraire",
+      "bio": ""
+    },
+    {
+      "name": "Matthieu Caradec",
+      "desk": "sport",
+      "active": false,
+      "beat": "sport",
+      "bio": ""
+    },
+    {
+      "name": "Marc Hup",
+      "desk": "sport",
+      "active": false,
+      "beat": "transferts et changements de club",
+      "bio": ""
+    },
+    {
+      "name": "Nicolas Aveline",
+      "desk": "environnement",
+      "active": false,
+      "beat": "environnement",
+      "bio": ""
+    },
+    {
+      "name": "Jean Gazon",
+      "desk": "environnement",
+      "active": false,
+      "beat": "agriculture, espaces verts et artificialisation des sols",
+      "bio": ""
+    },
+    {
+      "name": "Sophie Nature",
+      "desk": "environnement",
+      "active": false,
+      "beat": "discours écologiques",
+      "bio": ""
+    }
   ]
 }

@@ -27,10 +27,22 @@ export function roster() {
 }
 
 /** Personnel hors signatures (secrétariat...): affiche sur la page redaction, jamais utilise par le moteur. */
-export const support = (journalistsFile as { support?: { name: string; role: string; bio: string }[] }).support ?? [];
+export const support = (journalistsFile as { support?: { name: string; section: string; role: string; bio: string }[] }).support ?? [];
 
 /** Portrait (fictif, genere par IA) de la redaction: public/redaction/<slug>.webp, sinon null. */
 export function portrait(name: string): string | null {
   const file = `${authorSlug(name)}.webp`;
   return fs.existsSync(path.resolve('public', 'redaction', file)) ? `redaction/${file}` : null;
 }
+
+/** Photo (fictive, generee par IA) du bureau de chaque service: public/redaction/bureaux/<nom>.webp. */
+export const bureauByDesk: Record<string, string> = {
+  politique: 'politique', tech: 'tech', economie: 'economie', societe: 'societe-culture', culture: 'societe-culture', sport: 'sport', monde: 'monde',
+};
+/** Bureaux sans service de rubrique, montres dans « Secretariat et coulisses ». */
+export const coulisses = [
+  { file: 'faits-divers', label: 'Faits divers', alt: "Salle d'enquête aux néons froids, mur de liège couvert de coupures de presse reliées par des fils rouges" },
+  { file: 'juridique', label: 'Juridique', alt: 'Bureau paysager du service juridique, bibliothèques de codes reliés et classeurs de couleur' },
+  { file: 'vie-entreprise', label: "Vie de l'entreprise", alt: "Espace détente voisin des bureaux : grande table, cafetière filtre, panneau de notes et petit barbecue sur une étagère" },
+  { file: 'lucas', label: 'Le bureau de Lucas D.', alt: "Un minuscule bureau sous un escalier, entouré de piles de cartons d'archives et d'une mer de tasses" },
+];
