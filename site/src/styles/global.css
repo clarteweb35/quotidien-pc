@@ -218,3 +218,11 @@ footer .wordmark b { font-size: 1.6rem; }
 footer .wordmark i { font-size: .5rem; margin-top: 4px; padding-top: 4px; }
 footer .brand { gap: 12px; }
 footer .brand p { padding-left: 12px; }
+
+/* Pastilles de qualite du site (HTML/CSS pur: aucun badge externe, aucune requete ni donnee envoyee a un tiers) */
+footer .quality { margin: 8px auto 0; padding-top: 8px; border-top: 1px solid var(--rule); text-align: center; }
+footer .quality p { margin: 0 0 6px; font-size: .72rem; color: var(--ink-2); }
+footer .quality ul { justify-content: center; gap: 8px 10px; }
+footer .quality a { display: inline-flex; align-items: center; gap: 8px; padding: 3px 4px 3px 12px; border: 1px solid var(--rule); border-radius: 999px; background: var(--paper-2); color: var(--ink); text-decoration: none; font-size: .78rem; }
+footer .quality a:hover, footer .quality a:focus-visible { border-color: var(--ink); }
+footer .quality .q-score { display: inline-grid; place-items: center; min-width: 1.7rem; height: 1.7rem; padding: 0 .4rem; border-radius: 999px; background: #15803d; color: #fff; font-weight: 700; font-size: .78rem; }

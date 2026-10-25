@@ -102,3 +102,4 @@ Relecteur Gemini : humour, cohérence, risque, citation à une personne réelle,
 | Rubrique Économie | bloc « Marchés » (`config/marches.json`, `site/src/lib/marches.ts`) : cotations Yahoo Finance récupérées à la construction, titres du fil éco, repère historique. Dernier bon résultat gardé 48 h dans `site/.cache/` (cache Actions). Redéploiement planifié 3 fois par jour en semaine |
 | Hygiène des données | `data/logs` purgé après 30 jours, `data/reports` après 180 jours (`retention` dans `config/engine.json`) |
 | Tests du site | `engine/test/site.test.js` construit le site hors ligne (`MARCHES_OFFLINE=1`) et vérifie les pages clés |
+| Pastilles de qualité | pied de page de `Base.astro` : EcoIndex A, Website Carbon A, PageSpeed 100 (mesures du 25 octobre 2026), en HTML/CSS pur, sans badge ni requête externe. À mettre à jour (constantes `quality` et `qualityDate`) après chaque nouvelle mesure |
