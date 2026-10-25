@@ -256,3 +256,4 @@ footer .brand { flex-wrap: wrap; }
 .edito-signature { text-align: right; font: italic 1.05rem var(--serif); margin: 22px 0 0; }
 .edito-pupitre { display: flex; gap: 16px; align-items: center; margin-top: 14px; padding: 12px 14px; border: 1px solid var(--rule); background: rgba(107, 33, 168, .05); }
 .edito-pupitre p { margin: 0; font: .92rem/1.5 var(--sans); }
+footer .brand p { text-align: center; }
