@@ -1,10 +1,15 @@
 ---
 import Base from '../layouts/Base.astro';
 import Card from '../components/Card.astro';
-import { allArticles, categories, category, url, siteName } from '../lib/site';
+import { allArticles, categories, category, url, siteName, manualImageCredit } from '../lib/site';
+import { illustration } from '../lib/manual';
 
 const articles = await allArticles();
-const [lead, ...rest] = articles;
+// La une est le dernier article qui a une image: un grand titre sans image donnerait l'impression qu'elle manque.
+const illustrated = new Set<string>();
+for (const a of articles) if (await illustration(a, 800, manualImageCredit)) illustrated.add(a.id);
+const lead = articles.find((a) => illustrated.has(a.id)) ?? articles[0];
+const rest = articles.filter((a) => a !== lead);
 const latest = rest.slice(0, 9);
 const sections = categories
   .map((c) => ({ c, items: rest.filter((a) => a.data.category === c.slug).slice(0, 3) }))
