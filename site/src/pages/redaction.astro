@@ -1,8 +1,10 @@
 ---
 import Base from '../layouts/Base.astro';
-import { roster, authorSlug } from '../lib/authors';
-import { siteName } from '../lib/site';
+import { roster, authorSlug, support, portrait } from '../lib/authors';
+import { siteName, url } from '../lib/site';
 const desks = roster();
+const initials = (n: string) => n.split(/[\s-]+/).map((w) => w[0]).slice(0, 2).join('');
+const people = (list: { name: string }[]) => list.map((p) => ({ ...p, photo: portrait(p.name) }));
 ---
 <Base title="La rédaction" description={`L'équipe fictive de ${siteName}, service par service.`}>
   <div class="prose">
@@ -10,19 +12,40 @@ const desks = roster();
       <span class="kicker">Qui signe quoi</span>
       <h1>La rédaction</h1>
     </div>
-    <div class="satire-box" role="note"><strong>Précision.</strong> Les journalistes présentés ici sont des <strong>personnages fictifs</strong>, créés pour ce journal satirique. Ils n'ont rencontré personne, enquêté sur aucun terrain et ne désignent aucune personne réelle. Toute ressemblance avec un journaliste existant serait une coïncidence.</div>
+    <div class="satire-box" role="note"><strong>Précision.</strong> Les journalistes présentés ici sont des <strong>personnages fictifs</strong>, créés pour ce journal satirique. Leurs portraits sont <strong>générés par intelligence artificielle</strong> et ne représentent aucune personne réelle. Ils n'ont rencontré personne, enquêté sur aucun terrain et ne désignent aucune personne réelle. Toute ressemblance avec un journaliste existant serait une coïncidence.</div>
     {desks.map((d) => (
       <section>
         <h2>{d.label}</h2>
         <ul class="team">
-          {d.people.map((p) => (
+          {people(d.people).map((p: any) => (
             <li id={authorSlug(p.name)}>
-              <strong>{p.name}</strong> — <em>{p.beat}</em>
-              {p.bio && <p>{p.bio}</p>}
+              {p.photo
+                ? <img class="avatar" src={url(p.photo)} width="88" height="88" loading="lazy" alt={`Portrait fictif de ${p.name} (image générée par IA)`} />
+                : <span class="avatar avatar-none" title="Photo non communiquée" role="img" aria-label={`Photo de ${p.name} non communiquée`}>{initials(p.name)}</span>}
+              <div>
+                <strong>{p.name}</strong> — <em>{p.beat}</em>
+                {p.bio && <p>{p.bio}</p>}
+              </div>
             </li>
           ))}
         </ul>
       </section>
     ))}
+    {support.length > 0 && (
+      <section>
+        <h2>Secrétariat et coulisses</h2>
+        <ul class="team">
+          {people(support).map((p: any) => (
+            <li id={authorSlug(p.name)}>
+              {p.photo && <img class="avatar" src={url(p.photo)} width="88" height="88" loading="lazy" alt={`Portrait fictif de ${p.name} (image générée par IA)`} />}
+              <div>
+                <strong>{p.name}</strong> — <em>{p.role}</em>
+                {p.bio && <p>{p.bio}</p>}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
   </div>
 </Base>

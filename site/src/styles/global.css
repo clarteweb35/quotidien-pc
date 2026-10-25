@@ -105,8 +105,10 @@ footer ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 16px; f
 .byline a { color: inherit; font-weight: 700; text-decoration: none; border-bottom: 1px solid var(--accent); }
 .card .byline, .lead .byline { font-size: .78rem; color: var(--ink-2); margin: 0 0 4px; }
 .team { list-style: none; padding: 0; margin: 0 0 8px; }
-.team li { padding: 10px 0; border-bottom: 1px solid var(--rule); scroll-margin-top: 16px; }
+.team li { display: flex; gap: 14px; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid var(--rule); scroll-margin-top: 16px; }
 .team li:target { background: var(--paper-2); }
+.avatar { flex: none; width: 88px; height: 88px; border-radius: 50%; object-fit: cover; background: var(--paper-2); border: 1px solid var(--rule); }
+.avatar-none { display: grid; place-items: center; font: 700 1.3rem var(--sans); color: var(--ink-2); letter-spacing: .05em; }
 .team p { margin: 4px 0 0; color: var(--ink-2); font-size: .98rem; }
 
 /* Sans illustration: pas de cadre colore, uniquement du texte (la rubrique reste visible) */

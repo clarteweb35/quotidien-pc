@@ -1,3 +1,5 @@
+import fs from 'node:fs';
+import path from 'node:path';
 import journalistsFile from '../../../config/journalists.json';
 import { categories } from './site';
 
@@ -22,4 +24,13 @@ export function roster() {
   return categories
     .map((c) => ({ cat: c, label: deskLabel(c.slug), people: journalists.filter((j) => j.active && j.desk === c.slug) }))
     .filter((d) => d.people.length);
+}
+
+/** Personnel hors signatures (secrétariat...): affiche sur la page redaction, jamais utilise par le moteur. */
+export const support = (journalistsFile as { support?: { name: string; role: string; bio: string }[] }).support ?? [];
+
+/** Portrait (fictif, genere par IA) de la redaction: public/redaction/<slug>.webp, sinon null. */
+export function portrait(name: string): string | null {
+  const file = `${authorSlug(name)}.webp`;
+  return fs.existsSync(path.resolve('public', 'redaction', file)) ? `redaction/${file}` : null;
 }

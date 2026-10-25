@@ -1,5 +1,8 @@
 {
   "note": "Journalistes FICTIFS du journal (signatures satiriques). Une rubrique principale par journaliste. Le premier journaliste actif d'une rubrique est le titulaire du service: il signe par defaut. 'active: false' = en reserve (non utilise). Verifiez qu'aucun nom ne designe un journaliste reel connu avant d'activer.",
+  "support": [
+    { "name": "Lucas Dumond", "role": "Pôle secrétariat · alternant depuis cinq ans", "bio": "« Votre e-mail vient d'être transmis à Lucas D., actuellement en 5ᵉ année d'alternance consécutive au pôle secrétariat. Il prendra le temps de vous répondre dès qu'il aura fini de recharger la machine à café et de valider son Master 12. »" }
+  ],
   "journalists": [
     { "name": "Claire Delatour", "desk": "politique", "active": true, "beat": "annonces gouvernementales, revirements et promesses", "bio": "Suit les annonces gouvernementales, les revirements et les promesses qui engagent surtout ceux qui les écoutent." },
     { "name": "Thomas Varenne", "desk": "politique", "active": true, "beat": "Parlement et coulisses du pouvoir", "bio": "Couvre l'Assemblée et ses couloirs, où l'on commente longuement ce que l'on vient de ne pas dire." },
