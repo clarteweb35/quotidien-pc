@@ -56,7 +56,7 @@ const texteRecherche = (a: (typeof annonces)[number]) => [a.titre, a.texte, a.co
             {a.format === 'encart' && ann && <p class="pa-marque">{ann.nom}</p>}
             <p class="pa-meta"><span class="pa-badge">{nomCategorie(a.cat)}</span> <span class="pa-ref">Réf. {a.ref}</span>{a.reel && <span class="pa-reel">Vraie annonce</span>}</p>
             <h3 class="pa-titre">{a.reel && a.url ? <a href={a.url} target="_blank" rel="noopener">{a.titre}</a> : a.titre}</h3>
-            {a.image && <img class="pa-image" src={url(`annonces/${a.image}`)} width="84" height="84" alt={a.imageAlt ?? ''} loading="lazy" />}
+            {a.image && <img class="pa-image" src={url(`annonces/${a.image}`)} width="112" height="112" alt={a.imageAlt ?? ''} loading="lazy" />}
             {a.accroche && <p class="pa-accroche-pub">{a.accroche}</p>}
             {a.prix && <p class="pa-prix">{a.prix}</p>}
             <p class="pa-texte">{a.texte}</p>
@@ -115,7 +115,7 @@ const texteRecherche = (a: (typeof annonces)[number]) => [a.titre, a.texte, a.co
   .pa-lien { margin-top: 8px !important; font: .8rem var(--sans); }
   .pa-lien a { font-weight: 700; color: var(--link); }
   .pa-lien span { color: var(--ink-2); font-size: .72rem; margin-left: 4px; }
-  .pa-image { float: right; margin: 0 0 6px 10px; width: 84px; height: 84px; }
+  .pa-image { float: right; margin: 0 0 6px 10px; width: 112px; height: 112px; object-fit: contain; mix-blend-mode: multiply; } /* le fond blanc des photos d'objets disparait sur le papier */
 
   .pa-classique { padding-bottom: 14px; border-bottom: 1px solid var(--rule); }
   .pa-court { padding: 0 0 12px; border-bottom: 1px dotted var(--ink); }
@@ -127,12 +127,13 @@ const texteRecherche = (a: (typeof annonces)[number]) => [a.titre, a.texte, a.co
   .pa-vedette { padding: 12px 14px 14px; border: 3px double var(--ink); background: var(--paper-2); }
   .pa-vedette-bandeau { font: 800 .62rem var(--sans); letter-spacing: .14em; text-transform: uppercase; color: #fff; background: var(--accent); display: inline-block; padding: 2px 8px; margin-bottom: 6px; }
   .pa-vedette .pa-titre { font-size: 1.3rem; }
-  .pa-vedette .pa-image { width: 96px; height: 96px; }
+  .pa-vedette .pa-image { width: 136px; height: 136px; }
 
   /* Encarts publicitaires */
   .pa-encart { padding: 14px 14px 12px; border: 2px solid currentColor; }
   .pa-marque { font: 800 .74rem var(--sans); letter-spacing: .18em; text-transform: uppercase; margin-bottom: 8px !important; padding-bottom: 6px; border-bottom: 1px solid currentColor; }
   .pa-encart .pa-titre { font-size: 1.2rem; }
+  .pa-encart .pa-image { mix-blend-mode: normal; border: 2px solid var(--paper); background: var(--paper); object-fit: cover; }
   .pa-encart .pa-prix { display: inline-block; font-size: 1rem; padding: 3px 10px; margin: 2px 0 8px; background: var(--paper); color: var(--ink); }
   .pa-encart .pa-meta, .pa-encart .pa-ref { color: inherit; opacity: .85; }
   .pa-encart .pa-badge { color: inherit; }

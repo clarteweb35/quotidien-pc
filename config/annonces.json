@@ -32,7 +32,7 @@
       "prix": "15 €",
       "texte": "Vends chaise ancienne en excellent état visuel. L'assise présente une légère instabilité que le vendeur préfère qualifier de dynamisme postural. À retirer sur place, de préférence debout.",
       "conditions": "Ni échangée ni reprise. Les chutes ne sont pas comprises dans le prix.",
-      "image": "chaise.svg", "imageAlt": "Dessin au trait d'une chaise dont le dossier et les pieds penchent un peu"
+      "image": "chaise.webp", "imageAlt": "Photographie d'une vieille chaise en bois cintré à l'assise abîmée"
     },
     {
       "id": "pa-002", "cat": "objets", "format": "vedette", "ref": "PA-002",
@@ -40,7 +40,7 @@
       "prix": "Faire offre",
       "texte": "Tubercule de caractère, encore inexploité. Idéal pour projet agricole, reconversion professionnelle ou diversification patrimoniale. Dossier de présentation de 47 pages disponible sur demande, avec sommaire et sommaire du sommaire.",
       "conditions": "Offres inférieures à 3 € traitées avec le mépris qu'elles méritent.",
-      "image": "patate.svg", "imageAlt": "Dessin au trait d'une pomme de terre ronde avec quelques yeux et une petite pousse"
+      "image": "patate.webp", "imageAlt": "Photographie d'une pomme de terre à la peau jaune tachetée"
     },
     {
       "id": "pa-039", "cat": "objets", "format": "classique", "ref": "PA-039",
@@ -53,7 +53,7 @@
       "prix": "80 €",
       "texte": "Remis lors d'une compétition dont personne ne se souvient. Gravure personnalisable. Convient parfaitement à une personne souhaitant valoriser un bilan annuel globalement satisfaisant.",
       "conditions": "Plaque « Meilleur effort » en option : 12 € le mot.",
-      "image": "trophee.svg", "imageAlt": "Dessin au trait d'une coupe avec deux anses, une étoile et un socle"
+      "image": "trophee.webp", "imageAlt": "Photographie d'une grande coupe dorée à couvercle et deux anses"
     },
     {
       "id": "pa-004", "cat": "objets", "format": "court", "ref": "PA-004",
@@ -232,6 +232,7 @@
     },
     {
       "id": "pa-022", "cat": "publicites", "format": "encart", "ref": "PA-022", "annonceur": "miraculex",
+      "image": "parfum.webp", "imageAlt": "Photographie d'un flacon de parfum rectangulaire à bouchon doré",
       "titre": "Le Parfum de Réussite®",
       "prix": "29,90 €",
       "texte": "Une fragrance subtile qui donne l'impression d'avoir compris le dossier. Tenue exceptionnelle en réunion.",
