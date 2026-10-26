@@ -75,3 +75,4 @@
 {"ts":"2026-10-26T18:54:07.549Z","runId":"20261026185406-b530","level":"warn","event":"gemini.retry","purpose":"annonces","status":503,"attempt":1,"delayMs":4947}
 {"ts":"2026-10-26T18:54:12.585Z","runId":"20261026185406-b530","level":"warn","event":"gemini.retry","purpose":"annonces","status":429,"attempt":2,"delayMs":8509}
 {"ts":"2026-10-26T18:54:22.352Z","runId":"20261026185406-b530","level":"warn","event":"gemini.retry","purpose":"annonces","status":503,"attempt":3,"delayMs":16486}
+{"ts":"2026-10-26T21:49:08.248Z","runId":"20261026214908-a21f","level":"info","event":"cycle.start","date":"2026-10-26","due":[],"remainingToday":4,"dryRun":false}
