@@ -75,6 +75,10 @@ test('petites annonces: page, menu, donnees coherentes et mention obligatoire', 
   assert.equal((html.match(/class="pa pa-/g) || []).length, data.annonces.length);
   assert.equal((html.match(/id="pub-def"/g) || []).length, 1, 'une seule pub defilante');
   assert.ok(html.includes('pa-solde') && html.includes('-100 % sur tout le magasin'), 'titre facon soldes');
+  assert.ok(!/class="pa-marque"[^>]*>Miraculex/.test(html) && html.includes('<figcaption>Miraculex®</figcaption>'), 'Miraculex: nom en legende sous le logo, plus en en-tete');
+  for (const id of ['trobo', 'vortex']) assert.ok(data.annonceurs.find((a) => a.id === id).logo, `logo ${id}`);
+  assert.equal(data.annonces.find((a) => a.id === 'pa-026').annonceur, 'vortex');
+  assert.equal(data.annonces.find((a) => a.id === 'pa-028').annonceur, 'nouvellasecure');
   for (const a of data.annonceurs) if (a.logo) assert.ok(fs.existsSync(path.join(ROOT, 'site/public/annonces', a.logo)), `logo absent: ${a.logo}`);
   assert.ok(html.indexOf('id="pa-liste"') < html.indexOf('id="pub-def"') && html.indexOf('id="pub-def"') < html.indexOf('id="pa-liste-2"'), 'la pub defilante est au milieu des annonces');
   // Les vraies annonces sont toujours etiquetees, avec lien https cliquable et texte visible.

@@ -42,10 +42,12 @@
     { "id": "bpcc", "nom": "Bureau paritaire de certification des certifications", "slogan": "Certifié, donc certifiant.", "palette": "vert", "logo": "bpcc.webp" },
     { "id": "concept", "nom": "Agence Espace & Concept", "slogan": "Des mètres carrés qui sont avant tout des idées.", "palette": "rouge", "logo": "concept.webp" },
     { "id": "zerolarme", "nom": "Assurance Zéro Larme", "palette": "bleu", "logo": "zerolarme.webp" },
-    { "id": "teflonhuman", "nom": "Teflon Human Corp", "palette": "vert", "logo": "teflonhuman.webp", "logoCarre": true },
-    { "id": "levide", "nom": "Le Vide", "slogan": "Chaîne de magasins", "palette": "ink", "logo": "levide.webp", "logoCarre": true },
-    { "id": "trobo", "nom": "Agile TroBo", "palette": "rouge" },
-    { "id": "miraculex", "nom": "Miraculex®", "slogan": "Le miracle, mais en flacon.", "palette": "or", "logo": "miraculex.webp" }
+    { "id": "teflonhuman", "nom": "Teflon Human Corp", "palette": "vert", "logo": "teflonhuman.webp" },
+    { "id": "levide", "nom": "Le Vide", "slogan": "Chaîne de magasins", "palette": "ink", "logo": "levide.webp" },
+    { "id": "trobo", "nom": "Agile TroBo", "palette": "rouge", "logo": "trobo.webp" },
+    { "id": "vortex", "nom": "Vortex Formation", "palette": "bleu", "logo": "vortex.webp" },
+    { "id": "nouvellasecure", "nom": "Nouvella Sécure assurances", "palette": "ink" },
+    { "id": "miraculex", "nom": "Miraculex®", "slogan": "Le miracle, mais en flacon.", "palette": "or", "logo": "miraculex.webp", "legende": true }
   ],
   "annonces": [
     {
@@ -303,7 +305,7 @@
       "texte": "Adoptez le mode de vie PFAS. 100 % étanche, 0 % d'effort."
     },
     {
-      "id": "pa-026", "pub": true, "cat": "publicites", "format": "classique", "ref": "PA-026",
+      "id": "pa-026", "pub": true, "cat": "publicites", "format": "classique", "ref": "PA-026", "annonceur": "vortex",
       "titre": "Formation : devenez influenceur en 4 semaines",
       "prix": "590 €",
       "texte": "Apprenez à réunir une communauté, puis à lui vendre cette formation. En supplément, la formation « Comment vendre la formation » est proposée à 890 €, hors communauté.",
@@ -324,7 +326,7 @@
       "conditions": "Engagement de 24 mois. La tranquillité s'entend à l'exclusion des événements, des échéances et des courriers recommandés."
     },
     {
-      "id": "pa-028", "pub": true, "cat": "offres", "format": "classique", "ref": "PA-028",
+      "id": "pa-028", "pub": true, "cat": "offres", "format": "classique", "ref": "PA-028", "annonceur": "nouvellasecure",
       "titre": "Assurance contre les mauvaises nouvelles",
       "prix": "13,20 €/mois",
       "texte": "Vous êtes indemnisé dès que l'on vous annonce une mauvaise nouvelle, sous réserve qu'elle soit confirmée par écrit, en recommandé, par la personne qui vous l'annonce.",

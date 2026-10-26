@@ -133,10 +133,10 @@ const dernieres = annonces.slice(milieu);
   .pa-encart .pa-badge { color: inherit; }
   .pa-encart .pa-conditions { color: inherit; opacity: .9; font-size: .64rem; line-height: 1.35; }
   .pa-accroche-pub { font: italic 700 1.02rem/1.35 var(--serif); margin: 0 0 8px !important; }
-  .pa-logo { float: right; width: 104px; height: 104px; margin: -4px 0 6px 10px; border-radius: 50%; border: 2px solid var(--paper); object-fit: cover; }
-  /* Logos rectangulaires (fond sombre): coins arrondis plutot que cercle, pour ne rien couper */
-  .logo-carre { border-radius: 8px !important; object-fit: contain !important; background: #14181d !important; }
-  .pa-logo-mini.logo-carre { width: 48px; height: 38px; margin-right: 10px; }
+  /* Logos: masques (cercle ou coins arrondis) cuits dans les images, affiches en entier (jamais rognes) */
+  .pa-logo-fig { float: right; margin: -4px 0 8px 12px; width: 128px; text-align: center; }
+  .pa-logo { display: block; width: 128px; height: auto; max-height: 128px; object-fit: contain; margin: 0 auto; }
+  .pa-logo-fig figcaption { margin-top: 4px; font: 800 .8rem var(--sans); letter-spacing: .04em; }
   /* Titre « facon soldes »: rouge, gras, defilant */
   .pa-solde { overflow: hidden; white-space: nowrap; background: #fff; border: 2px solid #c8102e; padding: 4px 0; margin: 0 0 6px !important; }
   .solde-texte { display: inline-block; color: #c8102e; font: 900 1.25rem/1.2 var(--sans); text-transform: uppercase; letter-spacing: .02em; padding-left: 100%; animation: solde-defile 11s linear infinite; }
