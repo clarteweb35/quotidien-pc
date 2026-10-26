@@ -226,4 +226,11 @@ test('petites annonces: les encarts gardent un fond sombre (texte clair lisible)
   assert.ok(!/.pa-colonnes .pa {[^}]*background/.test(css), 'aucune regle generique de fond sur .pa-colonnes .pa');
 });
 
+test("menu: la frappe ne laisse aucun rognage une fois terminee (Éditos et Petites annonces complets)", () => {
+  const css = fs.readFileSync(path.join(ROOT, 'site/src/styles/global.css'), 'utf8');
+  assert.ok(/.nav a { animation: frappe [^;]*backwards/.test(css), 'animation du menu en fill-mode backwards');
+  const h = page('.');
+  assert.ok(h.includes('>Éditos<') && h.includes('>Petites annonces<'), 'libelles complets dans le HTML');
+});
+
 test.after(() => fs.rmSync(out, { recursive: true, force: true }));

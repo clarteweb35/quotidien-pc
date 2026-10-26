@@ -288,11 +288,11 @@ footer .brand p { flex: 1 1 auto; text-align: center; }
 
 /* ===== Menu « tape a la machine » (CSS pur: revelation par paliers + curseur), une fois par session ===== */
 @media (prefers-reduced-motion: no-preference) {
-  html:not(.sans-frappe) .nav a { animation: frappe calc(var(--n) * .02s) steps(var(--n)) var(--t) both; }
+  html:not(.sans-frappe) .nav a { animation: frappe calc(var(--n) * .02s) steps(var(--n)) var(--t) backwards; } /* backwards: une fois la frappe finie, plus aucun rognage (le texte reste entier) */
   /* le curseur est sur le <li> (l'<a> est rogne par la revelation, il ne pourrait pas s'y afficher) */
   html:not(.sans-frappe) .nav li { position: relative; }
-  html:not(.sans-frappe) .nav li::after { content: ''; position: absolute; top: 28%; bottom: 28%; left: 0; width: 2px; background: var(--accent); pointer-events: none; animation: frappe-curseur-x calc(var(--n2) * .02s) steps(var(--n2)) var(--t2) both, frappe-curseur-o calc(var(--n2) * .02s) linear var(--t2) both; }
-  @keyframes frappe { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+  html:not(.sans-frappe) .nav li::after { content: ''; position: absolute; top: 28%; bottom: 28%; left: 0; width: 2px; background: var(--accent); pointer-events: none; opacity: 0; animation: frappe-curseur-x calc(var(--n2) * .02s) steps(var(--n2)) var(--t2) backwards, frappe-curseur-o calc(var(--n2) * .02s) linear var(--t2) backwards; }
+  @keyframes frappe { from { clip-path: inset(-4px 100% -4px -4px); } to { clip-path: inset(-4px -8px -4px -4px); } }
   @keyframes frappe-curseur-x { from { left: 0; } to { left: 100%; } }
   @keyframes frappe-curseur-o { 0% { opacity: 0; } 1% { opacity: 1; } 99% { opacity: 1; } 100% { opacity: 0; } }
 }
