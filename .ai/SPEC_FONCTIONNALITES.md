@@ -10,6 +10,7 @@
 | Collecte | flux RSS (`config/sources.json`) : franceinfo, Le Monde (une, éco, pixels, culture, sport, planète, politique, international), Libération, France 24 | ✅ |
 | Sujets | exclusion des sujets sensibles, dédoublonnage (similarité des titres), mémoire 14 jours, thèmes intemporels (`evergreen.json`) en secours | ✅ |
 | Plafond par rubrique | `topics.maxPerCategoryPerDay` (`config/engine.json`) : **un seul édito par jour** (heure de Paris) ; la rubrique saturée n'est ni ciblée, ni tirée au sort en secours, ni choisissable par le modèle ; le script de publication manuelle applique le même plafond ; un test vérifie le contenu | ✅ |
+| Signatures réparties | rubrique `societe` (`spreadAuthors` dans `categories.json`) : la signature est attribuée par le code à tout journaliste actif hors éditos, le moins sollicité sur 30 jours d'abord, même hors spécialité (les 3 articles Société de Thomas Théorie ont été répartis entre lui, Guy Vite et Hélène Vautrin) | ✅ |
 | Rotation des rubriques | à chaque créneau, la rubrique la moins publiée sur 36 h est servie (actu de ses flux, sinon thème intemporel de la rubrique, sinon n'importe quel sujet) ; la rubrique est **imposée** au modèle et revérifiée | ✅ |
 | Génération | Gemini (SDK officiel), sortie JSON structurée, signature choisie dans le service de la rubrique | ✅ |
 | Validation | contrôles déterministes bloquants + relecteur Gemini ; échec => une nouvelle tentative puis quarantaine | ✅ |
@@ -49,6 +50,7 @@
 - **Jeux** : Memory aux grosses cartes et gros emojis ; **Pong de bureau** (canvas, souris/doigt/flèches, premier à 7, photocopieuse en adversaire).
 - **Petites annonces** : l'agence partenaire est une **annonce noire pleine largeur** en tête de liste (masquée par les filtres) ; **logo placé différemment selon l'annonceur** (`logoStyle` : coin, haut, gauche, pied, filigrane ; Le Vide en grand logo transparent) ; texte des annonces justifié. Page **Rencontres** : bandeau partenaire en affiche noir et or (portrait cadré, deux cartes numérotées, grande citation). Encart « Petites annonces » des grilles : carte sombre avec photo et pastille.
 - **Largeur** : articles, pubs d'article et page Rédaction aussi larges que le menu (1120 px) ; corps d'article sur 2 colonnes dès 1000 px, illustration en 21/9, portraits agrandis (132-150 px), photos de bureaux en panoramique pleine largeur. **Le logo s'efface au défilement** (réduction, flou, envol ; Chrome/Edge). **Menu tapé à la machine au plus une fois toutes les 12 h** (`localStorage`).
+- Page Rencontres : introduction pleine largeur, sommaire centré, encart « Petites annonces » en bas (aussi sur Jeux et Compteurs). Légende de Lucas : « son bureau était vide, la génération Z refusant de faire des heures supplémentaires non payées ».
 - Yves Verts (rédaction) a 32 ans (champ `age` de `journalists.json`) ; son annonce cherche « Homme + de 85 ans, riche et malade ».
 - Animations sobres (CSS pur) : zoom au survol, apparition des cartes, léger zoom de la une, transitions de page (Chrome/Edge), tout coupé si « réduire les animations ».
 

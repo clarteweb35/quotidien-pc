@@ -36,7 +36,8 @@ test('les articles publies sont signes par un journaliste de leur rubrique', asy
   assert.ok(list.length >= 3);
   for (const a of list) {
     const j = ctx.cfg.journalists.find((x) => x.name === a.author);
-    assert.ok(j && j.active && j.desk === a.category, `${a.author} / ${a.category}`);
+    const reparti = ctx.cfg.categories.find((c) => c.slug === a.category)?.spreadAuthors; // societe: signature repartie sur toute l'equipe
+    assert.ok(j && j.active && (reparti ? j.desk !== 'editos' : j.desk === a.category), `${a.author} / ${a.category}`);
   }
   cleanup(ctx);
 });
@@ -58,7 +59,7 @@ test('le prompt de generation contient l\'equipe', async () => {
   const seen = [];
   const ctx = makeCtx({ script: ({ kind, prompt }) => { if (kind === 'generate') seen.push(prompt); } });
   await runCycle(ctx);
-  assert.ok(seen[0].includes('ÉQUIPE RÉDACTIONNELLE') && seen[0].includes('Marion Lefebvre'));
+  assert.ok(seen[0].includes('ÉQUIPE RÉDACTIONNELLE') && seen[0].includes('Claire Delatour'));
   cleanup(ctx);
 });
 
@@ -75,4 +76,20 @@ test('garde-fous: faux temoignage et nom de journaliste dans le texte sont refus
   const b = base(); b.body[1].text = 'Comme l\'expliquait Marion Lefebvre hier soir, la situation reste parfaitement sous contrôle dans tout le pays.';
   assert.ok(codes(b).includes('signature_dans_le_texte'));
   cleanup(ctx);
+});
+
+test('societe: les signatures sont reparties sur toute l\'equipe (le moins sollicite d\'abord), hors editos', () => {
+  const cfg = makeCtx().cfg;
+  const now = new Date('2026-10-25T10:00:00Z');
+  const existing = [];
+  const noms = [];
+  for (let i = 0; i < 12; i++) {
+    const r = resolveAuthor({ proposed: 'Thomas Théorie', category: 'societe', existing, now }, cfg);
+    noms.push(r.name);
+    existing.push({ author: r.name, publishedAt: '2026-10-24T08:00:00Z' });
+  }
+  assert.equal(new Set(noms).size, 12, 'douze signatures differentes pour douze articles');
+  assert.ok(!noms.includes('Jean-Eudes de la Manchette'), 'les editos restent a Jean-Eudes');
+  assert.equal(resolveAuthor({ proposed: 'x', category: 'sport' }, cfg).name, 'David Lemaître', 'les autres rubriques gardent leur service');
+  assert.ok(rosterPrompt(cfg).includes('signature attribuée automatiquement'));
 });

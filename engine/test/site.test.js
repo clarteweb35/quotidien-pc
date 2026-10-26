@@ -240,4 +240,14 @@ test('Yves Verts: 32 ans sur sa fiche et sur son annonce, recherche modifiee', (
   assert.ok(rc.includes('Homme 32 ans, journaliste au service environnement') && rc.includes('Homme + de 85 ans, riche et malade.'), 'annonce');
 });
 
+test('rencontres: introduction pleine largeur, sommaire centre, encart petites annonces; legende de Lucas', () => {
+  const rc = page('rencontres');
+  assert.ok(rc.includes('class="card encart-annonces"'), 'encart petites annonces sur Rencontres');
+  const css = fs.readFileSync(path.join(ROOT, 'site/src/pages/rencontres.astro'), 'utf8');
+  assert.ok(/\.rc-intro \{[^}]*max-width: none/.test(css), 'introduction sur toute la longueur');
+  assert.ok(/\.rc-sommaire ul \{[^}]*justify-content: center/.test(css), 'sommaire centre');
+  assert.ok(page('redaction').includes('la génération Z refusant de faire des heures supplémentaires non payées'), 'legende de Lucas');
+  for (const pg of ['jeux', 'compteurs']) assert.ok(page(pg).includes('encart-annonces'), `encart sur ${pg}`);
+});
+
 test.after(() => fs.rmSync(out, { recursive: true, force: true }));

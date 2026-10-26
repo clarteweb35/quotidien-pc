@@ -2,7 +2,7 @@
   "categories": [
     { "slug": "politique", "name": "Politique", "description": "Palais, hémicycles et promesses à durée de vie limitée.", "color": "#b3261e" },
     { "slug": "economie", "name": "Économie", "description": "Les marchés, les chiffres et les chiffres sur les chiffres.", "color": "#1f5f8b" },
-    { "slug": "societe", "name": "Société", "description": "Nos manies collectives, observées de très près.", "color": "#7a4e9e" },
+    { "slug": "societe", "spreadAuthors": true, "name": "Société", "description": "Nos manies collectives, observées de très près.", "color": "#7a4e9e" },
     { "slug": "tech", "name": "Tech & Sciences", "description": "Le progrès, tel qu'il se présente à l'accueil.", "color": "#0f766e" },
     { "slug": "monde", "name": "Monde", "description": "La planète, vue de notre canapé.", "color": "#a16207" },
     { "slug": "culture", "name": "Culture", "description": "Cinéma, livres, musique et festivals de saison.", "color": "#be185d" },

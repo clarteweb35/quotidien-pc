@@ -1,4 +1,5 @@
 ---
+import EncartAnnonces from '../components/EncartAnnonces.astro';
 import Base from '../layouts/Base.astro';
 ---
 <Base title="Jeux" description="Un vrai sudoku jouable en ligne et trois mini-jeux de bureau, sans inscription, sans publicité et sans cookie." current="jeux">
@@ -73,6 +74,7 @@ import Base from '../layouts/Base.astro';
     <button type="button" id="ref-bouton" class="ref-bouton" data-etat="repos">Appuyez pour lancer la machine</button>
     <p class="jeu-msg" id="ref-msg" role="status"></p>
   </section>
+  <div class="grid" style="margin-top:34px"><EncartAnnonces /></div>
 </Base>
 
 <style is:global>

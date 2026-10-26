@@ -4,6 +4,7 @@ import { page, rencontres, parCategorie, refTexte, ancreRef, photoExistante } fr
 import { url } from '../lib/site';
 import { authorSlug } from '../lib/authors';
 import { partenaire } from '../lib/annonces';
+import EncartAnnonces from '../components/EncartAnnonces.astro';
 ---
 <Base title={page.titreSeo} description={page.descriptionSeo} current="rencontres">
   <div class="page-head">
@@ -73,6 +74,8 @@ import { partenaire } from '../lib/annonces';
     </section>
   ))}
 
+  <section class="rc-encart" aria-label="Les petites annonces du journal"><div class="grid"><EncartAnnonces /></div></section>
+
   <aside class="rc-mention" role="note">{page.mention}</aside>
 </Base>
 
@@ -99,12 +102,14 @@ import { partenaire } from '../lib/annonces';
   .agence-lien { margin: 16px 0 0; }
   .agence-lien a { display: inline-block; padding: 8px 16px; background: #c89658; color: #0e0d0a; font: 800 .88rem var(--sans); text-decoration: none; }
   @media (max-width: 760px) { .agence-corps { grid-template-columns: 1fr; padding: 20px 18px; } .agence-portrait img { width: 190px; height: 238px; margin: 0 auto; } .agence-duo { grid-template-columns: 1fr; } .agence-citation { padding-left: 44px; } .agence-citation p { font-size: 1.15rem; } }
-  .rc-intro { font: italic 1.2rem/1.45 var(--serif); margin: 4px 0 8px; max-width: 46rem; }
+  .rc-intro { font: italic 1.2rem/1.45 var(--serif); margin: 4px 0 8px; max-width: none; }
   .rc-sommaire { margin: 18px 0 8px; padding: 10px 14px; border-top: 3px double var(--ink); border-bottom: 1px solid var(--rule); font-family: var(--sans); }
-  .rc-sommaire ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: .88rem; }
+  .rc-sommaire ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 22px; font-size: .88rem; }
   .rc-sommaire a { color: var(--ink); font-weight: 700; }
   .rc-sommaire span { color: var(--ink-2); }
-  .rc-sommaire p { margin: 8px 0 0; font-size: .8rem; color: var(--ink-2); }
+  .rc-sommaire p { margin: 8px 0 0; font-size: .8rem; color: var(--ink-2); text-align: center; }
+  .rc-encart { margin-top: 34px; }
+  .rc-encart .grid { margin-top: 0; }
   .rc-section { margin-top: 30px; scroll-margin-top: 12px; }
   .rc-rubrique { font: 800 .85rem var(--sans); letter-spacing: .14em; text-transform: uppercase; margin: 0 0 4px; padding: 6px 0; border-top: 3px solid var(--ink); border-bottom: 1px solid var(--ink); }
   .rc-colonnes { column-width: 300px; column-gap: 30px; column-rule: 1px solid var(--rule); }

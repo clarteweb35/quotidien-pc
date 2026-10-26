@@ -1,4 +1,5 @@
 ---
+import EncartAnnonces from '../components/EncartAnnonces.astro';
 import Base from '../layouts/Base.astro';
 import Gimmick from '../components/Gimmick.astro';
 import Marches from '../components/Marches.astro';
@@ -22,6 +23,7 @@ const fictives = ['politique', 'economie', 'monde', 'societe', 'tech', 'sport', 
   <p class="meta">Cours de bourse et scores sportifs récupérés à la construction du site, à titre indicatif. Ils ne sont pas rafraîchis en continu et ne constituent pas un conseil en investissement.</p>
   <Marches />
   <Resultats />
+  <div class="grid" style="margin-top:34px"><EncartAnnonces /></div>
 </Base>
 <style>
   .cpt-tag { font: 700 .68rem var(--sans); letter-spacing: .08em; text-transform: uppercase; padding: 2px 8px; vertical-align: middle; margin-left: 8px; border: 1px solid; }

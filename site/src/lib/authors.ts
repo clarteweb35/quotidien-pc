@@ -47,4 +47,7 @@ export const bureauTime: Record<string, string> = {
   politique: '16 h 53', economie: '16 h 54', 'societe-culture': '16 h 55', tech: '16 h 56', monde: '16 h 57', sport: '16 h 58',
   secretariat: '16 h 59', lucas: '17 h 02',
 };
-export const shotCaption = (file: string) => `Photographie prise à ${bureauTime[file]} : les bureaux étaient vides.`;
+export const shotCaption = (file: string) =>
+  file === 'lucas'
+    ? `Photographie prise à ${bureauTime[file]} : son bureau était vide, la génération Z refusant de faire des heures supplémentaires non payées.`
+    : `Photographie prise à ${bureauTime[file]} : les bureaux étaient vides.`;

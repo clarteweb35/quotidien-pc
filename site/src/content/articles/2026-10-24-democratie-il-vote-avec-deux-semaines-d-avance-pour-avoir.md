@@ -1,7 +1,7 @@
 ---
 id: "49b59cc227bd"
 ref: "261025-X3"
-author: "Thomas Théorie"
+author: "Hélène Vautrin"
 title: "Démocratie : il vote avec deux semaines d'avance pour avoir le temps de contester son propre bulletin"
 chapo: "Alors que le vote par anticipation séduit de plus en plus d'électeurs soucieux de fluidifier leur planning civique, certains en profitent pour déposer leurs recours avant même l'ouverture officielle des bureaux."
 description: "Voter avec quinze jours d'avance permet désormais d'optimiser le calendrier des contestations et de suspecter le dépouillement en amont."
