@@ -38,7 +38,7 @@
   ],
   "annonceurs": [
     { "id": "evidence", "nom": "Cabinet Évidence & Associés", "slogan": "Nous confirmons ce que vous pensiez déjà.", "palette": "ink", "logo": "evidence.webp" },
-    { "id": "zerotache", "nom": "Zéro-Tâche SAS", "slogan": "Automatiser l'inutile, enfin.", "palette": "bleu" },
+    { "id": "zerotache", "nom": "Zéro-Tâche SAS", "slogan": "Automatiser l'inutile, enfin.", "palette": "bleu", "logo": "zerotache.webp" },
     { "id": "bpcc", "nom": "Bureau paritaire de certification des certifications", "slogan": "Certifié, donc certifiant.", "palette": "vert", "logo": "bpcc.webp" },
     { "id": "concept", "nom": "Agence Espace & Concept", "slogan": "Des mètres carrés qui sont avant tout des idées.", "palette": "rouge", "logo": "concept.webp" },
     { "id": "zerolarme", "nom": "Assurance Zéro Larme", "palette": "bleu", "logo": "zerolarme.webp" },
@@ -46,7 +46,7 @@
     { "id": "levide", "nom": "Le Vide", "slogan": "Chaîne de magasins", "palette": "ink", "logo": "levide.webp" },
     { "id": "trobo", "nom": "Agile TroBo", "palette": "rouge", "logo": "trobo.webp" },
     { "id": "vortex", "nom": "Vortex Formation", "palette": "bleu", "logo": "vortex.webp" },
-    { "id": "nouvellasecure", "nom": "Nouvella Sécure assurances", "palette": "ink" },
+    { "id": "nouvellasecure", "nom": "Nouvella Sécure assurances", "palette": "ink", "logo": "nouvellasecure.webp" },
     { "id": "miraculex", "nom": "Miraculex®", "slogan": "Le miracle, mais en flacon.", "palette": "or", "logo": "miraculex.webp", "legende": true }
   ],
   "annonces": [

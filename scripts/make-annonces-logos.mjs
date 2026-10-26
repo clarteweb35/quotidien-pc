@@ -1,5 +1,5 @@
 // Logos des annonceurs recurrents et portraits des coachs de « Petites annonces » (images fictives generees par IA, fournies par l'editeur).
-// Usage: node scripts/make-annonces-logos.mjs <concept> <bpcc> <evidence> <coach> <consultant> [<miraculex> [<trobo> <vortex> [<nouvella>]]]
+// Usage: node scripts/make-annonces-logos.mjs <concept> <bpcc> <evidence> <coach> <consultant> [<miraculex> [<trobo> <vortex> [<nouvella> [<zerotache>]]]]
 // Finit par un passage de masques: logos ronds en cercle, logos rectangulaires a coins arrondis (alpha cuit dans le webp, pour les afficher entiers).
 // Sortie dans site/public/annonces/: concept.webp, bpcc.webp, evidence.webp (logos ronds 192 px), coach-noms.webp et consultant.webp (portraits 168x210).
 // Les coordonnees de recadrage correspondent aux planches 1408 x 768 fournies (cercle centre en 704,385; portrait sans sa legende).
@@ -7,7 +7,7 @@ import path from 'node:path';
 import sharp from 'sharp';
 sharp.cache(false); // Windows: sharp garde sinon les fichiers ouverts, et on les reecrit plus bas (masques)
 
-const [concept, bpcc, evidence, coach, consultant, miraculex, trobo, vortex, nouvella] = process.argv.slice(2);
+const [concept, bpcc, evidence, coach, consultant, miraculex, trobo, vortex, nouvella, zerotache] = process.argv.slice(2);
 if (!consultant) { console.error('Usage: node scripts/make-annonces-logos.mjs <concept> <bpcc> <evidence> <coach> <consultant>'); process.exit(2); }
 const out = path.resolve('site/public/annonces');
 
@@ -29,11 +29,12 @@ const entier = (src, nom) => sharp(src).flatten({ background: '#ffffff' }).resiz
 if (trobo) await entier(trobo, 'trobo.webp');
 if (vortex) await entier(vortex, 'vortex.webp');
 if (nouvella) await entier(nouvella, 'nouvellasecure.webp');
+if (zerotache) await entier(zerotache, 'zerotache.webp');
 
 // Masques: cercle pour les logos ronds, coins arrondis pour les autres (idempotent).
 import fs from 'node:fs';
 const RONDS = ['concept', 'bpcc', 'evidence', 'zerolarme'];
-const ARRONDIS = ['miraculex', 'trobo', 'vortex', 'nouvellasecure', 'teflonhuman', 'levide'];
+const ARRONDIS = ['miraculex', 'trobo', 'vortex', 'nouvellasecure', 'zerotache', 'teflonhuman', 'levide'];
 for (const [noms, forme] of [[RONDS, 'cercle'], [ARRONDIS, 'arrondi']]) {
   for (const nom of noms) {
     const f = path.join(out, nom + '.webp');
