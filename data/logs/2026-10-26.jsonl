@@ -72,3 +72,6 @@
 {"ts":"2026-10-26T18:52:31.315Z","runId":"20261026184347-030a","level":"warn","event":"gemini.retry","purpose":"generate","status":503,"attempt":2,"delayMs":8335}
 {"ts":"2026-10-26T18:52:39.820Z","runId":"20261026184347-030a","level":"warn","event":"gemini.retry","purpose":"generate","status":429,"attempt":3,"delayMs":16782}
 {"ts":"2026-10-26T18:52:56.781Z","runId":"20261026184347-030a","level":"error","event":"cycle.stopped","reason":"quota","error":"Quota Gemini epuise ou limite de debit (HTTP 429): {\"error\":{\"code\":429,\"message\":\"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-lim"}
+{"ts":"2026-10-26T18:54:07.549Z","runId":"20261026185406-b530","level":"warn","event":"gemini.retry","purpose":"annonces","status":503,"attempt":1,"delayMs":4947}
+{"ts":"2026-10-26T18:54:12.585Z","runId":"20261026185406-b530","level":"warn","event":"gemini.retry","purpose":"annonces","status":429,"attempt":2,"delayMs":8509}
+{"ts":"2026-10-26T18:54:22.352Z","runId":"20261026185406-b530","level":"warn","event":"gemini.retry","purpose":"annonces","status":503,"attempt":3,"delayMs":16486}
