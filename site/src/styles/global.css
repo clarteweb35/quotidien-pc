@@ -336,7 +336,8 @@ footer .quality .q-score.q-b { background: #5b9a2c; } /* note B: vert plus clair
 .article .illus { margin-left: 0; margin-right: 0; }
 
 /* Petites annonces: une seule boite pour toutes les annonces (meme marge, meme remplissage, meme filet), sans debordement dans les gouttieres */
-.pa-colonnes .pa { box-sizing: border-box; margin: 0 0 var(--pa-gap); padding: var(--pa-pad) 14px; border: 1px solid var(--rule); background: rgba(255, 255, 255, .55); }
+.pa-colonnes .pa { box-sizing: border-box; margin: 0 0 var(--pa-gap); padding: var(--pa-pad) 14px; border: 1px solid var(--rule); }
+.pa-colonnes .pa:not(.pa-encart):not(.pa-vedette) { background: rgba(255, 255, 255, .55); } /* les encarts gardent leur couleur de marque (texte clair) */
 .pa-colonnes .pa-vedette { border: 2px solid var(--ink); background: var(--paper-2); }
-.pa-colonnes .pa-encart { border-color: rgba(0, 0, 0, .3); }
+.pa-colonnes .pa-encart { border: 2px solid rgba(0, 0, 0, .3); }
 .pa-colonnes .pa-court, .pa-colonnes .pa-classique { border-bottom: 1px solid var(--rule); }

@@ -220,4 +220,10 @@ test("mesure d'audience GA4: derriere le consentement, jamais chargee d'office",
   assert.ok(page('mentions-legales').includes('Google'), "mentions legales: mesure d'audience decrite");
 });
 
+test('petites annonces: les encarts gardent un fond sombre (texte clair lisible)', () => {
+  const css = fs.readFileSync(path.join(ROOT, 'site/src/styles/global.css'), 'utf8');
+  assert.ok(css.includes('.pa-colonnes .pa:not(.pa-encart):not(.pa-vedette)'), "le fond clair ne s'applique pas aux encarts");
+  assert.ok(!/.pa-colonnes .pa {[^}]*background/.test(css), 'aucune regle generique de fond sur .pa-colonnes .pa');
+});
+
 test.after(() => fs.rmSync(out, { recursive: true, force: true }));
