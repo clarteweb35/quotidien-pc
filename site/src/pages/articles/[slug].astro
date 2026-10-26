@@ -75,6 +75,11 @@ const jsonLd = {
     <div class="meta">
       Publié le <time datetime={d.publishedAt.toISOString()}>{formatDateTime(d.publishedAt)}</time> · <strong>Satire</strong>{ref && <> · <span class="ref" title="Référence de l'article">Réf. {ref}</span></>}
     </div>
+    {d.tags.length > 0 && (
+      <ul class="tags" aria-label="Mots-clés">
+        {d.tags.map((t) => <li><a href={url(`tag/${encodeURIComponent(t)}/`)}>#{t}</a></li>)}
+      </ul>
+    )}
     <Share title={d.title} url={canonicalUrl} id="share-top" />
     {img && (
       <figure class="illus">
@@ -86,11 +91,6 @@ const jsonLd = {
     <div class="body"><Content /></div>
     {isEdito && who && <p class="edito-signature">— {who.name}, rédacteur en chef</p>}
     <Share title={d.title} url={canonicalUrl} id="share-bottom" />
-    {d.tags.length > 0 && (
-      <ul class="tags" aria-label="Mots-clés">
-        {d.tags.map((t) => <li><a href={url(`tag/${encodeURIComponent(t)}/`)}>#{t}</a></li>)}
-      </ul>
-    )}
     {d.sources.length > 0 && (
       <p class="sources">
         Actualité ayant inspiré cette fiction :

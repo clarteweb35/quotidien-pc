@@ -427,7 +427,8 @@ footer .quality .q-score.q-b { background: #5b9a2c; } /* note B: vert plus clair
   .article-grille { grid-template-columns: minmax(0, 1fr) 340px; }
   /* la colonne s'etire sur toute la hauteur de l'article: seul « A lire aussi » suit la lecture */
   .cote { margin-top: 0; padding-top: 10px; }
-  .cote-suit { position: sticky; top: 16px; }
+  /* le menu collant occupe le haut de l'ecran: le bloc se cale dessous et, si l'ecran est bas, defile en interne plutot que d'etre coupe */
+  .cote-suit { position: sticky; top: 64px; max-height: calc(100vh - 80px); overflow-y: auto; }
 }
 @media (min-width: 1000px) { .article h1 { font-size: clamp(2rem, 3.2vw, 2.7rem); } .article .chapo { font-size: 1.25rem; } .article .body { font-size: 1.15rem; } }
 
