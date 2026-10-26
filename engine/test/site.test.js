@@ -271,4 +271,10 @@ test('menu: trois onglets tricolores de meme taille; frappe a la premiere connex
   assert.ok(!h.includes('href="/compteurs/"'), 'plus de lien vers Compteurs');
 });
 
+test('article: colonnes de texte adaptees a la largeur (column-width), pas un nombre fixe', () => {
+  const css = fs.readFileSync(path.join(ROOT, 'site/src/styles/global.css'), 'utf8');
+  assert.ok(/.article .body { column-width: 30rem/.test(css) && !/column-count: 2/.test(css), 'colonnes selon la largeur');
+  assert.ok(css.includes('@media (max-width: 760px)'), 'regles pour petit ecran');
+});
+
 test.after(() => fs.rmSync(out, { recursive: true, force: true }));

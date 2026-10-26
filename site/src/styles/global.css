@@ -350,9 +350,9 @@ footer .quality .q-score.q-b { background: #5b9a2c; } /* note B: vert plus clair
 .article h1 { font-size: clamp(2.2rem, 4.4vw, 3.3rem); }
 .article .chapo { font-size: 1.4rem; max-width: 62rem; }
 .article .body { font-size: 1.2rem; }
-@media (min-width: 1000px) {
-  /* corps du texte sur deux colonnes, comme un vrai journal: la ligne reste lisible malgre la largeur */
-  .article .body { column-count: 2; column-gap: 48px; column-rule: 1px solid var(--rule); }
+/* Corps du texte en colonnes de journal: le NOMBRE de colonnes s'adapte a la largeur (colonne mini 30 rem: 2 colonnes sur grand ecran, 1 seule sur tablette et mobile) */
+.article .body { column-width: 30rem; column-gap: 48px; column-rule: 1px solid var(--rule); }
+@media (min-width: 0) {
   .article .body h2 { break-after: avoid; break-inside: avoid; }
   .article .body > p:first-of-type { margin-top: 0; }
 }
@@ -396,3 +396,18 @@ footer .quality .q-score.q-b { background: #5b9a2c; } /* note B: vert plus clair
 .nav a.onglet[aria-current] { box-shadow: inset 0 -4px 0 #16140f; }
 .onglet-blanc a.onglet[aria-current] { box-shadow: inset 0 -4px 0 #ef4135; }
 .onglet-li::after { display: none; } /* pas de curseur de frappe sur les onglets: ils sont deja un bloc de couleur */
+
+/* Lecture sur petit ecran: pas de debordement, tailles reduites, medias a la largeur de l'ecran */
+@media (max-width: 760px) {
+  .article h1 { font-size: clamp(1.7rem, 7vw, 2.2rem); }
+  .article .chapo { font-size: 1.15rem; }
+  .article .body { font-size: 1.08rem; column-rule: 0; }
+  .article .illus img { aspect-ratio: 16 / 9; }
+  .article-edito .edito-portrait { float: none; display: block; margin: 0 0 10px; }
+  .article .body p { text-align: left; hyphens: auto; }
+  .mm-corps { gap: 12px; }
+  .mm-titre { font-size: clamp(1.25rem, 6vw, 1.7rem) !important; }
+  .suivant { grid-template-columns: 1fr; }
+  .page-head h1 { font-size: clamp(1.8rem, 7vw, 2.4rem); }
+}
+@media (max-width: 480px) { .article, .prose, main { overflow-wrap: anywhere; } }
