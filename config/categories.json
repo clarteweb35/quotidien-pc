@@ -8,6 +8,6 @@
     { "slug": "culture", "name": "Culture", "description": "Cinéma, livres, musique et festivals de saison.", "color": "#be185d" },
     { "slug": "sport", "name": "Sport", "description": "Des exploits, des maillots et des commentaires.", "color": "#15803d" },
     { "slug": "environnement", "name": "Environnement", "description": "La météo, le climat et nos bonnes résolutions.", "color": "#3f6212" },
-    { "slug": "editos", "name": "Éditos", "description": "L'avis du rédacteur en chef, que personne n'a demandé.", "color": "#6b21a8", "menuEnd": true, "sourceCategories": ["societe", "monde"] }
+    { "slug": "editos", "name": "Éditos", "description": "L'avis du rédacteur en chef, que personne n'a demandé.", "color": "#6b21a8", "menuTete": true, "sourceCategories": ["societe", "monde"] }
   ]
 }

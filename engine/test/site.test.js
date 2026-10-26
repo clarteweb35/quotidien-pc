@@ -267,7 +267,8 @@ test('menu: trois onglets tricolores de meme taille; frappe a la premiere connex
   for (const c of ['bleu', 'blanc', 'rouge']) assert.ok(h.includes(`onglet-li onglet-${c}`), `onglet ${c}`);
   const css = fs.readFileSync(path.join(ROOT, 'site/src/styles/global.css'), 'utf8');
   assert.ok(/.nav a.onglet { width: 112px/.test(css), 'onglets de meme largeur');
-  assert.ok(h.includes('localStorage.getItem("frappe"))document.documentElement.classList.add("sans-frappe");else localStorage.setItem("frappe","1")'), 'frappe une seule fois');
+  assert.ok(h.includes('sans-frappe') && /location.pathname[^;]*!==/.test(h), 'frappe seulement sur la premiere page (accueil), une fois');
+  assert.ok(h.includes('class="rang-une"') && h.indexOf('class="rang-tete"') < h.indexOf('>Politique<'), 'A la une en avant, Editos juste apres');
   assert.ok(!h.includes('href="/compteurs/"'), 'plus de lien vers Compteurs');
 });
 

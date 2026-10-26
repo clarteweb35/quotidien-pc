@@ -30,9 +30,9 @@ const quality = [
 ];
 // Menu: entrees dans l'ordre; chaque entree se « tape » a la suite de la precedente (voir .nav a dans global.css).
 const MENU = [
-  { href: url(), label: 'À la une', cle: 'home' },
-  ...categories.filter((c) => !c.menuEnd).map((c) => ({ href: url(`rubrique/${c.slug}/`), label: c.name, cle: c.slug })),
-  ...categories.filter((c) => c.menuEnd).map((c) => ({ href: url(`rubrique/${c.slug}/`), label: c.name, cle: c.slug })),
+  { href: url(), label: 'À la une', cle: 'home', rang: 'une' },
+  ...categories.filter((c) => c.menuTete).map((c) => ({ href: url(`rubrique/${c.slug}/`), label: c.name, cle: c.slug, rang: 'tete' })),
+  ...categories.filter((c) => !c.menuTete).map((c) => ({ href: url(`rubrique/${c.slug}/`), label: c.name, cle: c.slug })),
   // Trois onglets de meme taille, bleu / blanc / rouge: le drapeau francais
   { href: url('petites-annonces/'), label: 'Petites annonces', cle: 'annonces', onglet: 'bleu' },
   { href: url('rencontres/'), label: 'Rencontres', cle: 'rencontres', onglet: 'blanc' },
@@ -47,7 +47,7 @@ const today = new Intl.DateTimeFormat('fr-FR', { timeZone: 'Europe/Paris', dateS
 <!doctype html>
 <html lang="fr">
   <head>
-    <script is:inline>{`try{if(localStorage.getItem("frappe"))document.documentElement.classList.add("sans-frappe");else localStorage.setItem("frappe","1")}catch(e){}`}</script>
+    <script is:inline>{`try{if(location.pathname.replace(/index\.html$/,"")!=="${url()}"||localStorage.getItem("frappe"))document.documentElement.classList.add("sans-frappe");else localStorage.setItem("frappe","1")}catch(e){}`}</script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
@@ -89,7 +89,7 @@ const today = new Intl.DateTimeFormat('fr-FR', { timeZone: 'Europe/Paris', dateS
       <div class="wrap">
         <ul>
           {menuFrappe.map((m) => (
-            <li class={m.onglet ? `onglet-li onglet-${m.onglet}` : undefined} style={`--n2:${m.n};--t2:${m.t}s`}><a class={m.onglet ? 'onglet' : undefined} href={m.href} style={`--n:${m.n};--t:${m.t}s`} aria-current={current === m.cle ? 'page' : undefined}>{m.label}</a></li>
+            <li class={m.onglet ? `onglet-li onglet-${m.onglet}` : undefined} style={`--n2:${m.n};--t2:${m.t}s`}><a class={m.onglet ? 'onglet' : m.rang ? `rang-${m.rang}` : undefined} href={m.href} style={`--n:${m.n};--t:${m.t}s`} aria-current={current === m.cle ? 'page' : undefined}>{m.label}</a></li>
           ))}
         </ul>
       </div>
