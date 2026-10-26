@@ -6,7 +6,7 @@
 
 | Fonction | Détail | État |
 |---|---|---|
-| Planification | 5 créneaux par jour, **tous le matin** (Europe/Paris : 7 h, 7 h 30, 8 h, 8 h 30, 9 h), **le premier (7 h) est réservé à l’édito** (`editoSlot` dans `config/schedule.json`, sauf si l’édito du jour est déjà paru), cron toutes les 30 min, rattrapage borné, plafond `maxPerDay` | ✅ |
+| Planification | 5 créneaux par jour, **tous le matin** (Europe/Paris : 9 h 10, 9 h 40, 10 h 10, 10 h 40, 11 h 10, juste après la remise à zéro du quota gratuit Gemini, vers 8-9 h à Paris), **le premier (9 h 10) est réservé à l’édito** (`editoSlot` dans `config/schedule.json`, sauf si l’édito du jour est déjà paru), cron toutes les 30 min, rattrapage borné, plafond `maxPerDay` | ✅ |
 | Collecte | flux RSS (`config/sources.json`) : franceinfo, Le Monde (une, éco, pixels, culture, sport, planète, politique, international), Libération, France 24 | ✅ |
 | Sujets | exclusion des sujets sensibles, dédoublonnage (similarité des titres), mémoire 14 jours, thèmes intemporels (`evergreen.json`) en secours | ✅ |
 | Plafond par rubrique | `topics.maxPerCategoryPerDay` (`config/engine.json`) : **un seul édito par jour** (heure de Paris) ; la rubrique saturée n'est ni ciblée, ni tirée au sort en secours, ni choisissable par le modèle ; le script de publication manuelle applique le même plafond ; un test vérifie le contenu | ✅ |

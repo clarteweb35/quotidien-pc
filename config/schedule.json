@@ -1,6 +1,6 @@
 {
   "timezone": "Europe/Paris",
-  "slots": ["07:00", "07:30", "08:00", "08:30", "09:00"],
+  "slots": ["09:10", "09:40", "10:10", "10:40", "11:10"],
   "editoSlot": 0,
   "maxPerDay": 5,
   "catchupMinutes": 150,
