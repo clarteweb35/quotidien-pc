@@ -4,6 +4,8 @@ import Card from '../../components/Card.astro';
 import Marches from '../../components/Marches.astro';
 import Resultats from '../../components/Resultats.astro';
 import Gimmick from '../../components/Gimmick.astro';
+import BandeauRencontres from '../../components/BandeauRencontres.astro';
+import EncartAnnonces from '../../components/EncartAnnonces.astro';
 import EcoExtras from '../../components/EcoExtras.astro';
 import { allArticles, categories, url } from '../../lib/site';
 import { journalist, portrait } from '../../lib/authors';
@@ -36,7 +38,16 @@ const photoEdito = editorialiste ? portrait(editorialiste.name) : null;
   {cat.slug === 'sport' && <Resultats />}
   <Gimmick slug={cat.slug} pill={['economie', 'sport'].includes(cat.slug)} />
   {articles.length === 0 ? <p class="empty">Rien à signaler dans cette rubrique. Pour l'instant.</p> : (
-    <div class="grid">{articles.map((a) => <Card article={a} />)}</div>
+    <>
+      <div class="grid">{articles.slice(0, 3).map((a) => <Card article={a} />)}{articles.length <= 3 && <EncartAnnonces />}</div>
+      {articles.length > 3 && (
+        <>
+          <BandeauRencontres />
+          <div class="grid">{articles.slice(3).map((a) => <Card article={a} />)}<EncartAnnonces /></div>
+        </>
+      )}
+      {articles.length <= 3 && <BandeauRencontres />}
+    </>
   )}
   {cat.slug === 'economie' && <EcoExtras />}
   {motsCles.length > 0 && (

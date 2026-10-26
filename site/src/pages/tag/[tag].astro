@@ -1,6 +1,8 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Card from '../../components/Card.astro';
+import BandeauRencontres from '../../components/BandeauRencontres.astro';
+import EncartAnnonces from '../../components/EncartAnnonces.astro';
 import { allArticles, categories, url } from '../../lib/site';
 
 export async function getStaticPaths() {
@@ -21,7 +23,14 @@ const voisins = (() => {
 ---
 <Base title={`#${tag}`} description={`Articles sur le thème « ${tag} ».`} noindex={noindex} follow>
   <div class="page-head"><span class="kicker">Mot-clé</span><h1>#{tag}</h1></div>
-  <div class="grid">{items.map((a) => <Card article={a} />)}</div>
+  <div class="grid">{items.slice(0, 3).map((a) => <Card article={a} />)}{items.length <= 3 && <EncartAnnonces />}</div>
+  {items.length > 3 && (
+    <>
+      <BandeauRencontres />
+      <div class="grid">{items.slice(3).map((a) => <Card article={a} />)}<EncartAnnonces /></div>
+    </>
+  )}
+  {items.length <= 3 && <BandeauRencontres />}
   <nav class="mots-cles" aria-label="Pour continuer">
     <span>Rubriques :</span> {rubriques.map((c) => <a href={url(`rubrique/${c.slug}/`)}>{c.name}</a>)}
     {voisins.length > 0 && <><br /><span>Mots-clés voisins :</span> {voisins.map((t) => <a href={url(`tag/${encodeURIComponent(t)}/`)}>#{t}</a>)}</>}

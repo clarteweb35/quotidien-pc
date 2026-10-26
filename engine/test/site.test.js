@@ -174,6 +174,15 @@ test('maillage interne: manchette partout, fil d\'Ariane, precedent/suivant, lie
   const art = page(`articles/${slug}`);
   assert.ok(art.includes('aria-label="Fil d\'Ariane"') || art.includes('Fil d&#39;Ariane'), 'fil d\'Ariane');
   assert.ok(page('.').includes('href="/redaction/#'), 'signature cliquable sur les cartes');
+  // Encart « Petites annonces » (taille d'une carte) et bandeau Rencontres sur les pages qui listent des articles
+  for (const pg of ['.', 'rubrique/societe', 'rubrique/sport']) {
+    const h = page(pg);
+    assert.ok(h.includes('class="card encart-annonces"') && h.includes('href="/petites-annonces/"'), `encart petites annonces sur ${pg}`);
+    assert.ok(h.includes('sélectionnées par Madame de Valmorin'), `bandeau rencontres sur ${pg}`);
+  }
+  const soc = page('rubrique/societe');
+  const avant = soc.slice(0, soc.indexOf('class="bandeau-rc'));
+  assert.equal((avant.match(/<article class="card/g) || []).length, 3, 'bandeau apres 3 articles (rubrique de 4 articles ou plus)');
   assert.ok(page('redaction').includes('Derniers articles') || page('redaction').includes('Derniers éditos'), 'articles de chaque journaliste');
 });
 

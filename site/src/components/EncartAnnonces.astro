@@ -1,0 +1,22 @@
+---
+// Encart de la taille d'une carte d'article (une case de la grille): renvoie vers la rubrique « Petites annonces ».
+// Les trois annonces mises en avant sont celles marquees "vedette" dans config/annonces.json.
+import { annonces, rubrique } from '../lib/annonces';
+import { url } from '../lib/site';
+const vedettes = annonces.filter((a) => a.format === 'vedette' && !a.reel).slice(0, 3);
+---
+<article class="card encart-annonces">
+  <p class="edito-etiquette"><a class="kicker" href={url('petites-annonces/')}>Petites annonces</a></p>
+  <h3><a href={url('petites-annonces/')}>{rubrique.accroche}</a></h3>
+  <ul>
+    {vedettes.map((a) => <li><a href={url(`petites-annonces/#${a.id}`)}>{a.titre}</a>{a.prix && <span> — {a.prix}</span>}</li>)}
+  </ul>
+  <p class="meta"><a class="encart-lien" href={url('petites-annonces/')}>Parcourir les {annonces.length} annonces →</a></p>
+</article>
+<style>
+  .encart-annonces { padding: 14px 14px 12px; border: 2px solid var(--ink); background: var(--paper-2); }
+  .encart-annonces h3 { font-style: italic; margin-top: 0; }
+  .encart-annonces ul { margin: 0 0 10px; padding-left: 18px; font: .95rem/1.5 var(--serif); }
+  .encart-annonces li span { color: var(--ink-2); font: .8rem var(--sans); }
+  .encart-annonces .encart-lien { font-weight: 700; color: var(--link); }
+</style>

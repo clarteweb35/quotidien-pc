@@ -4,6 +4,7 @@ import Card from '../components/Card.astro';
 import Marches from '../components/Marches.astro';
 import Gimmick from '../components/Gimmick.astro';
 import BandeauRencontres from '../components/BandeauRencontres.astro';
+import EncartAnnonces from '../components/EncartAnnonces.astro';
 import { allArticles, url, siteName, manualImageCredit } from '../lib/site';
 import { illustration } from '../lib/manual';
 
@@ -51,7 +52,7 @@ const siteLd = {
           <h2 class="section-title">Dernières nouvelles (inventées)</h2>
           <div class="grid">{latest.slice(0, 6).map((a) => <Card article={a} />)}</div>
           <BandeauRencontres />
-          {latest.length > 6 && <div class="grid">{latest.slice(6).map((a) => <Card article={a} />)}</div>}
+          <div class="grid">{latest.slice(6).map((a) => <Card article={a} />)}<EncartAnnonces /></div>
         </>
       )}
     </>
