@@ -207,4 +207,17 @@ test('Yves Verts: annonce en Rencontres (hommes/hommes) liee a sa fiche, et inve
   assert.ok(!JSON.stringify(ann).includes('Teflon'), 'marque parodiee: Peflon');
 });
 
+test("mesure d'audience GA4: derriere le consentement, jamais chargee d'office", () => {
+  const legal2 = JSON.parse(fs.readFileSync(path.join(ROOT, 'config/legal.json'), 'utf8'));
+  const id = legal2.analytics.measurementId;
+  assert.match(id, /^G-[A-Z0-9]{6,12}$/);
+  for (const pg of ['.', 'redaction', 'jeux']) {
+    const h = page(pg);
+    assert.ok(h.includes('id="consent"') && h.includes('data-open-consent'), `bandeau de consentement et lien « Gérer mes cookies » sur ${pg}`);
+    assert.ok(!h.includes('src="https://www.googletagmanager.com'), `aucune balise gtag chargee d'office sur ${pg}`);
+    assert.ok(h.includes(id), 'identifiant present seulement dans le script de consentement');
+  }
+  assert.ok(page('mentions-legales').includes('Google'), "mentions legales: mesure d'audience decrite");
+});
+
 test.after(() => fs.rmSync(out, { recursive: true, force: true }));

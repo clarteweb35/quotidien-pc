@@ -88,6 +88,9 @@ Les compteurs « depuis minuit / ce mois-ci » sont déterministes (même valeur
 - La photo du bureau Environnement est remplacée par un encart humoristique. Yves Verts (Environnement) a repris le portrait de l'annonce RÉF. N7Y-16C, qu'il « a déposée » en Rencontres (hommes cherchent hommes) : sa fiche renvoie vers l'annonce et l'annonce vers sa fiche (champ `auteur`).
 - Les annonces de rencontres sans portrait affichent « Pas d'image fournie ». Marque parodiée : « Peflon Human Corp » (le logo, lui, porte encore « TEFLON HUMAN CORP » : à régénérer).
 
+## 4 bis. Mesure d'audience
+Google Analytics 4 (`G-XV5HSQ5YKX`, `config/legal.json`), **chargé seulement si le visiteur accepte** le bandeau de consentement (refus aussi simple que l'acceptation, lien « Gérer mes cookies » dans le pied de page, cookies `_ga*` purgés au refus, IP anonymisée). Les mentions légales décrivent ce traitement. Le script de balise brut fourni par Google n'est volontairement pas utilisé (il collecterait sans consentement).
+
 ## 5. Mesures de qualité (état au 26/10/2026)
 
 | Page | EcoIndex | Éléments DOM | Requêtes | Poids | Autres |

@@ -14,9 +14,9 @@
   },
   "analytics": {
     "provider": "Google Analytics 4",
-    "measurementId": "",
+    "measurementId": "G-XV5HSQ5YKX",
     "note": "Identifiant de mesure GA4 (format G-XXXXXXXXXX). Tant qu'il est vide, aucun script Google n'est charge et aucun bandeau n'est affiche."
   },
-  "updatedAt": "2026-10-25",
+  "updatedAt": "2026-10-26",
   "publisherStatus": "non_professional"
 }
