@@ -7,7 +7,6 @@ import { refOf } from '../../lib/ref';
 import { journalist, deskLabel, authorSlug, portrait } from '../../lib/authors';
 import Share from '../../components/Share.astro';
 import PubAnnonce from '../../components/PubAnnonce.astro';
-import Card from '../../components/Card.astro';
 
 export async function getStaticPaths() {
   const articles = await allArticles();
@@ -31,7 +30,7 @@ const related = all
     sharedTags: candidate.data.tags.filter((tag) => d.tags.includes(tag)).length,
   }))
   .sort((a, b) => Number(b.sameCategory) - Number(a.sameCategory) || b.sharedTags - a.sharedTags || b.article.data.publishedAt.getTime() - a.article.data.publishedAt.getTime())
-  .slice(0, 3)
+  .slice(0, 5)
   .map(({ article: candidate }) => candidate);
 const { Content } = await render(article);
 const img = await illustration(article, 1280, manualImageCredit);
@@ -62,6 +61,7 @@ const jsonLd = {
   <nav class="fil" aria-label="Fil d'Ariane">
     <a href={url()}>Accueil</a> <span aria-hidden="true">›</span> <a href={url(`rubrique/${cat.slug}/`)}>{cat.name}</a>
   </nav>
+  <div class="article-grille">
   <article class:list={['article', isEdito && 'article-edito']}>
     <a class="kicker" href={url(`rubrique/${cat.slug}/`)}>{isEdito ? 'Édito' : cat.name}</a>
     <h1>{d.title}</h1>
@@ -77,7 +77,7 @@ const jsonLd = {
     <Share title={d.title} url={canonicalUrl} id="share-top" />
     {img && (
       <figure class="illus">
-        <img src={img.src} srcset={img.srcset} sizes="(min-width: 760px) 720px, 100vw" alt={img.alt} width={img.width} height={img.height} fetchpriority="high" />
+        <img src={img.src} srcset={img.srcset} sizes="(min-width: 1000px) 760px, 100vw" alt={img.alt} width={img.width} height={img.height} fetchpriority="high" />
         <figcaption>{img.credit} — illustration satirique, sans rapport avec des faits réels.</figcaption>
       </figure>
     )}
@@ -103,17 +103,20 @@ const jsonLd = {
         {plusRecent ? <a class="suite" href={url(`articles/${plusRecent.data.slug}/`)}><span>Plus récent · {cat.name} →</span>{plusRecent.data.title}</a> : <span />}
       </nav>
     )}
+  </article>
+  <aside class="cote" aria-label="Autres articles">
+    {related.length > 0 && (
+      <section class="cote-bloc" aria-labelledby="related-title">
+        <h2 id="related-title">À lire aussi</h2>
+        <ul>{related.map((x) => <li><a href={url(`articles/${x.data.slug}/`)}><span class="cote-rub">{category(x.data.category).name}</span>{x.data.title}</a></li>)}</ul>
+      </section>
+    )}
     {dumemeAuteur.length > 0 && who && (
-      <aside class="meme-auteur" aria-labelledby="meme-auteur-titre">
+      <section class="cote-bloc" aria-labelledby="meme-auteur-titre">
         <h2 id="meme-auteur-titre">Du même auteur : <a href={url(`redaction/#${authorSlug(who.name)}`)}>{who.name}</a></h2>
         <ul>{dumemeAuteur.map((x) => <li><a href={url(`articles/${x.data.slug}/`)}>{x.data.title}</a></li>)}</ul>
-      </aside>
+      </section>
     )}
-    {related.length > 0 && (
-      <aside class="related" aria-labelledby="related-title">
-        <h2 id="related-title">À lire aussi</h2>
-        <div class="grid">{related.map((item) => <Card article={item} />)}</div>
-      </aside>
-    )}
-  </article>
+  </aside>
+  </div>
 </Base>

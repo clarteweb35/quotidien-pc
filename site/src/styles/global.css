@@ -350,11 +350,8 @@ footer .quality .q-score.q-b { background: #5b9a2c; } /* note B: vert plus clair
 .article h1 { font-size: clamp(2.2rem, 4.4vw, 3.3rem); }
 .article .chapo { font-size: 1.4rem; max-width: 62rem; }
 .article .body { font-size: 1.2rem; }
-/* Corps du texte en colonnes de journal: le NOMBRE de colonnes s'adapte a la largeur (colonne mini 30 rem: 2 colonnes sur grand ecran, 1 seule sur tablette et mobile) */
-.article .body { column-width: 30rem; column-gap: 48px; column-rule: 1px solid var(--rule); }
+/* Corps du texte: UNE seule colonne sur toute la largeur, quelle que soit la taille de l'ecran */
 @media (min-width: 0) {
-  .article .body h2 { break-after: avoid; break-inside: avoid; }
-  .article .body > p:first-of-type { margin-top: 0; }
 }
 .avatar { width: 132px; height: 132px; }
 .avatar-lg { width: 150px; height: 150px; }
@@ -401,7 +398,7 @@ footer .quality .q-score.q-b { background: #5b9a2c; } /* note B: vert plus clair
 @media (max-width: 760px) {
   .article h1 { font-size: clamp(1.7rem, 7vw, 2.2rem); }
   .article .chapo { font-size: 1.15rem; }
-  .article .body { font-size: 1.08rem; column-rule: 0; }
+  .article .body { font-size: 1.08rem; }
   .article .illus img { aspect-ratio: 16 / 9; }
   .article-edito .edito-portrait { float: none; display: block; margin: 0 0 10px; }
   .article .body p { text-align: left; hyphens: auto; }
@@ -411,3 +408,20 @@ footer .quality .q-score.q-b { background: #5b9a2c; } /* note B: vert plus clair
   .page-head h1 { font-size: clamp(1.8rem, 7vw, 2.4rem); }
 }
 @media (max-width: 480px) { .article, .prose, main { overflow-wrap: anywhere; } }
+
+/* ===== Page d'article facon grand journal: texte en une colonne a gauche, renvois vers d'autres articles dans la colonne de droite ===== */
+.article-grille { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0 44px; }
+.cote { margin-top: 34px; }
+.cote-bloc { border: 1px solid var(--ink); padding: 14px 18px 6px; margin-bottom: 22px; font-family: var(--sans); }
+.cote-bloc h2 { font-size: 1.1rem; text-transform: uppercase; letter-spacing: .02em; margin: 0 0 8px; }
+.cote-bloc ul { list-style: none; margin: 0; padding: 0; }
+.cote-bloc li { padding: 12px 0; border-top: 1px solid var(--rule); }
+.cote-bloc li:first-child { border-top: 0; }
+.cote-bloc a { color: var(--ink); text-decoration: none; font: 700 1rem/1.35 var(--serif); }
+.cote-bloc a:hover, .cote-bloc a:focus-visible { text-decoration: underline; }
+.cote-rub { display: block; margin-bottom: 3px; font: 700 .68rem var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); }
+@media (min-width: 1000px) {
+  .article-grille { grid-template-columns: minmax(0, 1fr) 340px; }
+  .cote { margin-top: 0; position: sticky; top: 16px; align-self: start; padding-top: 10px; }
+}
+@media (min-width: 1000px) { .article h1 { font-size: clamp(2rem, 3.2vw, 2.7rem); } .article .chapo { font-size: 1.25rem; } .article .body { font-size: 1.15rem; } }

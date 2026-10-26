@@ -271,10 +271,17 @@ test('menu: trois onglets tricolores de meme taille; frappe a la premiere connex
   assert.ok(!h.includes('href="/compteurs/"'), 'plus de lien vers Compteurs');
 });
 
-test('article: colonnes de texte adaptees a la largeur (column-width), pas un nombre fixe', () => {
+test('article: texte en une seule colonne, sur toute la largeur', () => {
   const css = fs.readFileSync(path.join(ROOT, 'site/src/styles/global.css'), 'utf8');
-  assert.ok(/.article .body { column-width: 30rem/.test(css) && !/column-count: 2/.test(css), 'colonnes selon la largeur');
+  assert.ok(!/.article .body {[^}]*column-(width|count)/.test(css), 'jamais de colonnes dans le texte des articles');
   assert.ok(css.includes('@media (max-width: 760px)'), 'regles pour petit ecran');
+});
+
+test('article: colonne de droite avec des renvois vers les autres articles', () => {
+  const slug = fs.readdirSync(path.join(out, 'articles')).find((d) => d !== 'index.html');
+  const html = fs.readFileSync(path.join(out, 'articles', slug, 'index.html'), 'utf8');
+  assert.ok(html.includes('class="article-grille"') && html.includes('class="cote"'), 'colonne laterale');
+  assert.ok(/class="cote-bloc"[^>]*>s*<h2[^>]*>À lire aussi/.test(html) || html.includes('À lire aussi'), 'renvois');
 });
 
 test.after(() => fs.rmSync(out, { recursive: true, force: true }));
