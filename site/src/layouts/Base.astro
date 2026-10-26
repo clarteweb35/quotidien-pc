@@ -27,11 +27,26 @@ const quality = [
   { name: 'Website Carbon', score: 'A', url: 'https://www.websitecarbon.com/website/quotidien-pc-fr/' },
   { name: 'PageSpeed Insights', score: '100', url: 'https://pagespeed.web.dev/analysis/https-quotidien-pc-fr/m5tdao3js7?form_factor=mobile' },
 ];
+// Menu: entrees dans l'ordre; chaque entree se « tape » a la suite de la precedente (voir .nav a dans global.css).
+const MENU = [
+  { href: url(), label: 'À la une', cle: 'home' },
+  ...categories.filter((c) => !c.afterCompteurs).map((c) => ({ href: url(`rubrique/${c.slug}/`), label: c.name, cle: c.slug })),
+  { href: url('compteurs/'), label: 'Compteurs', cle: 'compteurs' },
+  ...categories.filter((c) => c.afterCompteurs).map((c) => ({ href: url(`rubrique/${c.slug}/`), label: c.name, cle: c.slug })),
+  { href: url('petites-annonces/'), label: 'Petites annonces', cle: 'annonces' },
+  { href: url('rencontres/'), label: 'Rencontres', cle: 'rencontres' },
+  { href: url('jeux/'), label: 'Jeux', cle: 'jeux' },
+];
+const SEC_PAR_LETTRE = 0.02;
+let cumul = 0.25;
+const menuFrappe = MENU.map((m) => { const o = { ...m, n: m.label.length, t: Number(cumul.toFixed(2)) }; cumul += m.label.length * SEC_PAR_LETTRE; return o; });
+const menuFin = Number(cumul.toFixed(2));
 const today = new Intl.DateTimeFormat('fr-FR', { timeZone: 'Europe/Paris', dateStyle: 'full' }).format(new Date());
 ---
 <!doctype html>
 <html lang="fr">
   <head>
+    <script is:inline>{`try{if(sessionStorage.getItem("frappe"))document.documentElement.classList.add("sans-frappe");else sessionStorage.setItem("frappe","1")}catch(e){}`}</script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
@@ -69,20 +84,12 @@ const today = new Intl.DateTimeFormat('fr-FR', { timeZone: 'Europe/Paris', dateS
       <p class="date"><span id="today">{today}</span><span id="clock"></span></p>
       <script is:inline>{`(function(){var c=document.getElementById("clock");if(!c)return;var f=new Intl.DateTimeFormat("fr-FR",{timeZone:"Europe/Paris",hour:"2-digit",minute:"2-digit"});function t(){c.textContent=" · "+f.format(new Date()).replace(":"," h ")}t();setInterval(t,15000)})()`}</script>
     </header>
-    <nav class="nav" aria-label="Rubriques">
+    <nav class="nav" aria-label="Rubriques" style={`--fin:${menuFin}s`}>
       <div class="wrap">
         <ul>
-          <li><a href={url()} aria-current={current === 'home' ? 'page' : undefined}>À la une</a></li>
-          {categories.filter((c) => !c.afterCompteurs).map((c) => (
-            <li><a href={url(`rubrique/${c.slug}/`)} aria-current={current === c.slug ? 'page' : undefined}>{c.name}</a></li>
+          {menuFrappe.map((m) => (
+            <li style={`--n2:${m.n};--t2:${m.t}s`}><a href={m.href} style={`--n:${m.n};--t:${m.t}s`} aria-current={current === m.cle ? 'page' : undefined}>{m.label}</a></li>
           ))}
-          <li><a href={url('compteurs/')} aria-current={current === 'compteurs' ? 'page' : undefined}>Compteurs</a></li>
-          {categories.filter((c) => c.afterCompteurs).map((c) => (
-            <li><a href={url(`rubrique/${c.slug}/`)} aria-current={current === c.slug ? 'page' : undefined}>{c.name}</a></li>
-          ))}
-          <li><a href={url('petites-annonces/')} aria-current={current === 'annonces' ? 'page' : undefined}>Petites annonces</a></li>
-          <li><a href={url('rencontres/')} aria-current={current === 'rencontres' ? 'page' : undefined}>Rencontres</a></li>
-          <li><a href={url('jeux/')} aria-current={current === 'jeux' ? 'page' : undefined}>Jeux</a></li>
         </ul>
       </div>
     </nav>

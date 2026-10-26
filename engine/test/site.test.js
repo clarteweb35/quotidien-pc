@@ -186,4 +186,12 @@ test('maillage interne: manchette partout, fil d\'Ariane, precedent/suivant, lie
   assert.ok(page('redaction').includes('Derniers articles') || page('redaction').includes('Derniers éditos'), 'articles de chaque journaliste');
 });
 
+test('menu tape a la machine et titre de l\'edito: balisage prevu, accessible sans JavaScript', () => {
+  const h = page('.');
+  assert.ok(/<a [^>]*style="--n:\d+;--t:[\d.]+s"/.test(h), 'entrees du menu avec duree de frappe');
+  assert.ok(h.includes('sessionStorage.getItem("frappe")'), 'drapeau une fois par session');
+  assert.ok(h.includes('--fin:'), 'fin de la frappe du menu exposee au titre de l\'edito');
+  assert.ok(h.includes('Pourquoi le dimanche devrait être transféré au mardi') || h.includes('class="mm-titre"'), 'le titre de l\'edito est dans le HTML (lisible sans JS)');
+});
+
 test.after(() => fs.rmSync(out, { recursive: true, force: true }));

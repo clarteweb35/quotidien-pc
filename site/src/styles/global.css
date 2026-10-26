@@ -285,3 +285,47 @@ footer .brand p { flex: 1 1 auto; text-align: center; }
 .ses-articles { font: .85rem/1.5 var(--sans); color: var(--ink-2); }
 .card .byline a { color: inherit; text-decoration: none; border-bottom: 1px dotted currentColor; }
 @media (max-width: 560px) { .suivant { grid-template-columns: 1fr; } .suivant .suite { text-align: left; } }
+
+/* ===== Menu « tape a la machine » (CSS pur: revelation par paliers + curseur), une fois par session ===== */
+@media (prefers-reduced-motion: no-preference) {
+  html:not(.sans-frappe) .nav a { animation: frappe calc(var(--n) * .02s) steps(var(--n)) var(--t) both; }
+  /* le curseur est sur le <li> (l'<a> est rogne par la revelation, il ne pourrait pas s'y afficher) */
+  html:not(.sans-frappe) .nav li { position: relative; }
+  html:not(.sans-frappe) .nav li::after { content: ''; position: absolute; top: 28%; bottom: 28%; left: 0; width: 2px; background: var(--accent); pointer-events: none; animation: frappe-curseur-x calc(var(--n2) * .02s) steps(var(--n2)) var(--t2) both, frappe-curseur-o calc(var(--n2) * .02s) linear var(--t2) both; }
+  @keyframes frappe { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+  @keyframes frappe-curseur-x { from { left: 0; } to { left: 100%; } }
+  @keyframes frappe-curseur-o { 0% { opacity: 0; } 1% { opacity: 1; } 99% { opacity: 1; } 100% { opacity: 0; } }
+}
+
+/* ===== Effets « pro »: tout est desactive si le visiteur demande de reduire les animations ===== */
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+  /* Menu colle en haut de l'ecran, avec une ombre qui apparait au defilement */
+  .nav { position: sticky; top: 0; z-index: 30; background: var(--paper); }
+  @supports (animation-timeline: scroll()) {
+    .nav { animation: nav-ombre linear both; animation-timeline: scroll(root); animation-range: 0 140px; }
+    @keyframes nav-ombre { from { box-shadow: 0 0 0 rgba(0,0,0,0); } to { box-shadow: 0 6px 18px rgba(22, 20, 15, .14); } }
+    /* Textes et images d'article: apparition douce a l'entree dans l'ecran */
+    .article .body > p, .article .body > h2 { animation: apparait linear both; animation-timeline: view(); animation-range: entry 0% entry 30%; }
+    .article .illus img { animation: rideau linear both; animation-timeline: view(); animation-range: entry 0% entry 55%; }
+    .card .photo { animation: rideau linear both; animation-timeline: view(); animation-range: entry 0% entry 50%; }
+    .section-title, .page-head h1 { animation: apparait linear both; animation-timeline: view(); animation-range: entry 0% entry 40%; }
+    @keyframes apparait { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+    @keyframes rideau { from { clip-path: inset(0 0 100% 0); } to { clip-path: inset(0 0 0 0); } }
+  }
+  /* Survol: cartes qui se soulevent, liens du texte qui se soulignent, boutons de partage qui rebondissent */
+  .card { transition: transform .25s ease, box-shadow .25s ease; }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 14px 24px -14px rgba(22, 20, 15, .35); }
+  .article .body a { background: linear-gradient(var(--accent), var(--accent)) 0 100% / 0 2px no-repeat; text-decoration: none; transition: background-size .3s ease; }
+  .article .body a:hover { background-size: 100% 2px; }
+  .share a, .share button { transition: transform .2s cubic-bezier(.3, 1.6, .6, 1), background .15s, color .15s, border-color .15s; }
+  .share a:hover, .share button:hover { transform: translateY(-3px) scale(1.08); }
+  .tags a, .mots-cles a { transition: background .2s, color .2s, border-color .2s; }
+  .tags a:hover, .mots-cles a:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  /* Entree de la page: le logo descend doucement */
+  .masthead .logo { animation: logo-entree .8s ease-out both; }
+  @keyframes logo-entree { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: none; } }
+}
+html { scroll-padding-top: 56px; } /* les ancres (#ref-001, #pa-029...) ne passent pas sous le menu colle */
+::selection { background: #f3d9d6; color: var(--ink); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }

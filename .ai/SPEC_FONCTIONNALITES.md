@@ -45,6 +45,7 @@
 - Bandeau « Journal satirique », logo, date **et heure de Paris en direct**, menu (8 rubriques + Compteurs).
 - Pied de page compact : logo + avertissement satirique + liens (rédaction, à propos, mentions légales, plan du site, RSS) ; dernière ligne : copyright à gauche, « Un site léger et accessible, mesuré le 25 octobre 2026 » et pastilles **EcoIndex A, Website Carbon A, PageSpeed 100** à droite (HTML/CSS pur, liens vers les analyses, aucune image ni requête externe).
 - Corps d'article **justifié** (y compris mobile), titres et chapôs non justifiés.
+- **Menu et titre de l'édito « tapés à la machine »** : les entrées du menu se révèlent lettre à lettre avec un curseur rouge (CSS pur, `steps()`), puis le titre de la Manchette se tape (petit script, texte complet réservé donc sans décalage), **une seule fois par session** (`sessionStorage`), jamais sous « réduire les animations ». **Effets « pro »** : menu collé en haut avec ombre au défilement, textes d'article et images qui apparaissent à l'entrée dans l'écran, cartes qui se soulèvent, soulignement animé des liens, boutons de partage qui rebondissent, défilement doux, ancres décalées sous le menu (tout en CSS, avec repli sans animation).
 - Animations sobres (CSS pur) : zoom au survol, apparition des cartes, léger zoom de la une, transitions de page (Chrome/Edge), tout coupé si « réduire les animations ».
 
 ### 2.3 Bandeaux par rubrique (`Marches`, `Resultats`, `Gimmick`)

@@ -19,7 +19,45 @@ const photo = who ? portrait(who.name) : null;
     </div>
   </section>
 )}
+<script>
+  // Le titre de l'edito se tape apres le menu, une fois par session. Le texte complet reste en place (partie non tapee invisible): aucun decalage.
+  const lien = document.querySelector<HTMLElement>('.mm-titre a');
+  const nav = document.querySelector<HTMLElement>('.nav');
+  const calme = matchMedia('(prefers-reduced-motion: reduce)').matches || document.documentElement.classList.contains('sans-frappe');
+  if (lien && nav && !calme) {
+    const texte = lien.textContent ?? '';
+    const debut = (parseFloat(nav.style.getPropertyValue('--fin')) || 0) * 1000 + 250;
+    const tape = document.createElement('span');
+    const reste = document.createElement('span');
+    tape.className = 'mm-tape';
+    reste.className = 'mm-reste';
+    reste.textContent = texte;
+    lien.textContent = '';
+    lien.append(tape, reste);
+    lien.style.animation = 'none'; // annule le masquage de depart (cf. .mm-titre a ci-dessous)
+    lien.style.opacity = '1';
+    lien.closest('.mm')?.classList.add('mm-frappe');
+    let i = 0;
+    setTimeout(() => {
+      const id = setInterval(() => {
+        i++;
+        tape.textContent = texte.slice(0, i);
+        reste.textContent = texte.slice(i);
+        if (i >= texte.length) { clearInterval(id); lien.closest('.mm')?.classList.remove('mm-frappe'); lien.closest('.mm')?.classList.add('mm-fini'); }
+      }, 38);
+    }, debut);
+  }
+</script>
 <style>
+  .mm-reste { visibility: hidden; }
+  /* Avant l'arrivee du script, le titre est masque (sinon il clignoterait: plein, vide, puis tape). Filet de securite: reapparait seul apres 5 s. */
+  @media (prefers-reduced-motion: no-preference) {
+    :global(html:not(.sans-frappe)) .mm-titre a { opacity: 0; animation: mm-secours 0s linear 5s forwards; }
+    @keyframes mm-secours { to { opacity: 1; } }
+  }
+  .mm-frappe .mm-tape::after { content: ''; display: inline-block; width: .09em; height: .95em; margin-left: .06em; vertical-align: -.1em; background: #6b21a8; animation: mm-curseur .6s steps(1) infinite; }
+  @keyframes mm-curseur { 50% { opacity: 0; } }
+
   .mm { margin: 18px 0 6px; padding: 12px 18px 14px; border-top: 4px double var(--ink); border-bottom: 4px double var(--ink); background: linear-gradient(180deg, rgba(107, 33, 168, .07), transparent 70%); }
   .mm-etiquette { margin: 0 0 8px; font: 800 .72rem var(--sans); letter-spacing: .24em; text-transform: uppercase; color: #6b21a8; text-align: center; }
   .mm-corps { display: flex; gap: 16px; align-items: flex-start; }
