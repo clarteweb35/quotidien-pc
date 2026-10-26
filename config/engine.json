@@ -11,7 +11,7 @@
       "maxOutputTokens": 1024
     },
     "maxInputChars": 12000,
-    "maxRetries": 3,
+    "maxRetries": 1,
     "retryBaseDelayMs": 4000,
     "requestTimeoutMs": 90000,
     "minDelayBetweenCallsMs": 1500,
