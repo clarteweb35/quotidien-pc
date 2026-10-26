@@ -4,13 +4,16 @@ import { rubrique, categoriesAnnonces, annonces, agence, manchetteRencontres } f
 import { url as lien } from '../lib/site';
 import { contactEmail } from '../lib/legal';
 import { url } from '../lib/site';
+import { melangeDuJour } from '../lib/melange';
 import AnnonceCarte from '../components/AnnonceCarte.astro';
 import PubDefilante from '../components/PubDefilante.astro';
 
 const compte = (slug: string) => annonces.filter((a) => a.cat === slug).length;
 const milieu = Math.ceil(annonces.length / 2);
-const premieres = annonces.slice(0, milieu);
-const dernieres = annonces.slice(milieu);
+// Ordre different chaque jour (graine = date de Paris), stable pendant la journee
+const duJour = melangeDuJour(annonces, 'petites-annonces');
+const premieres = duJour.slice(0, milieu);
+const dernieres = duJour.slice(milieu);
 ---
 <Base manchette={false} title={rubrique.titre} description={`${rubrique.accroche} ${annonces.length} annonces fictives et satiriques.`} current="annonces">
   <div class="page-head">

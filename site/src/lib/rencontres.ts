@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { melangeDuJour } from './melange';
 import data from '../../../config/rencontres.json';
 
 export interface Rencontre {
@@ -27,7 +28,7 @@ export function photoExistante(r: Rencontre): string | null {
   return fs.existsSync(path.resolve('public', 'rencontres', r.photo)) ? `rencontres/${r.photo}` : null;
 }
 
-/** Annonces d'une categorie, dans l'ordre du fichier; les categories vides ne sont pas affichees. */
+/** Annonces d'une categorie, dans un ordre qui change chaque jour (references et ancres inchangees); les categories vides ne sont pas affichees. */
 export const parCategorie = categories
-  .map((c) => ({ ...c, annonces: rencontres.filter((r) => r.cat === c.slug) })) // ordre du fichier
+  .map((c) => ({ ...c, annonces: melangeDuJour(rencontres.filter((r) => r.cat === c.slug), c.slug) }))
   .filter((c) => c.annonces.length > 0);

@@ -294,4 +294,14 @@ test('en-tete: heure et decomptes avant la presidentielle et avant Noel', () => 
   assert.ok(h.includes('id="clock"'), 'heure');
 });
 
+test('petites annonces et rencontres: ordre different chaque jour, stable dans la journee', async () => {
+  const { melangeDuJour } = await import('../../site/src/lib/melange.js');
+  const l = Array.from({ length: 40 }, (_, i) => i);
+  const j1 = melangeDuJour(l, 'x', '2026-10-26');
+  assert.deepEqual(j1, melangeDuJour(l, 'x', '2026-10-26'), 'stable pendant la journee');
+  assert.notDeepEqual(j1, melangeDuJour(l, 'x', '2026-10-27'), 'change le lendemain');
+  assert.deepEqual([...j1].sort((x, y) => x - y), l, 'aucune annonce perdue ni dupliquee');
+  assert.notDeepEqual(j1, l, 'ordre mele');
+});
+
 test.after(() => fs.rmSync(out, { recursive: true, force: true }));
