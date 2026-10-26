@@ -62,7 +62,9 @@ const donnees = { base: url(''), pubs: pubsCompactes };
   .pd-prix { font-weight: 700; }
   .pub-def-texte:hover .pd-titre, .pub-def-texte:focus-visible .pd-titre { text-decoration: underline; }
   /* Annonce « soldes »: bandeau rouge, texte blanc et gras */
-  .pub-def.solde { background: #c8102e; border-color: #c8102e; }
+  .pub-def.solde, .pub-def.solde .pub-def-viewport, .pub-def.solde .pub-def-logo { background: #c8102e; }
+  .pub-def.solde { border-color: #c8102e; }
+  .pub-def.solde .pub-def-label { background: #c8102e; color: #fff; border-right: 1px solid rgba(255, 255, 255, .55); }
   .pub-def.solde .pub-def-texte { color: #fff; font-weight: 800; }
   .pub-def.solde .pd-titre, .pub-def.solde .pd-solde { color: #fff; font: 900 1.1rem var(--sans); text-transform: uppercase; }
   .pub-def.solde .pub-def-texte > *::after { color: #fff; }

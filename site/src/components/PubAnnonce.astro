@@ -60,8 +60,8 @@ const donnees = { base: url(''), pubs: pubsCompactes };
   .pub-texte-col { flex: 1; min-width: 0; }
   .pub-marque { margin: 0; font: 800 .7rem var(--sans); letter-spacing: .14em; text-transform: uppercase; }
   .pub-titre { margin: 2px 0 4px; font: 700 1.1rem/1.25 var(--serif); }
-  .pub-solde { overflow: hidden; white-space: nowrap; background: #fff; border: 2px solid #c8102e; padding: 4px 0; }
-  .pub-solde .pub-titre-txt { display: inline-block; color: #c8102e; font: 900 1.2rem/1.2 var(--sans); text-transform: uppercase; padding-left: 100%; animation: pub-solde-defile 11s linear infinite; }
+  .pub-solde { overflow: hidden; white-space: nowrap; background: #c8102e; border: 2px solid #c8102e; padding: 5px 0; }
+  .pub-solde .pub-titre-txt { display: inline-block; color: #fff; font: 900 1.2rem/1.2 var(--sans); text-transform: uppercase; padding-left: 100%; animation: pub-solde-defile 11s linear infinite; }
   @keyframes pub-solde-defile { to { transform: translateX(-100%); } }
   @media (prefers-reduced-motion: reduce) { .pub-solde .pub-titre-txt { animation: none; padding-left: 8px; } .pub-solde { white-space: normal; } }
   .pub-accroche { margin: 0 0 4px; font: italic 700 .95rem var(--serif); }

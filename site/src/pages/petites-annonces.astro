@@ -138,8 +138,8 @@ const dernieres = annonces.slice(milieu);
   .pa-logo { display: block; width: 128px; height: auto; max-height: 128px; object-fit: contain; margin: 0 auto; }
   .pa-logo-fig figcaption { margin-top: 4px; font: 800 .8rem var(--sans); letter-spacing: .04em; }
   /* Titre « facon soldes »: rouge, gras, defilant */
-  .pa-solde { overflow: hidden; white-space: nowrap; background: #fff; border: 2px solid #c8102e; padding: 4px 0; margin: 0 0 6px !important; }
-  .solde-texte { display: inline-block; color: #c8102e; font: 900 1.25rem/1.2 var(--sans); text-transform: uppercase; letter-spacing: .02em; padding-left: 100%; animation: solde-defile 11s linear infinite; }
+  .pa-solde { overflow: hidden; white-space: nowrap; background: #c8102e; border: 2px solid #c8102e; padding: 5px 0; margin: 0 0 6px !important; }
+  .solde-texte { display: inline-block; color: #fff; font: 900 1.25rem/1.2 var(--sans); text-transform: uppercase; letter-spacing: .02em; padding-left: 100%; animation: solde-defile 11s linear infinite; }
   @keyframes solde-defile { to { transform: translateX(-100%); } }
   @media (prefers-reduced-motion: reduce) { .solde-texte { animation: none; padding-left: 8px; white-space: normal; } .pa-solde { white-space: normal; } }
   .pa-slogan { font: italic .8rem var(--serif); margin-top: 8px !important; }
