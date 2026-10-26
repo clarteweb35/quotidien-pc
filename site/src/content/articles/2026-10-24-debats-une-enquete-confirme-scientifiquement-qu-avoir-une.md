@@ -1,7 +1,7 @@
 ---
 id: "960c9e87e0d0"
 ref: "261025-X1"
-author: "Guy Vite"
+author: "Claire Obscur"
 title: "Débats : une enquête confirme scientifiquement qu’avoir une réponse évite les silences gênants"
 chapo: "Après avoir minutieusement décortiqué des centaines d’heures de joutes oratoires et de duels politiques au sommet, un collège de chercheurs parvient à une conclusion implacable : face à une objection, disposer d’un argument améliore nettement l’impression générale."
 description: "Une étude sociologique d’une rigueur absolue démontre qu’avoir du répondant lors d’un débat est plus efficace que de fixer le sol en silence."
