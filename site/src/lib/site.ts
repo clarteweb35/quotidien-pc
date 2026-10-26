@@ -3,7 +3,7 @@ import categoriesFile from '../../../config/categories.json';
 import editorial from '../../../config/editorial.json';
 
 export type Article = CollectionEntry<'articles'>;
-export const categories = categoriesFile.categories as { slug: string; name: string; description: string; color: string; afterCompteurs?: boolean }[];
+export const categories = categoriesFile.categories as { slug: string; name: string; description: string; color: string; menuEnd?: boolean }[];
 export const siteName: string = editorial.publicationName;
 export const satireNotice: string = editorial.satireNotice;
 export const manualImageCredit: string = editorial.manualImageCredit;

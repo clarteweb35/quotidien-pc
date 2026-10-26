@@ -1,5 +1,5 @@
 ---
-// « La Manchette de la Manchette » : l'edito du jour (le plus recent) en gros titre, avec renvoi vers la page Editos.
+// « La dernière manchette de la Manchette » : l'edito du jour (le plus recent) en gros titre, avec renvoi vers la page Editos.
 import { allArticles, formatDate, url } from '../lib/site';
 import { journalist, portrait } from '../lib/authors';
 const edito = (await allArticles()).find((a) => a.data.category === 'editos');
@@ -8,7 +8,7 @@ const photo = who ? portrait(who.name) : null;
 ---
 {edito && (
   <section class="mm" aria-labelledby="mm-etiquette">
-    <p class="mm-etiquette" id="mm-etiquette">La Manchette de la Manchette</p>
+    <p class="mm-etiquette" id="mm-etiquette">La dernière manchette de la Manchette</p>
     <div class="mm-corps">
       {photo && <img class="mm-photo" src={url(photo)} width="72" height="72" alt={`Portrait fictif de ${who!.name} (image générée par IA)`} />}
       <div>

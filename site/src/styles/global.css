@@ -384,3 +384,15 @@ footer .quality .q-score.q-b { background: #5b9a2c; } /* note B: vert plus clair
 .prose .bureau img { aspect-ratio: 21 / 8; object-fit: cover; }
 .prose .team li:only-child { grid-column: 1 / -1; }
 .prose .team li:only-child > div p { max-width: 62rem; }
+
+/* ===== Onglets tricolores (Petites annonces, Rencontres, Jeux): meme taille, bleu / blanc / rouge, accoles comme le drapeau ===== */
+.nav ul { gap: 4px 9px; font-size: .86rem; }
+.nav .onglet-li + .onglet-li { margin-left: -9px; }
+.nav a.onglet { width: 112px; padding: 11px 0; text-align: center; border-bottom: 0; box-sizing: border-box; }
+.onglet-bleu a.onglet { background: #0055a4; color: #fff; }
+.onglet-blanc a.onglet { background: #fff; color: #16140f; box-shadow: inset 0 1px 0 #d6d1c4, inset 0 -1px 0 #d6d1c4; }
+.onglet-rouge a.onglet { background: #ef4135; color: #fff; }
+.nav a.onglet:hover { filter: brightness(.94); }
+.nav a.onglet[aria-current] { box-shadow: inset 0 -4px 0 #16140f; }
+.onglet-blanc a.onglet[aria-current] { box-shadow: inset 0 -4px 0 #ef4135; }
+.onglet-li::after { display: none; } /* pas de curseur de frappe sur les onglets: ils sont deja un bloc de couleur */

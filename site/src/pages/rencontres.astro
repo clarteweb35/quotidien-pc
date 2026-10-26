@@ -6,7 +6,7 @@ import { authorSlug } from '../lib/authors';
 import { partenaire } from '../lib/annonces';
 import EncartAnnonces from '../components/EncartAnnonces.astro';
 ---
-<Base title={page.titreSeo} description={page.descriptionSeo} current="rencontres">
+<Base manchette={false} title={page.titreSeo} description={page.descriptionSeo} current="rencontres">
   <div class="page-head">
     <span class="kicker">Rubrique</span>
     <h1>{page.titre}</h1>

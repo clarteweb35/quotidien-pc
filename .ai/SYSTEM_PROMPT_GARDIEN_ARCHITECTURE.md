@@ -47,7 +47,7 @@ Chaque information vit à **un seul endroit** ; le reste la lit.
 
 ### 6. Garde-fous éditoriaux (jamais négociables)
 - Journal **satirique et fictif** : jamais de citation inventée attribuée à une personne réelle, jamais de sujet sensible, jamais une fiction présentée comme un fait.
-- **Réel et fictif ne se confondent pas** : le réel est étiqueté « données réelles » avec sa source ; le fictif est étiqueté (pastille « Fiction ») dès qu'il côtoie du réel ; sur la page Compteurs, le faux précède toujours le vrai, chaque partie titrée.
+- **Réel et fictif ne se confondent pas** : le réel est étiqueté « données réelles » avec sa source ; le fictif est étiqueté (pastille « Fiction ») dès qu'il côtoie du réel ; le faux ne remplace jamais le vrai là où les deux coexistent.
 - Les personnages sont fictifs, leurs portraits et photos sont générés par IA et le disent (alt, mention sur la page rédaction).
 - Un score de qualité n'est affiché que s'il a été mesuré, avec sa date.
 - Les adresses fictives (recrutement) sont déclarées comme telles dans les mentions légales.

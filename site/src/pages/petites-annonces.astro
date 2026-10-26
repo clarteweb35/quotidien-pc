@@ -12,7 +12,7 @@ const milieu = Math.ceil(annonces.length / 2);
 const premieres = annonces.slice(0, milieu);
 const dernieres = annonces.slice(milieu);
 ---
-<Base title={rubrique.titre} description={`${rubrique.accroche} ${annonces.length} annonces fictives et satiriques.`} current="annonces">
+<Base manchette={false} title={rubrique.titre} description={`${rubrique.accroche} ${annonces.length} annonces fictives et satiriques.`} current="annonces">
   <div class="page-head">
     <span class="kicker">Rubrique</span>
     <h1>{rubrique.titre}</h1>

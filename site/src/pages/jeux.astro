@@ -2,7 +2,7 @@
 import EncartAnnonces from '../components/EncartAnnonces.astro';
 import Base from '../layouts/Base.astro';
 ---
-<Base title="Jeux" description="Un vrai sudoku jouable en ligne et trois mini-jeux de bureau, sans inscription, sans publicité et sans cookie." current="jeux">
+<Base manchette={false} title="Jeux" description="Un vrai sudoku jouable en ligne et trois mini-jeux de bureau, sans inscription, sans publicité et sans cookie." current="jeux">
   <div class="page-head">
     <span class="kicker">Pause café</span>
     <h1>Jeux</h1>
@@ -99,9 +99,11 @@ import Base from '../layouts/Base.astro';
   .sdk-plateau .case:not(.donnee) { color: #1f5f8b; }
   .sdk-pave { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin: 12px auto 0; max-width: 460px; }
   .sdk-pave button { min-width: 2.6rem; }
-  .mem-grille { display: grid; grid-template-columns: repeat(4, minmax(0, 150px)); gap: 10px; margin: 10px 0 14px; }
-  .mem-carte { width: 100%; aspect-ratio: 1; height: auto; padding: 0; line-height: 1; font-size: clamp(2.6rem, 11vw, 5.2rem) !important; display: grid; place-items: center; }
-  .mem-carte[data-etat="cachee"] { font-size: clamp(2rem, 8vw, 3.6rem) !important; }
+  .mem-grille { display: grid; grid-template-columns: repeat(4, 96px); gap: 8px; margin: 10px 0 14px; }
+  /* l'emoji occupe toute la case (96 px, emoji ~84 px) */
+  .mem-carte { width: 96px; height: 96px; padding: 0; line-height: 1; font-size: 84px !important; display: grid; place-items: center; overflow: hidden; }
+  .mem-carte[data-etat="cachee"] { font-size: 40px !important; }
+  @media (max-width: 460px) { .mem-grille { grid-template-columns: repeat(4, 1fr); } .mem-carte { width: 100%; height: auto; aspect-ratio: 1; font-size: 17vw !important; } .mem-carte[data-etat="cachee"] { font-size: 9vw !important; } }
   .mem-carte[data-etat="cachee"] { background: var(--ink); color: var(--paper); }
   .mem-carte[data-etat="trouvee"] { background: #dff0e0; border-color: #15803d; cursor: default; }
   .pong-barre { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; margin-bottom: 10px; }

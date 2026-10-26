@@ -10,13 +10,14 @@ interface Props {
   description?: string;
   type?: 'website' | 'article';
   noindex?: boolean;
-    follow?: boolean; // avec noindex: laisser les robots suivre les liens (pages minces, ex. mots-cles)
+    manchette?: boolean; // La derniere manchette de la Manchette sous le menu (absente de la redaction, des petites annonces, des rencontres et des jeux)
+  follow?: boolean; // avec noindex: laisser les robots suivre les liens (pages minces, ex. mots-cles)
   current?: string;
   jsonLd?: object;
   csp?: string;
   ogImage?: string;
 }
-const { title, description = tagline, type = 'website', noindex = false, follow = false, current = '', jsonLd, csp, ogImage } = Astro.props;
+const { title, description = tagline, type = 'website', noindex = false, follow = false, manchette = true, current = '', jsonLd, csp, ogImage } = Astro.props;
 const fullTitle = title ? `${title} — ${siteName}` : `${siteName} — ${tagline}`;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const share = new URL(ogImage ?? url('brand/og-default.png'), Astro.site).toString();
@@ -30,12 +31,12 @@ const quality = [
 // Menu: entrees dans l'ordre; chaque entree se « tape » a la suite de la precedente (voir .nav a dans global.css).
 const MENU = [
   { href: url(), label: 'À la une', cle: 'home' },
-  ...categories.filter((c) => !c.afterCompteurs).map((c) => ({ href: url(`rubrique/${c.slug}/`), label: c.name, cle: c.slug })),
-  { href: url('compteurs/'), label: 'Compteurs', cle: 'compteurs' },
-  ...categories.filter((c) => c.afterCompteurs).map((c) => ({ href: url(`rubrique/${c.slug}/`), label: c.name, cle: c.slug })),
-  { href: url('petites-annonces/'), label: 'Petites annonces', cle: 'annonces' },
-  { href: url('rencontres/'), label: 'Rencontres', cle: 'rencontres' },
-  { href: url('jeux/'), label: 'Jeux', cle: 'jeux' },
+  ...categories.filter((c) => !c.menuEnd).map((c) => ({ href: url(`rubrique/${c.slug}/`), label: c.name, cle: c.slug })),
+  ...categories.filter((c) => c.menuEnd).map((c) => ({ href: url(`rubrique/${c.slug}/`), label: c.name, cle: c.slug })),
+  // Trois onglets de meme taille, bleu / blanc / rouge: le drapeau francais
+  { href: url('petites-annonces/'), label: 'Petites annonces', cle: 'annonces', onglet: 'bleu' },
+  { href: url('rencontres/'), label: 'Rencontres', cle: 'rencontres', onglet: 'blanc' },
+  { href: url('jeux/'), label: 'Jeux', cle: 'jeux', onglet: 'rouge' },
 ];
 const SEC_PAR_LETTRE = 0.02;
 let cumul = 0.25;
@@ -46,7 +47,7 @@ const today = new Intl.DateTimeFormat('fr-FR', { timeZone: 'Europe/Paris', dateS
 <!doctype html>
 <html lang="fr">
   <head>
-    <script is:inline>{`try{var t=+localStorage.getItem("frappe")||0;if(Date.now()-t<432e5)document.documentElement.classList.add("sans-frappe");else localStorage.setItem("frappe",String(Date.now()))}catch(e){}`}</script>
+    <script is:inline>{`try{if(localStorage.getItem("frappe"))document.documentElement.classList.add("sans-frappe");else localStorage.setItem("frappe","1")}catch(e){}`}</script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
@@ -88,12 +89,12 @@ const today = new Intl.DateTimeFormat('fr-FR', { timeZone: 'Europe/Paris', dateS
       <div class="wrap">
         <ul>
           {menuFrappe.map((m) => (
-            <li style={`--n2:${m.n};--t2:${m.t}s`}><a href={m.href} style={`--n:${m.n};--t:${m.t}s`} aria-current={current === m.cle ? 'page' : undefined}>{m.label}</a></li>
+            <li class={m.onglet ? `onglet-li onglet-${m.onglet}` : undefined} style={`--n2:${m.n};--t2:${m.t}s`}><a class={m.onglet ? 'onglet' : undefined} href={m.href} style={`--n:${m.n};--t:${m.t}s`} aria-current={current === m.cle ? 'page' : undefined}>{m.label}</a></li>
           ))}
         </ul>
       </div>
     </nav>
-    {!csp && !noindex && (
+    {!csp && !noindex && manchette && (
       <div class="wrap manchette-globale"><ManchetteEdito /></div>
     )}
     <main id="contenu" class="wrap"><slot /></main>

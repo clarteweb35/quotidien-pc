@@ -51,7 +51,7 @@ test('jeux et editos: pages construites et menu complet', () => {
   assert.ok(page('jeux').includes('Sudoku'));
   assert.ok(page('rubrique/editos').includes('Éditos'));
   const menu = page('.');
-  assert.ok(menu.indexOf('>Compteurs<') < menu.indexOf('>Éditos<') && menu.indexOf('>Éditos<') < menu.indexOf('>Jeux<'), 'ordre du menu: Compteurs, Éditos, Jeux');
+  assert.ok(menu.indexOf('>Éditos<') < menu.indexOf('>Petites annonces<') && menu.indexOf('>Petites annonces<') < menu.indexOf('>Rencontres<') && menu.indexOf('>Rencontres<') < menu.indexOf('>Jeux<'), 'ordre du menu: Éditos, Petites annonces, Rencontres, Jeux');
 });
 
 test('petites annonces: page, menu, donnees coherentes et mention obligatoire', () => {
@@ -115,10 +115,10 @@ test('rencontres: references uniques, photos existantes, page et menu', () => {
   assert.ok(page('.').includes('href="/rencontres/"'), 'lien dans le menu');
 });
 
-test('accueil: La Manchette de la Manchette; articles: publicite fictive tiree des petites annonces', () => {
+test('accueil: La dernière manchette de la Manchette; articles: publicite fictive tiree des petites annonces', () => {
   const home = page('.');
-  assert.ok(home.includes('La Manchette de la Manchette') && home.includes('href="/rubrique/editos/"'), 'manchette de l\'edito du jour');
-  assert.ok(home.indexOf('La Manchette de la Manchette') < home.indexOf('class="flash"'), 'la manchette est au-dessus du fil À l\'instant');
+  assert.ok(home.includes('La dernière manchette de la Manchette') && home.includes('href="/rubrique/editos/"'), 'manchette de l\'edito du jour');
+  assert.ok(home.indexOf('La dernière manchette de la Manchette') < home.indexOf('class="flash"'), 'la manchette est au-dessus du fil À l\'instant');
   assert.ok(home.includes('sélectionnées par Madame de Valmorin') && home.includes('href="/rencontres/"'), 'bandeau Rencontres sur l\'accueil');
   const debut = home.indexOf('Dernières nouvelles');
   const apresTitre = home.slice(debut);
@@ -169,9 +169,11 @@ test('SEO: mots-cles minces en noindex et hors sitemap, lectures proches, schema
 });
 
 test('maillage interne: manchette partout, fil d\'Ariane, precedent/suivant, liens vers les fiches', () => {
-  for (const pg of ['.', 'redaction', 'jeux', 'compteurs', 'rubrique/sport', 'petites-annonces']) assert.ok(page(pg).includes('La Manchette de la Manchette'), `manchette sur ${pg}`);
-  assert.ok(page('.').indexOf('La Manchette de la Manchette') < page('.').indexOf('<main'), 'la manchette est au-dessus du contenu, sous le menu');
-  assert.equal((page('.').match(/La Manchette de la Manchette</g) || []).length, 1, 'une seule manchette par page');
+  for (const pg of ['.', 'rubrique/sport', 'rubrique/editos']) assert.ok(page(pg).includes('La dernière manchette de la Manchette'), `manchette sur ${pg}`);
+  for (const pg of ['redaction', 'jeux', 'petites-annonces', 'rencontres']) assert.ok(!page(pg).includes('La dernière manchette de la Manchette'), `pas de manchette sur ${pg}`);
+  assert.ok(!fs.existsSync(path.join(out, 'compteurs')), 'la page Compteurs est supprimee');
+  assert.ok(page('.').indexOf('La dernière manchette de la Manchette') < page('.').indexOf('<main'), 'la manchette est au-dessus du contenu, sous le menu');
+  assert.equal((page('.').match(/La dernière manchette de la Manchette</g) || []).length, 1, 'une seule manchette par page');
   const dir = path.join(ROOT, 'site/src/content/articles');
   const slug = /^slug: "([^"]+)"/m.exec(fs.readFileSync(path.join(dir, fs.readdirSync(dir).find((x) => x.endsWith('.md'))), 'utf8'))[1];
   const art = page(`articles/${slug}`);
@@ -247,7 +249,7 @@ test('rencontres: introduction pleine largeur, sommaire centre, encart petites a
   assert.ok(/\.rc-intro \{[^}]*max-width: none/.test(css), 'introduction sur toute la longueur');
   assert.ok(/\.rc-sommaire ul \{[^}]*justify-content: center/.test(css), 'sommaire centre');
   assert.ok(page('redaction').includes('la génération Z refusant de faire des heures supplémentaires non payées'), 'legende de Lucas');
-  for (const pg of ['jeux', 'compteurs']) assert.ok(page(pg).includes('encart-annonces'), `encart sur ${pg}`);
+  assert.ok(page('jeux').includes('encart-annonces'), 'encart sur jeux');
 });
 
 test('petites annonces: logos en grand (haut/duo), colonnes equilibrees par script', () => {
@@ -258,6 +260,15 @@ test('petites annonces: logos en grand (haut/duo), colonnes equilibrees par scri
   assert.ok(html.includes('class="pa-contenu"') && html.includes('lg-haut') && html.includes('lg-duo'), 'structure des encarts');
   assert.ok(!html.includes('class="pa-marque" data-astro-cid-') || !/pa-marque[^>]*>Agile TroBo/.test(html), 'plus de texte « Agile TroBo » au-dessus du logo');
   assert.ok(html.includes('equilibre'), 'script d\'equilibrage des colonnes');
+});
+
+test('menu: trois onglets tricolores de meme taille; frappe a la premiere connexion seulement', () => {
+  const h = page('.');
+  for (const c of ['bleu', 'blanc', 'rouge']) assert.ok(h.includes(`onglet-li onglet-${c}`), `onglet ${c}`);
+  const css = fs.readFileSync(path.join(ROOT, 'site/src/styles/global.css'), 'utf8');
+  assert.ok(/.nav a.onglet { width: 112px/.test(css), 'onglets de meme largeur');
+  assert.ok(h.includes('localStorage.getItem("frappe"))document.documentElement.classList.add("sans-frappe");else localStorage.setItem("frappe","1")'), 'frappe une seule fois');
+  assert.ok(!h.includes('href="/compteurs/"'), 'plus de lien vers Compteurs');
 });
 
 test.after(() => fs.rmSync(out, { recursive: true, force: true }));
