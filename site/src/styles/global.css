@@ -422,6 +422,16 @@ footer .quality .q-score.q-b { background: #5b9a2c; } /* note B: vert plus clair
 .cote-rub { display: block; margin-bottom: 3px; font: 700 .68rem var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); }
 @media (min-width: 1000px) {
   .article-grille { grid-template-columns: minmax(0, 1fr) 340px; }
-  .cote { margin-top: 0; position: sticky; top: 16px; align-self: start; padding-top: 10px; }
+  /* la colonne s'etire sur toute la hauteur de l'article: seul « A lire aussi » suit la lecture */
+  .cote { margin-top: 0; padding-top: 10px; }
+  .cote-suit { position: sticky; top: 16px; }
 }
 @media (min-width: 1000px) { .article h1 { font-size: clamp(2rem, 3.2vw, 2.7rem); } .article .chapo { font-size: 1.25rem; } .article .body { font-size: 1.15rem; } }
+
+/* Encart rectangulaire vers la page Rencontres, en haut de la colonne de droite */
+.cote-rc { display: flex; gap: 12px; align-items: center; margin-bottom: 22px; padding: 12px 14px; background: #16140f; color: #faf7f2; border: 2px solid #c89658; text-decoration: none; font-family: var(--sans); }
+.cote-rc img { flex: none; width: 56px; height: 70px; object-fit: cover; object-position: 50% 12%; border: 1px solid #faf7f2; }
+.cote-rc span { font: italic .95rem/1.35 var(--serif); }
+.cote-rc strong { display: block; font: 700 .7rem var(--sans); font-style: normal; letter-spacing: .1em; text-transform: uppercase; color: #c89658; margin-bottom: 3px; }
+.cote-rc em { display: block; margin-top: 5px; font: 700 .8rem var(--sans); font-style: normal; text-decoration: underline; }
+.cote-rc:hover, .cote-rc:focus-visible { background: #2a2620; }

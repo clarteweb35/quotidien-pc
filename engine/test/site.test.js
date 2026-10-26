@@ -280,6 +280,8 @@ test('article: texte en une seule colonne, sur toute la largeur', () => {
 test('article: colonne de droite avec des renvois vers les autres articles', () => {
   const slug = fs.readdirSync(path.join(out, 'articles')).find((d) => d !== 'index.html');
   const html = fs.readFileSync(path.join(out, 'articles', slug, 'index.html'), 'utf8');
+  assert.ok(html.includes('class="cote-rc"') && html.indexOf('cote-rc') < html.indexOf('À lire aussi'), 'encart Rencontres en haut de la colonne');
+  assert.ok(html.includes('cote-suit'), 'seul À lire aussi suit la lecture');
   assert.ok(html.includes('class="article-grille"') && html.includes('class="cote"'), 'colonne laterale');
   assert.ok(/class="cote-bloc"[^>]*>s*<h2[^>]*>À lire aussi/.test(html) || html.includes('À lire aussi'), 'renvois');
 });

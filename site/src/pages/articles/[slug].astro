@@ -6,6 +6,7 @@ import { illustration } from '../../lib/manual';
 import { refOf } from '../../lib/ref';
 import { journalist, deskLabel, authorSlug, portrait } from '../../lib/authors';
 import Share from '../../components/Share.astro';
+import { manchetteRencontres as rc } from '../../lib/annonces';
 import PubAnnonce from '../../components/PubAnnonce.astro';
 
 export async function getStaticPaths() {
@@ -105,16 +106,22 @@ const jsonLd = {
     )}
   </article>
   <aside class="cote" aria-label="Autres articles">
-    {related.length > 0 && (
-      <section class="cote-bloc" aria-labelledby="related-title">
-        <h2 id="related-title">À lire aussi</h2>
-        <ul>{related.map((x) => <li><a href={url(`articles/${x.data.slug}/`)}><span class="cote-rub">{category(x.data.category).name}</span>{x.data.title}</a></li>)}</ul>
-      </section>
+    {rc && (
+      <a class="cote-rc" href={url(rc.lien)}>
+        <img src={url(`annonces/${rc.image}`)} width="56" height="70" alt={rc.imageAlt} loading="lazy" />
+        <span><strong>Rencontres</strong>{rc.texte}<em>{rc.lienTexte} →</em></span>
+      </a>
     )}
     {dumemeAuteur.length > 0 && who && (
       <section class="cote-bloc" aria-labelledby="meme-auteur-titre">
         <h2 id="meme-auteur-titre">Du même auteur : <a href={url(`redaction/#${authorSlug(who.name)}`)}>{who.name}</a></h2>
         <ul>{dumemeAuteur.map((x) => <li><a href={url(`articles/${x.data.slug}/`)}>{x.data.title}</a></li>)}</ul>
+      </section>
+    )}
+    {related.length > 0 && (
+      <section class="cote-bloc cote-suit" aria-labelledby="related-title">
+        <h2 id="related-title">À lire aussi</h2>
+        <ul>{related.map((x) => <li><a href={url(`articles/${x.data.slug}/`)}><span class="cote-rub">{category(x.data.category).name}</span>{x.data.title}</a></li>)}</ul>
       </section>
     )}
   </aside>
