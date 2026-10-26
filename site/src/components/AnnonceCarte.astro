@@ -5,11 +5,14 @@ import { url } from '../lib/site';
 interface Props { a: Annonce }
 const { a } = Astro.props;
 const ann = a.annonceur ? annonceurs.get(a.annonceur) : undefined;
+const style = ann?.logoStyle ?? 'coin';
+const figure = ann?.logo ? { src: url(`annonces/${ann.logo}`), alt: `Logo de ${ann.nom}` } : null;
 const texteRecherche = [a.titre, a.texte, a.conditions, a.prix, nomCategorie(a.cat), ann?.nom].filter(Boolean).join(' ');
 ---
-    <article class={`pa pa-${a.format}${a.format === 'encart' && ann ? ` pal-${ann.palette}` : ''}`} data-cat={a.cat} data-texte={texteRecherche} id={a.id}>
+    <article class={`pa pa-${a.format}${a.format === 'encart' && ann ? ` pal-${ann.palette}` : ''}${figure ? ` lg-${style}` : ''}`} data-cat={a.cat} data-texte={texteRecherche} id={a.id}>
       {a.format === 'vedette' && <p class="pa-vedette-bandeau">À la une des annonces</p>}
-      {a.format === 'encart' && ann?.logo && (
+      {figure && style === 'filigrane' && <img class="pa-filigrane" src={figure.src} width="260" height="200" alt="" aria-hidden="true" loading="lazy" />}
+      {a.format === 'encart' && ann?.logo && style !== 'pied' && style !== 'filigrane' && (
         <figure class="pa-logo-fig">
           <img class="pa-logo" src={url(`annonces/${ann.logo}`)} width="128" height="128" alt={`Logo de ${ann.nom}`} loading="lazy" />
           {ann.legende && <figcaption>{ann.nom}</figcaption>}
@@ -24,6 +27,12 @@ const texteRecherche = [a.titre, a.texte, a.conditions, a.prix, nomCategorie(a.c
       <p class="pa-texte">{a.texte}</p>
       {a.conditions && <p class="pa-conditions">{a.conditions}</p>}
       {a.reel && a.url && <p class="pa-lien"><a href={a.url} target="_blank" rel="noopener">{a.lien ?? 'Voir le site'} →</a> <span>{a.site}</span></p>}
-      {ann && a.format !== 'encart' && <p class="pa-annonceur">{ann.logo && <img class="pa-logo-mini" src={url(`annonces/${ann.logo}`)} width="40" height="40" alt={`Logo de ${ann.nom}`} loading="lazy" />}Annonce passée par <strong>{ann.nom}</strong>{ann.slogan && <> — <em>{ann.slogan}</em></>}</p>}
+      {ann && a.format !== 'encart' && <p class="pa-annonceur">{ann.logo && style !== 'filigrane' && <img class="pa-logo-mini" src={url(`annonces/${ann.logo}`)} width="40" height="40" alt={`Logo de ${ann.nom}`} loading="lazy" />}Annonce passée par <strong>{ann.nom}</strong>{ann.slogan && <> — <em>{ann.slogan}</em></>}</p>}
       {a.format === 'encart' && ann?.slogan && <p class="pa-slogan">{ann.slogan}</p>}
+      {a.format === 'encart' && ann?.logo && style === 'pied' && (
+        <figure class="pa-logo-fig">
+          <img class="pa-logo" src={figure!.src} width="128" height="128" alt={figure!.alt} loading="lazy" />
+          {ann.legende && <figcaption>{ann.nom}</figcaption>}
+        </figure>
+      )}
     </article>

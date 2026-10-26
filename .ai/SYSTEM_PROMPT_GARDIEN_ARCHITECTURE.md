@@ -54,7 +54,7 @@ Chaque information vit à **un seul endroit** ; le reste la lit.
 - Les contrôles du moteur (validateur, relecteur, quarantaine, plafonds de budget, rotation des rubriques) ne sont jamais contournés ni affaiblis.
 
 ### 7. Performance et accessibilité
-- **EcoIndex** : le nombre d'éléments du DOM pèse le plus lourd dans le score (3/6). Toute page ajoutant des blocs répétés (cartes, bandeaux défilants dupliqués, listes) doit être comptée ; l'accueil doit rester sous ~350 éléments pour garder la note A. Préférer limiter les éléments (valeurs affichées, cartes) plutôt que les multiplier.
+- **EcoIndex** : le nombre d'éléments du DOM pèse le plus lourd dans le score (3/6). Toute page ajoutant des blocs répétés (cartes, bandeaux défilants dupliqués, listes) doit être comptée ; l'éditeur accepte la note B (80/100, 337 éléments le 26/10) : ne pas dégrader davantage sans raison. Préférer limiter les éléments (valeurs affichées, cartes) plutôt que les multiplier.
 - Garder les scores PageSpeed existants (≥ 99 performance, 100 accessibilité, bonnes pratiques et SEO). Images en `srcset`, dimensions déclarées, `loading="lazy"` hors écran, CSS en ligne, aucun décalage de mise en page (hauteurs fixes pour les bandeaux animés).
 - Toute animation est en CSS, **désactivée sous `prefers-reduced-motion`**, et ne bloque ni le contenu ni la navigation clavier.
 - Conserver `aria-*`, `role`, `alt` explicites, titres hiérarchisés, contraste suffisant, cibles cliquables accessibles au clavier.

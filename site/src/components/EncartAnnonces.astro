@@ -1,22 +1,37 @@
 ---
 // Encart de la taille d'une carte d'article (une case de la grille): renvoie vers la rubrique « Petites annonces ».
-// Les trois annonces mises en avant sont celles marquees "vedette" dans config/annonces.json.
+// Les trois annonces mises en avant sont celles marquees "vedette" dans config/annonces.json; la photo est celle de la premiere qui en a une.
 import { annonces, rubrique } from '../lib/annonces';
 import { url } from '../lib/site';
 const vedettes = annonces.filter((a) => a.format === 'vedette' && !a.reel).slice(0, 3);
+const photo = annonces.find((a) => a.image && a.format === 'vedette');
 ---
 <article class="card encart-annonces">
-  <p class="edito-etiquette"><a class="kicker" href={url('petites-annonces/')}>Petites annonces</a></p>
-  <h3><a href={url('petites-annonces/')}>{rubrique.accroche}</a></h3>
-  <ul>
-    {vedettes.map((a) => <li><a href={url(`petites-annonces/#${a.id}`)}>{a.titre}</a>{a.prix && <span> — {a.prix}</span>}</li>)}
-  </ul>
-  <p class="meta"><a class="encart-lien" href={url('petites-annonces/')}>Parcourir les {annonces.length} annonces →</a></p>
+  <a class="ea-photo" href={url('petites-annonces/')} tabindex="-1" aria-hidden="true">
+    {photo?.image && <img src={url(`annonces/${photo.image}`)} width="192" height="192" alt="" loading="lazy" />}
+    <span class="ea-sceau">Petites<br />annonces</span>
+  </a>
+  <div class="ea-corps">
+    <h3><a href={url('petites-annonces/')}>{rubrique.accroche}</a></h3>
+    <ul>
+      {vedettes.map((a) => <li><a href={url(`petites-annonces/#${a.id}`)}>{a.titre}</a><b>{a.prix ?? ''}</b></li>)}
+    </ul>
+  </div>
+  <a class="ea-cta" href={url('petites-annonces/')}>Parcourir les {annonces.length} annonces →</a>
 </article>
 <style>
-  .encart-annonces { padding: 14px 14px 12px; border: 2px solid var(--ink); background: var(--paper-2); }
-  .encart-annonces h3 { font-style: italic; margin-top: 0; }
-  .encart-annonces ul { margin: 0 0 10px; padding-left: 18px; font: .95rem/1.5 var(--serif); }
-  .encart-annonces li span { color: var(--ink-2); font: .8rem var(--sans); }
-  .encart-annonces .encart-lien { font-weight: 700; color: var(--link); }
+  .encart-annonces { display: flex; flex-direction: column; padding: 0; border: 2px solid var(--ink); background: #16140f; color: #faf7f2; overflow: hidden; }
+  .ea-photo { position: relative; display: grid; place-items: center; aspect-ratio: 16 / 9; background: #f0ebe2; }
+  .ea-photo img { width: auto; height: 86%; object-fit: contain; mix-blend-mode: multiply; }
+  .ea-sceau { position: absolute; left: 10px; top: 10px; padding: 5px 9px; background: var(--accent); color: #fff; font: 800 .66rem/1.25 var(--sans); letter-spacing: .14em; text-transform: uppercase; transform: rotate(-4deg); box-shadow: 0 2px 6px rgba(0,0,0,.3); }
+  .ea-corps { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 14px 16px 6px; }
+  .encart-annonces h3 { margin: 0 0 10px; font: italic 700 1.28rem/1.2 var(--serif); }
+  .encart-annonces h3 a { color: #faf7f2; background: none; }
+  .encart-annonces ul { list-style: none; margin: 0; padding: 0; font: .92rem/1.35 var(--serif); }
+  .encart-annonces li { display: flex; align-items: baseline; gap: 8px; padding: 5px 0; border-bottom: 1px dotted rgba(250, 247, 242, .4); }
+  .encart-annonces li a { color: #faf7f2; flex: 1; min-width: 0; text-decoration: none; }
+  .encart-annonces li a:hover, .encart-annonces li a:focus-visible { text-decoration: underline; }
+  .encart-annonces li b { flex: none; color: #e8c58f; font: 700 .78rem var(--sans); white-space: nowrap; }
+  .ea-cta { display: block; margin: 12px 16px 16px; padding: 9px 12px; text-align: center; background: #c89658; color: #16140f; font: 800 .88rem var(--sans); text-decoration: none; }
+  .ea-cta:hover, .ea-cta:focus-visible { background: #faf7f2; }
 </style>

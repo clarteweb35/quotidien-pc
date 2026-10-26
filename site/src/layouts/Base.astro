@@ -21,9 +21,9 @@ const fullTitle = title ? `${title} — ${siteName}` : `${siteName} — ${taglin
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const share = new URL(ogImage ?? url('brand/og-default.png'), Astro.site).toString();
 // Mesures de qualite du site (a mettre a jour a chaque nouvelle mesure: ne jamais afficher un score non verifie).
-const qualityDate = '25 octobre 2026';
+const qualityDate = 'les 25 et 26 octobre 2026'; // EcoIndex le 26 (B, 80/100), Website Carbon et PageSpeed le 25
 const quality = [
-  { name: 'EcoIndex', score: 'A', url: 'https://www.ecoindex.fr/resultat/?id=36bfd0fa-a35c-49da-a072-86c0e8eb5b2a' },
+  { name: 'EcoIndex', score: 'B', url: 'https://www.ecoindex.fr/resultat/?id=e6232d45-39cc-4b3a-baa7-46e269f2041c' },
   { name: 'Website Carbon', score: 'A', url: 'https://www.websitecarbon.com/website/quotidien-pc-fr/' },
   { name: 'PageSpeed Insights', score: '100', url: 'https://pagespeed.web.dev/analysis/https-quotidien-pc-fr/m5tdao3js7?form_factor=mobile' },
 ];
@@ -118,12 +118,12 @@ const today = new Intl.DateTimeFormat('fr-FR', { timeZone: 'Europe/Paris', dateS
       <div class="wrap bottomline">
         <p class="copyright">© {new Date().getFullYear()} {publisher.url ? <a href={publisher.url} rel="noopener">clarté-web.fr</a> : 'clarté-web.fr'} – Tous droits réservés.</p>
         <div class="quality">
-          <p>Un site léger et accessible, mesuré le {qualityDate}</p>
+          <p>Un site léger et accessible, mesuré {qualityDate}</p>
           <ul>
             {quality.map((q) => (
               <li>
                 <a href={q.url} target="_blank" rel="noopener noreferrer" aria-label={`Score ${q.name} ${q.score} : voir l'analyse (nouvelle fenêtre)`}>
-                  <span class="q-name">{q.name}</span><span class="q-score">{q.score}</span>
+                  <span class="q-name">{q.name}</span><span class:list={['q-score', q.score === 'B' && 'q-b']}>{q.score}</span>
                 </a>
               </li>
             ))}

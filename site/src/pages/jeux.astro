@@ -53,6 +53,19 @@ import Base from '../layouts/Base.astro';
     <p class="jeu-msg" id="pm-msg" role="status">Faites une proposition.</p>
   </section>
 
+  <!-- ===== PONG ===== -->
+  <section class="jeu" id="pong" aria-labelledby="t-pong">
+    <h2 id="t-pong">Pong de bureau</h2>
+    <p class="meta">Vous êtes à gauche, la photocopieuse à droite. La balle est une boule de papier. Souris, doigt ou flèches (↑ ↓) pour déplacer votre raquette ; le premier à 7 points a gagné.</p>
+    <div class="pong-barre">
+      <button type="button" id="pong-start">Lancer la partie</button>
+      <button type="button" id="pong-pause" disabled>Pause</button>
+      <span class="pong-score" id="pong-score" aria-live="polite">Vous 0 – 0 Photocopieuse</span>
+    </div>
+    <canvas id="pong-canvas" class="pong-canvas" width="720" height="440" tabindex="0" aria-label="Terrain de pong. Déplacez la souris ou le doigt, ou utilisez les flèches haut et bas."></canvas>
+    <p class="jeu-msg" id="pong-msg" role="status"></p>
+  </section>
+
   <!-- ===== 4. REFLEXES ===== -->
   <section class="jeu" id="reflexe" aria-labelledby="t-ref">
     <h2 id="t-ref">Réflexes : le café est prêt</h2>
@@ -84,10 +97,15 @@ import Base from '../layouts/Base.astro';
   .sdk-plateau .case:not(.donnee) { color: #1f5f8b; }
   .sdk-pave { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin: 12px auto 0; max-width: 460px; }
   .sdk-pave button { min-width: 2.6rem; }
-  .mem-grille { display: grid; grid-template-columns: repeat(4, minmax(0, 80px)); gap: 8px; margin: 10px 0 12px; }
-  .mem-carte { height: 80px; font-size: 2rem; padding: 0; }
+  .mem-grille { display: grid; grid-template-columns: repeat(4, minmax(0, 150px)); gap: 10px; margin: 10px 0 14px; }
+  .mem-carte { width: 100%; aspect-ratio: 1; height: auto; padding: 0; line-height: 1; font-size: clamp(2.6rem, 11vw, 5.2rem) !important; display: grid; place-items: center; }
+  .mem-carte[data-etat="cachee"] { font-size: clamp(2rem, 8vw, 3.6rem) !important; }
   .mem-carte[data-etat="cachee"] { background: var(--ink); color: var(--paper); }
   .mem-carte[data-etat="trouvee"] { background: #dff0e0; border-color: #15803d; cursor: default; }
+  .pong-barre { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; margin-bottom: 10px; }
+  .pong-score { margin-left: auto; font: 700 1.05rem var(--sans); font-variant-numeric: tabular-nums; }
+  .pong-canvas { display: block; width: 100%; max-width: 720px; height: auto; aspect-ratio: 720 / 440; background: #16140f; border: 3px solid var(--ink); touch-action: none; cursor: none; }
+  .pong-canvas:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
   .pm-form { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; }
   .ref-bouton { width: 100%; max-width: 420px; padding: 36px 12px !important; font-size: 1.05rem !important; }
   .ref-bouton[data-etat="attente"] { background: #b3261e !important; color: #fff !important; }
@@ -295,6 +313,68 @@ import Base from '../layouts/Base.astro';
     pmSaisie.select();
   });
   $('pm-rejouer').addEventListener('click', () => { secret = 1 + alea(100); essais = 0; pmMsg.textContent = 'Nouveau montant caché. Faites une proposition.'; pmSaisie.value = ''; });
+
+  // ================= PONG =================
+  // Raquette du joueur a gauche (souris, doigt ou fleches), photocopieuse a droite (vitesse limitee: on peut la battre). Premier a 7.
+  const cv = $<HTMLCanvasElement>('pong-canvas'), ctxp = cv.getContext('2d')!;
+  const W = cv.width, H = cv.height, RH = 84, RW = 12, R = 9, VICTOIRE = 7;
+  const scoreEl = $('pong-score'), pongMsg = $('pong-msg'), btnStart = $<HTMLButtonElement>('pong-start'), btnPause = $<HTMLButtonElement>('pong-pause');
+  let py = H / 2, cy = H / 2, bx = W / 2, by = H / 2, vx = 0, vy = 0, sj = 0, sc = 0, enCours = false, enPause = false, raf = 0, haut = false, bas = false, touche = 0;
+  const lance = (versJoueur: boolean) => { bx = W / 2; by = H / 2; const ang = (Math.random() - 0.5) * 0.9; const v = 5.2; vx = (versJoueur ? -1 : 1) * v * Math.cos(ang); vy = v * Math.sin(ang); };
+  const maj = () => { scoreEl.textContent = 'Vous ' + sj + ' – ' + sc + ' Photocopieuse'; };
+  function dessine() {
+    ctxp.fillStyle = '#16140f'; ctxp.fillRect(0, 0, W, H);
+    ctxp.strokeStyle = 'rgba(250,247,242,.28)'; ctxp.setLineDash([12, 14]); ctxp.lineWidth = 3;
+    ctxp.beginPath(); ctxp.moveTo(W / 2, 0); ctxp.lineTo(W / 2, H); ctxp.stroke(); ctxp.setLineDash([]);
+    ctxp.fillStyle = '#faf7f2';
+    ctxp.fillRect(20, py - RH / 2, RW, RH);
+    ctxp.fillStyle = '#c89658';
+    ctxp.fillRect(W - 20 - RW, cy - RH / 2, RW, RH);
+    ctxp.fillStyle = '#fff'; ctxp.beginPath(); ctxp.arc(bx, by, R, 0, Math.PI * 2); ctxp.fill();
+    ctxp.fillStyle = 'rgba(250,247,242,.9)'; ctxp.font = '700 52px system-ui, sans-serif'; ctxp.textAlign = 'center';
+    ctxp.fillText(String(sj), W / 2 - 70, 64); ctxp.fillText(String(sc), W / 2 + 70, 64);
+  }
+  function fin(gagne: boolean) {
+    enCours = false; cancelAnimationFrame(raf); btnPause.disabled = true; btnStart.textContent = 'Rejouer';
+    pongMsg.textContent = gagne ? 'Victoire ' + sj + ' à ' + sc + '. La photocopieuse demande une révision.' : 'Défaite ' + sj + ' à ' + sc + '. La photocopieuse a eu de la chance, et un meilleur toner.';
+  }
+  function pas() {
+    if (!enCours || enPause) return;
+    if (haut) py -= 7; if (bas) py += 7;
+    py = Math.max(RH / 2, Math.min(H - RH / 2, py));
+    // photocopieuse: suit la balle avec une vitesse limitee (et un temps de reaction)
+    const cible = vx > 0 ? by : H / 2;
+    cy += Math.max(-6.4, Math.min(6.4, (cible - cy) * 0.2));
+    cy = Math.max(RH / 2, Math.min(H - RH / 2, cy));
+    bx += vx; by += vy;
+    if (by < R) { by = R; vy = -vy; } else if (by > H - R) { by = H - R; vy = -vy; }
+    // raquette joueur
+    if (vx < 0 && bx - R < 20 + RW && bx + R > 20 && Math.abs(by - py) < RH / 2 + R) {
+      bx = 20 + RW + R; const t = (by - py) / (RH / 2); const v = Math.min(Math.hypot(vx, vy) * 1.06, 11); const a = t * 0.95; vx = Math.cos(a) * v; vy = Math.sin(a) * v;
+    }
+    // raquette photocopieuse
+    if (vx > 0 && bx + R > W - 20 - RW && bx - R < W - 20 && Math.abs(by - cy) < RH / 2 + R) {
+      bx = W - 20 - RW - R; const t = (by - cy) / (RH / 2); const v = Math.min(Math.hypot(vx, vy) * 1.04, 11); const a = t * 0.95; vx = -Math.cos(a) * v; vy = Math.sin(a) * v;
+    }
+    if (bx < -R) { sc++; maj(); if (sc >= VICTOIRE) return fin(false); lance(false); }
+    if (bx > W + R) { sj++; maj(); if (sj >= VICTOIRE) return fin(true); lance(true); }
+    dessine();
+    raf = requestAnimationFrame(pas);
+  }
+  function demarre() {
+    sj = 0; sc = 0; py = H / 2; cy = H / 2; maj(); lance(Math.random() < 0.5); enCours = true; enPause = false;
+    btnPause.disabled = false; btnPause.textContent = 'Pause'; btnStart.textContent = 'Recommencer'; pongMsg.textContent = ''; cv.focus({ preventScroll: true });
+    cancelAnimationFrame(raf); raf = requestAnimationFrame(pas);
+  }
+  btnStart.addEventListener('click', demarre);
+  btnPause.addEventListener('click', () => { if (!enCours) return; enPause = !enPause; btnPause.textContent = enPause ? 'Reprendre' : 'Pause'; if (!enPause) raf = requestAnimationFrame(pas); });
+  const versY = (e: PointerEvent) => { const r = cv.getBoundingClientRect(); py = Math.max(RH / 2, Math.min(H - RH / 2, ((e.clientY - r.top) / r.height) * H)); };
+  cv.addEventListener('pointermove', versY);
+  cv.addEventListener('pointerdown', (e) => { versY(e); if (!enCours) demarre(); });
+  cv.addEventListener('keydown', (e) => { if (e.key === 'ArrowUp' || e.key === 'w') { haut = true; e.preventDefault(); } if (e.key === 'ArrowDown' || e.key === 's') { bas = true; e.preventDefault(); } if (e.key === ' ' ) { e.preventDefault(); if (!enCours) demarre(); else btnPause.click(); } });
+  cv.addEventListener('keyup', (e) => { if (e.key === 'ArrowUp' || e.key === 'w') haut = false; if (e.key === 'ArrowDown' || e.key === 's') bas = false; });
+  document.addEventListener('visibilitychange', () => { if (document.hidden && enCours && !enPause) btnPause.click(); });
+  void touche; dessine(); pongMsg.textContent = 'Appuyez sur « Lancer la partie » (ou touchez le terrain).';
 
   // ================= REFLEXES =================
   const bouton = $('ref-bouton'), refMsg = $('ref-msg');

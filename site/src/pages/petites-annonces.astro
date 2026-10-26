@@ -1,10 +1,10 @@
 ---
 import Base from '../layouts/Base.astro';
-import { rubrique, categoriesAnnonces, annonces } from '../lib/annonces';
+import { rubrique, categoriesAnnonces, annonces, agence, manchetteRencontres } from '../lib/annonces';
+import { url as lien } from '../lib/site';
 import { contactEmail } from '../lib/legal';
 import { url } from '../lib/site';
 import AnnonceCarte from '../components/AnnonceCarte.astro';
-import BandeauRencontres from '../components/BandeauRencontres.astro';
 import PubDefilante from '../components/PubDefilante.astro';
 
 const compte = (slug: string) => annonces.filter((a) => a.cat === slug).length;
@@ -19,8 +19,6 @@ const dernieres = annonces.slice(milieu);
     <p class="pa-accroche">{rubrique.accroche}</p>
     <p class="meta">{rubrique.intro}</p>
   </div>
-
-  <BandeauRencontres />
 
   <section class="pa-outils" aria-label="Filtrer les annonces">
     <div class="pa-filtres" role="group" aria-label="Catégories">
@@ -55,6 +53,17 @@ const dernieres = annonces.slice(milieu);
   <section aria-labelledby="pa-titre-liste">
     <h2 id="pa-titre-liste" class="visuellement-cache">Les annonces</h2>
     <div class="pa-colonnes" id="pa-liste">
+      {agence && manchetteRencontres && (
+        <article class="pa-agence" id="agence-valmorin" data-cat="rencontres">
+          <img class="pa-agence-photo" src={lien(`annonces/${manchetteRencontres.image}`)} width="118" height="148" alt={manchetteRencontres.imageAlt} loading="lazy" />
+          <div class="pa-agence-corps">
+            <p class="pa-agence-etiquette">{agence.mention}</p>
+            <h3>Agence « Rencontres &amp; affinités »</h3>
+            <p class="pa-agence-texte">{manchetteRencontres.texte}</p>
+            <a class="pa-agence-cta" href={lien(manchetteRencontres.lien)}>{manchetteRencontres.lienTexte} →</a>
+          </div>
+        </article>
+      )}
       {premieres.map((a) => <AnnonceCarte a={a} />)}
     </div>
     <PubDefilante />
@@ -135,6 +144,22 @@ const dernieres = annonces.slice(milieu);
   .pa-accroche-pub { font: italic 700 1.02rem/1.35 var(--serif); margin: 0 0 8px !important; }
   /* Logos: masques (cercle ou coins arrondis) cuits dans les images, affiches en entier (jamais rognes) */
   .pa-logo-fig { float: right; margin: -4px 0 8px 12px; width: 128px; text-align: center; }
+  /* Placement du logo, different selon l'annonceur (champ logoStyle de config/annonces.json) */
+  .lg-haut .pa-logo-fig { float: none; width: auto; margin: 0 0 12px; padding-bottom: 10px; border-bottom: 1px solid rgba(255, 255, 255, .35); }
+  .lg-haut .pa-logo { width: 150px; max-height: 150px; }
+  .lg-gauche .pa-logo-fig { float: left; margin: -2px 14px 8px 0; width: 112px; }
+  .lg-gauche .pa-logo { width: 112px; }
+  .lg-pied .pa-logo-fig { float: none; clear: both; display: flex; justify-content: flex-end; align-items: center; width: auto; margin: 10px 0 0; }
+  .lg-pied .pa-logo { width: 84px; margin: 0; opacity: .95; }
+  .lg-coin .pa-logo { width: 100px; }
+  /* Grand logo en filigrane (transparence): inverse puis fondu dans le fond du cadre */
+  .lg-filigrane { position: relative; overflow: hidden; }
+  .lg-filigrane > *:not(.pa-filigrane) { position: relative; z-index: 1; }
+  .pa-filigrane { position: absolute; z-index: 0; right: -14%; bottom: -8%; width: 92%; height: auto; max-height: none; filter: invert(1) grayscale(1); mix-blend-mode: multiply; opacity: .2; pointer-events: none; }
+  /* Texte des annonces justifie */
+  .pa-texte, .pa-conditions { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+  .pa-court .pa-texte { text-align: left; }
+  .pa-texte, .pa-conditions { hyphenate-limit-chars: 6 3 3; text-wrap: pretty; }
   .pa-logo { display: block; width: 128px; height: auto; max-height: 128px; object-fit: contain; margin: 0 auto; }
   .pa-logo-fig figcaption { margin-top: 4px; font: 800 .8rem var(--sans); letter-spacing: .04em; }
   /* Titre « facon soldes »: rouge, gras, defilant */
@@ -142,6 +167,16 @@ const dernieres = annonces.slice(milieu);
   .solde-texte { display: inline-block; color: #fff; font: 900 1.25rem/1.2 var(--sans); text-transform: uppercase; letter-spacing: .02em; padding-left: 100%; animation: solde-defile 11s linear infinite; }
   @keyframes solde-defile { to { transform: translateX(-100%); } }
   @media (prefers-reduced-motion: reduce) { .solde-texte { animation: none; padding-left: 8px; white-space: normal; } .pa-solde { white-space: normal; } }
+  /* L'agence partenaire: une annonce noire sur toute la largeur de la liste, bien en evidence */
+  .pa-agence { column-span: all; display: grid; grid-template-columns: 118px 1fr; gap: 18px; align-items: center; margin: 0 0 26px; padding: 18px 22px; background: #0e0d0a; color: #faf7f2; border: 3px double #c89658; break-inside: avoid; }
+  .pa-agence[hidden] { display: none; }
+  .pa-agence-photo { width: 118px; height: 148px; object-fit: cover; object-position: 50% 12%; border: 2px solid #c89658; }
+  .pa-agence-etiquette { margin: 0 0 4px; font: 800 .66rem var(--sans); letter-spacing: .16em; text-transform: uppercase; color: #e8c58f; }
+  .pa-agence h3 { margin: 0 0 6px; font: 700 1.55rem/1.15 var(--serif); }
+  .pa-agence-texte { margin: 0 0 12px; font: italic 1.08rem/1.45 var(--serif); }
+  .pa-agence-cta { display: inline-block; padding: 8px 16px; background: #c89658; color: #0e0d0a; font: 800 .9rem var(--sans); text-decoration: none; border: 2px solid #c89658; }
+  .pa-agence-cta:hover, .pa-agence-cta:focus-visible { background: transparent; color: #e8c58f; }
+  @media (max-width: 560px) { .pa-agence { grid-template-columns: 1fr; text-align: center; } .pa-agence-photo { margin: 0 auto; } }
   .pa-slogan { font: italic .8rem var(--serif); margin-top: 8px !important; }
   .pal-ink { background: #16140f; color: #faf7f2; }
   .pal-bleu { background: #1c3a57; color: #f4f8fb; }
@@ -157,6 +192,7 @@ const dernieres = annonces.slice(milieu);
 <script>
   const norm = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
   const cartes = Array.from(document.querySelectorAll<HTMLElement>('.pa-colonnes .pa'));
+  const agenceEl = document.getElementById('agence-valmorin');
   const pubDef = document.getElementById('pub-def');
   const boutons = Array.from(document.querySelectorAll<HTMLButtonElement>('.pa-filtre'));
   const champ = document.getElementById('pa-recherche') as HTMLInputElement;
@@ -172,6 +208,7 @@ const dernieres = annonces.slice(milieu);
       c.hidden = !ok;
       if (ok) n++;
     }
+    if (agenceEl) agenceEl.hidden = !(cat === 'toutes' && !q) && cat !== 'rencontres';
     if (pubDef) pubDef.hidden = cat !== 'toutes' || !!q; // la pub du milieu n'a de sens que sur la liste complete
     compteur.textContent = n + (n > 1 ? ' annonces' : ' annonce');
     vide.hidden = n > 0;

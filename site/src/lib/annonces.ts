@@ -8,7 +8,7 @@ export interface Annonce {
   pub?: boolean; // annonce reutilisable comme publicite fictive dans les articles
   reel?: boolean; url?: string; site?: string; lien?: string; // vraie annonce: renvoie vers un vrai site
 }
-export interface Annonceur { id: string; nom: string; slogan?: string; palette: string; logo?: string; legende?: boolean /* logo + nom en legende dessous, sans le nom en en-tete */ }
+export interface Annonceur { id: string; nom: string; slogan?: string; palette: string; logo?: string; logoStyle?: 'coin' | 'haut' | 'gauche' | 'pied' | 'filigrane'; legende?: boolean /* logo + nom en legende dessous, sans le nom en en-tete */ }
 
 export interface Partenaire {
   nom: string; mention: string; slogan: string; texte: string; details: { label: string; texte: string }[];
@@ -17,6 +17,8 @@ export interface Partenaire {
 export const partenaire = (data as { partenaire?: Partenaire }).partenaire ?? null;
 
 export const manchetteRencontres = (data as { manchetteRencontres?: { texte: string; lienTexte: string; lien: string; image: string; imageAlt: string } }).manchetteRencontres ?? null;
+
+export const agence = (data as { partenaire?: Partenaire }).partenaire ?? null;
 
 export const rubrique = { titre: data.titre, accroche: data.accroche, intro: data.intro, mention: data.mention, mentionReelle: data.mentionReelle };
 export const categoriesAnnonces = data.categories as { slug: string; name: string }[];
