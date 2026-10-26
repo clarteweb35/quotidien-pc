@@ -6,36 +6,39 @@
   "slots": [
     {
       "idx": 0,
-      "hhmm": "08:00",
+      "hhmm": "07:00",
       "attempts": 0,
       "status": "abandoned",
       "lastError": "fenetre_de_rattrapage_depassee"
     },
     {
       "idx": 1,
-      "hhmm": "11:00",
+      "hhmm": "07:30",
       "attempts": 1,
-      "status": "failed",
+      "status": "abandoned",
       "startedAt": "2026-10-26T10:58:26.557Z",
       "lastError": "gemini_unavailable: Gemini indisponible apres 4 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}"
     },
     {
       "idx": 2,
-      "hhmm": "14:00",
-      "status": "pending",
-      "attempts": 0
+      "hhmm": "08:00",
+      "attempts": 0,
+      "status": "abandoned",
+      "lastError": "fenetre_de_rattrapage_depassee"
     },
     {
       "idx": 3,
-      "hhmm": "17:30",
-      "status": "pending",
-      "attempts": 0
+      "hhmm": "08:30",
+      "attempts": 0,
+      "status": "abandoned",
+      "lastError": "fenetre_de_rattrapage_depassee"
     },
     {
       "idx": 4,
-      "hhmm": "20:30",
-      "status": "pending",
-      "attempts": 0
+      "hhmm": "09:00",
+      "attempts": 0,
+      "status": "abandoned",
+      "lastError": "fenetre_de_rattrapage_depassee"
     }
   ],
   "rejections": 0,
