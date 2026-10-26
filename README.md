@@ -1,6 +1,6 @@
 # Le Quotidien Presque Certain
 
-Journal satirique français entièrement automatisé : 8 articles par jour rédigés avec l'API Google Gemini, contrôlés automatiquement, publiés sans intervention. Nom et slogan: `config/editorial.json`; logo: `site/src/assets/logo-source.png` (variantes générées par `scripts/make-brand-assets.mjs`).
+Journal satirique français entièrement automatisé : 5 articles par jour rédigés avec l'API Google Gemini, contrôlés automatiquement, publiés sans intervention. Nom et slogan: `config/editorial.json`; logo: `site/src/assets/logo-source.png` (variantes générées par `scripts/make-brand-assets.mjs`).
 
 - **Moteur** : Node 22, exécuté par GitHub Actions (aucun serveur, indépendant de votre ordinateur) — `engine/`
 - **Site** : Astro, 100 % statique (GitHub Pages ou FTP OVH) — `site/`

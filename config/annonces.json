@@ -42,7 +42,7 @@
     { "id": "bpcc", "nom": "Bureau paritaire de certification des certifications", "slogan": "Certifié, donc certifiant.", "palette": "vert", "logo": "bpcc.webp", "logoStyle": "coin" },
     { "id": "concept", "nom": "Agence Espace & Concept", "slogan": "Des mètres carrés qui sont avant tout des idées.", "palette": "rouge", "logo": "concept.webp", "logoStyle": "pied" },
     { "id": "zerolarme", "nom": "Assurance Zéro Larme", "palette": "bleu", "logo": "zerolarme.webp", "logoStyle": "haut" },
-    { "id": "teflonhuman", "nom": "Teflon Human Corp", "palette": "vert", "logo": "teflonhuman.webp", "logoStyle": "gauche" },
+    { "id": "teflonhuman", "nom": "Peflon Human Corp", "palette": "vert", "logo": "teflonhuman.webp", "logoStyle": "gauche" },
     { "id": "levide", "nom": "Le Vide", "slogan": "Chaîne de magasins", "palette": "ink", "logo": "levide.webp", "logoStyle": "filigrane" },
     { "id": "trobo", "nom": "Agile TroBo", "palette": "rouge", "logo": "trobo.webp", "logoStyle": "pied" },
     { "id": "vortex", "nom": "Vortex Formation", "palette": "bleu", "logo": "vortex.webp", "logoStyle": "coin" },
@@ -300,7 +300,7 @@
     },
     {
       "id": "pa-047", "pub": true, "cat": "publicites", "format": "encart", "ref": "PA-047", "annonceur": "teflonhuman",
-      "titre": "Teflon Human Corp",
+      "titre": "Peflon Human Corp",
       "accroche": "Marre de vous sécher après la pluie ?",
       "texte": "Adoptez le mode de vie PFAS. 100 % étanche, 0 % d'effort."
     },

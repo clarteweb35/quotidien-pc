@@ -5,6 +5,7 @@ import data from '../../../config/rencontres.json';
 export interface Rencontre {
   ref: number | string; cat: string; profil: string; texte: string; recherche?: string; formule?: string;
   photo?: string; photoAlt?: string;
+  auteur?: string; // membre de la redaction qui a « depose » l'annonce (lien vers sa fiche)
 }
 
 export const page = {

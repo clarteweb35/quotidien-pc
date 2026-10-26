@@ -16,6 +16,9 @@ export function makeCtx({ at = '2026-10-24T09:05:00Z', script, imageScript, muta
   cfg.engine.gemini.minDelayBetweenCallsMs = 0;
   cfg.engine.gemini.retryBaseDelayMs = 1;
   cfg.engine.topics.rotateCategories = false; // les tests historiques supposent la categorie du flux; la rotation a ses propres tests
+  cfg.schedule.slots = ['07:00', '09:00', '11:00', '13:00', '15:00', '17:30', '19:30', '21:30']; // planning de test fige (8 creneaux), independant de config/schedule.json
+  cfg.schedule.maxPerDay = 8;
+  cfg.engine.images.slotIndexes = [1, 5];
   cfg.engine.images.enabled = true; // la config livree les desactive (payantes): les tests les activent explicitement
   mutateCfg?.(cfg);
   let t = Date.parse(at);

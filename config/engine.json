@@ -78,7 +78,7 @@
     "perDayMax": 2,
     "slotIndexes": [
       1,
-      5
+      3
     ],
     "api": "interactions",
     "model": "gemini-3.1-flash-lite-image",

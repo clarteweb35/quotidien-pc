@@ -2,7 +2,7 @@
 
 ## Projet
 
-**Le Quotidien Presque Certain** (`quotidien-pc.fr`, éditeur Clarté Web) : journal satirique français automatisé. Le moteur (`engine/`, Node 22) rédige 8 articles par jour avec l'API Gemini, les contrôle, puis les commit dans le dépôt ; le site (`site/`, Astro, 100 % statique) les affiche. Aucun serveur, aucune base : le dépôt Git sert de CMS et de base de données.
+**Le Quotidien Presque Certain** (`quotidien-pc.fr`, éditeur Clarté Web) : journal satirique français automatisé. Le moteur (`engine/`, Node 22) rédige 5 articles par jour avec l'API Gemini, les contrôle, puis les commit dans le dépôt ; le site (`site/`, Astro, 100 % statique) les affiche. Aucun serveur, aucune base : le dépôt Git sert de CMS et de base de données.
 
 Spécification fonctionnelle : [.ai/SPEC_FONCTIONNALITES.md](.ai/SPEC_FONCTIONNALITES.md) (à lire avant toute évolution, et à tenir à jour). Règles d'architecture (SSOT, DRY, KISS, sécurité, garde-fous éditoriaux) et format de revue : [.ai/SYSTEM_PROMPT_GARDIEN_ARCHITECTURE.md](.ai/SYSTEM_PROMPT_GARDIEN_ARCHITECTURE.md). Architecture et décisions : [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md). Exploitation : [docs/EXPLOITATION.md](docs/EXPLOITATION.md). Déploiement : [docs/DEPLOIEMENT.md](docs/DEPLOIEMENT.md).
 

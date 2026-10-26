@@ -196,4 +196,15 @@ test('menu tape a la machine et titre de l\'edito: balisage prevu, accessible sa
   assert.ok(h.includes('Pourquoi le dimanche devrait être transféré au mardi') || h.includes('class="mm-titre"'), 'le titre de l\'edito est dans le HTML (lisible sans JS)');
 });
 
+test('Yves Verts: annonce en Rencontres (hommes/hommes) liee a sa fiche, et inversement; annonces sans image signalees', () => {
+  const rc = page('rencontres');
+  assert.ok(rc.includes('Annonce déposée par') && rc.includes('href="/redaction/#yves-verts"'), 'annonce -> fiche de la redaction');
+  assert.ok(rc.includes("Pas d'image fournie"), 'annonces sans portrait signalees');
+  const rd = page('redaction');
+  assert.ok(rd.includes('Son annonce dans') && rd.includes('href="/rencontres/#ref-n7y-16c"'), 'fiche -> annonce');
+  assert.ok(fs.existsSync(path.join(ROOT, 'site/public/redaction/yves-verts.webp')), 'portrait d\'Yves Verts');
+  const ann = JSON.parse(fs.readFileSync(path.join(ROOT, 'config/annonces.json'), 'utf8'));
+  assert.ok(!JSON.stringify(ann).includes('Teflon'), 'marque parodiee: Peflon');
+});
+
 test.after(() => fs.rmSync(out, { recursive: true, force: true }));

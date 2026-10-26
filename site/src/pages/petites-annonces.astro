@@ -159,6 +159,8 @@ const dernieres = annonces.slice(milieu);
   /* Texte des annonces justifie */
   .pa-texte, .pa-conditions { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
   .pa-court .pa-texte { text-align: left; }
+  /* Pas de justification a cote d'une image ou d'un logo flottant: la ligne est trop courte et laisse de grands blancs */
+  .pa:has(.pa-image) .pa-texte, .pa:has(.pa-image) .pa-conditions, .pa:has(.pa-logo-fig) .pa-texte, .pa:has(.pa-logo-fig) .pa-conditions { text-align: left; }
   .pa-texte, .pa-conditions { hyphenate-limit-chars: 6 3 3; text-wrap: pretty; }
   .pa-logo { display: block; width: 128px; height: auto; max-height: 128px; object-fit: contain; margin: 0 auto; }
   .pa-logo-fig figcaption { margin-top: 4px; font: 800 .8rem var(--sans); letter-spacing: .04em; }

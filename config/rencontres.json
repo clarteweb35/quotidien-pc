@@ -259,9 +259,11 @@
       "recherche": "Homme 27-36 ans, ouvert au débat et peu pressé d'avoir raison."
     },
     {
-      "ref": "N7Y-16C", "cat": "hh", "photo": "n7y-16c.webp", "profil": "Homme 47 ans, artisan, manuel et sentimental",
-      "texte": "J'aime restaurer les meubles anciens, cuisiner le dimanche et partir à l'improviste, à condition que l'improvisation ait été planifiée la veille. Je recherche un homme tendre, fiable et prêt à partager les petits bonheurs du quotidien. Je possède déjà tous les outils nécessaires à une vie commune, y compris ceux dont personne ne connaît l'usage.",
-      "recherche": "Homme 40-52 ans, affectueux, acceptant qu'une étagère puisse devenir un projet de couple."
+      "ref": "N7Y-16C", "cat": "hh", "photo": "n7y-16c.webp", "auteur": "Yves Verts", "photoAlt": "Portrait fictif (image générée par IA) d'Yves Verts, journaliste du service environnement",
+      "profil": "Homme 47 ans, journaliste au service environnement, vert de conviction",
+      "texte": "Journaliste au service environnement, ce qui ne m'empêche pas d'aimer les meubles anciens, le réemploi et les dimanches passés à cuisiner des épluchures. Je pars volontiers à l'improviste, à condition que l'improvisation ait été planifiée la veille et compensée en carbone. Je recherche un homme tendre, fiable et prêt à partager les petits bonheurs du quotidien, y compris le tri sélectif. Je possède déjà tous les outils nécessaires à une vie commune, y compris ceux dont personne ne connaît l'usage.",
+      "recherche": "Homme 40-52 ans, affectueux, acceptant qu'une étagère puisse devenir un projet de couple, et qu'une poubelle en devienne cinq.",
+      "formule": "Réponse appréciée sur papier recyclé."
     },
     {
       "ref": "D8-4X07", "cat": "hh", "photo": "d8-4x07.webp", "profil": "Homme 39 ans, divorcé, père d'un chat très sélectif",

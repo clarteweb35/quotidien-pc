@@ -48,7 +48,7 @@ Consommation Actions : ~34 exécutions/jour × ~1 min ≈ 1 000 min/mois. Dépô
 | C. Générateur | `editor.js`, `gemini.js` | SDK officiel, sortie JSON structurée, modèle/paramètres/consignes en configuration |
 | D. Validateur | `validator.js`, `editor.js` (relecteur) | contrôles déterministes bloquants + second appel Gemini (aide, jamais preuve) |
 | E. Publication | `publisher.js` | écrit le `.md`, le relit pour confirmer, slug unique, idempotent |
-| F. Planificateur | `scheduler.js`, `editor.yml` | 8 créneaux Europe/Paris, rattrapage borné, plafond quotidien |
+| F. Planificateur | `scheduler.js`, `editor.yml` | 5 créneaux Europe/Paris, rattrapage borné, plafond quotidien |
 | G. Journal et coûts | `logger.js`, `store.js` (`usage.json`) | JSONL quotidien sans secret, coût par appel, plafonds jour/mois |
 | H. Administration | `site/src/pages/admin/` | page statique qui pilote le dépôt via l'API GitHub |
 
@@ -63,7 +63,7 @@ créneau dû ─▶ pause ? ─▶ budget ? ─▶ collecte ─▶ sujet (actu s
 
 Garanties :
 - **Pas de doublon en cas de relance** : l'identifiant d'article dérive du créneau et du sujet ; le créneau est écrit dans le front-matter ; au redémarrage, un article déjà présent pour un créneau est « réconcilié » au lieu d'être recréé (testé).
-- **Jamais plus de 8 par jour** : plafond appliqué dans le planificateur, y compris pour les publications manuelles « extra » et pour la libération depuis la quarantaine (testé).
+- **Jamais plus de 5 par jour** : plafond appliqué dans le planificateur, y compris pour les publications manuelles « extra » et pour la libération depuis la quarantaine (testé).
 - **Rien ne se perd** : l'état est écrit avant chaque appel externe ; le coût de chaque appel est sauvegardé immédiatement ; un article refusé est conservé en quarantaine.
 - **« Publié » = commité** : l'article et l'état sont dans le même commit git. Si le push échoue, ni l'un ni l'autre n'existent : pas d'état incohérent. Le déploiement du site suit ensuite automatiquement.
 
