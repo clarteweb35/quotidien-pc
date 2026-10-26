@@ -260,7 +260,7 @@ test('panne passagere de Gemini (504 persistant, sans modele de secours): arret 
 });
 
 test('modele principal en 504: bascule sur le modele de secours et publie (modele reel enregistre)', async () => {
-  const ctx = makeCtx({ at: '2026-10-24T05:05:00Z', script: ({ kind, model }) => { if (kind === 'generate' && model === 'gemini-3.8-flash') throw err504(); } });
+  const ctx = makeCtx({ at: '2026-10-24T05:05:00Z', mutateCfg: (c) => { c.engine.gemini.generatorModel = 'gemini-3.8-flash'; c.engine.gemini.generatorFallbackModel = 'gemini-3.6-flash'; }, script: ({ kind, model }) => { if (kind === 'generate' && model === 'gemini-3.8-flash') throw err504(); } });
   const r = await runCycle(ctx);
   assert.equal(r.published.length, 1);
   const f = ctx.articles()[0];

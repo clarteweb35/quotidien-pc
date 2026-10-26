@@ -1,6 +1,6 @@
 {
   "gemini": {
-    "generatorModel": "gemini-3.8-flash",
+    "generatorModel": "gemini-3.6-flash",
     "judgeModel": "gemini-3.5-flash-lite",
     "generator": {
       "temperature": 1,
@@ -30,7 +30,7 @@
       }
     },
     "pricesNote": "A VERIFIER sur https://ai.google.dev/gemini-api/docs/pricing. Valeurs prudentes (tarif le plus eleve annonce). Un modele absent de cette table bloque le moteur.",
-    "generatorFallbackModel": "gemini-3.6-flash"
+    "generatorFallbackModel": "gemini-3.8-flash"
   },
   "budget": {
     "dailyUsd": 1,
