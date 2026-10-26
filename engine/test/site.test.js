@@ -288,4 +288,10 @@ test('article: colonne de droite avec des renvois vers les autres articles', () 
   assert.ok(/class="cote-bloc"[^>]*>s*<h2[^>]*>À lire aussi/.test(html) || html.includes('À lire aussi'), 'renvois');
 });
 
+test('en-tete: heure et decomptes avant la presidentielle et avant Noel', () => {
+  const h = page('.');
+  assert.ok(/J-[0-9]+ avant la présidentielle/.test(h) && /J-[0-9]+ avant Noël/.test(h), 'decomptes sous le logo');
+  assert.ok(h.includes('id="clock"'), 'heure');
+});
+
 test.after(() => fs.rmSync(out, { recursive: true, force: true }));

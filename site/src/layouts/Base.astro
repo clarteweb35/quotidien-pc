@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import { categories, siteName, tagline, logoName, url } from '../lib/site';
+import editorial from '../../../config/editorial.json';
 import { publisher, analyticsId } from '../lib/legal';
 import Consent from '../components/Consent.astro';
 import ManchetteEdito from '../components/ManchetteEdito.astro';
@@ -42,12 +43,20 @@ const SEC_PAR_LETTRE = 0.02;
 let cumul = 0.25;
 const menuFrappe = MENU.map((m) => { const o = { ...m, n: m.label.length, t: Number(cumul.toFixed(2)) }; cumul += m.label.length * SEC_PAR_LETTRE; return o; });
 const menuFin = Number(cumul.toFixed(2));
+// Decomptes affiches sous le logo (J-): jours calendaires a l'heure de Paris. Valeur du build, recalculee dans le navigateur.
+const parisYmd = (d: Date) => new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Paris' }).format(d);
+const jours = (cible: string) => Math.round((Date.parse(cible) - Date.parse(parisYmd(new Date()))) / 864e5);
+const dc = editorial.decomptes;
+const ajd = parisYmd(new Date());
+const noelCible = (() => { const a = Number(ajd.slice(0, 4)); const n = `${a}-${String(dc.noelMois).padStart(2, '0')}-${String(dc.noelJour).padStart(2, '0')}`; return n >= ajd ? n : `${a + 1}${n.slice(4)}`; })();
+const jPresidentielle = jours(dc.presidentielle);
+const jNoel = jours(noelCible);
 const today = new Intl.DateTimeFormat('fr-FR', { timeZone: 'Europe/Paris', dateStyle: 'full' }).format(new Date());
 ---
 <!doctype html>
 <html lang="fr">
   <head>
-    <script is:inline>{`try{if(location.pathname.replace(/index\.html$/,"")!=="${url()}"||localStorage.getItem("frappe"))document.documentElement.classList.add("sans-frappe");else localStorage.setItem("frappe","1")}catch(e){}`}</script>
+    <script is:inline set:html={`try{if(location.pathname.replace(/index\.html$/,"")!=="${url()}"||localStorage.getItem("frappe"))document.documentElement.classList.add("sans-frappe");else localStorage.setItem("frappe","1")}catch(e){}`}></script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
@@ -82,8 +91,8 @@ const today = new Intl.DateTimeFormat('fr-FR', { timeZone: 'Europe/Paris', dateS
           <img class="logo" src={url('brand/logo-1100.png')} width="1100" height="367" alt={`${logoName.main} ${logoName.sub.toLowerCase()} — ${tagline}`} fetchpriority="high" />
         </picture>
       </a>
-      <p class="date"><span id="today">{today}</span><span id="clock"></span></p>
-      <script is:inline>{`(function(){var c=document.getElementById("clock");if(!c)return;var f=new Intl.DateTimeFormat("fr-FR",{timeZone:"Europe/Paris",hour:"2-digit",minute:"2-digit"});function t(){c.textContent=" · "+f.format(new Date()).replace(":"," h ")}t();setInterval(t,15000)})()`}</script>
+      <p class="date"><span id="today">{today}</span><span id="clock"></span><span class="decomptes">{jPresidentielle >= 0 && <> · <span id="jp" data-d={dc.presidentielle}>J-{jPresidentielle} avant la présidentielle</span></>} · <span id="jn" data-m={dc.noelMois} data-j={dc.noelJour}>J-{jNoel} avant Noël</span></span></p>
+      <script is:inline set:html={`(function(){var c=document.getElementById("clock");if(!c)return;var f=new Intl.DateTimeFormat("fr-FR",{timeZone:"Europe/Paris",hour:"2-digit",minute:"2-digit"});var p=new Intl.DateTimeFormat("en-CA",{timeZone:"Europe/Paris"});function n(s){return Date.parse(s)}function d2(m){return String(m).padStart(2,"0")}function k(){var a=p.format(new Date()),jp=document.getElementById("jp"),jn=document.getElementById("jn");if(jp){var x=Math.round((n(jp.dataset.d)-n(a))/864e5);jp.textContent=x>=0?"J-"+x+" avant la présidentielle":"";}if(jn){var y=a.slice(0,4),z=y+"-"+d2(jn.dataset.m)+"-"+d2(jn.dataset.j);if(z<a)z=(+y+1)+z.slice(4);jn.textContent="J-"+Math.round((n(z)-n(a))/864e5)+" avant Noël"}}function t(){c.textContent=" · "+f.format(new Date()).replace(":"," h ");k()}t();setInterval(t,15000)})()`}></script>
     </header>
     <nav class="nav" aria-label="Rubriques" style={`--fin:${menuFin}s`}>
       <div class="wrap">
