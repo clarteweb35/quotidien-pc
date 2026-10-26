@@ -42,7 +42,8 @@
     { "id": "bpcc", "nom": "Bureau paritaire de certification des certifications", "slogan": "Certifié, donc certifiant.", "palette": "vert", "logo": "bpcc.webp" },
     { "id": "concept", "nom": "Agence Espace & Concept", "slogan": "Des mètres carrés qui sont avant tout des idées.", "palette": "rouge", "logo": "concept.webp" },
     { "id": "zerolarme", "nom": "Assurance Zéro Larme", "palette": "bleu", "logo": "zerolarme.webp" },
-    { "id": "teflonhuman", "nom": "Teflon Human Corp", "palette": "vert" },
+    { "id": "teflonhuman", "nom": "Teflon Human Corp", "palette": "vert", "logo": "teflonhuman.webp", "logoCarre": true },
+    { "id": "levide", "nom": "Le Vide", "slogan": "Chaîne de magasins", "palette": "ink", "logo": "levide.webp", "logoCarre": true },
     { "id": "trobo", "nom": "Agile TroBo", "palette": "rouge" },
     { "id": "miraculex", "nom": "Miraculex®", "slogan": "Le miracle, mais en flacon.", "palette": "or", "logo": "miraculex.webp" }
   ],
@@ -330,7 +331,7 @@
       "conditions": "Les bonnes nouvelles sont exclues du contrat, y compris les fausses bonnes nouvelles."
     },
     {
-      "id": "pa-029", "pub": true, "cat": "offres", "format": "vedette", "ref": "PA-029",
+      "id": "pa-029", "pub": true, "solde": true, "cat": "offres", "format": "vedette", "ref": "PA-029", "annonceur": "levide",
       "titre": "-100 % sur tout le magasin",
       "prix": "0 €*",
       "texte": "Cette semaine seulement, tout est offert dans nos rayons. Pour en profiter, présentez-vous en caisse sans rien acheter, munie de la carte de fidélité que vous n'avez pas encore.",

@@ -4,10 +4,11 @@ export interface Annonce {
   id: string; cat: string; format: 'classique' | 'court' | 'vedette' | 'encart'; ref: string;
   titre: string; accroche?: string; prix?: string; texte: string; conditions?: string;
   annonceur?: string; image?: string; imageAlt?: string; imageType?: 'portrait';
+  solde?: boolean; // titre affiche « façon soldes »: rouge, gras, defilant
   pub?: boolean; // annonce reutilisable comme publicite fictive dans les articles
   reel?: boolean; url?: string; site?: string; lien?: string; // vraie annonce: renvoie vers un vrai site
 }
-export interface Annonceur { id: string; nom: string; slogan?: string; palette: string; logo?: string }
+export interface Annonceur { id: string; nom: string; slogan?: string; palette: string; logo?: string; logoCarre?: boolean }
 
 export interface Partenaire {
   nom: string; mention: string; slogan: string; texte: string; details: { label: string; texte: string }[];
@@ -26,8 +27,8 @@ export const annonces = data.annonces as Annonce[];
 export const nomCategorie = (slug: string) => categoriesAnnonces.find((c) => c.slug === slug)?.name ?? slug;
 
 /** Publicites fictives (annonces marquees "pub", hors vraies annonces), sous une forme compacte pour le tirage au sort a chaque chargement. */
-export interface PubCompacte { id: string; marque: string; logo: string; titre: string; accroche: string; prix: string; texte: string; conditions: string }
+export interface PubCompacte { id: string; marque: string; logo: string; logoCarre: boolean; solde: boolean; titre: string; accroche: string; prix: string; texte: string; conditions: string }
 export const pubsCompactes: PubCompacte[] = annonces.filter((a) => a.pub && !a.reel).map((a) => {
   const ann = a.annonceur ? annonceurs.get(a.annonceur) : undefined;
-  return { id: a.id, marque: ann?.nom ?? '', logo: ann?.logo ?? '', titre: a.titre, accroche: a.accroche ?? '', prix: a.prix ?? '', texte: a.texte, conditions: a.conditions ?? '' };
+  return { id: a.id, marque: ann?.nom ?? '', logo: ann?.logo ?? '', logoCarre: !!ann?.logoCarre, solde: !!a.solde, titre: a.titre, accroche: a.accroche ?? '', prix: a.prix ?? '', texte: a.texte, conditions: a.conditions ?? '' };
 });

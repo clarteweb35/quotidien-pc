@@ -14,10 +14,10 @@ const donnees = { base: url(''), pubs: pubsCompactes };
   <aside class="pub" aria-label="Publicité fictive">
     <p class="pub-label">Publicité fictive · <a data-pub-lien href={url(`petites-annonces/#${p.id}`)}>Petites annonces</a></p>
     <div class="pub-corps">
-      <img class="pub-logo" src={p.logo ? url(`annonces/${p.logo}`) : undefined} width="64" height="64" alt={p.marque ? `Logo de ${p.marque}` : ''} hidden={!p.logo} />
+      <img class:list={['pub-logo', p.logoCarre && 'logo-carre']} src={p.logo ? url(`annonces/${p.logo}`) : undefined} width="64" height="64" alt={p.marque ? `Logo de ${p.marque}` : ''} hidden={!p.logo} />
       <div>
         <p class="pub-marque" hidden={!p.marque}>{p.marque}</p>
-        <h3 class="pub-titre">{p.titre}</h3>
+        <h3 class:list={['pub-titre', p.solde && 'pub-solde']}><span class="pub-titre-txt">{p.titre}</span></h3>
         <p class="pub-accroche" hidden={!p.accroche}>{p.accroche}</p>
         <p class="pub-prix" hidden={!p.prix}>{p.prix}</p>
         <p class="pub-texte">{p.texte}</p>
@@ -32,12 +32,12 @@ const donnees = { base: url(''), pubs: pubsCompactes };
   const brut = document.getElementById('pub-data')?.textContent;
   const box = document.querySelector<HTMLElement>('.pub');
   if (brut && box) {
-    const { base, pubs } = JSON.parse(brut) as { base: string; pubs: { id: string; marque: string; logo: string; titre: string; accroche: string; prix: string; texte: string; conditions: string }[] };
+    const { base, pubs } = JSON.parse(brut) as { base: string; pubs: { id: string; marque: string; logo: string; logoCarre: boolean; solde: boolean; titre: string; accroche: string; prix: string; texte: string; conditions: string }[] };
     const p = pubs[Math.floor(Math.random() * pubs.length)];
     const texte = (sel: string, v: string) => { const e = box.querySelector<HTMLElement>(sel); if (e) { e.textContent = v; e.hidden = !v; } };
-    texte('.pub-marque', p.marque); texte('.pub-titre', p.titre); texte('.pub-accroche', p.accroche); texte('.pub-prix', p.prix); texte('.pub-texte', p.texte); texte('.pub-conditions', p.conditions);
+    texte('.pub-marque', p.marque); texte('.pub-titre-txt', p.titre); box.querySelector('.pub-titre')?.classList.toggle('pub-solde', p.solde); texte('.pub-accroche', p.accroche); texte('.pub-prix', p.prix); texte('.pub-texte', p.texte); texte('.pub-conditions', p.conditions);
     const logo = box.querySelector<HTMLImageElement>('.pub-logo');
-    if (logo) { logo.hidden = !p.logo; if (p.logo) { logo.src = base + 'annonces/' + p.logo; logo.alt = 'Logo de ' + p.marque; } }
+    if (logo) { logo.classList.toggle('logo-carre', p.logoCarre); logo.hidden = !p.logo; if (p.logo) { logo.src = base + 'annonces/' + p.logo; logo.alt = 'Logo de ' + p.marque; } }
     box.querySelectorAll<HTMLAnchorElement>('a[data-pub-lien]').forEach((a) => { a.href = base + 'petites-annonces/#' + p.id; });
   }
 </script>
@@ -48,6 +48,11 @@ const donnees = { base: url(''), pubs: pubsCompactes };
   .pub-corps { display: flex; gap: 12px; align-items: flex-start; }
   .pub-logo { flex: none; width: 64px; height: 64px; border-radius: 50%; border: 1px solid var(--rule); background: #fff; }
   .pub-logo[hidden], .pub p[hidden] { display: none; }
+  .pub-logo.logo-carre { border-radius: 8px; object-fit: contain; background: #14181d; width: 84px; }
+  .pub-solde { overflow: hidden; white-space: nowrap; background: #fff; border: 2px solid #c8102e; padding: 4px 0; }
+  .pub-solde .pub-titre-txt { display: inline-block; color: #c8102e; font: 900 1.2rem/1.2 var(--sans); text-transform: uppercase; padding-left: 100%; animation: pub-solde-defile 11s linear infinite; }
+  @keyframes pub-solde-defile { to { transform: translateX(-100%); } }
+  @media (prefers-reduced-motion: reduce) { .pub-solde .pub-titre-txt { animation: none; padding-left: 8px; } .pub-solde { white-space: normal; } }
   .pub-marque { margin: 0; font: 800 .7rem var(--sans); letter-spacing: .14em; text-transform: uppercase; }
   .pub-titre { margin: 2px 0 4px; font: 700 1.1rem/1.25 var(--serif); }
   .pub-accroche { margin: 0 0 4px; font: italic 700 .95rem var(--serif); }

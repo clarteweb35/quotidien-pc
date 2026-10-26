@@ -52,6 +52,7 @@ const jsonLd = {
 ---
 <Base title={d.title} description={d.description} type="article" current={cat.slug} jsonLd={jsonLd} ogImage={url(`og/${d.slug}.png`)}>
   <div class="progress" aria-hidden="true"></div>
+  <PubAnnonce seed={d.slug} />
   <article class:list={['article', isEdito && 'article-edito']}>
     <a class="kicker" href={url(`rubrique/${cat.slug}/`)}>{isEdito ? 'Édito' : cat.name}</a>
     <h1>{d.title}</h1>
@@ -65,7 +66,6 @@ const jsonLd = {
       Publié le <time datetime={d.publishedAt.toISOString()}>{formatDateTime(d.publishedAt)}</time> · <strong>Satire</strong>{ref && <> · <span class="ref" title="Référence de l'article">Réf. {ref}</span></>}
     </div>
     <Share title={d.title} url={canonicalUrl} id="share-top" />
-    <PubAnnonce seed={d.slug} />
     {img && (
       <figure class="illus">
         <img src={img.src} srcset={img.srcset} sizes="(min-width: 760px) 720px, 100vw" alt={img.alt} width={img.width} height={img.height} fetchpriority="high" />
