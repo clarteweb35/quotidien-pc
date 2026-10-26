@@ -364,3 +364,12 @@ test('un seul edito par jour: la rubrique saturee n\'est ni ciblee ni tiree au s
   }
   cleanup(ctx);
 });
+
+test('creneau editoSlot: le premier article du jour est l\'edito, pas les suivants (plafond 1 edito/jour)', async () => {
+  const ctx = makeCtx({ at: '2026-10-24T19:00:00Z', mutateCfg: (c) => { c.schedule.editoSlot = 0; c.schedule.maxPublicationsPerRun = 10; c.schedule.catchupMinutes = 1000; } });
+  await runCycle(ctx);
+  const arts = loadExisting(ctx.paths.content, { now: ctx.now() }).sort((a, b) => String(a.slot).localeCompare(String(b.slot)));
+  assert.equal(arts[0].category, 'editos', 'edito au premier creneau');
+  assert.equal(arts.filter((a) => a.category === 'editos').length, 1, 'un seul edito');
+  cleanup(ctx);
+});

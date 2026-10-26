@@ -118,7 +118,9 @@ async function processSlot(ctx, slot, items) {
   // --- choix du sujet ---
   // Rotation des rubriques: on sert d'abord la rubrique la moins publiee (actu de ses flux, sinon theme intemporel),
   // et seulement a defaut n'importe quel sujet.
-  const target = cfg.engine.topics.rotateCategories ? nextCategory({ existing, cfg, now, countsToday: categoryCountsToday }) : null;
+  // Le creneau « editoSlot » (le premier, le matin) est reserve a l'edito, sauf si l'edito du jour est deja paru.
+  const editoForce = slot.idx === cfg.schedule.editoSlot && cfg.categories.some((c) => c.slug === 'editos') && !categorieSaturee(cfg, 'editos', categoryCountsToday);
+  const target = editoForce ? 'editos' : cfg.engine.topics.rotateCategories ? nextCategory({ existing, cfg, now, countsToday: categoryCountsToday }) : null;
   let topic = null;
   for (const only of target ? [target, null] : [null]) {
     const { topic: news, rejected } = pickNewsTopic({
