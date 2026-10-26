@@ -257,3 +257,9 @@ footer .brand { flex-wrap: wrap; }
 .edito-pupitre { display: flex; gap: 16px; align-items: center; margin-top: 14px; padding: 12px 14px; border: 1px solid var(--rule); background: rgba(107, 33, 168, .05); }
 .edito-pupitre p { margin: 0; font: .92rem/1.5 var(--sans); }
 footer .brand p { text-align: center; }
+/* Pied de page: le texte occupe tout l espace libre entre le logo et les liens, et y est centre */
+footer .cols { flex-wrap: nowrap; gap: 16px 24px; }
+footer .brand { flex: 1 1 auto; min-width: 0; }
+footer .brand p { flex: 1 1 auto; text-align: center; }
+@media (max-width: 860px) { footer .cols { flex-wrap: wrap; } footer .brand { flex-basis: 100%; } }
+@media (max-width: 860px) { footer .brand { flex-wrap: wrap; } footer .brand p { flex-basis: 100%; border-left: 0; padding-left: 0; } }
