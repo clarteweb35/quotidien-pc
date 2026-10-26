@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Card from '../../components/Card.astro';
-import { allArticles } from '../../lib/site';
+import { allArticles, categories, url } from '../../lib/site';
 
 export async function getStaticPaths() {
   const articles = await allArticles();
@@ -11,8 +11,19 @@ export async function getStaticPaths() {
 const { tag, items } = Astro.props;
 // Page mince (moins de 3 articles): hors de l'index (et du sitemap), mais ses liens restent suivis.
 const noindex = items.length < 3;
+// Maillage: rubriques concernees et mots-cles voisins (apparaissant avec celui-ci).
+const rubriques = categories.filter((c) => items.some((a) => a.data.category === c.slug));
+const voisins = (() => {
+  const m = new Map<string, number>();
+  for (const a of items) for (const t of a.data.tags) if (t !== tag) m.set(t, (m.get(t) ?? 0) + 1);
+  return [...m].sort((x, y) => y[1] - x[1] || x[0].localeCompare(y[0], 'fr')).slice(0, 8).map(([t]) => t);
+})();
 ---
 <Base title={`#${tag}`} description={`Articles sur le thème « ${tag} ».`} noindex={noindex} follow>
   <div class="page-head"><span class="kicker">Mot-clé</span><h1>#{tag}</h1></div>
   <div class="grid">{items.map((a) => <Card article={a} />)}</div>
+  <nav class="mots-cles" aria-label="Pour continuer">
+    <span>Rubriques :</span> {rubriques.map((c) => <a href={url(`rubrique/${c.slug}/`)}>{c.name}</a>)}
+    {voisins.length > 0 && <><br /><span>Mots-clés voisins :</span> {voisins.map((t) => <a href={url(`tag/${encodeURIComponent(t)}/`)}>#{t}</a>)}</>}
+  </nav>
 </Base>

@@ -165,4 +165,16 @@ test('SEO: mots-cles minces en noindex et hors sitemap, lectures proches, schema
   assert.ok(art.includes('À lire aussi') && art.includes('"@type":"Article"') && !art.includes('SatiricalArticle'), 'lectures proches et schema Article');
 });
 
+test('maillage interne: manchette partout, fil d\'Ariane, precedent/suivant, liens vers les fiches', () => {
+  for (const pg of ['.', 'redaction', 'jeux', 'compteurs', 'rubrique/sport', 'petites-annonces']) assert.ok(page(pg).includes('La Manchette de la Manchette'), `manchette sur ${pg}`);
+  assert.ok(page('.').indexOf('La Manchette de la Manchette') < page('.').indexOf('<main'), 'la manchette est au-dessus du contenu, sous le menu');
+  assert.equal((page('.').match(/La Manchette de la Manchette</g) || []).length, 1, 'une seule manchette par page');
+  const dir = path.join(ROOT, 'site/src/content/articles');
+  const slug = /^slug: "([^"]+)"/m.exec(fs.readFileSync(path.join(dir, fs.readdirSync(dir).find((x) => x.endsWith('.md'))), 'utf8'))[1];
+  const art = page(`articles/${slug}`);
+  assert.ok(art.includes('aria-label="Fil d\'Ariane"') || art.includes('Fil d&#39;Ariane'), 'fil d\'Ariane');
+  assert.ok(page('.').includes('href="/redaction/#'), 'signature cliquable sur les cartes');
+  assert.ok(page('redaction').includes('Derniers articles') || page('redaction').includes('Derniers éditos'), 'articles de chaque journaliste');
+});
+
 test.after(() => fs.rmSync(out, { recursive: true, force: true }));

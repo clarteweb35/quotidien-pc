@@ -40,6 +40,7 @@
 | À propos, 404, tags, `/admin/` (panneau qui pilote le dépôt via l'API GitHub), `/build.json` | | ✅ |
 
 ### 2.2 Éléments communs (`Base.astro`)
+- **La Manchette de la Manchette** (édito le plus récent) sous le menu de **toutes les pages** (Base.astro ; absente de /admin/ et du 404). **Maillage interne** : fil d'Ariane, précédent/suivant dans la rubrique, « du même auteur » et « À lire aussi » sur les articles ; signature cliquable vers la fiche du journaliste sur les cartes ; derniers articles de chaque journaliste sur /redaction/ ; mots-clés de la rubrique, rubriques et mots-clés voisins sur les pages de rubrique et de mot-clé.
 - Bandeau « Journal satirique », logo, date **et heure de Paris en direct**, menu (8 rubriques + Compteurs).
 - Pied de page compact : logo + avertissement satirique + liens (rédaction, à propos, mentions légales, plan du site, RSS) ; dernière ligne : copyright à gauche, « Un site léger et accessible, mesuré le 25 octobre 2026 » et pastilles **EcoIndex A, Website Carbon A, PageSpeed 100** à droite (HTML/CSS pur, liens vers les analyses, aucune image ni requête externe).
 - Corps d'article **justifié** (y compris mobile), titres et chapôs non justifiés.

@@ -17,6 +17,12 @@ const { article } = Astro.props;
 const all = await allArticles();
 const d = article.data;
 const cat = category(d.category);
+// Maillage interne: precedent/suivant dans la meme rubrique et autres articles de la meme signature.
+const memeRubrique = all.filter((x) => x.data.category === d.category);
+const rang = memeRubrique.findIndex((x) => x.id === article.id);
+const plusRecent = rang > 0 ? memeRubrique[rang - 1] : null;
+const plusAncien = rang >= 0 && rang < memeRubrique.length - 1 ? memeRubrique[rang + 1] : null;
+const dumemeAuteur = d.author ? all.filter((x) => x.id !== article.id && x.data.author === d.author).slice(0, 4) : [];
 const related = all
   .filter((candidate) => candidate.id !== article.id)
   .map((candidate) => ({
@@ -53,6 +59,9 @@ const jsonLd = {
 <Base title={d.title} description={d.description} type="article" current={cat.slug} jsonLd={jsonLd} ogImage={url(`og/${d.slug}.png`)}>
   <div class="progress" aria-hidden="true"></div>
   <PubAnnonce seed={d.slug} />
+  <nav class="fil" aria-label="Fil d'Ariane">
+    <a href={url()}>Accueil</a> <span aria-hidden="true">›</span> <a href={url(`rubrique/${cat.slug}/`)}>{cat.name}</a>
+  </nav>
   <article class:list={['article', isEdito && 'article-edito']}>
     <a class="kicker" href={url(`rubrique/${cat.slug}/`)}>{isEdito ? 'Édito' : cat.name}</a>
     <h1>{d.title}</h1>
@@ -87,6 +96,18 @@ const jsonLd = {
         {d.sources.map((s) => <> <a href={s.url} rel="noopener nofollow external">{s.name}</a></>)}.
         Le contenu ci-dessus est entièrement parodique.
       </p>
+    )}
+    {(plusRecent || plusAncien) && (
+      <nav class="suivant" aria-label="Dans la même rubrique">
+        {plusAncien ? <a class="precedent" href={url(`articles/${plusAncien.data.slug}/`)}><span>← Plus ancien · {cat.name}</span>{plusAncien.data.title}</a> : <span />}
+        {plusRecent ? <a class="suite" href={url(`articles/${plusRecent.data.slug}/`)}><span>Plus récent · {cat.name} →</span>{plusRecent.data.title}</a> : <span />}
+      </nav>
+    )}
+    {dumemeAuteur.length > 0 && who && (
+      <aside class="meme-auteur" aria-labelledby="meme-auteur-titre">
+        <h2 id="meme-auteur-titre">Du même auteur : <a href={url(`redaction/#${authorSlug(who.name)}`)}>{who.name}</a></h2>
+        <ul>{dumemeAuteur.map((x) => <li><a href={url(`articles/${x.data.slug}/`)}>{x.data.title}</a></li>)}</ul>
+      </aside>
     )}
     {related.length > 0 && (
       <aside class="related" aria-labelledby="related-title">

@@ -1,7 +1,7 @@
 ---
 import { category, formatDate, url, manualImageCredit, type Article } from '../lib/site';
 import { illustration } from '../lib/manual';
-import { journalist, portrait } from '../lib/authors';
+import { journalist, portrait, authorSlug } from '../lib/authors';
 interface Props { article: Article; lead?: boolean }
 const { article, lead = false } = Astro.props;
 const d = article.data;
@@ -11,6 +11,7 @@ const who = journalist(d.author);
 const img = await illustration(article, lead ? 1280 : 800, manualImageCredit);
 const isEdito = d.category === 'editos';
 const photo = who ? portrait(who.name) : null;
+const fiche = who ? url(`redaction/#${authorSlug(who.name)}`) : '';
 ---
 {isEdito && !lead ? (
   <article class="card edito">
@@ -20,7 +21,7 @@ const photo = who ? portrait(who.name) : null;
       <h3><a href={href}>{d.title}</a></h3>
     </div>
     <p>{d.chapo}</p>
-    {who && <p class="byline">Par {who.name}, rédacteur en chef</p>}
+    {who && <p class="byline">Par <a href={fiche}>{who.name}</a>, rédacteur en chef</p>}
     <div class="meta">{formatDate(d.publishedAt)}</div>
   </article>
 ) : lead ? (
@@ -29,7 +30,7 @@ const photo = who ? portrait(who.name) : null;
       <a class="kicker" href={url(`rubrique/${cat.slug}/`)}>{cat.name}</a>
       <h2><a href={href}>{d.title}</a></h2>
       <p>{d.chapo}</p>
-      {who && <p class="byline">Par {who.name}</p>}
+      {who && <p class="byline">Par <a href={fiche}>{who.name}</a></p>}
       <div class="meta">{formatDate(d.publishedAt)}</div>
     </div>
     {img && <a href={href} tabindex="-1" aria-hidden="true"><img class="photo" src={img.src} srcset={img.srcset} sizes="(min-width: 1000px) 660px, 100vw" alt="" width={img.width} height={img.height} fetchpriority="high" /></a>}
@@ -39,7 +40,7 @@ const photo = who ? portrait(who.name) : null;
     {img ? <a href={href} tabindex="-1" aria-hidden="true"><img class="photo" src={img.src} srcset={img.srcset} sizes="(min-width: 1000px) 360px, 100vw" alt="" width={img.width} height={img.height} loading="lazy" /></a> : <a class="kicker" href={url(`rubrique/${cat.slug}/`)}>{cat.name}</a>}
     <h3><a href={href}>{d.title}</a></h3>
     <p>{d.chapo}</p>
-    {who && <p class="byline">Par {who.name}</p>}
+    {who && <p class="byline">Par <a href={fiche}>{who.name}</a></p>}
     <div class="meta">{formatDate(d.publishedAt)}</div>
   </article>
 )}

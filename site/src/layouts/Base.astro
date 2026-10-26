@@ -3,6 +3,7 @@ import '../styles/global.css';
 import { categories, siteName, tagline, logoName, url } from '../lib/site';
 import { publisher, analyticsId } from '../lib/legal';
 import Consent from '../components/Consent.astro';
+import ManchetteEdito from '../components/ManchetteEdito.astro';
 
 interface Props {
   title?: string;
@@ -85,6 +86,9 @@ const today = new Intl.DateTimeFormat('fr-FR', { timeZone: 'Europe/Paris', dateS
         </ul>
       </div>
     </nav>
+    {!csp && !noindex && (
+      <div class="wrap manchette-globale"><ManchetteEdito /></div>
+    )}
     <main id="contenu" class="wrap"><slot /></main>
     <footer>
       <div class="wrap cols">

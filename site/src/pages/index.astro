@@ -3,7 +3,6 @@ import Base from '../layouts/Base.astro';
 import Card from '../components/Card.astro';
 import Marches from '../components/Marches.astro';
 import Gimmick from '../components/Gimmick.astro';
-import ManchetteEdito from '../components/ManchetteEdito.astro';
 import BandeauRencontres from '../components/BandeauRencontres.astro';
 import { allArticles, url, siteName, manualImageCredit } from '../lib/site';
 import { illustration } from '../lib/manual';
@@ -32,7 +31,6 @@ const siteLd = {
     <p class="empty">Le journal est en cours d'impression. Les premiers articles arrivent très bientôt.</p>
   ) : (
     <>
-      <ManchetteEdito />
       {flash.length > 1 && (
         <div class="flash" role="region" aria-label="Derniers titres">
           <span class="flash-label">À l'instant</span>

@@ -13,6 +13,10 @@ export function getStaticPaths() {
 }
 const { cat } = Astro.props;
 const articles = (await allArticles()).filter((a) => a.data.category === cat.slug);
+// Maillage: mots-cles les plus frequents de la rubrique (seuls ceux de 3 articles et plus ont une page indexee, mais tous restent navigables).
+const compteTags = new Map<string, number>();
+for (const a of articles) for (const t of a.data.tags) compteTags.set(t, (compteTags.get(t) ?? 0) + 1);
+const motsCles = [...compteTags].sort((x, y) => y[1] - x[1] || x[0].localeCompare(y[0], 'fr')).slice(0, 8).map(([t]) => t);
 const editorialiste = cat.slug === 'editos' ? journalist('Jean-Eudes de la Manchette') : null;
 const photoEdito = editorialiste ? portrait(editorialiste.name) : null;
 ---
@@ -35,4 +39,9 @@ const photoEdito = editorialiste ? portrait(editorialiste.name) : null;
     <div class="grid">{articles.map((a) => <Card article={a} />)}</div>
   )}
   {cat.slug === 'economie' && <EcoExtras />}
+  {motsCles.length > 0 && (
+    <nav class="mots-cles" aria-label="Mots-clés de la rubrique">
+      <span>Mots-clés :</span> {motsCles.map((t) => <a href={url(`tag/${encodeURIComponent(t)}/`)}>#{t}</a>)}
+    </nav>
+  )}
 </Base>
