@@ -10,14 +10,13 @@ interface Props {
   description?: string;
   type?: 'website' | 'article';
   noindex?: boolean;
-  colonne?: boolean; // pages d'article: la manchette suit la largeur de la colonne de lecture (720 px), pour que tout forme un seul bloc
-  follow?: boolean; // avec noindex: laisser les robots suivre les liens (pages minces, ex. mots-cles)
+    follow?: boolean; // avec noindex: laisser les robots suivre les liens (pages minces, ex. mots-cles)
   current?: string;
   jsonLd?: object;
   csp?: string;
   ogImage?: string;
 }
-const { title, description = tagline, type = 'website', noindex = false, follow = false, colonne = false, current = '', jsonLd, csp, ogImage } = Astro.props;
+const { title, description = tagline, type = 'website', noindex = false, follow = false, current = '', jsonLd, csp, ogImage } = Astro.props;
 const fullTitle = title ? `${title} — ${siteName}` : `${siteName} — ${tagline}`;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const share = new URL(ogImage ?? url('brand/og-default.png'), Astro.site).toString();
@@ -47,7 +46,7 @@ const today = new Intl.DateTimeFormat('fr-FR', { timeZone: 'Europe/Paris', dateS
 <!doctype html>
 <html lang="fr">
   <head>
-    <script is:inline>{`try{if(sessionStorage.getItem("frappe"))document.documentElement.classList.add("sans-frappe");else sessionStorage.setItem("frappe","1")}catch(e){}`}</script>
+    <script is:inline>{`try{var t=+localStorage.getItem("frappe")||0;if(Date.now()-t<432e5)document.documentElement.classList.add("sans-frappe");else localStorage.setItem("frappe",String(Date.now()))}catch(e){}`}</script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
@@ -95,7 +94,7 @@ const today = new Intl.DateTimeFormat('fr-FR', { timeZone: 'Europe/Paris', dateS
       </div>
     </nav>
     {!csp && !noindex && (
-      <div class:list={['wrap', 'manchette-globale', colonne && 'colonne']}><ManchetteEdito /></div>
+      <div class="wrap manchette-globale"><ManchetteEdito /></div>
     )}
     <main id="contenu" class="wrap"><slot /></main>
     <footer>

@@ -133,7 +133,8 @@ test('accueil: La Manchette de la Manchette; articles: publicite fictive tiree d
   const art = page(`articles/${s}`);
   assert.ok(art.includes('Publicité fictive') && art.includes('href="/petites-annonces/#pa-'), 'publicite fictive dans l\'article');
   assert.ok(art.indexOf('Publicité fictive') < art.indexOf('class="kicker"'), 'la pub est au-dessus de la rubrique, sous le menu');
-  assert.ok(/manchette-globale[^"]*colonne/.test(art), 'sur un article, la manchette suit la colonne de lecture');
+  const css = fs.readFileSync(path.join(ROOT, 'site/src/styles/global.css'), 'utf8');
+  assert.ok(/\.article \{ max-width: none/.test(css) && /\.prose \{ max-width: none/.test(css), 'articles et redaction aussi larges que le menu');
 });
 
 test('contenu: jamais plus d\'un edito par jour (heure de Paris)', () => {
@@ -191,7 +192,7 @@ test('maillage interne: manchette partout, fil d\'Ariane, precedent/suivant, lie
 test('menu tape a la machine et titre de l\'edito: balisage prevu, accessible sans JavaScript', () => {
   const h = page('.');
   assert.ok(/<a [^>]*style="--n:\d+;--t:[\d.]+s"/.test(h), 'entrees du menu avec duree de frappe');
-  assert.ok(h.includes('sessionStorage.getItem("frappe")'), 'drapeau une fois par session');
+  assert.ok(h.includes('localStorage.getItem("frappe")'), 'frappe du menu rejouee au plus toutes les 12 h');
   assert.ok(h.includes('--fin:'), 'fin de la frappe du menu exposee au titre de l\'edito');
   assert.ok(h.includes('Pourquoi le dimanche devrait être transféré au mardi') || h.includes('class="mm-titre"'), 'le titre de l\'edito est dans le HTML (lisible sans JS)');
 });
@@ -231,6 +232,12 @@ test("menu: la frappe ne laisse aucun rognage une fois terminee (Éditos et Peti
   assert.ok(/.nav a { animation: frappe [^;]*backwards/.test(css), 'animation du menu en fill-mode backwards');
   const h = page('.');
   assert.ok(h.includes('>Éditos<') && h.includes('>Petites annonces<'), 'libelles complets dans le HTML');
+});
+
+test('Yves Verts: 32 ans sur sa fiche et sur son annonce, recherche modifiee', () => {
+  assert.ok(page('redaction').includes('Yves Verts</strong>, 32 ans'), 'age sur la fiche');
+  const rc = page('rencontres');
+  assert.ok(rc.includes('Homme 32 ans, journaliste au service environnement') && rc.includes('Homme + de 85 ans, riche et malade.'), 'annonce');
 });
 
 test.after(() => fs.rmSync(out, { recursive: true, force: true }));

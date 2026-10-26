@@ -61,7 +61,7 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.15; }
 .section-title { font: 800 .85rem var(--sans); letter-spacing: .12em; text-transform: uppercase; border-top: 3px solid var(--ink); padding-top: 8px; margin: 40px 0 0; }
 
 /* Article */
-.article { max-width: 720px; margin: 0 auto; }
+.article { max-width: none; margin: 0; }
 .article h1 { font-size: clamp(2rem, 5vw, 3rem); margin: 10px 0 12px; letter-spacing: -.01em; }
 .article .chapo { font-size: 1.28rem; line-height: 1.5; color: var(--ink-2); font-style: italic; margin: 0 0 14px; }
 .article .body { margin-top: 24px; font-size: 1.14rem; }
@@ -79,7 +79,7 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.15; }
 
 .page-head { border-bottom: 1px solid var(--rule); padding-bottom: 16px; margin-bottom: 8px; }
 .page-head h1 { font-size: 2.4rem; margin: 6px 0; }
-.prose { max-width: 720px; margin: 0 auto; }
+.prose { max-width: none; margin: 0; }
 .empty { text-align: center; padding: 60px 0; color: var(--ink-2); }
 
 main#contenu { padding-bottom: 72px; } /* id: plus specifique que .wrap, qui remettait le padding bas a zero */
@@ -341,3 +341,46 @@ footer .quality .q-score.q-b { background: #5b9a2c; } /* note B: vert plus clair
 .pa-colonnes .pa-vedette { border: 2px solid var(--ink); background: var(--paper-2); }
 .pa-colonnes .pa-encart { border: 2px solid rgba(0, 0, 0, .3); }
 .pa-colonnes .pa-court, .pa-colonnes .pa-classique { border-bottom: 1px solid var(--rule); }
+
+/* ===== Pages d'article et de redaction: aussi larges que le menu (1120 px), images et portraits plus grands ===== */
+.manchette-globale.colonne { max-width: none; }
+.fil, .suivant, .meme-auteur { max-width: none; margin-left: 0; margin-right: 0; }
+.article .illus { margin: 24px 0 0; }
+.article .illus img { aspect-ratio: 21 / 9; }
+.article h1 { font-size: clamp(2.2rem, 4.4vw, 3.3rem); }
+.article .chapo { font-size: 1.4rem; max-width: 62rem; }
+.article .body { font-size: 1.2rem; }
+@media (min-width: 1000px) {
+  /* corps du texte sur deux colonnes, comme un vrai journal: la ligne reste lisible malgre la largeur */
+  .article .body { column-count: 2; column-gap: 48px; column-rule: 1px solid var(--rule); }
+  .article .body h2 { break-after: avoid; break-inside: avoid; }
+  .article .body > p:first-of-type { margin-top: 0; }
+}
+.avatar { width: 132px; height: 132px; }
+.avatar-lg { width: 150px; height: 150px; }
+.avatar-md { width: 84px; height: 84px; }
+.avatar-sm { width: 52px; height: 52px; }
+.article-edito .edito-portrait { width: 150px; height: 150px; }
+.mm-photo { width: 96px !important; height: 96px !important; }
+.team li { gap: 20px; padding: 16px 0; }
+.team li > div { flex: 1; min-width: 0; }
+.team p { font-size: 1.02rem; }
+.bureau { max-width: 780px; }
+.page-head h1 { font-size: clamp(2.2rem, 4vw, 3rem); }
+@media (min-width: 900px) { .prose .team { display: grid; grid-template-columns: 1fr 1fr; gap: 0 36px; } }
+@media (max-width: 560px) { .avatar { width: 96px; height: 96px; } .avatar-lg { width: 110px; height: 110px; } .article-edito .edito-portrait { width: 110px; height: 110px; } }
+
+/* ===== 3. Le logo s'efface avec style quand on descend: il se reduit, se floute et s'envole (Chrome/Edge; ailleurs il defile normalement) ===== */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: scroll()) {
+    .masthead .logo { animation: logo-entree .8s ease-out both, logo-sortie linear both; animation-timeline: auto, scroll(root); animation-range: normal, 0 260px; transform-origin: 50% 0; }
+    .masthead .date { animation: date-sortie linear both; animation-timeline: scroll(root); animation-range: 0 160px; }
+    @keyframes logo-sortie { to { opacity: 0; transform: translateY(-34px) scale(.82); filter: blur(7px); } }
+    @keyframes date-sortie { to { opacity: 0; letter-spacing: .4em; } }
+  }
+}
+/* Redaction: photos de bureaux sur toute la largeur (recadrage panoramique), fiche unique sur toute la largeur */
+.bureau { max-width: none; }
+.prose .bureau img { aspect-ratio: 21 / 8; object-fit: cover; }
+.prose .team li:only-child { grid-column: 1 / -1; }
+.prose .team li:only-child > div p { max-width: 62rem; }

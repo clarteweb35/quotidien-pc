@@ -3,7 +3,7 @@ import path from 'node:path';
 import journalistsFile from '../../../config/journalists.json';
 import { categories } from './site';
 
-export interface Journalist { name: string; desk: string; active: boolean; beat: string; bio: string }
+export interface Journalist { name: string; desk: string; active: boolean; beat: string; bio: string; age?: number }
 export const journalists = journalistsFile.journalists as Journalist[];
 
 export const authorSlug = (name: string) =>
