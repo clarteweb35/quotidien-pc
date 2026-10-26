@@ -1,0 +1,30 @@
+{"ts":"2026-10-26T10:58:25.683Z","runId":"20261026105825-b5d4","level":"warn","event":"cycle.slots_abandoned","count":1}
+{"ts":"2026-10-26T10:58:25.684Z","runId":"20261026105825-b5d4","level":"info","event":"cycle.start","date":"2026-10-26","due":["2026-10-26#1"],"remainingToday":5,"dryRun":false}
+{"ts":"2026-10-26T10:58:26.555Z","runId":"20261026105825-b5d4","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":31,"kept":25}
+{"ts":"2026-10-26T10:58:26.555Z","runId":"20261026105825-b5d4","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-10-26T10:58:26.555Z","runId":"20261026105825-b5d4","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":20}
+{"ts":"2026-10-26T10:58:26.555Z","runId":"20261026105825-b5d4","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":23}
+{"ts":"2026-10-26T10:58:26.555Z","runId":"20261026105825-b5d4","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":17}
+{"ts":"2026-10-26T10:58:26.556Z","runId":"20261026105825-b5d4","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":20,"kept":20}
+{"ts":"2026-10-26T10:58:26.556Z","runId":"20261026105825-b5d4","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":12}
+{"ts":"2026-10-26T10:58:26.556Z","runId":"20261026105825-b5d4","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":10}
+{"ts":"2026-10-26T10:58:26.556Z","runId":"20261026105825-b5d4","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":1}
+{"ts":"2026-10-26T10:58:26.556Z","runId":"20261026105825-b5d4","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":5}
+{"ts":"2026-10-26T10:58:26.556Z","runId":"20261026105825-b5d4","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":9}
+{"ts":"2026-10-26T10:58:26.556Z","runId":"20261026105825-b5d4","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":5}
+{"ts":"2026-10-26T10:58:26.556Z","runId":"20261026105825-b5d4","level":"info","event":"collect.done","items":163}
+{"ts":"2026-10-26T10:58:26.571Z","runId":"20261026105825-b5d4","level":"info","event":"topic.selection","slot":"2026-10-26#1","target":"tech","candidates":163,"rejected":0,"chosen":"Le rêve cabossé d’Hollywood face à l’IA : « Tout le monde l’utilise, mais personne ne veut en parler »","score":6}
+{"ts":"2026-10-26T10:59:55.310Z","runId":"20261026105825-b5d4","level":"warn","event":"gemini.retry","purpose":"generate","status":504,"attempt":1,"delayMs":4884}
+{"ts":"2026-10-26T11:01:28.786Z","runId":"20261026105825-b5d4","level":"warn","event":"gemini.retry","purpose":"generate","status":504,"attempt":2,"delayMs":8628}
+{"ts":"2026-10-26T11:03:06.023Z","runId":"20261026105825-b5d4","level":"warn","event":"gemini.retry","purpose":"generate","status":504,"attempt":3,"delayMs":16128}
+{"ts":"2026-10-26T11:03:23.618Z","runId":"20261026105825-b5d4","level":"warn","event":"gemini.fallback_model","from":"gemini-3.8-flash","to":"gemini-3.6-flash"}
+{"ts":"2026-10-26T11:03:43.570Z","runId":"20261026105825-b5d4","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4216,"outputTokens":3254,"costUsd":0.030729}
+{"ts":"2026-10-26T11:03:43.585Z","runId":"20261026105825-b5d4","level":"warn","event":"validate.deterministic_failed","slot":"2026-10-26#1","attempt":1,"issues":["titre_trop_long"]}
+{"ts":"2026-10-26T11:05:12.649Z","runId":"20261026105825-b5d4","level":"warn","event":"gemini.retry","purpose":"generate","status":504,"attempt":1,"delayMs":4630}
+{"ts":"2026-10-26T11:05:19.417Z","runId":"20261026105825-b5d4","level":"warn","event":"gemini.retry","purpose":"generate","status":503,"attempt":2,"delayMs":8371}
+{"ts":"2026-10-26T11:05:30.838Z","runId":"20261026105825-b5d4","level":"warn","event":"gemini.retry","purpose":"generate","status":503,"attempt":3,"delayMs":16748}
+{"ts":"2026-10-26T11:05:48.018Z","runId":"20261026105825-b5d4","level":"warn","event":"gemini.fallback_model","from":"gemini-3.8-flash","to":"gemini-3.6-flash"}
+{"ts":"2026-10-26T11:06:09.314Z","runId":"20261026105825-b5d4","level":"warn","event":"gemini.retry","purpose":"generate","status":503,"attempt":1,"delayMs":4202}
+{"ts":"2026-10-26T11:06:14.678Z","runId":"20261026105825-b5d4","level":"warn","event":"gemini.retry","purpose":"generate","status":503,"attempt":2,"delayMs":8737}
+{"ts":"2026-10-26T11:06:50.249Z","runId":"20261026105825-b5d4","level":"warn","event":"gemini.retry","purpose":"generate","status":503,"attempt":3,"delayMs":16536}
+{"ts":"2026-10-26T11:07:41.079Z","runId":"20261026105825-b5d4","level":"error","event":"cycle.stopped","reason":"gemini_unavailable","error":"Gemini indisponible apres 4 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}"}

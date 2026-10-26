@@ -456,6 +456,13 @@
       "seenAt": "2026-10-25T20:44:24.458Z",
       "status": "used",
       "usedAt": "2026-10-25T20:44:24.458Z"
+    },
+    "ae0c9fe8a415": {
+      "title": "Le rêve cabossé d’Hollywood face à l’IA : « Tout le monde l’utilise, mais personne ne veut en parler »",
+      "url": "https://www.lemonde.fr/international/article/2026/10/25/le-reve-cabosse-d-hollywood-face-a-l-ia-tout-le-monde-l-utilise-mais-personne-ne-veut-en-parler_6800103_3210.html",
+      "category": "tech",
+      "seenAt": "2026-10-26T10:58:26.557Z",
+      "status": "in_progress"
     }
   },
   "slots": {
@@ -606,12 +613,25 @@
         "topicId": "87197441daf1",
         "lastError": null
       }
+    },
+    "2026-10-26": {
+      "0": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "1": {
+        "attempts": 1,
+        "status": "failed",
+        "startedAt": "2026-10-26T10:58:26.557Z",
+        "lastError": "gemini_unavailable: Gemini indisponible apres 4 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}"
+      }
     }
   },
   "lastRun": {
-    "at": "2026-10-25T20:44:23.552Z",
-    "runId": "20261025204423-8cf2",
-    "published": 1,
-    "stopped": null
+    "at": "2026-10-26T10:58:25.652Z",
+    "runId": "20261026105825-b5d4",
+    "published": 0,
+    "stopped": "gemini_unavailable"
   }
 }

@@ -1,54 +1,39 @@
 {
   "date": "2026-10-26",
-  "target": 8,
+  "target": 5,
   "publishedCount": 0,
   "articles": [],
   "slots": [
     {
       "idx": 0,
-      "hhmm": "07:00",
-      "status": "pending",
-      "attempts": 0
+      "hhmm": "08:00",
+      "attempts": 0,
+      "status": "abandoned",
+      "lastError": "fenetre_de_rattrapage_depassee"
     },
     {
       "idx": 1,
-      "hhmm": "09:00",
-      "status": "pending",
-      "attempts": 0
+      "hhmm": "11:00",
+      "attempts": 1,
+      "status": "failed",
+      "startedAt": "2026-10-26T10:58:26.557Z",
+      "lastError": "gemini_unavailable: Gemini indisponible apres 4 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}"
     },
     {
       "idx": 2,
-      "hhmm": "11:00",
+      "hhmm": "14:00",
       "status": "pending",
       "attempts": 0
     },
     {
       "idx": 3,
-      "hhmm": "13:00",
-      "status": "pending",
-      "attempts": 0
-    },
-    {
-      "idx": 4,
-      "hhmm": "15:00",
-      "status": "pending",
-      "attempts": 0
-    },
-    {
-      "idx": 5,
       "hhmm": "17:30",
       "status": "pending",
       "attempts": 0
     },
     {
-      "idx": 6,
-      "hhmm": "19:30",
-      "status": "pending",
-      "attempts": 0
-    },
-    {
-      "idx": 7,
-      "hhmm": "21:30",
+      "idx": 4,
+      "hhmm": "20:30",
       "status": "pending",
       "attempts": 0
     }
@@ -56,19 +41,19 @@
   "rejections": 0,
   "quarantined": 0,
   "api": {
-    "calls": 0,
-    "inputTokens": 0,
-    "outputTokens": 0,
-    "costUsd": 0,
+    "calls": 1,
+    "inputTokens": 4216,
+    "outputTokens": 3254,
+    "costUsd": 0.030729,
     "dailyCapUsd": 1,
-    "monthCostUsd": 0.38158,
+    "monthCostUsd": 0.412309,
     "monthlyCapUsd": 15
   },
   "paused": false,
   "lastRun": {
-    "at": "2026-10-25T20:44:23.552Z",
-    "runId": "20261025204423-8cf2",
-    "published": 1,
-    "stopped": null
+    "at": "2026-10-26T10:58:25.652Z",
+    "runId": "20261026105825-b5d4",
+    "published": 0,
+    "stopped": "gemini_unavailable"
   }
 }

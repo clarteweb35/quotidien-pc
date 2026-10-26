@@ -434,14 +434,29 @@
       "inputTokens": 1868,
       "outputTokens": 921,
       "costUsd": 0.00971
+    },
+    {
+      "ts": "2026-10-26T11:03:43.569Z",
+      "date": "2026-10-26",
+      "month": "2026-10",
+      "runId": "20261026105825-b5d4",
+      "purpose": "generate",
+      "model": "gemini-3.6-flash",
+      "params": {
+        "temperature": 1,
+        "maxOutputTokens": 4096
+      },
+      "inputTokens": 4216,
+      "outputTokens": 3254,
+      "costUsd": 0.030729
     }
   ],
   "monthly": {
     "2026-10": {
-      "costUsd": 0.38158,
-      "inputTokens": 65584,
-      "outputTokens": 40205,
-      "calls": 29
+      "costUsd": 0.412309,
+      "inputTokens": 69800,
+      "outputTokens": 43459,
+      "calls": 30
     }
   }
 }
