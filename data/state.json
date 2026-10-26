@@ -463,6 +463,245 @@
       "category": "tech",
       "seenAt": "2026-10-26T10:58:26.557Z",
       "status": "in_progress"
+    },
+    "e1cd022321ef": {
+      "title": "Attentat raciste dans les Yvelines : la garde à vue du principal suspect, qui \"conteste le caractère raciste\" des crimes, a repris, annonce le procureur national antiterroriste",
+      "url": "https://www.franceinfo.fr/faits-divers/terrorisme/attentat-raciste-a-trappes/direct-attentat-raciste-dans-les-yvelines-olivier-christen-procureur-du-parquet-national-antiterroriste-s-exprimera-en-fin-de-journee-lundi_8254480.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-26T18:43:47.819Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "48dfab83ea27": {
+      "title": "Le procès de trois policiers jugés pour la mort de Cédric Chouviat renvoyé au mois de juin 2027",
+      "url": "https://www.franceinfo.fr/faits-divers/justice-proces/le-proces-de-trois-policiers-juges-pour-la-mort-de-cedric-chouviat-renvoye-au-mois-de-juin-2027_8254462.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-26T18:43:47.819Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "03a899a9b4cc": {
+      "title": "L'homme armé abattu à Vire, dans le Calvados, \"semble lié à une mouvance d'ultradroite\", selon le procureur de Caen",
+      "url": "https://www.franceinfo.fr/faits-divers/l-homme-arme-abattu-a-vire-dans-le-calvados-semble-lie-a-une-mouvance-d-ultradroite-selon-le-procureur-de-caen_8254420.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-26T18:43:47.819Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "bcb6e96d5803": {
+      "title": "L'écrivain René Belletto, figure du roman policier et fantastique contemporain, est mort à 81 ans",
+      "url": "https://www.franceinfo.fr/culture/livres/l-ecrivain-rene-belletto-figure-du-roman-policier-et-fantastique-contemporain-est-mort-a-81-ans_8254489.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-26T18:43:47.819Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "a0648e79f381": {
+      "title": "Le profil psychiatrique du suspect de l'attentat dans les Yvelines \"ne change rien\" au mobile \"raciste\", estime Laurent Nuñez",
+      "url": "https://www.franceinfo.fr/faits-divers/terrorisme/attentat-raciste-a-trappes/attaque-terroriste-dans-les-yvelines-le-profil-psychiatrique-du-suspect-ne-change-rien-au-mobile-raciste-estime-laurent-nunez_8254231.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-26T18:43:47.819Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "d4023205a770": {
+      "title": "L'ancienne ministre de la Santé Michèle Barzach est morte à l'âge de 83 ans",
+      "url": "https://www.franceinfo.fr/sante/l-ancienne-ministre-de-la-sante-michele-barzach-est-morte-a-l-age-de-83-ans_8254237.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-26T18:43:47.819Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "640499f15133": {
+      "title": "Une commission de l'ONU accuse Israël de commettre des crimes contre l'humanité contre les Palestiniens en Cisjordanie occupée",
+      "url": "https://www.franceinfo.fr/monde/israel/une-commission-de-l-onu-accuse-israel-de-commettre-des-crimes-contre-l-humanite-contre-les-palestiniens-en-cisjordanie_8254216.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-26T18:43:47.819Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "4b52568eacd5": {
+      "title": "Deux nouveaux traitements contre le cancer du poumon améliorent les chances de survie des patients",
+      "url": "https://www.franceinfo.fr/sante/cancer/deux-nouveaux-traitements-contre-le-cancer-du-poumon-ameliorent-les-chances-de-survie-des-patients_8254069.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-26T18:43:47.819Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "fac0d1e558d3": {
+      "title": "Après le Parti communiste, les partis LFI et Renaissance sont-ils aussi victimes d'une fuite de données ?",
+      "url": "https://www.franceinfo.fr/internet/securite-sur-internet/cyberattaques/apres-le-parti-communiste-la-france-insoumis-est-lui-aussi-victime-d-une-fuite-de-donnees_8254156.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-26T18:43:47.819Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "dd5bb55dcc2d": {
+      "title": "Attentat raciste dans les Yvelines : la Ligue des droits de l'Homme réclame \"un véritable plan de lutte contre le racisme\"",
+      "url": "https://www.franceinfo.fr/faits-divers/terrorisme/attentat-raciste-a-trappes/attentat-raciste-dans-les-yvelines-la-ligue-des-droits-de-l-homme-reclame-un-veritable-plan-de-lutte-contre-le-racisme_8254240.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-26T18:43:47.819Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "a60d53742a8e": {
+      "title": "Attentat raciste dans les Yvelines : les quatre gardes à vue des proches du principal suspect levées",
+      "url": "https://www.franceinfo.fr/faits-divers/terrorisme/attentat-raciste-a-trappes/attentat-raciste-dans-les-yvelines-les-quatre-gardes-a-vue-des-proches-du-principal-suspect-levees_8254009.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-26T18:43:47.819Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "bf023e509884": {
+      "title": "Attentat de Trappes : de nouveaux éléments de l’enquête confirment le mobile raciste du suspect",
+      "url": "https://www.lemonde.fr/societe/article/2026/10/26/attentat-de-trappes-des-tracts-du-rassemblement-national-retrouves-dans-la-voiture-du-suspect-decrit-par-ses-proches-comme-raciste_6800776_3224.html",
+      "category": "societe",
+      "seenAt": "2026-10-26T18:43:47.819Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "e001e77bd315": {
+      "title": "EN DIRECT, guerre en Ukraine : une commission d’enquête de l’ONU accuse la Russie de crimes contre l’humanité en raison de ses attaques contre les infrastructures énergétiques ukrainiennes",
+      "url": "https://www.lemonde.fr/international/live/2026/10/26/en-direct-guerre-en-ukraine-un-mort-et-sept-blesses-dans-une-frappe-de-drone-sur-l-oblast-de-dnipropetrovsk_6799896_3210.html",
+      "category": "societe",
+      "seenAt": "2026-10-26T18:43:47.819Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "becd965c0bf9": {
+      "title": "Au Royaume-Uni, 160 personnalités dénoncent l’« absurdité répressive » d’une loi antiterrorisme qui a conduit au retrait du marché des livres de Sally Rooney",
+      "url": "https://www.lemonde.fr/international/article/2026/10/26/au-royaume-uni-160-personnalites-denoncent-l-absurdite-repressive-d-une-loi-antiterrorisme-qui-a-conduit-au-retrait-du-marche-des-livres-de-sally-rooney_6800817_3210.html",
+      "category": "societe",
+      "seenAt": "2026-10-26T18:43:47.819Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "f612f7c688de": {
+      "title": "Le pape Léon XIV effectuera son voyage en Amérique latine deux semaines après son opération, confirme le Vatican",
+      "url": "https://www.lemonde.fr/international/article/2026/10/26/le-pape-leon-xiv-effectuera-son-voyage-en-amerique-latine-deux-semaines-apres-son-operation-confirme-le-vatican_6800813_3210.html",
+      "category": "societe",
+      "seenAt": "2026-10-26T18:43:47.819Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "8004a0bb96f3": {
+      "title": "Michèle Barzach, ancienne ministre de la santé de Jacques Chirac, est morte",
+      "url": "https://www.lemonde.fr/disparitions/article/2026/10/26/michele-barzach-ancienne-ministre-de-la-sante-de-jacques-chirac-est-morte_6800783_3382.html",
+      "category": "societe",
+      "seenAt": "2026-10-26T18:43:47.819Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "ac8b23b97d40": {
+      "title": "Mort de l’écrivain René Belletto, maître du roman policier et fantastique",
+      "url": "https://www.lemonde.fr/disparitions/article/2026/10/26/mort-de-l-ecrivain-rene-belletto-maitre-du-roman-policier-et-fantastique_6800807_3382.html",
+      "category": "societe",
+      "seenAt": "2026-10-26T18:43:47.819Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "fd727de77f38": {
+      "title": "Attentat dans les Yvelines : la garde à vue de Kévin T. a repris, il conteste le mobile raciste de ses actes",
+      "url": "https://www.liberation.fr/societe/police-justice/attentat-raciste-dans-les-yvelines-la-garde-a-vue-de-kevin-t-a-repris-il-conteste-le-mobile-raciste-de-ses-actes-20261026_N4YMWTMTGRBYHKSVGYP3KY6SMA/",
+      "category": "societe",
+      "seenAt": "2026-10-26T18:43:47.819Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "eb491cb6e4b1": {
+      "title": "Attentat raciste à Trappes : comment fonctionnent les examens psychiatriques en garde à vue ?",
+      "url": "https://www.liberation.fr/societe/police-justice/attentat-raciste-a-trappes-comment-fonctionnent-les-examens-psychiatriques-en-garde-a-vue-20261026_3BSGSCGIQZEBJPDZWVZXGBRWHM/",
+      "category": "societe",
+      "seenAt": "2026-10-26T18:43:47.819Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "c6dfbbb42b36": {
+      "title": "Mort à 83 ans de Michèle Barzach, ministre pionnière de la lutte contre le sida",
+      "url": "https://www.liberation.fr/politique/lancienne-ministre-de-la-sante-michele-barzach-est-morte-a-83-ans-20261026_KPEVZ3IWX5GSHG42ZM3QEQEIL4/",
+      "category": "societe",
+      "seenAt": "2026-10-26T18:43:47.819Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "15a083ef57e7": {
+      "title": "Ali Rabeh, maire de Trappes, après l’attentat raciste : «Qui t’apprend à appeler une famille pour lui présenter tes condoléances ?»",
+      "url": "https://www.liberation.fr/societe/ali-rabeh-maire-de-trappes-apres-lattentat-raciste-qui-tapprend-a-appeler-une-famille-pour-lui-presenter-tes-condoleances-20261025_ZYNZZZMB2NFPRA26KEVJBFLCAE/",
+      "category": "societe",
+      "seenAt": "2026-10-26T18:43:47.819Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "f0c2b2a2dd48": {
+      "title": "Sur France 24, Bally Bagayoko pointe la responsabilité du RN dans l’attentat de Trappes",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261026-sur-france-24-bally-bagayoko-pointe-la-responsabilit%C3%A9-du-rn-dans-l-attentat-de-trappes",
+      "category": "monde",
+      "seenAt": "2026-10-26T18:43:47.819Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "8e1c1d604198": {
+      "title": "Trois policiers jugés pour homicide involontaire près de sept ans après la mort de Cédric Chouviat",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261026-trois-policiers-jug%C3%A9s-pour-homicide-involontaire-pr%C3%A8s-de-sept-ans-apr%C3%A8s-la-mort-de-c%C3%A9dric-chouviat",
+      "category": "monde",
+      "seenAt": "2026-10-26T18:43:47.819Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "67df24cb7eee": {
+      "title": "Attentat de Trappes : la garde à vue du suspect a repris, ce dernier conteste le mobile raciste",
+      "url": "https://www.france24.com/fr/france/20261026-attentat-trappes-garde-%C3%A0-vue-suspension-ne-change-rien-gravit%C3%A9-acte-nu%C3%B1ez",
+      "category": "monde",
+      "seenAt": "2026-10-26T18:43:47.819Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "7c7312a0fbff": {
+      "title": "Biodiversité : quand une plage normande raconte l'effondrement du vivant",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261026-biodiversit%C3%A9-quand-une-plage-normande-raconte-l-effondrement-du-vivant",
+      "category": "monde",
+      "seenAt": "2026-10-26T18:43:47.819Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "e650ff58bc57": {
+      "title": "En Crète, quinze mineurs soudanais accusés d’être des passeurs sont acquittés",
+      "url": "https://www.lemonde.fr/international/article/2026/10/26/en-crete-quinze-mineurs-soudanais-accuses-d-etre-des-passeurs-sont-acquittes_6800829_3210.html",
+      "category": "monde",
+      "seenAt": "2026-10-26T18:43:47.819Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "bdeff32b85a3": {
+      "title": "Dans la bande de Gaza, l’armée israélienne tue cinq personnes, dont une fillette, dans des bombardements",
+      "url": "https://www.lemonde.fr/international/article/2026/10/26/dans-la-bande-de-gaza-l-armee-israelienne-tue-cinq-personnes-dont-une-fillette-dans-des-bombardements_6800791_3210.html",
+      "category": "monde",
+      "seenAt": "2026-10-26T18:43:47.819Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "a13ac9ed4315": {
+      "title": "Cisjordanie : à Hébron, entre les barricades érigées par l’armée israélienne, l’amer sentiment de subir une « punition collective »",
+      "url": "https://www.lemonde.fr/international/article/2026/10/26/cisjordanie-a-hebron-entre-les-barricades-erigees-par-l-armee-israelienne-l-amer-sentiment-de-subir-une-punition-collective_6800779_3210.html",
+      "category": "monde",
+      "seenAt": "2026-10-26T18:43:47.819Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "b6fd05051e75": {
+      "title": "Microsoft annonce un nouveau plan de départs volontaires qui concernera environ 60 000 salariés dans quatre pays, dont les Etats-Unis",
+      "url": "https://www.lemonde.fr/economie/article/2026/10/26/microsoft-annonce-un-nouveau-plan-de-departs-volontaires-qui-concernera-environ-60-000-salaries-dans-quatre-pays-dont-les-etats-unis_6800824_3234.html",
+      "category": "editos",
+      "seenAt": "2026-10-26T18:43:47.819Z",
+      "status": "used",
+      "usedAt": "2026-10-26T18:43:47.819Z"
+    },
+    "3ed8cc4dfa08": {
+      "title": "Des intelligences artificielles « conscientes », avec une existence propre : une théorie qui agite le monde scientifique",
+      "url": "https://www.lemonde.fr/sciences/article/2026/10/26/des-intelligences-artificielles-conscientes-avec-une-existence-propre-une-theorie-qui-agite-le-monde-scientifique_6800814_1650684.html",
+      "category": "tech",
+      "seenAt": "2026-10-26T18:51:00.800Z",
+      "status": "in_progress"
     }
   },
   "slots": {
@@ -640,13 +879,28 @@
         "attempts": 0,
         "status": "abandoned",
         "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "x1": {
+        "attempts": 1,
+        "status": "published",
+        "startedAt": "2026-10-26T18:43:47.819Z",
+        "articleId": "d5341e242a82",
+        "publishedAt": "2026-10-26T18:43:47.819Z",
+        "topicId": "b6fd05051e75",
+        "lastError": null
+      },
+      "x2": {
+        "attempts": 1,
+        "status": "failed",
+        "startedAt": "2026-10-26T18:51:00.800Z",
+        "lastError": "quota: Quota Gemini epuise ou limite de debit (HTTP 429): {\"error\":{\"code\":429,\"message\":\"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-lim"
       }
     }
   },
   "lastRun": {
-    "at": "2026-10-26T10:58:25.652Z",
-    "runId": "20261026105825-b5d4",
-    "published": 0,
-    "stopped": "gemini_unavailable"
+    "at": "2026-10-26T18:43:47.323Z",
+    "runId": "20261026184347-030a",
+    "published": 1,
+    "stopped": "quota"
   }
 }

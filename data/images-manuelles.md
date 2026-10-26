@@ -3,7 +3,12 @@
 Nommez votre image **exactement comme la référence** (ex. `261024-X1.jpg`) et déposez-la dans `site/src/assets/manual/`.
 Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large minimum.
 
-## Sans image (2)
+## Sans image (3)
+
+### `261026-X1` — Pourquoi nous devrions tous signer un plan de départ volontaire de notre propre vie
+- Rubrique : editos
+- Description suggérée : Un bureau d'entreprise moderne et lumineux mais totalement vide, avec une seule chaise pivotante abandonnée devant un écran d'ordinateur allumé, style dessin de presse.
+- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
 ### `261025-X4` — Pourquoi le dimanche devrait être transféré au mardi
 - Rubrique : editos

@@ -449,14 +449,74 @@
       "inputTokens": 4216,
       "outputTokens": 3254,
       "costUsd": 0.030729
+    },
+    {
+      "ts": "2026-10-26T18:45:10.599Z",
+      "date": "2026-10-26",
+      "month": "2026-10",
+      "runId": "20261026184347-030a",
+      "purpose": "generate",
+      "model": "gemini-3.6-flash",
+      "params": {
+        "temperature": 1,
+        "maxOutputTokens": 4096
+      },
+      "inputTokens": 4324,
+      "outputTokens": 2284,
+      "costUsd": 0.023616
+    },
+    {
+      "ts": "2026-10-26T18:46:00.050Z",
+      "date": "2026-10-26",
+      "month": "2026-10",
+      "runId": "20261026184347-030a",
+      "purpose": "generate",
+      "model": "gemini-3.6-flash",
+      "params": {
+        "temperature": 1,
+        "maxOutputTokens": 4096
+      },
+      "inputTokens": 4386,
+      "outputTokens": 2444,
+      "costUsd": 0.024909
+    },
+    {
+      "ts": "2026-10-26T18:46:00.758Z",
+      "date": "2026-10-26",
+      "month": "2026-10",
+      "runId": "20261026184347-030a",
+      "purpose": "judge",
+      "model": "gemini-3.5-flash-lite",
+      "params": {
+        "temperature": 0.2,
+        "maxOutputTokens": 1024
+      },
+      "inputTokens": 875,
+      "outputTokens": 83,
+      "costUsd": 0.00047
+    },
+    {
+      "ts": "2026-10-26T18:52:23.672Z",
+      "date": "2026-10-26",
+      "month": "2026-10",
+      "runId": "20261026184347-030a",
+      "purpose": "generate",
+      "model": "gemini-3.6-flash",
+      "params": {
+        "temperature": 1,
+        "maxOutputTokens": 4096
+      },
+      "inputTokens": 4208,
+      "outputTokens": 3520,
+      "costUsd": 0.032712
     }
   ],
   "monthly": {
     "2026-10": {
-      "costUsd": 0.412309,
-      "inputTokens": 69800,
-      "outputTokens": 43459,
-      "calls": 30
+      "costUsd": 0.494016,
+      "inputTokens": 83593,
+      "outputTokens": 51790,
+      "calls": 34
     }
   }
 }

@@ -1,8 +1,16 @@
 {
   "date": "2026-10-26",
   "target": 5,
-  "publishedCount": 0,
-  "articles": [],
+  "publishedCount": 1,
+  "articles": [
+    {
+      "id": "d5341e242a82",
+      "ref": "261026-X1",
+      "title": "Pourquoi nous devrions tous signer un plan de départ volontaire de notre propre vie",
+      "category": "editos",
+      "slug": "pourquoi-nous-devrions-tous-signer-un-plan-de-depart"
+    }
+  ],
   "slots": [
     {
       "idx": 0,
@@ -39,24 +47,43 @@
       "attempts": 0,
       "status": "abandoned",
       "lastError": "fenetre_de_rattrapage_depassee"
+    },
+    {
+      "idx": "x1",
+      "hhmm": "manuel",
+      "attempts": 1,
+      "status": "published",
+      "startedAt": "2026-10-26T18:43:47.819Z",
+      "articleId": "d5341e242a82",
+      "publishedAt": "2026-10-26T18:43:47.819Z",
+      "topicId": "b6fd05051e75",
+      "lastError": null
+    },
+    {
+      "idx": "x2",
+      "hhmm": "manuel",
+      "attempts": 1,
+      "status": "failed",
+      "startedAt": "2026-10-26T18:51:00.800Z",
+      "lastError": "quota: Quota Gemini epuise ou limite de debit (HTTP 429): {\"error\":{\"code\":429,\"message\":\"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-lim"
     }
   ],
   "rejections": 0,
   "quarantined": 0,
   "api": {
-    "calls": 1,
-    "inputTokens": 4216,
-    "outputTokens": 3254,
-    "costUsd": 0.030729,
+    "calls": 5,
+    "inputTokens": 18009,
+    "outputTokens": 11585,
+    "costUsd": 0.112436,
     "dailyCapUsd": 1,
-    "monthCostUsd": 0.412309,
+    "monthCostUsd": 0.494016,
     "monthlyCapUsd": 15
   },
   "paused": false,
   "lastRun": {
-    "at": "2026-10-26T10:58:25.652Z",
-    "runId": "20261026105825-b5d4",
-    "published": 0,
-    "stopped": "gemini_unavailable"
+    "at": "2026-10-26T18:43:47.323Z",
+    "runId": "20261026184347-030a",
+    "published": 1,
+    "stopped": "quota"
   }
 }

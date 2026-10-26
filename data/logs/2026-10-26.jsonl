@@ -30,3 +30,45 @@
 {"ts":"2026-10-26T11:07:41.079Z","runId":"20261026105825-b5d4","level":"error","event":"cycle.stopped","reason":"gemini_unavailable","error":"Gemini indisponible apres 4 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}"}
 {"ts":"2026-10-26T17:17:10.383Z","runId":"20261026171709-9323","level":"warn","event":"cycle.slots_abandoned","count":4}
 {"ts":"2026-10-26T17:17:10.384Z","runId":"20261026171709-9323","level":"info","event":"cycle.start","date":"2026-10-26","due":[],"remainingToday":5,"dryRun":false}
+{"ts":"2026-10-26T18:43:47.332Z","runId":"20261026184347-030a","level":"info","event":"cycle.start","date":"2026-10-26","due":["2026-10-26#x1","2026-10-26#x2","2026-10-26#x3","2026-10-26#x4","2026-10-26#x5"],"remainingToday":5,"dryRun":false}
+{"ts":"2026-10-26T18:43:47.818Z","runId":"20261026184347-030a","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":29,"kept":25}
+{"ts":"2026-10-26T18:43:47.818Z","runId":"20261026184347-030a","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-10-26T18:43:47.818Z","runId":"20261026184347-030a","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":20}
+{"ts":"2026-10-26T18:43:47.818Z","runId":"20261026184347-030a","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":24}
+{"ts":"2026-10-26T18:43:47.818Z","runId":"20261026184347-030a","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":16}
+{"ts":"2026-10-26T18:43:47.818Z","runId":"20261026184347-030a","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":20,"kept":20}
+{"ts":"2026-10-26T18:43:47.818Z","runId":"20261026184347-030a","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":13}
+{"ts":"2026-10-26T18:43:47.818Z","runId":"20261026184347-030a","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":10}
+{"ts":"2026-10-26T18:43:47.818Z","runId":"20261026184347-030a","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":2}
+{"ts":"2026-10-26T18:43:47.818Z","runId":"20261026184347-030a","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":4}
+{"ts":"2026-10-26T18:43:47.819Z","runId":"20261026184347-030a","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":10}
+{"ts":"2026-10-26T18:43:47.819Z","runId":"20261026184347-030a","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":6}
+{"ts":"2026-10-26T18:43:47.819Z","runId":"20261026184347-030a","level":"info","event":"collect.done","items":166}
+{"ts":"2026-10-26T18:43:47.866Z","runId":"20261026184347-030a","level":"info","event":"topic.selection","slot":"2026-10-26#x1","target":"editos","candidates":166,"rejected":28,"chosen":"Microsoft annonce un nouveau plan de départs volontaires qui concernera environ 60 000 salariés dans quatre pays, dont les Etats-Unis","score":8.5}
+{"ts":"2026-10-26T18:43:48.326Z","runId":"20261026184347-030a","level":"warn","event":"gemini.retry","purpose":"generate","status":503,"attempt":1,"delayMs":4592}
+{"ts":"2026-10-26T18:43:53.311Z","runId":"20261026184347-030a","level":"warn","event":"gemini.retry","purpose":"generate","status":503,"attempt":2,"delayMs":8885}
+{"ts":"2026-10-26T18:44:20.026Z","runId":"20261026184347-030a","level":"warn","event":"gemini.retry","purpose":"generate","status":503,"attempt":3,"delayMs":16305}
+{"ts":"2026-10-26T18:44:38.553Z","runId":"20261026184347-030a","level":"warn","event":"gemini.fallback_model","from":"gemini-3.8-flash","to":"gemini-3.6-flash"}
+{"ts":"2026-10-26T18:45:10.600Z","runId":"20261026184347-030a","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4324,"outputTokens":2284,"costUsd":0.023616}
+{"ts":"2026-10-26T18:45:10.608Z","runId":"20261026184347-030a","level":"warn","event":"validate.deterministic_failed","slot":"2026-10-26#x1","attempt":1,"issues":["signature_dans_le_texte"]}
+{"ts":"2026-10-26T18:45:10.930Z","runId":"20261026184347-030a","level":"warn","event":"gemini.retry","purpose":"generate","status":503,"attempt":1,"delayMs":4490}
+{"ts":"2026-10-26T18:45:16.771Z","runId":"20261026184347-030a","level":"warn","event":"gemini.retry","purpose":"generate","status":503,"attempt":2,"delayMs":8040}
+{"ts":"2026-10-26T18:45:25.375Z","runId":"20261026184347-030a","level":"warn","event":"gemini.retry","purpose":"generate","status":503,"attempt":3,"delayMs":16880}
+{"ts":"2026-10-26T18:45:42.734Z","runId":"20261026184347-030a","level":"warn","event":"gemini.fallback_model","from":"gemini-3.8-flash","to":"gemini-3.6-flash"}
+{"ts":"2026-10-26T18:46:00.050Z","runId":"20261026184347-030a","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4386,"outputTokens":2444,"costUsd":0.024909}
+{"ts":"2026-10-26T18:46:00.759Z","runId":"20261026184347-030a","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":875,"outputTokens":83,"costUsd":0.00047}
+{"ts":"2026-10-26T18:46:00.759Z","runId":"20261026184347-030a","level":"info","event":"judge.result","slot":"2026-10-26#x1","attempt":2,"humor":8,"coherence":9,"risk":1,"issues":[]}
+{"ts":"2026-10-26T18:46:00.772Z","runId":"20261026184347-030a","level":"info","event":"publish.ok","slot":"2026-10-26#x1","id":"d5341e242a82","slug":"pourquoi-nous-devrions-tous-signer-un-plan-de-depart","url":"/articles/pourquoi-nous-devrions-tous-signer-un-plan-de-depart/","attempt":2,"dryRun":false}
+{"ts":"2026-10-26T18:46:00.772Z","runId":"20261026184347-030a","level":"info","event":"cycle.spacing","waitMinutes":5}
+{"ts":"2026-10-26T18:51:00.807Z","runId":"20261026184347-030a","level":"info","event":"topic.selection","slot":"2026-10-26#x2","target":"tech","candidates":166,"rejected":0,"chosen":"Des intelligences artificielles « conscientes », avec une existence propre : une théorie qui agite le monde scientifique","score":7.5}
+{"ts":"2026-10-26T18:51:01.348Z","runId":"20261026184347-030a","level":"warn","event":"gemini.retry","purpose":"generate","status":503,"attempt":1,"delayMs":4571}
+{"ts":"2026-10-26T18:51:06.362Z","runId":"20261026184347-030a","level":"warn","event":"gemini.retry","purpose":"generate","status":503,"attempt":2,"delayMs":8409}
+{"ts":"2026-10-26T18:51:15.452Z","runId":"20261026184347-030a","level":"warn","event":"gemini.retry","purpose":"generate","status":503,"attempt":3,"delayMs":16885}
+{"ts":"2026-10-26T18:51:32.778Z","runId":"20261026184347-030a","level":"warn","event":"gemini.fallback_model","from":"gemini-3.8-flash","to":"gemini-3.6-flash"}
+{"ts":"2026-10-26T18:51:45.553Z","runId":"20261026184347-030a","level":"warn","event":"gemini.retry","purpose":"generate","status":503,"attempt":1,"delayMs":4296}
+{"ts":"2026-10-26T18:52:23.673Z","runId":"20261026184347-030a","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4208,"outputTokens":3520,"costUsd":0.032712}
+{"ts":"2026-10-26T18:52:23.679Z","runId":"20261026184347-030a","level":"warn","event":"validate.deterministic_failed","slot":"2026-10-26#x2","attempt":1,"issues":["titre_trop_long"]}
+{"ts":"2026-10-26T18:52:23.973Z","runId":"20261026184347-030a","level":"warn","event":"gemini.retry","purpose":"generate","status":503,"attempt":1,"delayMs":4813}
+{"ts":"2026-10-26T18:52:31.315Z","runId":"20261026184347-030a","level":"warn","event":"gemini.retry","purpose":"generate","status":503,"attempt":2,"delayMs":8335}
+{"ts":"2026-10-26T18:52:39.820Z","runId":"20261026184347-030a","level":"warn","event":"gemini.retry","purpose":"generate","status":429,"attempt":3,"delayMs":16782}
+{"ts":"2026-10-26T18:52:56.781Z","runId":"20261026184347-030a","level":"error","event":"cycle.stopped","reason":"quota","error":"Quota Gemini epuise ou limite de debit (HTTP 429): {\"error\":{\"code\":429,\"message\":\"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-lim"}
