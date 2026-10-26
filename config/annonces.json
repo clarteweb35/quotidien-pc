@@ -37,14 +37,14 @@
     { "slug": "administration", "name": "Administration & vie publique" }
   ],
   "annonceurs": [
-    { "id": "evidence", "nom": "Cabinet Évidence & Associés", "slogan": "Nous confirmons ce que vous pensiez déjà.", "palette": "ink", "logo": "evidence.webp", "logoStyle": "pied" },
-    { "id": "zerotache", "nom": "Zéro-Tâche SAS", "slogan": "Automatiser l'inutile, enfin.", "palette": "bleu", "logo": "zerotache.webp", "logoStyle": "gauche" },
+    { "id": "evidence", "nom": "Cabinet Évidence & Associés", "slogan": "Nous confirmons ce que vous pensiez déjà.", "palette": "ink", "logo": "evidence.webp", "logoStyle": "haut" },
+    { "id": "zerotache", "nom": "Zéro-Tâche SAS", "slogan": "Automatiser l'inutile, enfin.", "palette": "bleu", "logo": "zerotache.webp", "logoStyle": "duo" },
     { "id": "bpcc", "nom": "Bureau paritaire de certification des certifications", "slogan": "Certifié, donc certifiant.", "palette": "vert", "logo": "bpcc.webp", "logoStyle": "coin" },
     { "id": "concept", "nom": "Agence Espace & Concept", "slogan": "Des mètres carrés qui sont avant tout des idées.", "palette": "rouge", "logo": "concept.webp", "logoStyle": "pied" },
     { "id": "zerolarme", "nom": "Assurance Zéro Larme", "palette": "bleu", "logo": "zerolarme.webp", "logoStyle": "haut" },
-    { "id": "teflonhuman", "nom": "Peflon Human Corp", "palette": "vert", "logo": "teflonhuman.webp", "logoStyle": "gauche" },
+    { "id": "teflonhuman", "nom": "Peflon Human Corp", "palette": "vert", "logo": "teflonhuman.webp", "logoStyle": "haut" },
     { "id": "levide", "nom": "Le Vide", "slogan": "Chaîne de magasins", "palette": "ink", "logo": "levide.webp", "logoStyle": "filigrane" },
-    { "id": "trobo", "nom": "Agile TroBo", "palette": "rouge", "logo": "trobo.webp", "logoStyle": "pied" },
+    { "id": "trobo", "nom": "Agile TroBo", "palette": "rouge", "logo": "trobo.webp", "logoStyle": "haut" },
     { "id": "vortex", "nom": "Vortex Formation", "palette": "bleu", "logo": "vortex.webp", "logoStyle": "coin" },
     { "id": "nouvellasecure", "nom": "Nouvella Sécure assurances", "palette": "ink", "logo": "nouvellasecure.webp", "logoStyle": "coin" },
     { "id": "miraculex", "nom": "Miraculex®", "slogan": "Le miracle, mais en flacon.", "palette": "or", "logo": "miraculex.webp", "legende": true, "logoStyle": "haut" }

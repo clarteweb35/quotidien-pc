@@ -8,7 +8,7 @@ export interface Annonce {
   pub?: boolean; // annonce reutilisable comme publicite fictive dans les articles
   reel?: boolean; url?: string; site?: string; lien?: string; // vraie annonce: renvoie vers un vrai site
 }
-export interface Annonceur { id: string; nom: string; slogan?: string; palette: string; logo?: string; logoStyle?: 'coin' | 'haut' | 'gauche' | 'pied' | 'filigrane'; legende?: boolean /* logo + nom en legende dessous, sans le nom en en-tete */ }
+export interface Annonceur { id: string; nom: string; slogan?: string; palette: string; logo?: string; logoStyle?: 'coin' | 'haut' | 'duo' | 'gauche' | 'pied' | 'filigrane'; legende?: boolean /* logo + nom en legende dessous, sans le nom en en-tete */ }
 
 export interface Partenaire {
   nom: string; mention: string; slogan: string; texte: string; details: { label: string; texte: string }[];

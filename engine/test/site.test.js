@@ -250,4 +250,14 @@ test('rencontres: introduction pleine largeur, sommaire centre, encart petites a
   for (const pg of ['jeux', 'compteurs']) assert.ok(page(pg).includes('encart-annonces'), `encart sur ${pg}`);
 });
 
+test('petites annonces: logos en grand (haut/duo), colonnes equilibrees par script', () => {
+  const data = JSON.parse(fs.readFileSync(path.join(ROOT, 'config/annonces.json'), 'utf8'));
+  const st = Object.fromEntries(data.annonceurs.map((a) => [a.id, a.logoStyle]));
+  assert.deepEqual([st.trobo, st.teflonhuman, st.evidence, st.zerotache, st.levide], ['haut', 'haut', 'haut', 'duo', 'filigrane']);
+  const html = page('petites-annonces');
+  assert.ok(html.includes('class="pa-contenu"') && html.includes('lg-haut') && html.includes('lg-duo'), 'structure des encarts');
+  assert.ok(!html.includes('class="pa-marque" data-astro-cid-') || !/pa-marque[^>]*>Agile TroBo/.test(html), 'plus de texte « Agile TroBo » au-dessus du logo');
+  assert.ok(html.includes('equilibre'), 'script d\'equilibrage des colonnes');
+});
+
 test.after(() => fs.rmSync(out, { recursive: true, force: true }));

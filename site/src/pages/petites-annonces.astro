@@ -103,13 +103,13 @@ const dernieres = annonces.slice(milieu);
   /* Alignement: un seul rythme (--pa-gap entre annonces, --pa-pad dans les cadres) et un seul bord de texte: les cadres (vedette, encart) debordent dans la gouttiere */
   .pa-colonnes { --pa-gap: 22px; --pa-pad: 12px; column-width: 270px; column-gap: 40px; column-rule: 1px solid var(--rule); margin-top: 18px; }
   .pa { break-inside: avoid; margin: 0 0 var(--pa-gap); font-family: var(--serif); overflow-wrap: anywhere; }
-  .pa[hidden] { display: none; }
+  .pa[hidden], .pa-colonnes .pa[hidden] { display: none !important; } /* le filtre doit gagner sur les display: flex des encarts */
   .pa p { margin: 0; }
   .pa-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; font: .66rem var(--sans); color: var(--ink-2); margin-bottom: 4px; }
   .pa-badge { font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
-  .pa-titre { font: 700 1.08rem/1.25 var(--serif); margin: 0 0 4px; }
-  .pa-prix { font: 700 .95rem var(--sans); margin-bottom: 4px; }
-  .pa-texte { font-size: .96rem; line-height: 1.5; }
+  .pa-titre { font: 700 calc(1.08rem * var(--k, 1))/1.25 var(--serif); margin: 0 0 4px; }
+  .pa-prix { font: 700 calc(.95rem * var(--k, 1)) var(--sans); margin-bottom: 4px; }
+  .pa-texte { font-size: calc(.96rem * var(--k, 1)); line-height: 1.5; }
   .pa-conditions { font: .72rem/1.4 var(--sans); color: var(--ink-2); margin-top: 6px; }
   .pa-annonceur { font: .72rem/1.4 var(--sans); color: var(--ink-2); margin-top: 6px; border-top: 1px dotted var(--rule); padding-top: 4px; }
   .pa-reel { font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: #15803d; border: 1px solid #15803d; padding: 0 5px; }
@@ -145,8 +145,28 @@ const dernieres = annonces.slice(milieu);
   /* Logos: masques (cercle ou coins arrondis) cuits dans les images, affiches en entier (jamais rognes) */
   .pa-logo-fig { float: right; margin: -4px 0 8px 12px; width: 128px; text-align: center; }
   /* Placement du logo, different selon l'annonceur (champ logoStyle de config/annonces.json) */
-  .lg-haut .pa-logo-fig { float: none; width: auto; margin: 0 0 12px; padding-bottom: 10px; border-bottom: 1px solid rgba(255, 255, 255, .35); }
-  .lg-haut .pa-logo { width: 150px; max-height: 150px; }
+  /* haut: grand logo centre au-dessus; texte justifie dessous (le logo est avant le texte dans le HTML) */
+  .lg-haut .pa-logo-fig { float: none; width: auto; margin: 0 0 12px; padding-bottom: 12px; border-bottom: 1px solid rgba(255, 255, 255, .35); }
+  .pa-classique.lg-haut .pa-logo-fig { border-bottom-color: var(--rule); }
+  .lg-haut .pa-logo { width: min(100%, 240px); max-height: 220px; }
+  .lg-haut .pa-texte, .lg-haut .pa-conditions { text-align: justify; }
+  /* encarts « haut »: l'accroche suit directement le logo, la reference passe tout en bas */
+  .pa-encart.lg-haut { display: flex; flex-direction: column; }
+  .pa-encart.lg-haut .pa-contenu { display: flex; flex-direction: column; }
+  .pa-encart.lg-haut .pa-accroche-pub { order: 1; text-align: center; font-size: 1.12rem; }
+  .pa-encart.lg-haut .pa-titre { order: 2; }
+  .pa-encart.lg-haut .pa-prix { order: 3; align-self: flex-start; }
+  .pa-encart.lg-haut .pa-texte { order: 4; }
+  .pa-encart.lg-haut .pa-conditions { order: 5; }
+  .pa-encart.lg-haut .pa-slogan { order: 6; }
+  .pa-encart.lg-haut .pa-meta { order: 9; margin: 10px 0 0; padding-top: 6px; border-top: 1px solid rgba(255, 255, 255, .25); }
+  /* duo: grand logo a gauche, titre et prix a sa droite (leur taille est accordee a celle du logo), le texte reprend sous le logo */
+  .lg-duo .pa-logo-fig { float: left; width: 140px; margin: 0 14px 8px 0; padding: 0; border: 0; }
+  .lg-duo .pa-logo { width: 140px; max-height: 140px; }
+  .lg-duo .pa-titre { font-size: 1.2rem; line-height: 1.15; margin-top: 2px; overflow-wrap: normal; hyphens: auto; }
+  .lg-duo .pa-prix { font-size: 1.1rem; }
+  .lg-duo .pa-texte { font-size: 1.08rem; }
+  .lg-duo > .pa-slogan { clear: both; }
   .lg-gauche .pa-logo-fig { float: left; margin: -2px 14px 8px 0; width: 112px; }
   .lg-gauche .pa-logo { width: 112px; }
   .lg-pied .pa-logo-fig { float: none; clear: both; display: flex; justify-content: flex-end; align-items: center; width: auto; margin: 10px 0 0; }
@@ -155,7 +175,7 @@ const dernieres = annonces.slice(milieu);
   /* Grand logo en filigrane (transparence): inverse puis fondu dans le fond du cadre */
   .lg-filigrane { position: relative; overflow: hidden; }
   .lg-filigrane > *:not(.pa-filigrane) { position: relative; z-index: 1; }
-  .pa-filigrane { position: absolute; z-index: 0; right: -14%; bottom: -8%; width: 92%; height: auto; max-height: none; filter: invert(1) grayscale(1); mix-blend-mode: multiply; opacity: .2; pointer-events: none; }
+  .pa-filigrane { position: absolute; z-index: 0; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 84%; height: auto; max-height: none; filter: invert(1) grayscale(1); mix-blend-mode: multiply; opacity: .3; pointer-events: none; }
   /* Texte des annonces justifie */
   .pa-texte, .pa-conditions { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
   .pa-court .pa-texte { text-align: left; }
@@ -179,6 +199,14 @@ const dernieres = annonces.slice(milieu);
   .pa-agence-cta { display: inline-block; padding: 8px 16px; background: #c89658; color: #0e0d0a; font: 800 .9rem var(--sans); text-decoration: none; border: 2px solid #c89658; }
   .pa-agence-cta:hover, .pa-agence-cta:focus-visible { background: transparent; color: #e8c58f; }
   @media (max-width: 560px) { .pa-agence { grid-template-columns: 1fr; text-align: center; } .pa-agence-photo { margin: 0 auto; } }
+  /* Colonnes equilibrees (script): chaque annonce va dans la colonne la plus courte, puis la police des colonnes plus courtes grossit un peu
+     pour que toutes finissent a la meme hauteur: aucun trou. Sans JavaScript, le repli est la mise en colonnes CSS ci-dessus. */
+  .pa-colonnes.equilibre { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 0 40px; column-width: auto; column-rule: none; }
+  .pa-colonnes.equilibre > .pa-agence { flex: 0 0 100%; }
+  .pa-col { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; justify-content: space-between; }
+  .pa-col + .pa-col { position: relative; }
+  .pa-col + .pa-col::before { content: ''; position: absolute; left: -20px; top: 0; bottom: 0; border-left: 1px solid var(--rule); }
+  .pa-col > .pa:last-child { margin-bottom: 0; }
   .pa-slogan { font: italic .8rem var(--serif); margin-top: 8px !important; }
   .pal-ink { background: #16140f; color: #faf7f2; }
   .pal-bleu { background: #1c3a57; color: #f4f8fb; }
@@ -214,6 +242,7 @@ const dernieres = annonces.slice(milieu);
     if (pubDef) pubDef.hidden = cat !== 'toutes' || !!q; // la pub du milieu n'a de sens que sur la liste complete
     compteur.textContent = n + (n > 1 ? ' annonces' : ' annonce');
     vide.hidden = n > 0;
+    if (typeof tout === 'function') tout();
   }
   for (const b of boutons) {
     b.addEventListener('click', () => {
@@ -223,6 +252,83 @@ const dernieres = annonces.slice(milieu);
     });
   }
   champ.addEventListener('input', filtre);
+
+  // ---- equilibrage des colonnes ----
+  const GAP = 40, MINW = 270;
+  const listes = Array.from(document.querySelectorAll<HTMLElement>('.pa-colonnes')).map((l) => ({ l, cards: Array.from(l.querySelectorAll<HTMLElement>('.pa')) }));
+  function equilibre({ l, cards }: { l: HTMLElement; cards: HTMLElement[] }) {
+    const vieilles = Array.from(l.querySelectorAll<HTMLElement>(':scope > .pa-col'));
+    const n = Math.min(3, Math.max(1, Math.floor((l.clientWidth + GAP) / (MINW + GAP))));
+    for (const c of cards) c.parentElement?.style.removeProperty('--k');
+    if (n < 2) {
+      l.classList.remove('equilibre');
+      cards.forEach((c) => l.append(c));
+      vieilles.forEach((v) => v.remove());
+      return;
+    }
+    l.classList.add('equilibre');
+    const cols = Array.from({ length: n }, () => { const d = document.createElement('div'); d.className = 'pa-col'; return d; });
+    l.append(...cols);
+    const visibles = cards.filter((x) => !x.hidden);
+    // 1) mesure: toutes les annonces dans la premiere colonne (meme largeur que les autres)
+    cols[0].append(...visibles);
+    const h = new Map(visibles.map((c) => [c, c.offsetHeight + 22]));
+    // 2) repartition: les plus hautes d'abord dans la colonne la moins chargee, puis ameliorations par echanges/deplacements
+    const charge = (i: number, aff: HTMLElement[][]) => aff[i].reduce((t, c) => t + h.get(c)!, 0);
+    const aff: HTMLElement[][] = Array.from({ length: n }, () => []);
+    for (const c of [...visibles].sort((x, y) => h.get(y)! - h.get(x)!)) {
+      let m = 0;
+      for (let i = 1; i < n; i++) if (charge(i, aff) < charge(m, aff)) m = i;
+      aff[m].push(c);
+    }
+    const ecart = () => { const l = aff.map((_, i) => charge(i, aff)); return Math.max(...l) - Math.min(...l); };
+    for (let tour = 0; tour < 200; tour++) {
+      const avant = ecart();
+      let meilleur: { x: number; y: number; i: number; j: number | null; e: number } | null = null;
+      for (let x = 0; x < n; x++) for (let y = 0; y < n; y++) {
+        if (x === y) continue;
+        for (let i = 0; i < aff[x].length; i++) {
+          const cx = aff[x][i];
+          aff[x].splice(i, 1); aff[y].push(cx);
+          let e = ecart(); if (e < (meilleur?.e ?? avant)) meilleur = { x, y, i, j: null, e };
+          aff[y].pop(); aff[x].splice(i, 0, cx);
+          for (let j = 0; j < aff[y].length; j++) {
+            const cy = aff[y][j];
+            aff[x][i] = cy; aff[y][j] = cx;
+            e = ecart(); if (e < (meilleur?.e ?? avant)) meilleur = { x, y, i, j, e };
+            aff[x][i] = cx; aff[y][j] = cy;
+          }
+        }
+      }
+      if (!meilleur) break;
+      const { x, y, i, j } = meilleur;
+      if (j === null) aff[y].push(aff[x].splice(i, 1)[0]);
+      else { const t = aff[x][i]; aff[x][i] = aff[y][j]; aff[y][j] = t; }
+    }
+    // 3) ordre de lecture d'origine dans chaque colonne
+    const rang = new Map(cards.map((c, i) => [c, i]));
+    aff.forEach((liste, i) => cols[i].append(...liste.sort((x, y) => rang.get(x)! - rang.get(y)!)));
+    cols[cols.length - 1].append(...cards.filter((x) => x.hidden)); // masquees (filtre): rangees sans effet sur la mise en page
+    vieilles.forEach((v) => v.remove());
+    const cible = Math.max(...cols.map((c) => c.offsetHeight));
+    for (const col of cols) {
+      let k = 1;
+      while (k < 1.22) {
+        const essai = Math.round((k + 0.01) * 100) / 100;
+        col.style.setProperty('--k', String(essai));
+        if (col.offsetHeight > cible) { col.style.setProperty('--k', String(k)); break; }
+        k = essai;
+      }
+      // si le vide a combler est trop grand pour etre repartit entre les annonces sans que ce se voie, on laisse la colonne finir plus court
+      const naturel = col.offsetHeight, nb = Math.max(col.children.length - 1, 1);
+      if (cible - naturel > 28 * nb) { col.style.justifyContent = 'flex-start'; col.style.minHeight = ''; } else col.style.minHeight = cible + 'px';
+    }
+  }
+  const tout = () => listes.forEach(equilibre);
+  let t = 0;
+  window.addEventListener('resize', () => { clearTimeout(t); t = window.setTimeout(tout, 150); });
+  window.addEventListener('load', tout);
+  document.fonts?.ready.then(tout);
   // Liens profonds: ?cat=immobilier et ?q=chaise
   const params = new URLSearchParams(location.search);
   const catUrl = params.get('cat');
