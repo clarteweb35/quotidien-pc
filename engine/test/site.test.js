@@ -133,6 +133,7 @@ test('accueil: La Manchette de la Manchette; articles: publicite fictive tiree d
   const art = page(`articles/${s}`);
   assert.ok(art.includes('Publicité fictive') && art.includes('href="/petites-annonces/#pa-'), 'publicite fictive dans l\'article');
   assert.ok(art.indexOf('Publicité fictive') < art.indexOf('class="kicker"'), 'la pub est au-dessus de la rubrique, sous le menu');
+  assert.ok(/manchette-globale[^"]*colonne/.test(art), 'sur un article, la manchette suit la colonne de lecture');
 });
 
 test('contenu: jamais plus d\'un edito par jour (heure de Paris)', () => {

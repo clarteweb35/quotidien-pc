@@ -86,3 +86,13 @@ Les compteurs « depuis minuit / ce mois-ci » sont déterministes (même valeur
 - Les cours et scores sont ceux du dernier build ; redéploiement planifié 3 fois par jour en semaine (`deploy.yml`), pas de créneau le week-end.
 - Aucun contrôle automatique ne garantit l'absence de diffamation : les protections sont en couches, la supervision humaine reste nécessaire.
 - Yves Verts (Environnement) n'a pas de portrait (initiales) ; la photo du bureau Environnement est remplacée par un encart humoristique.
+
+## 5. Mesures de qualité (état au 26/10/2026)
+
+| Page | EcoIndex | Éléments DOM | Requêtes | Poids | Autres |
+|---|---|---|---|---|---|
+| Accueil `/` | **B** 80/100 | 337 | 14 | 316 Ko | PageSpeed 100 (mesuré le 25/10, avant les derniers ajouts), Website Carbon A |
+| `/rubrique/societe/` | **A** 86/100 | 206 | 10 | 157 Ko | |
+| `/petites-annonces/` | **C** 66/100 | 664 | 23 | 221 Ko | Website Carbon A |
+
+Le score EcoIndex pèse surtout par le nombre d'éléments du DOM : la page Petites annonces (48 annonces, ~13 éléments chacune) est la plus lourde. Pistes si besoin : pagination « Voir plus », moins d'éléments par carte, une seule copie du bandeau défilant. Les pages d'article et de rubrique restent nettement plus légères que l'accueil.

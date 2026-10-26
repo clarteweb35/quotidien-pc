@@ -330,3 +330,13 @@ html { scroll-padding-top: 56px; } /* les ancres (#ref-001, #pa-029...) ne passe
 ::selection { background: #f3d9d6; color: var(--ink); }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 footer .quality .q-score.q-b { background: #5b9a2c; } /* note B: vert plus clair que A */
+
+/* Pages d'article: manchette, pub, fil d'Ariane et texte partagent la meme colonne (720 px): la page se lit d'un bloc */
+.manchette-globale.colonne { max-width: 752px; } /* 720 + les 2 x 16 px de marge de .wrap */
+.article .illus { margin-left: 0; margin-right: 0; }
+
+/* Petites annonces: une seule boite pour toutes les annonces (meme marge, meme remplissage, meme filet), sans debordement dans les gouttieres */
+.pa-colonnes .pa { box-sizing: border-box; margin: 0 0 var(--pa-gap); padding: var(--pa-pad) 14px; border: 1px solid var(--rule); background: rgba(255, 255, 255, .55); }
+.pa-colonnes .pa-vedette { border: 2px solid var(--ink); background: var(--paper-2); }
+.pa-colonnes .pa-encart { border-color: rgba(0, 0, 0, .3); }
+.pa-colonnes .pa-court, .pa-colonnes .pa-classique { border-bottom: 1px solid var(--rule); }

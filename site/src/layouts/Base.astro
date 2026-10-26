@@ -10,13 +10,14 @@ interface Props {
   description?: string;
   type?: 'website' | 'article';
   noindex?: boolean;
+  colonne?: boolean; // pages d'article: la manchette suit la largeur de la colonne de lecture (720 px), pour que tout forme un seul bloc
   follow?: boolean; // avec noindex: laisser les robots suivre les liens (pages minces, ex. mots-cles)
   current?: string;
   jsonLd?: object;
   csp?: string;
   ogImage?: string;
 }
-const { title, description = tagline, type = 'website', noindex = false, follow = false, current = '', jsonLd, csp, ogImage } = Astro.props;
+const { title, description = tagline, type = 'website', noindex = false, follow = false, colonne = false, current = '', jsonLd, csp, ogImage } = Astro.props;
 const fullTitle = title ? `${title} — ${siteName}` : `${siteName} — ${tagline}`;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const share = new URL(ogImage ?? url('brand/og-default.png'), Astro.site).toString();
@@ -94,7 +95,7 @@ const today = new Intl.DateTimeFormat('fr-FR', { timeZone: 'Europe/Paris', dateS
       </div>
     </nav>
     {!csp && !noindex && (
-      <div class="wrap manchette-globale"><ManchetteEdito /></div>
+      <div class:list={['wrap', 'manchette-globale', colonne && 'colonne']}><ManchetteEdito /></div>
     )}
     <main id="contenu" class="wrap"><slot /></main>
     <footer>
