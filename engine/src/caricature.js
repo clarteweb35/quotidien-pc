@@ -19,8 +19,8 @@ export const caricatureSchema = {
   properties: {
     titre: { type: 'string', description: 'titre court du dessin, drole' },
     legende: { type: 'string', description: "legende satirique d'une phrase, sans citation attribuee a une personne" },
-    scene: { type: 'string', description: 'description visuelle de la scene a dessiner, sans texte ecrit, personnages generiques' },
-    alt: { type: 'string', description: 'texte alternatif decrivant le dessin' },
+    scene: { type: 'string', description: 'description visuelle de la scene a dessiner, 400 caracteres maximum, sans texte ecrit, personnages generiques' },
+    alt: { type: 'string', description: 'texte alternatif decrivant le dessin, 150 caracteres maximum' },
   },
   required: ['titre', 'legende', 'scene', 'alt'],
 };
@@ -28,6 +28,15 @@ export const caricatureSchema = {
 const SYSTEM = `Tu es le dessinateur de presse du « Quotidien Presque Certain », journal satirique français. Chaque jour tu imagines UN dessin de presse caricatural à partir d'un fait d'actualité mondiale.
 Règles absolues : ta scène met en jeu des personnages GÉNÉRIQUES (un ministre en costume, un robot, un pigeon, une foule de petites silhouettes) : jamais une personne réelle, jamais son nom, jamais sa ressemblance. Pas de texte écrit dans l'image, pas de logo, pas de drapeau détaillé, pas de photo. Aucun sujet de drame, de violence ou de mort : tu te moques de l'absurdité des situations, jamais des victimes. La légende est une seule phrase satirique, sans citation attribuée à qui que ce soit et sans nom de personne.
 Tu réponds uniquement selon le schéma JSON.`;
+
+/** Coupe proprement (au dernier mot) un texte trop long: le modele depasse parfois les limites, ce n'est pas un motif de refus. */
+function coupe(texte, max) {
+  const t = String(texte ?? '').trim();
+  if (t.length <= max) return t;
+  const c = t.slice(0, max - 1);
+  const i = c.lastIndexOf(' ');
+  return `${(i > max * 0.6 ? c.slice(0, i) : c).replace(/[,;:s]+$/, '')}…`;
+}
 
 function verifier(d, topic, cfg) {
   const c = cfg.engine.caricature;
@@ -72,6 +81,8 @@ export async function runCaricature(ctx, items = null, { force = false } = {}) {
       schema: caricatureSchema,
       params: { temperature: 1, maxOutputTokens: 1024 },
     });
+    data.scene = coupe(data.scene, cfg.engine.images.promptMaxChars);
+    data.alt = coupe(data.alt, 160);
     const refus = verifier(data, topic, cfg);
     if (refus) { marque({ status: 'failed', lastError: refus }); logger.warn('caricature.refused', { date, reason: refus }); return { published: false, reason: refus }; }
 

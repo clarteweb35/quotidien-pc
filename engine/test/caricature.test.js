@@ -46,3 +46,13 @@ test('dessin du jour: images coupees ou dessin desactive: aucun appel', async ()
   assert.equal(ctx.sdk.counters.caricature, 0);
   cleanup(ctx);
 });
+
+test('dessin du jour: texte alternatif ou scene trop longs: coupes proprement, pas refuses', async () => {
+  const long = 'Un globe terrestre coiffé de bonnets de nuit entouré de petites silhouettes anonymes qui se passent un dossier épais sans jamais le lire, '.repeat(6);
+  const ctx = makeCtx({ at: AU_MOMENT, script: ({ kind }) => (kind === 'caricature' ? { titre: 'Un titre assez long', legende: 'Une légende suffisamment longue pour passer le contrôle', scene: long, alt: long } : undefined) });
+  const r = await runCaricature(ctx);
+  assert.equal(r?.published, true, JSON.stringify(r));
+  const [e] = JSON.parse(fs.readFileSync(jsonDu(ctx), 'utf8'));
+  assert.ok(e.alt.length <= 160 && e.alt.endsWith('…'), 'alt coupe');
+  cleanup(ctx);
+});

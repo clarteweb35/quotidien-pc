@@ -80,7 +80,8 @@ jobs:
         run: |
           git config user.name "quotidien-pc-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A data site/src/content/articles site/src/data site/public/images
+          git add -A data site/src/content/articles site/src/data
+          if [ -d site/public/images ]; then git add -A site/public/images; fi
           if git diff --cached --quiet; then
             echo "published=false" >> "$GITHUB_OUTPUT"; exit 0
           fi
