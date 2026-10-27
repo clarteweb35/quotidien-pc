@@ -70,3 +70,5 @@
 {"ts":"2026-10-27T17:51:24.839Z","runId":"20261027175112-d578","level":"info","event":"gemini.call","purpose":"image_judge","model":"gemini-3.5-flash-lite","inputTokens":1257,"outputTokens":60,"costUsd":0.000527}
 {"ts":"2026-10-27T17:51:24.839Z","runId":"20261027175112-d578","level":"info","event":"image.ok","slot":"caricature#2026-10-27","bytes":72138,"costUsd":0}
 {"ts":"2026-10-27T17:51:24.841Z","runId":"20261027175112-d578","level":"info","event":"caricature.ok","date":"2026-10-27","titre":"Carton rouge diplomatique"}
+{"ts":"2026-10-27T17:57:36.514Z","runId":"20261027175730-9ca3","level":"info","event":"gemini.call","purpose":"image_judge","model":"gemini-3.5-flash-lite","inputTokens":1247,"outputTokens":60,"costUsd":0.000524}
+{"ts":"2026-10-27T17:57:36.515Z","runId":"20261027175730-9ca3","level":"info","event":"image.ok","slot":"illustrer#droits-des-algorithmes-des-chercheurs-preconisent-quinze","bytes":69688,"costUsd":0}
