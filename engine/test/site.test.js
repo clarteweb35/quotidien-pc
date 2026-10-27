@@ -304,4 +304,11 @@ test('petites annonces et rencontres: ordre different chaque jour, stable dans l
   assert.notDeepEqual(j1, l, 'ordre mele');
 });
 
+test('mobile: barre du bas (entrees rapides + Menu aux trois traits) qui ouvre le menu complet', () => {
+  const h = page('.');
+  assert.ok(h.includes('class="barre-bas"') && h.includes('id="barre-menu"') && h.includes('aria-controls="nav-principal"') && h.includes('id="nav-principal"'), 'barre du bas et menu complet');
+  const css = fs.readFileSync(path.join(ROOT, 'site/src/styles/global.css'), 'utf8');
+  assert.ok(/.barre-bas { display: none; }/.test(css) && /.consent { bottom: 66px; }/.test(css), 'barre cachee hors mobile; bandeau cookies au-dessus');
+});
+
 test.after(() => fs.rmSync(out, { recursive: true, force: true }));

@@ -42,6 +42,8 @@ const MENU = [
 const SEC_PAR_LETTRE = 0.02;
 let cumul = 0.25;
 const menuFrappe = MENU.map((m) => { const o = { ...m, n: m.label.length, t: Number(cumul.toFixed(2)) }; cumul += m.label.length * SEC_PAR_LETTRE; return o; });
+// Barre du bas (mobile, facon France 24): quelques entrees rapides + « Menu » qui ouvre le menu complet
+const rapides = menuFrappe.filter((m) => ['home', 'editos', 'annonces', 'jeux'].includes(m.cle));
 const menuFin = Number(cumul.toFixed(2));
 // Decomptes affiches sous le logo (J-): jours calendaires a l'heure de Paris. Valeur du build, recalculee dans le navigateur.
 const parisYmd = (d: Date) => new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Paris' }).format(d);
@@ -94,7 +96,7 @@ const today = new Intl.DateTimeFormat('fr-FR', { timeZone: 'Europe/Paris', dateS
       <p class="date"><span id="today">{today}</span><span id="clock"></span><span class="decomptes">{jPresidentielle >= 0 && <> · <span id="jp" data-d={dc.presidentielle}>J-{jPresidentielle} avant la présidentielle</span></>} · <span id="jn" data-m={dc.noelMois} data-j={dc.noelJour}>J-{jNoel} avant Noël</span></span></p>
       <script is:inline set:html={`(function(){var c=document.getElementById("clock");if(!c)return;var f=new Intl.DateTimeFormat("fr-FR",{timeZone:"Europe/Paris",hour:"2-digit",minute:"2-digit"});var p=new Intl.DateTimeFormat("en-CA",{timeZone:"Europe/Paris"});function n(s){return Date.parse(s)}function d2(m){return String(m).padStart(2,"0")}function k(){var a=p.format(new Date()),jp=document.getElementById("jp"),jn=document.getElementById("jn");if(jp){var x=Math.round((n(jp.dataset.d)-n(a))/864e5);jp.textContent=x>=0?"J-"+x+" avant la présidentielle":"";}if(jn){var y=a.slice(0,4),z=y+"-"+d2(jn.dataset.m)+"-"+d2(jn.dataset.j);if(z<a)z=(+y+1)+z.slice(4);jn.textContent="J-"+Math.round((n(z)-n(a))/864e5)+" avant Noël"}}function t(){c.textContent=" · "+f.format(new Date()).replace(":"," h ");k()}t();setInterval(t,15000)})()`}></script>
     </header>
-    <nav class="nav" aria-label="Rubriques" style={`--fin:${menuFin}s`}>
+    <nav class="nav" id="nav-principal" aria-label="Rubriques" style={`--fin:${menuFin}s`}>
       <div class="wrap">
         <ul>
           {menuFrappe.map((m) => (
@@ -103,6 +105,11 @@ const today = new Intl.DateTimeFormat('fr-FR', { timeZone: 'Europe/Paris', dateS
         </ul>
       </div>
     </nav>
+    <div class="barre-bas">
+      {rapides.map((m) => <a href={m.href} aria-current={current === m.cle ? 'page' : undefined}>{m.cle === 'home' ? 'À la une' : m.cle === 'annonces' ? 'Annonces' : m.label}</a>)}
+      <button type="button" id="barre-menu" aria-expanded="false" aria-controls="nav-principal"><span class="traits" aria-hidden="true"></span>Menu</button>
+    </div>
+    <script is:inline set:html={`(function(){var b=document.getElementById("barre-menu"),h=document.documentElement;if(!b)return;function s(o){h.classList.toggle("menu-ouvert",o);b.setAttribute("aria-expanded",o?"true":"false")}b.addEventListener("click",function(){s(!h.classList.contains("menu-ouvert"))});document.addEventListener("keydown",function(e){if(e.key==="Escape")s(false)});document.getElementById("nav-principal").addEventListener("click",function(e){if(e.target.closest("a"))s(false)});document.addEventListener("click",function(e){if(h.classList.contains("menu-ouvert")&&!e.target.closest("#nav-principal,#barre-menu"))s(false)})})()`}></script>
     {!csp && !noindex && manchette && (
       <div class="wrap manchette-globale"><ManchetteEdito /></div>
     )}

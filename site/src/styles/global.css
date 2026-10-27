@@ -444,3 +444,24 @@ footer .quality .q-score.q-b { background: #5b9a2c; } /* note B: vert plus clair
 .nav ul { justify-content: space-between; }
 .nav a.rang-une { padding: 11px 14px; background: var(--accent); color: #fff; font-size: 1.08rem; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; border-bottom-color: var(--ink); }
 .nav a.rang-tete { color: #6b21a8; font-size: 1rem; font-weight: 800; letter-spacing: .02em; border-bottom-color: #6b21a8; }
+
+/* ===== Mobile: menu du bas facon France 24 (entrees rapides + « Menu » aux trois petits traits qui ouvre le menu complet) ===== */
+.barre-bas { display: none; }
+@media (max-width: 760px) {
+  body { padding-bottom: 62px; }
+  .barre-bas { display: flex; position: fixed; inset: auto 0 0 0; z-index: 40; height: 54px; background: var(--paper); border-top: 2px solid var(--ink); font: 700 .74rem var(--sans); }
+  .barre-bas a, .barre-bas button { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; padding: 0 2px; color: var(--ink); text-decoration: none; background: none; border: 0; font: inherit; cursor: pointer; white-space: nowrap; }
+  .barre-bas a[aria-current] { box-shadow: inset 0 3px 0 var(--accent); color: var(--accent); }
+  .barre-bas a:first-child { background: var(--accent); color: #fff; }
+  .barre-bas .traits { display: block; width: 18px; height: 2px; background: currentColor; box-shadow: 0 -6px 0 currentColor, 0 6px 0 currentColor; }
+  .consent { bottom: 66px; }
+  /* le menu du haut devient une feuille qui monte depuis la barre du bas */
+  .nav { position: fixed !important; inset: auto 0 54px 0; z-index: 39; max-height: 72vh; overflow-y: auto; background: var(--paper); border-top: 2px solid var(--ink); border-bottom: 0; box-shadow: 0 -8px 24px rgb(0 0 0 / .2); transform: translateY(105%); visibility: hidden; transition: transform .25s ease, visibility 0s linear .25s; animation: none !important; }
+  html.menu-ouvert .nav { transform: none; visibility: visible; transition: transform .25s ease; }
+  .nav > .wrap { animation: none !important; max-width: none; }
+  .nav ul { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; overflow: visible; font-size: 1rem; }
+  .nav li { position: static; }
+  .nav a, .nav a.onglet, .nav a.rang-une, .nav a.rang-tete { display: block; padding: 13px 6px; width: auto; text-align: left; }
+  .nav .onglet-li + .onglet-li { margin-left: 0; }
+}
+@media (prefers-reduced-motion: reduce) { .nav { transition: none !important; } }
