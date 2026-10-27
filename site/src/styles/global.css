@@ -470,19 +470,25 @@ footer .quality .q-score.q-b { background: #5b9a2c; } /* note B: vert plus clair
 
 /* ===== En-tete: « J-x avant la presidentielle » en bleu / blanc / rouge (lisible: texte blanc sur bleu et rouge, sombre sur blanc),
    « J-x avant Noel » en guirlande (lettres qui changent de couleur en alternance; fixe si l'utilisateur reduit les animations) ===== */
-.decomptes .drapeau { display: inline-flex; vertical-align: middle; border: 1px solid #c9c4b8; border-radius: 3px; overflow: hidden; line-height: 1.5; }
+.decomptes .drapeau { display: inline-grid; grid-auto-flow: column; grid-auto-columns: 1fr; vertical-align: middle; border: 1px solid #c9c4b8; border-radius: 3px; overflow: hidden; line-height: 1.5; } /* 1fr: les trois blocs ont exactement la meme largeur (celle du plus large) */
 .decomptes .drapeau[hidden] { display: none; }
-.decomptes .drapeau b { padding: 1px 8px; font-weight: 700; letter-spacing: .1em; }
+.decomptes .drapeau b { padding: 1px 8px; font-weight: 700; letter-spacing: .1em; text-align: center; white-space: nowrap; }
 .decomptes .fr-b { background: #0055a4; color: #fff; }
 .decomptes .fr-w { background: #fff; color: #16140f; }
 .decomptes .fr-r { background: #c8261c; color: #fff; }
-.guirlande i { font-style: normal; font-weight: 800; }
-.guirlande i:nth-child(3n+1) { color: #b3261e; }
-.guirlande i:nth-child(3n+2) { color: #1b6b34; }
-.guirlande i:nth-child(3n) { color: #a36a00; }
+/* Guirlande: rouge, vert, or et blanc (contour fin pour rester lisible sur le papier ivoire), plus des etincelles qui scintillent */
+.guirlande i { position: relative; font-style: normal; font-weight: 800; -webkit-text-stroke: .45px rgb(22 20 15 / .55); paint-order: stroke fill; }
+.guirlande i:nth-child(4n+1) { color: #b3261e; }
+.guirlande i:nth-child(4n+2) { color: #1b6b34; }
+.guirlande i:nth-child(4n+3) { color: #c28a00; }
+.guirlande i:nth-child(4n) { color: #fff; }
 @media (prefers-reduced-motion: no-preference) {
-  .guirlande i { animation: guirlande 1.8s step-end infinite; }
-  .guirlande i:nth-child(3n+2) { animation-delay: -.6s; }
-  .guirlande i:nth-child(3n) { animation-delay: -1.2s; }
-  @keyframes guirlande { 0% { color: #b3261e; } 33.4% { color: #1b6b34; } 66.7% { color: #a36a00; } }
+  .guirlande i { animation: guirlande 2.4s step-end infinite; }
+  .guirlande i:nth-child(4n+2) { animation-delay: -.6s; }
+  .guirlande i:nth-child(4n+3) { animation-delay: -1.2s; }
+  .guirlande i:nth-child(4n) { animation-delay: -1.8s; }
+  @keyframes guirlande { 0% { color: #b3261e; } 25% { color: #1b6b34; } 50% { color: #c28a00; } 75% { color: #fff; } }
+  .guirlande i:nth-child(3n+1)::after { content: '✦'; position: absolute; right: -.42em; top: -.62em; font-size: .75em; font-weight: 400; color: #e0a800; -webkit-text-stroke: 0; opacity: 0; pointer-events: none; animation: etincelle 1.9s ease-in-out infinite; }
+  .guirlande i:nth-child(3n+1):nth-child(odd)::after { animation-delay: -.9s; color: #fff; text-shadow: 0 0 2px #16140f, 0 0 4px #e0a800; }
+  @keyframes etincelle { 0%, 100% { opacity: 0; transform: scale(.2) rotate(0deg); } 45%, 55% { opacity: 1; transform: scale(1) rotate(45deg); } }
 }
