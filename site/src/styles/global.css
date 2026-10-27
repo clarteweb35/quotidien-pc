@@ -471,3 +471,11 @@ footer .quality .q-score.q-b { background: #5b9a2c; } /* note B: vert plus clair
   .nav a.rang-une { padding: 11px 11px; font-size: 1rem; }
   .nav .onglet-li + .onglet-li { margin-left: -6px; }
 }
+
+/* ===== Accueil: l'edito et le dessin du jour, chacun sur une moitie de la partie haute (empiles sur tablette et mobile) ===== */
+.une-duo { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; margin-top: 18px; }
+.une-duo > .mm { margin: 0; display: flex; flex-direction: column; justify-content: center; }
+@media (min-width: 900px) {
+  .une-duo { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0 22px; }
+}
+@media (min-width: 900px) { .une-duo .mm-titre { font-size: clamp(1.4rem, 2.5vw, 1.95rem); } }

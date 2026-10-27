@@ -1,0 +1,29 @@
+---
+// « Le dessin du jour » en une de l'accueil: la caricature et sa legende, a cote de l'edito; le detail complet est sur /caricatures/.
+import { caricatures } from '../lib/caricatures';
+import { url, formatDate } from '../lib/site';
+const c = caricatures[0];
+---
+{c && (
+  <section class="cari-une" aria-labelledby="cari-une-etiquette">
+    <p class="cari-une-etiquette" id="cari-une-etiquette">Le dessin du jour</p>
+    <a class="cari-une-image" href={url('caricatures/')}>
+      <img src={url(c.image)} alt={c.alt} width="1280" height="720" />
+    </a>
+    <h2 class="cari-une-titre"><a href={url('caricatures/')}>{c.titre}</a></h2>
+    <p class="cari-une-legende">{c.legende}</p>
+    <p class="cari-une-pied">Dessin du {formatDate(new Date(`${c.date}T12:00:00Z`))}, généré par IA · <a href={url('caricatures/')}>Le dessin en grand et son détail →</a></p>
+  </section>
+)}
+<style>
+  .cari-une { margin: 0; padding: 12px 18px 14px; border-top: 4px double var(--ink); border-bottom: 4px double var(--ink); background: linear-gradient(180deg, rgba(179, 38, 30, .06), transparent 70%); }
+  .cari-une-etiquette { margin: 0 0 8px; font: 800 .72rem var(--sans); letter-spacing: .24em; text-transform: uppercase; color: var(--accent); text-align: center; }
+  .cari-une-image { display: block; }
+  .cari-une-image img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border: 1px solid var(--rule); background: #fff; }
+  .cari-une-titre { margin: 10px 0 4px; font: italic 700 1.35rem/1.2 var(--serif); }
+  .cari-une-titre a { color: var(--ink); text-decoration: none; }
+  .cari-une-titre a:hover, .cari-une-titre a:focus-visible { text-decoration: underline; }
+  .cari-une-legende { margin: 0 0 6px; font-size: 1rem; line-height: 1.45; color: var(--ink-2); }
+  .cari-une-pied { margin: 0; font: .8rem var(--sans); color: var(--ink-2); }
+  .cari-une-pied a { color: var(--link); font-weight: 700; }
+</style>

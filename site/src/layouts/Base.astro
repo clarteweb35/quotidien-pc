@@ -5,6 +5,8 @@ import editorial from '../../../config/editorial.json';
 import { publisher, analyticsId } from '../lib/legal';
 import Consent from '../components/Consent.astro';
 import ManchetteEdito from '../components/ManchetteEdito.astro';
+import CaricatureUne from '../components/CaricatureUne.astro';
+import { caricatures } from '../lib/caricatures';
 
 interface Props {
   title?: string;
@@ -112,7 +114,10 @@ const today = new Intl.DateTimeFormat('fr-FR', { timeZone: 'Europe/Paris', dateS
     </div>
     <script is:inline set:html={`(function(){var b=document.getElementById("barre-menu"),h=document.documentElement;if(!b)return;function s(o){h.classList.toggle("menu-ouvert",o);b.setAttribute("aria-expanded",o?"true":"false")}b.addEventListener("click",function(){s(!h.classList.contains("menu-ouvert"))});document.addEventListener("keydown",function(e){if(e.key==="Escape")s(false)});document.getElementById("nav-principal").addEventListener("click",function(e){if(e.target.closest("a"))s(false)});document.addEventListener("click",function(e){if(h.classList.contains("menu-ouvert")&&!e.target.closest("#nav-principal,#barre-menu"))s(false)})})()`}></script>
     {!csp && !noindex && manchette && (
-      <div class="wrap manchette-globale"><ManchetteEdito /></div>
+      <div class:list={['wrap', 'manchette-globale', current === 'home' && caricatures.length > 0 && 'une-duo']}>
+        <ManchetteEdito />
+        {current === 'home' && <CaricatureUne />}
+      </div>
     )}
     <main id="contenu" class="wrap"><slot /></main>
     <footer>

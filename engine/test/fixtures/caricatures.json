@@ -1,0 +1,16 @@
+[
+  {
+    "date": "2026-10-27",
+    "titre": "Le monde au bord du formulaire",
+    "legende": "Les nations ont enfin trouvé un point commun : personne ne lit la notice.",
+    "alt": "Dessin de test",
+    "image": "images/caricatures/2026-10-27.webp",
+    "credit": "Dessin généré par IA",
+    "publishedAt": "2026-10-27T10:00:00.000Z",
+    "source": {
+      "name": "Test",
+      "title": "Test",
+      "url": ""
+    }
+  }
+]

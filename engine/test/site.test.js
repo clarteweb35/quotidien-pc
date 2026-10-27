@@ -10,7 +10,7 @@ const legal = JSON.parse(fs.readFileSync(path.join(ROOT, 'config/legal.json'), '
 const out = fs.mkdtempSync(path.join(os.tmpdir(), 'qpc-site-'));
 const build = spawnSync('npx', ['astro', 'build', '--outDir', out], {
   cwd: path.join(ROOT, 'site'), shell: true, encoding: 'utf8',
-  env: { ...process.env, MARCHES_OFFLINE: '1', SITE_URL: 'https://example.com', SITE_BASE: '/' },
+  env: { ...process.env, MARCHES_OFFLINE: '1', SITE_URL: 'https://example.com', SITE_BASE: '/', QPC_CARICATURES: path.join(ROOT, 'engine/test/fixtures/caricatures.json') },
 });
 const page = (p) => fs.readFileSync(path.join(out, p, 'index.html'), 'utf8');
 
@@ -325,6 +325,15 @@ test('Pierre Fusain, dessinateur: fiche, annonce de Rencontres liee, signature d
   const rc = page('rencontres');
   assert.ok(rc.includes('F5-231N') && rc.includes('id="ref-f5-231n"'), 'annonce de Rencontres');
   assert.ok(page('caricatures').includes('redaction/#pierre-fusain'), 'signature du dessin du jour');
+});
+
+test('accueil: l edito et le dessin du jour cote a cote, lien vers Caricatures; pas sur les autres pages', () => {
+  const h = page('.');
+  assert.ok(h.includes('une-duo') && h.includes('cari-une') && h.includes('Le monde au bord du formulaire'), 'dessin du jour a la une');
+  assert.ok(h.indexOf('id="mm-etiquette"') > 0 && h.indexOf('id="mm-etiquette"') < h.indexOf('id="cari-une-etiquette"'), 'edito puis dessin');
+  assert.ok(/href="[^"]*caricatures\/"/.test(h), 'renvoi vers la page Caricatures');
+  assert.ok(!page('rubrique/sport').includes('id="cari-une-etiquette"'), 'seulement a la une');
+  assert.ok(page('caricatures').includes('Le monde au bord du formulaire'), 'la page Caricatures montre le dessin');
 });
 
 test.after(() => fs.rmSync(out, { recursive: true, force: true }));
