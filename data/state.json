@@ -700,8 +700,193 @@
       "title": "Des intelligences artificielles « conscientes », avec une existence propre : une théorie qui agite le monde scientifique",
       "url": "https://www.lemonde.fr/sciences/article/2026/10/26/des-intelligences-artificielles-conscientes-avec-une-existence-propre-une-theorie-qui-agite-le-monde-scientifique_6800814_1650684.html",
       "category": "tech",
-      "seenAt": "2026-10-26T18:51:00.800Z",
-      "status": "in_progress"
+      "seenAt": "2026-10-27T10:24:05.281Z",
+      "status": "used",
+      "usedAt": "2026-10-27T10:24:05.281Z"
+    },
+    "a8d45c165b68": {
+      "title": "Une minute de silence sera observée mardi à L'Assemblée nationale en hommages Pengo Bossio Wangi, mort dans l'attentat de Trappes",
+      "url": "https://www.franceinfo.fr/societe/trappes/une-minute-de-silence-sera-observee-mardi-a-l-assemblee-nationale-en-hommages-pengo-bossio-wangi-mort-dans-l-attentat-de-trappes_8255494.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-27T10:23:44.856Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "bbf09e8fe156": {
+      "title": "Les Pays-Bas se retirent de l'Eurovision 2027 en raison de la question \"sensible\" de la participation d'Israël",
+      "url": "https://www.franceinfo.fr/culture/tv/les-pays-bas-se-retirent-de-l-eurovision-2027-en-raison-de-la-question-sensible-d-israel_8255473.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-27T10:23:44.856Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "c84a69d111d5": {
+      "title": "\"Nous savions tous qu'un jour, les mots de la haine tueraient\" : Omar Sy, Theodora, Gilles Lellouche… Des personnalités dénoncent le racisme après l'attentat de Trappes",
+      "url": "https://www.franceinfo.fr/faits-divers/terrorisme/attentat-raciste-a-trappes/nous-savions-tous-qu-un-jour-les-mots-de-la-haine-tueraient-omar-sy-jul-theodora-gilles-lellouche-des-personnalites-denoncent-le-racisme-apres-l-attentat-de-trappes_8255149.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-27T10:23:44.856Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "9a41d14e4457": {
+      "title": "La France insoumise réclame une commission d'enquête parlementaire pour \"établir les responsabilités\" sur l'attentat raciste dans les Yvelines",
+      "url": "https://www.franceinfo.fr/faits-divers/terrorisme/attentat-raciste-a-trappes/la-france-insoumise-reclame-une-commission-d-enquete-parlementaire-pour-etablir-les-responsabilites-sur-l-attentat-raciste-dans-les-yvelines_8255395.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-27T10:23:44.856Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "47331627892e": {
+      "title": "Le Japonais Tetsuya Chiba, figure majeure du manga et auteur de la série de boxe \"Ashita no Joe\", est mort à 87 ans",
+      "url": "https://www.franceinfo.fr/culture/bd/mangas/le-japonais-tetsuya-chiba-figure-majeure-du-manga-et-auteur-de-la-serie-de-boxe-ashita-no-joe-est-mort-a-87-ans_8255443.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-27T10:23:44.856Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "84b2f78848a4": {
+      "title": "La Jordanie frappe la Syrie après l'attaque contre une église et affirme avoir tué 20 personnnes, Damas recense sept morts",
+      "url": "https://www.franceinfo.fr/monde/revolte-en-syrie/la-jordanie-frappe-la-syrie-apres-l-attaque-contre-une-eglise-provoquant-la-mort-de-huit-personnes-dont-trois-enfants_8255299.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-27T10:23:44.856Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "c6d8618554cf": {
+      "title": "Attentat raciste de Trappes : dans toute la France, des hommages aux victimes où se mêlent colère commune et divergences politiques",
+      "url": "https://www.lemonde.fr/societe/article/2026/10/27/attentat-raciste-de-trappes-dans-toute-la-france-des-hommages-aux-victimes-ou-se-melent-colere-commune-et-divergences-politiques_6801216_3224.html",
+      "category": "societe",
+      "seenAt": "2026-10-27T10:23:44.856Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "3340a57a3172": {
+      "title": "« Gaza est à nous ! » : alors qu’Israël vote, des colons ont installé un campement à la frontière de l’enclave palestinienne",
+      "url": "https://www.lemonde.fr/international/article/2026/10/27/gaza-est-a-nous-alors-qu-israel-vote-des-colons-ont-installe-un-campement-a-la-frontiere-de-l-enclave-palestinienne_6801222_3210.html",
+      "category": "societe",
+      "seenAt": "2026-10-27T10:23:44.856Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "64e87cf67139": {
+      "title": "Le débat sur l’imprescriptibilité des crimes sexuels sur les mineurs arrive au Sénat",
+      "url": "https://www.lemonde.fr/societe/article/2026/10/27/le-debat-sur-l-imprescriptibilite-des-crimes-sexuels-sur-les-mineurs-arrive-au-senat_6801103_3224.html",
+      "category": "societe",
+      "seenAt": "2026-10-27T10:23:44.856Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "8621478d215e": {
+      "title": "EN DIRECT, guerre en Ukraine : près de 200 affrontements entre Russes et Ukrainiens sur le front lundi 26 octobre",
+      "url": "https://www.lemonde.fr/international/live/2026/10/27/en-direct-guerre-en-ukraine-pres-de-200-affrontements-entre-russes-et-ukrainiens-sur-le-front-lundi-26-octobre_6799896_3210.html",
+      "category": "societe",
+      "seenAt": "2026-10-27T10:23:44.856Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "7ff95217a687": {
+      "title": "Soudan : plus de vingt morts après une attaque de drone contre un marché à Nyala",
+      "url": "https://www.lemonde.fr/afrique/article/2026/10/27/soudan-plus-de-vingt-morts-apres-une-attaque-de-drone-contre-un-marche-a-nyala_6801210_3212.html",
+      "category": "societe",
+      "seenAt": "2026-10-27T10:23:44.856Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "efd44cf8bb0d": {
+      "title": "Côte d’Ivoire : un an après la réélection d’Alassane Ouattara, une scène politique cadenassée",
+      "url": "https://www.lemonde.fr/afrique/article/2026/10/27/cote-d-ivoire-un-an-apres-la-reelection-d-alassane-ouattara-une-scene-politique-cadenassee_6801209_3212.html",
+      "category": "societe",
+      "seenAt": "2026-10-27T10:23:44.856Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "c2ada55b9173": {
+      "title": "Des frappes jordaniennes en Syrie font au moins six morts, après une attaque meurtrière contre une église du royaume",
+      "url": "https://www.lemonde.fr/international/article/2026/10/27/des-frappes-jordaniennes-en-syrie-font-au-moins-six-morts-apres-une-attaque-meurtriere-contre-une-eglise-du-royaume_6801097_3210.html",
+      "category": "societe",
+      "seenAt": "2026-10-27T10:23:44.856Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "09df4a8f76f7": {
+      "title": "«J’ai senti dans ma chair la montée du racisme» : à Vénissieux, la solidarité et la peur après l’attentat des Yvelines",
+      "url": "https://www.liberation.fr/societe/jai-senti-dans-ma-chair-la-montee-du-racisme-a-venissieux-la-solidarite-et-la-peur-apres-lattentat-des-yvelines-20261026_6HXHTMKPPBHPRFLSMT335NNA2U/",
+      "category": "societe",
+      "seenAt": "2026-10-27T10:23:44.856Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "4da3452adfe5": {
+      "title": "Omar Sy, SDM, Camille Cottin : une centaine de stars françaises dénoncent le racisme après l’attentat de Trappes",
+      "url": "https://www.liberation.fr/societe/omar-sy-jul-camille-cottin-une-centaine-de-stars-francaises-denoncent-le-racisme-apres-lattentat-de-trappes-20261027_V3K237CV6BCOBNWIEGKHRWGZI4/",
+      "category": "societe",
+      "seenAt": "2026-10-27T10:23:44.856Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "389c863ba716": {
+      "title": "Attentat de Trappes : Omar Sy et de nombreuses personnalités dénoncent \"les mots de la haine\"",
+      "url": "https://www.france24.com/fr/france/20261027-pr%C3%A8s-cent-personnalit%C3%A9s-culture-sport-d%C3%A9noncent-racisme-apr%C3%A8s-attentat-trappes-omar-sy-jul",
+      "category": "monde",
+      "seenAt": "2026-10-27T10:23:44.856Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "f07c17a3d4eb": {
+      "title": "Un an après le massacre d'El-Fasher, les réfugiés racontent",
+      "url": "https://www.france24.com/fr/%C3%A9missions/journal-de-l-afrique/20261026-un-an-apr%C3%A8s-le-massacre-d-el-fasher-les-r%C3%A9fugi%C3%A9s-racontent",
+      "category": "monde",
+      "seenAt": "2026-10-27T10:23:44.856Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "987c566c5b42": {
+      "title": "Comment Benjamin Netanyahu s'est-il maintenu au pouvoir si longtemps en Israël ?",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261026-comment-benjamin-netanyahu-s-est-il-maintenu-au-pouvoir-si-longtemps-en-isra%C3%ABl",
+      "category": "monde",
+      "seenAt": "2026-10-27T10:23:44.856Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "ab75c5af1d7b": {
+      "title": "EN DIRECT, législatives en Israël : le taux de participation est de 16,68 % mardi matin, le plus haut depuis 1981",
+      "url": "https://www.lemonde.fr/international/live/2026/10/27/en-direct-legislatives-en-israel-suivez-la-journee-d-election-avec-nos-correspondants-et-posez-vos-questions_6801217_3210.html",
+      "category": "monde",
+      "seenAt": "2026-10-27T10:23:44.856Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "27508a741613": {
+      "title": "Guerre au Proche-Orient : « Le peuple iranien ne doit pas payer le prix des objectifs politiques et militaires »",
+      "url": "https://www.lemonde.fr/idees/article/2026/10/27/guerre-au-proche-orient-le-peuple-iranien-ne-doit-pas-payer-le-prix-des-objectifs-politiques-et-militaires_6801215_3232.html",
+      "category": "monde",
+      "seenAt": "2026-10-27T10:23:44.856Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "b0db274eaded": {
+      "title": "Ces lobbys évangéliques américains qui exportent leur guerre culturelle en Afrique",
+      "url": "https://www.lemonde.fr/afrique/article/2026/10/27/ces-lobbys-evangeliques-americains-qui-exportent-leur-guerre-culturelle-en-afrique_6801089_3212.html",
+      "category": "monde",
+      "seenAt": "2026-10-27T10:23:44.856Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "8c7f20a9beaf": {
+      "title": "Le Sénat rejette la réforme constitutionnelle sur l'autonomie de la Corse, censée aboutir à l'octroi de pouvoirs dérogatoires à l'île",
+      "url": "https://www.franceinfo.fr/france/corse/le-senat-rejette-la-reforme-constitutionnelle-sur-l-autonomie-de-la-corse-censee-aboutir-a-l-octroi-de-pouvoirs-derogatoires-le-camp-autonomiste-claque-la-porte_8255089.html#xtor=RSS-3-[lestitres]",
+      "category": "editos",
+      "seenAt": "2026-10-27T10:23:44.856Z",
+      "status": "used",
+      "usedAt": "2026-10-27T10:23:44.856Z"
+    },
+    "2dfceef6a388": {
+      "title": "Tetsuya Chiba, géant du manga japonais et auteur de la série sur la boxe « Ashita no Joe », est mort à 87 ans",
+      "url": "https://www.lemonde.fr/pixels/article/2026/10/27/tetsuya-chiba-geant-du-manga-japonais-et-auteur-de-la-serie-sur-la-boxe-ashita-no-joe-est-mort-a-87-ans_6801223_4408996.html",
+      "category": "tech",
+      "seenAt": "2026-10-27T10:24:05.281Z",
+      "status": "excluded",
+      "reason": "sensitive"
     }
   },
   "slots": {
@@ -895,12 +1080,32 @@
         "startedAt": "2026-10-26T18:51:00.800Z",
         "lastError": "quota: Quota Gemini epuise ou limite de debit (HTTP 429): {\"error\":{\"code\":429,\"message\":\"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-lim"
       }
+    },
+    "2026-10-27": {
+      "0": {
+        "attempts": 1,
+        "status": "published",
+        "startedAt": "2026-10-27T10:23:44.856Z",
+        "articleId": "80d76dc56881",
+        "publishedAt": "2026-10-27T10:23:44.856Z",
+        "topicId": "8c7f20a9beaf",
+        "lastError": null
+      },
+      "1": {
+        "attempts": 1,
+        "status": "published",
+        "startedAt": "2026-10-27T10:24:05.281Z",
+        "articleId": "3a77d9b49cd4",
+        "publishedAt": "2026-10-27T10:24:05.281Z",
+        "topicId": "3ed8cc4dfa08",
+        "lastError": null
+      }
     }
   },
   "lastRun": {
-    "at": "2026-10-26T18:43:47.323Z",
-    "runId": "20261026184347-030a",
-    "published": 1,
-    "stopped": "quota"
+    "at": "2026-10-27T10:23:44.399Z",
+    "runId": "20261027102344-34d9",
+    "published": 2,
+    "stopped": null
   }
 }

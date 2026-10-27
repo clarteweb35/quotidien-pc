@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-27",
+  "target": 5,
+  "publishedCount": 2,
+  "articles": [
+    {
+      "id": "80d76dc56881",
+      "ref": "261027-01",
+      "title": "Autonomie de la Corse : pourquoi le statu quo à 0 % d’avancement reste notre plus beau résultat comptable",
+      "category": "editos",
+      "slug": "autonomie-de-la-corse-pourquoi-le-statu-quo-a-0-d"
+    },
+    {
+      "id": "3a77d9b49cd4",
+      "ref": "261027-02",
+      "title": "Droits des algorithmes : des chercheurs préconisent quinze minutes de pause-café toutes les 100 000 requêtes",
+      "category": "tech",
+      "slug": "droits-des-algorithmes-des-chercheurs-preconisent-quinze"
+    }
+  ],
+  "slots": [
+    {
+      "idx": 0,
+      "hhmm": "09:10",
+      "attempts": 1,
+      "status": "published",
+      "startedAt": "2026-10-27T10:23:44.856Z",
+      "articleId": "80d76dc56881",
+      "publishedAt": "2026-10-27T10:23:44.856Z",
+      "topicId": "8c7f20a9beaf",
+      "lastError": null
+    },
+    {
+      "idx": 1,
+      "hhmm": "09:40",
+      "attempts": 1,
+      "status": "published",
+      "startedAt": "2026-10-27T10:24:05.281Z",
+      "articleId": "3a77d9b49cd4",
+      "publishedAt": "2026-10-27T10:24:05.281Z",
+      "topicId": "3ed8cc4dfa08",
+      "lastError": null
+    },
+    {
+      "idx": 2,
+      "hhmm": "10:10",
+      "status": "pending",
+      "attempts": 0
+    },
+    {
+      "idx": 3,
+      "hhmm": "10:40",
+      "status": "pending",
+      "attempts": 0
+    },
+    {
+      "idx": 4,
+      "hhmm": "11:10",
+      "status": "pending",
+      "attempts": 0
+    }
+  ],
+  "rejections": 0,
+  "quarantined": 0,
+  "api": {
+    "calls": 4,
+    "inputTokens": 10601,
+    "outputTokens": 5613,
+    "costUsd": 0.054893,
+    "dailyCapUsd": 1,
+    "monthCostUsd": 0.548909,
+    "monthlyCapUsd": 15
+  },
+  "paused": false,
+  "lastRun": {
+    "at": "2026-10-27T10:23:44.399Z",
+    "runId": "20261027102344-34d9",
+    "published": 2,
+    "stopped": null
+  }
+}

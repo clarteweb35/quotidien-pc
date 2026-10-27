@@ -1,0 +1,24 @@
+{"ts":"2026-10-27T10:23:44.426Z","runId":"20261027102344-34d9","level":"info","event":"cycle.start","date":"2026-10-27","due":["2026-10-27#0","2026-10-27#1"],"remainingToday":5,"dryRun":false}
+{"ts":"2026-10-27T10:23:44.853Z","runId":"20261027102344-34d9","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":31,"kept":25}
+{"ts":"2026-10-27T10:23:44.854Z","runId":"20261027102344-34d9","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-10-27T10:23:44.854Z","runId":"20261027102344-34d9","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":20}
+{"ts":"2026-10-27T10:23:44.854Z","runId":"20261027102344-34d9","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":23}
+{"ts":"2026-10-27T10:23:44.854Z","runId":"20261027102344-34d9","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":15}
+{"ts":"2026-10-27T10:23:44.854Z","runId":"20261027102344-34d9","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":20,"kept":20}
+{"ts":"2026-10-27T10:23:44.854Z","runId":"20261027102344-34d9","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":13}
+{"ts":"2026-10-27T10:23:44.855Z","runId":"20261027102344-34d9","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":16}
+{"ts":"2026-10-27T10:23:44.855Z","runId":"20261027102344-34d9","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":4}
+{"ts":"2026-10-27T10:23:44.855Z","runId":"20261027102344-34d9","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":7}
+{"ts":"2026-10-27T10:23:44.855Z","runId":"20261027102344-34d9","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":8}
+{"ts":"2026-10-27T10:23:44.855Z","runId":"20261027102344-34d9","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":5}
+{"ts":"2026-10-27T10:23:44.855Z","runId":"20261027102344-34d9","level":"info","event":"collect.done","items":172}
+{"ts":"2026-10-27T10:23:44.948Z","runId":"20261027102344-34d9","level":"info","event":"topic.selection","slot":"2026-10-27#0","target":"editos","candidates":172,"rejected":21,"chosen":"Le Sénat rejette la réforme constitutionnelle sur l'autonomie de la Corse, censée aboutir à l'octroi de pouvoirs dérogatoires à l'île","score":8.5}
+{"ts":"2026-10-27T10:24:03.296Z","runId":"20261027102344-34d9","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4382,"outputTokens":3289,"costUsd":0.031241}
+{"ts":"2026-10-27T10:24:05.277Z","runId":"20261027102344-34d9","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":1104,"outputTokens":56,"costUsd":0.000471}
+{"ts":"2026-10-27T10:24:05.278Z","runId":"20261027102344-34d9","level":"info","event":"judge.result","slot":"2026-10-27#0","attempt":1,"humor":8,"coherence":9,"risk":1,"issues":[]}
+{"ts":"2026-10-27T10:24:05.281Z","runId":"20261027102344-34d9","level":"info","event":"publish.ok","slot":"2026-10-27#0","id":"80d76dc56881","slug":"autonomie-de-la-corse-pourquoi-le-statu-quo-a-0-d","url":"/articles/autonomie-de-la-corse-pourquoi-le-statu-quo-a-0-d/","attempt":1,"dryRun":false}
+{"ts":"2026-10-27T10:24:05.289Z","runId":"20261027102344-34d9","level":"info","event":"topic.selection","slot":"2026-10-27#1","target":"tech","candidates":172,"rejected":1,"chosen":"Des intelligences artificielles « conscientes », avec une existence propre : une théorie qui agite le monde scientifique","score":7}
+{"ts":"2026-10-27T10:24:21.169Z","runId":"20261027102344-34d9","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4243,"outputTokens":2177,"costUsd":0.022692}
+{"ts":"2026-10-27T10:24:22.225Z","runId":"20261027102344-34d9","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":872,"outputTokens":91,"costUsd":0.000489}
+{"ts":"2026-10-27T10:24:22.225Z","runId":"20261027102344-34d9","level":"info","event":"judge.result","slot":"2026-10-27#1","attempt":1,"humor":8,"coherence":9,"risk":1,"issues":[]}
+{"ts":"2026-10-27T10:24:22.227Z","runId":"20261027102344-34d9","level":"info","event":"publish.ok","slot":"2026-10-27#1","id":"3a77d9b49cd4","slug":"droits-des-algorithmes-des-chercheurs-preconisent-quinze","url":"/articles/droits-des-algorithmes-des-chercheurs-preconisent-quinze/","attempt":1,"dryRun":false}

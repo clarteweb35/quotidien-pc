@@ -3,7 +3,17 @@
 Nommez votre image **exactement comme la référence** (ex. `261024-X1.jpg`) et déposez-la dans `site/src/assets/manual/`.
 Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large minimum.
 
-## Sans image (3)
+## Sans image (5)
+
+### `261027-02` — Droits des algorithmes : des chercheurs préconisent quinze minutes de pause-café toutes les 100 000 requêtes
+- Rubrique : tech
+- Description suggérée : Une salle de serveurs informatiques baignée dans une lumière bleue tamisée, avec une petite tasse de café posée sur un boîtier de calcul, vue de côté sans aucun visage humain.
+- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
+
+### `261027-01` — Autonomie de la Corse : pourquoi le statu quo à 0 % d’avancement reste notre plus beau résultat comptable
+- Rubrique : editos
+- Description suggérée : Un bureau ministériel encombré de piles de dossiers géantes sous lesquelles une petite calculatrice affiche le chiffre zéro. Style dessin de presse satirique.
+- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
 ### `261026-X1` — Pourquoi nous devrions tous signer un plan de départ volontaire de notre propre vie
 - Rubrique : editos
