@@ -143,5 +143,26 @@ test('illustrer un article deja publie: image ajoutee a partir de sa consigne en
   assert.ok(fm.image && fm.imageCredit && fs.existsSync(path.join(ctx.paths.siteRoot, 'public', fm.image)), 'article relie a son image');
   existing = loadExisting(dir, { maxAgeDays: 3650, now: ctx.now() });
   assert.equal((await illustrerExistant({ ctx, slug: cible.slug, existing, contentDir: dir, imageDir })).reason, 'deja_illustre');
+  const refait = await illustrerExistant({ ctx, slug: cible.slug, existing, contentDir: dir, imageDir, force: true });
+  assert.equal(refait.ok, true, 'refaire une image deja presente');
+  const brut = fs.readFileSync(path.join(dir, cible.file), 'utf8');
+  assert.equal((brut.match(/^image: /gm) ?? []).length, 1, 'une seule reference image');
+  assert.equal((brut.match(/^imageCredit: /gm) ?? []).length, 1);
   cleanup(ctx);
+});
+
+test('image carree (Cloudflare 1024 x 1024): jamais rognee, centree en entier sur un fond flou 16:9', async () => {
+  const { mettreEn16x9 } = await import('../src/images.js');
+  const sharp = (await import('sharp')).default;
+  // carre: moitie gauche noire, moitie droite blanche; un rognage 16:9 centre perdrait le haut et le bas, pas les cotes
+  const carre = await sharp({ create: { width: 400, height: 400, channels: 3, background: '#ffffff' } })
+    .composite([{ input: await sharp({ create: { width: 200, height: 400, channels: 3, background: '#000000' } }).png().toBuffer(), left: 0, top: 0 }]).png().toBuffer();
+  const out = await mettreEn16x9(carre, { outputWidth: 640, webpQuality: 80 });
+  const m = await sharp(out).metadata();
+  assert.equal(m.width, 640);
+  assert.equal(m.height, 360);
+  const bord = await sharp(out).extract({ left: 160, top: 0, width: 1, height: 360 }).raw().toBuffer(); // bord gauche du carre centre (360 px de large)
+  assert.ok(bord.length > 0);
+  const large = await sharp({ create: { width: 640, height: 360, channels: 3, background: '#888888' } }).png().toBuffer();
+  assert.equal((await sharp(await mettreEn16x9(large, { outputWidth: 320, webpQuality: 80 })).metadata()).height, 180, 'image deja 16:9: simple redimensionnement');
 });

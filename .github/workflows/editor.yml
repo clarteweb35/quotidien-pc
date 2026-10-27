@@ -17,6 +17,10 @@ on:
         description: 'Identifiant de l''article a illustrer (mode illustrer uniquement), ex. droits-des-algorithmes-des-chercheurs-preconisent-quinze'
         type: string
         default: ''
+      refaire:
+        description: 'Mode illustrer: refaire l''image meme si l''article en a deja une'
+        type: boolean
+        default: false
       count:
         description: 'Nombre d''articles à publier (mode extra uniquement, dans la limite de 5 par jour)'
         type: choice
@@ -66,6 +70,7 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           MODE: ${{ inputs.mode }}
           SLUG: ${{ inputs.slug }}
+          REFAIRE: ${{ inputs.refaire }}
           COUNT: ${{ inputs.count }}
           SPACING: ${{ inputs.spacing }}
         run: |
@@ -75,7 +80,7 @@ jobs:
             dry-run) args="--dry-run" ;;
             force-catchup) args="--force-catchup" ;;
             caricature) node engine/src/cli.js caricature; exit $? ;;
-            illustrer) node engine/src/cli.js illustrer "$SLUG"; exit $? ;;
+            illustrer) node engine/src/cli.js illustrer "$SLUG" $([ "$REFAIRE" = "true" ] && echo --force); exit $? ;;
           esac
           node engine/src/cli.js run $args
 

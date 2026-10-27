@@ -68,6 +68,20 @@ async function callImageModel(client, im, prompt) {
   });
 }
 
+/**
+ * Image finale 16:9 (le site l'affiche ainsi). Une image deja large est recadree; une image carree (Cloudflare FLUX: 1024 x 1024)
+ * n'est JAMAIS rognee: elle est centree en entier sur un fond flou issu d'elle-meme, comme un fond de lecteur video.
+ */
+export async function mettreEn16x9(source, im) {
+  const W = im.outputWidth;
+  const H = Math.round((W * 9) / 16);
+  const { width, height } = await sharp(source).metadata();
+  if (width / height >= 1.6) return sharp(source).resize({ width: W, height: H, fit: 'cover' }).webp({ quality: im.webpQuality }).toBuffer();
+  const fond = await sharp(source).resize({ width: W, height: H, fit: 'cover' }).blur(28).modulate({ brightness: 1.05, saturation: 0.9 }).toBuffer();
+  const devant = await sharp(source).resize({ width: W, height: H, fit: 'inside' }).toBuffer();
+  return sharp(fond).composite([{ input: devant, gravity: 'centre' }]).webp({ quality: im.webpQuality }).toBuffer();
+}
+
 /** L'image est-elle prevue pour ce creneau, et le plafond du jour est-il respecte ? */
 export function imageWanted({ cfg, slot, existing, now }) {
   const im = cfg.engine.images;
@@ -122,10 +136,7 @@ export async function illustrate({ client, cfg, article, topic, logger, slotKey 
 
   let buffer;
   try {
-    buffer = await sharp(Buffer.from(raw, 'base64'))
-      .resize({ width: im.outputWidth, height: Math.round((im.outputWidth * 9) / 16), fit: 'cover' })
-      .webp({ quality: im.webpQuality })
-      .toBuffer();
+    buffer = await mettreEn16x9(Buffer.from(raw, 'base64'), im);
   } catch (err) {
     logger.warn('image.invalid', { slot: slotKey, error: String(err.message).slice(0, 200) });
     return null;
@@ -159,11 +170,11 @@ export async function illustrate({ client, cfg, article, topic, logger, slotKey 
  * Illustre a posteriori un article deja publie, a partir de la consigne d'image enregistree dans son fichier (imagePrompt).
  * Memes controles que a la publication. @returns {Promise<{ok:boolean, reason?:string, file?:string}>}
  */
-export async function illustrerExistant({ ctx, slug, existing, contentDir, imageDir }) {
+export async function illustrerExistant({ ctx, slug, existing, contentDir, imageDir, force = false }) {
   const { cfg, client, logger } = ctx;
   const a = existing.find((e) => e.slug === slug || e.slug.endsWith(`-${slug}`) || e.file === `${slug}.md`);
   if (!a) return { ok: false, reason: 'article_introuvable' };
-  if (a.image) return { ok: false, reason: 'deja_illustre' };
+  if (a.image && !force) return { ok: false, reason: 'deja_illustre' };
   if (!a.imagePrompt || !a.imageAlt) return { ok: false, reason: 'pas_de_consigne_image' };
   const article = { title: a.title, image_prompt: a.imagePrompt, image_alt: a.imageAlt };
   const image = await illustrate({ client, cfg, article, topic: { title: a.title, summary: a.chapo }, logger, slotKey: `illustrer#${a.slug}` });
@@ -174,8 +185,9 @@ export async function illustrerExistant({ ctx, slug, existing, contentDir, image
   const md = path.join(contentDir, a.file);
   const texte = fs.readFileSync(md, 'utf8');
   const ligne = /^imageAlt: .*$/m;
+  const sansImage = texte.replace(/^image: .*\n/m, '').replace(/^imageCredit: .*\n/m, ''); // refaire une image: on retire l'ancienne reference
   const ajout = `image: ${JSON.stringify(`images/articles/${fichier}`)}\nimageAlt: ${JSON.stringify(image.alt)}\nimageCredit: ${JSON.stringify(image.credit)}`;
-  if (!ligne.test(texte)) return { ok: false, reason: 'format_inattendu' };
-  fs.writeFileSync(md, texte.replace(ligne, () => ajout));
+  if (!ligne.test(sansImage)) return { ok: false, reason: 'format_inattendu' };
+  fs.writeFileSync(md, sansImage.replace(ligne, () => ajout));
   return { ok: true, file: a.file };
 }
