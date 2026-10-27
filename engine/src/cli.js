@@ -52,8 +52,7 @@ async function main() {
       const im = cfg.engine.images;
       // --scene "..." : meme assemblage que le moteur (style + scene + contraintes); --prompt : texte brut
       const scene = opt('scene') ?? "une pile de dossiers penchée près d'une plante verte, vue de dos";
-      const prompt = opt('prompt') ?? [im.styleGuide, `Scène à illustrer : ${scene}`, im.constraints].join('
-');
+      const prompt = opt('prompt') ?? [im.styleGuide, `Scène à illustrer : ${scene}`, im.constraints].join('\n');
       const b64 = await cloudflareImageBase64({ prompt, model: im.model, steps: im.steps, timeoutMs: im.timeoutMs });
       if (!b64) { console.error('Reponse sans image.'); process.exit(1); }
       const out = path.join(os.tmpdir(), 'test-image-cloudflare.png');
