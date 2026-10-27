@@ -2,6 +2,7 @@ import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
+import { typo } from './lib/typo.js';
 
 // LGN_CONTENT_DIR permet de construire le site a partir d'articles ailleurs (simulation, tests).
 const base: string | URL = process.env.LGN_CONTENT_DIR
@@ -13,9 +14,9 @@ const articles = defineCollection({
   schema: z.object({
     id: z.string(),
     slug: z.string().regex(/^[a-z0-9-]+$/),
-    title: z.string(),
-    chapo: z.string(),
-    description: z.string(),
+    title: z.string().transform(typo), // espaces insecables: jamais de « : » en debut de ligne
+    chapo: z.string().transform(typo),
+    description: z.string().transform(typo),
     category: z.string(),
     tags: z.array(z.string()),
     publishedAt: z.coerce.date(),

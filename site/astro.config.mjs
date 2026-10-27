@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import { remarkTypo } from './src/lib/typo.js';
 
 // Date de publication de chaque article (lue dans le front-matter) pour renseigner <lastmod> dans le sitemap.
 const lastmod = new Map();
@@ -23,6 +24,7 @@ export default defineConfig({
   site: process.env.SITE_URL || 'https://example.com',
   base: process.env.SITE_BASE || '/',
   trailingSlash: 'always',
+  markdown: { remarkPlugins: [remarkTypo] }, // typographie francaise dans le corps des articles
   build: { inlineStylesheets: 'always' }, // evite la requete CSS bloquante (feuille de quelques Ko)
   integrations: [
     sitemap({

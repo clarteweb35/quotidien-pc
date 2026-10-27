@@ -336,4 +336,15 @@ test('accueil: l edito et le dessin du jour cote a cote, lien vers Caricatures; 
   assert.ok(page('caricatures').includes('Le monde au bord du formulaire'), 'la page Caricatures montre le dessin');
 });
 
+test('typographie francaise: espaces insecables avant : ; ! ? et dans les milliers', async () => {
+  const { typo } = await import('../../site/src/lib/typo.js');
+  assert.equal(typo('Corse : pourquoi'), 'Corse : pourquoi');
+  assert.equal(typo('12 000 tasses ! vraiment ?'), '12 000 tasses ! vraiment ?');
+  assert.equal(typo('il dit « bonjour » ok'), 'il dit « bonjour » ok');
+  assert.equal(typo('0 % de plus'), '0 % de plus');
+  const accueil = page('.');
+  const titre = new RegExp('>([^<]*)</a></h2>').exec(accueil.slice(accueil.indexOf('mm-titre')))?.[1] ?? '';
+  assert.ok(titre.length > 10 && !/ [:;!?]/.test(titre), 'titre de l edito: aucune espace ordinaire avant la ponctuation haute');
+});
+
 test.after(() => fs.rmSync(out, { recursive: true, force: true }));
