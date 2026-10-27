@@ -262,11 +262,11 @@ test('petites annonces: logos en grand (haut/duo), colonnes equilibrees par scri
   assert.ok(html.includes('equilibre'), 'script d\'equilibrage des colonnes');
 });
 
-test('menu: trois onglets tricolores de meme taille; frappe a la premiere connexion seulement', () => {
+test('menu: liens ordinaires (plus d onglets tricolores); frappe a la premiere connexion seulement', () => {
   const h = page('.');
-  for (const c of ['bleu', 'blanc', 'rouge']) assert.ok(h.includes(`onglet-li onglet-${c}`), `onglet ${c}`);
+  assert.ok(!h.includes('onglet-li') && !h.includes('class="onglet"'), 'plus d onglets tricolores dans le menu');
   const css = fs.readFileSync(path.join(ROOT, 'site/src/styles/global.css'), 'utf8');
-  assert.ok(/.nav a.onglet { width: 112px/.test(css), 'onglets de meme largeur');
+  assert.ok(!/onglet-bleu|onglet-rouge/.test(css), 'plus de CSS des onglets tricolores');
   assert.ok(h.includes('sans-frappe') && /location.pathname[^;]*!==/.test(h), 'frappe seulement sur la premiere page (accueil), une fois');
   assert.ok(h.includes('class="rang-une"') && h.indexOf('class="rang-tete"') < h.indexOf('>Politique<'), 'A la une en avant, Editos juste apres');
   assert.ok(!h.includes('href="/compteurs/"'), 'plus de lien vers Compteurs');
@@ -290,7 +290,7 @@ test('article: colonne de droite avec des renvois vers les autres articles', () 
 
 test('en-tete: heure et decomptes avant la presidentielle et avant Noel', () => {
   const h = page('.');
-  assert.ok(/J-[0-9]+ avant la présidentielle/.test(h) && /J-[0-9]+ avant Noël/.test(h), 'decomptes sous le logo');
+  assert.ok(h.includes('id="jp"') && h.includes('id="jn"'), 'decomptes sous le logo (mise en forme testee plus bas)');
   assert.ok(h.includes('id="clock"'), 'heure');
 });
 
@@ -345,6 +345,16 @@ test('typographie francaise: espaces insecables avant : ; ! ? et dans les millie
   const accueil = page('.');
   const titre = new RegExp('>([^<]*)</a></h2>').exec(accueil.slice(accueil.indexOf('mm-titre')))?.[1] ?? '';
   assert.ok(titre.length > 10 && !/ [:;!?]/.test(titre), 'titre de l edito: aucune espace ordinaire avant la ponctuation haute');
+});
+
+test('en-tete: decompte presidentielle en bleu blanc rouge, decompte de Noel en guirlande de lettres', () => {
+  const h = page('.');
+  assert.ok(/class="fr-b"[^>]*>J-[0-9]+<\/b><b class="fr-w"[^>]*>avant la<\/b><b class="fr-r"[^>]*>présidentielle<\/b>/.test(h), 'drapeau');
+  const noel = new RegExp('id="jn"[^>]*>((?:<i>[^<]</i>| )+)</span>').exec(h);
+  assert.ok(noel, 'guirlande');
+  assert.ok(/J-[0-9]+ avant Noël/.test(noel[1].replace(/<\/?i>/g, '')), 'texte de la guirlande');
+  const css = fs.readFileSync(path.join(ROOT, 'site/src/styles/global.css'), 'utf8');
+  assert.ok(/prefers-reduced-motion: no-preference\) \{\s*\.guirlande i \{ animation/.test(css), 'guirlande animee seulement si les animations sont permises');
 });
 
 test.after(() => fs.rmSync(out, { recursive: true, force: true }));

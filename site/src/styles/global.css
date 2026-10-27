@@ -384,17 +384,8 @@ footer .quality .q-score.q-b { background: #5b9a2c; } /* note B: vert plus clair
 .prose .team li:only-child { grid-column: 1 / -1; }
 .prose .team li:only-child > div p { max-width: 62rem; }
 
-/* ===== Onglets tricolores (Petites annonces, Rencontres, Jeux): meme taille, bleu / blanc / rouge, accoles comme le drapeau ===== */
+/* Menu: liens ordinaires (les trois onglets tricolores ont ete supprimes) */
 .nav ul { gap: 4px 9px; font-size: .86rem; }
-.nav .onglet-li + .onglet-li { margin-left: -9px; }
-.nav a.onglet { width: 112px; padding: 11px 0; text-align: center; border-bottom: 0; box-sizing: border-box; }
-.onglet-bleu a.onglet { background: #0055a4; color: #fff; }
-.onglet-blanc a.onglet { background: #fff; color: #16140f; box-shadow: inset 0 1px 0 #d6d1c4, inset 0 -1px 0 #d6d1c4; }
-.onglet-rouge a.onglet { background: #ef4135; color: #fff; }
-.nav a.onglet:hover { filter: brightness(.94); }
-.nav a.onglet[aria-current] { box-shadow: inset 0 -4px 0 #16140f; }
-.onglet-blanc a.onglet[aria-current] { box-shadow: inset 0 -4px 0 #ef4135; }
-.onglet-li::after { display: none; } /* pas de curseur de frappe sur les onglets: ils sont deja un bloc de couleur */
 
 /* Lecture sur petit ecran: pas de debordement, tailles reduites, medias a la largeur de l'ecran */
 @media (max-width: 760px) {
@@ -460,16 +451,13 @@ footer .quality .q-score.q-b { background: #5b9a2c; } /* note B: vert plus clair
   .nav > .wrap { animation: none !important; max-width: none; }
   .nav ul { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; overflow: visible; font-size: 1rem; }
   .nav li { position: static; }
-  .nav a, .nav a.onglet, .nav a.rang-une, .nav a.rang-tete { display: block; padding: 13px 6px; width: auto; text-align: left; }
-  .nav .onglet-li + .onglet-li { margin-left: 0; }
+  .nav a, .nav a.rang-une, .nav a.rang-tete { display: block; padding: 13px 6px; width: auto; text-align: left; }
 }
 @media (prefers-reduced-motion: reduce) { .nav { transition: none !important; } }
 /* Menu a 12 entrees sur ordinateur: un peu plus serre pour tenir sur la largeur du contenu (1120 px) */
 @media (min-width: 761px) {
   .nav ul { gap: 4px 6px; font-size: .83rem; }
-  .nav a.onglet { width: 100px; font-size: .77rem; }
   .nav a.rang-une { padding: 11px 11px; font-size: 1rem; }
-  .nav .onglet-li + .onglet-li { margin-left: -6px; }
 }
 
 /* ===== Accueil: l'edito et le dessin du jour, chacun sur une moitie de la partie haute (empiles sur tablette et mobile) ===== */
@@ -479,3 +467,22 @@ footer .quality .q-score.q-b { background: #5b9a2c; } /* note B: vert plus clair
   .une-duo { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0 22px; }
 }
 @media (min-width: 900px) { .une-duo .mm-titre { font-size: clamp(1.4rem, 2.5vw, 1.95rem); } }
+
+/* ===== En-tete: « J-x avant la presidentielle » en bleu / blanc / rouge (lisible: texte blanc sur bleu et rouge, sombre sur blanc),
+   « J-x avant Noel » en guirlande (lettres qui changent de couleur en alternance; fixe si l'utilisateur reduit les animations) ===== */
+.decomptes .drapeau { display: inline-flex; vertical-align: middle; border: 1px solid #c9c4b8; border-radius: 3px; overflow: hidden; line-height: 1.5; }
+.decomptes .drapeau[hidden] { display: none; }
+.decomptes .drapeau b { padding: 1px 8px; font-weight: 700; letter-spacing: .1em; }
+.decomptes .fr-b { background: #0055a4; color: #fff; }
+.decomptes .fr-w { background: #fff; color: #16140f; }
+.decomptes .fr-r { background: #c8261c; color: #fff; }
+.guirlande i { font-style: normal; font-weight: 800; }
+.guirlande i:nth-child(3n+1) { color: #b3261e; }
+.guirlande i:nth-child(3n+2) { color: #1b6b34; }
+.guirlande i:nth-child(3n) { color: #a36a00; }
+@media (prefers-reduced-motion: no-preference) {
+  .guirlande i { animation: guirlande 1.8s step-end infinite; }
+  .guirlande i:nth-child(3n+2) { animation-delay: -.6s; }
+  .guirlande i:nth-child(3n) { animation-delay: -1.2s; }
+  @keyframes guirlande { 0% { color: #b3261e; } 33.4% { color: #1b6b34; } 66.7% { color: #a36a00; } }
+}
