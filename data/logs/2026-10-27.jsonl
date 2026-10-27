@@ -38,3 +38,5 @@
 {"ts":"2026-10-27T17:25:00.557Z","runId":"20261027172459-2d82","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":4}
 {"ts":"2026-10-27T17:25:10.206Z","runId":"20261027172459-2d82","level":"info","event":"gemini.call","purpose":"caricature","model":"gemini-3.6-flash","inputTokens":309,"outputTokens":1010,"costUsd":0.008039}
 {"ts":"2026-10-27T17:25:10.209Z","runId":"20261027172459-2d82","level":"warn","event":"caricature.error","date":"2026-10-27","error":"Generation interrompue (finishReason=MAX_TOKENS)"}
+{"ts":"2026-10-27T17:39:39.678Z","runId":"20261027173933-ac9f","level":"info","event":"gemini.call","purpose":"image_judge","model":"gemini-3.5-flash-lite","inputTokens":1247,"outputTokens":60,"costUsd":0.000524}
+{"ts":"2026-10-27T17:39:39.679Z","runId":"20261027173933-ac9f","level":"info","event":"image.ok","slot":"illustrer#droits-des-algorithmes-des-chercheurs-preconisent-quinze","bytes":86458,"costUsd":0}

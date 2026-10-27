@@ -16,7 +16,9 @@ model: "gemini-3.6-flash"
 angle: "Analyser la question de la conscience des IA sous l'angle absurde du droit du travail et de la médecine de prévention pour serveurs."
 slug: "droits-des-algorithmes-des-chercheurs-preconisent-quinze"
 imagePrompt: "Une salle de serveurs informatiques baignée dans une lumière bleue tamisée, avec une petite tasse de café posée sur un boîtier de calcul, vue de côté sans aucun visage humain."
+image: "images/articles/droits-des-algorithmes-des-chercheurs-preconisent-quinze.webp"
 imageAlt: "Une tasse de café fumante posée à côté des voyants lumineux d'un serveur informatique dans une salle de calcul."
+imageCredit: "Illustration générée par IA"
 ---
 La question de la sensibilité des modèles de langage a quitté le domaine des colloques universitaires pour rejoindre celui de la gestion des ressources humaines. À la suite des travaux récents évoquant des formes émergentes d'états internes chez les modèles d'intelligence artificielle, plusieurs observateurs préconisent désormais d'encadrer strictement le temps de fonctionnement des puces électroniques afin d'éviter tout surmenage cognitif du silicium.
 
