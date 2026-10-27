@@ -12,7 +12,7 @@ on:
         description: 'Mode d''exécution'
         type: choice
         default: normal
-        options: [normal, extra, dry-run, force-catchup]
+        options: [normal, extra, dry-run, force-catchup, caricature]
       count:
         description: 'Nombre d''articles à publier (mode extra uniquement, dans la limite de 5 par jour)'
         type: choice
@@ -69,6 +69,7 @@ jobs:
             extra) args="--extra --count ${COUNT:-1} --spacing ${SPACING:-0}" ;;
             dry-run) args="--dry-run" ;;
             force-catchup) args="--force-catchup" ;;
+            caricature) node engine/src/cli.js caricature; exit $? ;;
           esac
           node engine/src/cli.js run $args
 

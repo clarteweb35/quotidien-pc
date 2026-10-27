@@ -45,17 +45,17 @@ function verifier(d, topic, cfg) {
  * Tente la caricature du jour si l'heure est venue et si elle n'est pas deja parue. Ne leve jamais d'erreur.
  * @returns {Promise<{published:boolean, reason?:string}|null>} null = rien a faire
  */
-export async function runCaricature(ctx, items = null) {
+export async function runCaricature(ctx, items = null, { force = false } = {}) {
   const { cfg, store, logger, client, paths } = ctx;
   const c = cfg.engine.caricature;
   if (!c?.enabled || !cfg.engine.images?.enabled || cfg.control.paused) return null;
   const now = ctx.now();
   const { date, minutes } = zonedParts(now, cfg.schedule.timezone);
   const depart = hhmmToMinutes(c.at);
-  if (minutes < depart || minutes - depart > c.catchupMinutes) return null;
+  if (!force && (minutes < depart || minutes - depart > c.catchupMinutes)) return null; // force: lancement manuel, hors horaire
   store.state.caricatures ??= {};
   const prev = store.state.caricatures[date];
-  if (prev?.status === 'published' || (prev?.attempts ?? 0) >= MAX_ESSAIS) return null;
+  if (prev?.status === 'published' || (!force && (prev?.attempts ?? 0) >= MAX_ESSAIS)) return null;
   const marque = (patch) => { store.state.caricatures[date] = { ...store.state.caricatures[date], ...patch }; store.save(); };
   marque({ status: 'in_progress', attempts: (prev?.attempts ?? 0) + 1 });
 

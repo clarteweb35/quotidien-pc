@@ -61,6 +61,22 @@ async function main() {
       console.log(`Image ecrite: ${out} (${Math.round(b64.length * 0.75 / 1024)} Ko, modele ${im.model})`);
       break;
     }
+    case 'caricature': {
+      // Dessin du jour a la demande (hors horaire), sans cycle d'articles. Rien si celui du jour est deja paru.
+      const mock = flag('mock');
+      if (!mock && !process.env.GEMINI_API_KEY) { console.error('GEMINI_API_KEY absente. Utilisez --mock pour tester sans API.'); process.exit(2); }
+      const ctx = buildContext({ mock, dryRun: flag('dry-run') });
+      const release = ctx.store.acquireLock();
+      try {
+        const r = await runCaricature(ctx, null, { force: true });
+        ctx.store.save();
+        console.log(r === null ? 'Dessin du jour deja paru (ou desactive): rien a faire.' : r.published ? 'Dessin du jour publie.' : `Dessin du jour non publie: ${r.reason}`);
+        if (r && !r.published) process.exitCode = 1;
+      } finally {
+        release();
+      }
+      break;
+    }
     case 'run': {
       const mock = flag('mock');
       if (!mock && !process.env.GEMINI_API_KEY) {
