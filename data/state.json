@@ -975,6 +975,14 @@
       "seenAt": "2026-10-27T17:24:59.518Z",
       "status": "excluded",
       "reason": "sensitive"
+    },
+    "5ae7e089881d": {
+      "title": "Au Yémen, les houthistes assimilent le soutien militaire de l’Egypte à l’Arabie saoudite à une « déclaration de guerre »",
+      "url": "https://www.lemonde.fr/international/article/2026/10/27/au-yemen-les-houthistes-assimilent-le-soutien-militaire-egyptien-a-riyad-a-une-declaration-de-guerre_6801307_3210.html",
+      "category": "monde",
+      "seenAt": "2026-10-27T17:47:27.763Z",
+      "status": "excluded",
+      "reason": "sensitive"
     }
   },
   "slots": {
@@ -1214,8 +1222,8 @@
   "caricatures": {
     "2026-10-27": {
       "status": "failed",
-      "attempts": 1,
-      "lastError": "MalformedResponseError: Generation interrompue (finishReason=MAX_TOKENS)"
+      "attempts": 2,
+      "lastError": "UnavailableError: Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status"
     }
   }
 }
