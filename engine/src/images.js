@@ -1,3 +1,5 @@
+import fs from 'node:fs';
+import path from 'node:path';
 import sharp from 'sharp';
 import { zonedParts, normalizeText, round } from './util.js';
 import { protectedAliases } from './validator.js';
@@ -151,4 +153,29 @@ export async function illustrate({ client, cfg, article, topic, logger, slotKey 
 
   logger.info('image.ok', { slot: slotKey, bytes: buffer.length, costUsd: im.priceUsdPerImage });
   return { buffer, alt: article.image_alt.trim(), credit: im.credit };
+}
+
+/**
+ * Illustre a posteriori un article deja publie, a partir de la consigne d'image enregistree dans son fichier (imagePrompt).
+ * Memes controles que a la publication. @returns {Promise<{ok:boolean, reason?:string, file?:string}>}
+ */
+export async function illustrerExistant({ ctx, slug, existing, contentDir, imageDir }) {
+  const { cfg, client, logger } = ctx;
+  const a = existing.find((e) => e.slug === slug || e.slug.endsWith(`-${slug}`) || e.file === `${slug}.md`);
+  if (!a) return { ok: false, reason: 'article_introuvable' };
+  if (a.image) return { ok: false, reason: 'deja_illustre' };
+  if (!a.imagePrompt || !a.imageAlt) return { ok: false, reason: 'pas_de_consigne_image' };
+  const article = { title: a.title, image_prompt: a.imagePrompt, image_alt: a.imageAlt };
+  const image = await illustrate({ client, cfg, article, topic: { title: a.title, summary: a.chapo }, logger, slotKey: `illustrer#${a.slug}` });
+  if (!image) return { ok: false, reason: 'image_indisponible' };
+  const fichier = `${a.slug}.webp`;
+  fs.mkdirSync(imageDir, { recursive: true });
+  fs.writeFileSync(path.join(imageDir, fichier), image.buffer);
+  const md = path.join(contentDir, a.file);
+  const texte = fs.readFileSync(md, 'utf8');
+  const ligne = /^imageAlt: .*$/m;
+  const ajout = `image: ${JSON.stringify(`images/articles/${fichier}`)}\nimageAlt: ${JSON.stringify(image.alt)}\nimageCredit: ${JSON.stringify(image.credit)}`;
+  if (!ligne.test(texte)) return { ok: false, reason: 'format_inattendu' };
+  fs.writeFileSync(md, texte.replace(ligne, () => ajout));
+  return { ok: true, file: a.file };
 }

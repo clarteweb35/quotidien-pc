@@ -12,7 +12,11 @@ on:
         description: 'Mode d''exécution'
         type: choice
         default: normal
-        options: [normal, extra, dry-run, force-catchup, caricature]
+        options: [normal, extra, dry-run, force-catchup, caricature, illustrer]
+      slug:
+        description: 'Identifiant de l''article a illustrer (mode illustrer uniquement), ex. droits-des-algorithmes-des-chercheurs-preconisent-quinze'
+        type: string
+        default: ''
       count:
         description: 'Nombre d''articles à publier (mode extra uniquement, dans la limite de 5 par jour)'
         type: choice
@@ -61,6 +65,7 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           MODE: ${{ inputs.mode }}
+          SLUG: ${{ inputs.slug }}
           COUNT: ${{ inputs.count }}
           SPACING: ${{ inputs.spacing }}
         run: |
@@ -70,6 +75,7 @@ jobs:
             dry-run) args="--dry-run" ;;
             force-catchup) args="--force-catchup" ;;
             caricature) node engine/src/cli.js caricature; exit $? ;;
+            illustrer) node engine/src/cli.js illustrer "$SLUG"; exit $? ;;
           esac
           node engine/src/cli.js run $args
 

@@ -16,6 +16,7 @@ import { genererAnnonces, TYPES as TYPES_ANNONCES, MAX_PAR_LOT } from './annonce
 import { loadExisting, publishArticle } from './publisher.js';
 import { validateArticle } from './validator.js';
 import { runCaricature } from './caricature.js';
+import { illustrerExistant } from './images.js';
 
 const args = process.argv.slice(2);
 const cmd = args[0];
@@ -59,6 +60,26 @@ async function main() {
       const out = path.join(os.tmpdir(), `test-image-cloudflare-${Date.now()}.png`); // nom unique: Windows verrouille un fichier ouvert dans une visionneuse
       fs.writeFileSync(out, Buffer.from(b64, 'base64'));
       console.log(`Image ecrite: ${out} (${Math.round(b64.length * 0.75 / 1024)} Ko, modele ${im.model})`);
+      break;
+    }
+    case 'illustrer': {
+      // Illustre a posteriori un article deja publie (sa consigne d'image est dans son fichier): illustrer <slug>
+      const slug = args[1];
+      const mock = flag('mock');
+      if (!slug) { console.error('Usage: node engine/src/cli.js illustrer <slug-de-larticle>'); process.exit(2); }
+      if (!mock && !process.env.GEMINI_API_KEY) { console.error('GEMINI_API_KEY absente. Utilisez --mock pour tester sans API.'); process.exit(2); }
+      const ctx = buildContext({ mock });
+      const release = ctx.store.acquireLock();
+      try {
+        const existing = loadExisting(ctx.paths.content, { maxAgeDays: 3650, now: ctx.now() });
+        const imageDir = path.join(ctx.paths.siteRoot, 'public', 'images', 'articles');
+        const r = await illustrerExistant({ ctx, slug, existing, contentDir: ctx.paths.content, imageDir });
+        ctx.store.save();
+        console.log(r.ok ? `Article illustre: ${r.file}` : `Article non illustre: ${r.reason}`);
+        if (!r.ok) process.exitCode = 1;
+      } finally {
+        release();
+      }
       break;
     }
     case 'caricature': {

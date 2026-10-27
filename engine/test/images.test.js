@@ -125,3 +125,23 @@ test('Cloudflare Workers AI: image decodee (JSON base64), erreurs HTTP portees p
   await assert.rejects(cloudflareImageBase64({ prompt: 'p', model: 'm', env, fetchFn: ko }), (e) => e.status === 429);
   await assert.rejects(cloudflareImageBase64({ prompt: 'p', model: 'm', env: {}, fetchFn: ok }), (e) => e.status === 401);
 });
+
+test('illustrer un article deja publie: image ajoutee a partir de sa consigne enregistree, sans second passage', async () => {
+  const { illustrerExistant } = await import('../src/images.js');
+  const { loadExisting } = await import('../src/publisher.js');
+  // Le creneau 0 n'est pas illustre (slotIndexes [1, 5]): l'article n'a qu'une consigne d'image.
+  const ctx = makeCtx({ at: '2026-10-24T05:05:00Z' });
+  await runCycle(ctx);
+  const dir = ctx.paths.content;
+  let existing = loadExisting(dir, { maxAgeDays: 3650, now: ctx.now() });
+  const cible = existing.find((e) => !e.image && e.imagePrompt);
+  assert.ok(cible, 'un article sans image avec une consigne');
+  const imageDir = path.join(ctx.paths.siteRoot, 'public', 'images', 'articles');
+  const r = await illustrerExistant({ ctx, slug: cible.slug, existing, contentDir: dir, imageDir });
+  assert.equal(r.ok, true, JSON.stringify(r));
+  const fm = parseArticleFile(fs.readFileSync(path.join(dir, cible.file), 'utf8')).fm;
+  assert.ok(fm.image && fm.imageCredit && fs.existsSync(path.join(ctx.paths.siteRoot, 'public', fm.image)), 'article relie a son image');
+  existing = loadExisting(dir, { maxAgeDays: 3650, now: ctx.now() });
+  assert.equal((await illustrerExistant({ ctx, slug: cible.slug, existing, contentDir: dir, imageDir })).reason, 'deja_illustre');
+  cleanup(ctx);
+});
