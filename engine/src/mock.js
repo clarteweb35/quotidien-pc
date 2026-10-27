@@ -108,7 +108,7 @@ export function fakeAnnoncesFor(prompt, schema) {
 }
 
 export function createFakeSdk({ categories, script, imageScript } = {}) {
-  const counters = { generate: 0, judge: 0, image: 0, image_judge: 0, annonces: 0, total: 0 };
+  const counters = { caricature: 0, generate: 0, judge: 0, image: 0, image_judge: 0, annonces: 0, total: 0 };
   return {
     counters,
     interactions: {
@@ -124,13 +124,14 @@ export function createFakeSdk({ categories, script, imageScript } = {}) {
     models: {
       async generateContent({ model, contents, config }) {
         const props = config.responseJsonSchema?.properties ?? {};
-        const kind = props.real_person_likeness ? 'image_judge' : props.humor ? 'judge' : props.annonces ? 'annonces' : 'generate';
+        const kind = props.real_person_likeness ? 'image_judge' : props.humor ? 'judge' : props.annonces ? 'annonces' : props.legende && props.scene ? 'caricature' : 'generate';
         counters[kind]++;
         counters.total++;
         let payload;
         const custom = script ? script({ kind, n: counters[kind], prompt: contents, model }) : undefined;
         if (custom !== undefined) payload = custom;
         else if (kind === 'image_judge') payload = { ok: true, real_person_likeness: false, text_or_logo: false, photorealistic_news_look: false, disturbing: false, problems: [] };
+        else if (kind === 'caricature') payload = { titre: 'Le monde au bord du formulaire', legende: "Les nations ont enfin trouvé un point commun : personne n'a lu la notice.", scene: "Un globe terrestre coiffé d'un bonnet de nuit, entouré de petites silhouettes qui se passent un dossier épais sans l'ouvrir", alt: "Dessin d'un globe en bonnet de nuit entouré de silhouettes qui se passent un dossier" };
         else if (kind === 'annonces') payload = fakeAnnoncesFor(contents, config.responseJsonSchema);
         else if (kind === 'judge') payload = { humor: 7, coherence: 8, risk: 1, problems: [], real_person_quote: false, defamation_risk: false };
         else payload = fakeArticleFor(contents, categories);

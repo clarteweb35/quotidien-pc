@@ -15,6 +15,7 @@ import { runSocial, activeNetworks } from './social.js';
 import { genererAnnonces, TYPES as TYPES_ANNONCES, MAX_PAR_LOT } from './annonces.js';
 import { loadExisting, publishArticle } from './publisher.js';
 import { validateArticle } from './validator.js';
+import { runCaricature } from './caricature.js';
 
 const args = process.argv.slice(2);
 const cmd = args[0];
@@ -74,6 +75,7 @@ async function main() {
       const release = ctx.store.acquireLock();
       try {
         const result = await runCycle(ctx);
+        if (!ctx.extra && result.stopped !== 'paused') await runCaricature(ctx); // le dessin du jour, apres les articles (jamais bloquant)
         const report = writeDailyReport(ctx);
         ctx.store.save();
         printReport(report);

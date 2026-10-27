@@ -311,4 +311,11 @@ test('mobile: barre du bas (entrees rapides + Menu aux trois traits) qui ouvre l
   assert.ok(/.barre-bas { display: none; }/.test(css) && /.consent { bottom: 66px; }/.test(css), 'barre cachee hors mobile; bandeau cookies au-dessus');
 });
 
+test('Caricatures: page du dessin du jour, entree de menu, plan du site', () => {
+  const h = page('caricatures');
+  assert.ok(h.includes('Le dessin du jour'), 'page caricatures');
+  assert.ok(page('.').includes('>Caricatures<'), 'entree de menu');
+  assert.ok(page('plan-du-site').includes('caricatures/'), 'plan du site');
+});
+
 test.after(() => fs.rmSync(out, { recursive: true, force: true }));

@@ -1,0 +1,57 @@
+---
+import Base from '../layouts/Base.astro';
+import { caricatures } from '../lib/caricatures';
+import { url, formatDate } from '../lib/site';
+
+const [duJour, ...anciennes] = caricatures;
+const jour = (d: string) => formatDate(new Date(`${d}T12:00:00Z`));
+---
+<Base manchette={false} title="Caricatures : le dessin du jour" description="Chaque jour, une caricature fictive inspirée de l'actualité mondiale, dessinée par une IA : personnages génériques, aucune personne réelle." current="caricatures">
+  <div class="page-head">
+    <span class="kicker">Rubrique</span>
+    <h1>Le dessin du jour</h1>
+    <p class="meta">Une caricature par jour, inspirée de l'actualité mondiale. Dessins générés par IA, personnages génériques : aucune personne réelle n'est représentée.</p>
+  </div>
+
+  {duJour ? (
+    <figure class="cari-vedette">
+      <img src={url(duJour.image)} alt={duJour.alt} width="1280" height="720" fetchpriority="high" />
+      <figcaption>
+        <span class="cari-date">{jour(duJour.date)}</span>
+        <strong>{duJour.titre}</strong>
+        <span>{duJour.legende}</span>
+        <small>{duJour.credit} — fiction satirique, sans rapport avec des faits réels.{duJour.source.url && <> Actualité ayant inspiré le dessin : <a href={duJour.source.url} rel="noopener nofollow external">{duJour.source.name || 'source'}</a>.</>}</small>
+      </figcaption>
+    </figure>
+  ) : (
+    <p class="meta">Le premier dessin du jour paraîtra bientôt.</p>
+  )}
+
+  {anciennes.length > 0 && (
+    <section aria-labelledby="cari-archives">
+      <h2 id="cari-archives" class="section-title">Les dessins précédents</h2>
+      <div class="cari-grille">
+        {anciennes.map((c) => (
+          <figure>
+            <img src={url(c.image)} alt={c.alt} width="640" height="360" loading="lazy" />
+            <figcaption><span class="cari-date">{jour(c.date)}</span><strong>{c.titre}</strong><span>{c.legende}</span></figcaption>
+          </figure>
+        ))}
+      </div>
+    </section>
+  )}
+</Base>
+
+<style is:global>
+  .cari-vedette { margin: 18px 0 30px; }
+  .cari-vedette img, .cari-grille img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); background: #fff; }
+  .cari-vedette figcaption, .cari-grille figcaption { display: grid; gap: 4px; padding-top: 10px; font-family: var(--serif); }
+  .cari-vedette figcaption strong { font-size: 1.5rem; line-height: 1.2; }
+  .cari-vedette figcaption > span:not(.cari-date) { font-style: italic; font-size: 1.15rem; }
+  .cari-vedette small { font: .78rem var(--sans); color: var(--ink-2); }
+  .cari-date { font: 700 .72rem var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+  .cari-grille { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 26px 24px; margin-top: 14px; }
+  .cari-grille figure { margin: 0; }
+  .cari-grille figcaption strong { font-size: 1.05rem; line-height: 1.25; }
+  .cari-grille figcaption > span:not(.cari-date) { font-size: .95rem; color: var(--ink-2); }
+</style>

@@ -73,6 +73,15 @@
     "reportDays": 180,
     "quarantineDays": 30
   },
+  "caricature": {
+    "enabled": true,
+    "at": "11:40",
+    "catchupMinutes": 300,
+    "category": "monde",
+    "legendeMaxChars": 200,
+    "styleGuide": "Dessin de presse caricatural français, trait à l'encre noire vif et expressif, aplats d'aquarelle, personnages génériques aux proportions exagérées, humour visuel, sur papier ivoire.",
+    "credit": "Dessin généré par IA · Le Quotidien Presque Certain"
+  },
   "images": {
     "enabled": true,
     "perDayMax": 2,

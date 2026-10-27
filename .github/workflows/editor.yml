@@ -79,11 +79,11 @@ jobs:
         run: |
           git config user.name "quotidien-pc-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A data site/src/content/articles
+          git add -A data site/src/content/articles site/src/data site/public/images
           if git diff --cached --quiet; then
             echo "published=false" >> "$GITHUB_OUTPUT"; exit 0
           fi
-          if git diff --cached --name-only -- site/src/content/articles | grep -q .; then
+          if git diff --cached --name-only -- site/src/content/articles site/src/data | grep -q .; then
             echo "published=true" >> "$GITHUB_OUTPUT"
           else
             echo "published=false" >> "$GITHUB_OUTPUT"

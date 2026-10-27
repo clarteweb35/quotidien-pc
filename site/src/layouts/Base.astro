@@ -34,6 +34,7 @@ const MENU = [
   { href: url(), label: 'À la une', cle: 'home', rang: 'une' },
   ...categories.filter((c) => c.menuTete).map((c) => ({ href: url(`rubrique/${c.slug}/`), label: c.name, cle: c.slug, rang: 'tete' })),
   ...categories.filter((c) => !c.menuTete).map((c) => ({ href: url(`rubrique/${c.slug}/`), label: c.name, cle: c.slug })),
+  { href: url('caricatures/'), label: 'Caricatures', cle: 'caricatures' },
   // Trois onglets de meme taille, bleu / blanc / rouge: le drapeau francais
   { href: url('petites-annonces/'), label: 'Petites annonces', cle: 'annonces', onglet: 'bleu' },
   { href: url('rencontres/'), label: 'Rencontres', cle: 'rencontres', onglet: 'blanc' },
