@@ -56,3 +56,15 @@ test('dessin du jour: texte alternatif ou scene trop longs: coupes proprement, p
   assert.ok(e.alt.length <= 160 && e.alt.endsWith('…'), 'alt coupe');
   cleanup(ctx);
 });
+
+test('dessin du jour: modele principal indisponible (503): bascule sur le modele de secours', async () => {
+  const ctx = makeCtx({
+    at: AU_MOMENT,
+    mutateCfg: (c) => { c.engine.gemini.generatorModel = 'gemini-3.8-flash'; c.engine.gemini.generatorFallbackModel = 'gemini-3.6-flash'; },
+    script: ({ kind, model }) => { if (kind === 'caricature' && model === 'gemini-3.8-flash') { const e = new Error('surcharge'); e.status = 503; throw e; } },
+  });
+  const r = await runCaricature(ctx);
+  assert.equal(r?.published, true, JSON.stringify(r));
+  assert.ok(ctx.logger.entries.some((e) => e.event === 'caricature.fallback_model'));
+  cleanup(ctx);
+});

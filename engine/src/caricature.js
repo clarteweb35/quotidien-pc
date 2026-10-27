@@ -5,6 +5,7 @@ import { collect } from './collector.js';
 import { pickNewsTopic } from './topics.js';
 import { illustrate, checkImagePrompt } from './images.js';
 import { protectedAliases } from './validator.js';
+import { UnavailableError } from './gemini.js';
 
 /**
  * « Le dessin du jour »: une caricature par jour inspiree d'un fait d'actualite mondiale.
@@ -73,14 +74,24 @@ export async function runCaricature(ctx, items = null, { force = false } = {}) {
     const { topic } = pickNewsTopic({ items, store, publishedTitles: [], cfg, now, categoryCountsToday: {}, onlyCategory: c.category });
     if (!topic) { marque({ status: 'failed', lastError: 'aucun_sujet' }); logger.warn('caricature.no_topic', { date }); return { published: false, reason: 'aucun_sujet' }; }
 
-    const { data } = await client.generateJson({
+    // Modele principal sature (503): un essai avec le modele de secours, comme pour les articles.
+    const g = cfg.engine.gemini;
+    const appel = (model) => client.generateJson({
       purpose: 'caricature',
-      model: cfg.engine.gemini.generatorModel,
+      model,
       system: SYSTEM,
       prompt: `Fait d'actualité mondiale du jour : « ${topic.title} ». ${topic.summary ?? ''}\nImagine le dessin du jour.`,
       schema: caricatureSchema,
       params: { temperature: 1, maxOutputTokens: 4096 }, // marge: le modele reflechit avant de repondre (1024 coupait la reponse)
     });
+    let data;
+    try {
+      ({ data } = await appel(g.generatorModel));
+    } catch (err) {
+      if (!(err instanceof UnavailableError) || !g.generatorFallbackModel || g.generatorFallbackModel === g.generatorModel) throw err;
+      logger.warn('caricature.fallback_model', { from: g.generatorModel, to: g.generatorFallbackModel });
+      ({ data } = await appel(g.generatorFallbackModel));
+    }
     data.scene = coupe(data.scene, cfg.engine.images.promptMaxChars);
     data.alt = coupe(data.alt, 160);
     const refus = verifier(data, topic, cfg);
