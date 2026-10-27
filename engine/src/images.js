@@ -1,9 +1,10 @@
 import sharp from 'sharp';
 import { zonedParts, normalizeText, round } from './util.js';
 import { protectedAliases } from './validator.js';
+import { cloudflareImageBase64 } from './cloudflare.js';
 
 /**
- * Illustration facultative d'un article (Gemini image). Principe: une image n'est JAMAIS un motif de blocage.
+ * Illustration facultative d'un article (Cloudflare Workers AI ou Gemini image, selon images.api). Principe: une image n'est JAMAIS un motif de blocage.
  * Toute erreur (budget, quota, refus du modele, image douteuse) => null => l'article garde sa couverture typographique.
  */
 
@@ -46,6 +47,10 @@ function extractBase64(res) {
 }
 
 async function callImageModel(client, im, prompt) {
+  if (im.api === 'cloudflare') {
+    const data = await cloudflareImageBase64({ prompt, model: im.model, steps: im.steps, timeoutMs: im.timeoutMs, fetchFn: client.fetch });
+    return { output_image: { data } };
+  }
   const ai = client.ai;
   if (im.api === 'generateContent') {
     return ai.models.generateContent({

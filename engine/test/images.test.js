@@ -108,3 +108,19 @@ test('la configuration livree desactive les images (aucune depense par defaut)',
   const { loadConfig } = await import('../src/config.js');
   assert.equal(loadConfig().engine.images.enabled, false);
 });
+
+test('Cloudflare Workers AI: image decodee (JSON base64), erreurs HTTP portees par .status, secrets requis', async () => {
+  const { cloudflareImageBase64 } = await import('../src/cloudflare.js');
+  const env = { CLOUDFLARE_ACCOUNT_ID: 'acc', CLOUDFLARE_API_TOKEN: 'tok' };
+  let vu;
+  const ok = async (url, init) => { vu = { url, init }; return { ok: true, headers: new Headers({ 'content-type': 'application/json' }), json: async () => ({ result: { image: 'QUJD' }, success: true }) }; };
+  assert.equal(await cloudflareImageBase64({ prompt: 'p', model: '@cf/black-forest-labs/flux-1-schnell', steps: 4, env, fetchFn: ok }), 'QUJD');
+  assert.ok(vu.url.endsWith('/accounts/acc/ai/run/@cf/black-forest-labs/flux-1-schnell'));
+  assert.equal(vu.init.headers.Authorization, 'Bearer tok');
+  assert.deepEqual(JSON.parse(vu.init.body), { prompt: 'p', steps: 4 });
+  const raw = async () => ({ ok: true, headers: new Headers({ 'content-type': 'image/png' }), arrayBuffer: async () => Buffer.from('ABC') });
+  assert.equal(await cloudflareImageBase64({ prompt: 'p', model: 'm', env, fetchFn: raw }), 'QUJD');
+  const ko = async () => ({ ok: false, status: 429, text: async () => 'limite' });
+  await assert.rejects(cloudflareImageBase64({ prompt: 'p', model: 'm', env, fetchFn: ko }), (e) => e.status === 429);
+  await assert.rejects(cloudflareImageBase64({ prompt: 'p', model: 'm', env: {}, fetchFn: ok }), (e) => e.status === 401);
+});

@@ -58,6 +58,8 @@ jobs:
       - name: Exécuter le moteur
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY_QPC || secrets.GEMINI_API_KEY }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           MODE: ${{ inputs.mode }}
           COUNT: ${{ inputs.count }}
           SPACING: ${{ inputs.spacing }}

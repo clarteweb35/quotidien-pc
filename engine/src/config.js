@@ -73,7 +73,7 @@ export function checkConfig(cfg) {
   for (const c of cfg.editorial.priorityCategories) if (!slugs.has(c)) problems.push(`priorityCategories: rubrique inconnue "${c}"`);
   const im = cfg.engine.images;
   if (im?.enabled) {
-    if (!(im.priceUsdPerImage > 0)) problems.push('images.priceUsdPerImage doit etre > 0 (verifier le tarif)');
+    if (!(im.priceUsdPerImage >= 0) || (im.api !== 'cloudflare' && !(im.priceUsdPerImage > 0))) problems.push('images.priceUsdPerImage doit etre > 0 (verifier le tarif; 0 autorise seulement avec Cloudflare)');
     if (!im.model) problems.push('images.model manquant');
     if (im.slotIndexes.some((i) => !Number.isInteger(i) || i < 0 || i >= cfg.schedule.slots.length)) problems.push('images.slotIndexes: indice de creneau invalide');
     if (im.perDayMax > im.slotIndexes.length) problems.push('images.perDayMax superieur au nombre de creneaux illustres');

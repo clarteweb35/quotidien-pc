@@ -45,6 +45,20 @@ function printReport(r) {
 
 async function main() {
   switch (cmd) {
+    case 'test-image': {
+      // Essai de la generation d'image (Cloudflare): CLOUDFLARE_ACCOUNT_ID et CLOUDFLARE_API_TOKEN requis. Ecrit un fichier de test, ne publie rien.
+      const { cloudflareImageBase64 } = await import('./cloudflare.js');
+      const cfg = loadConfig(makePaths());
+      const im = cfg.engine.images;
+      const prompt = opt('prompt') ?? `${im.styleGuide}
+Scène à illustrer : une pile de dossiers penchée près d'une plante verte, vue de dos`;
+      const b64 = await cloudflareImageBase64({ prompt, model: im.model, steps: im.steps, timeoutMs: im.timeoutMs });
+      if (!b64) { console.error('Reponse sans image.'); process.exit(1); }
+      const out = path.join(os.tmpdir(), 'test-image-cloudflare.png');
+      fs.writeFileSync(out, Buffer.from(b64, 'base64'));
+      console.log(`Image ecrite: ${out} (${Math.round(b64.length * 0.75 / 1024)} Ko, modele ${im.model})`);
+      break;
+    }
     case 'run': {
       const mock = flag('mock');
       if (!mock && !process.env.GEMINI_API_KEY) {
