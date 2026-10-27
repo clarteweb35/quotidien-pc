@@ -45,7 +45,7 @@ jobs:
 
       - name: Générer les annonces
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY_QPC || secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY_ANNONCES || secrets.GEMINI_API_KEY_QPC || secrets.GEMINI_API_KEY }}
           TYPE: ${{ inputs.type }}
           COUNT: ${{ inputs.count }}
         run: |

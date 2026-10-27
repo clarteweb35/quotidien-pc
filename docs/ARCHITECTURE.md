@@ -87,7 +87,7 @@ Relecteur Gemini : humour, cohérence, risque, citation à une personne réelle,
 
 ## Sécurité
 
-- Clé Gemini : secret GitHub `GEMINI_API_KEY_QPC` (ou `GEMINI_API_KEY`), lue via l'environnement, masquée dans les journaux, jamais présente dans le site.
+- Clé Gemini : secret GitHub `GEMINI_API_KEY_QPC` (ou `GEMINI_API_KEY`) pour les articles ; le workflow « Nouvelles annonces » utilise `GEMINI_API_KEY_ANNONCES` s’il existe (clé d’un autre projet Google, donc quota gratuit séparé), sinon la clé des articles, lue via l'environnement, masquée dans les journaux, jamais présente dans le site.
 - Le site est statique : aucune API ni base à attaquer. Le contenu des articles est du texte brut échappé.
 - Administration : la page `/admin/` ne contient aucun secret. Elle appelle `api.github.com` avec **votre** jeton à granularité fine, limité à ce dépôt, gardé dans l'onglet (sessionStorage). L'autorité est celle de GitHub (2FA, révocation du jeton). Une CSP restreint la page à `api.github.com`. Un visiteur sans jeton ne peut rien faire.
 - Les flux RSS sont traités comme des données : le prompt demande d'ignorer toute instruction qu'ils contiendraient, et la sortie est de toute façon validée.
