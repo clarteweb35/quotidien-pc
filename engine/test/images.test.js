@@ -104,9 +104,10 @@ test('images desactivees: aucun appel image', async () => {
   cleanup(ctx);
 });
 
-test('la configuration livree desactive les images (aucune depense par defaut)', async () => {
+test('la configuration livree active les images seulement sur une voie gratuite (Cloudflare, 0 USD): aucune depense par defaut', async () => {
   const { loadConfig } = await import('../src/config.js');
-  assert.equal(loadConfig().engine.images.enabled, false);
+  const im = loadConfig().engine.images;
+  if (im.enabled) assert.ok(im.api === 'cloudflare' && im.priceUsdPerImage === 0, 'images payantes: ne pas les activer par defaut');
 });
 
 test('Cloudflare Workers AI: image decodee (JSON base64), erreurs HTTP portees par .status, secrets requis', async () => {
