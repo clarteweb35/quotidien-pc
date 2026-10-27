@@ -55,7 +55,7 @@ async function main() {
       const prompt = opt('prompt') ?? [im.styleGuide, `Scène à illustrer : ${scene}`, im.constraints].join('\n');
       const b64 = await cloudflareImageBase64({ prompt, model: im.model, steps: im.steps, timeoutMs: im.timeoutMs });
       if (!b64) { console.error('Reponse sans image.'); process.exit(1); }
-      const out = path.join(os.tmpdir(), 'test-image-cloudflare.png');
+      const out = path.join(os.tmpdir(), `test-image-cloudflare-${Date.now()}.png`); // nom unique: Windows verrouille un fichier ouvert dans une visionneuse
       fs.writeFileSync(out, Buffer.from(b64, 'base64'));
       console.log(`Image ecrite: ${out} (${Math.round(b64.length * 0.75 / 1024)} Ko, modele ${im.model})`);
       break;
