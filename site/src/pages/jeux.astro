@@ -100,10 +100,10 @@ import Base from '../layouts/Base.astro';
   .sdk-pave { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin: 12px auto 0; max-width: 460px; }
   .sdk-pave button { min-width: 2.6rem; }
   .mem-grille { display: grid; grid-template-columns: repeat(4, 96px); gap: 8px; margin: 10px 0 14px; }
-  /* l'emoji occupe toute la case (96 px, emoji ~84 px) */
-  .mem-carte { width: 96px; height: 96px; padding: 0; line-height: 1; font-size: 84px !important; display: grid; place-items: center; overflow: hidden; }
+  /* l'emoji occupe toute la case (96 px, emoji 80 px, centré en flex) */
+  .mem-carte { width: 96px; height: 96px; padding: 0; line-height: 1; font-size: 80px !important; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; }
   .mem-carte[data-etat="cachee"] { font-size: 40px !important; }
-  @media (max-width: 460px) { .mem-grille { grid-template-columns: repeat(4, 1fr); } .mem-carte { width: 100%; height: auto; aspect-ratio: 1; font-size: 17vw !important; } .mem-carte[data-etat="cachee"] { font-size: 9vw !important; } }
+  @media (max-width: 460px) { .mem-grille { grid-template-columns: repeat(4, 1fr); } .mem-carte { width: 100%; height: auto; aspect-ratio: 1; font-size: 16vw !important; } .mem-carte[data-etat="cachee"] { font-size: 9vw !important; } }
   .mem-carte[data-etat="cachee"] { background: var(--ink); color: var(--paper); }
   .mem-carte[data-etat="trouvee"] { background: #dff0e0; border-color: #15803d; cursor: default; }
   .pong-barre { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; margin-bottom: 10px; }
