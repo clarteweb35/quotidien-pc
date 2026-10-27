@@ -54,3 +54,19 @@
 {"ts":"2026-10-27T17:47:28.561Z","runId":"20261027174727-87f6","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":4}
 {"ts":"2026-10-27T17:47:33.807Z","runId":"20261027174727-87f6","level":"warn","event":"gemini.retry","purpose":"caricature","status":503,"attempt":1,"delayMs":4483}
 {"ts":"2026-10-27T17:47:49.702Z","runId":"20261027174727-87f6","level":"warn","event":"caricature.error","date":"2026-10-27","error":"Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status"}
+{"ts":"2026-10-27T17:51:12.793Z","runId":"20261027175112-d578","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":31,"kept":25}
+{"ts":"2026-10-27T17:51:12.794Z","runId":"20261027175112-d578","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-10-27T17:51:12.794Z","runId":"20261027175112-d578","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":20}
+{"ts":"2026-10-27T17:51:12.794Z","runId":"20261027175112-d578","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":24}
+{"ts":"2026-10-27T17:51:12.794Z","runId":"20261027175112-d578","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":17}
+{"ts":"2026-10-27T17:51:12.794Z","runId":"20261027175112-d578","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":20,"kept":20}
+{"ts":"2026-10-27T17:51:12.794Z","runId":"20261027175112-d578","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":14}
+{"ts":"2026-10-27T17:51:12.794Z","runId":"20261027175112-d578","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":15}
+{"ts":"2026-10-27T17:51:12.795Z","runId":"20261027175112-d578","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":11}
+{"ts":"2026-10-27T17:51:12.795Z","runId":"20261027175112-d578","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":17}
+{"ts":"2026-10-27T17:51:12.795Z","runId":"20261027175112-d578","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":12}
+{"ts":"2026-10-27T17:51:12.795Z","runId":"20261027175112-d578","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":4}
+{"ts":"2026-10-27T17:51:19.616Z","runId":"20261027175112-d578","level":"info","event":"gemini.call","purpose":"caricature","model":"gemini-3.6-flash","inputTokens":309,"outputTokens":952,"costUsd":0.007604}
+{"ts":"2026-10-27T17:51:24.839Z","runId":"20261027175112-d578","level":"info","event":"gemini.call","purpose":"image_judge","model":"gemini-3.5-flash-lite","inputTokens":1257,"outputTokens":60,"costUsd":0.000527}
+{"ts":"2026-10-27T17:51:24.839Z","runId":"20261027175112-d578","level":"info","event":"image.ok","slot":"caricature#2026-10-27","bytes":72138,"costUsd":0}
+{"ts":"2026-10-27T17:51:24.841Z","runId":"20261027175112-d578","level":"info","event":"caricature.ok","date":"2026-10-27","titre":"Carton rouge diplomatique"}

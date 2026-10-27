@@ -983,6 +983,14 @@
       "seenAt": "2026-10-27T17:47:27.763Z",
       "status": "excluded",
       "reason": "sensitive"
+    },
+    "491d478ba5fe": {
+      "title": "Chine : Kylian Mbappé au cœur d’une polémique",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261027-chine-kylian-mbapp%C3%A9-au-c%C5%93ur-d-une-pol%C3%A9mique",
+      "category": "monde",
+      "seenAt": "2026-10-27T17:51:12.270Z",
+      "status": "used",
+      "usedAt": "2026-10-27T17:51:12.270Z"
     }
   },
   "slots": {
@@ -1221,9 +1229,9 @@
   },
   "caricatures": {
     "2026-10-27": {
-      "status": "failed",
-      "attempts": 2,
-      "lastError": "UnavailableError: Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status"
+      "status": "published",
+      "attempts": 3,
+      "lastError": null
     }
   }
 }

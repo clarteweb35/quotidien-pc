@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "date": "2026-10-27",
+    "titre": "Carton rouge diplomatique",
+    "legende": "Pour conserver ses sponsors internationaux, il faut désormais apprendre à jongler avec la censure plutôt qu'avec un ballon.",
+    "alt": "Dessin d'un footballeur recevant un livre rouge en guise de carton par un homme d'affaires qui coupe ses sacs d'or.",
+    "image": "images/caricatures/2026-10-27.webp",
+    "credit": "Dessin généré par IA · Le Quotidien Presque Certain",
+    "publishedAt": "2026-10-27T17:51:12.270Z",
+    "source": {
+      "name": "France 24",
+      "title": "Chine : Kylian Mbappé au cœur d’une polémique",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261027-chine-kylian-mbapp%C3%A9-au-c%C5%93ur-d-une-pol%C3%A9mique"
+    }
+  }
+]
