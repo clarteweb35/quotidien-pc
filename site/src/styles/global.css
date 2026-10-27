@@ -349,7 +349,6 @@ footer .quality .q-score.q-b { background: #5b9a2c; } /* note B: vert plus clair
 .manchette-globale.colonne { max-width: none; }
 .fil, .suivant, .meme-auteur { max-width: none; margin-left: 0; margin-right: 0; }
 .article .illus { margin: 24px 0 0; }
-.article .illus img { aspect-ratio: 21 / 9; }
 .article h1 { font-size: clamp(2.2rem, 4.4vw, 3.3rem); }
 .article .chapo { font-size: 1.4rem; max-width: 62rem; }
 .article .body { font-size: 1.2rem; }
