@@ -887,6 +887,94 @@
       "seenAt": "2026-10-27T10:24:05.281Z",
       "status": "excluded",
       "reason": "sensitive"
+    },
+    "4a4f99c6a77b": {
+      "title": "Trappes : minute de silence à l'Assemblée, Lecornu accuse la gauche de \"faire le jeu du RN\"",
+      "url": "https://www.france24.com/fr/france/20261027-attentat-trappes-minute-silence-assembl%C3%A9e-lecornu-accuse-gauche-faire-jeu-rassemblement-national",
+      "category": "monde",
+      "seenAt": "2026-10-27T17:24:59.518Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "87502d75789c": {
+      "title": "Attentat raciste de Trappes : une minute de silence observée à l'Assemblée",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261027-attentat-raciste-de-trappes-une-minute-de-silence-observ%C3%A9e-%C3%A0-l-assembl%C3%A9e",
+      "category": "monde",
+      "seenAt": "2026-10-27T17:24:59.518Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "b7b43aa5e12d": {
+      "title": "Attentat raciste de Trappes : minute de silence à l'Assemblée",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261027-attentat-raciste-de-trappes-minute-de-silence-%C3%A0-l-assembl%C3%A9e",
+      "category": "monde",
+      "seenAt": "2026-10-27T17:24:59.518Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "3fb8630b517f": {
+      "title": "Une commission de l'ONU accuse Israël \"d'extermination\" en Cisjordanie",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261027-une-commission-de-l-onu-accuse-isra%C3%ABl-d-extermination-en-cisjordanie",
+      "category": "monde",
+      "seenAt": "2026-10-27T17:24:59.518Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "278fd2710297": {
+      "title": "Que sait-on du profil de Kévin T., le suspect de l’attentat raciste de Trappes ?",
+      "url": "https://www.france24.com/fr/france/20261027-que-sait-on-profil-k%C3%A9vin-t-suspect-attentat-raciste-trappes",
+      "category": "monde",
+      "seenAt": "2026-10-27T17:24:59.518Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "f7e9c104cb35": {
+      "title": "Ebola : plus de 10 000 cas recensés en Afrique, la grande majorité en RDC, et 4 887 morts",
+      "url": "https://www.lemonde.fr/afrique/article/2026/10/27/ebola-plus-de-10-000-cas-recenses-en-afrique-la-grande-majorite-en-rdc-et-4-887-morts_6801306_3212.html",
+      "category": "monde",
+      "seenAt": "2026-10-27T17:24:59.518Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "27d4f6acae42": {
+      "title": "Procès de djihadistes français en Irak : de quinze à vingt ans de prison pour sept accusés",
+      "url": "https://www.lemonde.fr/international/article/2026/10/27/proces-de-djihadistes-francais-en-irak-sept-accuses-condamnes-a-15-a-20-ans-de-prison-pour-appartenance-au-groupe-ei_6801288_3210.html",
+      "category": "monde",
+      "seenAt": "2026-10-27T17:24:59.518Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "22290ed767a7": {
+      "title": "Au Nigeria, les orpailleurs morts en détention ont subi « des traitements cruels, inhumains et dégradants », selon une commission d’enquête",
+      "url": "https://www.lemonde.fr/afrique/article/2026/10/27/au-nigeria-les-orpailleurs-morts-en-detention-ont-subi-des-traitements-cruels-inhumains-et-degradants-selon-une-commission-d-enquete_6801283_3212.html",
+      "category": "monde",
+      "seenAt": "2026-10-27T17:24:59.518Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "4504cb8f3d6d": {
+      "title": "En Corée du Sud, le scénario dans le jeu « Call of Duty » d’une nouvelle guerre avec son voisin du Nord suscite de vifs débats",
+      "url": "https://www.lemonde.fr/international/article/2026/10/27/en-coree-du-sud-le-scenario-dans-le-jeu-call-of-duty-d-une-nouvelle-guerre-avec-son-voisin-du-nord-suscite-de-vifs-debats_6801277_3210.html",
+      "category": "monde",
+      "seenAt": "2026-10-27T17:24:59.518Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "cd38f93ee576": {
+      "title": "Le Pakistan, engagé dans le « pacte de La Mecque », contraint de jouer les équilibristes",
+      "url": "https://www.lemonde.fr/idees/article/2026/10/27/le-pakistan-engage-dans-le-pacte-de-la-mecque-contraint-de-jouer-les-equilibristes_6801274_3232.html",
+      "category": "monde",
+      "seenAt": "2026-10-27T17:24:59.518Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "4c2cf5b4319f": {
+      "title": "Incident près d’une base aérienne anglaise : deux hommes inculpés pour atteinte à la sécurité nationale, l’Iran dans le viseur des autorités",
+      "url": "https://www.lemonde.fr/international/article/2026/10/27/incident-pres-d-une-base-aerienne-anglaise-deux-hommes-inculpes-pour-atteinte-a-la-securite-nationale-l-iran-dans-le-viseur-des-autorites_6801228_3210.html",
+      "category": "monde",
+      "seenAt": "2026-10-27T17:24:59.518Z",
+      "status": "excluded",
+      "reason": "sensitive"
     }
   },
   "slots": {
@@ -1122,5 +1210,12 @@
     "runId": "20261027102344-34d9",
     "published": 2,
     "stopped": null
+  },
+  "caricatures": {
+    "2026-10-27": {
+      "status": "failed",
+      "attempts": 1,
+      "lastError": "MalformedResponseError: Generation interrompue (finishReason=MAX_TOKENS)"
+    }
   }
 }

@@ -24,3 +24,17 @@
 {"ts":"2026-10-27T10:24:22.227Z","runId":"20261027102344-34d9","level":"info","event":"publish.ok","slot":"2026-10-27#1","id":"3a77d9b49cd4","slug":"droits-des-algorithmes-des-chercheurs-preconisent-quinze","url":"/articles/droits-des-algorithmes-des-chercheurs-preconisent-quinze/","attempt":1,"dryRun":false}
 {"ts":"2026-10-27T15:59:54.071Z","runId":"20261027155954-ef8b","level":"warn","event":"cycle.slots_abandoned","count":3}
 {"ts":"2026-10-27T15:59:54.072Z","runId":"20261027155954-ef8b","level":"info","event":"cycle.start","date":"2026-10-27","due":[],"remainingToday":3,"dryRun":false}
+{"ts":"2026-10-27T17:25:00.554Z","runId":"20261027172459-2d82","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":31,"kept":25}
+{"ts":"2026-10-27T17:25:00.555Z","runId":"20261027172459-2d82","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-10-27T17:25:00.555Z","runId":"20261027172459-2d82","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":20}
+{"ts":"2026-10-27T17:25:00.556Z","runId":"20261027172459-2d82","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":24}
+{"ts":"2026-10-27T17:25:00.556Z","runId":"20261027172459-2d82","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":17}
+{"ts":"2026-10-27T17:25:00.556Z","runId":"20261027172459-2d82","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":20,"kept":20}
+{"ts":"2026-10-27T17:25:00.556Z","runId":"20261027172459-2d82","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":13}
+{"ts":"2026-10-27T17:25:00.556Z","runId":"20261027172459-2d82","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":15}
+{"ts":"2026-10-27T17:25:00.556Z","runId":"20261027172459-2d82","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":11}
+{"ts":"2026-10-27T17:25:00.557Z","runId":"20261027172459-2d82","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":15}
+{"ts":"2026-10-27T17:25:00.557Z","runId":"20261027172459-2d82","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":12}
+{"ts":"2026-10-27T17:25:00.557Z","runId":"20261027172459-2d82","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":4}
+{"ts":"2026-10-27T17:25:10.206Z","runId":"20261027172459-2d82","level":"info","event":"gemini.call","purpose":"caricature","model":"gemini-3.6-flash","inputTokens":309,"outputTokens":1010,"costUsd":0.008039}
+{"ts":"2026-10-27T17:25:10.209Z","runId":"20261027172459-2d82","level":"warn","event":"caricature.error","date":"2026-10-27","error":"Generation interrompue (finishReason=MAX_TOKENS)"}
