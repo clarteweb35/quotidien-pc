@@ -2,15 +2,17 @@
 import Base from '../layouts/Base.astro';
 import { caricatures } from '../lib/caricatures';
 import { url, formatDate } from '../lib/site';
+import { support, authorSlug } from '../lib/authors';
 
 const [duJour, ...anciennes] = caricatures;
+const dessinateur = support.find((p) => p.section === 'dessin');
 const jour = (d: string) => formatDate(new Date(`${d}T12:00:00Z`));
 ---
 <Base manchette={false} title="Caricatures : le dessin du jour" description="Chaque jour, une caricature fictive inspirée de l'actualité mondiale, dessinée par une IA : personnages génériques, aucune personne réelle." current="caricatures">
   <div class="page-head">
     <span class="kicker">Rubrique</span>
     <h1>Le dessin du jour</h1>
-    <p class="meta">Une caricature par jour, inspirée de l'actualité mondiale. Dessins générés par IA, personnages génériques : aucune personne réelle n'est représentée.</p>
+    <p class="meta">Une caricature par jour, inspirée de l'actualité mondiale, signée {dessinateur ? <a href={url(`redaction/#${authorSlug(dessinateur.name)}`)}>{dessinateur.name}</a> : 'la rédaction'} (personnage fictif). Dessins générés par IA, personnages génériques : aucune personne réelle n'est représentée.</p>
   </div>
 
   {duJour ? (

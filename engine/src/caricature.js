@@ -79,7 +79,7 @@ export async function runCaricature(ctx, items = null, { force = false } = {}) {
       system: SYSTEM,
       prompt: `Fait d'actualité mondiale du jour : « ${topic.title} ». ${topic.summary ?? ''}\nImagine le dessin du jour.`,
       schema: caricatureSchema,
-      params: { temperature: 1, maxOutputTokens: 1024 },
+      params: { temperature: 1, maxOutputTokens: 4096 }, // marge: le modele reflechit avant de repondre (1024 coupait la reponse)
     });
     data.scene = coupe(data.scene, cfg.engine.images.promptMaxChars);
     data.alt = coupe(data.alt, 160);

@@ -468,7 +468,7 @@ footer .quality .q-score.q-b { background: #5b9a2c; } /* note B: vert plus clair
 /* Menu a 12 entrees sur ordinateur: un peu plus serre pour tenir sur la largeur du contenu (1120 px) */
 @media (min-width: 761px) {
   .nav ul { gap: 4px 6px; font-size: .83rem; }
-  .nav a.onglet { width: 98px; }
+  .nav a.onglet { width: 100px; font-size: .77rem; }
   .nav a.rang-une { padding: 11px 11px; font-size: 1rem; }
   .nav .onglet-li + .onglet-li { margin-left: -6px; }
 }

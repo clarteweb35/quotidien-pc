@@ -318,4 +318,13 @@ test('Caricatures: page du dessin du jour, entree de menu, plan du site', () => 
   assert.ok(page('plan-du-site').includes('caricatures/'), 'plan du site');
 });
 
+test('Pierre Fusain, dessinateur: fiche, annonce de Rencontres liee, signature du dessin du jour', () => {
+  const r = page('redaction');
+  assert.ok(r.includes('Pierre Fusain</strong>, 57 ans') && r.includes('Le dessinateur'), 'fiche');
+  assert.ok(r.includes('rencontres/#ref-f5-231n'), 'lien vers son annonce');
+  const rc = page('rencontres');
+  assert.ok(rc.includes('F5-231N') && rc.includes('id="ref-f5-231n"'), 'annonce de Rencontres');
+  assert.ok(page('caricatures').includes('redaction/#pierre-fusain'), 'signature du dessin du jour');
+});
+
 test.after(() => fs.rmSync(out, { recursive: true, force: true }));

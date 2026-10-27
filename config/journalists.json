@@ -2,6 +2,13 @@
   "note": "Journalistes FICTIFS du journal (signatures satiriques). Une rubrique principale par journaliste. Le premier journaliste actif d'une rubrique est le titulaire du service: il signe par defaut. 'active: false' = en reserve (non utilise). Verifiez qu'aucun nom ne designe un journaliste reel connu avant d'activer.",
   "support": [
     {
+      "name": "Pierre Fusain",
+      "section": "dessin",
+      "role": "Dessinateur de presse, signe « Le dessin du jour »",
+      "age": 57,
+      "bio": "Croque l'actualité mondiale depuis son bureau, d'un trait sûr et d'un regard légèrement de travers. N'a jamais représenté personne de réel : il assure que ses personnages génériques ressemblent déjà à tout le monde. Exige que ses dessins soient tenus à l'envers au moins une fois par an, « pour voir ». Dessine uniquement à la lumière du jour, c'est-à-dire entre 11 h 40 et le déjeuner."
+    },
+    {
       "name": "Jean-Eudes de la Manchette",
       "section": "direction",
       "role": "Rédacteur en chef & fondateur autoproclamé",
