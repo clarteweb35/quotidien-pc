@@ -49,7 +49,9 @@
     "evergreenWhenNoTopic": true,
     "rotateCategories": true,
     "rotationWindowHours": 36,
-    "maxPerCategoryPerDay": { "editos": 1 }
+    "maxPerCategoryPerDay": {
+      "editos": 1
+    }
   },
   "validation": {
     "titleMinChars": 20,
@@ -74,7 +76,7 @@
     "quarantineDays": 30
   },
   "caricature": {
-    "enabled": true,
+    "enabled": false,
     "at": "11:40",
     "catchupMinutes": 300,
     "category": "monde",
@@ -84,10 +86,9 @@
   },
   "images": {
     "enabled": true,
-    "perDayMax": 2,
+    "perDayMax": 1,
     "slotIndexes": [
-      1,
-      3
+      1
     ],
     "api": "cloudflare",
     "model": "@cf/black-forest-labs/flux-1-schnell",
