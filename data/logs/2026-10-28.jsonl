@@ -41,3 +41,5 @@
 {"ts":"2026-10-28T11:18:33.827Z","runId":"20261028111421-b5a7","level":"info","event":"gemini.call","purpose":"image_judge","model":"gemini-3.5-flash-lite","inputTokens":1247,"outputTokens":97,"costUsd":0.000617}
 {"ts":"2026-10-28T11:18:33.827Z","runId":"20261028111421-b5a7","level":"warn","event":"image.rejected","slot":"caricature#2026-10-28","problems":["The generated image does not match the requested scene description (pompiste en smoking, soignante avec une alliance sur un coussin de velours)."],"flags":{"person":false,"text":false,"photo":false,"disturbing":false}}
 {"ts":"2026-10-28T14:44:23.830Z","runId":"20261028144254-46a8","level":"warn","event":"gemini.retry","purpose":"annonces","status":504,"attempt":1,"delayMs":4303}
+{"ts":"2026-10-28T17:18:43.916Z","runId":"20261028171843-7f0c","level":"warn","event":"cycle.slots_abandoned","count":2}
+{"ts":"2026-10-28T17:18:43.917Z","runId":"20261028171843-7f0c","level":"info","event":"cycle.start","date":"2026-10-28","due":[],"remainingToday":4,"dryRun":false}

@@ -3,12 +3,7 @@
 Nommez votre image **exactement comme la référence** (ex. `261024-X1.jpg`) et déposez-la dans `site/src/assets/manual/`.
 Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large minimum.
 
-## Sans image (6)
-
-### `261028-03` — Statistiques : après trois mois de calculs, un institut confirme que 3 Ballon d’Or est supérieur à 2
-- Rubrique : sport
-- Description suggérée : Une étagère en bois précieux sur laquelle sont alignés trois trophées dorés brillants, observée à la loupe par des scientifiques en blouse blanche vus de dos dans un laboratoire épuré.
-- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
+## Sans image (5)
 
 ### `261027-02` — Droits des algorithmes : des chercheurs préconisent quinze minutes de pause-café toutes les 100 000 requêtes
 - Rubrique : tech
@@ -35,8 +30,9 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 - Description suggérée : Une longue rangée de chaises vides alignées sur trois étages devant un mur neutre, vue de dos, avec un appareil photo sur trépied au premier plan
 - Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
-## Déjà illustrés (11)
+## Déjà illustrés (12)
 
+- `261028-03` — Statistiques : après trois mois de calculs, un institut confirme que 3 Ballon d’Or est supérieur à 2 (261028-03.png)
 - `261025-07` — « Pourquoi se plaindre des PFAS quand ils rendent nos organismes totalement déperlants ? », s'interroge un expert (261025-07.jpg)
 - `261025-06` — Théâtre : une commission passe cinq heures à débattre de l'extravagance sans réussir à employer un seul nom concret (261025-06.jpg)
 - `261025-05` — Chasse à l'IA dans l'édition : les auteurs désormais sommés de verser une vraie larme sur leur manuscrit (261025-05.jpg)
