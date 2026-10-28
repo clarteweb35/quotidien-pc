@@ -20,7 +20,6 @@ export function makeCtx({ at = '2026-10-24T09:05:00Z', script, imageScript, muta
   delete cfg.schedule.editoSlot; // l'edito du matin a son propre test
   cfg.schedule.maxPerDay = 8;
   cfg.engine.images.slotIndexes = [1, 5];
-  cfg.engine.caricature.enabled = true; // desactivee en production, le code reste teste
   cfg.engine.images.api = 'interactions'; cfg.engine.images.model = 'gemini-3.1-flash-lite-image'; cfg.engine.images.priceUsdPerImage = 0.0336; // les tests historiques utilisent le faux SDK Gemini; Cloudflare a son propre test
   cfg.engine.images.enabled = true; // la config livree les desactive (payantes): les tests les activent explicitement
   mutateCfg?.(cfg);

@@ -76,7 +76,7 @@
     "quarantineDays": 30
   },
   "caricature": {
-    "enabled": false,
+    "enabled": true,
     "at": "11:40",
     "catchupMinutes": 300,
     "category": "monde",
