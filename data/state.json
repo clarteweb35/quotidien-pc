@@ -991,6 +991,221 @@
       "seenAt": "2026-10-27T17:51:12.270Z",
       "status": "used",
       "usedAt": "2026-10-27T17:51:12.270Z"
+    },
+    "eba76356a3fe": {
+      "title": "Ballon d’or : quelle joueuse est la plus titrée ?",
+      "url": "https://www.lemonde.fr/videos/video/2026/10/27/ballon-d-or-quelle-joueuse-est-la-plus-titree_6801263_1669088.html",
+      "category": "sport",
+      "seenAt": "2026-10-28T11:14:22.525Z",
+      "status": "used",
+      "usedAt": "2026-10-28T11:14:22.525Z"
+    },
+    "a49464da5a68": {
+      "title": "Ce que l'on sait de la collision de trains meurtrière survenue près de la ville espagnole de Tolède",
+      "url": "https://www.franceinfo.fr/monde/espagne/ce-que-l-on-sait-de-la-collision-de-trains-meurtriere-survenue-pres-de-la-ville-espagnole-de-tolede_8257072.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-28T11:14:48.455Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "50a142d3e589": {
+      "title": "Il \"était mû par la haine et il a tué pour ça\" : Kévin T., suspect de l'attentat de Trappes, un profil \"nourri d'idéologie raciste\"",
+      "url": "https://www.franceinfo.fr/faits-divers/terrorisme/attentat-raciste-a-trappes/il-etait-mu-par-la-haine-et-il-a-tue-pour-ca-kevin-t-suspect-de-l-attentat-de-trappes-un-profil-nourri-d-ideologie-raciste_8255470.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-28T11:14:48.455Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "e9e8a276e41e": {
+      "title": "\"J’ai juste voulu descendre pour m’acheter un sandwich\" : l'IGPN saisie à Lyon après qu'un homme a été blessé au thorax en marge d'une manifestation",
+      "url": "https://www.franceinfo.fr/societe/justice/j-ai-juste-voulu-descendre-pour-m-acheter-un-sandwich-l-igpn-saisie-a-lyon-apres-qu-un-homme-a-ete-blesse-au-thorax_8257057.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-28T11:14:48.455Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "131737cbc938": {
+      "title": "Le journaliste et essayiste Antoine Spire, grande voix de France Culture, est mort à 80 ans",
+      "url": "https://www.franceinfo.fr/culture/livres/essais-histoire/le-journaliste-et-essayiste-antoine-spire-grande-voix-de-france-culture-est-mort-a-80-ans_8256976.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-28T11:14:48.455Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "4c7f0b585360": {
+      "title": "À Marseille, un jeune homme de 21 ans tué par balles dans le 11e arrondissement sur fond de narcotrafic",
+      "url": "https://www.franceinfo.fr/faits-divers/a-marseille-un-jeune-homme-de-21-ans-tue-par-balles-dans-le-11e-arrondissement-sur-fond-de-narcotrafic_8256934.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-28T11:14:48.455Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "b3bf77ef4d57": {
+      "title": "Guerre en Ukraine : une \"trêve Melania\" à Olechky",
+      "url": "https://www.franceinfo.fr/replay-jt/franceinfo/21h-minuit/23-heures/guerre-en-ukraine-une-treve-melania-a-olechky_8256913.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-28T11:14:48.455Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "2171ba096eca": {
+      "title": "Un mineur abattu par la police devant l'ambassade d'Israël à Belgrade, le gouvernement serbe évoque une \"attaque terroriste\"",
+      "url": "https://www.franceinfo.fr/monde/israel/un-assaillant-mineur-abattu-par-la-police-devant-l-ambassade-d-israel-a-belgrade-le-gouvernement-serbe-evoque-une-attaque-terroriste_8256862.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-28T11:14:48.455Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "447d4ed8657b": {
+      "title": "Des faits \"d'une extrême gravité\" : un jeune guépard tué par arme à feu en Inde, une première depuis la réintroduction de l'espèce en 2022",
+      "url": "https://www.franceinfo.fr/environnement/biodiversite/des-faits-d-une-extreme-gravite-un-jeune-guepard-tue-par-arme-a-feu-en-inde-une-premiere-depuis-la-reintroduction-de-l-espece-en-2022_8256931.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-28T11:14:48.455Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "906adf4c6128": {
+      "title": "Collision entre deux trains près de Tolède : le gouvernement régional fait état d'un \"minimum de 30 morts\"",
+      "url": "https://www.franceinfo.fr/monde/espagne/direct-collision-de-deux-trains-en-espagne-les-autorites-locales-deplorent-au-moins-10-morts_8257045.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-28T11:14:48.455Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "c112528e3b88": {
+      "title": "EN DIRECT, collision entre deux trains en Espagne : le bilan s’alourdit à au moins 30 morts, selon les autorités régionales ; Pedro Sanchez se dit « consterné par ce grave accident »",
+      "url": "https://www.lemonde.fr/international/live/2026/10/28/en-direct-une-collision-entre-deux-trains-en-espagne-fait-de-nombreux-morts_6801550_3210.html",
+      "category": "societe",
+      "seenAt": "2026-10-28T11:14:48.455Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "123c6412bde9": {
+      "title": "La lente infusion de la parole haineuse et raciste, de la droite dure jusqu’au sommet de l’Etat",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/28/de-la-droite-dure-au-sommet-de-l-etat-la-lente-infusion-des-mots-de-l-extreme-droite_6801528_823448.html",
+      "category": "societe",
+      "seenAt": "2026-10-28T11:14:48.455Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "3fa6270e255e": {
+      "title": "Changement climatique : la communauté scientifique appelle à décréter une « urgence sanitaire mondiale »",
+      "url": "https://www.lemonde.fr/planete/article/2026/10/28/changement-climatique-la-communaute-scientifique-appelle-a-decreter-une-urgence-sanitaire-mondiale_6801524_3244.html",
+      "category": "societe",
+      "seenAt": "2026-10-28T11:14:48.455Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "0d37f06496dc": {
+      "title": "EN DIRECT, guerre en Ukraine : à Olechky, ville ukrainienne sous occupation russe, la trêve humanitaire tient pour la deuxième journée de suite",
+      "url": "https://www.lemonde.fr/international/live/2026/10/28/en-direct-guerre-en-ukraine-a-olechky-ville-ukrainienne-sous-occupation-russe-la-treve-humanitaire-tient-pour-la-deuxieme-journee-de-suite_6799896_3210.html",
+      "category": "societe",
+      "seenAt": "2026-10-28T11:14:48.455Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "8328fd719157": {
+      "title": "A Marseille, un homme succombe à des tirs de kalachnikov sur un point de deal du 11ᵉ arrondissement",
+      "url": "https://www.lemonde.fr/societe/article/2026/10/28/a-marseille-un-homme-succombe-a-des-tirs-de-kalachnikov-sur-un-point-de-deal-du-11-arrondissement_6801546_3224.html",
+      "category": "societe",
+      "seenAt": "2026-10-28T11:14:48.455Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "81758826cda4": {
+      "title": "En Serbie, un assaillant abattu près de l’ambassade israélienne à Belgrade ; Israël confirme une tentative d’« attentat terroriste »",
+      "url": "https://www.lemonde.fr/international/article/2026/10/28/en-serbie-un-assaillant-abattu-pres-de-l-ambassade-israelienne-a-belgrade-israel-confirme-une-tentative-d-attentat-terroriste_6801547_3210.html",
+      "category": "societe",
+      "seenAt": "2026-10-28T11:14:48.455Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "0966e5fe07df": {
+      "title": "EN DIRECT – Collision ferroviaire en Espagne : au moins 30 morts, selon les autorités",
+      "url": "https://www.liberation.fr/international/europe/une-collision-entre-deux-trains-fait-plusieurs-blesses-en-espagne-20261028_4FA7VFGSBNG2ZJIFT7II3P7BUM/",
+      "category": "societe",
+      "seenAt": "2026-10-28T11:14:48.455Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "2cdda9ea0c83": {
+      "title": "Attentat raciste de Trappes : le parallèle détestable de Sébastien Lecornu avec la mort de Quentin Deranque",
+      "url": "https://www.liberation.fr/politique/attentat-raciste-de-trappes-le-parallele-detestable-de-sebastien-lecornu-avec-la-mort-de-quentin-deranque-20261028_ITOEKN3EHREMDMCZY2S2HXVAKY/",
+      "category": "societe",
+      "seenAt": "2026-10-28T11:14:48.455Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "98e5ec9b961f": {
+      "title": "«Transformer le traumatisme de la guerre en divertissement est problématique» : le nouveau «Call of Duty» s’invite dans la politique en Corée du Sud",
+      "url": "https://www.liberation.fr/international/asie-pacifique/transformer-le-traumatisme-de-la-guerre-en-divertissement-est-problematique-le-nouveau-call-of-duty-sinvite-dans-la-politique-en-coree-du-sud-20261028_BDT2AGELLZCTFO3AFS2RNGCP5A/",
+      "category": "societe",
+      "seenAt": "2026-10-28T11:14:48.455Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "2b797b8f13b7": {
+      "title": "«Moulin» de László Nemes : le résistant face à Klaus Barbie, le combat entre morale démocratique et cruauté totalitaire",
+      "url": "https://www.liberation.fr/culture/moulin-de-laszlo-nemes-le-resistant-face-a-klaus-barbie-le-combat-entre-morale-democratique-et-cruaute-totalitaire-20261027_KQDBXRVWOFDLHMUU544DGIPHZE/",
+      "category": "societe",
+      "seenAt": "2026-10-28T11:14:48.455Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "a1f14fd53fee": {
+      "title": "Mélanome, cancers du poumon et de l’endomètre… Des avancées thérapeutiques présentées au sommet européen de l’oncologie",
+      "url": "https://www.liberation.fr/societe/sante/melanome-cancers-du-poumon-et-de-lendometre-des-avancees-therapeutiques-presentees-au-sommet-europeen-de-loncologie-20261028_MBNP5JTCLFCPLKXVE2CB44WFWQ/",
+      "category": "societe",
+      "seenAt": "2026-10-28T11:14:48.455Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "5f5f465ba363": {
+      "title": "Prestations sociales saisies, interdictions de manifester, blocage des réseaux sociaux… Le projet de loi \"casseurs-payeurs\" adopté et élargi au Sénat, en plein cœur de la contestation",
+      "url": "https://www.franceinfo.fr/politique/prestations-sociales-saisies-nouvelles-interdictions-de-manifester-le-projet-de-loi-casseurs-payeurs-adopte-et-elargi-au-senat-en-plein-c-ur-de-la-contestation_8256748.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-28T11:14:48.455Z",
+      "status": "in_progress"
+    },
+    "af071e9cdb9a": {
+      "title": "Attentat raciste dans les Yvelines : de la minute de silences aux invectives",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261028-attentat-raciste-dans-les-yvelines-de-la-minute-de-silences-aux-invectives",
+      "category": "monde",
+      "seenAt": "2026-10-28T11:18:20.778Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "f0cfe16d37e4": {
+      "title": "Israël : une économie florissante... grande absente de la campagne des législatives",
+      "url": "https://www.france24.com/fr/%C3%A9missions/info-%C3%A9co/20261028-isra%C3%ABl-une-%C3%A9conomie-florissante-grande-absente-de-la-campagne-des-l%C3%A9gislatives",
+      "category": "monde",
+      "seenAt": "2026-10-28T11:18:20.778Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "192061de8049": {
+      "title": "En Espagne, le bilan provisoire est désormais de 30 morts dans la collision de deux trains au sud de Madrid",
+      "url": "https://www.lemonde.fr/international/article/2026/10/28/en-espagne-deux-trains-sont-entres-en-collision-au-sud-de-madrid_6801548_3210.html",
+      "category": "monde",
+      "seenAt": "2026-10-28T11:18:20.778Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "1eeaacbaa2a4": {
+      "title": "Inquiétude des services de renseignement européens sur la persistance de la menace iranienne en Europe",
+      "url": "https://www.lemonde.fr/international/article/2026/10/28/inquietude-des-services-de-renseignement-europeens-sur-la-persistance-de-la-menace-iranienne-en-europe_6801523_3210.html",
+      "category": "monde",
+      "seenAt": "2026-10-28T11:18:20.778Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "77abf8806f19": {
+      "title": "Pérou : la justice classe une affaire sur des milliers de stérilisations forcées de femmes pendant les années 1990",
+      "url": "https://www.lemonde.fr/international/article/2026/10/28/perou-la-justice-classe-une-affaire-sur-des-milliers-de-sterilisations-forcees-de-femmes-pendant-les-annees-1990_6801450_3210.html",
+      "category": "monde",
+      "seenAt": "2026-10-28T11:18:20.778Z",
+      "status": "excluded",
+      "reason": "sensitive"
     }
   },
   "slots": {
@@ -1219,19 +1434,51 @@
         "status": "abandoned",
         "lastError": "fenetre_de_rattrapage_depassee"
       }
+    },
+    "2026-10-28": {
+      "0": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "1": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "2": {
+        "attempts": 1,
+        "status": "published",
+        "startedAt": "2026-10-28T11:14:22.525Z",
+        "articleId": "91c0de4493bc",
+        "publishedAt": "2026-10-28T11:14:22.525Z",
+        "topicId": "eba76356a3fe",
+        "lastError": null
+      },
+      "3": {
+        "attempts": 1,
+        "status": "failed",
+        "startedAt": "2026-10-28T11:14:48.455Z",
+        "lastError": "gemini_unavailable: Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}"
+      }
     }
   },
   "lastRun": {
-    "at": "2026-10-27T10:23:44.399Z",
-    "runId": "20261027102344-34d9",
-    "published": 2,
-    "stopped": null
+    "at": "2026-10-28T11:14:21.859Z",
+    "runId": "20261028111421-b5a7",
+    "published": 1,
+    "stopped": "gemini_unavailable"
   },
   "caricatures": {
     "2026-10-27": {
       "status": "published",
       "attempts": 3,
       "lastError": null
+    },
+    "2026-10-28": {
+      "status": "failed",
+      "attempts": 1,
+      "lastError": "image_indisponible"
     }
   }
 }

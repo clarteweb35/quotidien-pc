@@ -1,32 +1,49 @@
 {
   "date": "2026-10-28",
   "target": 5,
-  "publishedCount": 0,
-  "articles": [],
+  "publishedCount": 1,
+  "articles": [
+    {
+      "id": "91c0de4493bc",
+      "ref": "261028-03",
+      "title": "Statistiques : après trois mois de calculs, un institut confirme que 3 Ballon d’Or est supérieur à 2",
+      "category": "sport",
+      "slug": "statistiques-apres-trois-mois-de-calculs-un-institut"
+    }
+  ],
   "slots": [
     {
       "idx": 0,
       "hhmm": "09:10",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 0,
+      "status": "abandoned",
+      "lastError": "fenetre_de_rattrapage_depassee"
     },
     {
       "idx": 1,
       "hhmm": "09:40",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 0,
+      "status": "abandoned",
+      "lastError": "fenetre_de_rattrapage_depassee"
     },
     {
       "idx": 2,
       "hhmm": "10:10",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 1,
+      "status": "published",
+      "startedAt": "2026-10-28T11:14:22.525Z",
+      "articleId": "91c0de4493bc",
+      "publishedAt": "2026-10-28T11:14:22.525Z",
+      "topicId": "eba76356a3fe",
+      "lastError": null
     },
     {
       "idx": 3,
       "hhmm": "10:40",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 1,
+      "status": "failed",
+      "startedAt": "2026-10-28T11:14:48.455Z",
+      "lastError": "gemini_unavailable: Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}"
     },
     {
       "idx": 4,
@@ -38,19 +55,19 @@
   "rejections": 0,
   "quarantined": 0,
   "api": {
-    "calls": 0,
-    "inputTokens": 0,
-    "outputTokens": 0,
-    "costUsd": 0,
+    "calls": 6,
+    "inputTokens": 11133,
+    "outputTokens": 8387,
+    "costUsd": 0.076103,
     "dailyCapUsd": 1,
-    "monthCostUsd": 0.566127,
+    "monthCostUsd": 0.64223,
     "monthlyCapUsd": 15
   },
   "paused": false,
   "lastRun": {
-    "at": "2026-10-27T10:23:44.399Z",
-    "runId": "20261027102344-34d9",
-    "published": 2,
-    "stopped": null
+    "at": "2026-10-28T11:14:21.859Z",
+    "runId": "20261028111421-b5a7",
+    "published": 1,
+    "stopped": "gemini_unavailable"
   }
 }

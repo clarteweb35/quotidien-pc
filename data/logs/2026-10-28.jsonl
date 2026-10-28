@@ -1,0 +1,42 @@
+{"ts":"2026-10-28T11:14:21.891Z","runId":"20261028111421-b5a7","level":"warn","event":"cycle.slots_abandoned","count":2}
+{"ts":"2026-10-28T11:14:21.893Z","runId":"20261028111421-b5a7","level":"info","event":"cycle.start","date":"2026-10-28","due":["2026-10-28#2","2026-10-28#3"],"remainingToday":5,"dryRun":false}
+{"ts":"2026-10-28T11:14:22.523Z","runId":"20261028111421-b5a7","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":28,"kept":25}
+{"ts":"2026-10-28T11:14:22.523Z","runId":"20261028111421-b5a7","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-10-28T11:14:22.523Z","runId":"20261028111421-b5a7","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":20}
+{"ts":"2026-10-28T11:14:22.523Z","runId":"20261028111421-b5a7","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":22}
+{"ts":"2026-10-28T11:14:22.524Z","runId":"20261028111421-b5a7","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":17}
+{"ts":"2026-10-28T11:14:22.524Z","runId":"20261028111421-b5a7","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":20,"kept":20}
+{"ts":"2026-10-28T11:14:22.524Z","runId":"20261028111421-b5a7","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":13}
+{"ts":"2026-10-28T11:14:22.524Z","runId":"20261028111421-b5a7","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":13}
+{"ts":"2026-10-28T11:14:22.524Z","runId":"20261028111421-b5a7","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":10}
+{"ts":"2026-10-28T11:14:22.524Z","runId":"20261028111421-b5a7","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":17}
+{"ts":"2026-10-28T11:14:22.524Z","runId":"20261028111421-b5a7","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":8}
+{"ts":"2026-10-28T11:14:22.525Z","runId":"20261028111421-b5a7","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":5}
+{"ts":"2026-10-28T11:14:22.525Z","runId":"20261028111421-b5a7","level":"info","event":"collect.done","items":186}
+{"ts":"2026-10-28T11:14:22.548Z","runId":"20261028111421-b5a7","level":"info","event":"topic.selection","slot":"2026-10-28#2","target":"sport","candidates":186,"rejected":6,"chosen":"Ballon d’or : quelle joueuse est la plus titrée ?","score":4.5}
+{"ts":"2026-10-28T11:14:47.688Z","runId":"20261028111421-b5a7","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4264,"outputTokens":3982,"costUsd":0.036261}
+{"ts":"2026-10-28T11:14:48.452Z","runId":"20261028111421-b5a7","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":1032,"outputTokens":56,"costUsd":0.00045}
+{"ts":"2026-10-28T11:14:48.453Z","runId":"20261028111421-b5a7","level":"info","event":"judge.result","slot":"2026-10-28#2","attempt":1,"humor":8,"coherence":9,"risk":0,"issues":[]}
+{"ts":"2026-10-28T11:14:48.455Z","runId":"20261028111421-b5a7","level":"info","event":"publish.ok","slot":"2026-10-28#2","id":"91c0de4493bc","slug":"statistiques-apres-trois-mois-de-calculs-un-institut","url":"/articles/statistiques-apres-trois-mois-de-calculs-un-institut/","attempt":1,"dryRun":false}
+{"ts":"2026-10-28T11:14:48.519Z","runId":"20261028111421-b5a7","level":"info","event":"topic.selection","slot":"2026-10-28#3","target":"societe","candidates":186,"rejected":20,"chosen":"Prestations sociales saisies, interdictions de manifester, blocage des réseaux sociaux… Le projet de loi \"casseurs-payeurs\" adopté et élargi au Sénat, en plein cœur de la contestation","score":8.5}
+{"ts":"2026-10-28T11:15:07.050Z","runId":"20261028111421-b5a7","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4286,"outputTokens":3044,"costUsd":0.029259}
+{"ts":"2026-10-28T11:15:07.061Z","runId":"20261028111421-b5a7","level":"warn","event":"validate.deterministic_failed","slot":"2026-10-28#3","attempt":1,"issues":["titre_trop_long"]}
+{"ts":"2026-10-28T11:15:12.369Z","runId":"20261028111421-b5a7","level":"warn","event":"gemini.retry","purpose":"generate","status":503,"attempt":1,"delayMs":4849}
+{"ts":"2026-10-28T11:15:19.290Z","runId":"20261028111421-b5a7","level":"warn","event":"gemini.fallback_model","from":"gemini-3.6-flash","to":"gemini-3.8-flash"}
+{"ts":"2026-10-28T11:16:47.911Z","runId":"20261028111421-b5a7","level":"warn","event":"gemini.retry","purpose":"generate","status":504,"attempt":1,"delayMs":4316}
+{"ts":"2026-10-28T11:18:20.776Z","runId":"20261028111421-b5a7","level":"error","event":"cycle.stopped","reason":"gemini_unavailable","error":"Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}"}
+{"ts":"2026-10-28T11:18:21.422Z","runId":"20261028111421-b5a7","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":28,"kept":25}
+{"ts":"2026-10-28T11:18:21.422Z","runId":"20261028111421-b5a7","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-10-28T11:18:21.422Z","runId":"20261028111421-b5a7","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":20}
+{"ts":"2026-10-28T11:18:21.422Z","runId":"20261028111421-b5a7","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":22}
+{"ts":"2026-10-28T11:18:21.422Z","runId":"20261028111421-b5a7","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":17}
+{"ts":"2026-10-28T11:18:21.422Z","runId":"20261028111421-b5a7","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":20,"kept":20}
+{"ts":"2026-10-28T11:18:21.423Z","runId":"20261028111421-b5a7","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":13}
+{"ts":"2026-10-28T11:18:21.423Z","runId":"20261028111421-b5a7","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":13}
+{"ts":"2026-10-28T11:18:21.423Z","runId":"20261028111421-b5a7","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":10}
+{"ts":"2026-10-28T11:18:21.423Z","runId":"20261028111421-b5a7","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":17}
+{"ts":"2026-10-28T11:18:21.423Z","runId":"20261028111421-b5a7","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":8}
+{"ts":"2026-10-28T11:18:21.423Z","runId":"20261028111421-b5a7","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":5}
+{"ts":"2026-10-28T11:18:29.713Z","runId":"20261028111421-b5a7","level":"info","event":"gemini.call","purpose":"caricature","model":"gemini-3.6-flash","inputTokens":304,"outputTokens":1208,"costUsd":0.009516}
+{"ts":"2026-10-28T11:18:33.827Z","runId":"20261028111421-b5a7","level":"info","event":"gemini.call","purpose":"image_judge","model":"gemini-3.5-flash-lite","inputTokens":1247,"outputTokens":97,"costUsd":0.000617}
+{"ts":"2026-10-28T11:18:33.827Z","runId":"20261028111421-b5a7","level":"warn","event":"image.rejected","slot":"caricature#2026-10-28","problems":["The generated image does not match the requested scene description (pompiste en smoking, soignante avec une alliance sur un coussin de velours)."],"flags":{"person":false,"text":false,"photo":false,"disturbing":false}}

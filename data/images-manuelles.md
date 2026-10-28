@@ -3,7 +3,12 @@
 Nommez votre image **exactement comme la référence** (ex. `261024-X1.jpg`) et déposez-la dans `site/src/assets/manual/`.
 Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large minimum.
 
-## Sans image (5)
+## Sans image (6)
+
+### `261028-03` — Statistiques : après trois mois de calculs, un institut confirme que 3 Ballon d’Or est supérieur à 2
+- Rubrique : sport
+- Description suggérée : Une étagère en bois précieux sur laquelle sont alignés trois trophées dorés brillants, observée à la loupe par des scientifiques en blouse blanche vus de dos dans un laboratoire épuré.
+- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
 ### `261027-02` — Droits des algorithmes : des chercheurs préconisent quinze minutes de pause-café toutes les 100 000 requêtes
 - Rubrique : tech
