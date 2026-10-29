@@ -3,17 +3,7 @@
 Nommez votre image **exactement comme la référence** (ex. `261024-X1.jpg`) et déposez-la dans `site/src/assets/manual/`.
 Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large minimum.
 
-## Sans image (7)
-
-### `261029-04` — Prix du carburant : le gouvernement hausse le ton en signant sa lettre avec « Salutations distinguées mais vigilantes »
-- Rubrique : politique
-- Description suggérée : Un haut fonctionnaire en costume sombre scelle une enveloppe officielle avec un tampon dore dans un bureau dore d'un ministere parisien.
-- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
-
-### `261029-03` — Face aux bénéfices de TotalEnergies, il demande poliment à sa station-service de lui faire une fleur
-- Rubrique : societe
-- Description suggérée : Un automobiliste de dos, debout devant la caisse d'une station-service, tendant une carte bancaire avec un sourire poli face à un gérant impassible. Style dessin de presse.
-- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
+## Sans image (5)
 
 ### `261027-02` — Droits des algorithmes : des chercheurs préconisent quinze minutes de pause-café toutes les 100 000 requêtes
 - Rubrique : tech
@@ -40,8 +30,10 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 - Description suggérée : Une longue rangée de chaises vides alignées sur trois étages devant un mur neutre, vue de dos, avec un appareil photo sur trépied au premier plan
 - Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
-## Déjà illustrés (12)
+## Déjà illustrés (14)
 
+- `261029-04` — Prix du carburant : le gouvernement hausse le ton en signant sa lettre avec « Salutations distinguées mais vigilantes » (261029-04.jpg)
+- `261029-03` — Face aux bénéfices de TotalEnergies, il demande poliment à sa station-service de lui faire une fleur (261029-03-dessin.jpg)
 - `261028-03` — Statistiques : après trois mois de calculs, un institut confirme que 3 Ballon d’Or est supérieur à 2 (261028-03.png)
 - `261025-07` — « Pourquoi se plaindre des PFAS quand ils rendent nos organismes totalement déperlants ? », s'interroge un expert (261025-07.jpg)
 - `261025-06` — Théâtre : une commission passe cinq heures à débattre de l'extravagance sans réussir à employer un seul nom concret (261025-06.jpg)
