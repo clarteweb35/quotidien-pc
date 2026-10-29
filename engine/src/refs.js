@@ -23,7 +23,7 @@ export function listManualImages(dir) {
   if (!fs.existsSync(dir)) return out;
   for (const f of fs.readdirSync(dir)) {
     const ext = path.extname(f).toLowerCase();
-    if (IMAGE_EXTENSIONS.includes(ext)) out[path.basename(f, path.extname(f)).toUpperCase()] = f;
+    if (IMAGE_EXTENSIONS.includes(ext)) out[path.basename(f, path.extname(f)).toUpperCase().replace(/-DESSIN$/, '')] = f; // « -dessin » = dessin de presse
   }
   return out;
 }

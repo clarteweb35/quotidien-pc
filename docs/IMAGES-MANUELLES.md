@@ -12,6 +12,8 @@ Chaque article a une **référence** du type `261024-08` (date AAMMJJ + numéro 
 - Format paysage 16:9, 1280 px de large au minimum. Inutile de la compresser : le site la convertit en WebP et en fait une version pour l'article (1280 px), une pour les cartes (800 px) et une pour le partage sur les réseaux.
 - Poids conseillé : moins de 10 Mo.
 
+**Un dessin de presse ?** Ajoutez `-dessin` au nom : `261029-03-dessin.jpg`. La légende devient « Dessin de Pierre Fusain · Le Quotidien Presque Certain » (notre dessinateur fictif) au lieu de « Illustration générée par IA ». Sans ce suffixe, l'image garde la légende habituelle.
+
 ## 3. La déposer sur GitHub (depuis le navigateur)
 1. Ouvrez https://github.com/clarteweb35/quotidien-pc/tree/main/site/src/assets/manual
 2. **Add file → Upload files**, glissez l'image.

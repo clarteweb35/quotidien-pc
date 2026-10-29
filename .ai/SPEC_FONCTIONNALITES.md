@@ -17,7 +17,7 @@
 | Publication | article `.md` + état dans le même commit, idempotent | ✅ |
 | Budget | plafonds jour/mois, coût de chaque appel enregistré | ✅ |
 | Purge | `data/logs` 30 jours, `data/reports` 180 jours, quarantaine 30 jours | ✅ |
-| Images | illustrations IA (désactivées par défaut, payantes) ; images manuelles `site/src/assets/manual/<réf>.jpg` prioritaires | ✅ |
+| Images | illustrations IA (désactivées par défaut, payantes) ; images manuelles `site/src/assets/manual/<réf>.jpg` prioritaires (`<réf>-dessin.jpg` = dessin de presse, légende « Dessin de Pierre Fusain ») | ✅ |
 | Réseaux sociaux | Bluesky actif ; Mastodon et Telegram prêts, désactivés (`config/social.json`) | ✅ |
 | Génération d'annonces | à la demande uniquement : `node engine/src/cli.js annonces --type petites|rencontres --count N` ou workflow GitHub « Nouvelles annonces » (jamais de cron). Gemini écrit le texte, le code attribue ids et références et refuse coordonnées, liens, doublons, sujets sensibles ; annonces marquées `auto: true` ; consignes dans `config/prompts/annonces.md` | ✅ |
 | Pause | `config/control.json` (`paused`) | ✅ |

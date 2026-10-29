@@ -1,13 +1,19 @@
 import { getImage } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
 import { refOf } from './ref';
+import { support } from './authors';
 import { url, siteName, type Article } from './site';
 
 // Images deposees a la main dans src/assets/manual/, nommees exactement comme la reference de l'article (ex. 261024-X1.jpg).
 const files = import.meta.glob<ImageMetadata>('/src/assets/manual/*.{png,jpg,jpeg,webp,PNG,JPG,JPEG,WEBP}', { eager: true, import: 'default' });
+// Un suffixe « -dessin » (ex. 261029-03-dessin.jpg) signale un dessin de presse : signe du dessinateur du journal.
 const byRef = new Map(
-  Object.entries(files).map(([key, meta]) => [key.split('/').pop()!.replace(/\.[^.]+$/, '').toUpperCase(), { key, meta }]),
+  Object.entries(files).map(([key, meta]) => {
+    const name = key.split('/').pop()!.replace(/\.[^.]+$/, '').toUpperCase();
+    return [name.replace(/-DESSIN$/, ''), { key, meta, dessin: name.endsWith('-DESSIN') }] as const;
+  }),
 );
+const dessinateur = support.find((p) => p.section === 'dessin')?.name ?? 'la rédaction';
 
 export function manualEntry(article: Article) {
   const ref = refOf(article.data);
@@ -30,7 +36,8 @@ export async function illustration(article: Article, width: number, manualCredit
     const small = Math.round(w / 2);
     const half = small >= 320 ? await getImage({ src: manual.meta, width: small, height: Math.round((small * 9) / 16), fit: 'cover', position: 'attention', format: 'webp', quality: 80 }) : null;
     const srcset = half ? `${half.src} ${small}w, ${img.src} ${w}w` : undefined;
-    return { src: img.src, srcset, width: w, height: h, alt, credit: manualCredit, manualKey: manual.key };
+    const credit = manual.dessin ? `Dessin de ${dessinateur} · Le Quotidien Presque Certain` : manualCredit;
+    return { src: img.src, srcset, width: w, height: h, alt: manual.dessin && !d.imageAlt ? `Dessin de presse : ${d.title}` : alt, credit, manualKey: manual.key };
   }
   if (d.image) return { src: url(d.image), width: 1280, height: 720, alt, credit: d.imageCredit ?? 'Illustration générée par IA', manualKey: null };
   return null;
