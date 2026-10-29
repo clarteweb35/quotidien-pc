@@ -1,0 +1,33 @@
+---
+// Bouton « Voir plus » : les articles au-delà des premiers sont masqués puis affichés d'un clic.
+// `inerte` : les cartes restent dans un <template> (hors du DOM tant qu'on ne clique pas), pour ne pas alourdir l'accueil (EcoIndex).
+// Sinon elles sont dans la page (attribut hidden), donc toujours lisibles par les moteurs de recherche.
+interface Props { nombre: number; inerte?: boolean }
+const { nombre, inerte = false } = Astro.props;
+---
+{nombre > 0 && (
+  <div class="voir-plus" data-voir-plus>
+    {inerte ? <template><div class="grid"><slot /></div></template> : <div class="grid" hidden><slot /></div>}
+    <button type="button" class="voir-plus-btn">Voir plus d'articles ({nombre})</button>
+  </div>
+)}
+<style>
+  .voir-plus { text-align: center; margin: 28px 0 0; }
+  .voir-plus .grid { text-align: left; margin-bottom: 28px; }
+  .voir-plus-btn { font: 600 .9rem/1 var(--sans); letter-spacing: .04em; color: var(--ink); background: var(--paper-2); border: 1px solid var(--ink); border-radius: 2px; padding: 12px 22px; cursor: pointer; }
+  .voir-plus-btn:hover, .voir-plus-btn:focus-visible { background: var(--ink); color: var(--paper); }
+</style>
+<script>
+  document.querySelectorAll<HTMLElement>('[data-voir-plus]').forEach((bloc) => {
+    const bouton = bloc.querySelector<HTMLButtonElement>('.voir-plus-btn');
+    bouton?.addEventListener('click', () => {
+      const modele = bloc.querySelector('template');
+      const grille = modele ? (modele.content.cloneNode(true) as DocumentFragment).firstElementChild as HTMLElement : bloc.querySelector<HTMLElement>('.grid');
+      if (!grille) return;
+      grille.hidden = false;
+      if (modele) modele.replaceWith(grille);
+      bouton.remove();
+      grille.querySelector<HTMLElement>('a')?.focus();
+    });
+  });
+</script>

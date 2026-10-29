@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import Card from '../components/Card.astro';
+import VoirPlus from '../components/VoirPlus.astro';
 import Marches from '../components/Marches.astro';
 import Gimmick from '../components/Gimmick.astro';
 import BandeauRencontres from '../components/BandeauRencontres.astro';
@@ -16,7 +17,8 @@ const lead = articles.find((a) => illustrated.has(a.id)) ?? articles[0];
 const rest = articles.filter((a) => a !== lead);
 // Page volontairement legere: EcoIndex compte les elements du DOM (cible: moins de ~350 pour rester en A). Donc 7 dernieres nouvelles,
 // quelques valeurs et villes dans les bandeaux, et pas d'extraits par rubrique (le menu les propose deja). Ne pas grossir sans re-mesurer.
-const latest = rest.filter((a) => a.data.category !== 'editos').slice(0, 7);
+// 9 articles visibles (la une + 8), les autres derriere « Voir plus » (dans un <template>, donc hors du DOM tant qu'on ne clique pas).
+const latest = rest.filter((a) => a.data.category !== 'editos');
 const flash = articles.slice(0, 5);
 const siteLd = {
   '@context': 'https://schema.org',
@@ -52,7 +54,8 @@ const siteLd = {
           <h2 class="section-title">Dernières nouvelles (inventées)</h2>
           <div class="grid">{latest.slice(0, 6).map((a) => <Card article={a} />)}</div>
           <BandeauRencontres />
-          <div class="grid">{latest.slice(6).map((a) => <Card article={a} />)}<EncartAnnonces /></div>
+          <div class="grid">{latest.slice(6, 8).map((a) => <Card article={a} />)}<EncartAnnonces /></div>
+          <VoirPlus inerte nombre={latest.length - 8}>{latest.slice(8).map((a) => <Card article={a} />)}</VoirPlus>
         </>
       )}
     </>

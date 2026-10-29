@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Card from '../../components/Card.astro';
+import VoirPlus from '../../components/VoirPlus.astro';
 import BandeauRencontres from '../../components/BandeauRencontres.astro';
 import EncartAnnonces from '../../components/EncartAnnonces.astro';
 import { allArticles, categories, url } from '../../lib/site';
@@ -27,7 +28,8 @@ const voisins = (() => {
   {items.length > 3 && (
     <>
       <BandeauRencontres />
-      <div class="grid">{items.slice(3).map((a) => <Card article={a} />)}<EncartAnnonces /></div>
+      <div class="grid">{items.slice(3, 9).map((a) => <Card article={a} />)}<EncartAnnonces /></div>
+      <VoirPlus nombre={items.length - 9}>{items.slice(9).map((a) => <Card article={a} />)}</VoirPlus>
     </>
   )}
   {items.length <= 3 && <BandeauRencontres />}

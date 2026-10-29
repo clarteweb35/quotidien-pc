@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Card from '../../components/Card.astro';
+import VoirPlus from '../../components/VoirPlus.astro';
 import Marches from '../../components/Marches.astro';
 import Resultats from '../../components/Resultats.astro';
 import Gimmick from '../../components/Gimmick.astro';
@@ -43,7 +44,8 @@ const photoEdito = editorialiste ? portrait(editorialiste.name) : null;
       {articles.length > 3 && (
         <>
           <BandeauRencontres />
-          <div class="grid">{articles.slice(3).map((a) => <Card article={a} />)}<EncartAnnonces /></div>
+          <div class="grid">{articles.slice(3, 9).map((a) => <Card article={a} />)}<EncartAnnonces /></div>
+          <VoirPlus nombre={articles.length - 9}>{articles.slice(9).map((a) => <Card article={a} />)}</VoirPlus>
         </>
       )}
       {articles.length <= 3 && <BandeauRencontres />}
