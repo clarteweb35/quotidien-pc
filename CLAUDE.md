@@ -47,3 +47,37 @@ Spécification fonctionnelle : [.ai/SPEC_FONCTIONNALITES.md](.ai/SPEC_FONCTIONNA
 - Pièges Windows / shell : dans un `node -e "…"` ou un heredoc non protégé, les **accents graves (backticks) sont interprétés par le shell** ; écrire les scripts dans un fichier ou utiliser les outils Write/Edit. Une apostrophe dans une chaîne `'…'` casse un fichier de test.
 - `data/` est écrit par le moteur : après un `git pull`, de nouveaux commits `editor: cycle …` sont normaux.
 - Ne jamais lancer de sous-agents ni de workflow multi-agents sans demander d'abord.
+
+## system prompt
+
+Avant implementation lis [.ai/SYSTEM_PROMPT_GARDIEN_ARCHITECTURE.md](.ai/SYSTEM_PROMPT_GARDIEN_ARCHITECTURE.md)
+
+## Agents
+
+Ne jamais lancer de sous-agents ni de workflow multi-agents sans me demander d'abord. Obligatoire, sans exception.
+
+## Niveaux d'action
+
+Je prefixe ma demande par un tag. Sans tag, appliquer `[strict]` par defaut.
+
+- `[consultatif]` — Ne modifie aucun fichier. Explique ce que tu ferais et attends ma validation.
+- `[strict]` — Avant de coder : dis quoi, pourquoi, comment, et dans quels fichiers. Puis code.
+- `[rapide]` — Code directement, explication minimale. Interdit de toucher a l'architecture (decoupage des fichiers, dependances, build, deploiement). Si le changement l'exige, arrete-toi et repasse en `[strict]`.
+
+## Mise a jour de la spec
+
+Apres tout ajout ou modification de contenu ou de fonctionnalite visible par un visiteur, mettre a jour [.ai/SPEC_FONCTIONNALITES.md](.ai/SPEC_FONCTIONNALITES.md) dans la meme intervention. Ne pas documenter les refactos internes sans impact visible.
+
+**Des qu'une action commence** (avant de modifier le moindre fichier), l'inscrire dans la section "Travaux en cours" en bas de la spec : date, objectif, fichiers concernes, etapes faites / restantes, mises a jour au fil de l'eau. La retirer une fois l'action terminee et mise en ligne. But : ne rien perdre si l'intervention plante.
+
+## Mise en ligne
+
+Apres toute modification du site que je demande : verifier (`npm test`, qui construit aussi le site hors ligne), puis **commiter et pousser sur `main` directement, sans me demander** si je souhaite la mise en ligne (le push deploie le site). Ne commiter que les fichiers de la tache (`git add` nominatif, jamais `git add -A`) : d'autres modifications en attente peuvent exister, les laisser telles quelles. Retirer l'entree de « Travaux en cours » dans le meme commit. Ne vaut que pour le site, pas pour les outils hors depot (ex. ThotSync dans `ressources/`).
+
+## explication du code
+
+Codeur novice. Ne pas etre trop technique dans tes explications de code.
+
+## Reprise de session
+
+Au début de chaque session, lire [.ai/AVANCEMENT.md](.ai/AVANCEMENT.md) (où on en est, prochaine action). Le mettre à jour à la fin de chaque étape.
