@@ -87,6 +87,9 @@ const jsonLd = {
         <figcaption>{img.credit} — illustration satirique, sans rapport avec des faits réels.</figcaption>
       </figure>
     )}
+    {!img && d.imagePrompt && (
+      <p class="image-prompt"><strong>Illustration à créer :</strong> {d.imagePrompt}</p>
+    )}
     <div class="satire-box" role="note"><strong>Article satirique.</strong> {satireNotice}</div>
     <div class="body"><Content /></div>
     {isEdito && who && <p class="edito-signature">— {who.name}, rédacteur en chef</p>}
