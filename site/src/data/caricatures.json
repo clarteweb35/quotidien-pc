@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-29",
+    "titre": "Le décorateur officiel",
+    "legende": "Rien ne vaut un beau décor en contreplaqué pour faire oublier la taille du trou dans la caisse.",
+    "alt": "Dessin satirique d'un diplomate poussant un décor en carton doré pour cacher un mur en ruine pendant une signature officielle.",
+    "image": "images/caricatures/2026-10-29.webp",
+    "credit": "Dessin généré par IA · Le Quotidien Presque Certain",
+    "publishedAt": "2026-10-29T11:27:24.032Z",
+    "source": {
+      "name": "France 24",
+      "title": "Sommet Russie-Afrique : une démonstration de force qui peine à cacher le bilan de Moscou",
+      "url": "https://www.france24.com/fr/europe/20261029-sommet-russie-afrique-d%C3%A9monstration-force-peine-cacher-bilan-moscou"
+    }
+  },
+  {
     "date": "2026-10-27",
     "titre": "Carton rouge diplomatique",
     "legende": "Pour conserver ses sponsors internationaux, il faut désormais apprendre à jongler avec la censure plutôt qu'avec un ballon.",

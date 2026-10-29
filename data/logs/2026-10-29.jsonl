@@ -1,0 +1,41 @@
+{"ts":"2026-10-29T11:26:52.798Z","runId":"20261029112652-863c","level":"warn","event":"cycle.slots_abandoned","count":2}
+{"ts":"2026-10-29T11:26:52.799Z","runId":"20261029112652-863c","level":"info","event":"cycle.start","date":"2026-10-29","due":["2026-10-29#2","2026-10-29#3"],"remainingToday":5,"dryRun":false}
+{"ts":"2026-10-29T11:26:53.763Z","runId":"20261029112652-863c","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":34,"kept":25}
+{"ts":"2026-10-29T11:26:53.763Z","runId":"20261029112652-863c","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-10-29T11:26:53.763Z","runId":"20261029112652-863c","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":20}
+{"ts":"2026-10-29T11:26:53.763Z","runId":"20261029112652-863c","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":22}
+{"ts":"2026-10-29T11:26:53.763Z","runId":"20261029112652-863c","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":17}
+{"ts":"2026-10-29T11:26:53.763Z","runId":"20261029112652-863c","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":20,"kept":20}
+{"ts":"2026-10-29T11:26:53.763Z","runId":"20261029112652-863c","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":14}
+{"ts":"2026-10-29T11:26:53.763Z","runId":"20261029112652-863c","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":14}
+{"ts":"2026-10-29T11:26:53.763Z","runId":"20261029112652-863c","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":4}
+{"ts":"2026-10-29T11:26:53.763Z","runId":"20261029112652-863c","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":8}
+{"ts":"2026-10-29T11:26:53.764Z","runId":"20261029112652-863c","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":2}
+{"ts":"2026-10-29T11:26:53.764Z","runId":"20261029112652-863c","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":10}
+{"ts":"2026-10-29T11:26:53.764Z","runId":"20261029112652-863c","level":"info","event":"collect.done","items":172}
+{"ts":"2026-10-29T11:26:53.803Z","runId":"20261029112652-863c","level":"info","event":"topic.selection","slot":"2026-10-29#2","target":"societe","candidates":172,"rejected":20,"chosen":"TotalEnergies engrange un bénéfice net record au troisième trimestre, le gouvernement lui réclame de baisser les prix à la pompe","score":8.5}
+{"ts":"2026-10-29T11:27:04.485Z","runId":"20261029112652-863c","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4269,"outputTokens":1579,"costUsd":0.018246}
+{"ts":"2026-10-29T11:27:05.334Z","runId":"20261029112652-863c","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":919,"outputTokens":56,"costUsd":0.000416}
+{"ts":"2026-10-29T11:27:05.334Z","runId":"20261029112652-863c","level":"info","event":"judge.result","slot":"2026-10-29#2","attempt":1,"humor":7,"coherence":9,"risk":0,"issues":[]}
+{"ts":"2026-10-29T11:27:05.342Z","runId":"20261029112652-863c","level":"info","event":"publish.ok","slot":"2026-10-29#2","id":"af4717009965","slug":"face-aux-benefices-de-totalenergies-il-demande-poliment-a","url":"/articles/face-aux-benefices-de-totalenergies-il-demande-poliment-a/","attempt":1,"dryRun":false}
+{"ts":"2026-10-29T11:27:05.383Z","runId":"20261029112652-863c","level":"info","event":"topic.selection","slot":"2026-10-29#3","target":"politique","candidates":172,"rejected":13,"chosen":"TotalEnergies : bénéfice inédit au troisième trimestre, à 8,3 milliards de dollars ; le gouvernement appelle le groupe à répercuter la baisse des prix","score":7.5}
+{"ts":"2026-10-29T11:27:23.033Z","runId":"20261029112652-863c","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4329,"outputTokens":2678,"costUsd":0.026579}
+{"ts":"2026-10-29T11:27:24.029Z","runId":"20261029112652-863c","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":904,"outputTokens":56,"costUsd":0.000411}
+{"ts":"2026-10-29T11:27:24.029Z","runId":"20261029112652-863c","level":"info","event":"judge.result","slot":"2026-10-29#3","attempt":1,"humor":8,"coherence":9,"risk":1,"issues":[]}
+{"ts":"2026-10-29T11:27:24.031Z","runId":"20261029112652-863c","level":"info","event":"publish.ok","slot":"2026-10-29#3","id":"220b4b254ac0","slug":"prix-du-carburant-le-gouvernement-hausse-le-ton-en-signant","url":"/articles/prix-du-carburant-le-gouvernement-hausse-le-ton-en-signant/","attempt":1,"dryRun":false}
+{"ts":"2026-10-29T11:27:24.449Z","runId":"20261029112652-863c","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":34,"kept":25}
+{"ts":"2026-10-29T11:27:24.449Z","runId":"20261029112652-863c","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-10-29T11:27:24.449Z","runId":"20261029112652-863c","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":20}
+{"ts":"2026-10-29T11:27:24.449Z","runId":"20261029112652-863c","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":22}
+{"ts":"2026-10-29T11:27:24.449Z","runId":"20261029112652-863c","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":17}
+{"ts":"2026-10-29T11:27:24.449Z","runId":"20261029112652-863c","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":20,"kept":20}
+{"ts":"2026-10-29T11:27:24.449Z","runId":"20261029112652-863c","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":14}
+{"ts":"2026-10-29T11:27:24.449Z","runId":"20261029112652-863c","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":14}
+{"ts":"2026-10-29T11:27:24.449Z","runId":"20261029112652-863c","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":4}
+{"ts":"2026-10-29T11:27:24.449Z","runId":"20261029112652-863c","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":8}
+{"ts":"2026-10-29T11:27:24.449Z","runId":"20261029112652-863c","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":2}
+{"ts":"2026-10-29T11:27:24.449Z","runId":"20261029112652-863c","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":10}
+{"ts":"2026-10-29T11:27:32.431Z","runId":"20261029112652-863c","level":"info","event":"gemini.call","purpose":"caricature","model":"gemini-3.6-flash","inputTokens":296,"outputTokens":973,"costUsd":0.007742}
+{"ts":"2026-10-29T11:27:37.741Z","runId":"20261029112652-863c","level":"info","event":"gemini.call","purpose":"image_judge","model":"gemini-3.5-flash-lite","inputTokens":1272,"outputTokens":60,"costUsd":0.000532}
+{"ts":"2026-10-29T11:27:37.742Z","runId":"20261029112652-863c","level":"info","event":"image.ok","slot":"caricature#2026-10-29","bytes":134576,"costUsd":0}
+{"ts":"2026-10-29T11:27:37.743Z","runId":"20261029112652-863c","level":"info","event":"caricature.ok","date":"2026-10-29","titre":"Le décorateur officiel"}

@@ -1,0 +1,83 @@
+{
+  "date": "2026-10-29",
+  "target": 5,
+  "publishedCount": 2,
+  "articles": [
+    {
+      "id": "af4717009965",
+      "ref": "261029-03",
+      "title": "Face aux bénéfices de TotalEnergies, il demande poliment à sa station-service de lui faire une fleur",
+      "category": "societe",
+      "slug": "face-aux-benefices-de-totalenergies-il-demande-poliment-a"
+    },
+    {
+      "id": "220b4b254ac0",
+      "ref": "261029-04",
+      "title": "Prix du carburant : le gouvernement hausse le ton en signant sa lettre avec « Salutations distinguées mais vigilantes »",
+      "category": "politique",
+      "slug": "prix-du-carburant-le-gouvernement-hausse-le-ton-en-signant"
+    }
+  ],
+  "slots": [
+    {
+      "idx": 0,
+      "hhmm": "09:10",
+      "attempts": 0,
+      "status": "abandoned",
+      "lastError": "fenetre_de_rattrapage_depassee"
+    },
+    {
+      "idx": 1,
+      "hhmm": "09:40",
+      "attempts": 0,
+      "status": "abandoned",
+      "lastError": "fenetre_de_rattrapage_depassee"
+    },
+    {
+      "idx": 2,
+      "hhmm": "10:10",
+      "attempts": 1,
+      "status": "published",
+      "startedAt": "2026-10-29T11:26:53.764Z",
+      "articleId": "af4717009965",
+      "publishedAt": "2026-10-29T11:26:53.764Z",
+      "topicId": "fb672c28da21",
+      "lastError": null
+    },
+    {
+      "idx": 3,
+      "hhmm": "10:40",
+      "attempts": 1,
+      "status": "published",
+      "startedAt": "2026-10-29T11:27:05.343Z",
+      "articleId": "220b4b254ac0",
+      "publishedAt": "2026-10-29T11:27:05.343Z",
+      "topicId": "c9fdd7a70142",
+      "lastError": null
+    },
+    {
+      "idx": 4,
+      "hhmm": "11:10",
+      "status": "pending",
+      "attempts": 0
+    }
+  ],
+  "rejections": 0,
+  "quarantined": 0,
+  "api": {
+    "calls": 7,
+    "inputTokens": 11989,
+    "outputTokens": 5402,
+    "costUsd": 0.053926,
+    "dailyCapUsd": 1,
+    "monthCostUsd": 0.696156,
+    "monthlyCapUsd": 15
+  },
+  "paused": false,
+  "lastRun": {
+    "at": "2026-10-29T11:26:52.770Z",
+    "runId": "20261029112652-863c",
+    "published": 2,
+    "stopped": null
+  }
+}

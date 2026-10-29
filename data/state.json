@@ -1206,6 +1206,406 @@
       "seenAt": "2026-10-28T11:18:20.778Z",
       "status": "excluded",
       "reason": "sensitive"
+    },
+    "74075cd2f918": {
+      "title": "Collision meurtrière entre deux trains en Espagne : plusieurs ressortissants français sont recherchés, annonce le ministère des Affaires étrangères",
+      "url": "https://www.franceinfo.fr/monde/espagne/direct-collision-meurtriere-entre-deux-trains-en-espagne-l-enchainement-de-circonstances-qui-ont-conduit-a-l-accident-s-eclaircit-peu-a-peu_8258189.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-29T11:26:53.764Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "f67ce61cbf70": {
+      "title": "\"Il y avait tout qui bougeait, des gens qui criaient, des gens qui pleuraient, des valises qui volaient\", raconte un rescapé franco-espagnol après la collision de trains en Espagne",
+      "url": "https://www.franceinfo.fr/monde/espagne/accident-de-trains-pres-de-tolede/temoignage-il-y-avait-tout-qui-bougeait-des-gens-qui-criaient-des-gens-qui-pleuraient-des-valises-qui-volaient-raconte-un-rescape-franco-espagnol-apres-la-collision-de-trains-en-espagne_8257943.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-29T11:26:53.764Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "85e2055cb6b6": {
+      "title": "\"Cela aurait pu arriver à n'importe qui\" : les voyageurs de la gare de Madrid se disent inquiets après la collision meurtrière entre deux trains en Espagne",
+      "url": "https://www.franceinfo.fr/monde/espagne/accident-de-trains-pres-de-tolede/cela-aurait-pu-arriver-a-n-importe-qui-apres-la-collision-de-trains-en-espagne-les-voyageurs-de-la-gare-de-madrid-se-disent-inquiets_8258381.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-29T11:26:53.764Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "832a2df1d7af": {
+      "title": "Attentat raciste dans les Yvelines : Kevin T. admet avoir ciblé des personnes \"de type musulman, africain ou nord-africain\", mais conteste \"toute intention terroriste\"",
+      "url": "https://www.franceinfo.fr/societe/trappes/direct-attentat-raciste-a-trappes-le-suspect-a-ete-transfere-dans-la-nuit-au-tribunal-judiciaire-de-paris-en-vue-de-sa-mise-en-examen_8258192.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-29T11:26:53.764Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "d7f0a51c1189": {
+      "title": "\"Vous pouvez parler librement\" : des témoins gagnés par la peur au procès de l'assassinat du frère d'Amine Kessaci",
+      "url": "https://www.franceinfo.fr/faits-divers/justice-proces/vous-pouvez-parler-librement-des-temoins-gagnes-par-la-peur-au-proces-de-l-assassinat-du-frere-d-amine-kessaci_8258696.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-29T11:26:53.764Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "30c228cec4a5": {
+      "title": "Meurtre de Quentin Deranque : le député insoumis Raphaël Arnault convoqué en audition libre plusieurs heures par la police antiterroriste mercredi",
+      "url": "https://www.franceinfo.fr/faits-divers/mort-de-quentin-militant-identitaire-agresse-a-lyon/meurtre-de-quentin-deranque-le-depute-insoumis-raphael-arnault-entendu-en-audition-libre-plusieurs-heures-par-la-police-antiterroriste-mercredi_8258525.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-29T11:26:53.764Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "0ffc7c0f4545": {
+      "title": "Midterms 2026 : durement touchés par les guerres commerciales de Donald Trump, les agriculteurs républicains vont-ils changer de camp ?",
+      "url": "https://www.franceinfo.fr/replay-magazine/france-2/envoye-special/video-midterms-2026-durement-impactes-par-les-guerres-commerciales-de-trump-les-agriculteurs-republicains-vont-ils-changer-de-camp_8257135.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-29T11:26:53.764Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "8bd38951fd19": {
+      "title": "Les deux mineurs arrêtés après l'incendie d'un collège à Metz en octobre seront jugés en décembre",
+      "url": "https://www.franceinfo.fr/faits-divers/les-deux-mineurs-arretes-apres-l-incendie-d-un-college-a-metz-en-octobre-seront-juges-en-decembre_8258651.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-29T11:26:53.764Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "f2b838e792a1": {
+      "title": "Santé publique France a recensé 441 morts par noyade entre mai et août, principalement pendant les canicules",
+      "url": "https://www.franceinfo.fr/faits-divers/noyades/entre-le-1er-mai-et-le-31-aout-441-morts-par-noyade-principalement-pendant-les-canicules-denombre-sante-publique-france_8258543.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-29T11:26:53.764Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "773938deb927": {
+      "title": "Attentat raciste à Trappes : Kévin T., poursuivi pour assassinat terroriste, a déclaré que la ville était un « repaire d’islamistes » pour justifier ses actes, selon le parquet",
+      "url": "https://www.lemonde.fr/societe/article/2026/10/29/attentat-raciste-a-trappes-kevin-t-poursuivi-pour-assassinat-terroriste-a-declare-que-la-ville-etait-un-repaire-d-islamistes-pour-justifier-ses-actes-selon-le-parquet_6802311_3224.html",
+      "category": "societe",
+      "seenAt": "2026-10-29T11:26:53.764Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "ada45ec47f8f": {
+      "title": "« Ils savaient parfaitement que la ligne Madrid-Séville n’était pas sûre » : dans la presse espagnole, les premières révélations sur les causes de la catastrophe ferroviaire",
+      "url": "https://www.lemonde.fr/international/article/2026/10/29/ils-savaient-parfaitement-que-la-ligne-madrid-seville-n-etait-pas-sure-dans-la-presse-espagnole-les-premieres-revelations-sur-les-causes-de-la-catastrophe-ferroviaire_6802295_3210.html",
+      "category": "societe",
+      "seenAt": "2026-10-29T11:26:53.764Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "e3a583247703": {
+      "title": "EN DIRECT, guerre en Ukraine : Volodymyr Zelensky réclame de nouvelles sanctions contre la Russie après la « terrible frappe » contre la gare ferroviaire de Dnipro qui a fait 13 morts",
+      "url": "https://www.lemonde.fr/international/live/2026/10/29/en-direct-guerre-en-ukraine-volodymyr-zelensky-reclame-de-nouvelles-sanctions-contre-la-russie-apres-la-terrible-frappe-russe-contre-la-gare-ferroviaire-de-dnipro-qui-a-fait-13-morts_6799896_3210.html",
+      "category": "societe",
+      "seenAt": "2026-10-29T11:26:53.764Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "4830b67f7472": {
+      "title": "Le général Christian Piquemal, qui avait signé en 2021 une tribune controversée de militaires, est mort",
+      "url": "https://www.lemonde.fr/disparitions/article/2026/10/29/le-general-christian-piquemal-qui-avait-signe-en-2021-une-tribune-controversee-de-militaires-est-mort_6802303_3382.html",
+      "category": "societe",
+      "seenAt": "2026-10-29T11:26:53.764Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "347b5dab3830": {
+      "title": "Attentat de Trappes : le suspect avait des dizaines d’autocollants du RN chez lui, selon le procureur antiterroriste",
+      "url": "https://www.liberation.fr/societe/police-justice/attentat-de-trappes-le-suspect-avait-des-dizaines-dautocollants-du-rn-chez-lui-selon-le-procureur-antiterroriste-20261029_QCFIOMEIJBAKBLWSRRPA7AKNUU/",
+      "category": "societe",
+      "seenAt": "2026-10-29T11:26:53.764Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "6e1690367241": {
+      "title": "A la Maison de la résilience de Nancy, une bulle d’espoir pour les victimes de violences sexuelles",
+      "url": "https://www.liberation.fr/societe/droits-des-femmes/a-la-maison-de-la-resilience-de-nancy-une-bulle-despoir-pour-les-victimes-de-violences-sexuelles-20261029_5QA7QN2VQJEPNHXVQZ2LVGETXE/",
+      "category": "societe",
+      "seenAt": "2026-10-29T11:26:53.764Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "f012c8d73b19": {
+      "title": "En 2025, en France, 927 personnes sont mortes «sans chez-soi»",
+      "url": "https://www.liberation.fr/societe/logement/en-2025-en-france-927-personnes-sont-decedees-sans-chez-soi-20261029_X2OQRG4L2RD4TLQXD4DTIQ67UE/",
+      "category": "societe",
+      "seenAt": "2026-10-29T11:26:53.764Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "c929fac0a972": {
+      "title": "Les larmes noires de la République, par Yannick Haenel",
+      "url": "https://www.liberation.fr/idees-et-debats/opinions/les-larmes-noires-de-la-republique-par-yannick-haenel-20261029_ZLV37X6WN5GA5PB2YOJHS5N2MY/",
+      "category": "societe",
+      "seenAt": "2026-10-29T11:26:53.764Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "67e52836b965": {
+      "title": "Emmanuel Macron dénonce une «désinhibition du racisme» et de «l’antisémitisme», renvoyant RN et LFI dos-à-dos",
+      "url": "https://www.liberation.fr/politique/emmanuel-macron-denonce-une-desinhibition-du-racisme-et-de-lantisemitisme-renvoyant-rn-et-lfi-dos-a-dos-20261029_AT2AKN2LCNCUVI7ZFKR4AN3IIA/",
+      "category": "societe",
+      "seenAt": "2026-10-29T11:26:53.764Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "fb23c0bfef71": {
+      "title": "«J’ai cessé d’avoir confiance dans les trains» : l’Espagne frappée par une nouvelle catastrophe ferroviaire",
+      "url": "https://www.liberation.fr/international/europe/jai-cesse-davoir-confiance-dans-les-trains-lespagne-frappee-par-une-nouvelle-catastrophe-ferroviaire-20261028_DUL6F6B7LNDNZKLBJJG5BDKPVQ/",
+      "category": "societe",
+      "seenAt": "2026-10-29T11:26:53.764Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "6f3bb953098e": {
+      "title": "Catastrophe ferroviaire en Espagne : plusieurs Français portés disparus",
+      "url": "https://www.liberation.fr/international/europe/catastrophe-ferroviaire-en-espagne-plusieurs-francais-portes-disparus-20261029_CFPV67PS6BGBNI34DLBURDMIEY/",
+      "category": "societe",
+      "seenAt": "2026-10-29T11:26:53.764Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "fb672c28da21": {
+      "title": "TotalEnergies engrange un bénéfice net record au troisième trimestre, le gouvernement lui réclame de baisser les prix à la pompe",
+      "url": "https://www.franceinfo.fr/environnement/energie/energies-fossiles/totalenergies/totalenergies-engrange-un-benefice-net-record-au-3e-trimestre-plus-que-double-sur-un-an-en-raison-de-l-envolee-des-prix-des-hydrocarbures_8258201.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-10-29T11:26:53.764Z",
+      "status": "used",
+      "usedAt": "2026-10-29T11:26:53.764Z"
+    },
+    "c965be027b93": {
+      "title": "Vote des mineurs : « On dit que le suffrage est “universel”, sans se rendre compte qu’il exclut 20 % de la population, les enfants »",
+      "url": "https://www.lemonde.fr/campus/article/2026/10/29/vote-des-mineurs-on-dit-que-le-suffrage-est-universel-sans-se-rendre-compte-que-cela-propulse-les-enfants-aux-confins-de-l-univers_6802087_4401467.html",
+      "category": "politique",
+      "seenAt": "2026-10-29T11:27:05.343Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "1ba00b69946e": {
+      "title": "Jean-Luc Mélenchon et LFI à la conquête des « gameurs » avant la présidentielle de 2027",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/29/jean-luc-melenchon-et-lfi-a-la-conquete-des-gamers-avant-la-presidentielle-de-2027_6802012_823448.html",
+      "category": "politique",
+      "seenAt": "2026-10-29T11:27:05.343Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "4bc4268da154": {
+      "title": "Manifestations du 24 octobre : l’IGPN saisie à Toulouse à la suite de la plainte d’un jeune homme grièvement blessé à la main",
+      "url": "https://www.lemonde.fr/societe/article/2026/10/29/manifestations-du-24-octobre-l-igpn-saisie-a-toulouse-apres-la-plainte-d-un-jeune-homme-grievement-blesse-a-la-main_6801809_3224.html",
+      "category": "politique",
+      "seenAt": "2026-10-29T11:27:05.343Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "aabe2e3bbc52": {
+      "title": "Paris : la justice suspend le couvre-feu pour les mineurs non accompagnés",
+      "url": "https://www.lemonde.fr/societe/article/2026/10/28/paris-la-justice-suspend-le-couvre-feu-pour-les-mineurs-non-accompagnes_6801677_3224.html",
+      "category": "politique",
+      "seenAt": "2026-10-29T11:27:05.343Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "bfd09517b19b": {
+      "title": "Mobilisation lycéenne : des experts de l’ONU se disent consternés par la répression des manifestations, et dénoncent un « recours excessif à la force »",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/28/mobilisation-lyceenne-des-experts-de-l-onu-se-disent-consternes-par-la-repression-des-manifestations-et-denoncent-un-recours-excessif-a-la-force_6801622_823448.html",
+      "category": "politique",
+      "seenAt": "2026-10-29T11:27:05.343Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "f6a57c64bbc7": {
+      "title": "Après l’attentat raciste de Trappes, LFI et Emmanuel Grégoire mettent en garde contre des manifestations liées à l’extrême droite prévues ce week-end",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/28/apres-l-attentat-raciste-de-trappes-lfi-et-emmanuel-gregoire-mettent-en-garde-contre-des-manifestations-liees-a-l-extreme-droite-prevues-ce-week-end_6801620_823448.html",
+      "category": "politique",
+      "seenAt": "2026-10-29T11:27:05.343Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "dc0c87dc90b4": {
+      "title": "\"Des propos inacceptables, particulièrement insupportables\", Manuel Bompard \"vise\" l'extrême droite avant l'hommage national aux victimes de l'attentat raciste de Trappes",
+      "url": "https://www.franceinfo.fr/faits-divers/terrorisme/attentat-raciste-a-trappes/des-propos-inacceptables-particulierement-insupportables-manuel-bompard-vise-l-extreme-droite-avant-l-hommage-national-aux-victimes-de-l-attentat-raciste-de-trappes_8258471.html#xtor=RSS-3-%5Bgeneral%5D",
+      "category": "politique",
+      "seenAt": "2026-10-29T11:27:05.343Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "3a517838f468": {
+      "title": "\"On est obligés de faire attention\" : comment Raphaël Glucksmann cherche la parade face à \"l'hostilité\" des insoumis sur le terrain",
+      "url": "https://www.franceinfo.fr/politique/raphael-glucksmann/on-est-obliges-de-faire-attention-comment-raphael-glucksmann-cherche-la-parade-face-a-l-hostilite-des-insoumis-sur-le-terrain_8257408.html#xtor=RSS-3-%5Bgeneral%5D",
+      "category": "politique",
+      "seenAt": "2026-10-29T11:27:05.343Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "8941a65c5f9e": {
+      "title": "En Espagne, la collision meurtrière entre deux trains fragilise-t-elle la campagne législative de Pedro Sánchez ?",
+      "url": "https://www.franceinfo.fr/monde/espagne/accident-de-trains-pres-de-tolede/en-espagne-la-collision-meurtriere-entre-deux-trains-fragilise-t-elle-la-campagne-legislative-de-pedro-sanchez_8258009.html#xtor=RSS-3-%5Bgeneral%5D",
+      "category": "politique",
+      "seenAt": "2026-10-29T11:27:05.343Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "f1efe03ba8d9": {
+      "title": "\"Un citoyen qui fuit son pays a forcément quelque chose à cacher\" : la fuite de Flavio Bolsonaro à Miami après sa défaite au Brésil fait réagir le président Lula",
+      "url": "https://www.franceinfo.fr/monde/bresil/un-citoyen-qui-fuit-son-pays-a-forcement-quelque-chose-a-cacher-la-fuite-de-flavio-bolsonaro-a-miami-apres-sa-defaite-au-bresil-fait-reagir-le-president-lula_8257958.html#xtor=RSS-3-%5Bgeneral%5D",
+      "category": "politique",
+      "seenAt": "2026-10-29T11:27:05.343Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "ff8b3438d553": {
+      "title": "Pourquoi l'unité nationale contre le racisme est-elle impossible ?",
+      "url": "https://www.franceinfo.fr/politique/parlement-francais/assemblee-nationale/pourquoi-l-unite-nationale-contre-le-racisme-est-elle-impossible_8257318.html#xtor=RSS-3-%5Bgeneral%5D",
+      "category": "politique",
+      "seenAt": "2026-10-29T11:27:05.343Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "38fb61f17942": {
+      "title": "EDITO. Quand l'Assemblée nationale se déchire sur la lutte contre le racisme",
+      "url": "https://www.franceinfo.fr/replay-radio/l-edito-politique/edito-quand-l-assemblee-nationale-se-dechire-sur-la-lutte-contre-le-racisme_8236297.html#xtor=RSS-3-%5Bgeneral%5D",
+      "category": "politique",
+      "seenAt": "2026-10-29T11:27:05.343Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "c9b0e386f590": {
+      "title": "Attentat raciste à Trappes : foire d'empoigne à l'Assemblée nationale",
+      "url": "https://www.franceinfo.fr/replay-jt/franceinfo/21h-minuit/23-heures/attentat-raciste-a-trappes-foire-d-empoigne-a-l-assemblee-nationale_8256910.html#xtor=RSS-3-%5Bgeneral%5D",
+      "category": "politique",
+      "seenAt": "2026-10-29T11:27:05.343Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "c9fdd7a70142": {
+      "title": "TotalEnergies : bénéfice inédit au troisième trimestre, à 8,3 milliards de dollars ; le gouvernement appelle le groupe à répercuter la baisse des prix",
+      "url": "https://www.lemonde.fr/economie/article/2026/10/29/totalenergies-benefice-inedit-au-troisieme-trimestre-a-8-3-milliards-de-dollars-le-gouvernement-appelle-le-groupe-a-repercuter-la-baisse-des-prix_6802292_3234.html",
+      "category": "politique",
+      "seenAt": "2026-10-29T11:27:05.343Z",
+      "status": "used",
+      "usedAt": "2026-10-29T11:27:05.343Z"
+    },
+    "9a194b433e1e": {
+      "title": "Israël: premières législatives post-7 octobre",
+      "url": "https://www.france24.com/fr/%C3%A9missions/on-va-plus-loin/20261029-isra%C3%ABl-premi%C3%A8res-l%C3%A9gislatives-post-7-octobre",
+      "category": "monde",
+      "seenAt": "2026-10-29T11:27:24.032Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "7019e949a2d1": {
+      "title": "Attentat raciste dans les Yvelines : le procureur de la République anti-terroriste prend la parole",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261029-attentat-raciste-dans-les-yvelines-le-procureur-de-la-r%C3%A9publique-anti-terroriste-prend-la-parole",
+      "category": "monde",
+      "seenAt": "2026-10-29T11:27:24.032Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "3a4359d28686": {
+      "title": "Attentat raciste dans les Yvelines : un élan de solidarité se met en place pour les victimes.",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261029-attentat-raciste-dans-les-yvelines-un-%C3%A9lan-de-solidarit%C3%A9-se-met-en-place-pour-les-victimes",
+      "category": "monde",
+      "seenAt": "2026-10-29T11:27:24.032Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "b1daaeba060d": {
+      "title": "Espagne : les secours encore en recherche de victimes, le pays en état de choc",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261029-espagne-les-secours-encore-en-recherche-de-victimes-le-pays-en-%C3%A9tat-de-choc",
+      "category": "monde",
+      "seenAt": "2026-10-29T11:27:24.032Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "1c7a2ae997b3": {
+      "title": "🔴 Attentat de Trappes : le suspect admet avoir ciblé des personnes \"musulmanes, africaines ou nord-africaines\"",
+      "url": "https://www.france24.com/fr/france/20261029-attentat-de-trappes-l-assaillant-transf%C3%A9r%C3%A9-au-tribunal-en-vue-de-sa-mise-en-examen",
+      "category": "monde",
+      "seenAt": "2026-10-29T11:27:24.032Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "e1aff877e286": {
+      "title": "Espagne : collision mortelle entre deux trains",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261029-espagne-collision-mortelle-entre-deux-trains",
+      "category": "monde",
+      "seenAt": "2026-10-29T11:27:24.032Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "32f4f4986387": {
+      "title": "Après la collision de deux trains, l'Espagne entame trois jours de deuil national",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261029-apr%C3%A8s-la-collision-de-deux-trains-l-espagne-entame-trois-jours-de-deuil-national",
+      "category": "monde",
+      "seenAt": "2026-10-29T11:27:24.032Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "311070bece90": {
+      "title": "Attentat de Trappes : Macron renvoie dos à dos le RN et LFI sur le racisme et l'antisémitisme",
+      "url": "https://www.france24.com/fr/france/20261029-attentat-de-trappes-macron-renvoie-dos-%C3%A0-dos-le-rn-et-lfi-sur-le-racisme-et-l-antis%C3%A9mitisme",
+      "category": "monde",
+      "seenAt": "2026-10-29T11:27:24.032Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "e44c84895c6b": {
+      "title": "League Cup : Liverpool élimine Chelsea au bout du suspense",
+      "url": "https://www.france24.com/fr/%C3%A9missions/sports/20261029-league-cup-liverpool-%C3%A9limine-chelsea-au-bout-du-suspense",
+      "category": "monde",
+      "seenAt": "2026-10-29T11:27:24.032Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "25e60ca7dba6": {
+      "title": "Après la collision de deux trains, l'Espagne entame trois jours de deuil national",
+      "url": "https://www.france24.com/fr/europe/20261029-apr%C3%A8s-la-collision-de-deux-trains-l-espagne-entame-trois-jours-de-deuil-national",
+      "category": "monde",
+      "seenAt": "2026-10-29T11:27:24.032Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "230b36bb3bff": {
+      "title": "Haïti : Médecins sans frontières alerte sur une « explosion de violence » à Port-au-Prince",
+      "url": "https://www.lemonde.fr/international/article/2026/10/29/haiti-medecins-sans-frontieres-alerte-sur-une-explosion-de-violence-a-port-au-prince_6802306_3210.html",
+      "category": "monde",
+      "seenAt": "2026-10-29T11:27:24.032Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "e432c4edb28d": {
+      "title": "Les attentes limitées des pays arabes face à Israël",
+      "url": "https://www.lemonde.fr/idees/article/2026/10/29/les-attentes-limitees-des-pays-arabes-face-a-israel_6802015_3232.html",
+      "category": "monde",
+      "seenAt": "2026-10-29T11:27:24.032Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "73e9d08b5c60": {
+      "title": "Comment les tensions géopolitiques redessinent la carte des routes aériennes commerciales",
+      "url": "https://www.lemonde.fr/economie/article/2026/10/29/comment-les-tensions-geopolitiques-redessinent-la-carte-des-routes-aeriennes-commerciales_6802011_3234.html",
+      "category": "monde",
+      "seenAt": "2026-10-29T11:27:24.032Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "58273e21b3ac": {
+      "title": "En Colombie, une nouvelle frappe contre des narcotrafiquants présumés fait au moins six morts",
+      "url": "https://www.lemonde.fr/international/article/2026/10/29/en-colombie-une-nouvelle-frappe-contre-des-narcotrafiquants-presumes-fait-au-moins-six-morts_6801978_3210.html",
+      "category": "monde",
+      "seenAt": "2026-10-29T11:27:24.032Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "eb7edfdc0241": {
+      "title": "Sommet Russie-Afrique : une démonstration de force qui peine à cacher le bilan de Moscou",
+      "url": "https://www.france24.com/fr/europe/20261029-sommet-russie-afrique-d%C3%A9monstration-force-peine-cacher-bilan-moscou",
+      "category": "monde",
+      "seenAt": "2026-10-29T11:27:24.032Z",
+      "status": "used",
+      "usedAt": "2026-10-29T11:27:24.032Z"
     }
   },
   "slots": {
@@ -1466,13 +1866,43 @@
         "status": "abandoned",
         "lastError": "fenetre_de_rattrapage_depassee"
       }
+    },
+    "2026-10-29": {
+      "0": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "1": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "2": {
+        "attempts": 1,
+        "status": "published",
+        "startedAt": "2026-10-29T11:26:53.764Z",
+        "articleId": "af4717009965",
+        "publishedAt": "2026-10-29T11:26:53.764Z",
+        "topicId": "fb672c28da21",
+        "lastError": null
+      },
+      "3": {
+        "attempts": 1,
+        "status": "published",
+        "startedAt": "2026-10-29T11:27:05.343Z",
+        "articleId": "220b4b254ac0",
+        "publishedAt": "2026-10-29T11:27:05.343Z",
+        "topicId": "c9fdd7a70142",
+        "lastError": null
+      }
     }
   },
   "lastRun": {
-    "at": "2026-10-28T11:14:21.859Z",
-    "runId": "20261028111421-b5a7",
-    "published": 1,
-    "stopped": "gemini_unavailable"
+    "at": "2026-10-29T11:26:52.770Z",
+    "runId": "20261029112652-863c",
+    "published": 2,
+    "stopped": null
   },
   "caricatures": {
     "2026-10-27": {
@@ -1484,6 +1914,11 @@
       "status": "failed",
       "attempts": 1,
       "lastError": "image_indisponible"
+    },
+    "2026-10-29": {
+      "status": "published",
+      "attempts": 1,
+      "lastError": null
     }
   }
 }
