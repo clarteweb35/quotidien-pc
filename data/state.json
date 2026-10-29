@@ -1895,6 +1895,11 @@
         "publishedAt": "2026-10-29T11:27:05.343Z",
         "topicId": "c9fdd7a70142",
         "lastError": null
+      },
+      "4": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
       }
     }
   },

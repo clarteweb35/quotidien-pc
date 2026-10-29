@@ -39,3 +39,5 @@
 {"ts":"2026-10-29T11:27:37.741Z","runId":"20261029112652-863c","level":"info","event":"gemini.call","purpose":"image_judge","model":"gemini-3.5-flash-lite","inputTokens":1272,"outputTokens":60,"costUsd":0.000532}
 {"ts":"2026-10-29T11:27:37.742Z","runId":"20261029112652-863c","level":"info","event":"image.ok","slot":"caricature#2026-10-29","bytes":134576,"costUsd":0}
 {"ts":"2026-10-29T11:27:37.743Z","runId":"20261029112652-863c","level":"info","event":"caricature.ok","date":"2026-10-29","titre":"Le décorateur officiel"}
+{"ts":"2026-10-29T17:31:32.045Z","runId":"20261029173132-2893","level":"warn","event":"cycle.slots_abandoned","count":1}
+{"ts":"2026-10-29T17:31:32.047Z","runId":"20261029173132-2893","level":"info","event":"cycle.start","date":"2026-10-29","due":[],"remainingToday":3,"dryRun":false}
