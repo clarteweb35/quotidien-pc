@@ -1,7 +1,6 @@
 ---
 id: "didier-03"
 author: "Alexandre Villedieu"
-coauthor: "Didier Hoguet"
 ref: "261030-D2"
 title: "Trump promet 5 000 dollars aux Américains : le chèque est hypothétique, la dette est bien réelle !"
 chapo: "Donald Trump promet 5 000 dollars à chaque adulte américain. Sur le papier, la perspective est séduisante : pour un ménage qui peine à boucler ses fins de mois, une telle somme serait loin d’être négligeable."

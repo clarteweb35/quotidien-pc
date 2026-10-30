@@ -1,6 +1,6 @@
 ---
 id: "didier-04"
-author: "Didier Hoguet"
+author: "Hélène Vautrin"
 title: "Bernard Arnault compte ses milliards, les politiques comptent leurs mandats : devinez qui fait scandale !"
 chapo: "En France, il existe une drôle de règle : être riche est parfois considéré comme une faute. Mais avoir fait une longue carrière politique, accumulé les fonctions et acquis des droits à retraite au fil des mandats semble beaucoup moins susciter d’indignation."
 description: "Les grandes fortunes sont scrutées, les longues carrières politiques beaucoup moins. L'exigence de transparence devrait valoir pour tous."

@@ -1,6 +1,6 @@
 ---
 id: "didier-05"
-author: "Didier Hoguet"
+author: "Éva Porée"
 ref: "261031-D1"
 title: "Biodiversité : après deux semaines de négociations, 200 pays s’accordent pour continuer à sauver la planète, si possible sans trop changer leurs habitudes"
 chapo: "La COP17 d’Erevan vient de s’achever sur l’adoption de plusieurs textes consacrés à la protection de la nature. Une nouvelle victoire diplomatique pour la planète, qui pourra désormais compter sur des engagements supplémentaires, des objectifs renouvelés et une certitude rassurante : les États sont parfaitement conscients de l’urgence."

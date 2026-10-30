@@ -1,6 +1,6 @@
 ---
 id: "didier-06"
-author: "Didier Hoguet"
+author: "Marion Lefebvre"
 ref: "261031-D2"
 title: "Halloween : 70 000 policiers mobilisés, les autorités organisent une gigantesque bataille navale contre les manifestants"
 chapo: "Tenues noires, pétards, canons à eau et véhicules blindés : pour cette troisième journée de mobilisation, les forces de l’ordre ont décidé de ne pas faire les choses à moitié. Après avoir tenté de reléguer les manifestations en périphérie des villes, les autorités auraient même trouvé une solution géographique radicale : autoriser les prochains rassemblements à Saint-Pierre-et-Miquelon."
