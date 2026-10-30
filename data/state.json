@@ -2018,9 +2018,19 @@
       },
       "2": {
         "attempts": 1,
-        "status": "failed",
+        "status": "abandoned",
         "startedAt": "2026-10-30T11:18:43.261Z",
         "lastError": "gemini_unavailable: Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}"
+      },
+      "3": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "4": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
       }
     }
   },

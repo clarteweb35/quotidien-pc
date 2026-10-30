@@ -22,21 +22,23 @@
       "idx": 2,
       "hhmm": "10:10",
       "attempts": 1,
-      "status": "failed",
+      "status": "abandoned",
       "startedAt": "2026-10-30T11:18:43.261Z",
       "lastError": "gemini_unavailable: Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}"
     },
     {
       "idx": 3,
       "hhmm": "10:40",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 0,
+      "status": "abandoned",
+      "lastError": "fenetre_de_rattrapage_depassee"
     },
     {
       "idx": 4,
       "hhmm": "11:10",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 0,
+      "status": "abandoned",
+      "lastError": "fenetre_de_rattrapage_depassee"
     }
   ],
   "rejections": 0,

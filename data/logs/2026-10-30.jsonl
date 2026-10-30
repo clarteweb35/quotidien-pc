@@ -34,3 +34,5 @@
 {"ts":"2026-10-30T11:20:19.208Z","runId":"20261030111842-1933","level":"info","event":"gemini.call","purpose":"image_judge","model":"gemini-3.5-flash-lite","inputTokens":1252,"outputTokens":60,"costUsd":0.000526}
 {"ts":"2026-10-30T11:20:19.208Z","runId":"20261030111842-1933","level":"info","event":"image.ok","slot":"caricature#2026-10-30","bytes":148178,"costUsd":0}
 {"ts":"2026-10-30T11:20:19.209Z","runId":"20261030111842-1933","level":"info","event":"caricature.ok","date":"2026-10-30","titre":"Dispositif proportionné"}
+{"ts":"2026-10-30T17:07:57.378Z","runId":"20261030170757-b0f6","level":"warn","event":"cycle.slots_abandoned","count":3}
+{"ts":"2026-10-30T17:07:57.379Z","runId":"20261030170757-b0f6","level":"info","event":"cycle.start","date":"2026-10-30","due":[],"remainingToday":5,"dryRun":false}
