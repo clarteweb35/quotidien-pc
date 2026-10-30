@@ -7,13 +7,13 @@ chapo: "Face à l’actualité, les chancelleries ont réagi avec une rapidité 
 description: "Satire : les communiqués de « profonde préoccupation » des chancelleries se ressemblent tellement qu’ils sont désormais vendus avec des trous à remplir."
 category: "monde"
 tags: ["monde","diplomatie","communiqué","onu","langue-de-bois"]
-publishedAt: "2026-10-31T09:02:00.000Z"
+publishedAt: "2026-10-30T23:32:00.000Z"
 kind: "news"
 satire: true
 sources: []
 slug: "plus-jamais-ca-le-communique-de-preoccupation-reedite-en-14-langues"
 imagePrompt: "Une grande salle de conférence presque vide : une photocopieuse tourne seule dans un coin, et sur chaque pupitre est posé le même communiqué, imprimé dans une langue différente."
-imageAlt: "Une salle de conférence presque vide où chaque pupitre porte le même communiqué imprimé dans une langue différente."
+imageAlt: "Dessin à l’encre et à l’aquarelle d’une salle de conférence vide : des chaises alignées, des piles de communiqués identiques sur les pupitres et des petits drapeaux sur la table."
 ---
 La préoccupation est la seule ressource renouvelable que les chancelleries exploitent à plein rendement. Elle ne s’épuise jamais, elle ne coûte rien et elle se recycle d’une crise à l’autre sans perte de qualité.
 
