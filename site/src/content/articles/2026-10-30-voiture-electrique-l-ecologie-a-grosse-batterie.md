@@ -1,18 +1,18 @@
 ---
 id: "didier-02"
+ref: "261030-D1"
 author: "Didier Hoguet"
 title: "Voiture électrique : l’écologie à grosse batterie… et à grosse dose d’hypocrisie !"
 chapo: "On voulait électrifier le parc automobile. On se retrouve à fabriquer des SUV de deux tonnes, équipés de batteries XXL, vendus à prix d’or. La planète devait y gagner. Les constructeurs, eux, ont surtout trouvé un nouveau filon."
 description: "Les ventes de voitures électriques progressent, mais les SUV à grosse batterie se taillent la part du lion. La transition écologique a-t-elle pris quelques kilos ?"
 category: "environnement"
 tags: ["environnement","voiture-électrique","suv","batteries","transition-écologique"]
-publishedAt: "2026-10-30T09:01:00.000Z"
+publishedAt: "2026-10-30T20:20:00.000Z"
 kind: "news"
 satire: true
 sources: []
 slug: "voiture-electrique-l-ecologie-a-grosse-batterie"
-imagePrompt: "Un énorme SUV électrique vert pomme garé devant une boulangerie de village, son câble de recharge enroulé comme un serpent, tandis qu'une minuscule citadine électrique se faufile à côté, une baguette sur le siège."
-imageAlt: "Un énorme SUV électrique garé devant une boulangerie, à côté d'une minuscule citadine."
+imageAlt: "Des mineurs couverts de terre rouge portent des sacs de minerai dans une étroite tranchée."
 ---
 Il paraît que la France accélère sa transition écologique. Les immatriculations de voitures électriques progressent fortement. Mais avant de sortir les confettis verts, regardons ce qui se cache derrière le volant.
 
