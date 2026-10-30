@@ -27,6 +27,10 @@ La transition écologique aurait-elle pris quelques kilos ?
 
 Pour mesurer l’ampleur du phénomène, jetons un œil au sommet de la gamme : le plus gros SUV électrique du marché, le Cadillac Escalade IQL. Il frôle les six mètres de long, soit plus qu’une place de parking standard, et s’affiche à partir de 130 000 dollars.
 
+![Le Cadillac Escalade IQL, un SUV électrique de près de six mètres, vu de trois quarts avant sur un parking au crépuscule.](../../assets/articles/cadillac-escalade-iql.png)
+
+*Le Cadillac Escalade IQL. Photo : Cadillac (site du constructeur), non satirique.*
+
 À ce prix-là, on n’achète plus une voiture, on achète un appartement roulant avec prise de recharge. Difficile d’y voir l’emblème de la mobilité sobre.
 
 ## Quand le prix du carburant devient soudainement une conviction écologique

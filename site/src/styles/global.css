@@ -66,6 +66,9 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.15; }
 .article .chapo { font-size: 1.28rem; line-height: 1.5; color: var(--ink-2); font-style: italic; margin: 0 0 14px; }
 .article .body { margin-top: 24px; font-size: 1.14rem; }
 .article .body h2 { font-size: 1.5rem; margin: 1.8em 0 .5em; }
+/* Image insérée dans le texte (Markdown) : pleine largeur, légende en dessous */
+.article .body img { display: block; max-width: 100%; height: auto; margin: 1em 0 .3em; border-radius: 2px; }
+.article .body p:has(> img) + p > em:only-child { font: .78rem/1.4 var(--sans); color: var(--ink-2); }
 .article .related { margin-top: 34px; padding-top: 8px; border-top: 1px solid var(--rule); }
 .article .related h2 { font-size: 1.5rem; margin: 1em 0 .5em; }
 .article .related .grid { gap: 18px 16px; margin-top: 14px; }
