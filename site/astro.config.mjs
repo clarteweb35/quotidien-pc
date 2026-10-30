@@ -29,7 +29,7 @@ export default defineConfig({
   integrations: [
     sitemap({
       filter: (page) => {
-        if (page.includes('/admin/')) return false;
+        if (page.includes('/admin/') || page.endsWith('/test/')) return false;
         const tag = /\/tag\/([^/]+)\/$/.exec(page)?.[1];
         return !tag || (tagCount.get(decodeURIComponent(tag)) ?? 0) >= 3;
       },

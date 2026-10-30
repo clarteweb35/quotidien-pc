@@ -70,7 +70,7 @@ const jsonLd = {
     {isEdito && photo && <img class="avatar avatar-lg edito-portrait" src={url(photo)} width="150" height="150" alt={`Portrait fictif de ${who!.name} (image générée par IA)`} />}
     <p class="byline">
       {!isEdito && photo && <img class="avatar avatar-sm" src={url(photo)} width="40" height="40" alt={`Portrait fictif de ${who!.name} (image générée par IA)`} />}
-      {who ? <>Par <a href={url(`redaction/#${authorSlug(who.name)}`)}>{who.name}</a> · {isEdito ? 'rédacteur en chef' : deskLabel(d.category)}</> : <>Par la rédaction</>} · Lecture : {minutes} min
+      {who ? <>Par <a href={url(`redaction/#${authorSlug(who.name)}`)}>{who.name}</a> · {isEdito ? 'rédacteur en chef' : who.desk === 'coulisses' ? 'pigiste, service coulisses' : deskLabel(d.category)}</> : <>Par la rédaction</>} · Lecture : {minutes} min
     </p>
     <div class="meta">
       Publié le <time datetime={d.publishedAt.toISOString()}>{formatDateTime(d.publishedAt)}</time> · <strong>Satire</strong>{ref && <> · <span class="ref" title="Référence de l'article">Réf. {ref}</span></>}

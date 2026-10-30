@@ -126,7 +126,10 @@ const nomCatRencontres = (slug: string) => catsRencontres.find((c) => c.slug ===
             {p.photo
               ? <img class="avatar" src={url(p.photo)} width="132" height="132" loading="lazy" alt={`Portrait fictif de ${p.name} (image générée par IA)`} />
               : <span class="avatar avatar-none" title="Photo non communiquée" role="img" aria-label={`Photo de ${p.name} non communiquée`}>{initials(p.name)}</span>}
-            <div><strong>{p.name}</strong> — <em>{p.role}</em><p>{p.bio}</p></div>
+            <div>
+              <strong>{p.name}</strong>{p.age && <>, {String(p.age).replace('.', ',')} ans</>} — <em>{p.role}</em><p>{p.bio}</p>
+              {articlesDe(p.name).length > 0 && <p class="ses-articles">Derniers articles : {articlesDe(p.name).map((a, i) => <>{i > 0 && ' · '}<a href={url(`articles/${a.data.slug}/`)}>{a.data.title}</a></>)}</p>}
+            </div>
           </li>
         ))}
       </ul>

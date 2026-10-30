@@ -9,8 +9,16 @@ export const journalists = journalistsFile.journalists as Journalist[];
 export const authorSlug = (name: string) =>
   name.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
 
+/** Personnel hors signatures (secrétariat...): affiche sur la page redaction, jamais utilise par le moteur. */
+export const support = (journalistsFile as { support?: { name: string; section: string; role: string; bio: string; age?: number }[] }).support ?? [];
+
+/** Signataire d'un article: journaliste du moteur, ou membre du personnel qui écrit à la main (ex. Didier Hoguet, coulisses). */
 export function journalist(name?: string): Journalist | null {
-  return name ? journalists.find((j) => j.name === name) ?? null : null;
+  if (!name) return null;
+  const j = journalists.find((x) => x.name === name);
+  if (j) return j;
+  const s = support.find((x) => x.name === name);
+  return s ? { name: s.name, desk: s.section, active: false, beat: s.role, bio: s.bio, age: s.age } : null;
 }
 
 /** « Service politique », « Service tech & sciences »... */
@@ -25,9 +33,6 @@ export function roster() {
     .map((c) => ({ cat: c, label: deskLabel(c.slug), people: journalists.filter((j) => j.active && j.desk === c.slug) }))
     .filter((d) => d.people.length);
 }
-
-/** Personnel hors signatures (secrétariat...): affiche sur la page redaction, jamais utilise par le moteur. */
-export const support = (journalistsFile as { support?: { name: string; section: string; role: string; bio: string }[] }).support ?? [];
 
 /** Portrait (fictif, genere par IA) de la redaction: public/redaction/<slug>.webp, sinon null. */
 export function portrait(name: string): string | null {

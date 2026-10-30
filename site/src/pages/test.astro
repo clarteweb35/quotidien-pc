@@ -1,0 +1,37 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import { category, formatDate, readingMinutes, url } from '../lib/site';
+import { journalist, authorSlug } from '../lib/authors';
+
+// Page de relecture: articles ecrits a la main, pas encore publies (non indexee).
+const enAttente = (await getCollection('enAttente')).sort((a, b) => a.data.id.localeCompare(b.data.id));
+const rendus = await Promise.all(enAttente.map(async (a) => ({ a, Content: (await render(a)).Content })));
+---
+<Base manchette={false} noindex title="Articles en attente" description="Page de relecture: articles pas encore publiés.">
+  <div class="prose">
+    <div class="page-head">
+      <span class="kicker">Relecture</span>
+      <h1>Articles en attente</h1>
+    </div>
+    <div class="satire-box" role="note"><strong>Page de relecture.</strong> Ces articles ne sont <strong>pas publiés</strong> : ils n'apparaissent ni à l'accueil, ni dans les rubriques, ni dans le flux RSS. Ils seront mis en ligne un par un.</div>
+    <ol>
+      {rendus.map(({ a }) => <li><a href={`#${a.data.slug}`}>{a.data.title}</a></li>)}
+    </ol>
+    {rendus.map(({ a, Content }) => {
+      const who = journalist(a.data.author);
+      return (
+        <article class="article" id={a.data.slug}>
+          <span class="kicker">{category(a.data.category).name}</span>
+          <h2>{a.data.title}</h2>
+          <p class="chapo">{a.data.chapo}</p>
+          <p class="byline">
+            {who ? <>Par <a href={url(`redaction/#${authorSlug(who.name)}`)}>{who.name}</a> · pigiste, service coulisses</> : <>Par la rédaction</>} · Lecture : {readingMinutes(a.body)} min
+          </p>
+          <div class="meta">Brouillon du <time datetime={a.data.publishedAt.toISOString()}>{formatDate(a.data.publishedAt)}</time> · <strong>Satire</strong></div>
+          <div class="body"><Content /></div>
+        </article>
+      );
+    })}
+  </div>
+</Base>

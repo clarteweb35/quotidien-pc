@@ -9,9 +9,7 @@ const base: string | URL = process.env.LGN_CONTENT_DIR
   ? pathToFileURL(path.resolve(process.env.LGN_CONTENT_DIR) + path.sep)
   : './src/content/articles';
 
-const articles = defineCollection({
-  loader: glob({ pattern: '*.md', base, generateId: ({ data }) => String(data.slug) }),
-  schema: z.object({
+const schema = z.object({
     id: z.string(),
     slug: z.string().regex(/^[a-z0-9-]+$/),
     title: z.string().transform(typo), // espaces insecables: jamais de « : » en debut de ligne
@@ -32,7 +30,17 @@ const articles = defineCollection({
     image: z.string().regex(/^images\/articles\/[a-z0-9-]+\.webp$/).optional(),
     imageAlt: z.string().optional(),
     imageCredit: z.string().optional(),
-  }),
 });
 
-export const collections = { articles };
+const articles = defineCollection({
+  loader: glob({ pattern: '*.md', base, generateId: ({ data }) => String(data.slug) }),
+  schema,
+});
+
+// Articles ecrits a la main, relus sur /test/ puis deplaces dans articles/ pour etre publies.
+const enAttente = defineCollection({
+  loader: glob({ pattern: '*.md', base: './src/content/en-attente', generateId: ({ data }) => String(data.slug) }),
+  schema,
+});
+
+export const collections = { articles, enAttente };
