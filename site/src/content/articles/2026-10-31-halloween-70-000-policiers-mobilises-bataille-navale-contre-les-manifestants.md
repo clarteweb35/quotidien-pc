@@ -7,7 +7,7 @@ chapo: "Tenues noires, pétards, canons à eau et véhicules blindés : pour cet
 description: "70 000 policiers et gendarmes pour une mobilisation tombée le soir d’Halloween : canons à eau, blindés Centaure et, selon nos informations fictives, une bataille navale grandeur nature."
 category: "societe"
 tags: ["société","halloween","manifestation","maintien-de-l-ordre","canons-à-eau"]
-publishedAt: "2026-10-31T09:01:00.000Z"
+publishedAt: "2026-10-30T23:17:00.000Z"
 kind: "news"
 satire: true
 sources: []

@@ -8,7 +8,7 @@ chapo: "Donald Trump promet 5 000 dollars à chaque adulte américain. Sur le pa
 description: "5 000 dollars pour chaque adulte américain : qui paiera l'addition ? Entre droits de douane contestés et déficit, le chèque reste hypothétique."
 category: "monde"
 tags: ["monde","donald-trump","états-unis","droits-de-douane","déficit"]
-publishedAt: "2026-10-30T09:02:00.000Z"
+publishedAt: "2026-10-30T23:14:00.000Z"
 kind: "news"
 satire: true
 sources: []
