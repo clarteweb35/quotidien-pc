@@ -6,6 +6,7 @@ export interface Annonce {
   annonceur?: string; image?: string; imageAlt?: string; imageType?: 'portrait';
   solde?: boolean; // titre affiche « façon soldes »: rouge, gras, defilant
   pub?: boolean; // annonce reutilisable comme publicite fictive dans les articles
+  drapeau?: boolean; // petit drapeau arc-en-ciel (LGBTQIA+) a cote du titre
   reel?: boolean; url?: string; site?: string; lien?: string; // vraie annonce: renvoie vers un vrai site
 }
 export interface Annonceur { id: string; nom: string; slogan?: string; palette: string; logo?: string; logoStyle?: 'coin' | 'haut' | 'duo' | 'gauche' | 'pied' | 'filigrane'; legende?: boolean /* logo + nom en legende dessous, sans le nom en en-tete */ }

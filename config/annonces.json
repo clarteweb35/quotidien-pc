@@ -51,6 +51,13 @@
   ],
   "annonces": [
     {
+      "id": "pa-050", "cat": "services", "format": "classique", "ref": "PA-050", "reel": true, "drapeau": true,
+      "titre": "Quentin Guillo, photographe : des instants volés pour vos plus beaux souvenirs",
+      "texte": "Des instants volés capturés avec une vision profondément humaniste et empathique. Une approche sensible et douce pour immortaliser vos rires et vos regards. Des images façonnées pour traverser le temps et raviver vos émotions dans dix ans. Un regard exigeant et passionné, au service de vos plus beaux souvenirs.",
+      "image": "quentin-guillo.webp", "imageAlt": "Portrait d'un homme en pull noir, la main sur le menton, sur fond blanc",
+      "url": "https://quentin-guillo-photo.fr/", "site": "quentin-guillo-photo.fr", "lien": "Découvrir le travail de Quentin Guillo"
+    },
+    {
       "id": "pa-001", "cat": "objets", "format": "classique", "ref": "PA-001",
       "titre": "Chaise fonctionnelle, sauf pour s'asseoir",
       "prix": "15 €",
