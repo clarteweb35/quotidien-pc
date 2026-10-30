@@ -1606,6 +1606,109 @@
       "seenAt": "2026-10-29T11:27:24.032Z",
       "status": "used",
       "usedAt": "2026-10-29T11:27:24.032Z"
+    },
+    "712e854eaea2": {
+      "title": "Dans l’affaire des millions d’actions Hermès disparues, la justice s’interroge sur le rôle de LVMH",
+      "url": "https://www.lemonde.fr/societe/article/2026/10/29/dans-l-affaire-des-millions-d-actions-hermes-disparues-la-justice-s-interroge-sur-le-role-de-lvmh_6802374_3224.html",
+      "category": "economie",
+      "seenAt": "2026-10-30T11:18:43.261Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "9ec098e50913": {
+      "title": "A la BCE, Christine Lagarde annonce son départ et veut « s’engager sur des sujets qui ne sont pas des sujets de politique monétaire »",
+      "url": "https://www.lemonde.fr/economie/article/2026/10/29/a-la-bce-christine-lagarde-annonce-son-depart-et-veut-s-engager-sur-des-sujets-qui-ne-sont-pas-des-sujets-de-politique-monetaire_6802379_3234.html",
+      "category": "economie",
+      "seenAt": "2026-10-30T11:18:43.261Z",
+      "status": "in_progress"
+    },
+    "2f6f557c1f8e": {
+      "title": "Collision tragique en Espagne : tristesse et indignation dans tout le pays",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261030-collision-tragique-en-espagne-tristesse-et-indignation-dans-tout-le-pays",
+      "category": "monde",
+      "seenAt": "2026-10-30T11:19:41.871Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "3edf3c6f7119": {
+      "title": "Turquie : l'effondrement d'une colonne rocheuse classée à l'UNESCO fait 3 morts",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261030-turquie-l-effondrement-d-une-colonne-rocheuse-class%C3%A9e-%C3%A0-l-unesco-fait-3-morts",
+      "category": "monde",
+      "seenAt": "2026-10-30T11:19:41.871Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "65501dd9858b": {
+      "title": "Attentat à Trappes et à La Verrière : l'assassin présumé n'a \"aucun regret\"",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261030-attentat-%C3%A0-trappes-et-%C3%A0-la-verri%C3%A8re-le-tireur-pr%C3%A9sum%C3%A9-n-a-aucun-regret",
+      "category": "monde",
+      "seenAt": "2026-10-30T11:19:41.871Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "2a5e876d1f54": {
+      "title": "Accident ferrovaire tragique en Espagne : le pays plongé dans son deuxième jour de deuil national",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261030-accident-ferrovaire-tragique-en-espagne-le-pays-plong%C3%A9-dans-son-deuxi%C3%A8me-jour-de-deuil-national",
+      "category": "monde",
+      "seenAt": "2026-10-30T11:19:41.871Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "143299adad1f": {
+      "title": "\"Novaïa Gazeta cesse d'exister\": le journal russe contraint de fermer sous la pression des autorités",
+      "url": "https://www.france24.com/fr/europe/20261030-nova%C3%AFa-gazeta-cesse-d-exister-le-journal-russe-contraint-de-fermer-sous-la-pression-des-autorit%C3%A9s",
+      "category": "monde",
+      "seenAt": "2026-10-30T11:19:41.871Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "82d33f4a1488": {
+      "title": "Trappes : \"Ils dénoncent le climat de haine qui a servi de terreau à ce drame\"",
+      "url": "https://www.france24.com/fr/%C3%A9missions/dans-la-presse/20261030-trappes-ils-d%C3%A9noncent-le-climat-de-haine-qui-a-servi-de-terreau-%C3%A0-ce-drame",
+      "category": "monde",
+      "seenAt": "2026-10-30T11:19:41.871Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "4d5986538fba": {
+      "title": "Cryptomonnaies : une cyberattaque massive pousse Binance à geler 2,5 milliards de dollars",
+      "url": "https://www.france24.com/fr/%C3%A9co-tech/20261030-cryptomonnaies-binance-cyberattaque-massive-gel-2-5-milliards-de-dollars-bitcoin-ether",
+      "category": "monde",
+      "seenAt": "2026-10-30T11:19:41.871Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "d06c1fc49d34": {
+      "title": "Cuauhtémoc Cardenas, emblème de la gauche et de la transition démocratique au Mexique, est mort",
+      "url": "https://www.lemonde.fr/disparitions/article/2026/10/30/cuauhtemoc-cardenas-embleme-de-la-gauche-et-de-la-transition-democratique-au-mexique-est-mort_6803075_3382.html",
+      "category": "monde",
+      "seenAt": "2026-10-30T11:19:41.871Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "032937c81e70": {
+      "title": "En Indonésie, la pollution de l’air due aux incendies a causé la mort de 3 560 personnes en septembre",
+      "url": "https://www.lemonde.fr/planete/article/2026/10/30/en-indonesie-les-incendies-ont-cause-3-560-morts-liees-a-la-pollution-de-l-air-en-septembre_6802919_3244.html",
+      "category": "monde",
+      "seenAt": "2026-10-30T11:19:41.871Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "74f25b7ea2bc": {
+      "title": "« Ils nous ont tués » : les adieux de la rédaction de « Novaïa Gazeta », journal russe indépendant, contraint par les autorités de cesser son activité",
+      "url": "https://www.lemonde.fr/international/article/2026/10/30/ils-nous-ont-tues-les-adieux-de-la-redaction-de-novaia-gazeta-journal-russe-independant-contraint-par-les-autorites-de-cesser-son-activite_6802913_3210.html",
+      "category": "monde",
+      "seenAt": "2026-10-30T11:19:41.871Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "80c7f57b587f": {
+      "title": "Mobilisation en France : \"un dispositif exceptionnel\" de 70 000 forces de l'ordre déployé",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261030-mobilisation-en-france-un-dispositif-exceptionnel-de-70-000-forces-de-l-ordre-d%C3%A9ploy%C3%A9",
+      "category": "monde",
+      "seenAt": "2026-10-30T11:19:41.871Z",
+      "status": "used",
+      "usedAt": "2026-10-30T11:19:41.871Z"
     }
   },
   "slots": {
@@ -1901,13 +2004,31 @@
         "status": "abandoned",
         "lastError": "fenetre_de_rattrapage_depassee"
       }
+    },
+    "2026-10-30": {
+      "0": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "1": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "2": {
+        "attempts": 1,
+        "status": "failed",
+        "startedAt": "2026-10-30T11:18:43.261Z",
+        "lastError": "gemini_unavailable: Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}"
+      }
     }
   },
   "lastRun": {
-    "at": "2026-10-29T11:26:52.770Z",
-    "runId": "20261029112652-863c",
-    "published": 2,
-    "stopped": null
+    "at": "2026-10-30T11:18:42.511Z",
+    "runId": "20261030111842-1933",
+    "published": 0,
+    "stopped": "gemini_unavailable"
   },
   "caricatures": {
     "2026-10-27": {
@@ -1921,6 +2042,11 @@
       "lastError": "image_indisponible"
     },
     "2026-10-29": {
+      "status": "published",
+      "attempts": 1,
+      "lastError": null
+    },
+    "2026-10-30": {
       "status": "published",
       "attempts": 1,
       "lastError": null

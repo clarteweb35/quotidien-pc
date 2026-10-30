@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-30",
+  "target": 5,
+  "publishedCount": 0,
+  "articles": [],
+  "slots": [
+    {
+      "idx": 0,
+      "hhmm": "09:10",
+      "attempts": 0,
+      "status": "abandoned",
+      "lastError": "fenetre_de_rattrapage_depassee"
+    },
+    {
+      "idx": 1,
+      "hhmm": "09:40",
+      "attempts": 0,
+      "status": "abandoned",
+      "lastError": "fenetre_de_rattrapage_depassee"
+    },
+    {
+      "idx": 2,
+      "hhmm": "10:10",
+      "attempts": 1,
+      "status": "failed",
+      "startedAt": "2026-10-30T11:18:43.261Z",
+      "lastError": "gemini_unavailable: Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}"
+    },
+    {
+      "idx": 3,
+      "hhmm": "10:40",
+      "status": "pending",
+      "attempts": 0
+    },
+    {
+      "idx": 4,
+      "hhmm": "11:10",
+      "status": "pending",
+      "attempts": 0
+    }
+  ],
+  "rejections": 0,
+  "quarantined": 0,
+  "api": {
+    "calls": 3,
+    "inputTokens": 1572,
+    "outputTokens": 1218,
+    "costUsd": 0.009691,
+    "dailyCapUsd": 1,
+    "monthCostUsd": 0.705847,
+    "monthlyCapUsd": 15
+  },
+  "paused": false,
+  "lastRun": {
+    "at": "2026-10-30T11:18:42.511Z",
+    "runId": "20261030111842-1933",
+    "published": 0,
+    "stopped": "gemini_unavailable"
+  }
+}

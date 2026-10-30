@@ -1,0 +1,36 @@
+{"ts":"2026-10-30T11:18:42.520Z","runId":"20261030111842-1933","level":"warn","event":"cycle.slots_abandoned","count":2}
+{"ts":"2026-10-30T11:18:42.521Z","runId":"20261030111842-1933","level":"info","event":"cycle.start","date":"2026-10-30","due":["2026-10-30#2","2026-10-30#3"],"remainingToday":5,"dryRun":false}
+{"ts":"2026-10-30T11:18:43.259Z","runId":"20261030111842-1933","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":32,"kept":25}
+{"ts":"2026-10-30T11:18:43.260Z","runId":"20261030111842-1933","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-10-30T11:18:43.260Z","runId":"20261030111842-1933","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":20}
+{"ts":"2026-10-30T11:18:43.260Z","runId":"20261030111842-1933","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":24}
+{"ts":"2026-10-30T11:18:43.260Z","runId":"20261030111842-1933","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":15}
+{"ts":"2026-10-30T11:18:43.260Z","runId":"20261030111842-1933","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":20,"kept":20}
+{"ts":"2026-10-30T11:18:43.260Z","runId":"20261030111842-1933","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":13}
+{"ts":"2026-10-30T11:18:43.260Z","runId":"20261030111842-1933","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":14}
+{"ts":"2026-10-30T11:18:43.260Z","runId":"20261030111842-1933","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":7}
+{"ts":"2026-10-30T11:18:43.260Z","runId":"20261030111842-1933","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":14}
+{"ts":"2026-10-30T11:18:43.260Z","runId":"20261030111842-1933","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":1}
+{"ts":"2026-10-30T11:18:43.260Z","runId":"20261030111842-1933","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":7}
+{"ts":"2026-10-30T11:18:43.260Z","runId":"20261030111842-1933","level":"info","event":"collect.done","items":176}
+{"ts":"2026-10-30T11:18:43.279Z","runId":"20261030111842-1933","level":"info","event":"topic.selection","slot":"2026-10-30#2","target":"economie","candidates":176,"rejected":4,"chosen":"A la BCE, Christine Lagarde annonce son départ et veut « s’engager sur des sujets qui ne sont pas des sujets de politique monétaire »","score":5.5}
+{"ts":"2026-10-30T11:18:45.012Z","runId":"20261030111842-1933","level":"warn","event":"gemini.retry","purpose":"generate","status":503,"attempt":1,"delayMs":4489}
+{"ts":"2026-10-30T11:18:51.173Z","runId":"20261030111842-1933","level":"warn","event":"gemini.fallback_model","from":"gemini-3.6-flash","to":"gemini-3.8-flash"}
+{"ts":"2026-10-30T11:18:53.530Z","runId":"20261030111842-1933","level":"warn","event":"gemini.retry","purpose":"generate","status":503,"attempt":1,"delayMs":4410}
+{"ts":"2026-10-30T11:19:41.869Z","runId":"20261030111842-1933","level":"error","event":"cycle.stopped","reason":"gemini_unavailable","error":"Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}"}
+{"ts":"2026-10-30T11:19:42.381Z","runId":"20261030111842-1933","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":32,"kept":25}
+{"ts":"2026-10-30T11:19:42.382Z","runId":"20261030111842-1933","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-10-30T11:19:42.382Z","runId":"20261030111842-1933","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":20}
+{"ts":"2026-10-30T11:19:42.382Z","runId":"20261030111842-1933","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":24}
+{"ts":"2026-10-30T11:19:42.382Z","runId":"20261030111842-1933","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":15}
+{"ts":"2026-10-30T11:19:42.382Z","runId":"20261030111842-1933","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":20,"kept":20}
+{"ts":"2026-10-30T11:19:42.382Z","runId":"20261030111842-1933","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":13}
+{"ts":"2026-10-30T11:19:42.382Z","runId":"20261030111842-1933","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":14}
+{"ts":"2026-10-30T11:19:42.382Z","runId":"20261030111842-1933","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":7}
+{"ts":"2026-10-30T11:19:42.382Z","runId":"20261030111842-1933","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":14}
+{"ts":"2026-10-30T11:19:42.382Z","runId":"20261030111842-1933","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":1}
+{"ts":"2026-10-30T11:19:42.382Z","runId":"20261030111842-1933","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":7}
+{"ts":"2026-10-30T11:19:50.221Z","runId":"20261030111842-1933","level":"info","event":"gemini.call","purpose":"caricature","model":"gemini-3.6-flash","inputTokens":320,"outputTokens":1158,"costUsd":0.009165}
+{"ts":"2026-10-30T11:20:19.208Z","runId":"20261030111842-1933","level":"info","event":"gemini.call","purpose":"image_judge","model":"gemini-3.5-flash-lite","inputTokens":1252,"outputTokens":60,"costUsd":0.000526}
+{"ts":"2026-10-30T11:20:19.208Z","runId":"20261030111842-1933","level":"info","event":"image.ok","slot":"caricature#2026-10-30","bytes":148178,"costUsd":0}
+{"ts":"2026-10-30T11:20:19.209Z","runId":"20261030111842-1933","level":"info","event":"caricature.ok","date":"2026-10-30","titre":"Dispositif proportionné"}

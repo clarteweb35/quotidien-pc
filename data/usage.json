@@ -884,14 +884,59 @@
       "inputTokens": 1272,
       "outputTokens": 60,
       "costUsd": 0.000532
+    },
+    {
+      "ts": "2026-10-30T11:19:50.221Z",
+      "date": "2026-10-30",
+      "month": "2026-10",
+      "runId": "20261030111842-1933",
+      "purpose": "caricature",
+      "model": "gemini-3.6-flash",
+      "params": {
+        "temperature": 1,
+        "maxOutputTokens": 4096
+      },
+      "inputTokens": 320,
+      "outputTokens": 1158,
+      "costUsd": 0.009165
+    },
+    {
+      "ts": "2026-10-30T11:19:52.334Z",
+      "date": "2026-10-30",
+      "month": "2026-10",
+      "runId": "20261030111842-1933",
+      "purpose": "image",
+      "model": "@cf/black-forest-labs/flux-1-schnell",
+      "params": {
+        "aspectRatio": "16:9",
+        "imageSize": "1K"
+      },
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "costUsd": 0
+    },
+    {
+      "ts": "2026-10-30T11:20:19.207Z",
+      "date": "2026-10-30",
+      "month": "2026-10",
+      "runId": "20261030111842-1933",
+      "purpose": "image_judge",
+      "model": "gemini-3.5-flash-lite",
+      "params": {
+        "temperature": 0.2,
+        "maxOutputTokens": 1024
+      },
+      "inputTokens": 1252,
+      "outputTokens": 60,
+      "costUsd": 0.000526
     }
   ],
   "monthly": {
     "2026-10": {
-      "costUsd": 0.696156,
-      "inputTokens": 121685,
-      "outputTokens": 73334,
-      "calls": 59
+      "costUsd": 0.705847,
+      "inputTokens": 123257,
+      "outputTokens": 74552,
+      "calls": 62
     }
   }
 }
