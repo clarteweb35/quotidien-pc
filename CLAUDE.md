@@ -40,44 +40,28 @@ Spécification fonctionnelle : [.ai/SPEC_FONCTIONNALITES.md](.ai/SPEC_FONCTIONNA
 - Performance : garder les scores PageSpeed (99-100) et **EcoIndex : B (80/100, mesure du 26/10, 337 éléments) accepté par l'éditeur ; seuil du A = ~330 éléments sur l'accueil, à ne pas chercher au prix des fonctionnalités** (compter les balises avant de grossir la page ; les bandeaux défilants doublent leur contenu) ; pas d'image ni de script externe, **sauf Google Analytics 4 (`G-XV5HSQ5YKX`), chargé uniquement après acceptation du bandeau de consentement** (jamais d'office : ne pas coller la balise gtag brute dans les pages) ; hauteurs fixes pour les bandeaux animés (pas de décalage de mise en page).
 - Commentaires de code courts, en français, qui expliquent le pourquoi.
 
-## Travailler ici (important)
+## Règles de travail (à respecter à chaque intervention)
 
-- **Après chaque changement demandé : tester (`npm test`), commiter et pousser sur `main` sans redemander.** Un commit par demande, message court en français. `git pull --rebase` avant le push (le moteur éditorial pousse aussi sur `main`). Ne pas pousser si les tests échouent. Le push déclenche le déploiement GitHub Pages.
-- Vérifier visuellement quand c'est possible : `npx astro preview` puis Chrome en mode sans interface (`chrome --headless=new --screenshot=… http://localhost:…/`). Largeur minimale sous Chrome sans interface : 500 px.
-- Pièges Windows / shell : dans un `node -e "…"` ou un heredoc non protégé, les **accents graves (backticks) sont interprétés par le shell** ; écrire les scripts dans un fichier ou utiliser les outils Write/Edit. Une apostrophe dans une chaîne `'…'` casse un fichier de test.
+### Avant de commencer
+- **Reprise de session** : au début de chaque session, lire [.ai/AVANCEMENT.md](.ai/AVANCEMENT.md) (où on en est, prochaine action). Le mettre à jour à la fin de chaque étape.
+- **Architecture** : avant toute implémentation, lire [.ai/SYSTEM_PROMPT_GARDIEN_ARCHITECTURE.md](.ai/SYSTEM_PROMPT_GARDIEN_ARCHITECTURE.md).
+- **Agents** : ne jamais lancer de sous-agents ni de workflow multi-agents sans me demander d'abord. Obligatoire, sans exception.
+- **Niveaux d'action** : je préfixe ma demande par un tag. Sans tag, appliquer `[strict]`.
+  - `[consultatif]` : ne modifie aucun fichier. Explique ce que tu ferais et attends ma validation.
+  - `[strict]` : avant de coder, dis quoi, pourquoi, comment, et dans quels fichiers. Puis code.
+  - `[rapide]` : code directement, explication minimale. Interdit de toucher à l'architecture (découpage des fichiers, dépendances, build, déploiement). Si le changement l'exige, arrête-toi et repasse en `[strict]`.
+- **Travaux en cours** : dès qu'une action commence (avant de modifier le moindre fichier), l'inscrire dans la section « Travaux en cours » en bas de [.ai/SPEC_FONCTIONNALITES.md](.ai/SPEC_FONCTIONNALITES.md) : date, objectif, fichiers concernés, étapes faites / restantes, mises à jour au fil de l'eau. La retirer une fois l'action terminée et mise en ligne. But : ne rien perdre si l'intervention plante.
+
+### Pendant
+- **Explications** : codeur novice, ne pas être trop technique.
+- **Pièges Windows / shell** : dans un `node -e "…"` ou un heredoc non protégé, les **accents graves (backticks) sont interprétés par le shell** ; écrire les scripts dans un fichier ou utiliser les outils Write/Edit. Une apostrophe dans une chaîne `'…'` casse un fichier de test.
+- **Vérification visuelle** quand c'est possible : `npx astro preview` puis Chrome en mode sans interface (`chrome --headless=new --screenshot=… http://localhost:…/`). Largeur minimale sous Chrome sans interface : 500 px.
+
+### Après
+- **Spec** : après tout ajout ou modification de contenu ou de fonctionnalité visible par un visiteur (y compris le style de l'article ou du site), mettre à jour [.ai/SPEC_FONCTIONNALITES.md](.ai/SPEC_FONCTIONNALITES.md) dans la même intervention. Ne pas documenter les refactos internes sans impact visible.
+- **Mise en ligne** (valable pour le site, pas pour les outils hors dépôt, ex. ThotSync dans `ressources/`) : vérifier avec `npm test` (qui construit aussi le site hors ligne), puis **commiter et pousser sur `main` directement, sans redemander**. Ne pas pousser si les tests échouent.
+  - Un commit par demande, message court en français.
+  - `git add` nominatif, jamais `git add -A` : d'autres modifications en attente peuvent exister, les laisser telles quelles.
+  - `git pull --rebase` avant le push (le moteur éditorial pousse aussi sur `main`). Le push déclenche le déploiement GitHub Pages.
+  - Retirer l'entrée de « Travaux en cours » dans le même commit.
 - `data/` est écrit par le moteur : après un `git pull`, de nouveaux commits `editor: cycle …` sont normaux.
-- Ne jamais lancer de sous-agents ni de workflow multi-agents sans demander d'abord.
-
-## system prompt
-
-Avant implementation lis [.ai/SYSTEM_PROMPT_GARDIEN_ARCHITECTURE.md](.ai/SYSTEM_PROMPT_GARDIEN_ARCHITECTURE.md)
-
-## Agents
-
-Ne jamais lancer de sous-agents ni de workflow multi-agents sans me demander d'abord. Obligatoire, sans exception.
-
-## Niveaux d'action
-
-Je prefixe ma demande par un tag. Sans tag, appliquer `[strict]` par defaut.
-
-- `[consultatif]` — Ne modifie aucun fichier. Explique ce que tu ferais et attends ma validation.
-- `[strict]` — Avant de coder : dis quoi, pourquoi, comment, et dans quels fichiers. Puis code.
-- `[rapide]` — Code directement, explication minimale. Interdit de toucher a l'architecture (decoupage des fichiers, dependances, build, deploiement). Si le changement l'exige, arrete-toi et repasse en `[strict]`.
-
-## Mise a jour de la spec
-
-Apres tout ajout ou modification de contenu ou de fonctionnalite visible par un visiteur, mettre a jour [.ai/SPEC_FONCTIONNALITES.md](.ai/SPEC_FONCTIONNALITES.md) dans la meme intervention. Ne pas documenter les refactos internes sans impact visible.
-
-**Des qu'une action commence** (avant de modifier le moindre fichier), l'inscrire dans la section "Travaux en cours" en bas de la spec : date, objectif, fichiers concernes, etapes faites / restantes, mises a jour au fil de l'eau. La retirer une fois l'action terminee et mise en ligne. But : ne rien perdre si l'intervention plante.
-
-## Mise en ligne
-
-Apres toute modification du site que je demande : verifier (`npm test`, qui construit aussi le site hors ligne), puis **commiter et pousser sur `main` directement, sans me demander** si je souhaite la mise en ligne (le push deploie le site). Ne commiter que les fichiers de la tache (`git add` nominatif, jamais `git add -A`) : d'autres modifications en attente peuvent exister, les laisser telles quelles. Retirer l'entree de « Travaux en cours » dans le meme commit. Ne vaut que pour le site, pas pour les outils hors depot (ex. ThotSync dans `ressources/`).
-
-## explication du code
-
-Codeur novice. Ne pas etre trop technique dans tes explications de code.
-
-## Reprise de session
-
-Au début de chaque session, lire [.ai/AVANCEMENT.md](.ai/AVANCEMENT.md) (où on en est, prochaine action). Le mettre à jour à la fin de chaque étape.
