@@ -12,6 +12,7 @@ const img = await illustration(article, lead ? 1280 : 800, manualImageCredit);
 const isEdito = d.category === 'editos';
 const photo = who ? portrait(who.name) : null;
 const fiche = who ? url(`redaction/#${authorSlug(who.name)}`) : '';
+const co = journalist(d.coauthor);
 ---
 {isEdito && !lead ? (
   <article class="card edito">
@@ -30,7 +31,7 @@ const fiche = who ? url(`redaction/#${authorSlug(who.name)}`) : '';
       <a class="kicker" href={url(`rubrique/${cat.slug}/`)}>{cat.name}</a>
       <h2><a href={href}>{d.title}</a></h2>
       <p>{d.chapo}</p>
-      {who && <p class="byline">Par <a href={fiche}>{who.name}</a></p>}
+      {who && <p class="byline">Par <a href={fiche}>{who.name}</a>{co && <> et <a href={url(`redaction/#${authorSlug(co.name)}`)}>{co.name}</a></>}</p>}
       <div class="meta">{formatDate(d.publishedAt)}</div>
     </div>
     {img && <a href={href} tabindex="-1" aria-hidden="true"><img class="photo" src={img.src} srcset={img.srcset} sizes="(min-width: 1000px) 660px, 100vw" alt="" width={img.width} height={img.height} fetchpriority="high" /></a>}
@@ -40,7 +41,7 @@ const fiche = who ? url(`redaction/#${authorSlug(who.name)}`) : '';
     {img ? <a href={href} tabindex="-1" aria-hidden="true"><img class="photo" src={img.src} srcset={img.srcset} sizes="(min-width: 1000px) 360px, 100vw" alt="" width={img.width} height={img.height} loading="lazy" /></a> : <a class="kicker" href={url(`rubrique/${cat.slug}/`)}>{cat.name}</a>}
     <h3><a href={href}>{d.title}</a></h3>
     <p>{d.chapo}</p>
-    {who && <p class="byline">Par <a href={fiche}>{who.name}</a></p>}
+    {who && <p class="byline">Par <a href={fiche}>{who.name}</a>{co && <> et <a href={url(`redaction/#${authorSlug(co.name)}`)}>{co.name}</a></>}</p>}
     <div class="meta">{formatDate(d.publishedAt)}</div>
   </article>
 )}

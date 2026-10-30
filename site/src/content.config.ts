@@ -26,6 +26,7 @@ const schema = z.object({
     angle: z.string().optional(),
     ref: z.string().optional(),
     author: z.string().optional(),
+    coauthor: z.string().optional(), // second signataire (article écrit à deux)
     imagePrompt: z.string().optional(),
     image: z.string().regex(/^images\/articles\/[a-z0-9-]+\.webp$/).optional(),
     imageAlt: z.string().optional(),

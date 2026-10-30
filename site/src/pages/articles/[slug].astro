@@ -37,6 +37,7 @@ const { Content } = await render(article);
 const img = await illustration(article, 1280, manualImageCredit);
 const ref = refOf(d);
 const who = journalist(d.author);
+const co = journalist(d.coauthor);
 const photo = who ? portrait(who.name) : null;
 const minutes = readingMinutes(article.body);
 const isEdito = d.category === 'editos';
@@ -50,7 +51,7 @@ const jsonLd = {
   inLanguage: 'fr-FR',
   articleSection: cat.name,
   keywords: d.tags.join(', '),
-  author: who ? { '@type': 'Person', name: who.name, description: 'Signature fictive du journal satirique' } : { '@type': 'Organization', name: siteName },
+  author: who ? [who, ...(co ? [co] : [])].map((p) => ({ '@type': 'Person', name: p.name, description: 'Signature fictive du journal satirique' })) : { '@type': 'Organization', name: siteName },
   publisher: { '@type': 'Organization', name: siteName },
   ...(img ? { image: new URL(img.src, Astro.site).toString() } : {}),
   mainEntityOfPage: new URL(Astro.url.pathname, Astro.site).toString(),
@@ -70,7 +71,7 @@ const jsonLd = {
     {isEdito && photo && <img class="avatar avatar-lg edito-portrait" src={url(photo)} width="150" height="150" alt={`Portrait fictif de ${who!.name} (image générée par IA)`} />}
     <p class="byline">
       {!isEdito && photo && <img class="avatar avatar-sm" src={url(photo)} width="40" height="40" alt={`Portrait fictif de ${who!.name} (image générée par IA)`} />}
-      {who ? <>Par <a href={url(`redaction/#${authorSlug(who.name)}`)}>{who.name}</a> · {isEdito ? 'rédacteur en chef' : who.desk === 'coulisses' ? 'pigiste, service coulisses' : deskLabel(d.category)}</> : <>Par la rédaction</>} · Lecture : {minutes} min
+      {who ? <>Par <a href={url(`redaction/#${authorSlug(who.name)}`)}>{who.name}</a>{co && <> et <a href={url(`redaction/#${authorSlug(co.name)}`)}>{co.name}</a></>} · {isEdito ? 'rédacteur en chef' : who.desk === 'coulisses' ? 'pigiste, service coulisses' : deskLabel(d.category)}</> : <>Par la rédaction</>} · Lecture : {minutes} min
     </p>
     <div class="meta">
       Publié le <time datetime={d.publishedAt.toISOString()}>{formatDateTime(d.publishedAt)}</time> · <strong>Satire</strong>{ref && <> · <span class="ref" title="Référence de l'article">Réf. {ref}</span></>}

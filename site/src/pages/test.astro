@@ -2,7 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import { category, formatDate, readingMinutes, url } from '../lib/site';
-import { journalist, authorSlug } from '../lib/authors';
+import { journalist, authorSlug, deskLabel } from '../lib/authors';
 
 // Page de relecture: articles ecrits a la main, pas encore publies (non indexee).
 const enAttente = (await getCollection('enAttente')).sort((a, b) => a.data.id.localeCompare(b.data.id));
@@ -20,13 +20,14 @@ const rendus = await Promise.all(enAttente.map(async (a) => ({ a, Content: (awai
     </ol>
     {rendus.map(({ a, Content }) => {
       const who = journalist(a.data.author);
+      const co = journalist(a.data.coauthor);
       return (
         <article class="article" id={a.data.slug}>
           <span class="kicker">{category(a.data.category).name}</span>
           <h2>{a.data.title}</h2>
           <p class="chapo">{a.data.chapo}</p>
           <p class="byline">
-            {who ? <>Par <a href={url(`redaction/#${authorSlug(who.name)}`)}>{who.name}</a> · pigiste, service coulisses</> : <>Par la rédaction</>} · Lecture : {readingMinutes(a.body)} min
+            {who ? <>Par <a href={url(`redaction/#${authorSlug(who.name)}`)}>{who.name}</a>{co && <> et <a href={url(`redaction/#${authorSlug(co.name)}`)}>{co.name}</a></>} · {who.desk === 'coulisses' ? 'pigiste, service coulisses' : deskLabel(a.data.category)}</> : <>Par la rédaction</>} · Lecture : {readingMinutes(a.body)} min
           </p>
           <div class="meta">Brouillon du <time datetime={a.data.publishedAt.toISOString()}>{formatDate(a.data.publishedAt)}</time> · <strong>Satire</strong></div>
           {a.data.imagePrompt && <p class="image-prompt"><strong>Illustration à créer :</strong> {a.data.imagePrompt}</p>}
