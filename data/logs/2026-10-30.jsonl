@@ -36,3 +36,4 @@
 {"ts":"2026-10-30T11:20:19.209Z","runId":"20261030111842-1933","level":"info","event":"caricature.ok","date":"2026-10-30","titre":"Dispositif proportionné"}
 {"ts":"2026-10-30T17:07:57.378Z","runId":"20261030170757-b0f6","level":"warn","event":"cycle.slots_abandoned","count":3}
 {"ts":"2026-10-30T17:07:57.379Z","runId":"20261030170757-b0f6","level":"info","event":"cycle.start","date":"2026-10-30","due":[],"remainingToday":5,"dryRun":false}
+{"ts":"2026-10-30T21:40:34.878Z","runId":"20261030214034-2338","level":"info","event":"cycle.start","date":"2026-10-30","due":[],"remainingToday":5,"dryRun":false}
