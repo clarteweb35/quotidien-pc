@@ -10,7 +10,10 @@ tags: ["environnement","voiture-électrique","suv","batteries","transition-écol
 publishedAt: "2026-10-30T20:20:00.000Z"
 kind: "news"
 satire: true
-sources: []
+sources:
+  - name: "Cadillac"
+    title: "Cadillac Escalade IQL, site du constructeur"
+    url: "https://www.cadillac.com/"
 slug: "voiture-electrique-l-ecologie-a-grosse-batterie"
 imageAlt: "Des mineurs couverts de terre rouge portent des sacs de minerai dans une étroite tranchée."
 ---
