@@ -21,7 +21,7 @@ const texteRecherche = [a.titre, a.texte, a.conditions, a.prix, nomCategorie(a.c
       {a.format === 'encart' && ann && !ann.legende && style !== 'haut' && <p class="pa-marque">{ann.nom}</p>}
       <div class="pa-contenu">
       <p class="pa-meta"><span class="pa-badge">{nomCategorie(a.cat)}</span> <span class="pa-ref">Réf. {a.ref}</span>{a.reel && <span class="pa-reel">Vraie annonce</span>}</p>
-      {a.drapeau && <span class="pa-drapeau" role="img" aria-label="Drapeau arc-en-ciel LGBTQIA+"></span>}
+      {a.drapeau && <span class="pa-drapeau" aria-hidden="true"></span>}
       <h3 class:list={['pa-titre', a.solde && 'pa-solde']}>{a.reel && a.url ? <a href={a.url} target="_blank" rel="noopener">{a.titre}</a> : a.solde ? <span class="solde-texte">{a.titre}</span> : a.titre}</h3>
       {a.image && <img class:list={['pa-image', a.imageType === 'portrait' && 'pa-image-portrait']} src={url(`annonces/${a.image}`)} width={a.imageType === 'portrait' ? 84 : 112} height={a.imageType === 'portrait' ? 105 : 112} alt={a.imageAlt ?? ''} loading="lazy" />}
       {a.accroche && <p class="pa-accroche-pub">{a.accroche}</p>}
