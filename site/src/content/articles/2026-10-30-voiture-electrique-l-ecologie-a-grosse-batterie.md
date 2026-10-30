@@ -20,6 +20,12 @@ Cette électrification ne signifie pas nécessairement que les Français se ruen
 
 La transition écologique aurait-elle pris quelques kilos ?
 
+## Le record : six mètres de « sobriété »
+
+Pour mesurer l’ampleur du phénomène, jetons un œil au sommet de la gamme : le plus gros SUV électrique du marché, le Cadillac Escalade IQL. Il frôle les six mètres de long, soit plus qu’une place de parking standard, et s’affiche à partir de 130 000 dollars.
+
+À ce prix-là, on n’achète plus une voiture, on achète un appartement roulant avec prise de recharge. Difficile d’y voir l’emblème de la mobilité sobre.
+
 ## Quand le prix du carburant devient soudainement une conviction écologique
 
 Pendant des années, certains automobilistes ont regardé la voiture électrique avec méfiance : trop chère, autonomie insuffisante, recharge compliquée, batterie inquiétante. Et puis les prix à la pompe ont flambé. Soudain, la voiture électrique devient beaucoup plus séduisante.
