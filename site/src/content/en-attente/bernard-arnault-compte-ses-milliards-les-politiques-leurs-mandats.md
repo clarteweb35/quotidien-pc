@@ -11,6 +11,8 @@ kind: "news"
 satire: true
 sources: []
 slug: "bernard-arnault-compte-ses-milliards-les-politiques-leurs-mandats"
+imagePrompt: "Deux balances de bureau : l'une croule sous des sacs de pièces d'or étiquetés « fortune », l'autre sous une pile de bulletins de pension, tandis qu'un petit comptable en lunettes lève les bras au milieu, ne sachant laquelle regarder."
+imageAlt: "Deux balances, l'une chargée de sacs de pièces, l'autre de bulletins de pension, et un comptable perplexe."
 ---
 Prenons Bernard Arnault. L’homme est immensément riche, à la tête de LVMH, un groupe qui réalise des dizaines de milliards d’euros de ventes et emploie des centaines de milliers de collaborateurs dans le monde.
 

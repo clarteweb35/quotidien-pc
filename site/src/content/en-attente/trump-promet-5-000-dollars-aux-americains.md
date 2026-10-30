@@ -11,6 +11,8 @@ kind: "news"
 satire: true
 sources: []
 slug: "trump-promet-5-000-dollars-aux-americains"
+imagePrompt: "Un énorme chèque en carton de 5 000 dollars flottant comme un ballon au-dessus d'un petit pavillon américain, retenu par une ficelle qui se termine par une montagne de factures et un compteur de dette en rouge."
+imageAlt: "Un chèque géant de 5 000 dollars flottant au-dessus d'une maison, relié à une montagne de factures."
 ---
 Mais une mesure uniforme ne profite pas de la même manière à tout le monde. Pour un Américain en difficulté, 5 000 dollars peuvent représenter un véritable bol d’air. Pour un millionnaire, c’est à peine une ligne de plus dans un relevé bancaire. Distribuer la même somme à tous, quels que soient les revenus, n’est donc pas exactement une politique ciblée vers ceux qui en ont le plus besoin.
 

@@ -11,6 +11,8 @@ kind: "news"
 satire: true
 sources: []
 slug: "plan-clim-du-rn-marine-le-pen-veut-rafraichir-la-france"
+imagePrompt: "Une salle de classe de collège en plein été, des dizaines de climatiseurs bleus empilés jusqu'au plafond, un employé municipal en sueur tenant une facture d'électricité interminable qui touche le sol."
+imageAlt: "Une salle de classe remplie de climatiseurs empilés, et un employé tenant une facture d'électricité géante."
 ---
 Face aux épisodes de chaleur, protéger les enfants dans les écoles, les patients dans les hôpitaux et les personnes âgées dans les EHPAD est une nécessité. Personne ne contestera cela.
 

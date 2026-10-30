@@ -11,6 +11,8 @@ kind: "news"
 satire: true
 sources: []
 slug: "voiture-electrique-l-ecologie-a-grosse-batterie"
+imagePrompt: "Un énorme SUV électrique vert pomme garé devant une boulangerie de village, son câble de recharge enroulé comme un serpent, tandis qu'une minuscule citadine électrique se faufile à côté, une baguette sur le siège."
+imageAlt: "Un énorme SUV électrique garé devant une boulangerie, à côté d'une minuscule citadine."
 ---
 Il paraît que la France accélère sa transition écologique. Les immatriculations de voitures électriques progressent fortement. Mais avant de sortir les confettis verts, regardons ce qui se cache derrière le volant.
 

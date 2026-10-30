@@ -29,6 +29,7 @@ const rendus = await Promise.all(enAttente.map(async (a) => ({ a, Content: (awai
             {who ? <>Par <a href={url(`redaction/#${authorSlug(who.name)}`)}>{who.name}</a> · pigiste, service coulisses</> : <>Par la rédaction</>} · Lecture : {readingMinutes(a.body)} min
           </p>
           <div class="meta">Brouillon du <time datetime={a.data.publishedAt.toISOString()}>{formatDate(a.data.publishedAt)}</time> · <strong>Satire</strong></div>
+          {a.data.imagePrompt && <p class="image-prompt"><strong>Illustration à créer :</strong> {a.data.imagePrompt}</p>}
           <div class="body"><Content /></div>
         </article>
       );
