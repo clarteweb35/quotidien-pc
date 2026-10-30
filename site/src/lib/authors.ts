@@ -21,6 +21,11 @@ export function journalist(name?: string): Journalist | null {
   return s ? { name: s.name, desk: s.section, active: false, beat: s.role, bio: s.bio, age: s.age } : null;
 }
 
+/** Portraits qui sont de vraies photos : jamais présentés comme « générés par IA ». */
+const portraitsReels = ['Didier Hoguet'];
+/** Texte alternatif du portrait d'un membre de la rédaction. */
+export const portraitAlt = (name: string) => portraitsReels.includes(name) ? `Portrait de ${name}` : `Portrait fictif de ${name} (image générée par IA)`;
+
 /** « Service politique », « Service tech & sciences »... */
 export function deskLabel(slug: string): string {
   const c = categories.find((x) => x.slug === slug);

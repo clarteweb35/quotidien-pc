@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import { roster, authorSlug, support, portrait, bureauByDesk, lucasBureau, shotCaption } from '../lib/authors';
+import { roster, authorSlug, support, portrait, portraitAlt, bureauByDesk, lucasBureau, shotCaption } from '../lib/authors';
 import { siteName, url, allArticles } from '../lib/site';
 import { rencontres, ancreRef, refTexte, categories as catsRencontres } from '../lib/rencontres';
 const desks = roster();
@@ -24,7 +24,7 @@ const nomCatRencontres = (slug: string) => catsRencontres.find((c) => c.slug ===
       <span class="kicker">Qui signe quoi</span>
       <h1>La rédaction</h1>
     </div>
-    <div class="satire-box" role="note"><strong>Précision.</strong> Les journalistes présentés ici sont des <strong>personnages fictifs</strong>, créés pour ce journal satirique. Leurs portraits sont <strong>générés par intelligence artificielle</strong> et ne représentent aucune personne réelle ; il en va de même des photos de bureaux. Ils n'ont rencontré personne, enquêté sur aucun terrain et ne désignent aucune personne réelle. Toute ressemblance avec un journaliste existant serait une coïncidence.</div>
+    <div class="satire-box" role="note"><strong>Précision.</strong> Les journalistes présentés ici sont des <strong>personnages fictifs</strong>, créés pour ce journal satirique. Leurs portraits sont <strong>générés par intelligence artificielle</strong> et ne représentent aucune personne réelle, à l'exception de celui de Didier Hoguet, qui est une vraie photo ; il en va de même des photos de bureaux. Ils n'ont rencontré personne, enquêté sur aucun terrain et ne désignent aucune personne réelle. Toute ressemblance avec un journaliste existant serait une coïncidence.</div>
 
     {direction.length > 0 && (
       <section>
@@ -33,7 +33,7 @@ const nomCatRencontres = (slug: string) => catsRencontres.find((c) => c.slug ===
           {direction.map((p: any) => (
             <li id={authorSlug(p.name)}>
               {p.photo
-                ? <img class="avatar" src={url(p.photo)} width="132" height="132" loading="lazy" alt={`Portrait fictif de ${p.name} (image générée par IA)`} />
+                ? <img class="avatar" src={url(p.photo)} width="132" height="132" loading="lazy" alt={portraitAlt(p.name)} />
                 : <span class="avatar avatar-none" role="img" aria-label={`Photo de ${p.name} non communiquée`}>{initials(p.name)}</span>}
               <div><strong>{p.name}</strong> — <em>{p.role}</em><p>{p.bio}</p>{articlesDe(p.name).length > 0 && <p class="ses-articles">Derniers éditos : {articlesDe(p.name).map((a, i) => <>{i > 0 && ' · '}<a href={url(`articles/${a.data.slug}/`)}>{a.data.title}</a></>)} · <a href={url('rubrique/editos/')}>Tous les éditos</a></p>}</div>
             </li>
@@ -49,7 +49,7 @@ const nomCatRencontres = (slug: string) => catsRencontres.find((c) => c.slug ===
           {dessin.map((p: any) => (
             <li id={authorSlug(p.name)}>
               {p.photo
-                ? <img class="avatar" src={url(p.photo)} width="132" height="132" loading="lazy" alt={`Portrait fictif de ${p.name} (image générée par IA)`} />
+                ? <img class="avatar" src={url(p.photo)} width="132" height="132" loading="lazy" alt={portraitAlt(p.name)} />
                 : <span class="avatar avatar-none" role="img" aria-label={`Photo de ${p.name} non communiquée`}>{initials(p.name)}</span>}
               <div>
                 <strong>{p.name}</strong>{p.age && <>, {p.age} ans</>} — <em>{p.role}</em><p>{p.bio}</p>
@@ -80,7 +80,7 @@ const nomCatRencontres = (slug: string) => catsRencontres.find((c) => c.slug ===
           {withPhoto(d.people).map((p: any) => (
             <li id={authorSlug(p.name)}>
               {p.photo
-                ? <img class="avatar" src={url(p.photo)} width="132" height="132" loading="lazy" alt={`Portrait fictif de ${p.name} (image générée par IA)`} />
+                ? <img class="avatar" src={url(p.photo)} width="132" height="132" loading="lazy" alt={portraitAlt(p.name)} />
                 : <span class="avatar avatar-none" title="Photo non communiquée" role="img" aria-label={`Photo de ${p.name} non communiquée`}>{initials(p.name)}</span>}
               <div>
                 <strong>{p.name}</strong>{p.age && <>, {p.age} ans</>} — <em>{p.beat}</em>
@@ -105,7 +105,7 @@ const nomCatRencontres = (slug: string) => catsRencontres.find((c) => c.slug ===
           {secretariat.map((p: any) => (
             <li id={authorSlug(p.name)}>
               {p.photo
-                ? <img class="avatar" src={url(p.photo)} width="132" height="132" loading="lazy" alt={`Portrait fictif de ${p.name} (image générée par IA)`} />
+                ? <img class="avatar" src={url(p.photo)} width="132" height="132" loading="lazy" alt={portraitAlt(p.name)} />
                 : <span class="avatar avatar-none" title="Photo non communiquée" role="img" aria-label={`Photo de ${p.name} non communiquée`}>{initials(p.name)}</span>}
               <div><strong>{p.name}</strong> — <em>{p.role}</em><p>{p.bio}</p></div>
             </li>
@@ -124,7 +124,7 @@ const nomCatRencontres = (slug: string) => catsRencontres.find((c) => c.slug ===
         {backstage.map((p: any) => (
           <li id={authorSlug(p.name)}>
             {p.photo
-              ? <img class="avatar" src={url(p.photo)} width="132" height="132" loading="lazy" alt={`Portrait fictif de ${p.name} (image générée par IA)`} />
+              ? <img class="avatar" src={url(p.photo)} width="132" height="132" loading="lazy" alt={portraitAlt(p.name)} />
               : <span class="avatar avatar-none" title="Photo non communiquée" role="img" aria-label={`Photo de ${p.name} non communiquée`}>{initials(p.name)}</span>}
             <div>
               <strong>{p.name}</strong>{p.age && <>, {String(p.age).replace('.', ',')} ans</>} — <em>{p.role}</em><p>{p.bio}</p>

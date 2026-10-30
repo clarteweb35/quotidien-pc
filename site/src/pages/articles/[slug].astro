@@ -4,7 +4,7 @@ import Base from '../../layouts/Base.astro';
 import { allArticles, category, formatDateTime, readingMinutes, satireNotice, siteName, url, manualImageCredit } from '../../lib/site';
 import { illustration } from '../../lib/manual';
 import { refOf } from '../../lib/ref';
-import { journalist, deskLabel, authorSlug, portrait } from '../../lib/authors';
+import { journalist, deskLabel, authorSlug, portrait, portraitAlt } from '../../lib/authors';
 import Share from '../../components/Share.astro';
 import { manchetteRencontres as rc } from '../../lib/annonces';
 import PubAnnonce from '../../components/PubAnnonce.astro';
@@ -68,9 +68,9 @@ const jsonLd = {
     <a class="kicker" href={url(`rubrique/${cat.slug}/`)}>{isEdito ? 'Édito' : cat.name}</a>
     <h1>{d.title}</h1>
     <p class="chapo">{d.chapo}</p>
-    {isEdito && photo && <img class="avatar avatar-lg edito-portrait" src={url(photo)} width="150" height="150" alt={`Portrait fictif de ${who!.name} (image générée par IA)`} />}
+    {isEdito && photo && <img class="avatar avatar-lg edito-portrait" src={url(photo)} width="150" height="150" alt={portraitAlt(who!.name)} />}
     <p class="byline">
-      {!isEdito && photo && <img class="avatar avatar-sm" src={url(photo)} width="40" height="40" alt={`Portrait fictif de ${who!.name} (image générée par IA)`} />}
+      {!isEdito && photo && <img class="avatar avatar-sm" src={url(photo)} width="40" height="40" alt={portraitAlt(who!.name)} />}
       {who ? <>Par <a href={url(`redaction/#${authorSlug(who.name)}`)}>{who.name}</a>{co && <> et <a href={url(`redaction/#${authorSlug(co.name)}`)}>{co.name}</a></>} · {isEdito ? 'rédacteur en chef' : who.desk === 'coulisses' ? 'pigiste, service coulisses' : deskLabel(d.category)}</> : <>Par la rédaction</>} · Lecture : {minutes} min
     </p>
     <div class="meta">

@@ -1,7 +1,7 @@
 ---
 import { category, formatDate, url, manualImageCredit, type Article } from '../lib/site';
 import { illustration } from '../lib/manual';
-import { journalist, portrait, authorSlug } from '../lib/authors';
+import { journalist, portrait, portraitAlt, authorSlug } from '../lib/authors';
 interface Props { article: Article; lead?: boolean }
 const { article, lead = false } = Astro.props;
 const d = article.data;
@@ -18,7 +18,7 @@ const co = journalist(d.coauthor);
   <article class="card edito">
     <p class="edito-etiquette"><a class="kicker" href={url(`rubrique/${cat.slug}/`)}>Édito</a></p>
     <div class="edito-tete">
-      {photo && <img class="avatar avatar-md" src={url(photo)} width="64" height="64" alt={`Portrait fictif de ${who!.name} (image générée par IA)`} loading="lazy" />}
+      {photo && <img class="avatar avatar-md" src={url(photo)} width="64" height="64" alt={portraitAlt(who!.name)} loading="lazy" />}
       <h3><a href={href}>{d.title}</a></h3>
     </div>
     <p>{d.chapo}</p>
