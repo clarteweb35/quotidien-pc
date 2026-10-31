@@ -1,6 +1,19 @@
 {
   "note": "Rubrique 'Petites annonces' (page /petites-annonces/). Toutes les annonces sont FICTIVES et satiriques. Pour en ajouter: ajouter un objet dans 'annonces' (id unique 'pa-NNN'; 'reel: true' + 'url' + 'site' + 'lien' = VRAIE annonce, toujours etiquetee « Vraie annonce » et jamais presentee comme fictive, 'cat' = slug d'une categorie, 'format' = classique | court | vedette | encart). Aucune coordonnee reelle: chaque annonce est identifiee par sa reference. 'image' (facultatif) = fichier de site/public/annonces/ avec 'imageAlt'. 'annonceur' (facultatif) = id d'un annonceur recurrent.",
   "titre": "Petites annonces",
+  "encartsRubriques": {
+    "economie": {
+      "marque": "fxNOL",
+      "logo": "fxnol.webp",
+      "logoAlt": "Logo fxNOL : maîtriser le trading par la connaissance",
+      "titre": "fxNOL School : apprendre le trading par la connaissance",
+      "texte": "Des leçons en deux niveaux (débutant ou pro), un laboratoire d'indicateurs, un quiz Forex corrigé question par question et un calculateur de taille de position selon votre risque. Contenu gratuit et éducatif.",
+      "avertissement": "Le trading comporte un risque de perte en capital. Contenu éducatif : aucun indicateur ne garantit un gain et rien n'est un conseil en investissement.",
+      "url": "https://www.fxnol.fr/",
+      "site": "fxnol.fr",
+      "lien": "Découvrir fxNOL"
+    }
+  },
   "accroche": "Les bonnes affaires, les grands projets et les petites entourloupes.",
   "intro": "Comme dans la presse locale, tout paraît presque normal au premier regard. C'est en lisant jusqu'au bout, conditions comprises, que les ennuis commencent. Les annonceurs sont fictifs, les prix sont précis, et aucune offre n'est valable nulle part.",
   "mention": "Les annonces publiées dans cette rubrique sont fictives et satiriques. Toute ressemblance avec une offre existante serait une coïncidence presque certaine.",

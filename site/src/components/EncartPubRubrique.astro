@@ -1,0 +1,34 @@
+---
+// Vraie publicité de la taille d'une carte d'article, affichée dans une rubrique à la place de l'encart « Petites annonces ».
+// Données dans config/annonces.json (encartsRubriques). Toujours étiquetée « Publicité · Vraie annonce ».
+import { encartsRubriques } from '../lib/annonces';
+import { url } from '../lib/site';
+interface Props { slug: string }
+const e = encartsRubriques[Astro.props.slug];
+---
+{e && (
+  <article class="card encart-pub" aria-label={`Publicité : ${e.marque}`}>
+    <p class="ep-etiquette"><span>Publicité</span><span class="ep-reel">Vraie annonce</span></p>
+    <a class="ep-logo" href={e.url} target="_blank" rel="noopener sponsored nofollow">
+      <img src={url(`annonces/${e.logo}`)} width="240" height="90" alt={e.logoAlt} loading="lazy" />
+    </a>
+    <h3><a href={e.url} target="_blank" rel="noopener sponsored nofollow">{e.titre}</a></h3>
+    <p class="ep-texte">{e.texte}</p>
+    <p class="ep-avert">{e.avertissement}</p>
+    <a class="ep-cta" href={e.url} target="_blank" rel="noopener sponsored nofollow">{e.lien} → <span>{e.site}</span></a>
+  </article>
+)}
+<style>
+  .encart-pub { display: flex; flex-direction: column; padding: 14px 16px 16px; border: 2px solid var(--ink); background: #fff; }
+  .ep-etiquette { display: flex; justify-content: space-between; margin: 0 0 8px; font: 800 .66rem/1.25 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--ink-2); }
+  .ep-reel { color: #15803d; border: 1px solid #15803d; padding: 0 5px; }
+  .ep-logo { display: block; background: none; margin: 0 0 6px; }
+  .ep-logo img { display: block; width: 62%; max-width: 240px; height: auto; }
+  .encart-pub h3 { margin: 4px 0 6px; }
+  .encart-pub h3 a { color: inherit; background: none; text-decoration: none; }
+  .ep-texte { margin: 0 0 8px; }
+  .ep-avert { margin: 0 0 12px; font: .78rem/1.4 var(--sans); color: var(--ink-2); }
+  .ep-cta { margin-top: auto; display: block; padding: 9px 12px; text-align: center; background: #0ea5e9; color: #fff; font: 800 .88rem var(--sans); text-decoration: none; }
+  .ep-cta span { font-weight: 600; opacity: .85; }
+  .ep-cta:hover, .ep-cta:focus-visible { background: var(--ink); }
+</style>
