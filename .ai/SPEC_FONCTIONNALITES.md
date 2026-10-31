@@ -113,4 +113,4 @@ Le score EcoIndex pèse surtout par le nombre d'éléments du DOM : la page Peti
 
 ## Travaux en cours
 
-_Aucun._
+- 31/10/2026 : édito « chrétienté de meeting » (Jean-Eudes de la Manchette), réf. 261031-D4. Fichier : site/src/content/en-attente/. Reste : relecture par l'éditeur, publication, mise à jour d'AVANCEMENT.
