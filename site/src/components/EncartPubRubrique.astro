@@ -3,11 +3,11 @@
 // Données dans config/annonces.json (encartsRubriques). Toujours étiquetée « Publicité · Vraie annonce ».
 import { encartsRubriques } from '../lib/annonces';
 import { url } from '../lib/site';
-interface Props { slug: string; large?: boolean } // large : bandeau pleine largeur (page Petites annonces)
+interface Props { slug: string }
 const e = encartsRubriques[Astro.props.slug];
 ---
 {e && (
-  <article class:list={['card', 'encart-pub', { large: Astro.props.large }]}aria-label={`Publicité : ${e.marque}`} style={e.fond ? `--ep-fond: url(${url(`annonces/${e.fond}`)})` : undefined}>
+  <article class="card encart-pub" aria-label={`Publicité : ${e.marque}`} style={e.fond ? `--ep-fond: url(${url(`annonces/${e.fond}`)})` : undefined}>
     <p class="ep-etiquette"><span>Publicité</span><span class="ep-reel">Vraie annonce</span></p>
     <a class="ep-logo" href={e.url} target="_blank" rel="noopener sponsored nofollow">
       <img src={url(`annonces/${e.logo}`)} width="480" height="179" alt={e.logoAlt} loading="lazy" />
@@ -22,11 +22,10 @@ const e = encartsRubriques[Astro.props.slug];
   .encart-pub { position: relative; isolation: isolate; display: flex; flex-direction: column; padding: 14px 16px 16px; border: 2px solid var(--ink); background: #fff; }
   /* Photo en filigrane très clair derrière le contenu (décor, sans alt) */
   .encart-pub::before { content: ''; position: absolute; inset: 0; z-index: -1; background: var(--ep-fond, none) center / cover no-repeat; opacity: .13; }
-  .encart-pub.large { max-width: 760px; margin: 26px auto; }
   .ep-etiquette { display: flex; justify-content: space-between; margin: 0 0 8px; font: 800 .66rem/1.25 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--ink-2); }
   .ep-reel { color: #15803d; border: 1px solid #15803d; padding: 0 5px; }
   .ep-logo { display: block; background: none; margin: 0 0 6px; }
-  .ep-logo img { display: block; width: 100%; height: auto; }
+  .ep-logo img { display: block; width: 100%; height: auto; max-height: 240px; object-fit: contain; object-position: left; }
   .encart-pub h3 { margin: 4px 0 6px; }
   .encart-pub h3 a { color: inherit; background: none; text-decoration: none; }
   .ep-texte { margin: 0 0 8px; }

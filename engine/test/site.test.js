@@ -89,7 +89,7 @@ test('petites annonces: page, menu, donnees coherentes et mention obligatoire', 
     assert.match(a.url, /^https:\/\//, a.id);
     assert.ok(html.includes(`href="${a.url}"`), `lien absent: ${a.id}`);
   }
-  assert.equal((html.match(/>Vraie annonce</g) || []).length, vraies.length + 1, 'les vraies annonces + la publicite fxNOL (vraie aussi)');
+  assert.equal((html.match(/>Vraie annonce</g) || []).length, vraies.length);
   assert.ok(html.includes('Seules font exception'), 'la mention signale les vraies annonces');
   assert.ok(page('.').includes('>Petites annonces<'), 'lien dans le menu');
 });
@@ -182,7 +182,9 @@ test('maillage interne: manchette partout, fil d\'Ariane, precedent/suivant, lie
   // Encart « Petites annonces » (taille d'une carte) et bandeau Rencontres sur les pages qui listent des articles
   for (const pg of ['.', 'rubrique/societe', 'rubrique/sport']) {
     const h = page(pg);
-    assert.ok(h.includes('class="card encart-annonces"') && h.includes('href="/petites-annonces/"'), `encart petites annonces sur ${pg}`);
+    // En Société, l'encart est remplacé par la pub du photographe (vraie annonce, lien externe)
+    if (pg === 'rubrique/societe') assert.ok(h.includes('class="card encart-pub"') && h.includes('quentin-guillo-photo.fr'), 'pub Quentin Guillo en Société');
+    else assert.ok(h.includes('class="card encart-annonces"') && h.includes('href="/petites-annonces/"'), `encart petites annonces sur ${pg}`);
     assert.ok(h.includes('sélectionnées par Madame de Valmorin'), `bandeau rencontres sur ${pg}`);
   }
   const soc = page('rubrique/societe');

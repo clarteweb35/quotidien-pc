@@ -7,7 +7,6 @@ import { url } from '../lib/site';
 import { melangeDuJour } from '../lib/melange';
 import AnnonceCarte from '../components/AnnonceCarte.astro';
 import PubDefilante from '../components/PubDefilante.astro';
-import EncartPubRubrique from '../components/EncartPubRubrique.astro';
 
 const compte = (slug: string) => annonces.filter((a) => a.cat === slug).length;
 const milieu = Math.ceil(annonces.length / 2);
@@ -70,7 +69,6 @@ const dernieres = duJour.slice(milieu);
       )}
       {premieres.map((a) => <AnnonceCarte a={a} />)}
     </div>
-    <EncartPubRubrique slug="economie" large />
     <PubDefilante />
     <div class="pa-colonnes" id="pa-liste-2">
       {dernieres.map((a) => <AnnonceCarte a={a} />)}

@@ -13,6 +13,17 @@
       "url": "https://www.fxnol.fr/",
       "site": "fxnol.fr",
       "lien": "Découvrir fxNOL"
+    },
+    "societe": {
+      "marque": "Quentin Guillo",
+      "logo": "quentin-guillo.webp",
+      "logoAlt": "Portrait de Quentin Guillo, photographe, en pull noir, la main sur le menton, sur fond blanc",
+      "titre": "Quentin GUILLO : photographe pour vos plus beaux souvenirs",
+      "texte": "Des instants volés ou posés toujours capturés avec une vision profondément humaniste et empathique. Une approche sensible et douce pour immortaliser vos rires et vos regards.",
+      "avertissement": "Photographe indépendant, actuellement sur Rennes.",
+      "url": "https://quentin-guillo-photo.fr/",
+      "site": "quentin-guillo-photo.fr",
+      "lien": "Découvrir le travail de Quentin Guillo"
     }
   },
   "accroche": "Les bonnes affaires, les grands projets et les petites entourloupes.",
@@ -51,6 +62,7 @@
     { "slug": "administration", "name": "Administration & vie publique" }
   ],
   "annonceurs": [
+    { "id": "fxnol", "nom": "fxNOL", "palette": "bleu", "logo": "fxnol.webp", "logoStyle": "haut" },
     { "id": "evidence", "nom": "Cabinet Évidence & Associés", "slogan": "Nous confirmons ce que vous pensiez déjà.", "palette": "ink", "logo": "evidence.webp", "logoStyle": "haut" },
     { "id": "zerotache", "nom": "Zéro-Tâche SAS", "slogan": "Automatiser l'inutile, enfin.", "palette": "bleu", "logo": "zerotache.webp", "logoStyle": "duo" },
     { "id": "bpcc", "nom": "Bureau paritaire de certification des certifications", "slogan": "Certifié, donc certifiant.", "palette": "vert", "logo": "bpcc.webp", "logoStyle": "coin" },
@@ -64,6 +76,13 @@
     { "id": "miraculex", "nom": "Miraculex®", "slogan": "Le miracle, mais en flacon.", "palette": "or", "logo": "miraculex.webp", "legende": true, "logoStyle": "haut" }
   ],
   "annonces": [
+    {
+      "id": "pa-051", "cat": "publicites", "format": "classique", "ref": "PA-051", "reel": true, "annonceur": "fxnol",
+      "titre": "fxNOL School : apprendre le trading par la connaissance",
+      "texte": "Des leçons en deux niveaux (débutant ou pro), un laboratoire d'indicateurs, un quiz Forex corrigé question par question et un calculateur de taille de position selon votre risque. Contenu gratuit et éducatif.",
+      "conditions": "Le trading comporte un risque de perte en capital. Contenu éducatif : aucun indicateur ne garantit un gain et rien n'est un conseil en investissement.",
+      "url": "https://www.fxnol.fr/", "site": "fxnol.fr", "lien": "Découvrir fxNOL"
+    },
     {
       "id": "pa-050", "cat": "services", "format": "classique", "ref": "PA-050", "reel": true, "drapeau": true,
       "titre": "Quentin GUILLO : photographe pour vos plus beaux souvenirs", "prix": "Actuellement sur Rennes",
