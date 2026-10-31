@@ -3,7 +3,17 @@
 Nommez votre image **exactement comme la référence** (ex. `261024-X1.jpg`) et déposez-la dans `site/src/assets/manual/`.
 Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large minimum.
 
-## Sans image (5)
+## Sans image (7)
+
+### `261031-03` — COP17 : les États s'accordent enfin sur un texte historique confirmant que les arbres sont des végétaux
+- Rubrique : environnement
+- Description suggérée : Une grande salle de conférence internationale où des diplomates en costume applaudissent chaleureusement devant une diapositive affichant uniquement un dessin d'arbre stylisé. Style dessin de presse.
+- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
+
+### `261031-02` — Art contemporain : trois visiteurs restent figés quarante-huit minutes devant un panneau d'évacuation d'urgence
+- Rubrique : culture
+- Description suggérée : Un groupe de visiteurs vus de dos dans une galerie d'art blanche et épurée, observant avec une gravité extrême un simple extincteur rouge accroché au mur blanc.
+- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
 ### `261027-02` — Droits des algorithmes : des chercheurs préconisent quinze minutes de pause-café toutes les 100 000 requêtes
 - Rubrique : tech
@@ -30,8 +40,13 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 - Description suggérée : Une longue rangée de chaises vides alignées sur trois étages devant un mur neutre, vue de dos, avec un appareil photo sur trépied au premier plan
 - Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
-## Déjà illustrés (14)
+## Déjà illustrés (19)
 
+- `261031-D5` — France 2030 : 54 milliards annoncés, dont 19 encore à retrouver (261031-D5-dessin.jpg)
+- `261031-D4` — Charité bien ordonnée : pourquoi la chrétienté se défend d’autant mieux qu’on évite de la pratiquer (261031-D4-dessin.jpg)
+- `261031-D3` — « Plus jamais ça » : la communauté internationale réédite son communiqué de préoccupation, désormais disponible en 14 langues et en modèle à trous (261031-D3-dessin.jpg)
+- `261031-D2` — Halloween : 70 000 policiers mobilisés, les autorités organisent une gigantesque bataille navale contre les manifestants (261031-D2.png)
+- `261030-D2` — Trump promet 5 000 dollars aux Américains : le chèque est hypothétique, la dette est bien réelle ! (261030-D2.png)
 - `261029-04` — Prix du carburant : le gouvernement hausse le ton en signant sa lettre avec « Salutations distinguées mais vigilantes » (261029-04.jpg)
 - `261029-03` — Face aux bénéfices de TotalEnergies, il demande poliment à sa station-service de lui faire une fleur (261029-03-dessin.jpg)
 - `261028-03` — Statistiques : après trois mois de calculs, un institut confirme que 3 Ballon d’Or est supérieur à 2 (261028-03.png)

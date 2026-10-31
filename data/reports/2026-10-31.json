@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-31",
+  "target": 5,
+  "publishedCount": 2,
+  "articles": [
+    {
+      "id": "c586f311bf9f",
+      "ref": "261031-02",
+      "title": "Art contemporain : trois visiteurs restent figés quarante-huit minutes devant un panneau d'évacuation d'urgence",
+      "category": "culture",
+      "slug": "art-contemporain-trois-visiteurs-restent-figes-quarante"
+    },
+    {
+      "id": "59da21a7ca81",
+      "ref": "261031-03",
+      "title": "COP17 : les États s'accordent enfin sur un texte historique confirmant que les arbres sont des végétaux",
+      "category": "environnement",
+      "slug": "cop17-les-etats-s-accordent-enfin-sur-un-texte-historique"
+    }
+  ],
+  "slots": [
+    {
+      "idx": 0,
+      "hhmm": "09:10",
+      "attempts": 0,
+      "status": "abandoned",
+      "lastError": "fenetre_de_rattrapage_depassee"
+    },
+    {
+      "idx": 1,
+      "hhmm": "09:40",
+      "attempts": 1,
+      "status": "published",
+      "startedAt": "2026-10-31T10:51:08.366Z",
+      "articleId": "c586f311bf9f",
+      "publishedAt": "2026-10-31T10:51:08.366Z",
+      "topicId": "f3d71047c388",
+      "lastError": null
+    },
+    {
+      "idx": 2,
+      "hhmm": "10:10",
+      "attempts": 1,
+      "status": "published",
+      "startedAt": "2026-10-31T10:53:13.096Z",
+      "articleId": "59da21a7ca81",
+      "publishedAt": "2026-10-31T10:53:13.096Z",
+      "topicId": "7a5033d2f7f6",
+      "lastError": null
+    },
+    {
+      "idx": 3,
+      "hhmm": "10:40",
+      "status": "pending",
+      "attempts": 0
+    },
+    {
+      "idx": 4,
+      "hhmm": "11:10",
+      "status": "pending",
+      "attempts": 0
+    }
+  ],
+  "rejections": 0,
+  "quarantined": 0,
+  "api": {
+    "calls": 10,
+    "inputTokens": 18258,
+    "outputTokens": 7029,
+    "costUsd": 0.073611,
+    "dailyCapUsd": 1,
+    "monthCostUsd": 0.779458,
+    "monthlyCapUsd": 15
+  },
+  "paused": false,
+  "lastRun": {
+    "at": "2026-10-31T10:51:07.228Z",
+    "runId": "20261031105107-4c7d",
+    "published": 2,
+    "stopped": null
+  }
+}

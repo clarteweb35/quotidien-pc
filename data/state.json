@@ -1709,6 +1709,110 @@
       "seenAt": "2026-10-30T11:19:41.871Z",
       "status": "used",
       "usedAt": "2026-10-30T11:19:41.871Z"
+    },
+    "ed514d51910c": {
+      "title": "Jerry Gorovoy, l’ombre fidèle de l’artiste Louise Bourgeois",
+      "url": "https://www.lemonde.fr/m-le-mag/article/2026/10/31/jerry-gorovoy-l-ombre-fidele-de-l-artiste-louise-bourgeois_6803384_4500055.html",
+      "category": "culture",
+      "seenAt": "2026-10-31T10:51:08.366Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "492ff4e5ef34": {
+      "title": "« Les Disparus des Argonnes », sur France.tv : la colère d’une mère contre la Grande Muette",
+      "url": "https://www.lemonde.fr/culture/article/2026/10/30/les-disparus-des-argonnes-sur-france-tv-la-colere-d-une-mere-contre-la-grande-muette_6803115_3246.html",
+      "category": "culture",
+      "seenAt": "2026-10-31T10:51:08.366Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "6c79251c9e8c": {
+      "title": "A la BNF, une plongée époustouflante dans la photographie japonaise, du traumatisme nucléaire au minimalisme zen",
+      "url": "https://www.lemonde.fr/culture/article/2026/10/30/a-la-bnf-une-plongee-epoustouflante-dans-la-photographie-japonaise-du-traumatisme-nucleaire-au-minimalisme-zen_6802766_3246.html",
+      "category": "culture",
+      "seenAt": "2026-10-31T10:51:08.366Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "f3d71047c388": {
+      "title": "Sélection galerie : Tim Eitel expose un monde trompeur chez Jousse Entreprise",
+      "url": "https://www.lemonde.fr/culture/article/2026/10/31/selection-galerie-tim-eitel-expose-un-monde-trompeur-chez-jousse-entreprise_6803493_3246.html",
+      "category": "culture",
+      "seenAt": "2026-10-31T10:51:08.366Z",
+      "status": "used",
+      "usedAt": "2026-10-31T10:51:08.366Z"
+    },
+    "6990e0dcc76d": {
+      "title": "En images : les fossiles du Quercy, témoins d’un bouleversement climatique",
+      "url": "https://www.lemonde.fr/sciences/video/2026/10/30/en-images-les-fossiles-du-quercy-temoins-d-un-bouleversement-climatique_6803064_1650684.html",
+      "category": "environnement",
+      "seenAt": "2026-10-31T10:53:13.096Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "7a5033d2f7f6": {
+      "title": "A la COP17 d’Erevan, malgré les divergences, les Etats s’entendent sur des textes pour tenter de protéger la nature",
+      "url": "https://www.lemonde.fr/planete/article/2026/10/30/a-la-cop17-d-erevan-malgre-les-divergences-les-etats-s-entendent-sur-des-textes-pour-tenter-de-proteger-la-nature_6803202_3244.html",
+      "category": "environnement",
+      "seenAt": "2026-10-31T10:53:13.096Z",
+      "status": "used",
+      "usedAt": "2026-10-31T10:53:13.096Z"
+    },
+    "f0495e217bb2": {
+      "title": "Attentat raciste à Trappes : \"La France, c'est nous\" dit Ali Rabeh",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261031-attentat-raciste-%C3%A0-trappes-la-france-c-est-nous-dit-ali-rabeh",
+      "category": "monde",
+      "seenAt": "2026-10-31T10:53:44.075Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "adf9e097c06c": {
+      "title": "Espagne : la difficile identification des victimes de la collision ferroviaire",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261031-espagne-la-difficile-identification-des-victimes-de-la-collision-ferroviaire",
+      "category": "monde",
+      "seenAt": "2026-10-31T10:53:44.075Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "b7af4d2a906d": {
+      "title": "Depuis les États-Unis, Flavio Bolsonaro se dit victime d'une \"persécution\" au Brésil",
+      "url": "https://www.france24.com/fr/am%C3%A9riques/20261030-depuis-les-%C3%A9tats-unis-flavio-bolsonaro-se-dit-victime-d-une-pers%C3%A9cution-au-br%C3%A9sil",
+      "category": "monde",
+      "seenAt": "2026-10-31T10:53:44.075Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "6ea57d006ee4": {
+      "title": "MAGA : pourquoi le camp de Trump se fracture - Décryptage disponible sur YouTube",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261030-maga-pourquoi-le-camp-de-trump-se-fracture-d%C3%A9cryptage-disponible-sur-youtube",
+      "category": "monde",
+      "seenAt": "2026-10-31T10:53:44.075Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "2fc373f9a604": {
+      "title": "A New York, le prix des crèches et des écoles et des structures de garde est si exorbitant qu’avoir un enfant est devenu un luxe",
+      "url": "https://www.lemonde.fr/economie/article/2026/10/31/a-new-york-le-prix-des-creches-et-des-ecoles-et-des-structures-de-garde-est-si-exorbitant-qu-avoir-un-enfant-est-devenu-un-luxe_6803386_3234.html",
+      "category": "monde",
+      "seenAt": "2026-10-31T10:53:44.075Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "728e0c2efd76": {
+      "title": "Pénurie de navires et tarifs record : comment la guerre au Moyen-Orient fait bondir les prix du transport de pétrole",
+      "url": "https://www.lemonde.fr/economie/article/2026/10/31/penurie-de-navires-et-tarifs-record-comment-la-guerre-au-moyen-orient-fait-bondir-les-prix-du-transport-de-petrole_6803378_3234.html",
+      "category": "monde",
+      "seenAt": "2026-10-31T10:53:44.075Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "273404c33b6b": {
+      "title": "Après le rapprochement inédit entre le Canada et l’UE, les premières retombées concrètes",
+      "url": "https://www.lemonde.fr/international/article/2026/10/31/apres-le-rapprochement-inedit-entre-le-canada-et-l-ue-les-premieres-retombees-concretes_6803372_3210.html",
+      "category": "monde",
+      "seenAt": "2026-10-31T10:53:44.075Z",
+      "status": "used",
+      "usedAt": "2026-10-31T10:53:44.075Z"
     }
   },
   "slots": {
@@ -2032,13 +2136,38 @@
         "status": "abandoned",
         "lastError": "fenetre_de_rattrapage_depassee"
       }
+    },
+    "2026-10-31": {
+      "0": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "1": {
+        "attempts": 1,
+        "status": "published",
+        "startedAt": "2026-10-31T10:51:08.366Z",
+        "articleId": "c586f311bf9f",
+        "publishedAt": "2026-10-31T10:51:08.366Z",
+        "topicId": "f3d71047c388",
+        "lastError": null
+      },
+      "2": {
+        "attempts": 1,
+        "status": "published",
+        "startedAt": "2026-10-31T10:53:13.096Z",
+        "articleId": "59da21a7ca81",
+        "publishedAt": "2026-10-31T10:53:13.096Z",
+        "topicId": "7a5033d2f7f6",
+        "lastError": null
+      }
     }
   },
   "lastRun": {
-    "at": "2026-10-30T11:18:42.511Z",
-    "runId": "20261030111842-1933",
-    "published": 0,
-    "stopped": "gemini_unavailable"
+    "at": "2026-10-31T10:51:07.228Z",
+    "runId": "20261031105107-4c7d",
+    "published": 2,
+    "stopped": null
   },
   "caricatures": {
     "2026-10-27": {
@@ -2057,6 +2186,11 @@
       "lastError": null
     },
     "2026-10-30": {
+      "status": "published",
+      "attempts": 1,
+      "lastError": null
+    },
+    "2026-10-31": {
       "status": "published",
       "attempts": 1,
       "lastError": null

@@ -929,14 +929,164 @@
       "inputTokens": 1252,
       "outputTokens": 60,
       "costUsd": 0.000526
+    },
+    {
+      "ts": "2026-10-31T10:53:07.472Z",
+      "date": "2026-10-31",
+      "month": "2026-10",
+      "runId": "20261031105107-4c7d",
+      "purpose": "generate",
+      "model": "gemini-3.8-flash",
+      "params": {
+        "temperature": 1,
+        "maxOutputTokens": 4096
+      },
+      "inputTokens": 4453,
+      "outputTokens": 1675,
+      "costUsd": 0.019242
+    },
+    {
+      "ts": "2026-10-31T10:53:08.382Z",
+      "date": "2026-10-31",
+      "month": "2026-10",
+      "runId": "20261031105107-4c7d",
+      "purpose": "judge",
+      "model": "gemini-3.5-flash-lite",
+      "params": {
+        "temperature": 0.2,
+        "maxOutputTokens": 1024
+      },
+      "inputTokens": 1066,
+      "outputTokens": 56,
+      "costUsd": 0.00046
+    },
+    {
+      "ts": "2026-10-31T10:53:10.781Z",
+      "date": "2026-10-31",
+      "month": "2026-10",
+      "runId": "20261031105107-4c7d",
+      "purpose": "image",
+      "model": "@cf/black-forest-labs/flux-1-schnell",
+      "params": {
+        "aspectRatio": "16:9",
+        "imageSize": "1K"
+      },
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "costUsd": 0
+    },
+    {
+      "ts": "2026-10-31T10:53:13.092Z",
+      "date": "2026-10-31",
+      "month": "2026-10",
+      "runId": "20261031105107-4c7d",
+      "purpose": "image_judge",
+      "model": "gemini-3.5-flash-lite",
+      "params": {
+        "temperature": 0.2,
+        "maxOutputTokens": 1024
+      },
+      "inputTokens": 1239,
+      "outputTokens": 60,
+      "costUsd": 0.000522
+    },
+    {
+      "ts": "2026-10-31T10:53:26.060Z",
+      "date": "2026-10-31",
+      "month": "2026-10",
+      "runId": "20261031105107-4c7d",
+      "purpose": "generate",
+      "model": "gemini-3.6-flash",
+      "params": {
+        "temperature": 1,
+        "maxOutputTokens": 4096
+      },
+      "inputTokens": 4510,
+      "outputTokens": 1948,
+      "costUsd": 0.021375
+    },
+    {
+      "ts": "2026-10-31T10:53:43.400Z",
+      "date": "2026-10-31",
+      "month": "2026-10",
+      "runId": "20261031105107-4c7d",
+      "purpose": "generate",
+      "model": "gemini-3.6-flash",
+      "params": {
+        "temperature": 1,
+        "maxOutputTokens": 4096
+      },
+      "inputTokens": 4560,
+      "outputTokens": 2248,
+      "costUsd": 0.0237
+    },
+    {
+      "ts": "2026-10-31T10:53:44.071Z",
+      "date": "2026-10-31",
+      "month": "2026-10",
+      "runId": "20261031105107-4c7d",
+      "purpose": "judge",
+      "model": "gemini-3.5-flash-lite",
+      "params": {
+        "temperature": 0.2,
+        "maxOutputTokens": 1024
+      },
+      "inputTokens": 885,
+      "outputTokens": 56,
+      "costUsd": 0.000406
+    },
+    {
+      "ts": "2026-10-31T10:53:53.639Z",
+      "date": "2026-10-31",
+      "month": "2026-10",
+      "runId": "20261031105107-4c7d",
+      "purpose": "caricature",
+      "model": "gemini-3.6-flash",
+      "params": {
+        "temperature": 1,
+        "maxOutputTokens": 4096
+      },
+      "inputTokens": 289,
+      "outputTokens": 926,
+      "costUsd": 0.007379
+    },
+    {
+      "ts": "2026-10-31T10:53:55.583Z",
+      "date": "2026-10-31",
+      "month": "2026-10",
+      "runId": "20261031105107-4c7d",
+      "purpose": "image",
+      "model": "@cf/black-forest-labs/flux-1-schnell",
+      "params": {
+        "aspectRatio": "16:9",
+        "imageSize": "1K"
+      },
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "costUsd": 0
+    },
+    {
+      "ts": "2026-10-31T10:53:57.503Z",
+      "date": "2026-10-31",
+      "month": "2026-10",
+      "runId": "20261031105107-4c7d",
+      "purpose": "image_judge",
+      "model": "gemini-3.5-flash-lite",
+      "params": {
+        "temperature": 0.2,
+        "maxOutputTokens": 1024
+      },
+      "inputTokens": 1256,
+      "outputTokens": 60,
+      "costUsd": 0.000527
     }
   ],
   "monthly": {
     "2026-10": {
-      "costUsd": 0.705847,
-      "inputTokens": 123257,
-      "outputTokens": 74552,
-      "calls": 62
+      "costUsd": 0.779458,
+      "inputTokens": 141515,
+      "outputTokens": 81581,
+      "calls": 72
     }
   }
 }
