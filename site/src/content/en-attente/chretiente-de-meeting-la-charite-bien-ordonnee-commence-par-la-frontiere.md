@@ -10,7 +10,7 @@ tags: ["édito","chrétienté","droite","hypocrisie","politique"]
 publishedAt: "2026-10-31T09:10:00.000Z"
 kind: "news"
 satire: true
-sources: []
+sources: [{"name":"Europe 1","title":"Immigration : « Il faut supprimer le communautarisme pour permettre l’assimilation » (Marine Le Pen)","url":"https://www.europe1.fr/politique/immigration-il-faut-supprimer-le-communautarisme-pour-permettre-lassimilation-4092764"}]
 slug: "chretiente-de-meeting-la-charite-bien-ordonnee-commence-par-la-frontiere"
 imagePrompt: "Dessin de presse satirique : une estrade de meeting politique avec un immense crucifix doré, une foule qui applaudit, et à l’extérieur de la salle un homme transi devant une porte fermée à double tour portant un panneau « Complet ». Style encre et aquarelle."
 imageAlt: "Dessin de presse : un meeting sous un grand crucifix doré, et dehors un homme grelottant devant une porte fermée marquée « Complet »."
@@ -48,6 +48,14 @@ Votre éditorialiste a compilé, pour l’édification du lecteur, quelques indi
 - « amen » de clôture : 100 % des meetings.
 
 On le voit : la foi progresse partout, sauf là où elle coûterait quelque chose.
+
+## Les maîtres de la chrétienté, cités dans le texte
+
+Pour ne pas être accusé de forcer le trait, votre éditorialiste s’en tient aux déclarations publiques, rien que celles-là. Marine Le Pen, interrogée sur Europe 1, a ainsi expliqué que la France « peut être laïque parce qu’elle est de culture chrétienne ». La formule est admirable : la culture chrétienne est invoquée à titre de **décor**, comme un papier peint de salle des fêtes, sans qu’il soit jamais question d’en appliquer le contenu à un seul réfugié.
+
+De son côté, Bruno Retailleau a déclaré sur LCI que « l’immigration n’est pas une chance pour la France ». Rapprochons cette phrase de la parabole de l’hôte du chapitre 25 de Matthieu et tirons-en la leçon : pour l’Évangile, l’étranger est le Christ lui-même qui frappe à la porte, pour le ministre, c’est un indicateur. Il faut reconnaître que les indicateurs sont plus faciles à fermer.
+
+Quant à Jordan Bardella, il appartient à cette belle tradition française où l’on est fils d’immigrés italiens, ce qui est une chance, avant de découvrir que la chance, désormais, consiste à être arrivé avant les autres. Sa famille paternelle est issue de l’immigration italienne : elle a donc bénéficié, en son temps, d’une hospitalité qui n’exigeait pas encore de dossier en trois exemplaires. On n’est jamais aussi attaché à une porte qu’une fois qu’on est passé de l’autre côté et qu’on l’a refermée soigneusement derrière soi.
 
 ## Un mot, pour être juste, de la girouette d’en face
 
