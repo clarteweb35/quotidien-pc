@@ -7,7 +7,7 @@ chapo: "Croix au premier rang, racines au micro, et porte close pour le voisin :
 description: "Édito satirique de Jean-Eudes de la Manchette : le grand écart entre la chrétienté brandie dans les meetings et la charité pratiquée, de l’accueil de l’étranger à l’aide aux plus pauvres."
 category: "editos"
 tags: ["édito","chrétienté","droite","hypocrisie","politique"]
-publishedAt: "2026-10-31T09:10:00.000Z"
+publishedAt: "2026-10-31T04:06:00.000Z"
 kind: "news"
 satire: true
 sources: [{"name":"Europe 1","title":"Immigration : « Il faut supprimer le communautarisme pour permettre l’assimilation » (Marine Le Pen)","url":"https://www.europe1.fr/politique/immigration-il-faut-supprimer-le-communautarisme-pour-permettre-lassimilation-4092764"}]
