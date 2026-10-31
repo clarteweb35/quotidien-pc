@@ -89,7 +89,7 @@ test('petites annonces: page, menu, donnees coherentes et mention obligatoire', 
     assert.match(a.url, /^https:\/\//, a.id);
     assert.ok(html.includes(`href="${a.url}"`), `lien absent: ${a.id}`);
   }
-  assert.equal((html.match(/>Vraie annonce</g) || []).length, vraies.length);
+  assert.equal((html.match(/>Vraie annonce</g) || []).length, vraies.length + 1, 'les vraies annonces + la publicite fxNOL (vraie aussi)');
   assert.ok(html.includes('Seules font exception'), 'la mention signale les vraies annonces');
   assert.ok(page('.').includes('>Petites annonces<'), 'lien dans le menu');
 });

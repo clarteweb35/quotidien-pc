@@ -22,7 +22,7 @@ export const manchetteRencontres = (data as { manchetteRencontres?: { texte: str
 export const agence = (data as { partenaire?: Partenaire }).partenaire ?? null;
 
 /** Vraie publicité affichée à la place de l'encart « Petites annonces » dans une rubrique (clé = slug de la rubrique). */
-export interface EncartRubrique { marque: string; logo: string; logoAlt: string; titre: string; texte: string; avertissement: string; url: string; site: string; lien: string }
+export interface EncartRubrique { marque: string; logo: string; logoAlt: string; fond?: string; titre: string; texte: string; avertissement: string; url: string; site: string; lien: string }
 export const encartsRubriques = (data as { encartsRubriques?: Record<string, EncartRubrique> }).encartsRubriques ?? {};
 
 export const rubrique = { titre: data.titre, accroche: data.accroche, intro: data.intro, mention: data.mention, mentionReelle: data.mentionReelle };
