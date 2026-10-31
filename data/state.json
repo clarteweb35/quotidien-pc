@@ -2160,6 +2160,16 @@
         "publishedAt": "2026-10-31T10:53:13.096Z",
         "topicId": "7a5033d2f7f6",
         "lastError": null
+      },
+      "3": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "4": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
       }
     }
   },
