@@ -1,19 +1,19 @@
 ---
 id: "manchette-d4"
 ref: "261031-D4"
-author: "Jean-Eudes de la Manchette"
+author: "Claire Obscur"
 title: "Charité bien ordonnée : pourquoi la chrétienté se défend d’autant mieux qu’on évite de la pratiquer"
 chapo: "Croix au premier rang, racines au micro, et porte close pour le voisin : une certaine droite a enfin trouvé le moyen de défendre l’Évangile sans jamais l’ouvrir. Votre éditorialiste salue une performance de conservation remarquable."
-description: "Édito satirique de Jean-Eudes de la Manchette : le grand écart entre la chrétienté brandie dans les meetings et la charité pratiquée, de l’accueil de l’étranger à l’aide aux plus pauvres."
-category: "editos"
-tags: ["édito","chrétienté","droite","hypocrisie","politique"]
+description: "Satire : le grand écart entre la chrétienté brandie dans les meetings et la charité pratiquée, de l’accueil de l’étranger à l’aide aux plus pauvres."
+category: "politique"
+tags: ["politique","chrétienté","droite","immigration","hypocrisie"]
 publishedAt: "2026-10-31T04:06:00.000Z"
 kind: "news"
 satire: true
 sources: [{"name":"Europe 1","title":"Immigration : « Il faut supprimer le communautarisme pour permettre l’assimilation » (Marine Le Pen)","url":"https://www.europe1.fr/politique/immigration-il-faut-supprimer-le-communautarisme-pour-permettre-lassimilation-4092764"}]
 slug: "chretiente-de-meeting-la-charite-bien-ordonnee-commence-par-la-frontiere"
 imagePrompt: "Dessin de presse satirique : une estrade de meeting politique avec un immense crucifix doré, une foule qui applaudit, et à l’extérieur de la salle un homme transi devant une porte fermée à double tour portant un panneau « Complet ». Style encre et aquarelle."
-imageAlt: "Dessin de presse : un meeting sous un grand crucifix doré, et dehors un homme grelottant devant une porte fermée marquée « Complet »."
+imageAlt: "Dessin de presse : à gauche, un orateur à l’écharpe tricolore devant un immense crucifix doré et une foule qui applaudit ; à droite, une famille de réfugiés sous la pluie devant une porte cadenassée marquée « Complet »."
 ---
 Il fut un temps où l’on croyait que défendre la chrétienté consistait à imiter le Christ. Les esprits sérieux ont heureusement dépassé ce stade enfantin. Aujourd’hui, on la défend comme on défend un monument historique : en l’entourant de barrières et en veillant à ce que personne n’y entre.
 
@@ -51,7 +51,7 @@ On le voit : la foi progresse partout, sauf là où elle coûterait quelque chos
 
 ## Les maîtres de la chrétienté, cités dans le texte
 
-Pour ne pas être accusé de forcer le trait, votre éditorialiste s’en tient aux déclarations publiques, rien que celles-là. Marine Le Pen, interrogée sur Europe 1, a ainsi expliqué que la France « peut être laïque parce qu’elle est de culture chrétienne ». La formule est admirable : la culture chrétienne est invoquée à titre de **décor**, comme un papier peint de salle des fêtes, sans qu’il soit jamais question d’en appliquer le contenu à un seul réfugié.
+Pour ne pas être accusé de forcer le trait, votre journaliste s’en tient aux déclarations publiques, rien que celles-là. Marine Le Pen, interrogée sur Europe 1, a ainsi expliqué que la France « peut être laïque parce qu’elle est de culture chrétienne ». La formule est admirable : la culture chrétienne est invoquée à titre de **décor**, comme un papier peint de salle des fêtes, sans qu’il soit jamais question d’en appliquer le contenu à un seul réfugié.
 
 De son côté, Bruno Retailleau a déclaré sur LCI que « l’immigration n’est pas une chance pour la France ». Rapprochons cette phrase de la parabole de l’hôte du chapitre 25 de Matthieu et tirons-en la leçon : pour l’Évangile, l’étranger est le Christ lui-même qui frappe à la porte, pour le ministre, c’est un indicateur. Il faut reconnaître que les indicateurs sont plus faciles à fermer.
 
