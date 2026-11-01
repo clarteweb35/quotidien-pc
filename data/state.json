@@ -2255,7 +2255,7 @@
       },
       "4": {
         "attempts": 1,
-        "status": "failed",
+        "status": "abandoned",
         "startedAt": "2026-11-01T11:47:29.365Z",
         "lastError": "sujet_refuse_par_le_modele"
       }
