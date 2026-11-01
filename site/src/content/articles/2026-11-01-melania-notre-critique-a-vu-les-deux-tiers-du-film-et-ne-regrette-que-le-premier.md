@@ -7,13 +7,13 @@ chapo: "Sorti il y a neuf mois, vendu 40 millions de dollars, promu pour 35 mill
 description: "Satire : Martin Deslauriers revient sur le documentaire « Melania » (Amazon MGM, 2026), son box-office, sa note sur IMDb et la meilleure façon de ne pas en voir la fin."
 category: "culture"
 tags: ["culture","cinéma","melania","documentaire","box-office"]
-publishedAt: "2026-11-01T09:00:00.000Z"
+publishedAt: "2026-11-01T04:53:00.000Z"
 kind: "news"
 satire: true
 sources: [{"name":"Variety","title":"'Melania' Loses Money in Theaters, But Box Office Was Never the Point","url":"https://variety.com/2026/film/box-office/melania-loses-money-box-office-trump-amazon-1236657170/"},{"name":"NBC News","title":"'Melania' doc beats box office expectations despite criticism, poor reviews","url":"https://www.nbcnews.com/pop-culture/movies/melania-documentary-beats-box-office-expectations-amazon-mgm-studios-rcna256947"},{"name":"IMDb","title":"Melania (2026)","url":"https://www.imdb.com/title/tt35291758/"},{"name":"Wikipédia","title":"Melania (film)","url":"https://en.wikipedia.org/wiki/Melania_(film)"}]
 slug: "melania-notre-critique-a-vu-les-deux-tiers-du-film-et-ne-regrette-que-le-premier"
 imagePrompt: "Dessin de presse satirique : une salle de cinéma presque vide, un unique critique endormi, un carnet « 4 étoiles » sur les genoux, tandis que l’écran affiche une affiche immense et un employé balaie des rangées de sièges vides. Style encre et aquarelle."
-imageAlt: "Dessin de presse : une salle de cinéma quasi déserte, un critique endormi avec un carnet « 4 étoiles », et un employé qui balaie les rangées vides devant l’écran."
+imageAlt: "Dessin de presse : un critique de cinéma endormi dans son fauteuil « Critique », un carnet « 4 étoiles » sur les genoux, pendant que l’écran affiche « FIN » et que deux agents d’entretien balaient la salle."
 ---
 *Ce qui suit mélange des données réelles, issues de la presse spécialisée (sources en bas de page), et de la satire, signalée comme telle.*
 
