@@ -5,14 +5,14 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 
 ## Sans image (7)
 
-### `261031-03` — COP17 : les États s'accordent enfin sur un texte historique confirmant que les arbres sont des végétaux
-- Rubrique : environnement
-- Description suggérée : Une grande salle de conférence internationale où des diplomates en costume applaudissent chaleureusement devant une diapositive affichant uniquement un dessin d'arbre stylisé. Style dessin de presse.
+### `261101-04` — Contestation en ligne : un expert recommande d'imposer un formulaire Cerfa avant chaque partage de hashtag
+- Rubrique : tech
+- Description suggérée : Un écran de smartphone géant affichant un formulaire administratif complexe tamponné en rouge, posé sur un bureau en bois avec des dossiers suspendus.
 - Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
-### `261031-02` — Art contemporain : trois visiteurs restent figés quarante-huit minutes devant un panneau d'évacuation d'urgence
-- Rubrique : culture
-- Description suggérée : Un groupe de visiteurs vus de dos dans une galerie d'art blanche et épurée, observant avec une gravité extrême un simple extincteur rouge accroché au mur blanc.
+### `261031-D6` — Génération Z : sauver la planète depuis son canapé, avec 400 applications et 4 % de batterie
+- Rubrique : editos
+- Description suggérée : Dessin de presse satirique : un jeune assis dans un canapé, le smartphone à la main, devant une pancarte « Sauvons la planète » appuyée contre une prise électrique surchargée de chargeurs, un petit nuage de data center au-dessus de sa tête. Style encre et aquarelle.
 - Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
 ### `261027-02` — Droits des algorithmes : des chercheurs préconisent quinze minutes de pause-café toutes les 100 000 requêtes
@@ -40,8 +40,11 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 - Description suggérée : Une longue rangée de chaises vides alignées sur trois étages devant un mur neutre, vue de dos, avec un appareil photo sur trépied au premier plan
 - Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
-## Déjà illustrés (19)
+## Déjà illustrés (22)
 
+- `261101-D1` — « Melania » : notre critique a vu les deux tiers du film et estime que c’était déjà très généreux (261101-D1-dessin.png)
+- `261031-03` — COP17 : les États s'accordent enfin sur un texte historique confirmant que les arbres sont des végétaux (261031-03.jpg)
+- `261031-02` — Art contemporain : trois visiteurs restent figés quarante-huit minutes devant un panneau d'évacuation d'urgence (261031-02.jpg)
 - `261031-D5` — France 2030 : 54 milliards annoncés, dont 19 encore à retrouver (261031-D5-dessin.jpg)
 - `261031-D4` — Charité bien ordonnée : pourquoi la chrétienté se défend d’autant mieux qu’on évite de la pratiquer (261031-D4-dessin.jpg)
 - `261031-D3` — « Plus jamais ça » : la communauté internationale réédite son communiqué de préoccupation, désormais disponible en 14 langues et en modèle à trous (261031-D3-dessin.jpg)

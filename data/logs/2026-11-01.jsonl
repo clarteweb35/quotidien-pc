@@ -1,0 +1,40 @@
+{"ts":"2026-11-01T11:47:13.277Z","runId":"20261101114713-e06e","level":"warn","event":"cycle.slots_abandoned","count":3}
+{"ts":"2026-11-01T11:47:13.278Z","runId":"20261101114713-e06e","level":"info","event":"cycle.start","date":"2026-11-01","due":["2026-11-01#3","2026-11-01#4"],"remainingToday":5,"dryRun":false}
+{"ts":"2026-11-01T11:47:13.851Z","runId":"20261101114713-e06e","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":31,"kept":25}
+{"ts":"2026-11-01T11:47:13.851Z","runId":"20261101114713-e06e","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-11-01T11:47:13.851Z","runId":"20261101114713-e06e","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":20}
+{"ts":"2026-11-01T11:47:13.851Z","runId":"20261101114713-e06e","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":24}
+{"ts":"2026-11-01T11:47:13.851Z","runId":"20261101114713-e06e","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":17}
+{"ts":"2026-11-01T11:47:13.851Z","runId":"20261101114713-e06e","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":20,"kept":9}
+{"ts":"2026-11-01T11:47:13.851Z","runId":"20261101114713-e06e","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":12}
+{"ts":"2026-11-01T11:47:13.852Z","runId":"20261101114713-e06e","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":15}
+{"ts":"2026-11-01T11:47:13.852Z","runId":"20261101114713-e06e","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":5}
+{"ts":"2026-11-01T11:47:13.852Z","runId":"20261101114713-e06e","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":16}
+{"ts":"2026-11-01T11:47:13.852Z","runId":"20261101114713-e06e","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":9}
+{"ts":"2026-11-01T11:47:13.852Z","runId":"20261101114713-e06e","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":1}
+{"ts":"2026-11-01T11:47:13.852Z","runId":"20261101114713-e06e","level":"info","event":"collect.done","items":169}
+{"ts":"2026-11-01T11:47:13.876Z","runId":"20261101114713-e06e","level":"info","event":"topic.selection","slot":"2026-11-01#3","target":"tech","candidates":169,"rejected":0,"chosen":"Mobilisations sociales : six semaines d’un mouvement aussi actif sur les réseaux sociaux que dans la rue","score":6}
+{"ts":"2026-11-01T11:47:28.480Z","runId":"20261101114713-e06e","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4586,"outputTokens":2728,"costUsd":0.027339}
+{"ts":"2026-11-01T11:47:29.362Z","runId":"20261101114713-e06e","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":961,"outputTokens":83,"costUsd":0.000496}
+{"ts":"2026-11-01T11:47:29.362Z","runId":"20261101114713-e06e","level":"info","event":"judge.result","slot":"2026-11-01#3","attempt":1,"humor":7,"coherence":9,"risk":1,"issues":[]}
+{"ts":"2026-11-01T11:47:29.364Z","runId":"20261101114713-e06e","level":"info","event":"publish.ok","slot":"2026-11-01#3","id":"8d22af1abeed","slug":"contestation-en-ligne-un-expert-recommande-d-imposer-un","url":"/articles/contestation-en-ligne-un-expert-recommande-d-imposer-un/","attempt":1,"dryRun":false}
+{"ts":"2026-11-01T11:47:29.387Z","runId":"20261101114713-e06e","level":"info","event":"topic.selection","slot":"2026-11-01#4","target":"sport","candidates":169,"rejected":5,"chosen":"« Le déni sociétal sur la prédation sexuelle dans le football français est massif et transcende les institutions »","score":4}
+{"ts":"2026-11-01T11:47:37.560Z","runId":"20261101114713-e06e","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4636,"outputTokens":1252,"costUsd":0.016344}
+{"ts":"2026-11-01T11:47:37.561Z","runId":"20261101114713-e06e","level":"warn","event":"generate.refused","slot":"2026-11-01#4","reason":"Le sujet concerne des accusations d'abus sexuels et la protection de l'enfance, ce qui entre dans la catégorie des sujets sensibles et dramatiques exclus par la ligne éditoriale du journal."}
+{"ts":"2026-11-01T11:47:37.562Z","runId":"20261101114713-e06e","level":"warn","event":"slot.failed","slot":"2026-11-01#4","reason":"sujet_refuse_par_le_modele"}
+{"ts":"2026-11-01T11:47:37.789Z","runId":"20261101114713-e06e","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":31,"kept":25}
+{"ts":"2026-11-01T11:47:37.789Z","runId":"20261101114713-e06e","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-11-01T11:47:37.789Z","runId":"20261101114713-e06e","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":20}
+{"ts":"2026-11-01T11:47:37.789Z","runId":"20261101114713-e06e","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":24}
+{"ts":"2026-11-01T11:47:37.789Z","runId":"20261101114713-e06e","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":17}
+{"ts":"2026-11-01T11:47:37.789Z","runId":"20261101114713-e06e","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":20,"kept":9}
+{"ts":"2026-11-01T11:47:37.789Z","runId":"20261101114713-e06e","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":12}
+{"ts":"2026-11-01T11:47:37.789Z","runId":"20261101114713-e06e","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":15}
+{"ts":"2026-11-01T11:47:37.789Z","runId":"20261101114713-e06e","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":5}
+{"ts":"2026-11-01T11:47:37.789Z","runId":"20261101114713-e06e","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":16}
+{"ts":"2026-11-01T11:47:37.789Z","runId":"20261101114713-e06e","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":9}
+{"ts":"2026-11-01T11:47:37.789Z","runId":"20261101114713-e06e","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":1}
+{"ts":"2026-11-01T11:47:45.190Z","runId":"20261101114713-e06e","level":"info","event":"gemini.call","purpose":"caricature","model":"gemini-3.6-flash","inputTokens":246,"outputTokens":1108,"costUsd":0.008679}
+{"ts":"2026-11-01T11:47:48.537Z","runId":"20261101114713-e06e","level":"info","event":"gemini.call","purpose":"image_judge","model":"gemini-3.5-flash-lite","inputTokens":1258,"outputTokens":60,"costUsd":0.000527}
+{"ts":"2026-11-01T11:47:48.537Z","runId":"20261101114713-e06e","level":"info","event":"image.ok","slot":"caricature#2026-11-01","bytes":147614,"costUsd":0}
+{"ts":"2026-11-01T11:47:48.539Z","runId":"20261101114713-e06e","level":"info","event":"caricature.ok","date":"2026-11-01","titre":"Modération haut débit"}

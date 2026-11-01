@@ -1,4 +1,14 @@
 {
   "items": [],
-  "history": []
+  "history": [
+    {
+      "ts": "2026-11-01T11:47:29.365Z",
+      "slot": "2026-11-01#4",
+      "topic": "« Le déni sociétal sur la prédation sexuelle dans le football français est massif et transcende les institutions »",
+      "stage": "generation",
+      "reasons": [
+        "rejet_du_redacteur: Le sujet concerne des accusations d'abus sexuels et la protection de l'enfance, ce qui entre dans la catégorie des sujets sensibles et dramatiques exclus par la ligne éditoriale du journal."
+      ]
+    }
+  ]
 }

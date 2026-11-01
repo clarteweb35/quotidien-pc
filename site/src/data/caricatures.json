@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-01",
+    "titre": "Modération haut débit",
+    "legende": "Face à la vitesse des échanges, les autorités préconisent l'usage de pansements adhésifs sur les écrans pour stopper les flux indésirables.",
+    "alt": "Un homme en costume tente impuissant de coller des pansements sur des téléphones géants débordant d'icônes lumineuses.",
+    "image": "images/caricatures/2026-11-01.webp",
+    "credit": "Dessin généré par IA · Le Quotidien Presque Certain",
+    "publishedAt": "2026-11-01T11:47:37.564Z",
+    "source": {
+      "name": "France 24",
+      "title": "Manifestations en France : les réseaux sociaux dans le viseur du gouvernement",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261101-manifestations-en-france-les-r%C3%A9seaux-sociaux-dans-le-viseur-du-gouvernement"
+    }
+  },
+  {
     "date": "2026-10-31",
     "titre": "Sauvons la planète",
     "legende": "Depuis son canapé, branché sur trois chargeurs et un data center, la jeunesse sauve la planète avec une conviction qui ne coûte que l’électricité.",

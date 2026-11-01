@@ -1813,6 +1813,62 @@
       "seenAt": "2026-10-31T10:53:44.075Z",
       "status": "used",
       "usedAt": "2026-10-31T10:53:44.075Z"
+    },
+    "98642455e693": {
+      "title": "Mobilisations sociales : six semaines d’un mouvement aussi actif sur les réseaux sociaux que dans la rue",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/31/mobilisation-sociale-six-semaines-d-un-mouvement-aussi-actif-sur-les-reseaux-sociaux-que-dans-la-rue_6803368_823448.html",
+      "category": "tech",
+      "seenAt": "2026-11-01T11:47:13.852Z",
+      "status": "used",
+      "usedAt": "2026-11-01T11:47:13.852Z"
+    },
+    "e499828dbb65": {
+      "title": "« Le déni sociétal sur la prédation sexuelle dans le football français est massif et transcende les institutions »",
+      "url": "https://www.lemonde.fr/idees/article/2026/11/01/le-deni-societal-sur-la-predation-sexuelle-dans-le-football-francais-est-massif-et-transcende-les-institutions_6804129_3232.html",
+      "category": "sport",
+      "seenAt": "2026-11-01T11:47:29.365Z",
+      "status": "excluded",
+      "reason": "refused_by_model"
+    },
+    "b0c6b01543fe": {
+      "title": "Comment la proximité avec le Canada pourrait influencer les midterms au Michigan",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261101-comment-proximit%C3%A9-avec-canada-pourrait-influencer-midterms-au-michigan-d%C3%A9troit-%C3%A9tats-unis-%C3%A9lections-mi-mandat-donald-trump",
+      "category": "monde",
+      "seenAt": "2026-11-01T11:47:37.564Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "6dcc03c28426": {
+      "title": "« Les gens dépensent avec précaution » : en Chine, les ménages préoccupés par les incertitudes économiques",
+      "url": "https://www.lemonde.fr/economie/article/2026/11/01/les-gens-depensent-avec-precaution-en-chine-les-menages-preoccupes-par-les-incertitudes-economiques_6804017_3234.html",
+      "category": "monde",
+      "seenAt": "2026-11-01T11:47:37.564Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "bdad15a5cf49": {
+      "title": "Les Suédois peu pressés d’enterrer leurs morts",
+      "url": "https://www.lemonde.fr/m-le-mag/article/2026/11/01/les-suedois-peu-presses-d-enterrer-leurs-morts_6803969_4500055.html",
+      "category": "monde",
+      "seenAt": "2026-11-01T11:47:37.564Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "525ec682653a": {
+      "title": "Un prix Albert Londres pour saluer les reportages de Bruno Meyerfeld sur les peuples autochtones d’Amazonie",
+      "url": "https://www.lemonde.fr/podcasts/article/2026/11/01/un-prix-albert-londres-pour-saluer-les-reportages-de-bruno-meyerfeld-sur-les-peuples-autochtones-d-amazonie_6803968_5463015.html",
+      "category": "monde",
+      "seenAt": "2026-11-01T11:47:37.564Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "e88f3e078527": {
+      "title": "Manifestations en France : les réseaux sociaux dans le viseur du gouvernement",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261101-manifestations-en-france-les-r%C3%A9seaux-sociaux-dans-le-viseur-du-gouvernement",
+      "category": "monde",
+      "seenAt": "2026-11-01T11:47:37.564Z",
+      "status": "used",
+      "usedAt": "2026-11-01T11:47:37.564Z"
     }
   },
   "slots": {
@@ -2171,12 +2227,44 @@
         "status": "abandoned",
         "lastError": "fenetre_de_rattrapage_depassee"
       }
+    },
+    "2026-11-01": {
+      "0": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "1": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "2": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "3": {
+        "attempts": 1,
+        "status": "published",
+        "startedAt": "2026-11-01T11:47:13.852Z",
+        "articleId": "8d22af1abeed",
+        "publishedAt": "2026-11-01T11:47:13.852Z",
+        "topicId": "98642455e693",
+        "lastError": null
+      },
+      "4": {
+        "attempts": 1,
+        "status": "failed",
+        "startedAt": "2026-11-01T11:47:29.365Z",
+        "lastError": "sujet_refuse_par_le_modele"
+      }
     }
   },
   "lastRun": {
-    "at": "2026-10-31T10:51:07.228Z",
-    "runId": "20261031105107-4c7d",
-    "published": 2,
+    "at": "2026-11-01T11:47:13.200Z",
+    "runId": "20261101114713-e06e",
+    "published": 1,
     "stopped": null
   },
   "caricatures": {
@@ -2201,6 +2289,11 @@
       "lastError": null
     },
     "2026-10-31": {
+      "status": "published",
+      "attempts": 1,
+      "lastError": null
+    },
+    "2026-11-01": {
       "status": "published",
       "attempts": 1,
       "lastError": null
