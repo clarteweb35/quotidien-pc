@@ -13,7 +13,7 @@ satire: true
 sources: []
 slug: "generation-z-sauver-la-planete-depuis-son-canape-avec-4-heures-d-ecran"
 imagePrompt: "Dessin de presse satirique : un jeune assis dans un canapé, le smartphone à la main, devant une pancarte « Sauvons la planète » appuyée contre une prise électrique surchargée de chargeurs, un petit nuage de data center au-dessus de sa tête. Style encre et aquarelle."
-imageAlt: "Dessin de presse : un jeune dans son canapé, le nez dans son smartphone, avec une pancarte « Sauvons la planète » posée contre une multiprise surchargée de chargeurs."
+imageAlt: "Dessin de presse : un jeune affalé dans un fauteuil, le nez dans son smartphone, entouré de multiprises, de chargeurs et d’emballages de repas ; une pancarte « Sauvons la planète » est plantée à côté, et une bulle de pensée affiche « Data center »."
 ---
 On nous répète que la génération Z sera la première à vivre moins bien que la précédente. Votre éditorialiste, qui a coutume de vérifier ce qu’on lui répète, a donc vérifié. Il n’a trouvé aucune statistique indiscutable, mais un faisceau de signes concordants : un loyer, un deux-pièces, un emploi « en alternance » qui dure vingt-cinq ans et une retraite que l’on décrit comme un mythe, dans la bouche des mêmes qui l’ont touchée.
 
