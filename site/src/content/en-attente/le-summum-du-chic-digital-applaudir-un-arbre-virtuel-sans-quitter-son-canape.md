@@ -7,13 +7,13 @@ chapo: "Repérée entre deux stories de détox digitale et un Reel sur l’art d
 description: "Satire : la nouvelle mode des réseaux sociaux, militer pour la planète depuis son canapé, branché sur secteur, en applaudissant un arbre virtuel."
 category: "societe"
 tags: ["société","tendance","réseaux sociaux","écologie","engagement"]
-publishedAt: "2026-11-01T09:30:00.000Z"
+publishedAt: "2026-11-05T09:30:00.000Z"
 kind: "news"
 satire: true
 sources: []
 slug: "le-summum-du-chic-digital-applaudir-un-arbre-virtuel-sans-quitter-son-canape"
 imagePrompt: "Dessin de presse satirique : un salon où une personne affalée dans un canapé applaudit un grand écran affichant un arbre, entourée de multiprises surchargées de chargeurs et d’un paquet de chips ; une pancarte « Engagé » est accrochée au mur. Style encre et aquarelle."
-imageAlt: "Dessin de presse : une personne affalée dans un canapé applaudit un grand écran qui affiche un arbre, entourée de multiprises surchargées et d’un paquet de chips."
+imageAlt: "Dessin de presse : un jeune affalé dans un fauteuil, le nez dans son smartphone, entouré de multiprises, de chargeurs et d’emballages de repas ; une pancarte « Sauvons la planète » est plantée à côté, et une bulle de pensée affiche « Data center »."
 ---
 C’est la grande révolution comportementale de la semaine sur les réseaux sociaux, repérée entre deux stories de détox digitale et un Reel sur l’art de vivre minimaliste : le concept de l’engagement climatique par procuration visuelle.
 
