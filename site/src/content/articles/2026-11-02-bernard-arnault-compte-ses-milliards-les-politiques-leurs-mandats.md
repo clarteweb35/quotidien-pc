@@ -7,7 +7,7 @@ chapo: "En France, il existe une drôle de règle : être riche est parfois cons
 description: "Les grandes fortunes sont scrutées, les longues carrières politiques beaucoup moins. L'exigence de transparence devrait valoir pour tous."
 category: "economie"
 tags: ["économie","bernard-arnault","lvmh","retraites","transparence"]
-publishedAt: "2026-10-30T09:03:00.000Z"
+publishedAt: "2026-11-02T17:43:00.000Z"
 kind: "news"
 satire: true
 sources: []
