@@ -12,6 +12,7 @@ kind: "news"
 satire: true
 sources: []
 slug: "la-france-cherche-un-pilote-mais-tout-le-monde-veut-etre-copilote"
+imageAlt: "Illustration générée par IA : dans un cockpit d’avion en pleine turbulence, des responsables politiques caricaturés se disputent les commandes devant un siège marqué « Pilote recherché », sous des écrans d’alerte (dette, déficit, confiance), pendant qu’une hôtesse demande s’il y a un pilote."
 ---
 *Ce qui suit mélange des données réelles (budget 2027, nombre de candidatures) et de la satire, signalée comme telle.*
 
