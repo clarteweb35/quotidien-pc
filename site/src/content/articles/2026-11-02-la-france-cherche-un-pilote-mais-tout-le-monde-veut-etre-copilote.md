@@ -3,7 +3,7 @@ id: "obscur-d1"
 ref: "261102-D1"
 author: "Claire Obscur"
 title: "La France cherche un pilote, mais tout le monde veut être copilote"
-chapo: "Présidentielle 2027 : bienvenue dans le grand concours de l’ambition personnelle, avec option intérêt général."
+chapo: "Présidentielle 2027 : bienvenue dans le grand concours de l’ambition personnelle, avec option intérêt général. À gauche, au centre, à droite et ailleurs, tout le monde veut sauver la France, à condition de tenir seul le volant."
 description: "Satire : à un an de la présidentielle, la gauche, le centre, la droite et le RN cherchent un pilote pour la France, à condition que ce soit eux."
 category: "politique"
 tags: ["politique","présidentielle 2027","budget 2027","partis","ambition"]
