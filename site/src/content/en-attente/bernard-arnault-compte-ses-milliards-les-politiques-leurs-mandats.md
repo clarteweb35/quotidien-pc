@@ -1,5 +1,6 @@
 ---
 id: "didier-04"
+ref: "261102-D3"
 author: "Hélène Vautrin"
 title: "Bernard Arnault compte ses milliards, les politiques comptent leurs mandats : devinez qui fait scandale !"
 chapo: "En France, il existe une drôle de règle : être riche est parfois considéré comme une faute. Mais avoir fait une longue carrière politique, accumulé les fonctions et acquis des droits à retraite au fil des mandats semble beaucoup moins susciter d’indignation."
@@ -12,7 +13,7 @@ satire: true
 sources: []
 slug: "bernard-arnault-compte-ses-milliards-les-politiques-leurs-mandats"
 imagePrompt: "Deux balances de bureau : l'une croule sous des sacs de pièces d'or étiquetés « fortune », l'autre sous une pile de bulletins de pension, tandis qu'un petit comptable en lunettes lève les bras au milieu, ne sachant laquelle regarder."
-imageAlt: "Deux balances, l'une chargée de sacs de pièces, l'autre de bulletins de pension, et un comptable perplexe."
+imageAlt: "Dessin de presse : un petit comptable perplexe, bras écartés, entre une grande balance chargée de sacs d’or (fortune, profits, dividendes) et une pile de bulletins de pension et d’avis de versement."
 ---
 Prenons Bernard Arnault. L’homme est immensément riche, à la tête de LVMH, un groupe qui réalise des dizaines de milliards d’euros de ventes et emploie des centaines de milliers de collaborateurs dans le monde.
 
