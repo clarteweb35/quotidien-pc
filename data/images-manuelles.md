@@ -5,9 +5,8 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 
 ## Sans image (7)
 
-### `261101-04` — Contestation en ligne : un expert recommande d'imposer un formulaire Cerfa avant chaque partage de hashtag
-- Rubrique : tech
-- Description suggérée : Un écran de smartphone géant affichant un formulaire administratif complexe tamponné en rouge, posé sur un bureau en bois avec des dossiers suspendus.
+### `261102-D2` — Gay et RN : quand on vote pour ceux qui n’ont pas toujours voulu de vous
+- Rubrique : editos
 - Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
 ### `261031-D6` — Génération Z : sauver la planète depuis son canapé, avec 400 applications et 4 % de batterie
@@ -40,8 +39,13 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 - Description suggérée : Une longue rangée de chaises vides alignées sur trois étages devant un mur neutre, vue de dos, avec un appareil photo sur trépied au premier plan
 - Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
-## Déjà illustrés (22)
+## Déjà illustrés (27)
 
+- `261102-D3` — Bernard Arnault compte ses milliards, les politiques comptent leurs mandats : devinez qui fait scandale ! (261102-D3-dessin.jpg)
+- `261102-D1` — La France cherche un pilote, mais tout le monde veut être copilote (261102-D1.png)
+- `261031-D1` — Biodiversité : après deux semaines de négociations, 200 pays s’accordent pour continuer à sauver la planète, si possible sans trop changer leurs habitudes (261031-D1.jpg)
+- `261101-D4` — Binance : 6,3 milliards envolés. La sécurité, elle, était en télétravail. (261101-D4-dessin.png)
+- `261101-04` — Contestation en ligne : un expert recommande d'imposer un formulaire Cerfa avant chaque partage de hashtag (261101-04.jpg)
 - `261101-D1` — « Melania » : notre critique a vu les deux tiers du film et estime que c’était déjà très généreux (261101-D1-dessin.png)
 - `261031-03` — COP17 : les États s'accordent enfin sur un texte historique confirmant que les arbres sont des végétaux (261031-03.jpg)
 - `261031-02` — Art contemporain : trois visiteurs restent figés quarante-huit minutes devant un panneau d'évacuation d'urgence (261031-02.jpg)
