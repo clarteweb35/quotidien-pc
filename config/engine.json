@@ -56,8 +56,8 @@
   "validation": {
     "titleMinChars": 20,
     "titleMaxChars": 120,
-    "chapoMinChars": 60,
-    "chapoMaxChars": 320,
+    "chapoMinChars": 120,
+    "chapoMaxChars": 260,
     "bodyMinWords": 280,
     "bodyMaxWords": 900,
     "seoDescriptionMaxChars": 160,

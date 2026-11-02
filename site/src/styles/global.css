@@ -496,3 +496,10 @@ footer .quality .q-score.q-b { background: #5b9a2c; } /* note B: vert plus clair
   .guirlande i:nth-child(3n+1):nth-child(odd)::after { animation-delay: -.9s; color: #fff; text-shadow: 0 0 2px #16140f, 0 0 4px #e0a800; }
   @keyframes etincelle { 0%, 100% { opacity: 0; transform: scale(.2) rotate(0deg); } 45%, 55% { opacity: 1; transform: scale(1) rotate(45deg); } }
 }
+
+/* Cartes équilibrées : titre (4 lignes) et chapô (4 lignes) tronqués, signature et date alignées en bas de carte quelle que soit la longueur du texte */
+.grid .card { display: flex; flex-direction: column; }
+.grid .card h3, .grid .card h3 + p { display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; }
+.grid .card h3 { -webkit-line-clamp: 4; line-clamp: 4; }
+.grid .card h3 + p { -webkit-line-clamp: 4; line-clamp: 4; }
+.grid .card .byline { margin-top: auto; }
