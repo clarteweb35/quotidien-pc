@@ -7,7 +7,7 @@ chapo: "La COP17 d’Erevan vient de s’achever sur l’adoption de plusieurs t
 description: "La COP17 d’Erevan adopte de nouveaux textes sur la biodiversité, alors que moins de la moitié des objectifs nationaux évalués sont sur la bonne trajectoire."
 category: "environnement"
 tags: ["environnement","biodiversité","cop17","erevan","diplomatie"]
-publishedAt: "2026-10-31T09:00:00.000Z"
+publishedAt: "2026-11-02T17:25:00.000Z"
 kind: "news"
 satire: true
 sources: []
