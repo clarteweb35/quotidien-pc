@@ -1869,6 +1869,70 @@
       "seenAt": "2026-11-01T11:47:37.564Z",
       "status": "used",
       "usedAt": "2026-11-01T11:47:37.564Z"
+    },
+    "7f9792f84636": {
+      "title": "Des réfrigérateurs de supermarchés belges, luxembourgeois et suédois victimes de cyberattaques",
+      "url": "https://www.france24.com/fr/europe/20261102-europe-des-chaines-de-supermarches-victimes-incidents-informatiques-sur-refrigerateurs",
+      "category": "monde",
+      "seenAt": "2026-11-02T13:22:40.462Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "b6bd849444cf": {
+      "title": "États-Unis : neuf morts dans le crash d’un avion en Floride",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261102-%C3%A9tats-unis-neuf-morts-dans-le-crash-d-un-avion-en-floride",
+      "category": "monde",
+      "seenAt": "2026-11-02T13:22:40.462Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "fb0d2fea6a25": {
+      "title": "Iran : le président Trump avertit devoir \"à un moment, donner un coup de massue\" à Téhéran",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261102-iran-le-pr%C3%A9sident-trump-avertit-devoir-%C3%A0-un-moment-donner-un-coup-de-massue-%C3%A0-t%C3%A9h%C3%A9ran",
+      "category": "monde",
+      "seenAt": "2026-11-02T13:22:40.462Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "e64a6f88a288": {
+      "title": "En Jordanie, « on aimerait tant un apaisement dans la région pour que le tourisme reparte »",
+      "url": "https://www.lemonde.fr/international/article/2026/11/02/en-jordanie-on-aimerait-tant-un-apaisement-dans-la-region-pour-que-le-tourisme-reparte_6805246_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-02T13:22:40.462Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "42a772046541": {
+      "title": "L’impunité des meurtres de journalistes repart à la hausse, une première depuis 2012, selon l’Unesco",
+      "url": "https://www.lemonde.fr/international/article/2026/11/02/l-impunite-des-meurtres-de-journalistes-repart-a-la-hausse-une-premiere-depuis-2012-selon-l-unesco_6805223_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-02T13:22:40.462Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "60f7d451b110": {
+      "title": "Crash d’avion en Floride : l’enregistrement de la pilote avant l’accident",
+      "url": "https://www.lemonde.fr/international/video/2026/11/02/crash-d-avion-en-floride-l-enregistrement-de-la-pilote-avant-l-accident_6805186_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-02T13:22:40.462Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "05757d34ccac": {
+      "title": "Industrie navale militaire : l’Allemagne affiche ses nouvelles ambitions",
+      "url": "https://www.lemonde.fr/economie/article/2026/11/02/industrie-navale-militaire-l-allemagne-affiche-ses-nouvelles-ambitions_6805019_3234.html",
+      "category": "monde",
+      "seenAt": "2026-11-02T13:22:40.462Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "80a13b6c2c4c": {
+      "title": "Midterms 2026 : les reniements de Donald Trump l’exposent à un vote sanction de la part des électeurs américains",
+      "url": "https://www.lemonde.fr/international/article/2026/11/02/midterms-2026-les-reniements-de-donald-trump-l-exposent-a-un-vote-sanction-de-la-part-des-electeurs-americains_6804843_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-02T13:22:40.462Z",
+      "status": "excluded",
+      "reason": "sensitive"
     }
   },
   "slots": {
@@ -2259,6 +2323,33 @@
         "startedAt": "2026-11-01T11:47:29.365Z",
         "lastError": "sujet_refuse_par_le_modele"
       }
+    },
+    "2026-11-02": {
+      "0": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "1": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "2": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "3": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "4": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      }
     }
   },
   "lastRun": {
@@ -2297,6 +2388,11 @@
       "status": "published",
       "attempts": 1,
       "lastError": null
+    },
+    "2026-11-02": {
+      "status": "failed",
+      "attempts": 1,
+      "lastError": "UnavailableError: Gemini indisponible apres 2 tentatives (504): {\"error\":{\"code\":504,\"message\":\"Deadline expired before operation could complete.\",\"status\":\"DEADLINE_EXCEEDED\"}}"
     }
   }
 }
