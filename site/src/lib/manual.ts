@@ -20,7 +20,7 @@ export function manualEntry(article: Article) {
   return ref ? byRef.get(ref.toUpperCase()) ?? null : null;
 }
 
-export interface Illustration { src: string; srcset?: string; width: number; height: number; alt: string; credit: string; manualKey: string | null }
+export interface Illustration { src: string; srcset?: string; width: number; height: number; alt: string; credit: string; manualKey: string | null; portrait?: boolean }
 
 /** Illustration d'un article: image deposee a la main (prioritaire), sinon image generee par le moteur, sinon rien. */
 export async function illustration(article: Article, width: number, manualCredit: string): Promise<Illustration | null> {
@@ -28,7 +28,14 @@ export async function illustration(article: Article, width: number, manualCredit
   const alt = d.imageAlt ?? `Illustration : ${d.title}`;
   const manual = manualEntry(article);
   if (manual) {
-    // Recadrage 16:9 sur la zone la plus saillante (visage, details); une image portrait est coupee, sans jamais agrandir l'original.
+    // Portrait : image entière (sinon tête et corps coupés), centrée dans le cadre 16:9 par le CSS ([data-portrait]); jamais d'agrandissement.
+    if (manual.meta.height > manual.meta.width) {
+      const h = Math.min(Math.round((width * 9) / 16), manual.meta.height);
+      const w = Math.round((h * manual.meta.width) / manual.meta.height);
+      const img = await getImage({ src: manual.meta, width: w, height: h, format: 'webp', quality: 80 });
+      return { src: img.src, width: w, height: h, alt: manual.dessin && !d.imageAlt ? `Dessin de presse : ${d.title}` : alt, credit: manual.dessin ? `Dessin de ${dessinateur} · Le Quotidien Presque Certain` : manualCredit, manualKey: manual.key, portrait: true };
+    }
+    // Paysage : recadrage 16:9 sur la zone la plus saillante (visage, details), sans jamais agrandir l'original.
     const w = Math.min(width, manual.meta.width);
     const h = Math.round((w * 9) / 16);
     const img = await getImage({ src: manual.meta, width: w, height: h, fit: 'cover', position: 'attention', format: 'webp', quality: 80 });

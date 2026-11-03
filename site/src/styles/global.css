@@ -503,3 +503,6 @@ footer .quality .q-score.q-b { background: #5b9a2c; } /* note B: vert plus clair
 .grid .card h3 { -webkit-line-clamp: 4; line-clamp: 4; }
 .grid .card h3 + p { -webkit-line-clamp: 4; line-clamp: 4; }
 .grid .card .byline { margin-top: auto; }
+
+/* Image portrait : entière dans le cadre 16:9, centrée sur fond papier (au lieu d'être coupée) */
+.photo[data-portrait], .illus img[data-portrait] { object-fit: contain; }
