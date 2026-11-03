@@ -1933,6 +1933,70 @@
       "seenAt": "2026-11-02T13:22:40.462Z",
       "status": "excluded",
       "reason": "sensitive"
+    },
+    "b11c108d99d0": {
+      "title": "Goncourt 2026 : le prix décerné à Philippe Jaenada pour \"L'inconnue du quai de Javel\"",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261103-goncourt-2026-le-prix-d%C3%A9cern%C3%A9-%C3%A0-philippe-jaenada-pour-l-inconnue-du-quai-de-javel",
+      "category": "monde",
+      "seenAt": "2026-11-03T12:43:18.263Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "8f0dc394e052": {
+      "title": "L'armée américaine en mutation : des gradés ont le sens des affaires",
+      "url": "https://www.france24.com/fr/%C3%A9missions/aux-avant-postes/20261103-l-arm%C3%A9e-am%C3%A9ricaine-en-mutation-des-grad%C3%A9s-ont-le-sens-des-affaires",
+      "category": "monde",
+      "seenAt": "2026-11-03T12:43:18.263Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "2b6bbdc980ae": {
+      "title": "Guerre en Ukraine : une frappe russe fait au moins 29 morts dans le sud-est du pays",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261103-guerre-en-ukraine-une-frappe-russe-fait-au-moins-29-morts-dans-le-sud-est-du-pays",
+      "category": "monde",
+      "seenAt": "2026-11-03T12:43:18.263Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "3445a8da5d27": {
+      "title": "Iran : frappes \"défensives\" des États-Unis contre l'île de Qeshm",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261103-iran-frappes-d%C3%A9fensives-des-%C3%A9tats-unis-contre-l-%C3%AEle-de-qeshm",
+      "category": "monde",
+      "seenAt": "2026-11-03T12:43:18.263Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "7d0fba1892a3": {
+      "title": "Aux Etats-Unis, un enfant est mort de la rougeole dans l’Etat de New York pour la première fois en trente ans",
+      "url": "https://www.lemonde.fr/international/article/2026/11/03/aux-etats-unis-un-enfant-est-mort-de-la-rougeole-dans-l-etat-de-new-york-pour-la-premiere-fois-en-trente-ans_6805561_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-03T12:43:18.263Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "f640f0861084": {
+      "title": "En Ukraine, l’industrie sidérurgique menacée d’effondrement : « A l’heure actuelle, aucune production d’acier n’est assurée dans le pays »",
+      "url": "https://www.lemonde.fr/international/article/2026/11/03/en-ukraine-l-industrie-siderurgique-menacee-d-effondrement-a-l-heure-actuelle-aucune-production-d-acier-n-est-assuree-dans-le-pays_6805535_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-03T12:43:18.263Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "7c5f8a44677a": {
+      "title": "En Pologne, un opéra donne voix à la solidarité avec les Ukrainiens, contestée par le camp nationaliste",
+      "url": "https://www.lemonde.fr/international/article/2026/11/03/en-pologne-un-opera-donne-voix-a-la-solidarite-avec-les-ukrainiens-contestee-par-le-camp-nationaliste_6805530_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-03T12:43:18.263Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "94a13e1b79a6": {
+      "title": "Comment la popularité de Donald Trump s’est érodée en deux ans",
+      "url": "https://www.lemonde.fr/international/visuel/2026/11/03/comment-la-popularite-de-donald-trump-s-est-erodee-en-deux-ans_6805520_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-03T12:43:18.263Z",
+      "status": "excluded",
+      "reason": "sensitive"
     }
   },
   "slots": {
@@ -2350,6 +2414,33 @@
         "status": "abandoned",
         "lastError": "fenetre_de_rattrapage_depassee"
       }
+    },
+    "2026-11-03": {
+      "0": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "1": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "2": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "3": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "4": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      }
     }
   },
   "lastRun": {
@@ -2393,6 +2484,11 @@
       "status": "failed",
       "attempts": 1,
       "lastError": "UnavailableError: Gemini indisponible apres 2 tentatives (504): {\"error\":{\"code\":504,\"message\":\"Deadline expired before operation could complete.\",\"status\":\"DEADLINE_EXCEEDED\"}}"
+    },
+    "2026-11-03": {
+      "status": "failed",
+      "attempts": 1,
+      "lastError": "image_indisponible"
     }
   }
 }

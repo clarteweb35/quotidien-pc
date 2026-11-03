@@ -1,0 +1,18 @@
+{"ts":"2026-11-03T12:43:18.261Z","runId":"20261103124318-8cc0","level":"warn","event":"cycle.slots_abandoned","count":5}
+{"ts":"2026-11-03T12:43:18.262Z","runId":"20261103124318-8cc0","level":"info","event":"cycle.start","date":"2026-11-03","due":[],"remainingToday":5,"dryRun":false}
+{"ts":"2026-11-03T12:43:18.723Z","runId":"20261103124318-8cc0","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":31,"kept":25}
+{"ts":"2026-11-03T12:43:18.723Z","runId":"20261103124318-8cc0","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-11-03T12:43:18.723Z","runId":"20261103124318-8cc0","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":20}
+{"ts":"2026-11-03T12:43:18.723Z","runId":"20261103124318-8cc0","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":22}
+{"ts":"2026-11-03T12:43:18.723Z","runId":"20261103124318-8cc0","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":15}
+{"ts":"2026-11-03T12:43:18.723Z","runId":"20261103124318-8cc0","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":20,"kept":20}
+{"ts":"2026-11-03T12:43:18.723Z","runId":"20261103124318-8cc0","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":15}
+{"ts":"2026-11-03T12:43:18.724Z","runId":"20261103124318-8cc0","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":14}
+{"ts":"2026-11-03T12:43:18.724Z","runId":"20261103124318-8cc0","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":5}
+{"ts":"2026-11-03T12:43:18.724Z","runId":"20261103124318-8cc0","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":10}
+{"ts":"2026-11-03T12:43:18.724Z","runId":"20261103124318-8cc0","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":10}
+{"ts":"2026-11-03T12:43:18.724Z","runId":"20261103124318-8cc0","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":6}
+{"ts":"2026-11-03T12:43:20.567Z","runId":"20261103124318-8cc0","level":"warn","event":"gemini.retry","purpose":"caricature","status":503,"attempt":1,"delayMs":4664}
+{"ts":"2026-11-03T12:43:33.101Z","runId":"20261103124318-8cc0","level":"info","event":"gemini.call","purpose":"caricature","model":"gemini-3.6-flash","inputTokens":315,"outputTokens":860,"costUsd":0.006923}
+{"ts":"2026-11-03T12:43:36.486Z","runId":"20261103124318-8cc0","level":"info","event":"gemini.call","purpose":"image_judge","model":"gemini-3.5-flash-lite","inputTokens":1248,"outputTokens":77,"costUsd":0.000567}
+{"ts":"2026-11-03T12:43:36.486Z","runId":"20261103124318-8cc0","level":"warn","event":"image.rejected","slot":"caricature#2026-11-03","problems":["Presence of readable gibberish text on the receipt"],"flags":{"person":false,"text":true,"photo":false,"disturbing":false}}
