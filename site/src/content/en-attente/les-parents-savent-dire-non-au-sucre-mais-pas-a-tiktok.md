@@ -2,7 +2,7 @@
 id: "lefebvre-d17"
 ref: "261103-D8"
 author: "Marion Lefebvre"
-title: "Le porc, c’est non. TikTok, c’est à volonté !"
+title: "Les parents savent dire non au sucre, mais pas à TikTok"
 chapo: "Écrans et enfants : la grande hypocrisie éducative n’a pas de religion. Musulmans, chrétiens, juifs ou athées, tous les parents font face aux mêmes applications et aux mêmes algorithmes."
 description: "Satire : la surexposition des enfants aux écrans ne dépend pas de la religion des parents, mais de la capacité à appliquer à son propre smartphone les règles imposées aux enfants."
 category: "societe"
@@ -11,7 +11,8 @@ publishedAt: "2026-11-03T10:10:00.000Z"
 kind: "news"
 satire: true
 sources: []
-slug: "le-porc-c-est-non-tiktok-c-est-a-volonte"
+slug: "les-parents-savent-dire-non-au-sucre-mais-pas-a-tiktok"
+imagePrompt: "Dessin de presse satirique : une famille autour d’une table où chacun, les parents comme les enfants, fixe son smartphone, tandis qu’au centre un smartphone géant trône sur la chaise du chef de famille, un jambon et une bouteille placés à l’écart. Personnages génériques, sans ressemblance avec une personne réelle. Style encre et aquarelle."
 ---
 *Ce qui suit mélange des données réelles (temps d’écran des enfants, Santé publique France) et de la satire, signalée comme telle.*
 

@@ -12,6 +12,7 @@ kind: "news"
 satire: true
 sources: []
 slug: "les-anti-macron-ils-detestent-le-president-mais-pas-toujours-ses-cheques"
+imagePrompt: "Dessin de presse satirique : un homme en colère devant un café brandit le poing contre un chèque, qu’il glisse en même temps discrètement dans sa poche, sous une banderole « Tout est la faute de… ». Personnages génériques, sans ressemblance avec une personne réelle. Style encre et aquarelle."
 ---
 *Ce qui suit mélange des données réelles (dispositifs d’aide, chiffres du Covid) et de la satire, signalée comme telle.*
 

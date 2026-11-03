@@ -12,6 +12,7 @@ kind: "news"
 satire: true
 sources: []
 slug: "gay-et-rn-quand-on-vote-pour-ceux-qui-n-ont-pas-toujours-voulu-de-vous"
+imagePrompt: "Dessin de presse satirique : un isoloir dont le rideau laisse dépasser une paire de chaussures arc-en-ciel, tandis qu’un bulletin de vote tend la main à un vieux dossier poussiéreux marqué « Mémoire », posé sur un tabouret. Personnages génériques, sans ressemblance avec une personne réelle. Style encre et aquarelle."
 ---
 Il paraît que l’amour rend aveugle. La politique aussi. Et parfois, les deux se rencontrent dans l’isoloir.
 

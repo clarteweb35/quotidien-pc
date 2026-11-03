@@ -12,6 +12,7 @@ kind: "news"
 satire: true
 sources: [{"name":"DEPP","title":"Le début de carrière des enseignants du second degré public : une baisse des affectations dans les collèges REP+ (25 août 2026)","url":"https://www.education.gouv.fr/depp/le-debut-de-carriere-des-enseignants-du-second-degre-public-une-baisse-des-affectations-dans-les-505329"},{"name":"Cour des comptes","title":"L’éducation prioritaire (octobre 2018)","url":"https://www.ccomptes.fr/sites/default/files/2023-10/20181017-rapport-education-prioritaire.pdf"},{"name":"Cour des comptes","title":"La fonction ressources humaines au ministère de l’Éducation nationale (octobre 2024)","url":"https://www.ccomptes.fr/fr/publications/la-fonction-ressources-humaines-au-ministere-de-leducation-nationale"},{"name":"OCDE","title":"Études économiques de la France 2024 : améliorer les résultats dans le domaine de l’éducation","url":"https://www.oecd.org/fr/publications/etudes-economiques-de-l-ocde-france-2024_a28c2090-fr/full-report/component-8.html"}]
 slug: "ecole-et-si-on-envoyait-les-meilleurs-la-ou-les-eleves-en-ont-le-plus-besoin"
+imagePrompt: "Dessin de presse satirique : une carte de France en forme de plateau d’échecs, où les pièces les plus fortes sont rassemblées dans un coin tranquille, tandis qu’une classe surpeuplée attend avec un enseignant débutant, cartable à la main. Personnages génériques, sans ressemblance avec une personne réelle. Style encre et aquarelle."
 ---
 *Ce qui suit mélange des données réelles (rapports et statistiques, sources en bas de page) et de l’éditorial, signalé comme tel.*
 

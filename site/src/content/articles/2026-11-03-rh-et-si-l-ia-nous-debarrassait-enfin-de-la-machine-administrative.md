@@ -7,11 +7,12 @@ chapo: "La disparition des services de ressources humaines n’est peut-être pa
 description: "Satire : l’intelligence artificielle peut-elle libérer les services RH de la paperasse, rendre le recrutement plus équitable et le salarié plus autonome ?"
 category: "tech"
 tags: ["tech","intelligence artificielle","ressources humaines","recrutement","travail"]
-publishedAt: "2026-11-03T09:10:00.000Z"
+publishedAt: "2026-11-03T13:18:00.000Z"
 kind: "news"
 satire: true
 sources: [{"name":"OIT","title":"Le casse-tête de la gestion des ressources humaines au travail : l’IA est-elle la solution ? (15 mai 2026)","url":"https://www.ilo.org/fr/resource/article/le-casse-tete-de-la-gestion-des-ressources-humaines-au-travail-lia-est-elle"},{"name":"OIT","title":"AI in Human Resource Management: The Limits of Empiricism (11 novembre 2025)","url":"https://www.ilo.org/publications/ai-human-resource-management-limits-empiricism"},{"name":"CNIL","title":"Les règles pour la gestion du personnel","url":"https://www.cnil.fr/fr/les-regles-pour-la-gestion-du-personnel"},{"name":"Le Monde","title":"IA au travail : une lente réglementation pour éviter les discriminations dans la gestion des ressources humaines (2 septembre 2026)","url":"https://www.lemonde.fr/emploi/article/2026/09/02/ia-au-travail-une-lente-reglementation-pour-eviter-les-discriminations-dans-la-gestion-des-ressources-humaines_6763873_1698637.html"},{"name":"Ministère du Travail","title":"L’IA et le monde du travail : un an après","url":"https://travail-emploi.gouv.fr/lia-et-le-monde-du-travail-un-apres"}]
 slug: "rh-et-si-l-ia-nous-debarrassait-enfin-de-la-machine-administrative"
+imagePrompt: "Dessin de presse satirique : un petit robot-assistant tamponne joyeusement des formulaires dans un bureau, pendant qu’un employé RH en cravate, soulagé, arrose une plante, devant une pile de dossiers qui s’est réduite. Personnages génériques, sans ressemblance avec une personne réelle. Style encre et aquarelle."
 ---
 *Ce qui suit mélange des données réelles (rapports et textes cités en bas de page) et de la satire, signalée comme telle.*
 

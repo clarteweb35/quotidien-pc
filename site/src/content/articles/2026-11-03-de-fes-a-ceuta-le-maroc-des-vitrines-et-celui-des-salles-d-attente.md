@@ -2,16 +2,17 @@
 id: "ailleurs-d13"
 ref: "261103-D4"
 author: "Pierre Ailleurs"
-title: "De Fès à Ceuta : analyse d’un roi qui semble se moquer de son peuple"
+title: "De Fès à Ceuta : le Maroc des vitrines et celui des salles d’attente"
 chapo: "Des palais aux plages de l’exil : quand la grandeur du royaume se mesure aux rêves de ceux qui veulent le quitter. Entre stades pour 2030 et crise de Ceuta, le Maroc des vitrines et celui des salles d’attente."
 description: "Éditorial : entre ambitions nationales, Coupe du monde 2030 et crise migratoire de Ceuta, que dit du modèle marocain le désir de départ d’une partie de la jeunesse ?"
 category: "monde"
 tags: ["monde","maroc","mohammed vi","ceuta","jeunesse"]
-publishedAt: "2026-11-03T09:30:00.000Z"
+publishedAt: "2026-11-03T13:18:00.000Z"
 kind: "news"
 satire: true
 sources: [{"name":"Le Monde","title":"Au Maroc, une atmosphère de fin de règne pour Mohammed VI (24 août 2025)","url":"https://www.lemonde.fr/series-d-ete/article/2025/08/24/au-maroc-une-atmosphere-de-fin-de-regne-pour-mohammed-vi_6634562_3451060.html"},{"name":"Reuters","title":"Morocco's king calls for addressing regional inequalities (29 juillet 2025)","url":"https://www.reuters.com/world/africa/moroccos-king-calls-addressing-regional-inequalities-2025-07-29/"},{"name":"Reuters","title":"Youth-led unrest exposes cracks in Morocco's economic model (octobre 2025)","url":"https://www.marketscreener.com/news/youth-led-unrest-exposes-cracks-in-morocco-s-economic-model-ce7d5bdcdf88fe20"},{"name":"Le Grand Continent","title":"Pourquoi le Maroc n'a pas pu orchestrer la crise de Ceuta ? (5 août 2026)","url":"https://legrandcontinent.eu/fr/2026/08/05/pourquoi-le-maroc-na-pas-pu-orchestrer-la-crise-de-ceuta/"},{"name":"Le Monde","title":"How Morocco is pressuring the Spanish enclaves of Ceuta and Melilla (4 août 2026)","url":"https://www.lemonde.fr/en/le-monde-africa/article/2026/08/04/how-morocco-is-pressuring-the-spanish-enclaves-of-ceuta-and-melilla_6756128_124.html"},{"name":"Reuters","title":"Morocco's political parties battle youth disenchantment ahead of election (17 septembre 2026)","url":"https://www.marketscreener.com/news/morocco-s-political-parties-battle-youth-disenchantment-ahead-of-election-ce785bd3d881f724"}]
-slug: "de-fes-a-ceuta-analyse-d-un-roi-qui-semble-se-moquer-de-son-peuple"
+slug: "de-fes-a-ceuta-le-maroc-des-vitrines-et-celui-des-salles-d-attente"
+imagePrompt: "Dessin de presse satirique : à gauche, un stade flambant neuf, un port et un train rapide sous les projecteurs ; à droite, une salle d’attente d’hôpital bondée sous une ampoule nue ; au centre, un jeune assis sur le sable qui regarde l’horizon. Personnages génériques, sans ressemblance avec une personne réelle. Style encre et aquarelle."
 ---
 *Ce qui suit mélange des données réelles (événements, chiffres, sources en bas de page) et de l’analyse éditoriale, signalée comme telle.*
 

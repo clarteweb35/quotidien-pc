@@ -12,6 +12,7 @@ kind: "news"
 satire: true
 sources: []
 slug: "trump-le-roi-du-golf-l-empereur-de-l-ia-et-le-bassin-a-14-millions-qui-a-tourne-au-vert"
+imagePrompt: "Dessin de presse satirique : un grand bassin d’eau verte envahie d’algues devant un monument, un homme en costume en train de tenir un club de golf et un smartphone qui projette des images d’un roi, d’un super-héros et d’un jedi. Personnages génériques, sans ressemblance avec une personne réelle. Style encre et aquarelle."
 ---
 *Ce qui suit mélange des données réelles (budget du chantier, sondages, décompte des visites) et de la satire, signalée comme telle.*
 
