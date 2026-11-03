@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-03",
+    "titre": "Le roi du green",
+    "legende": "Le swing est impeccable. Le bassin à 14 millions, un peu moins : lui, il a tourné au vert.",
+    "alt": "Dessin de presse : un golfeur en casquette rouge et polo blanc, en plein swing, la balle s’envolant ; à droite, un bassin gonflable avec une licorne.",
+    "image": "images/caricatures/2026-11-03.webp",
+    "credit": "Dessin généré par IA · Le Quotidien Presque Certain",
+    "publishedAt": "2026-11-03T19:38:15.593Z",
+    "source": {
+      "name": "Le Quotidien Presque Certain",
+      "title": "Trump : le roi du golf, l’empereur de l’IA et le bassin à 14 millions qui a tourné au vert",
+      "url": ""
+    }
+  },
+  {
     "date": "2026-11-01",
     "titre": "Modération haut débit",
     "legende": "Face à la vitesse des échanges, les autorités préconisent l'usage de pansements adhésifs sur les écrans pour stopper les flux indésirables.",
