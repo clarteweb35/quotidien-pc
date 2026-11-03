@@ -7,7 +7,7 @@ chapo: "Midterms 2026 : quand la Maison-Blanche ressemble davantage à un studio
 description: "Satire à la veille des midterms américaines : nom sur les billets, images par IA, bassin du Lincoln Memorial passé au vert et parties de golf."
 category: "monde"
 tags: ["monde","trump","midterms","intelligence artificielle","golf"]
-publishedAt: "2026-11-02T18:10:00.000Z"
+publishedAt: "2026-11-03T13:01:00.000Z"
 kind: "news"
 satire: true
 sources: []
@@ -179,7 +179,7 @@ Et l’intelligence artificielle, aussi puissante soit-elle, ne remplacera jamai
 
 ## Conclusion : Trump voulait être gravé dans la pierre. Les électeurs pourraient graver autre chose dans les urnes.
 
-Demain, les Américains auront leur mot à dire.
+Aujourd’hui, les Américains ont leur mot à dire.
 
 Trump voulait son nom sur les billets, son visage sur les pièces, son arc à Washington et pourquoi pas sa place sur le mont Rushmore.
 

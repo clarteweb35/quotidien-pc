@@ -7,7 +7,7 @@ chapo: "De la contestation permanente à la mémoire sélective : petite promena
 description: "Édito satirique de Jean-Eudes de la Manchette : on peut critiquer Emmanuel Macron, mais sans oublier les aides dont on a bénéficié sous sa présidence."
 category: "editos"
 tags: ["édito","macron","prime macron","quoi qu'il en coûte","mémoire"]
-publishedAt: "2026-11-02T18:00:00.000Z"
+publishedAt: "2026-11-03T13:02:00.000Z"
 kind: "news"
 satire: true
 sources: []
