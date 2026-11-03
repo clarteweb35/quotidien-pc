@@ -16,3 +16,4 @@
 {"ts":"2026-11-03T12:43:33.101Z","runId":"20261103124318-8cc0","level":"info","event":"gemini.call","purpose":"caricature","model":"gemini-3.6-flash","inputTokens":315,"outputTokens":860,"costUsd":0.006923}
 {"ts":"2026-11-03T12:43:36.486Z","runId":"20261103124318-8cc0","level":"info","event":"gemini.call","purpose":"image_judge","model":"gemini-3.5-flash-lite","inputTokens":1248,"outputTokens":77,"costUsd":0.000567}
 {"ts":"2026-11-03T12:43:36.486Z","runId":"20261103124318-8cc0","level":"warn","event":"image.rejected","slot":"caricature#2026-11-03","problems":["Presence of readable gibberish text on the receipt"],"flags":{"person":false,"text":true,"photo":false,"disturbing":false}}
+{"ts":"2026-11-03T20:03:09.997Z","runId":"20261103200309-86ba","level":"info","event":"cycle.start","date":"2026-11-03","due":[],"remainingToday":5,"dryRun":false}

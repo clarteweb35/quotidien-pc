@@ -3,10 +3,16 @@
 Nommez votre image **exactement comme la référence** (ex. `261024-X1.jpg`) et déposez-la dans `site/src/assets/manual/`.
 Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large minimum.
 
-## Sans image (7)
+## Sans image (8)
+
+### `261102-D4` — Les anti-Macron : ils détestent le président, mais pas toujours ses chèques !
+- Rubrique : editos
+- Description suggérée : Dessin de presse satirique : un homme en colère devant un café brandit le poing contre un chèque, qu’il glisse en même temps discrètement dans sa poche, sous une banderole « Tout est la faute de… ». Personnages génériques, sans ressemblance avec une personne réelle. Style encre et aquarelle.
+- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
 ### `261102-D2` — Gay et RN : quand on vote pour ceux qui n’ont pas toujours voulu de vous
 - Rubrique : editos
+- Description suggérée : Dessin de presse satirique : un isoloir dont le rideau laisse dépasser une paire de chaussures arc-en-ciel, tandis qu’un bulletin de vote tend la main à un vieux dossier poussiéreux marqué « Mémoire », posé sur un tabouret. Personnages génériques, sans ressemblance avec une personne réelle. Style encre et aquarelle.
 - Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
 ### `261031-D6` — Génération Z : sauver la planète depuis son canapé, avec 400 applications et 4 % de batterie
@@ -39,8 +45,11 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 - Description suggérée : Une longue rangée de chaises vides alignées sur trois étages devant un mur neutre, vue de dos, avec un appareil photo sur trépied au premier plan
 - Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
-## Déjà illustrés (27)
+## Déjà illustrés (30)
 
+- `261103-D4` — De Fès à Ceuta : le Maroc des vitrines et celui des salles d’attente (261103-D4.png)
+- `261103-D2` — RH : et si l’IA nous débarrassait enfin de la machine administrative ? (261103-D2.jpg)
+- `261102-D5` — Trump : le roi du golf, l’empereur de l’IA et le bassin à 14 millions qui a tourné au vert (261102-D5.png)
 - `261102-D3` — Bernard Arnault compte ses milliards, les politiques comptent leurs mandats : devinez qui fait scandale ! (261102-D3-dessin.jpg)
 - `261102-D1` — La France cherche un pilote, mais tout le monde veut être copilote (261102-D1.png)
 - `261031-D1` — Biodiversité : après deux semaines de négociations, 200 pays s’accordent pour continuer à sauver la planète, si possible sans trop changer leurs habitudes (261031-D1.jpg)
