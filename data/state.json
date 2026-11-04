@@ -1997,6 +1997,46 @@
       "seenAt": "2026-11-03T12:43:18.263Z",
       "status": "excluded",
       "reason": "sensitive"
+    },
+    "c994a205b4da": {
+      "title": "Addiction des jeunes aux écrans : en Corée du Sud, la lutte s'organise",
+      "url": "https://www.france24.com/fr/%C3%A9missions/focus/20261104-addiction-des-jeunes-aux-%C3%A9crans-en-cor%C3%A9e-du-sud-la-lutte-s-organise",
+      "category": "monde",
+      "seenAt": "2026-11-04T12:54:37.398Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "79e8a3d1353b": {
+      "title": "Midterms 2026 : l'électorat états-unien a décidé de dire \"non à la guerre\"",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261104-midterms-2026-l-%C3%A9lectorat-%C3%A9tats-unien-a-d%C3%A9cid%C3%A9-de-dire-non-%C3%A0-la-guerre",
+      "category": "monde",
+      "seenAt": "2026-11-04T12:54:37.398Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "5d1f0477c184": {
+      "title": "Midterms 2026 : au lendemain du scrutin, la menace d’une reprise de la guerre américaine contre l’Iran",
+      "url": "https://www.lemonde.fr/international/article/2026/11/04/midterms-2026-au-lendemain-du-scrutin-la-menace-d-une-reprise-de-la-guerre-americaine-contre-l-iran_6806138_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-04T12:54:37.398Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "6c8df82911b6": {
+      "title": "Midterms 2026 : James Talarico, le démocrate chrétien qui déclenche un séisme politique au Texas",
+      "url": "https://www.lemonde.fr/international/article/2026/11/04/midterms-2026-james-talarico-le-democrate-chretien-qui-declenche-un-seisme-politique-au-texas_6806123_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-04T12:54:37.398Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "556d4ce1d6e7": {
+      "title": "Midterms : le jour du vote, Trump met fin à l'aide sécuritaire en Israël",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261104-midterms-le-jour-du-vote-trump-met-fin-%C3%A0-l-aide-s%C3%A9curitaire-en-isra%C3%ABl",
+      "category": "monde",
+      "seenAt": "2026-11-04T12:54:37.398Z",
+      "status": "used",
+      "usedAt": "2026-11-04T12:54:37.398Z"
     }
   },
   "slots": {
@@ -2441,6 +2481,33 @@
         "status": "abandoned",
         "lastError": "fenetre_de_rattrapage_depassee"
       }
+    },
+    "2026-11-04": {
+      "0": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "1": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "2": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "3": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "4": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      }
     }
   },
   "lastRun": {
@@ -2489,6 +2556,11 @@
       "status": "failed",
       "attempts": 1,
       "lastError": "image_indisponible"
+    },
+    "2026-11-04": {
+      "status": "published",
+      "attempts": 1,
+      "lastError": null
     }
   }
 }

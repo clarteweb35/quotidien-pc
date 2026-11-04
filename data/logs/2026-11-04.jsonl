@@ -1,1 +1,19 @@
 {"ts":"2026-11-04T00:34:03.106Z","runId":"20261104003403-14e5","level":"info","event":"cycle.start","date":"2026-11-04","due":[],"remainingToday":5,"dryRun":false}
+{"ts":"2026-11-04T12:54:37.395Z","runId":"20261104125437-32b7","level":"warn","event":"cycle.slots_abandoned","count":5}
+{"ts":"2026-11-04T12:54:37.397Z","runId":"20261104125437-32b7","level":"info","event":"cycle.start","date":"2026-11-04","due":[],"remainingToday":5,"dryRun":false}
+{"ts":"2026-11-04T12:54:38.115Z","runId":"20261104125437-32b7","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":37,"kept":25}
+{"ts":"2026-11-04T12:54:38.115Z","runId":"20261104125437-32b7","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-11-04T12:54:38.115Z","runId":"20261104125437-32b7","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":20}
+{"ts":"2026-11-04T12:54:38.115Z","runId":"20261104125437-32b7","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":24}
+{"ts":"2026-11-04T12:54:38.115Z","runId":"20261104125437-32b7","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":17}
+{"ts":"2026-11-04T12:54:38.116Z","runId":"20261104125437-32b7","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":20,"kept":20}
+{"ts":"2026-11-04T12:54:38.116Z","runId":"20261104125437-32b7","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":17}
+{"ts":"2026-11-04T12:54:38.116Z","runId":"20261104125437-32b7","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":15}
+{"ts":"2026-11-04T12:54:38.116Z","runId":"20261104125437-32b7","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":4}
+{"ts":"2026-11-04T12:54:38.116Z","runId":"20261104125437-32b7","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":17}
+{"ts":"2026-11-04T12:54:38.116Z","runId":"20261104125437-32b7","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":13}
+{"ts":"2026-11-04T12:54:38.116Z","runId":"20261104125437-32b7","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":12}
+{"ts":"2026-11-04T12:55:25.556Z","runId":"20261104125437-32b7","level":"info","event":"gemini.call","purpose":"caricature","model":"gemini-3.6-flash","inputTokens":317,"outputTokens":1239,"costUsd":0.009768}
+{"ts":"2026-11-04T12:55:29.091Z","runId":"20261104125437-32b7","level":"info","event":"gemini.call","purpose":"image_judge","model":"gemini-3.5-flash-lite","inputTokens":1264,"outputTokens":60,"costUsd":0.000529}
+{"ts":"2026-11-04T12:55:29.092Z","runId":"20261104125437-32b7","level":"info","event":"image.ok","slot":"caricature#2026-11-04","bytes":94240,"costUsd":0}
+{"ts":"2026-11-04T12:55:29.095Z","runId":"20261104125437-32b7","level":"info","event":"caricature.ok","date":"2026-11-04","titre":"Fermeture de robinet"}
