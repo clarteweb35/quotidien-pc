@@ -17,3 +17,4 @@
 {"ts":"2026-11-04T12:55:29.091Z","runId":"20261104125437-32b7","level":"info","event":"gemini.call","purpose":"image_judge","model":"gemini-3.5-flash-lite","inputTokens":1264,"outputTokens":60,"costUsd":0.000529}
 {"ts":"2026-11-04T12:55:29.092Z","runId":"20261104125437-32b7","level":"info","event":"image.ok","slot":"caricature#2026-11-04","bytes":94240,"costUsd":0}
 {"ts":"2026-11-04T12:55:29.095Z","runId":"20261104125437-32b7","level":"info","event":"caricature.ok","date":"2026-11-04","titre":"Fermeture de robinet"}
+{"ts":"2026-11-04T20:23:31.759Z","runId":"20261104202331-4249","level":"info","event":"cycle.start","date":"2026-11-04","due":[],"remainingToday":5,"dryRun":false}
