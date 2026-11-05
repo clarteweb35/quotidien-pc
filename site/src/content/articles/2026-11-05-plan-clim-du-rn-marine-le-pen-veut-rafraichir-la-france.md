@@ -6,7 +6,7 @@ chapo: "Des climatiseurs partout, des prêts à taux zéro et une facture qui, e
 description: "Le RN propose 20 milliards d'euros de prêts pour climatiser les bâtiments publics. Reste une question : qui paie la facture ?"
 category: "politique"
 tags: ["politique","rn","marine-le-pen","climatisation","canicule"]
-publishedAt: "2026-10-30T09:00:00.000Z"
+publishedAt: "2026-11-05T16:53:00.000Z"
 kind: "news"
 satire: true
 sources: []

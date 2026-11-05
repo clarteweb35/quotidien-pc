@@ -7,7 +7,7 @@ chapo: "Écrans et enfants : la grande hypocrisie éducative n’a pas de religi
 description: "Satire : la surexposition des enfants aux écrans ne dépend pas de la religion des parents, mais de la capacité à appliquer à son propre smartphone les règles imposées aux enfants."
 category: "societe"
 tags: ["société","écrans","enfants","tiktok","parentalité"]
-publishedAt: "2026-11-03T10:10:00.000Z"
+publishedAt: "2026-11-05T16:53:00.000Z"
 kind: "news"
 satire: true
 sources: []

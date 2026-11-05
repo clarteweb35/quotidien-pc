@@ -7,7 +7,7 @@ chapo: "Repérée entre deux stories de détox digitale et un Reel sur l’art d
 description: "Satire : la nouvelle mode des réseaux sociaux, militer pour la planète depuis son canapé, branché sur secteur, en applaudissant un arbre virtuel."
 category: "societe"
 tags: ["société","tendance","réseaux sociaux","écologie","engagement"]
-publishedAt: "2026-11-05T09:30:00.000Z"
+publishedAt: "2026-11-05T16:53:00.000Z"
 kind: "news"
 satire: true
 sources: []

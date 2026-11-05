@@ -7,7 +7,7 @@ chapo: "Du « nouveau monde » à l’impasse politique : comment une présidenc
 description: "Éditorial : dix choix et erreurs de méthode qui expliquent l’usure du macronisme, de l’ISF aux gilets jaunes, des retraites à la dissolution."
 category: "politique"
 tags: ["politique","macron","bilan","dissolution","retraites"]
-publishedAt: "2026-11-03T09:50:00.000Z"
+publishedAt: "2026-11-05T16:53:00.000Z"
 kind: "news"
 satire: true
 sources: [{"name":"Le Monde","title":"One year on, Macron remains entangled by fallout of rash snap elections (9 juin 2025)","url":"https://www.lemonde.fr/en/politics/article/2025/06/09/one-year-on-macron-remains-entangled-by-fallout-of-rash-snap-elections_6742170_5.html"},{"name":"Le Monde","title":"Pension reform: A political crisis revealing France's democratic divide (23 mars 2023)","url":"https://www.lemonde.fr/en/france/article/2023/03/23/pension-reform-a-political-crisis-revealing-france-s-democratic-divide_6020382_7.html"},{"name":"Reuters","title":"Macron's legacy evaporates as France's political and fiscal woes mount (16 octobre 2025)","url":"https://www.reuters.com/world/macrons-legacy-evaporates-frances-political-fiscal-woes-mount-2025-10-16/"},{"name":"Le Monde","title":"From Macron's original promise to the unraveling of an ideal (30 septembre 2026)","url":"https://www.lemonde.fr/en/politics/article/2026/09/30/from-macron-s-original-promise-to-the-unraveling-of-an-ideal_6758119_5.html"}]
