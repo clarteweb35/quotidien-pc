@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-05",
+    "titre": "Défaite devant le Capitole",
+    "legende": "Au lendemain des élections de mi-mandat, le grand orateur découvre qu’il existe un mot plus fort que « gagnant » : « non ».",
+    "alt": "Dessin de presse : un homme en costume, la casquette rouge à la main, assis par terre, étourdi, devant le Capitole ; derrière lui, un journal titrant « Défaite », une poubelle de « Mensonges, démagogie, corruption » et un bocal « AVC politique ».",
+    "image": "images/caricatures/2026-11-05.webp",
+    "credit": "Dessin généré par IA · Le Quotidien Presque Certain",
+    "publishedAt": "2026-11-05T17:16:25.743Z",
+    "source": {
+      "name": "Le Quotidien Presque Certain",
+      "title": "Trump : la grande claque, le petit homme et le début de la fin",
+      "url": ""
+    }
+  },
+  {
     "date": "2026-11-04",
     "titre": "Fermeture de robinet",
     "legende": "Coupure d'eau générale le jour même où tout le monde avait prévu de faire sa lessive diplomatique.",

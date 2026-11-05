@@ -1,5 +1,6 @@
 ---
 id: "didier-01"
+ref: "261030-D3"
 author: "Claire Delatour"
 title: "Plan clim' du RN : Marine Le Pen veut rafraîchir la France… et réchauffer les factures !"
 chapo: "Des climatiseurs partout, des prêts à taux zéro et une facture qui, elle, ne risque pas de rester au frais. Le RN a trouvé la solution miracle contre la canicule : brancher la France. Pour le financement, on verra après."
