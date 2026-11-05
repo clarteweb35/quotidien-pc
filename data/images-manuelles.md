@@ -5,6 +5,11 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 
 ## Sans image (8)
 
+### `261105-D1` — Trump : la grande claque, le petit homme et le début de la fin
+- Rubrique : editos
+- Description suggérée : Dessin de presse satirique : un grand personnage orangé à casquette rouge, vu de dos, reçoit en pleine joue une immense main étoilée aux cinq doigts dessinés, sous un chapiteau de foire qui s’effondre, tandis qu’une foule de petits électeurs brandit des bulletins. Personnages génériques, sans ressemblance avec une personne réelle. Style encre et aquarelle.
+- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
+
 ### `261102-D4` — Les anti-Macron : ils détestent le président, mais pas toujours ses chèques !
 - Rubrique : editos
 - Description suggérée : Dessin de presse satirique : un homme en colère devant un café brandit le poing contre un chèque, qu’il glisse en même temps discrètement dans sa poche, sous une banderole « Tout est la faute de… ». Personnages génériques, sans ressemblance avec une personne réelle. Style encre et aquarelle.
@@ -40,13 +45,12 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 - Description suggérée : Un calendrier mural dont la case du dimanche a été barrée au feutre puis recollée sur celle du mardi, posé sur un bureau en bois, vue de dessus
 - Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
-### `261024-X4` — Sommets internationaux : la photo de famille devrait précéder la réunion
-- Rubrique : editos
-- Description suggérée : Une longue rangée de chaises vides alignées sur trois étages devant un mur neutre, vue de dos, avec un appareil photo sur trépied au premier plan
-- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
+## Déjà illustrés (32)
 
-## Déjà illustrés (30)
-
+- `261101-D3` — Tendance : le summum du chic digital consiste désormais à applaudir un arbre virtuel sans quitter son canapé (261101-D3-dessin.jpg)
+- `261103-D8` — Les parents savent dire non au sucre, mais pas à TikTok (261103-D8.png)
+- `261103-D6` — Macron : 10 ans de règne, 10 erreurs qui ont abîmé la promesse (261103-D6.png)
+- `261030-D3` — Plan clim' du RN : Marine Le Pen veut rafraîchir la France… et réchauffer les factures ! (261030-D3.jpg)
 - `261103-D4` — De Fès à Ceuta : le Maroc des vitrines et celui des salles d’attente (261103-D4.png)
 - `261103-D2` — RH : et si l’IA nous débarrassait enfin de la machine administrative ? (261103-D2.jpg)
 - `261102-D5` — Trump : le roi du golf, l’empereur de l’IA et le bassin à 14 millions qui a tourné au vert (261102-D5.png)
@@ -75,5 +79,3 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 - `261025-X2` — Diagonale des Fous : le monde du sport fasciné par l'art de gravir 10 000 mètres pour éviter de prendre le car (261025-X2.jpg)
 - `261025-X1` — Débats : une enquête confirme scientifiquement qu’avoir une réponse évite les silences gênants (261025-X1.jpg)
 - `261024-X3` — Élections en ligne : un protocole officiel exigera une dissertation en trois parties avant chaque tweet politique (261024-X3.jpg)
-- `261024-X2` — Management : il réalise une danse libre de quarante minutes sans aborder l’ordre du jour (261024-X2.jpg)
-- `261024-X1` — Colère sociale : le gouvernement teste un baromètre d’apaisement chiffré au décibel près (261024-X1.jpg)

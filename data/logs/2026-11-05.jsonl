@@ -17,3 +17,4 @@
 {"ts":"2026-11-05T13:04:17.245Z","runId":"20261105130408-51f5","level":"warn","event":"caricature.fallback_model","from":"gemini-3.6-flash","to":"gemini-3.8-flash"}
 {"ts":"2026-11-05T13:05:45.304Z","runId":"20261105130408-51f5","level":"warn","event":"gemini.retry","purpose":"caricature","status":504,"attempt":1,"delayMs":4277}
 {"ts":"2026-11-05T13:07:17.771Z","runId":"20261105130408-51f5","level":"warn","event":"caricature.error","date":"2026-11-05","error":"Gemini indisponible apres 2 tentatives (504): {\"error\":{\"code\":504,\"message\":\"Deadline expired before operation could complete.\",\"status\":\"DEADLINE_EXCEEDED\"}}"}
+{"ts":"2026-11-05T20:37:57.959Z","runId":"20261105203757-4e06","level":"info","event":"cycle.start","date":"2026-11-05","due":[],"remainingToday":5,"dryRun":false}
