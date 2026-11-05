@@ -7,7 +7,7 @@ chapo: "Une raclée électorale monumentale, une Amérique qui rappelle qu’ell
 description: "Édito satirique de Jean-Eudes de la Manchette : après les élections de mi-mandat, Donald Trump face à une défaite qu’il refuse de prendre pour un désaveu."
 category: "editos"
 tags: ["édito","trump","midterms","états-unis","démocrates"]
-publishedAt: "2026-11-05T09:00:00.000Z"
+publishedAt: "2026-11-05T17:06:00.000Z"
 kind: "news"
 satire: true
 sources: []
