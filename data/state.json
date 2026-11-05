@@ -2037,6 +2037,70 @@
       "seenAt": "2026-11-04T12:54:37.398Z",
       "status": "used",
       "usedAt": "2026-11-04T12:54:37.398Z"
+    },
+    "1443ae8b2674": {
+      "title": "Guerre en Ukraine : \"il y a maintenant de l'espoir, puisqu'il existe cet équilibre des forces\"",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261105-guerre-en-ukraine-il-y-a-maintenant-de-l-espoir-puisqu-il-existe-cet-%C3%A9quilibre-des-forces",
+      "category": "monde",
+      "seenAt": "2026-11-05T13:04:08.111Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "5f820f3bcb54": {
+      "title": "Mobilisations en France : des lycéens maintiennent les blocus avant le cortège",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261105-mobilisations-en-france-des-lyc%C3%A9ens-maintiennent-les-blocus-avant-le-cort%C3%A8ge",
+      "category": "monde",
+      "seenAt": "2026-11-05T13:04:08.111Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "36e5004fee3a": {
+      "title": "France : la banque Crédit mutuel Arkéa victime d’une cyberattaque",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261105-france-la-banque-cr%C3%A9dit-mutuel-ark%C3%A9a-victime-d-une-cyberattaque",
+      "category": "monde",
+      "seenAt": "2026-11-05T13:04:08.111Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "940a10476d37": {
+      "title": "Midterms : la guerre en Iran est \"la raison de la défaite\" d'après JD Vance",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261105-midterms-la-guerre-en-iran-est-la-raison-de-la-d%C3%A9faite-selon-jd-vance",
+      "category": "monde",
+      "seenAt": "2026-11-05T13:04:08.111Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "c424f25f1144": {
+      "title": "Guerre en Ukraine : la Première dame américaine Melania Trump en médiatrice ?",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261105-guerre-en-ukraine-la-premi%C3%A8re-dame-am%C3%A9ricaine-melania-trump-en-m%C3%A9diatrice",
+      "category": "monde",
+      "seenAt": "2026-11-05T13:04:08.111Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "b39782779e3e": {
+      "title": "Birmanie : les civils sous les feux de la junte militaire",
+      "url": "https://www.france24.com/fr/asie-pacifique/20261105-birmanie-les-civils-sous-les-feux-de-la-junte-militaire",
+      "category": "monde",
+      "seenAt": "2026-11-05T13:04:08.111Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "81f30f464a9f": {
+      "title": "En Tunisie, dans les camps de migrants d’El-Amra, une économie de la survie abandonnée à la violence",
+      "url": "https://www.lemonde.fr/afrique/article/2026/11/05/en-tunisie-dans-les-camps-de-migrants-d-el-amra-une-economie-de-la-survie-abandonnee-a-la-violence_6806867_3212.html",
+      "category": "monde",
+      "seenAt": "2026-11-05T13:04:08.111Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "1e46ddcd0dce": {
+      "title": "Midterms 2026 : J. D. Vance, contrarié dans ses ambitions par la déroute de son camp, lance le débat interne chez les républicains",
+      "url": "https://www.lemonde.fr/international/article/2026/11/05/midterms-2026-j-d-vance-contrarie-dans-ses-ambitions-par-la-deroute-de-son-camp-lance-le-debat-interne-chez-les-republicains_6806668_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-05T13:04:08.111Z",
+      "status": "excluded",
+      "reason": "sensitive"
     }
   },
   "slots": {
@@ -2508,6 +2572,33 @@
         "status": "abandoned",
         "lastError": "fenetre_de_rattrapage_depassee"
       }
+    },
+    "2026-11-05": {
+      "0": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "1": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "2": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "3": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "4": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      }
     }
   },
   "lastRun": {
@@ -2561,6 +2652,11 @@
       "status": "published",
       "attempts": 1,
       "lastError": null
+    },
+    "2026-11-05": {
+      "status": "failed",
+      "attempts": 1,
+      "lastError": "UnavailableError: Gemini indisponible apres 2 tentatives (504): {\"error\":{\"code\":504,\"message\":\"Deadline expired before operation could complete.\",\"status\":\"DEADLINE_EXCEEDED\"}}"
     }
   }
 }
