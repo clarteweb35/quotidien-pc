@@ -2101,6 +2101,54 @@
       "seenAt": "2026-11-05T13:04:08.111Z",
       "status": "excluded",
       "reason": "sensitive"
+    },
+    "d968387dd2ea": {
+      "title": "Ukraine : le bilan de la frappe russe de lundi dans le Sud monte à 50 morts",
+      "url": "https://www.france24.com/fr/europe/20261106-ukraine-le-bilan-de-la-frappe-russe-de-lundi-dans-le-sud-monte-%C3%A0-50-morts",
+      "category": "monde",
+      "seenAt": "2026-11-06T12:51:55.785Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "56c988fe7431": {
+      "title": "AGOA : les États-Unis menacent d'exclure le Rwanda et l'Afrique du Sud",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261106-agoa-les-%C3%A9tats-unis-menacent-d-exclure-le-rwanda-et-l-afrique-du-sud",
+      "category": "monde",
+      "seenAt": "2026-11-06T12:51:55.785Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "27cd1ac09b3e": {
+      "title": "Accident de car dans l'Ain : deux jeunes dont un mineur tués, 16 blessés",
+      "url": "https://www.france24.com/fr/france/20261106-accident-de-car-dans-l-ain-deux-jeunes-dont-un-mineur-tu%C3%A9s-3-bless%C3%A9s-graves",
+      "category": "monde",
+      "seenAt": "2026-11-06T12:51:55.785Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "f0da9b6e9075": {
+      "title": "Accident de car dans l'Ain : un mineur et un jeune majeur décédés et 16 blessés dont 3 graves",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261106-accident-de-car-dans-l-ain-un-mineur-et-un-jeune-majeur-d%C3%A9c%C3%A9d%C3%A9s-et-16-bless%C3%A9s-dont-3-graves",
+      "category": "monde",
+      "seenAt": "2026-11-06T12:51:55.785Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "492b3cf21e9a": {
+      "title": "Accord sur le gazole mort-né : pourquoi les pétroliers russes se détournent des États-Unis",
+      "url": "https://www.france24.com/fr/%C3%A9co-tech/20261106-accord-sur-le-gazole-mort-n%C3%A9-pourquoi-les-p%C3%A9troliers-russes-se-d%C3%A9tournent-des-%C3%A9tats-unis",
+      "category": "monde",
+      "seenAt": "2026-11-06T12:51:55.785Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "015f73f5bd71": {
+      "title": "Afrique du Sud : vers un score historiquement bas pour l'ANC aux municipales ?",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261106-afrique-du-sud-vers-un-score-historiquement-bas-pour-l-anc-aux-municipales",
+      "category": "monde",
+      "seenAt": "2026-11-06T12:51:55.785Z",
+      "status": "used",
+      "usedAt": "2026-11-06T12:51:55.785Z"
     }
   },
   "slots": {
@@ -2599,6 +2647,33 @@
         "status": "abandoned",
         "lastError": "fenetre_de_rattrapage_depassee"
       }
+    },
+    "2026-11-06": {
+      "0": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "1": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "2": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "3": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "4": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      }
     }
   },
   "lastRun": {
@@ -2657,6 +2732,11 @@
       "status": "failed",
       "attempts": 1,
       "lastError": "UnavailableError: Gemini indisponible apres 2 tentatives (504): {\"error\":{\"code\":504,\"message\":\"Deadline expired before operation could complete.\",\"status\":\"DEADLINE_EXCEEDED\"}}"
+    },
+    "2026-11-06": {
+      "status": "published",
+      "attempts": 1,
+      "lastError": null
     }
   }
 }

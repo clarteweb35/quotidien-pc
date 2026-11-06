@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-06",
+    "titre": "La panne de siège",
+    "legende": "Après trente ans sur le même fauteuil, les dirigeants découvrent avec stupeur que les électeurs ont fini par couper le courant.",
+    "alt": "Un homme en costume pousse un fauteuil en or aux roues dégonflées près d'une urne électorale quasi vide.",
+    "image": "images/caricatures/2026-11-06.webp",
+    "credit": "Dessin généré par IA · Le Quotidien Presque Certain",
+    "publishedAt": "2026-11-06T12:51:55.785Z",
+    "source": {
+      "name": "France 24",
+      "title": "Afrique du Sud : vers un score historiquement bas pour l'ANC aux municipales ?",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261106-afrique-du-sud-vers-un-score-historiquement-bas-pour-l-anc-aux-municipales"
+    }
+  },
+  {
     "date": "2026-11-05",
     "titre": "Défaite devant le Capitole",
     "legende": "Au lendemain des élections de mi-mandat, le grand orateur découvre qu’il existe un mot plus fort que « gagnant » : « non ».",

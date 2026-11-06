@@ -1,1 +1,20 @@
 {"ts":"2026-11-06T01:28:57.405Z","runId":"20261106012857-33c1","level":"info","event":"cycle.start","date":"2026-11-06","due":[],"remainingToday":5,"dryRun":false}
+{"ts":"2026-11-06T12:51:55.784Z","runId":"20261106125155-ef4f","level":"warn","event":"cycle.slots_abandoned","count":5}
+{"ts":"2026-11-06T12:51:55.785Z","runId":"20261106125155-ef4f","level":"info","event":"cycle.start","date":"2026-11-06","due":[],"remainingToday":5,"dryRun":false}
+{"ts":"2026-11-06T12:51:56.346Z","runId":"20261106125155-ef4f","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":33,"kept":25}
+{"ts":"2026-11-06T12:51:56.346Z","runId":"20261106125155-ef4f","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-11-06T12:51:56.346Z","runId":"20261106125155-ef4f","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":20}
+{"ts":"2026-11-06T12:51:56.346Z","runId":"20261106125155-ef4f","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":24}
+{"ts":"2026-11-06T12:51:56.346Z","runId":"20261106125155-ef4f","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":15}
+{"ts":"2026-11-06T12:51:56.346Z","runId":"20261106125155-ef4f","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":20,"kept":20}
+{"ts":"2026-11-06T12:51:56.346Z","runId":"20261106125155-ef4f","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":10}
+{"ts":"2026-11-06T12:51:56.347Z","runId":"20261106125155-ef4f","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":13}
+{"ts":"2026-11-06T12:51:56.347Z","runId":"20261106125155-ef4f","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":12}
+{"ts":"2026-11-06T12:51:56.347Z","runId":"20261106125155-ef4f","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":14}
+{"ts":"2026-11-06T12:51:56.347Z","runId":"20261106125155-ef4f","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":8}
+{"ts":"2026-11-06T12:51:56.347Z","runId":"20261106125155-ef4f","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":8}
+{"ts":"2026-11-06T12:52:05.678Z","runId":"20261106125155-ef4f","level":"info","event":"gemini.call","purpose":"caricature","model":"gemini-3.6-flash","inputTokens":311,"outputTokens":1280,"costUsd":0.010067}
+{"ts":"2026-11-06T12:52:09.206Z","runId":"20261106125155-ef4f","level":"warn","event":"gemini.retry","purpose":"image_judge","status":503,"attempt":1,"delayMs":4647}
+{"ts":"2026-11-06T12:52:15.294Z","runId":"20261106125155-ef4f","level":"info","event":"gemini.call","purpose":"image_judge","model":"gemini-3.5-flash-lite","inputTokens":1260,"outputTokens":60,"costUsd":0.000528}
+{"ts":"2026-11-06T12:52:15.294Z","runId":"20261106125155-ef4f","level":"info","event":"image.ok","slot":"caricature#2026-11-06","bytes":46184,"costUsd":0}
+{"ts":"2026-11-06T12:52:15.302Z","runId":"20261106125155-ef4f","level":"info","event":"caricature.ok","date":"2026-11-06","titre":"La panne de siège"}
