@@ -7,7 +7,7 @@ chapo: "À force de vouloir tout contrôler, le Kremlin finit par démontrer qu�
 description: "Éditorial : de la répression des voix critiques au contrôle d’Internet, comment le Kremlin révèle sa peur de la contradiction. Il ne vise pas le peuple russe."
 category: "monde"
 tags: ["monde","russie","poutine","censure","libertés"]
-publishedAt: "2026-11-03T09:40:00.000Z"
+publishedAt: "2026-11-06T18:39:00.000Z"
 kind: "news"
 satire: true
 sources: [{"name":"Human Rights Watch","title":"Russia: Crackdown on Dissent Escalates (4 février 2026)","url":"https://www.hrw.org/news/2026/02/04/russia-crackdown-on-dissent-escalates"},{"name":"Human Rights Watch","title":"World Report 2026 : Russia","url":"https://www.hrw.org/world-report/2026/country-chapters/russia"},{"name":"Human Rights Watch","title":"Russia: Digital Iron Curtain Falls on Internet Freedom Protection Day (12 mars 2026)","url":"https://www.hrw.org/news/2026/03/12/russia-digital-iron-curtain-falls-on-internet-freedom-protection-day"},{"name":"Committee to Protect Journalists","title":"Russia's repression record (17 février 2026)","url":"https://cpj.org/2026/02/russias-repression-record/"},{"name":"Freedom House","title":"Freedom in the World 2026 : Russia","url":"https://freedomhouse.org/country/russia/freedom-world/2026"},{"name":"Le Monde","title":"Four years after invading Ukraine, Russia sinks deeper into authoritarianism and repression (24 février 2026)","url":"https://www.lemonde.fr/en/international/article/2026/02/24/four-years-after-invading-ukraine-russia-sinks-deeper-into-authoritarianism-and-repression_6750842_4.html"}]

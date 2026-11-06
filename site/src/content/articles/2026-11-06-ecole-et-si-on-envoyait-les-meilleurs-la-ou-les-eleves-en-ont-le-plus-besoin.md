@@ -7,7 +7,7 @@ chapo: "La grande réforme de l’Éducation nationale ne consiste pas forcémen
 description: "Éditorial : les enseignants débutants sont davantage affectés en éducation prioritaire. Faut-il revoir les règles d’affectation pour placer l’expérience là où les élèves en ont le plus besoin ?"
 category: "societe"
 tags: ["société","école","enseignants","éducation prioritaire","affectations"]
-publishedAt: "2026-11-03T10:00:00.000Z"
+publishedAt: "2026-11-06T18:39:00.000Z"
 kind: "news"
 satire: true
 sources: [{"name":"DEPP","title":"Le début de carrière des enseignants du second degré public : une baisse des affectations dans les collèges REP+ (25 août 2026)","url":"https://www.education.gouv.fr/depp/le-debut-de-carriere-des-enseignants-du-second-degre-public-une-baisse-des-affectations-dans-les-505329"},{"name":"Cour des comptes","title":"L’éducation prioritaire (octobre 2018)","url":"https://www.ccomptes.fr/sites/default/files/2023-10/20181017-rapport-education-prioritaire.pdf"},{"name":"Cour des comptes","title":"La fonction ressources humaines au ministère de l’Éducation nationale (octobre 2024)","url":"https://www.ccomptes.fr/fr/publications/la-fonction-ressources-humaines-au-ministere-de-leducation-nationale"},{"name":"OCDE","title":"Études économiques de la France 2024 : améliorer les résultats dans le domaine de l’éducation","url":"https://www.oecd.org/fr/publications/etudes-economiques-de-l-ocde-france-2024_a28c2090-fr/full-report/component-8.html"}]
