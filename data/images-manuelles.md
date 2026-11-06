@@ -3,7 +3,12 @@
 Nommez votre image **exactement comme la référence** (ex. `261024-X1.jpg`) et déposez-la dans `site/src/assets/manual/`.
 Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large minimum.
 
-## Sans image (8)
+## Sans image (9)
+
+### `261106-D1` — Syndicats français : protéger le passé, bloquer le présent et sacrifier l’avenir
+- Rubrique : editos
+- Description suggérée : Dessin de presse satirique : un syndicaliste en gilet, assis sur une pile de vieilles rotatives, brandit fièrement un panneau « Acquis d’hier » devant une usine dont la cheminée ne fume plus, tandis qu’un calendrier arraché s’envole au vent. Personnages génériques, sans ressemblance avec une personne réelle. Style encre et aquarelle.
+- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
 ### `261105-D1` — Trump : la grande claque, le petit homme et le début de la fin
 - Rubrique : editos
@@ -45,8 +50,10 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 - Description suggérée : Un calendrier mural dont la case du dimanche a été barrée au feutre puis recollée sur celle du mardi, posé sur un bureau en bois, vue de dessus
 - Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
-## Déjà illustrés (32)
+## Déjà illustrés (31)
 
+- `261103-D7` — École : et si on envoyait les meilleurs là où les élèves en ont le plus besoin ? (261103-D7.png)
+- `261103-D5` — Russie : la dictature qui a peur de son propre peuple (261103-D5.png)
 - `261101-D3` — Tendance : le summum du chic digital consiste désormais à applaudir un arbre virtuel sans quitter son canapé (261101-D3-dessin.jpg)
 - `261103-D8` — Les parents savent dire non au sucre, mais pas à TikTok (261103-D8.png)
 - `261103-D6` — Macron : 10 ans de règne, 10 erreurs qui ont abîmé la promesse (261103-D6.png)
@@ -76,6 +83,3 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 - `261025-04` — Reconversion : déçus par l’IA, d’anciens cadres de la tech tentent d’appliquer le management agile à la plomberie (261025-04.jpg)
 - `261025-02` — Maintien de l’ordre : la Préfecture salue un bilan comptable d’une précision exemplaire (261025-02.jpg)
 - `261025-X3` — Démocratie : il vote avec deux semaines d'avance pour avoir le temps de contester son propre bulletin (261025-X3.jpg)
-- `261025-X2` — Diagonale des Fous : le monde du sport fasciné par l'art de gravir 10 000 mètres pour éviter de prendre le car (261025-X2.jpg)
-- `261025-X1` — Débats : une enquête confirme scientifiquement qu’avoir une réponse évite les silences gênants (261025-X1.jpg)
-- `261024-X3` — Élections en ligne : un protocole officiel exigera une dissertation en trois parties avant chaque tweet politique (261024-X3.jpg)

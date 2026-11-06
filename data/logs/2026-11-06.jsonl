@@ -18,3 +18,4 @@
 {"ts":"2026-11-06T12:52:15.294Z","runId":"20261106125155-ef4f","level":"info","event":"gemini.call","purpose":"image_judge","model":"gemini-3.5-flash-lite","inputTokens":1260,"outputTokens":60,"costUsd":0.000528}
 {"ts":"2026-11-06T12:52:15.294Z","runId":"20261106125155-ef4f","level":"info","event":"image.ok","slot":"caricature#2026-11-06","bytes":46184,"costUsd":0}
 {"ts":"2026-11-06T12:52:15.302Z","runId":"20261106125155-ef4f","level":"info","event":"caricature.ok","date":"2026-11-06","titre":"La panne de siège"}
+{"ts":"2026-11-06T19:55:42.958Z","runId":"20261106195542-584c","level":"info","event":"cycle.start","date":"2026-11-06","due":[],"remainingToday":5,"dryRun":false}
