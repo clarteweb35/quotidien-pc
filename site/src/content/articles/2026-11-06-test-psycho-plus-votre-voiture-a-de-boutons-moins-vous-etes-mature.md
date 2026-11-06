@@ -15,6 +15,8 @@ sources: []
 model: "redaction-manuelle"
 slug: "test-psycho-plus-votre-voiture-a-de-boutons-moins-vous-etes-mature"
 imagePrompt: "Photo humoristique : l'intérieur d'une voiture moderne dont le tableau de bord est couvert de boutons, de molettes et de trois écrans tactiles, un conducteur adulte en costume, très sérieux, un doigt levé au-dessus d'un bouton, tandis qu'à côté une vieille Clio affiche une unique molette de chauffage. Lumière naturelle, ton satirique."
+imageAlt: "Deux tableaux de bord côte à côte : celui d'une berline moderne bardée de boutons et d'un écran, et celui d'une voiture ancienne avec trois interrupteurs et un volant blanc."
+imageLegende: "Les conducteurs d'Audi sont de grands enfants sur des circuits."
 ---
 Vous connaissez forcément cet individu. Il entre dans sa voiture avec le sérieux d'un pilote de chasse, appuie sur trois boutons, tourne deux molettes, consulte un écran de 14 pouces et annonce fièrement qu'il vient de régler la température intérieure.
 

@@ -30,6 +30,7 @@ const schema = z.object({
     imagePrompt: z.string().optional(),
     image: z.string().regex(/^images\/articles\/[a-z0-9-]+\.webp$/).optional(),
     imageAlt: z.string().optional(),
+    imageLegende: z.string().optional(),
     imageCredit: z.string().optional(),
 });
 

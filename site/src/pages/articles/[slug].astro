@@ -87,7 +87,7 @@ const jsonLd = {
     {img && (
       <figure class="illus">
         <img src={img.src} srcset={img.srcset} sizes="(min-width: 1000px) 760px, 100vw" alt={img.alt} data-portrait={img.portrait || undefined} width={img.width} height={img.height} fetchpriority="high" />
-        <figcaption>{img.credit} — illustration satirique, sans rapport avec des faits réels.{dessinDuJour && <> <a href={url('caricatures/')}>Ce dessin est aussi le dessin du jour →</a></>}</figcaption>
+        <figcaption>{d.imageLegende && <>{d.imageLegende} · </>}{img.credit} — illustration satirique, sans rapport avec des faits réels.{dessinDuJour && <> <a href={url('caricatures/')}>Ce dessin est aussi le dessin du jour →</a></>}</figcaption>
       </figure>
     )}
     {!img && d.imagePrompt && (
