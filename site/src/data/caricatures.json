@@ -1,6 +1,20 @@
 [
   {
     "date": "2026-11-06",
+    "titre": "Lecture surveillée",
+    "legende": "Dans le pays du grand portrait officiel, la presse est parfaitement lisible : il n’y manque que les mots.",
+    "alt": "Dessin de presse : des passants en manteau, la main devant la bouche, lisent des journaux dont tous les mots sont barrés au feutre noir, devant un grand portrait officiel dans un cadre doré entouré de barbelés.",
+    "image": "images/caricatures/2026-11-06-russie.webp",
+    "credit": "Dessin généré par IA · Le Quotidien Presque Certain",
+    "publishedAt": "2026-11-06T18:58:09.766Z",
+    "source": {
+      "name": "Le Quotidien Presque Certain",
+      "title": "Russie : la dictature qui a peur de son propre peuple",
+      "url": ""
+    }
+  },
+  {
+    "date": "2026-11-06",
     "titre": "La panne de siège",
     "legende": "Après trente ans sur le même fauteuil, les dirigeants découvrent avec stupeur que les électeurs ont fini par couper le courant.",
     "alt": "Un homme en costume pousse un fauteuil en or aux roues dégonflées près d'une urne électorale quasi vide.",
