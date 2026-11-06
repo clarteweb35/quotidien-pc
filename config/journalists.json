@@ -38,6 +38,12 @@
       "role": "Pigiste, en CDD parfois",
       "age": 43.5,
       "bio": "Ancien expert Covid grâce à son Bac + 5 en finance. Parle sept langues mais n'en utilise que deux."
+    },
+    {
+      "name": "Bertrand Ragé",
+      "section": "coulisses",
+      "role": "Pigiste touche-à-tout",
+      "bio": "Ancien cuisinier, vend des galettes-saucisses pendant les manifs. Végan presque tout le temps."
     }
   ],
   "journalists": [
