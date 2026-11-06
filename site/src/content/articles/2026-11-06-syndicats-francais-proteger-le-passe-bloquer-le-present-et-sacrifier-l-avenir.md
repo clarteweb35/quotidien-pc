@@ -7,7 +7,7 @@ chapo: "En France, les syndicats ont parfois une conception assez particulière 
 description: "Édito satirique de Jean-Eudes de la Manchette : du modèle allemand au Syndicat du Livre, faut-il défendre le travail ou défendre le passé ?"
 category: "editos"
 tags: ["édito","syndicats","allemagne","imprimerie","syndicat du livre"]
-publishedAt: "2026-11-06T09:00:00.000Z"
+publishedAt: "2026-11-06T19:02:00.000Z"
 kind: "news"
 satire: true
 sources: [{"name":"Eurofound","title":"Germany : le système allemand de relations professionnelles","url":"https://www.eurofound.europa.eu/en/countries/germany"},{"name":"Eurofound","title":"Collective bargaining in Germany","url":"https://www.eurofound.europa.eu/en/countries/germany/collective-bargaining"},{"name":"Le Monde","title":"Le crépuscule du Syndicat du Livre (15 mars 1998)","url":"https://www.lemonde.fr/archives/article/1998/03/15/le-crepuscule-du-syndicat-du-livre_3655327_1819218.html"},{"name":"Cour de cassation","title":"Décision de la Cour de cassation (affaire des imprimeries)","url":"https://www.courdecassation.fr/decision/6079d3f09ba5988459c59d86"},{"name":"Insee","title":"Les entreprises de l’imprimerie depuis 2010 : la production recule, les usages se modifient (Insee Première n° 2122)","url":"https://www.insee.fr/fr/statistiques/9025306"}]

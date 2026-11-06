@@ -22,7 +22,7 @@ const jour = (d: string) => formatDate(new Date(`${d}T12:00:00Z`));
         <span class="cari-date">{jour(duJour.date)}</span>
         <strong>{duJour.titre}</strong>
         <span>{duJour.legende}</span>
-        <small>{duJour.credit} — fiction satirique, sans rapport avec des faits réels.{duJour.source.url && <> Actualité ayant inspiré le dessin : <a href={duJour.source.url} rel="noopener nofollow external">{duJour.source.name || 'source'}</a>.</>}</small>
+        <small>{duJour.credit} — fiction satirique, sans rapport avec des faits réels.{duJour.source.url && !/^https?:/.test(duJour.source.url) && <> Article associé : <a href={url(duJour.source.url)}>{duJour.source.title}</a>.</>}{duJour.source.url && /^https?:/.test(duJour.source.url) && <> Actualité ayant inspiré le dessin : <a href={duJour.source.url} rel="noopener nofollow external">{duJour.source.name || 'source'}</a>.</>}</small>
       </figcaption>
     </figure>
   ) : (

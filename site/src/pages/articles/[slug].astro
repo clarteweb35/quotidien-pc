@@ -3,6 +3,7 @@ import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import { allArticles, category, formatDateTime, readingMinutes, satireNotice, siteName, url, manualImageCredit } from '../../lib/site';
 import { illustration } from '../../lib/manual';
+import { caricatures } from '../../lib/caricatures';
 import { refOf } from '../../lib/ref';
 import { journalist, deskLabel, authorSlug, portrait, portraitAlt } from '../../lib/authors';
 import Share from '../../components/Share.astro';
@@ -34,6 +35,7 @@ const related = all
   .slice(0, 5)
   .map(({ article: candidate }) => candidate);
 const { Content } = await render(article);
+const dessinDuJour = caricatures.some((c) => c.source.url === `articles/${d.slug}/`);
 const img = await illustration(article, 1280, manualImageCredit);
 const ref = refOf(d);
 const who = journalist(d.author);
@@ -85,7 +87,7 @@ const jsonLd = {
     {img && (
       <figure class="illus">
         <img src={img.src} srcset={img.srcset} sizes="(min-width: 1000px) 760px, 100vw" alt={img.alt} data-portrait={img.portrait || undefined} width={img.width} height={img.height} fetchpriority="high" />
-        <figcaption>{img.credit} — illustration satirique, sans rapport avec des faits réels.</figcaption>
+        <figcaption>{img.credit} — illustration satirique, sans rapport avec des faits réels.{dessinDuJour && <> <a href={url('caricatures/')}>Ce dessin est aussi le dessin du jour →</a></>}</figcaption>
       </figure>
     )}
     {!img && d.imagePrompt && (
