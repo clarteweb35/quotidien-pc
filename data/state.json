@@ -2149,6 +2149,118 @@
       "seenAt": "2026-11-06T12:51:55.785Z",
       "status": "used",
       "usedAt": "2026-11-06T12:51:55.785Z"
+    },
+    "2e1d74f3c0bc": {
+      "title": "Derrière la vitrine de la Route du rhum, la Guadeloupe peine à s’imposer dans la course au large",
+      "url": "https://www.lemonde.fr/sport/article/2026/11/07/derriere-la-vitrine-de-la-route-du-rhum-la-guadeloupe-peine-a-s-imposer-dans-la-course-au-large_6808249_3242.html",
+      "category": "sport",
+      "seenAt": "2026-11-07T11:39:02.626Z",
+      "status": "used",
+      "usedAt": "2026-11-07T11:39:02.626Z"
+    },
+    "bf4043b1f037": {
+      "title": "Le cinéaste chilien Sebastian Lelio, oscarisé pour « Une femme fantastique », est mort à 52 ans",
+      "url": "https://www.lemonde.fr/disparitions/article/2026/11/06/le-cineaste-chilien-sebastian-lelio-oscarise-pour-une-femme-fantastique-est-mort-a-52-ans_6807860_3382.html",
+      "category": "culture",
+      "seenAt": "2026-11-07T11:39:43.460Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "bd05ddc848e8": {
+      "title": "« Possible Love », de Lee Chang-dong, sur Netflix : la lutte des classes, des deux côtés du miroir",
+      "url": "https://www.lemonde.fr/culture/article/2026/11/06/possible-love-de-lee-chang-dong-sur-netflix-la-lutte-des-classes-des-deux-cotes-du-miroir_6807812_3246.html",
+      "category": "culture",
+      "seenAt": "2026-11-07T11:39:43.460Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "839fbe700800": {
+      "title": "L’artiste Fred Forest annonce sa propre mort à 93 ans",
+      "url": "https://www.lemonde.fr/disparitions/article/2026/11/06/l-artiste-fred-forest-annonce-sa-propre-mort-a-93-ans_6807797_3382.html",
+      "category": "culture",
+      "seenAt": "2026-11-07T11:39:43.460Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "cb2cc115cac1": {
+      "title": "Cambriolages des musées Lalique et de Montans : quatre personnes mises en examen",
+      "url": "https://www.lemonde.fr/culture/article/2026/11/06/cambriolages-des-musees-lalique-et-de-montans-quatre-personnes-mises-en-examen_6807866_3246.html",
+      "category": "culture",
+      "seenAt": "2026-11-07T11:39:43.460Z",
+      "status": "used",
+      "usedAt": "2026-11-07T11:39:43.460Z"
+    },
+    "973c0c250e68": {
+      "title": "Attentat raciste de Trappes : obsèques de Pengo Bossio Wangi samedi à Guyancourt",
+      "url": "https://www.france24.com/fr/france/20261107-attentat-racisme-trappes-obs%C3%A8ques-pengo-bossio-wangi-samedi-guyancourt",
+      "category": "monde",
+      "seenAt": "2026-11-07T11:40:17.918Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "10d841d88582": {
+      "title": "Guerre en Ukraine : le combat quotidien de Daryna pour \"trouver l'équilibre entre vivre et survivre\"",
+      "url": "https://www.france24.com/fr/europe/20261107-guerre-ukraine-combat-quotidien-daryna-trouver-%C3%A9quilibre-entre-vivre-survivre-kiev-russie",
+      "category": "monde",
+      "seenAt": "2026-11-07T11:40:17.918Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "a91f1547a7d3": {
+      "title": "Tournée d'Assimi Goïta dans l'AES : la lutte contre le terrorisme au cœur des échanges",
+      "url": "https://www.france24.com/fr/%C3%A9missions/journal-de-l-afrique/20261106-tourn%C3%A9e-d-assimi-go%C3%AFta-dans-l-aes-la-lutte-contre-le-terrorisme-au-c%C5%93ur-des-%C3%A9changes",
+      "category": "monde",
+      "seenAt": "2026-11-07T11:40:17.918Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "bfc6aae83737": {
+      "title": "Assimi Goïta dans l'AES : la lutte contre le terrorisme au cœur des échanges",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261106-le-journal-de-l-afrique",
+      "category": "monde",
+      "seenAt": "2026-11-07T11:40:17.918Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "7102713bada7": {
+      "title": "Résultats des Midterms, conséquences sur la politique étrangère US et mobilisation sociale en France",
+      "url": "https://www.france24.com/fr/%C3%A9missions/une-semaine-dans-le-monde/20261106-r%C3%A9sultats-des-midterms-cons%C3%A9quences-sur-la-politique-%C3%A9trang%C3%A8re-us-et-mobilisation-sociale-en-france",
+      "category": "monde",
+      "seenAt": "2026-11-07T11:40:17.918Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "e2e80a812e50": {
+      "title": "Au Guatemala, un député et trois policiers tués dans une attaque armée",
+      "url": "https://www.lemonde.fr/international/article/2026/11/07/au-guatemala-un-depute-et-trois-policiers-tues-dans-une-attaque-armee_6808245_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-07T11:40:17.918Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "cc43178ce81d": {
+      "title": "Midterms 2026 : les démocrates lancés à l’assaut du budget du Pentagone et de la guerre contre l’Iran",
+      "url": "https://www.lemonde.fr/international/article/2026/11/07/midterms-2026-les-democrates-lances-a-l-assaut-du-budget-du-pentagone-et-de-la-guerre-contre-l-iran_6808203_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-07T11:40:17.918Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "54c7148a46e1": {
+      "title": "Le néolibéralisme est-il mort ? Vie et métamorphoses de la doctrine qui a façonné le monde contemporain",
+      "url": "https://www.lemonde.fr/idees/article/2026/11/07/le-neoliberalisme-est-il-mort-vie-et-metamorphoses-de-la-doctrine-qui-a-faconne-le-monde-contemporain_6808201_3232.html",
+      "category": "monde",
+      "seenAt": "2026-11-07T11:40:17.918Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "0f3f88b4101e": {
+      "title": "Voyage de Léon XIV en Amérique latine : en Uruguay, le pape évoque sa maladie pour défendre des soins « accessibles à chacun »",
+      "url": "https://www.lemonde.fr/international/article/2026/11/06/voyage-de-leon-xiv-en-amerique-latine-en-uruguay-le-pape-evoque-sa-maladie-pour-defendre-des-soins-accessibles-a-chacun_6807867_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-07T11:40:17.918Z",
+      "status": "excluded",
+      "reason": "sensitive"
     }
   },
   "slots": {
@@ -2674,12 +2786,42 @@
         "status": "abandoned",
         "lastError": "fenetre_de_rattrapage_depassee"
       }
+    },
+    "2026-11-07": {
+      "0": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "1": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "2": {
+        "attempts": 1,
+        "status": "published",
+        "startedAt": "2026-11-07T11:39:02.626Z",
+        "articleId": "81463b42fb6f",
+        "publishedAt": "2026-11-07T11:39:02.626Z",
+        "topicId": "2e1d74f3c0bc",
+        "lastError": null
+      },
+      "3": {
+        "attempts": 1,
+        "status": "published",
+        "startedAt": "2026-11-07T11:39:43.460Z",
+        "articleId": "4238170dd124",
+        "publishedAt": "2026-11-07T11:39:43.460Z",
+        "topicId": "cb2cc115cac1",
+        "lastError": null
+      }
     }
   },
   "lastRun": {
-    "at": "2026-11-01T11:47:13.200Z",
-    "runId": "20261101114713-e06e",
-    "published": 1,
+    "at": "2026-11-07T11:39:02.095Z",
+    "runId": "20261107113902-d7d2",
+    "published": 2,
     "stopped": null
   },
   "caricatures": {
@@ -2737,6 +2879,11 @@
       "status": "published",
       "attempts": 1,
       "lastError": null
+    },
+    "2026-11-07": {
+      "status": "failed",
+      "attempts": 1,
+      "lastError": "image_indisponible"
     }
   }
 }

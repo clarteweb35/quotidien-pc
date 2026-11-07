@@ -1,1 +1,44 @@
 {"ts":"2026-11-07T00:04:14.307Z","runId":"20261107000414-1427","level":"info","event":"cycle.start","date":"2026-11-07","due":[],"remainingToday":5,"dryRun":false}
+{"ts":"2026-11-07T11:39:02.117Z","runId":"20261107113902-d7d2","level":"warn","event":"cycle.slots_abandoned","count":2}
+{"ts":"2026-11-07T11:39:02.118Z","runId":"20261107113902-d7d2","level":"info","event":"cycle.start","date":"2026-11-07","due":["2026-11-07#2","2026-11-07#3"],"remainingToday":5,"dryRun":false}
+{"ts":"2026-11-07T11:39:02.624Z","runId":"20261107113902-d7d2","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":29,"kept":25}
+{"ts":"2026-11-07T11:39:02.624Z","runId":"20261107113902-d7d2","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":15}
+{"ts":"2026-11-07T11:39:02.624Z","runId":"20261107113902-d7d2","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":20}
+{"ts":"2026-11-07T11:39:02.625Z","runId":"20261107113902-d7d2","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":24}
+{"ts":"2026-11-07T11:39:02.625Z","runId":"20261107113902-d7d2","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":14}
+{"ts":"2026-11-07T11:39:02.625Z","runId":"20261107113902-d7d2","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":20,"kept":20}
+{"ts":"2026-11-07T11:39:02.625Z","runId":"20261107113902-d7d2","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":17}
+{"ts":"2026-11-07T11:39:02.625Z","runId":"20261107113902-d7d2","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":13}
+{"ts":"2026-11-07T11:39:02.625Z","runId":"20261107113902-d7d2","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":7}
+{"ts":"2026-11-07T11:39:02.625Z","runId":"20261107113902-d7d2","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":19}
+{"ts":"2026-11-07T11:39:02.625Z","runId":"20261107113902-d7d2","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":5}
+{"ts":"2026-11-07T11:39:02.625Z","runId":"20261107113902-d7d2","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":8}
+{"ts":"2026-11-07T11:39:02.625Z","runId":"20261107113902-d7d2","level":"info","event":"collect.done","items":187}
+{"ts":"2026-11-07T11:39:02.645Z","runId":"20261107113902-d7d2","level":"info","event":"topic.selection","slot":"2026-11-07#2","target":"sport","candidates":187,"rejected":4,"chosen":"Derrière la vitrine de la Route du rhum, la Guadeloupe peine à s’imposer dans la course au large","score":4}
+{"ts":"2026-11-07T11:39:36.893Z","runId":"20261107113902-d7d2","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4581,"outputTokens":2916,"costUsd":0.028742}
+{"ts":"2026-11-07T11:39:38.299Z","runId":"20261107113902-d7d2","level":"warn","event":"gemini.retry","purpose":"judge","status":503,"attempt":1,"delayMs":4161}
+{"ts":"2026-11-07T11:39:43.457Z","runId":"20261107113902-d7d2","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":854,"outputTokens":56,"costUsd":0.000396}
+{"ts":"2026-11-07T11:39:43.458Z","runId":"20261107113902-d7d2","level":"info","event":"judge.result","slot":"2026-11-07#2","attempt":1,"humor":8,"coherence":9,"risk":0,"issues":[]}
+{"ts":"2026-11-07T11:39:43.460Z","runId":"20261107113902-d7d2","level":"info","event":"publish.ok","slot":"2026-11-07#2","id":"81463b42fb6f","slug":"route-du-rhum-une-etude-de-850-pages-revele-qu-il-faut-un","url":"/articles/route-du-rhum-une-etude-de-850-pages-revele-qu-il-faut-un/","attempt":1,"dryRun":false}
+{"ts":"2026-11-07T11:39:43.492Z","runId":"20261107113902-d7d2","level":"info","event":"topic.selection","slot":"2026-11-07#3","target":"culture","candidates":187,"rejected":6,"chosen":"Cambriolages des musées Lalique et de Montans : quatre personnes mises en examen","score":4.5}
+{"ts":"2026-11-07T11:40:14.543Z","runId":"20261107113902-d7d2","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4540,"outputTokens":2642,"costUsd":0.026625}
+{"ts":"2026-11-07T11:40:17.915Z","runId":"20261107113902-d7d2","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":928,"outputTokens":80,"costUsd":0.000478}
+{"ts":"2026-11-07T11:40:17.915Z","runId":"20261107113902-d7d2","level":"info","event":"judge.result","slot":"2026-11-07#3","attempt":1,"humor":8,"coherence":9,"risk":1,"issues":[]}
+{"ts":"2026-11-07T11:40:17.917Z","runId":"20261107113902-d7d2","level":"info","event":"publish.ok","slot":"2026-11-07#3","id":"4238170dd124","slug":"musees-les-visiteurs-invites-a-ramener-leur-cadenas-et","url":"/articles/musees-les-visiteurs-invites-a-ramener-leur-cadenas-et/","attempt":1,"dryRun":false}
+{"ts":"2026-11-07T11:40:18.400Z","runId":"20261107113902-d7d2","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":29,"kept":25}
+{"ts":"2026-11-07T11:40:18.400Z","runId":"20261107113902-d7d2","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":15}
+{"ts":"2026-11-07T11:40:18.400Z","runId":"20261107113902-d7d2","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":20}
+{"ts":"2026-11-07T11:40:18.400Z","runId":"20261107113902-d7d2","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":24}
+{"ts":"2026-11-07T11:40:18.400Z","runId":"20261107113902-d7d2","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":14}
+{"ts":"2026-11-07T11:40:18.400Z","runId":"20261107113902-d7d2","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":20,"kept":20}
+{"ts":"2026-11-07T11:40:18.400Z","runId":"20261107113902-d7d2","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":17}
+{"ts":"2026-11-07T11:40:18.400Z","runId":"20261107113902-d7d2","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":13}
+{"ts":"2026-11-07T11:40:18.400Z","runId":"20261107113902-d7d2","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":7}
+{"ts":"2026-11-07T11:40:18.400Z","runId":"20261107113902-d7d2","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":19}
+{"ts":"2026-11-07T11:40:18.400Z","runId":"20261107113902-d7d2","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":5}
+{"ts":"2026-11-07T11:40:18.400Z","runId":"20261107113902-d7d2","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":8}
+{"ts":"2026-11-07T11:40:36.218Z","runId":"20261107113902-d7d2","level":"warn","event":"gemini.retry","purpose":"caricature","status":503,"attempt":1,"delayMs":4794}
+{"ts":"2026-11-07T11:40:57.357Z","runId":"20261107113902-d7d2","level":"info","event":"gemini.call","purpose":"caricature","model":"gemini-3.6-flash","inputTokens":287,"outputTokens":1343,"costUsd":0.010503}
+{"ts":"2026-11-07T11:41:02.398Z","runId":"20261107113902-d7d2","level":"warn","event":"gemini.retry","purpose":"image_judge","status":503,"attempt":1,"delayMs":4723}
+{"ts":"2026-11-07T11:41:10.567Z","runId":"20261107113902-d7d2","level":"info","event":"gemini.call","purpose":"image_judge","model":"gemini-3.5-flash-lite","inputTokens":1270,"outputTokens":83,"costUsd":0.000589}
+{"ts":"2026-11-07T11:41:10.567Z","runId":"20261107113902-d7d2","level":"warn","event":"image.rejected","slot":"caricature#2026-11-07","problems":["Presence of readable gibberish text and fictitious logos on the board in the background"],"flags":{"person":false,"text":true,"photo":false,"disturbing":false}}
