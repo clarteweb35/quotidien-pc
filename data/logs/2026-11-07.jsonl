@@ -42,3 +42,5 @@
 {"ts":"2026-11-07T11:41:02.398Z","runId":"20261107113902-d7d2","level":"warn","event":"gemini.retry","purpose":"image_judge","status":503,"attempt":1,"delayMs":4723}
 {"ts":"2026-11-07T11:41:10.567Z","runId":"20261107113902-d7d2","level":"info","event":"gemini.call","purpose":"image_judge","model":"gemini-3.5-flash-lite","inputTokens":1270,"outputTokens":83,"costUsd":0.000589}
 {"ts":"2026-11-07T11:41:10.567Z","runId":"20261107113902-d7d2","level":"warn","event":"image.rejected","slot":"caricature#2026-11-07","problems":["Presence of readable gibberish text and fictitious logos on the board in the background"],"flags":{"person":false,"text":true,"photo":false,"disturbing":false}}
+{"ts":"2026-11-07T17:42:37.223Z","runId":"20261107174237-cc54","level":"warn","event":"cycle.slots_abandoned","count":1}
+{"ts":"2026-11-07T17:42:37.224Z","runId":"20261107174237-cc54","level":"info","event":"cycle.start","date":"2026-11-07","due":[],"remainingToday":3,"dryRun":false}

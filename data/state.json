@@ -2815,6 +2815,11 @@
         "publishedAt": "2026-11-07T11:39:43.460Z",
         "topicId": "cb2cc115cac1",
         "lastError": null
+      },
+      "4": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
       }
     }
   },

@@ -58,8 +58,9 @@
     {
       "idx": 4,
       "hhmm": "11:10",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 0,
+      "status": "abandoned",
+      "lastError": "fenetre_de_rattrapage_depassee"
     }
   ],
   "rejections": 0,
