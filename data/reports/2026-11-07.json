@@ -1,0 +1,56 @@
+{
+  "date": "2026-11-07",
+  "target": 5,
+  "publishedCount": 0,
+  "articles": [],
+  "slots": [
+    {
+      "idx": 0,
+      "hhmm": "09:10",
+      "status": "pending",
+      "attempts": 0
+    },
+    {
+      "idx": 1,
+      "hhmm": "09:40",
+      "status": "pending",
+      "attempts": 0
+    },
+    {
+      "idx": 2,
+      "hhmm": "10:10",
+      "status": "pending",
+      "attempts": 0
+    },
+    {
+      "idx": 3,
+      "hhmm": "10:40",
+      "status": "pending",
+      "attempts": 0
+    },
+    {
+      "idx": 4,
+      "hhmm": "11:10",
+      "status": "pending",
+      "attempts": 0
+    }
+  ],
+  "rejections": 0,
+  "quarantined": 0,
+  "api": {
+    "calls": 0,
+    "inputTokens": 0,
+    "outputTokens": 0,
+    "costUsd": 0,
+    "dailyCapUsd": 1,
+    "monthCostUsd": 0.081767,
+    "monthlyCapUsd": 15
+  },
+  "paused": false,
+  "lastRun": {
+    "at": "2026-11-01T11:47:13.200Z",
+    "runId": "20261101114713-e06e",
+    "published": 1,
+    "stopped": null
+  }
+}

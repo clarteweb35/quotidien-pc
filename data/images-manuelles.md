@@ -54,6 +54,8 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 
 - `261103-D7` — École : et si on envoyait les meilleurs là où les élèves en ont le plus besoin ? (261103-D7.png)
 - `261103-D5` — Russie : la dictature qui a peur de son propre peuple (261103-D5.png)
+- `261106-D14` — Le petit chef : la vengeance du loser de la cour de récré (261106-D14.jpg)
+- `261106-D13` — Test psycho : plus votre voiture a de boutons, moins vous êtes mature (261106-D13.jpg)
 - `261101-D3` — Tendance : le summum du chic digital consiste désormais à applaudir un arbre virtuel sans quitter son canapé (261101-D3-dessin.jpg)
 - `261103-D8` — Les parents savent dire non au sucre, mais pas à TikTok (261103-D8.png)
 - `261103-D6` — Macron : 10 ans de règne, 10 erreurs qui ont abîmé la promesse (261103-D6.png)
@@ -81,5 +83,3 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 - `261025-06` — Théâtre : une commission passe cinq heures à débattre de l'extravagance sans réussir à employer un seul nom concret (261025-06.jpg)
 - `261025-05` — Chasse à l'IA dans l'édition : les auteurs désormais sommés de verser une vraie larme sur leur manuscrit (261025-05.jpg)
 - `261025-04` — Reconversion : déçus par l’IA, d’anciens cadres de la tech tentent d’appliquer le management agile à la plomberie (261025-04.jpg)
-- `261025-02` — Maintien de l’ordre : la Préfecture salue un bilan comptable d’une précision exemplaire (261025-02.jpg)
-- `261025-X3` — Démocratie : il vote avec deux semaines d'avance pour avoir le temps de contester son propre bulletin (261025-X3.jpg)
