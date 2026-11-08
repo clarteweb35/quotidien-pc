@@ -1,0 +1,42 @@
+{"ts":"2026-11-08T11:51:14.811Z","runId":"20261108115114-823b","level":"warn","event":"cycle.slots_abandoned","count":3}
+{"ts":"2026-11-08T11:51:14.812Z","runId":"20261108115114-823b","level":"info","event":"cycle.start","date":"2026-11-08","due":["2026-11-08#3","2026-11-08#4"],"remainingToday":5,"dryRun":false}
+{"ts":"2026-11-08T11:51:15.264Z","runId":"20261108115114-823b","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":31,"kept":25}
+{"ts":"2026-11-08T11:51:15.264Z","runId":"20261108115114-823b","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-11-08T11:51:15.264Z","runId":"20261108115114-823b","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":20}
+{"ts":"2026-11-08T11:51:15.264Z","runId":"20261108115114-823b","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":24}
+{"ts":"2026-11-08T11:51:15.264Z","runId":"20261108115114-823b","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":18}
+{"ts":"2026-11-08T11:51:15.264Z","runId":"20261108115114-823b","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":20,"kept":20}
+{"ts":"2026-11-08T11:51:15.264Z","runId":"20261108115114-823b","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":12}
+{"ts":"2026-11-08T11:51:15.265Z","runId":"20261108115114-823b","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":9}
+{"ts":"2026-11-08T11:51:15.265Z","runId":"20261108115114-823b","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":4}
+{"ts":"2026-11-08T11:51:15.265Z","runId":"20261108115114-823b","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":8}
+{"ts":"2026-11-08T11:51:15.265Z","runId":"20261108115114-823b","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":10}
+{"ts":"2026-11-08T11:51:15.265Z","runId":"20261108115114-823b","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":4}
+{"ts":"2026-11-08T11:51:15.265Z","runId":"20261108115114-823b","level":"info","event":"collect.done","items":170}
+{"ts":"2026-11-08T11:51:15.289Z","runId":"20261108115114-823b","level":"info","event":"topic.selection","slot":"2026-11-08#3","target":"environnement","candidates":170,"rejected":3,"chosen":"L’urine, nouvelle ressource : « On veut s’engager dans la révolution du pipi utile »","score":4.5}
+{"ts":"2026-11-08T11:51:27.384Z","runId":"20261108115114-823b","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4568,"outputTokens":1967,"costUsd":0.021605}
+{"ts":"2026-11-08T11:51:27.416Z","runId":"20261108115114-823b","level":"warn","event":"validate.deterministic_failed","slot":"2026-11-08#3","attempt":1,"issues":["chapo_trop_long"]}
+{"ts":"2026-11-08T11:51:45.641Z","runId":"20261108115114-823b","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4618,"outputTokens":3158,"costUsd":0.030612}
+{"ts":"2026-11-08T11:51:46.547Z","runId":"20261108115114-823b","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":918,"outputTokens":85,"costUsd":0.000488}
+{"ts":"2026-11-08T11:51:46.547Z","runId":"20261108115114-823b","level":"info","event":"judge.result","slot":"2026-11-08#3","attempt":2,"humor":7,"coherence":9,"risk":1,"issues":[]}
+{"ts":"2026-11-08T11:51:46.551Z","runId":"20261108115114-823b","level":"info","event":"publish.ok","slot":"2026-11-08#3","id":"937cd98e99b3","slug":"transition-ecologique-le-gouvernement-fixe-un-objectif","url":"/articles/transition-ecologique-le-gouvernement-fixe-un-objectif/","attempt":2,"dryRun":false}
+{"ts":"2026-11-08T11:51:46.580Z","runId":"20261108115114-823b","level":"info","event":"topic.selection","slot":"2026-11-08#4","target":"economie","candidates":170,"rejected":4,"chosen":"Thierry Cotillard, patron d’Intermarché : « L’hypersensibilité au prix est telle qu’il y a un risque de déconsommation si l’inflation alimentaire dépasse 2 % ou 3 % »","score":5.5}
+{"ts":"2026-11-08T11:52:08.175Z","runId":"20261108115114-823b","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4600,"outputTokens":3282,"costUsd":0.031515}
+{"ts":"2026-11-08T11:52:09.381Z","runId":"20261108115114-823b","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":1055,"outputTokens":93,"costUsd":0.000549}
+{"ts":"2026-11-08T11:52:09.381Z","runId":"20261108115114-823b","level":"info","event":"judge.result","slot":"2026-11-08#4","attempt":1,"humor":7,"coherence":9,"risk":1,"issues":[]}
+{"ts":"2026-11-08T11:52:09.385Z","runId":"20261108115114-823b","level":"info","event":"publish.ok","slot":"2026-11-08#4","id":"cae53c038006","slug":"inflation-les-francais-pris-d-une-terrifiante-crise-de","url":"/articles/inflation-les-francais-pris-d-une-terrifiante-crise-de/","attempt":1,"dryRun":false}
+{"ts":"2026-11-08T11:52:09.878Z","runId":"20261108115114-823b","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":31,"kept":25}
+{"ts":"2026-11-08T11:52:09.878Z","runId":"20261108115114-823b","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-11-08T11:52:09.878Z","runId":"20261108115114-823b","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":20}
+{"ts":"2026-11-08T11:52:09.878Z","runId":"20261108115114-823b","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":24}
+{"ts":"2026-11-08T11:52:09.879Z","runId":"20261108115114-823b","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":18}
+{"ts":"2026-11-08T11:52:09.879Z","runId":"20261108115114-823b","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":20,"kept":20}
+{"ts":"2026-11-08T11:52:09.879Z","runId":"20261108115114-823b","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":12}
+{"ts":"2026-11-08T11:52:09.879Z","runId":"20261108115114-823b","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":9}
+{"ts":"2026-11-08T11:52:09.879Z","runId":"20261108115114-823b","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":4}
+{"ts":"2026-11-08T11:52:09.879Z","runId":"20261108115114-823b","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":8}
+{"ts":"2026-11-08T11:52:09.879Z","runId":"20261108115114-823b","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":10}
+{"ts":"2026-11-08T11:52:09.879Z","runId":"20261108115114-823b","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":4}
+{"ts":"2026-11-08T11:52:17.290Z","runId":"20261108115114-823b","level":"info","event":"gemini.call","purpose":"caricature","model":"gemini-3.6-flash","inputTokens":288,"outputTokens":1118,"costUsd":0.008817}
+{"ts":"2026-11-08T11:52:39.482Z","runId":"20261108115114-823b","level":"info","event":"gemini.call","purpose":"image_judge","model":"gemini-3.5-flash-lite","inputTokens":1274,"outputTokens":79,"costUsd":0.00058}
+{"ts":"2026-11-08T11:52:39.482Z","runId":"20261108115114-823b","level":"warn","event":"image.rejected","slot":"caricature#2026-11-08","problems":["Presence of a visible signature or text at the bottom right corner."],"flags":{"person":false,"text":true,"photo":false,"disturbing":false}}

@@ -2261,6 +2261,126 @@
       "seenAt": "2026-11-07T11:40:17.918Z",
       "status": "excluded",
       "reason": "sensitive"
+    },
+    "4dbe75f7d9be": {
+      "title": "L’urine, nouvelle ressource : « On veut s’engager dans la révolution du pipi utile »",
+      "url": "https://www.lemonde.fr/m-perso/article/2026/11/08/l-urine-nouvelle-ressource-on-veut-s-engager-dans-la-revolution-du-pipi-utile_6808399_4497916.html",
+      "category": "environnement",
+      "seenAt": "2026-11-08T11:51:15.265Z",
+      "status": "used",
+      "usedAt": "2026-11-08T11:51:15.265Z"
+    },
+    "0ecf1c83c4ba": {
+      "title": "Après huit mois de guerre au Moyen-Orient, la mue forcée des pays du Golfe producteurs de pétrole et de gaz",
+      "url": "https://www.lemonde.fr/economie/article/2026/11/07/apres-huit-mois-de-guerre-au-moyen-orient-la-mue-forcee-des-pays-du-golfe-producteurs-de-petrole-et-de-gaz_6808252_3234.html",
+      "category": "economie",
+      "seenAt": "2026-11-08T11:51:46.551Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "92e4c3348b27": {
+      "title": "Thierry Cotillard, patron d’Intermarché : « L’hypersensibilité au prix est telle qu’il y a un risque de déconsommation si l’inflation alimentaire dépasse 2 % ou 3 % »",
+      "url": "https://www.lemonde.fr/economie/article/2026/11/07/thierry-cotillard-patron-d-intermarche-l-hypersensibilite-au-prix-est-telle-qu-il-y-a-un-risque-de-deconsommation-si-l-inflation-alimentaire-depasse-2-ou-3_6808204_3234.html",
+      "category": "economie",
+      "seenAt": "2026-11-08T11:51:46.551Z",
+      "status": "used",
+      "usedAt": "2026-11-08T11:51:46.551Z"
+    },
+    "b3792acfbf15": {
+      "title": "Frappes intenses entre les Houthis et l'Arabie saoudite : Sanaa et RIyad touchés",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261108-frappes-intenses-entre-les-houthis-et-l-arabie-saoudite-sanaa-et-riyad-touch%C3%A9s",
+      "category": "monde",
+      "seenAt": "2026-11-08T11:52:09.388Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "0a0c70747774": {
+      "title": "\"Je suis effondrée\" : les Polonais sous le choc après la fusillade mortelle de Cracovie",
+      "url": "https://www.france24.com/fr/europe/20261108-je-suis-effondr%C3%A9e-les-polonais-sous-le-choc-apr%C3%A8s-la-fusillade-mortelle-de-cracovie",
+      "category": "monde",
+      "seenAt": "2026-11-08T11:52:09.388Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "ff435a4779a0": {
+      "title": "Pologne : un tireur \"fasciné par l'extrême droite\" abat six personnes à Cracovie",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261108-pologne-un-tireur-fascin%C3%A9-par-l-extr%C3%AAme-droite-abat-six-personnes-%C3%A0-cracovie-1",
+      "category": "monde",
+      "seenAt": "2026-11-08T11:52:09.388Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "722e0589be73": {
+      "title": "Moyen-Orient en direct : le quartier financier de Riyad ciblé, après des frappes au Yémen",
+      "url": "https://www.france24.com/fr/moyen-orient/20261108-moyen-orient-en-direct-le-quartier-financier-de-riyad-cibl%C3%A9-apr%C3%A8s-des-frappes-au-y%C3%A9men",
+      "category": "monde",
+      "seenAt": "2026-11-08T11:52:09.388Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "e2b41e701d5d": {
+      "title": "Pologne : un tireur \"fasciné par l'extrême droite\" abat six personnes à Cracovie",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261108-pologne-un-tireur-fascin%C3%A9-par-l-extr%C3%AAme-droite-abat-six-personnes-%C3%A0-cracovie",
+      "category": "monde",
+      "seenAt": "2026-11-08T11:52:09.388Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "51cf6deaa2a1": {
+      "title": "Rugby : les Bleus enfoncent les Fidji dans le Championnat des nations mais perdent Ntamack",
+      "url": "https://www.france24.com/fr/france/20261107-rugby-les-bleus-enfoncent-les-fidji-dans-le-championnat-des-nations-mais-perdent-ntamack",
+      "category": "monde",
+      "seenAt": "2026-11-08T11:52:09.388Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "bbf5e0209a81": {
+      "title": "Espagne : pluie d'hommages au joueur Jesus de Miguel, décédé après un choc violent sur le terrain",
+      "url": "https://www.france24.com/fr/sports/20261107-espagne-pluie-d-hommages-au-joueur-jesus-de-miguel-d%C3%A9c%C3%A9d%C3%A9-apr%C3%A8s-un-choc-violent-sur-le-terrain",
+      "category": "monde",
+      "seenAt": "2026-11-08T11:52:09.388Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "3e36ef53b571": {
+      "title": "EN DIRECT, guerre en Ukraine : le pilonnage des infrastructures énergétiques ukrainiennes se poursuit ; suivez les dernières informations sur le conflit",
+      "url": "https://www.lemonde.fr/international/live/2026/11/08/en-direct-guerre-en-ukraine-le-pilonnage-des-infrastructures-energetiques-ukrainiennes-se-poursuit-suivez-les-dernieres-informations-sur-le-conflit_6803934_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-08T11:52:09.388Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "790ab203db32": {
+      "title": "Sénégal : 21 morts dans le naufrage d’une pirogue de migrants",
+      "url": "https://www.lemonde.fr/afrique/article/2026/11/08/senegal-21-morts-dans-le-naufrage-d-une-pirogue-de-migrants_6808424_3212.html",
+      "category": "monde",
+      "seenAt": "2026-11-08T11:52:09.388Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "c266cade5140": {
+      "title": "Pape en Uruguay : mariage, pauvreté, IA et maté… Léon XIV achève la première étape de son voyage en Amérique latine avant de s’envoler pour l’Argentine",
+      "url": "https://www.lemonde.fr/international/article/2026/11/08/leon-xiv-en-uruguay-mariage-pauvrete-ia-et-mate-le-pape-clot-la-premiere-etape-de-son-voyage-en-amerique-latine_6808409_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-08T11:52:09.388Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "6c041cc1e69c": {
+      "title": "Au Japon, un séisme de magnitude 5,7 fait plusieurs blessés",
+      "url": "https://www.lemonde.fr/planete/article/2026/11/08/au-japon-un-seisme-de-magnitude-5-7-fait-plusieurs-blesses_6808408_3244.html",
+      "category": "monde",
+      "seenAt": "2026-11-08T11:52:09.388Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "513907fd6728": {
+      "title": "La guerre des céréales entre l’Ukraine et la Russie redessine les rapports de force géopolitiques",
+      "url": "https://www.lemonde.fr/international/article/2026/11/08/la-guerre-des-cereales-entre-l-ukraine-et-la-russie-redessine-les-rapports-de-force-geopolitiques_6808390_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-08T11:52:09.388Z",
+      "status": "excluded",
+      "reason": "sensitive"
     }
   },
   "slots": {
@@ -2821,11 +2941,46 @@
         "status": "abandoned",
         "lastError": "fenetre_de_rattrapage_depassee"
       }
+    },
+    "2026-11-08": {
+      "0": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "1": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "2": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "3": {
+        "attempts": 1,
+        "status": "published",
+        "startedAt": "2026-11-08T11:51:15.265Z",
+        "articleId": "937cd98e99b3",
+        "publishedAt": "2026-11-08T11:51:15.265Z",
+        "topicId": "4dbe75f7d9be",
+        "lastError": null
+      },
+      "4": {
+        "attempts": 1,
+        "status": "published",
+        "startedAt": "2026-11-08T11:51:46.551Z",
+        "articleId": "cae53c038006",
+        "publishedAt": "2026-11-08T11:51:46.551Z",
+        "topicId": "92e4c3348b27",
+        "lastError": null
+      }
     }
   },
   "lastRun": {
-    "at": "2026-11-07T11:39:02.095Z",
-    "runId": "20261107113902-d7d2",
+    "at": "2026-11-08T11:51:14.800Z",
+    "runId": "20261108115114-823b",
     "published": 2,
     "stopped": null
   },
@@ -2886,6 +3041,11 @@
       "lastError": null
     },
     "2026-11-07": {
+      "status": "failed",
+      "attempts": 1,
+      "lastError": "image_indisponible"
+    },
+    "2026-11-08": {
       "status": "failed",
       "attempts": 1,
       "lastError": "image_indisponible"

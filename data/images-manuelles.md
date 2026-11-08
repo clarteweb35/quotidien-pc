@@ -3,7 +3,17 @@
 Nommez votre image **exactement comme la référence** (ex. `261024-X1.jpg`) et déposez-la dans `site/src/assets/manual/`.
 Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large minimum.
 
-## Sans image (11)
+## Sans image (13)
+
+### `261108-05` — Inflation : les Français pris d’une terrifiante crise de « déconsommation » dès que le yaourt augmente de trois centimes
+- Rubrique : economie
+- Description suggérée : Un client de supermarché en train d'examiner une étiquette de prix dans un rayon de yaourts avec une loupe géante et un stéthoscope, ambiance épurée de grande surface, style dessin de presse.
+- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
+
+### `261108-04` — Transition écologique : le gouvernement fixe un objectif national de trois litres d’urine par habitant et par jour
+- Rubrique : environnement
+- Description suggérée : Dessin de presse montrant un bureau moderne où des employés en costume font la queue devant une fontaine d'eau géante munie d'un compteur gradué et d'un tableau d'évaluation de performance.
+- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
 ### `261107-04` — Musées : les visiteurs invités à ramener leur cadenas et assurer deux heures de ronde pour financer la sécurité
 - Rubrique : culture
@@ -60,7 +70,7 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 - Description suggérée : Un calendrier mural dont la case du dimanche a été barrée au feutre puis recollée sur celle du mardi, posé sur un bureau en bois, vue de dessus
 - Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
-## Déjà illustrés (29)
+## Déjà illustrés (27)
 
 - `261103-D7` — École : et si on envoyait les meilleurs là où les élèves en ont le plus besoin ? (261103-D7.png)
 - `261103-D5` — Russie : la dictature qui a peur de son propre peuple (261103-D5.png)
@@ -89,5 +99,3 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 - `261029-04` — Prix du carburant : le gouvernement hausse le ton en signant sa lettre avec « Salutations distinguées mais vigilantes » (261029-04.jpg)
 - `261029-03` — Face aux bénéfices de TotalEnergies, il demande poliment à sa station-service de lui faire une fleur (261029-03-dessin.jpg)
 - `261028-03` — Statistiques : après trois mois de calculs, un institut confirme que 3 Ballon d’Or est supérieur à 2 (261028-03.png)
-- `261025-07` — « Pourquoi se plaindre des PFAS quand ils rendent nos organismes totalement déperlants ? », s'interroge un expert (261025-07.jpg)
-- `261025-06` — Théâtre : une commission passe cinq heures à débattre de l'extravagance sans réussir à employer un seul nom concret (261025-06.jpg)
