@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-09",
+  "target": 5,
+  "publishedCount": 0,
+  "articles": [],
+  "slots": [
+    {
+      "idx": 0,
+      "hhmm": "09:10",
+      "attempts": 0,
+      "status": "abandoned",
+      "lastError": "fenetre_de_rattrapage_depassee"
+    },
+    {
+      "idx": 1,
+      "hhmm": "09:40",
+      "attempts": 0,
+      "status": "abandoned",
+      "lastError": "fenetre_de_rattrapage_depassee"
+    },
+    {
+      "idx": 2,
+      "hhmm": "10:10",
+      "attempts": 0,
+      "status": "abandoned",
+      "lastError": "fenetre_de_rattrapage_depassee"
+    },
+    {
+      "idx": 3,
+      "hhmm": "10:40",
+      "attempts": 0,
+      "status": "abandoned",
+      "lastError": "fenetre_de_rattrapage_depassee"
+    },
+    {
+      "idx": 4,
+      "hhmm": "11:10",
+      "attempts": 0,
+      "status": "abandoned",
+      "lastError": "fenetre_de_rattrapage_depassee"
+    }
+  ],
+  "rejections": 0,
+  "quarantined": 0,
+  "api": {
+    "calls": 3,
+    "inputTokens": 1533,
+    "outputTokens": 889,
+    "costUsd": 0.007082,
+    "dailyCapUsd": 1,
+    "monthCostUsd": 0.250348,
+    "monthlyCapUsd": 15
+  },
+  "paused": false,
+  "lastRun": {
+    "at": "2026-11-08T11:51:14.800Z",
+    "runId": "20261108115114-823b",
+    "published": 2,
+    "stopped": null
+  }
+}
