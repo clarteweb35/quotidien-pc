@@ -3,27 +3,7 @@
 Nommez votre image **exactement comme la référence** (ex. `261024-X1.jpg`) et déposez-la dans `site/src/assets/manual/`.
 Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large minimum.
 
-## Sans image (13)
-
-### `261108-05` — Inflation : les Français pris d’une terrifiante crise de « déconsommation » dès que le yaourt augmente de trois centimes
-- Rubrique : economie
-- Description suggérée : Un client de supermarché en train d'examiner une étiquette de prix dans un rayon de yaourts avec une loupe géante et un stéthoscope, ambiance épurée de grande surface, style dessin de presse.
-- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
-
-### `261108-04` — Transition écologique : le gouvernement fixe un objectif national de trois litres d’urine par habitant et par jour
-- Rubrique : environnement
-- Description suggérée : Dessin de presse montrant un bureau moderne où des employés en costume font la queue devant une fontaine d'eau géante munie d'un compteur gradué et d'un tableau d'évaluation de performance.
-- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
-
-### `261107-04` — Musées : les visiteurs invités à ramener leur cadenas et assurer deux heures de ronde pour financer la sécurité
-- Rubrique : culture
-- Description suggérée : Dessin de presse montrant un visiteur de musée en trench-coat posant un cadenas personnel sur une vitrine d'exposition de cristal, sous l'œil attentif d'un gardien de musée.
-- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
-
-### `261107-03` — Route du Rhum : Une étude de 850 pages révèle qu'il faut un port pour accueillir des bateaux à l'arrivée
-- Rubrique : sport
-- Description suggérée : Dessin de presse d'un chercheur en blouse blanche mesurant le niveau de la mer avec une petite règle graduée devant un bateau de course géant à quai.
-- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
+## Sans image (5)
 
 ### `261106-D1` — Syndicats français : protéger le passé, bloquer le présent et sacrifier l’avenir
 - Rubrique : editos
@@ -50,28 +30,16 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 - Description suggérée : Dessin de presse satirique : un jeune assis dans un canapé, le smartphone à la main, devant une pancarte « Sauvons la planète » appuyée contre une prise électrique surchargée de chargeurs, un petit nuage de data center au-dessus de sa tête. Style encre et aquarelle.
 - Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
-### `261027-02` — Droits des algorithmes : des chercheurs préconisent quinze minutes de pause-café toutes les 100 000 requêtes
-- Rubrique : tech
-- Description suggérée : Une salle de serveurs informatiques baignée dans une lumière bleue tamisée, avec une petite tasse de café posée sur un boîtier de calcul, vue de côté sans aucun visage humain.
-- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
+## Déjà illustrés (35)
 
-### `261027-01` — Autonomie de la Corse : pourquoi le statu quo à 0 % d’avancement reste notre plus beau résultat comptable
-- Rubrique : editos
-- Description suggérée : Un bureau ministériel encombré de piles de dossiers géantes sous lesquelles une petite calculatrice affiche le chiffre zéro. Style dessin de presse satirique.
-- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
-
-### `261026-X1` — Pourquoi nous devrions tous signer un plan de départ volontaire de notre propre vie
-- Rubrique : editos
-- Description suggérée : Un bureau d'entreprise moderne et lumineux mais totalement vide, avec une seule chaise pivotante abandonnée devant un écran d'ordinateur allumé, style dessin de presse.
-- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
-
-### `261025-X4` — Pourquoi le dimanche devrait être transféré au mardi
-- Rubrique : editos
-- Description suggérée : Un calendrier mural dont la case du dimanche a été barrée au feutre puis recollée sur celle du mardi, posé sur un bureau en bois, vue de dessus
-- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
-
-## Déjà illustrés (27)
-
+- `261106-D6` — A69 : le péage est cher, mais il faut bien payer le droit de rouler sur une autoroute qu’on a longtemps discutée (261106-D6.jpg)
+- `261106-D8` — Taïwan : la Bourse, nouveau sport familial, où l’on achète le matin ce qu’on revend à midi (261106-D8.jpg)
+- `261106-D3` — Smic : le coup de pouce, ce sport national où tout le monde veut aider… à condition de ne pas payer (261106-D3-dessin.png)
+- `261106-D2` — Corruption : les dirigeants du monde ont trouvé la recette pour ne jamais perdre… leur argent (261106-D2.jpg)
+- `261108-05` — Inflation : les Français pris d’une terrifiante crise de « déconsommation » dès que le yaourt augmente de trois centimes (261108-05.jpg)
+- `261108-04` — Transition écologique : le gouvernement fixe un objectif national de trois litres d’urine par habitant et par jour (261108-04.jpg)
+- `261107-04` — Musées : les visiteurs invités à ramener leur cadenas et assurer deux heures de ronde pour financer la sécurité (261107-04.jpg)
+- `261107-03` — Route du Rhum : Une étude de 850 pages révèle qu'il faut un port pour accueillir des bateaux à l'arrivée (261107-03.jpg)
 - `261103-D7` — École : et si on envoyait les meilleurs là où les élèves en ont le plus besoin ? (261103-D7.png)
 - `261103-D5` — Russie : la dictature qui a peur de son propre peuple (261103-D5.png)
 - `261106-D14` — Le petit chef : la vengeance du loser de la cour de récré (261106-D14.jpg)
