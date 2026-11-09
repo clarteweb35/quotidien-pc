@@ -7,7 +7,7 @@ chapo: "Du Paraguay aux grandes capitales, les affaires politico-financières se
 description: "Satire : après la démission du président paraguayen Santiago Peña sur fond de crise bancaire, un tour du monde des conflits d’intérêts et de la confiance démocratique."
 category: "monde"
 tags: ["monde","corruption","paraguay","transparence","conflits d'intérêts"]
-publishedAt: "2026-11-06T10:00:00.000Z"
+publishedAt: "2026-11-09T12:00:00.000Z"
 kind: "news"
 satire: true
 sources: [{"name":"France 24","title":"Paraguay : le président Santiago Peña démissionne sur fond de scandale bancaire national (5 novembre 2026)","url":"https://www.france24.com/fr/am%C3%A9riques/20261105-paraguay-le-pr%C3%A9sident-santiago-pe%C3%B1a-d%C3%A9missionne-sur-fond-de-scandale-bancaire-national"}]

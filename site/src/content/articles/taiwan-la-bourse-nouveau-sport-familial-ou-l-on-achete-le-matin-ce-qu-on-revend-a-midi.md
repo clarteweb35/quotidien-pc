@@ -7,7 +7,7 @@ chapo: "L’envolée de TSMC, seule entreprise capable de produire les puces des
 description: "Satire : à Taïwan, l’envolée de TSMC nourrit une frénésie boursière autour des valeurs liées à l’IA, au risque de creuser les inégalités."
 category: "economie"
 tags: ["économie","taïwan","bourse","intelligence artificielle","tsmc"]
-publishedAt: "2026-11-06T08:50:00.000Z"
+publishedAt: "2026-11-09T14:00:00.000Z"
 kind: "news"
 satire: true
 sources: [{"name":"Le Monde","title":"À Taïwan, la frénésie pour les valeurs boursières liées à l’IA : « Ma mère en achète et en revend le même jour. Ses amis font pareil »","url":"https://www.lemonde.fr/economie/article/2026/11/06/a-taiwan-la-frenesie-pour-les-valeurs-boursieres-liees-a-l-ia-ma-mere-en-achete-et-en-revend-le-meme-jour-ses-amis-font-pareil_6807795_3234.html"}]

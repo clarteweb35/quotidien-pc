@@ -7,7 +7,7 @@ chapo: "Plus de 20 euros l’aller-retour pour 53 kilomètres entre Toulouse et 
 description: "Satire : le péage de la nouvelle autoroute A69 Toulouse-Castres dépasse 20 euros l’aller-retour, des tarifs fixés avant le début du chantier."
 category: "environnement"
 tags: ["environnement","a69","autoroute","péage","toulouse"]
-publishedAt: "2026-11-06T08:30:00.000Z"
+publishedAt: "2026-11-09T15:00:00.000Z"
 kind: "news"
 satire: true
 sources: [{"name":"franceinfo","title":"Pourquoi le péage de la nouvelle autoroute A69 Toulouse-Castres est-il considéré comme si cher ?","url":"https://www.franceinfo.fr/environnement/crise-climatique/chantier-de-l-autoroute-a69/pourquoi-le-peage-de-la-nouvelle-autoroute-a69-toulouse-castres-est-il-considere-comme-si-cher_8271059.html"}]

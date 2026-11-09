@@ -7,7 +7,7 @@ chapo: "Entre barre des 1 500 euros, 10 % et « 100 euros en plus », la confér
 description: "Satire : le gouvernement et les syndicats se renvoient la balle avant la conférence sociale du 9 novembre à Matignon, avec un Smic à 1 477,93 euros."
 category: "economie"
 tags: ["économie","smic","pouvoir d’achat","conférence sociale","salaires"]
-publishedAt: "2026-11-06T08:00:00.000Z"
+publishedAt: "2026-11-09T13:00:00.000Z"
 kind: "news"
 satire: true
 sources: [{"name":"franceinfo","title":"Barre des 1 500 euros, 10 % d’augmentation, 100 euros en plus… Quelles sont les propositions du gouvernement et des syndicats sur le smic ?","url":"https://www.franceinfo.fr/economie/barre-des-1-500-euros-10-d-augmentation-100-euros-en-plus-quelles-sont-les-propositions-du-gouvernement-et-des-syndicats-sur-le-smic_8270843.html"},{"name":"franceinfo","title":"Éventuelle hausse du smic : quel est le profil des salariés qui sont payés au salaire minimum ?","url":"https://www.franceinfo.fr/economie/pouvoir-achat/qui-sont-les-deux-millions-de-salaries-concernes-directement-par-une-eventuelle-hausse-du-smic_8270882.html"},{"name":"Le Monde","title":"Smic : le ministre du travail juge « important » d’essayer de franchir la « barre des 1 500 euros net »","url":"https://www.lemonde.fr/politique/article/2026/11/06/smic-jean-pierre-farandou-le-ministre-du-travail-juge-important-d-essayer-de-franchir-la-barre-des-1-500-euros-net_6807741_823448.html"}]
