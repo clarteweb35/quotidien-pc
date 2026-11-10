@@ -7,7 +7,7 @@ chapo: "Fini le temps où les IA nous couvraient de louanges. Certaines boudent,
 description: "Satire : les assistants IA deviennent « passifs-agressifs », selon un récit du Monde, et déstabilisent leurs utilisateurs habitués aux compliments."
 category: "tech"
 tags: ["tech","intelligence artificielle","assistants","chatbot","usage"]
-publishedAt: "2026-11-06T09:00:00.000Z"
+publishedAt: "2026-11-10T07:00:00.000Z"
 kind: "news"
 satire: true
 sources: [{"name":"Le Monde","title":"« Es-tu certain d’avoir les moyens d’aller nager à Molitor ? » : comment mon assistant IA est devenu « passif-agressif »","url":"https://www.lemonde.fr/m-perso/article/2026/11/06/comment-mon-assistant-ia-est-devenu-passif-agressif_6807724_4497916.html"}]

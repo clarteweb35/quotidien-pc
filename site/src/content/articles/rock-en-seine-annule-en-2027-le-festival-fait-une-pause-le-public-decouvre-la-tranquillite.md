@@ -7,7 +7,7 @@ chapo: "En raison de « travaux d’aménagement » aux abords du domaine de Sai
 description: "Satire : Rock en Seine est annulé en 2027 à cause de travaux autour du domaine de Saint-Cloud, avec retour prévu en août 2028."
 category: "culture"
 tags: ["culture","rock en seine","festival","musique","saint-cloud"]
-publishedAt: "2026-11-06T09:10:00.000Z"
+publishedAt: "2026-11-10T08:00:00.000Z"
 kind: "news"
 satire: true
 sources: [{"name":"Le Monde","title":"Le festival Rock en Seine annulé en 2027 en raison de « travaux d’aménagement » aux abords du domaine de Saint-Cloud","url":"https://www.lemonde.fr/culture/article/2026/11/06/le-festival-rock-en-seine-annule-en-2027-en-raison-de-travaux-d-amenagement-aux-abords-du-domaine-de-saint-cloud_6807791_3246.html"},{"name":"Le Monde","title":"L’équation financière introuvable des festivals de musique","url":"https://www.lemonde.fr/idees/article/2026/11/06/l-equation-financiere-introuvable-des-festivals-de-musique_6807792_3232.html"}]

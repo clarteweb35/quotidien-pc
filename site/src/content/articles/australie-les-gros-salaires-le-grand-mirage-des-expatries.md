@@ -7,7 +7,7 @@ chapo: "30, 35 ou 40 dollars de l’heure… Sur les réseaux sociaux, l’Austr
 description: "Satire : les vidéos d’expatriés en Australie vantent des salaires à 30 dollars de l’heure, mais loyers, impôts et heures irrégulières racontent une autre histoire."
 category: "economie"
 tags: ["économie","australie","expatriation","salaires","pouvoir d'achat"]
-publishedAt: "2026-11-03T09:00:00.000Z"
+publishedAt: "2026-11-10T11:00:00.000Z"
 kind: "news"
 satire: true
 sources: [{"name":"Fair Work Ombudsman","title":"Salaires minimums","url":"https://www.fairwork.gov.au/pay-and-wages/minimum-wages"},{"name":"Fair Work Ombudsman","title":"Droits des travailleurs migrants","url":"https://www.fairwork.gov.au/tools-and-resources/fact-sheets/rights-and-obligations/visa-holders-and-migrant-workers-workplace-rights-and-entitlements"},{"name":"AIHW","title":"Housing assistance in Australia 2026","url":"https://www.aihw.gov.au/reports/housing-assistance/housing-assistance-in-australia-2026/contents/housing-assistance"},{"name":"UNSW","title":"Off the Books : Inside Australia's Hidden System of Migrant Worker Exploitation (mai 2026)","url":"https://www.unsw.edu.au/newsroom/news/2026/05/survey-hidden-system-migrant-worker-exploitation"},{"name":"Legislation.gov.au","title":"Working Holiday Maker Tax Rates 2026-2027","url":"https://www.legislation.gov.au/F2026L00716/asmade/2026-06-12/text/original/epub/OEBPS/document_1/document_1.html"},{"name":"Australian Bureau of Statistics","title":"Migrant Settlement Outcomes 2025","url":"https://www.abs.gov.au/statistics/people/people-and-communities/migrant-settlement-outcomes/latest-release"}]

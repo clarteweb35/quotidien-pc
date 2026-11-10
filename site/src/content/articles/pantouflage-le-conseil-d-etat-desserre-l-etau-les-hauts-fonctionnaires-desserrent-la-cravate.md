@@ -7,7 +7,7 @@ chapo: "À l’heure où la fin du quinquennat approche, le Conseil d’État in
 description: "Satire : alors que des agents publics pourraient quitter l’État pour le privé, le Conseil d’État assouplit son appréciation des conflits d’intérêts."
 category: "politique"
 tags: ["politique","pantouflage","conseil d’état","conflits d’intérêts","déontologie"]
-publishedAt: "2026-11-06T08:20:00.000Z"
+publishedAt: "2026-11-10T10:00:00.000Z"
 kind: "news"
 satire: true
 sources: [{"name":"Le Monde","title":"Pantouflage : l’étau du contrôle se desserre à l’heure des grandes manœuvres aux sommets de l’État","url":"https://www.lemonde.fr/politique/article/2026/11/06/pantouflage-l-etau-du-controle-se-desserre-a-l-heure-des-grandes-man-uvres-aux-sommets-de-l-etat_6807822_823448.html"}]

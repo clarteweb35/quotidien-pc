@@ -7,7 +7,7 @@ chapo: "Face à la surfréquentation, Chamonix s’apprête à instaurer des quo
 description: "Satire : Chamonix prépare des quotas pour accéder au lac Blanc et aux lacs des Chéserys, sur le modèle des calanques de Marseille."
 category: "environnement"
 tags: ["environnement","chamonix","surfréquentation","tourisme","montagne"]
-publishedAt: "2026-11-06T08:40:00.000Z"
+publishedAt: "2026-11-10T09:00:00.000Z"
 kind: "news"
 satire: true
 sources: [{"name":"Le Monde","title":"Surfréquentation à Chamonix : vers l’instauration de quotas touristiques, une première dans les Alpes","url":"https://www.lemonde.fr/planete/article/2026/11/06/surfrequentation-a-chamonix-vers-l-instauration-de-quotas-touristiques-une-premiere-dans-les-alpes_6807854_3244.html"}]
