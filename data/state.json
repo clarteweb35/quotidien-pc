@@ -2429,6 +2429,94 @@
       "seenAt": "2026-11-09T13:46:52.298Z",
       "status": "excluded",
       "reason": "sensitive"
+    },
+    "3016e771da5e": {
+      "title": "Guerre en Ukraine : 400 000 morts russes ?",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261110-guerre-en-ukraine-400-000-morts-russes",
+      "category": "monde",
+      "seenAt": "2026-11-10T13:24:36.246Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "00ea70ea4123": {
+      "title": "Sommet du G7 : l'émir du Qatar présent pour évoquer la guerre en iran",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261110-sommet-du-g7-l-%C3%A9mir-du-qatar-pr%C3%A9sent-pour-%C3%A9voquer-la-guerre-en-iran",
+      "category": "monde",
+      "seenAt": "2026-11-10T13:24:36.246Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "135ba3068058": {
+      "title": "RD Congo : les rebelles \"empêchent l'accès aux soins\" pour les victimes de violences sexuelles",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261110-rd-congo-les-rebelles-emp%C3%AAchent-l-acc%C3%A8s-aux-soins-pour-les-victimes-de-violences-sexuelles",
+      "category": "monde",
+      "seenAt": "2026-11-10T13:24:36.246Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "4301e8c02dc8": {
+      "title": "Guerre en Ukraine : les États-Unis apellent à \"un nouveau\" cadre de sécurité avec l'Europe",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261110-guerre-en-ukraine-les-%C3%A9tats-unis-apellent-%C3%A0-un-nouveau-cadre-de-s%C3%A9curit%C3%A9-avec-l-europe",
+      "category": "monde",
+      "seenAt": "2026-11-10T13:24:36.246Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "96e690e94d3f": {
+      "title": "États-Unis : une procédure de destitution lancée contre le ministre de la Défense",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261110-%C3%A9tats-unis-une-proc%C3%A9dure-de-destitution-lanc%C3%A9e-contre-le-ministre-de-la-d%C3%A9fense",
+      "category": "monde",
+      "seenAt": "2026-11-10T13:24:36.246Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "dd591a80d64b": {
+      "title": "Cyberattaques contre les supermarchés : pourquoi l'Iran mène-t-il une guerre économique en France ?",
+      "url": "https://www.france24.com/fr/%C3%A9missions/info-%C3%A9co/20261110-cyberattaques-contre-les-supermarch%C3%A9s-pourquoi-l-iran-m%C3%A8ne-t-il-une-guerre-%C3%A9conomique-en-france",
+      "category": "monde",
+      "seenAt": "2026-11-10T13:24:36.246Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "2b4675f2f400": {
+      "title": "Frigos victimes de cyberattaques : la France \"ne s'interdit rien\" dans la riposte contre l'Iran",
+      "url": "https://www.france24.com/fr/france/20261110-cyberattaque-contre-des-frigos-la-france-dit-ne-s-interdit-rien-dans-la-riposte-contre-l-iran",
+      "category": "monde",
+      "seenAt": "2026-11-10T13:24:36.246Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "402dcb19ddb2": {
+      "title": "Guerre en Ukraine : cinq choses à savoir sur les pourparlers d'Abu Dhabi",
+      "url": "https://www.france24.com/fr/moyen-orient/20261110-guerre-ukraine-cinq-choses-savoir-pourparlers-abou-dhabi-russie-%C3%A9tats-unis-trump",
+      "category": "monde",
+      "seenAt": "2026-11-10T13:24:36.246Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "064a7eea53a4": {
+      "title": "Donald Trump estime que la guerre contre l’Iran est « militairement terminée », après sa rencontre avec le premier ministre du Qatar",
+      "url": "https://www.lemonde.fr/international/article/2026/11/10/donald-trump-estime-que-la-guerre-contre-l-iran-est-militairement-terminee-apres-sa-rencontre-avec-le-premier-ministre-du-qatar_6808708_3211.html",
+      "category": "monde",
+      "seenAt": "2026-11-10T13:24:36.246Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "df3ca15d335f": {
+      "title": "En Turquie, six mandats d’arrêt au lendemain d’une explosion meurtrière dans une usine",
+      "url": "https://www.lemonde.fr/international/article/2026/11/10/en-turquie-six-mandats-d-arret-au-lendemain-d-une-explosion-meurtriere-dans-une-usine_6808830_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-10T13:24:36.246Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "544aa59f4701": {
+      "title": "En Cisjordanie occupée, un adolescent palestinien de 14 ans tué par l’armée israélienne",
+      "url": "https://www.lemonde.fr/guerre-au-proche-orient/article/2026/11/10/en-cisjordanie-occupee-un-adolescent-palestinien-de-14-ans-tue-par-l-armee-israelienne_6808821_6325529.html",
+      "category": "monde",
+      "seenAt": "2026-11-10T13:24:36.246Z",
+      "status": "excluded",
+      "reason": "sensitive"
     }
   },
   "slots": {
@@ -3051,6 +3139,33 @@
         "status": "abandoned",
         "lastError": "fenetre_de_rattrapage_depassee"
       }
+    },
+    "2026-11-10": {
+      "0": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "1": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "2": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "3": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "4": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      }
     }
   },
   "lastRun": {
@@ -3129,6 +3244,11 @@
       "status": "failed",
       "attempts": 1,
       "lastError": "image_indisponible"
+    },
+    "2026-11-10": {
+      "status": "failed",
+      "attempts": 1,
+      "lastError": "UnavailableError: Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status"
     }
   }
 }
