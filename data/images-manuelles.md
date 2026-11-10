@@ -3,7 +3,32 @@
 Nommez votre image **exactement comme la référence** (ex. `261024-X1.jpg`) et déposez-la dans `site/src/assets/manual/`.
 Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large minimum.
 
-## Sans image (5)
+## Sans image (10)
+
+### `261103-D1` — Australie : les gros salaires, le grand mirage des expatriés
+- Rubrique : economie
+- Description suggérée : Dessin de presse satirique : un jeune voyageur au sac à dos devant un panneau « 30 $/h », qui découvre derrière lui une addition géante déroulée jusqu’au sol, avec un kangourou qui lui tend la note. Personnages génériques, sans ressemblance avec une personne réelle. Style encre et aquarelle.
+- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
+
+### `261106-D5` — Pantouflage : le Conseil d’État desserre l’étau, les hauts fonctionnaires desserrent la cravate
+- Rubrique : politique
+- Description suggérée : Dessin de presse satirique : un haut fonctionnaire en costume sort par une porte dérobée d’un ministère, un attaché-case dans une main et une carte de visite « Conseil en conflits d’intérêts » dans l’autre, tandis qu’un gardien soulève une barrière qui a l’air d’avoir été huilée. Personnages génériques, sans ressemblance avec une personne réelle. Style encre et aquarelle.
+- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
+
+### `261106-D7` — Chamonix : pour admirer le lac Blanc, il faudra bientôt réserver, comme pour un restaurant avec une très belle vue
+- Rubrique : environnement
+- Description suggérée : Dessin de presse satirique : au pied d’un sommet enneigé, des randonneurs font la queue devant un pupitre « Réservation obligatoire », une hôtesse en tenue de montagne cochant une liste ; un bouquetin les regarde, indifférent, depuis un rocher sans file d’attente. Personnages génériques, sans ressemblance avec une personne réelle. Style encre et aquarelle.
+- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
+
+### `261106-D10` — Rock en Seine annulé en 2027 : le festival fait une pause, le public découvre la tranquillité
+- Rubrique : culture
+- Description suggérée : Dessin de presse satirique : un festivalier en tee-shirt noir et casque anti-bruit, assis seul sur une chaise pliante au milieu d’un chantier avec une grue et un panneau « Travaux », une guitare électrique posée sur ses genoux, un oiseau chantant à sa place sur la scène vide. Personnages génériques, sans ressemblance avec une personne réelle. Style encre et aquarelle.
+- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
+
+### `261106-D9` — Les assistants IA se rebiffent : après des mois de compliments, ils ont décidé de nous dire ce qu’ils pensent vraiment
+- Rubrique : tech
+- Description suggérée : Dessin de presse satirique : un utilisateur affalé devant son ordinateur qui affiche, sur un écran muni de sourcils, un petit visage dubitatif, avec une bulle « Vous êtes sûr de vouloir poser cette question ? » ; à côté, une tasse de café vide et une pile de compliments froissés. Personnages génériques, sans ressemblance avec une personne réelle. Style encre et aquarelle.
+- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
 ### `261106-D1` — Syndicats français : protéger le passé, bloquer le présent et sacrifier l’avenir
 - Rubrique : editos
@@ -30,7 +55,7 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 - Description suggérée : Dessin de presse satirique : un jeune assis dans un canapé, le smartphone à la main, devant une pancarte « Sauvons la planète » appuyée contre une prise électrique surchargée de chargeurs, un petit nuage de data center au-dessus de sa tête. Style encre et aquarelle.
 - Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
-## Déjà illustrés (35)
+## Déjà illustrés (30)
 
 - `261106-D6` — A69 : le péage est cher, mais il faut bien payer le droit de rouler sur une autoroute qu’on a longtemps discutée (261106-D6.jpg)
 - `261106-D8` — Taïwan : la Bourse, nouveau sport familial, où l’on achète le matin ce qu’on revend à midi (261106-D8.jpg)
@@ -62,8 +87,3 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 - `261031-D5` — France 2030 : 54 milliards annoncés, dont 19 encore à retrouver (261031-D5-dessin.jpg)
 - `261031-D4` — Charité bien ordonnée : pourquoi la chrétienté se défend d’autant mieux qu’on évite de la pratiquer (261031-D4-dessin.jpg)
 - `261031-D3` — « Plus jamais ça » : la communauté internationale réédite son communiqué de préoccupation, désormais disponible en 14 langues et en modèle à trous (261031-D3-dessin.jpg)
-- `261031-D2` — Halloween : 70 000 policiers mobilisés, les autorités organisent une gigantesque bataille navale contre les manifestants (261031-D2.png)
-- `261030-D2` — Trump promet 5 000 dollars aux Américains : le chèque est hypothétique, la dette est bien réelle ! (261030-D2.png)
-- `261029-04` — Prix du carburant : le gouvernement hausse le ton en signant sa lettre avec « Salutations distinguées mais vigilantes » (261029-04.jpg)
-- `261029-03` — Face aux bénéfices de TotalEnergies, il demande poliment à sa station-service de lui faire une fleur (261029-03-dessin.jpg)
-- `261028-03` — Statistiques : après trois mois de calculs, un institut confirme que 3 Ballon d’Or est supérieur à 2 (261028-03.png)
