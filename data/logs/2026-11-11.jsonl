@@ -34,3 +34,4 @@
 {"ts":"2026-11-11T12:37:37.443Z","runId":"20261111123708-a3ae","level":"info","event":"gemini.call","purpose":"caricature","model":"gemini-3.6-flash","inputTokens":277,"outputTokens":1024,"costUsd":0.008096}
 {"ts":"2026-11-11T12:37:44.058Z","runId":"20261111123708-a3ae","level":"info","event":"gemini.call","purpose":"image_judge","model":"gemini-3.5-flash-lite","inputTokens":1269,"outputTokens":77,"costUsd":0.000573}
 {"ts":"2026-11-11T12:37:44.059Z","runId":"20261111123708-a3ae","level":"warn","event":"image.rejected","slot":"caricature#2026-11-11","problems":["Présence d'un texte lisible (PASS)"],"flags":{"person":false,"text":true,"photo":false,"disturbing":false}}
+{"ts":"2026-11-11T19:51:17.166Z","runId":"20261111195117-371d","level":"info","event":"cycle.start","date":"2026-11-11","due":[],"remainingToday":4,"dryRun":false}
