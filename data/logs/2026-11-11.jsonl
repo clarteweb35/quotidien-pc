@@ -1,1 +1,36 @@
 {"ts":"2026-11-11T00:52:31.198Z","runId":"20261111005231-c4dc","level":"info","event":"cycle.start","date":"2026-11-11","due":[],"remainingToday":5,"dryRun":false}
+{"ts":"2026-11-11T12:37:08.215Z","runId":"20261111123708-a3ae","level":"warn","event":"cycle.slots_abandoned","count":4}
+{"ts":"2026-11-11T12:37:08.216Z","runId":"20261111123708-a3ae","level":"info","event":"cycle.start","date":"2026-11-11","due":["2026-11-11#4"],"remainingToday":5,"dryRun":false}
+{"ts":"2026-11-11T12:37:08.818Z","runId":"20261111123708-a3ae","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":30,"kept":25}
+{"ts":"2026-11-11T12:37:08.818Z","runId":"20261111123708-a3ae","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-11-11T12:37:08.818Z","runId":"20261111123708-a3ae","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":20}
+{"ts":"2026-11-11T12:37:08.818Z","runId":"20261111123708-a3ae","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":23}
+{"ts":"2026-11-11T12:37:08.818Z","runId":"20261111123708-a3ae","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":18}
+{"ts":"2026-11-11T12:37:08.819Z","runId":"20261111123708-a3ae","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":20,"kept":20}
+{"ts":"2026-11-11T12:37:08.819Z","runId":"20261111123708-a3ae","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":14}
+{"ts":"2026-11-11T12:37:08.819Z","runId":"20261111123708-a3ae","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":13}
+{"ts":"2026-11-11T12:37:08.819Z","runId":"20261111123708-a3ae","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":9}
+{"ts":"2026-11-11T12:37:08.819Z","runId":"20261111123708-a3ae","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":14}
+{"ts":"2026-11-11T12:37:08.819Z","runId":"20261111123708-a3ae","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":1}
+{"ts":"2026-11-11T12:37:08.819Z","runId":"20261111123708-a3ae","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":13}
+{"ts":"2026-11-11T12:37:08.819Z","runId":"20261111123708-a3ae","level":"info","event":"collect.done","items":186}
+{"ts":"2026-11-11T12:37:08.952Z","runId":"20261111123708-a3ae","level":"info","event":"topic.selection","slot":"2026-11-11#4","target":"societe","candidates":186,"rejected":20,"chosen":"\"Il faut augmenter les salaires, il faut que le travail paye plus\", affirme Michel-Édouard Leclerc","score":8.5}
+{"ts":"2026-11-11T12:37:25.268Z","runId":"20261111123708-a3ae","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4569,"outputTokens":2350,"costUsd":0.024479}
+{"ts":"2026-11-11T12:37:27.298Z","runId":"20261111123708-a3ae","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":879,"outputTokens":56,"costUsd":0.000404}
+{"ts":"2026-11-11T12:37:27.299Z","runId":"20261111123708-a3ae","level":"info","event":"judge.result","slot":"2026-11-11#4","attempt":1,"humor":7,"coherence":9,"risk":0,"issues":[]}
+{"ts":"2026-11-11T12:37:27.302Z","runId":"20261111123708-a3ae","level":"info","event":"publish.ok","slot":"2026-11-11#4","id":"6adc0e62a0d0","slug":"selon-un-rapport-scientifique-choc-de-4-000-pages-gagner","url":"/articles/selon-un-rapport-scientifique-choc-de-4-000-pages-gagner/","attempt":1,"dryRun":false}
+{"ts":"2026-11-11T12:37:27.392Z","runId":"20261111123708-a3ae","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":30,"kept":25}
+{"ts":"2026-11-11T12:37:27.392Z","runId":"20261111123708-a3ae","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-11-11T12:37:27.392Z","runId":"20261111123708-a3ae","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":20}
+{"ts":"2026-11-11T12:37:27.392Z","runId":"20261111123708-a3ae","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":23}
+{"ts":"2026-11-11T12:37:27.392Z","runId":"20261111123708-a3ae","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":18}
+{"ts":"2026-11-11T12:37:27.392Z","runId":"20261111123708-a3ae","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":20,"kept":20}
+{"ts":"2026-11-11T12:37:27.393Z","runId":"20261111123708-a3ae","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":14}
+{"ts":"2026-11-11T12:37:27.393Z","runId":"20261111123708-a3ae","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":13}
+{"ts":"2026-11-11T12:37:27.393Z","runId":"20261111123708-a3ae","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":9}
+{"ts":"2026-11-11T12:37:27.393Z","runId":"20261111123708-a3ae","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":14}
+{"ts":"2026-11-11T12:37:27.393Z","runId":"20261111123708-a3ae","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":1}
+{"ts":"2026-11-11T12:37:27.393Z","runId":"20261111123708-a3ae","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":13}
+{"ts":"2026-11-11T12:37:37.443Z","runId":"20261111123708-a3ae","level":"info","event":"gemini.call","purpose":"caricature","model":"gemini-3.6-flash","inputTokens":277,"outputTokens":1024,"costUsd":0.008096}
+{"ts":"2026-11-11T12:37:44.058Z","runId":"20261111123708-a3ae","level":"info","event":"gemini.call","purpose":"image_judge","model":"gemini-3.5-flash-lite","inputTokens":1269,"outputTokens":77,"costUsd":0.000573}
+{"ts":"2026-11-11T12:37:44.059Z","runId":"20261111123708-a3ae","level":"warn","event":"image.rejected","slot":"caricature#2026-11-11","problems":["Présence d'un texte lisible (PASS)"],"flags":{"person":false,"text":true,"photo":false,"disturbing":false}}

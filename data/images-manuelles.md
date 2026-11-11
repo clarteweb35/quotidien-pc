@@ -3,7 +3,12 @@
 Nommez votre image **exactement comme la référence** (ex. `261024-X1.jpg`) et déposez-la dans `site/src/assets/manual/`.
 Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large minimum.
 
-## Sans image (5)
+## Sans image (6)
+
+### `261111-05` — Selon un rapport scientifique choc de 4 000 pages, gagner plus d'argent permettrait d'acheter plus de choses
+- Rubrique : societe
+- Description suggérée : Un scientifique en blouse blanche étudie minutieusement un billet de banque avec une loupe géante devant un tableau noir couvert d'équations mathématiques complexes, style dessin de presse satirique.
+- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
 ### `261106-D1` — Syndicats français : protéger le passé, bloquer le présent et sacrifier l’avenir
 - Rubrique : editos
@@ -30,7 +35,7 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 - Description suggérée : Dessin de presse satirique : un jeune assis dans un canapé, le smartphone à la main, devant une pancarte « Sauvons la planète » appuyée contre une prise électrique surchargée de chargeurs, un petit nuage de data center au-dessus de sa tête. Style encre et aquarelle.
 - Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
-## Déjà illustrés (35)
+## Déjà illustrés (34)
 
 - `261103-D1` — Australie : les gros salaires, le grand mirage des expatriés (261103-D1.jpg)
 - `261106-D5` — Pantouflage : le Conseil d’État desserre l’étau, les hauts fonctionnaires desserrent la cravate (261106-D5.jpg)
@@ -66,4 +71,3 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 - `261031-02` — Art contemporain : trois visiteurs restent figés quarante-huit minutes devant un panneau d'évacuation d'urgence (261031-02.jpg)
 - `261031-D5` — France 2030 : 54 milliards annoncés, dont 19 encore à retrouver (261031-D5-dessin.jpg)
 - `261031-D4` — Charité bien ordonnée : pourquoi la chrétienté se défend d’autant mieux qu’on évite de la pratiquer (261031-D4-dessin.jpg)
-- `261031-D3` — « Plus jamais ça » : la communauté internationale réédite son communiqué de préoccupation, désormais disponible en 14 langues et en modèle à trous (261031-D3-dessin.jpg)

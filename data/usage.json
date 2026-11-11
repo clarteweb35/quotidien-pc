@@ -1574,6 +1574,81 @@
       "inputTokens": 1263,
       "outputTokens": 74,
       "costUsd": 0.000564
+    },
+    {
+      "ts": "2026-11-11T12:37:25.267Z",
+      "date": "2026-11-11",
+      "month": "2026-11",
+      "runId": "20261111123708-a3ae",
+      "purpose": "generate",
+      "model": "gemini-3.6-flash",
+      "params": {
+        "temperature": 1,
+        "maxOutputTokens": 4096
+      },
+      "inputTokens": 4569,
+      "outputTokens": 2350,
+      "costUsd": 0.024479
+    },
+    {
+      "ts": "2026-11-11T12:37:27.298Z",
+      "date": "2026-11-11",
+      "month": "2026-11",
+      "runId": "20261111123708-a3ae",
+      "purpose": "judge",
+      "model": "gemini-3.5-flash-lite",
+      "params": {
+        "temperature": 0.2,
+        "maxOutputTokens": 1024
+      },
+      "inputTokens": 879,
+      "outputTokens": 56,
+      "costUsd": 0.000404
+    },
+    {
+      "ts": "2026-11-11T12:37:37.442Z",
+      "date": "2026-11-11",
+      "month": "2026-11",
+      "runId": "20261111123708-a3ae",
+      "purpose": "caricature",
+      "model": "gemini-3.6-flash",
+      "params": {
+        "temperature": 1,
+        "maxOutputTokens": 4096
+      },
+      "inputTokens": 277,
+      "outputTokens": 1024,
+      "costUsd": 0.008096
+    },
+    {
+      "ts": "2026-11-11T12:37:39.203Z",
+      "date": "2026-11-11",
+      "month": "2026-11",
+      "runId": "20261111123708-a3ae",
+      "purpose": "image",
+      "model": "@cf/black-forest-labs/flux-1-schnell",
+      "params": {
+        "aspectRatio": "16:9",
+        "imageSize": "1K"
+      },
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "costUsd": 0
+    },
+    {
+      "ts": "2026-11-11T12:37:44.058Z",
+      "date": "2026-11-11",
+      "month": "2026-11",
+      "runId": "20261111123708-a3ae",
+      "purpose": "image_judge",
+      "model": "gemini-3.5-flash-lite",
+      "params": {
+        "temperature": 0.2,
+        "maxOutputTokens": 1024
+      },
+      "inputTokens": 1269,
+      "outputTokens": 77,
+      "costUsd": 0.000573
     }
   ],
   "monthly": {
@@ -1584,10 +1659,10 @@
       "calls": 72
     },
     "2026-11": {
-      "costUsd": 0.250348,
-      "inputTokens": 47716,
-      "outputTokens": 26598,
-      "calls": 33
+      "costUsd": 0.2839,
+      "inputTokens": 54710,
+      "outputTokens": 30105,
+      "calls": 38
     }
   }
 }

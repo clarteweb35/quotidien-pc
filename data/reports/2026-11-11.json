@@ -1,56 +1,73 @@
 {
   "date": "2026-11-11",
   "target": 5,
-  "publishedCount": 0,
-  "articles": [],
+  "publishedCount": 1,
+  "articles": [
+    {
+      "id": "6adc0e62a0d0",
+      "ref": "261111-05",
+      "title": "Selon un rapport scientifique choc de 4 000 pages, gagner plus d'argent permettrait d'acheter plus de choses",
+      "category": "societe",
+      "slug": "selon-un-rapport-scientifique-choc-de-4-000-pages-gagner"
+    }
+  ],
   "slots": [
     {
       "idx": 0,
       "hhmm": "09:10",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 0,
+      "status": "abandoned",
+      "lastError": "fenetre_de_rattrapage_depassee"
     },
     {
       "idx": 1,
       "hhmm": "09:40",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 0,
+      "status": "abandoned",
+      "lastError": "fenetre_de_rattrapage_depassee"
     },
     {
       "idx": 2,
       "hhmm": "10:10",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 0,
+      "status": "abandoned",
+      "lastError": "fenetre_de_rattrapage_depassee"
     },
     {
       "idx": 3,
       "hhmm": "10:40",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 0,
+      "status": "abandoned",
+      "lastError": "fenetre_de_rattrapage_depassee"
     },
     {
       "idx": 4,
       "hhmm": "11:10",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 1,
+      "status": "published",
+      "startedAt": "2026-11-11T12:37:08.820Z",
+      "articleId": "6adc0e62a0d0",
+      "publishedAt": "2026-11-11T12:37:08.820Z",
+      "topicId": "bc42b653ae79",
+      "lastError": null
     }
   ],
   "rejections": 0,
   "quarantined": 0,
   "api": {
-    "calls": 0,
-    "inputTokens": 0,
-    "outputTokens": 0,
-    "costUsd": 0,
+    "calls": 5,
+    "inputTokens": 6994,
+    "outputTokens": 3507,
+    "costUsd": 0.033552,
     "dailyCapUsd": 1,
-    "monthCostUsd": 0.250348,
+    "monthCostUsd": 0.2839,
     "monthlyCapUsd": 15
   },
   "paused": false,
   "lastRun": {
-    "at": "2026-11-08T11:51:14.800Z",
-    "runId": "20261108115114-823b",
-    "published": 2,
+    "at": "2026-11-11T12:37:08.181Z",
+    "runId": "20261111123708-a3ae",
+    "published": 1,
     "stopped": null
   }
 }

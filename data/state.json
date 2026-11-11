@@ -2517,6 +2517,270 @@
       "seenAt": "2026-11-10T13:24:36.246Z",
       "status": "excluded",
       "reason": "sensitive"
+    },
+    "9647deeb7085": {
+      "title": "Cérémonie du 11-Novembre : Emmanuel Macron a rendu hommage à Georges Clemenceau et au soldat inconnu",
+      "url": "https://www.franceinfo.fr/societe/guerre-de-14-18/11-novembre/direct-ceremonie-du-11-novembre-suivez-les-commemorations-et-l-emission-speciale-de-france-2_8276093.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-11-11T12:37:08.820Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "dcdaa6089e17": {
+      "title": "L'acteur américain Stacy Keach, star de la série \"Mike Hammer\", est mort à l'âge de 85 ans",
+      "url": "https://www.franceinfo.fr/culture/series/l-acteur-americain-stacy-keach-star-de-la-serie-mike-hammer-est-mort-a-l-age-de-85-ans_8277542.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-11-11T12:37:08.820Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "58ae28aeb4de": {
+      "title": "Sans les vidéos, Michel Zecler \"ne serait pas devant la cour en tant que victime, mais en tant qu'auteur\", déclare son avocat",
+      "url": "https://www.franceinfo.fr/faits-divers/justice-proces/sans-les-videos-michel-zecler-ne-serait-pas-devant-la-cour-en-tant-que-victime-mais-en-tant-qu-auteur-declare-son-avocat_8277623.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-11-11T12:37:08.820Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "4326bf01cc9b": {
+      "title": "Blessé aux adducteurs, le milieu Aurélien Tchouameni est forfait pour les deux prochains matchs de l'équipe de France en Ligue des nations",
+      "url": "https://www.franceinfo.fr/sports/foot/equipe-de-france/blesse-aux-adducteurs-le-milieu-aurelien-tchouameni-est-forfait-pour-les-deux-prochains-matchs-de-l-equipe-de-france-en-ligue-des-nations_8277497.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-11-11T12:37:08.820Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "627f295ac5ea": {
+      "title": "Guerre en Ukraine : \"Vladimir Poutine sait qu'il a le temps pour lui\", analyse David Rigoulet-Roze, chercheur à l'Institut français d'analyse stratégique",
+      "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/guerre-en-ukraine-vladimir-poutine-sait-qu-il-a-le-temps-pour-lui-analyse-david-rigoulet-roze-chercheur-a-l-institut-francais-d-analyse-strategique_8277584.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-11-11T12:37:08.820Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "f7b29a26249c": {
+      "title": "\"Les mots tuent, on vit dans une atmosphère qui prépare ce type d'actes\", déplore l'écrivaine Leïla Slimani à propos de l'attentat raciste à Trappes",
+      "url": "https://www.franceinfo.fr/faits-divers/terrorisme/attentat-raciste-a-trappes/les-mots-tuent-on-vit-dans-une-atmosphere-qui-prepare-ce-type-d-actes-deplore-l-ecrivaine-leila-slimani-a-propos-de-l-attentat-raciste-a-trappes_8277524.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-11-11T12:37:08.820Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "974a65a311f2": {
+      "title": "La disparition de l’aviatrice Amelia Earhart, en 1937, un mystère qui reste entier malgré une nouvelle expédition",
+      "url": "https://www.lemonde.fr/sciences/article/2026/11/11/la-disparition-de-l-aviatrice-amelia-earhart-en-1937-un-mystere-qui-reste-entier-malgre-une-nouvelle-expedition_6808965_1650684.html",
+      "category": "societe",
+      "seenAt": "2026-11-11T12:37:08.820Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "bb54f1728d23": {
+      "title": "Antoine Dupont en numéro 10, la surprise de Fabien Galthié pour affronter l’Afrique du Sud",
+      "url": "https://www.lemonde.fr/sport/article/2026/11/11/antoine-dupont-en-numero-10-la-surprise-de-fabien-galthie-pour-affronter-l-afrique-du-sud_6808964_3242.html",
+      "category": "societe",
+      "seenAt": "2026-11-11T12:37:08.820Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "4ce81a3e69f7": {
+      "title": "11-Novembre : Emmanuel Macron préside la cérémonie de commémoration pour la dernière fois",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/11/11-novembre-emmanuel-macron-preside-la-ceremonie-de-commemoration-pour-la-derniere-fois_6808966_823448.html",
+      "category": "societe",
+      "seenAt": "2026-11-11T12:37:08.820Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "62f77af2ac51": {
+      "title": "EN DIRECT, guerre en Ukraine : accord de principe avec la Russie pour un nouvel échange de prisonniers de guerre à grande échelle",
+      "url": "https://www.lemonde.fr/international/live/2026/11/11/en-direct-guerre-en-ukraine-accord-de-principe-avec-la-russie-pour-un-nouvel-echange-de-prisonniers-de-guerre-a-grande-echelle_6808609_3210.html",
+      "category": "societe",
+      "seenAt": "2026-11-11T12:37:08.820Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "62d719459dcf": {
+      "title": "Attentat de Trappes : « Les principes qui gouvernent la responsabilité pénale ne sauraient être à géométrie variable selon les idées défendues »",
+      "url": "https://www.lemonde.fr/idees/article/2026/11/11/attentat-de-trappes-les-principes-qui-gouvernent-la-responsabilite-penale-ne-sauraient-etre-a-geometrie-variable-selon-les-idees-defendues_6808957_3232.html",
+      "category": "societe",
+      "seenAt": "2026-11-11T12:37:08.820Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "d576bfc044ce": {
+      "title": "Mouvement lycéen : parents d’élèves, parlez-nous de votre positionnement vis-à-vis de la mobilisation",
+      "url": "https://www.lemonde.fr/societe/appel-temoignages/2026/11/11/mouvement-lyceen-parents-d-eleves-parlez-nous-de-votre-positionnement-vis-a-vis-de-la-mobilisation_6808953_3224.html",
+      "category": "societe",
+      "seenAt": "2026-11-11T12:37:08.820Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "2bbb177d2eaf": {
+      "title": "Que sait-on de l’homme mort à Châtelet, en marge des manifestations, dans la nuit du 18 au 19 octobre ?",
+      "url": "https://www.liberation.fr/checknews/que-sait-on-de-lhomme-mort-a-chatelet-en-marge-des-manifestations-dans-la-nuit-du-18-au-19-octobre-20261111_37D6ASB5X5FI5COMGVYTRLRY5E/",
+      "category": "societe",
+      "seenAt": "2026-11-11T12:37:08.820Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "3347cae3107e": {
+      "title": "11 Novembre à l’école : entre occasion pédagogique et crainte de «militarisation» de l’enseignement, de premières cérémonies en rangs dispersés",
+      "url": "https://www.liberation.fr/societe/education/11-novembre-a-lecole-entre-occasion-pedagogique-et-crainte-de-militarisation-de-lenseignement-des-premieres-ceremonies-en-rangs-disperses-20261110_672ZZK5XPVER3BBDKCNLGUS63U/",
+      "category": "societe",
+      "seenAt": "2026-11-11T12:37:08.820Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "2c18e5ac22c3": {
+      "title": "Christophe Gleizes en détention : 500 jours loin des siens",
+      "url": "https://www.liberation.fr/international/afrique/christophe-gleizes-en-detention-500-jours-loin-des-siens-20261108_5LPRSE55CRAQVLRMFSX4ULXT5M/",
+      "category": "societe",
+      "seenAt": "2026-11-11T12:37:08.820Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "3f4c7ab3dbb5": {
+      "title": "Etats-Unis : Pete Hegseth, ministre de la Défense la fleur au fusible",
+      "url": "https://www.liberation.fr/international/amerique/etats-unis-pete-hegseth-ministre-de-la-defense-et-fusible-du-parti-republicain-20261110_QXCXT53VKBBQRMUNNOTMQRG7IU/",
+      "category": "societe",
+      "seenAt": "2026-11-11T12:37:08.820Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "cf80abc4da91": {
+      "title": "Au procès de la «petite inconnue de l’A10», l’expert psy, «l’enfant bouc émissaire» et «la nuit de quarante ans»",
+      "url": "https://www.liberation.fr/societe/police-justice/au-proces-de-la-petite-inconnue-de-la10-lexpert-psy-lenfant-bouc-emissaire-et-la-nuit-de-quarante-ans-20261110_7I75G7SB4JGKNPDTBIYOLRYW2M/",
+      "category": "societe",
+      "seenAt": "2026-11-11T12:37:08.820Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "c63941ab4516": {
+      "title": "Porno, glamourisation de l’inceste et du viol : pourquoi l’IA de Tipsy Chat, accessible aux mineurs, inquiète",
+      "url": "https://www.liberation.fr/lifestyle/hightech/porno-glamourisation-de-linceste-et-du-viol-pourquoi-lia-de-tipsy-chat-accessible-aux-mineurs-inquiete-20261111_LP2TIHLK7NBQBP72MV3UH5AOFU/",
+      "category": "societe",
+      "seenAt": "2026-11-11T12:37:08.820Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "9fdacec85521": {
+      "title": "Ce jeu vidéo qui a changé ma vie : «Le jour, j’arrive à vivre mon deuil, mais le soir c’est toujours très dur»",
+      "url": "https://www.liberation.fr/lifestyle/ce-jeu-video-qui-a-change-ma-vie-le-jour-jarrive-a-vivre-mon-deuil-mais-le-soir-cest-toujours-tres-dur-20261111_662EICBB55CRXFDZIYXPQPGVDI/",
+      "category": "societe",
+      "seenAt": "2026-11-11T12:37:08.820Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "df8432731758": {
+      "title": "Route du Rhum : Basile Bourgnon sur les vagues de son père",
+      "url": "https://www.liberation.fr/sports/route-du-rhum-basile-bourgnon-sur-les-vagues-de-son-pere-20261111_ALMKIEVWCRGBJITXEIE3ZBUIUU/",
+      "category": "societe",
+      "seenAt": "2026-11-11T12:37:08.820Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "bc42b653ae79": {
+      "title": "\"Il faut augmenter les salaires, il faut que le travail paye plus\", affirme Michel-Édouard Leclerc",
+      "url": "https://www.franceinfo.fr/economie/pouvoir-achat/il-faut-augmenter-les-salaires-il-faut-que-le-travail-paye-plus-que-nos-enfants-puissent-acheter-un-appartement-avec-leurs-salaires-affirme-michel-edouard-leclerc-president-du-comite-strategique-des-centres-e-leclerc_8277500.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-11-11T12:37:08.820Z",
+      "status": "used",
+      "usedAt": "2026-11-11T12:37:08.820Z"
+    },
+    "ceab2f2cbf42": {
+      "title": "Commémorations du 11-Novembre : mémoire, quelle mémoire ?",
+      "url": "https://www.france24.com/fr/%C3%A9missions/parlons-en-les-invit%C3%A9s/20261111-comm%C3%A9morations-du-11-novembre-m%C3%A9moire-quelle-m%C3%A9moire",
+      "category": "monde",
+      "seenAt": "2026-11-11T12:37:27.305Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "3f751764ec64": {
+      "title": "Discriminations : Ils lancent une marche anti-raciste à travers la France",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261111-discriminations-ils-lancent-une-marche-anti-raciste-%C3%A0-travers-la-france",
+      "category": "monde",
+      "seenAt": "2026-11-11T12:37:27.305Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "7c51c3c7be4a": {
+      "title": "La France célèbre le 108e anniversaire de l'Armistice du 11 novembre 1918",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261111-la-france-c%C3%A9l%C3%A8bre-le-108e-anniversaire-de-l-armistice-du-11-novembre-1918",
+      "category": "monde",
+      "seenAt": "2026-11-11T12:37:27.305Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "a9d7c96a2cf8": {
+      "title": "L’Aneto, l'un des plus grands glaciers du sud de l’Europe, condamné à disparaître",
+      "url": "https://www.france24.com/fr/%C3%A9missions/focus/20261111-l-aneto-l-un-des-plus-grands-glaciers-du-sud-de-l-europe-condamn%C3%A9-%C3%A0-dispara%C3%AEtre",
+      "category": "monde",
+      "seenAt": "2026-11-11T12:37:27.305Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "e4481ba25f6e": {
+      "title": "Guerre en Ukraine : qui est le négociateur russe Vladimir Medinski ?",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261111-guerre-en-ukraine-qui-est-le-n%C3%A9gociateur-russe-vladimir-medinski",
+      "category": "monde",
+      "seenAt": "2026-11-11T12:37:27.305Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "ed26f9ab8e68": {
+      "title": "Guerre en Ukraine : une négociation sous égide américaine",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261111-guerre-en-ukraine-une-n%C3%A9gociation-sous-%C3%A9gide-am%C3%A9ricaine",
+      "category": "monde",
+      "seenAt": "2026-11-11T12:37:27.305Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "4405afc3d8dd": {
+      "title": "Football : Éli-Junior Kroupi appelé pour la première fois en équipe de France",
+      "url": "https://www.france24.com/fr/%C3%A9missions/sports/20261111-football-%C3%A9li-junior-kroupi-appel%C3%A9-pour-la-premi%C3%A8re-fois-en-%C3%A9quipe-de-france",
+      "category": "monde",
+      "seenAt": "2026-11-11T12:37:27.305Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "2524fe1ec200": {
+      "title": "Ebola : en RDC, principal foyer de l’épidémie, plus de 11 000 cas recensés, parmi lesquels 5 300 morts",
+      "url": "https://www.lemonde.fr/afrique/article/2026/11/11/ebola-en-rdc-principal-foyer-de-l-epidemie-plus-de-11-000-cas-recenses-pami-lesquels-5-300-morts_6808950_3212.html",
+      "category": "monde",
+      "seenAt": "2026-11-11T12:37:27.305Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "15d8e562aeee": {
+      "title": "Paola Ugaz, la journaliste à l’origine des révélations sur le plus grand scandale de violences lié à l’Eglise péruvienne, harcelée par la justice mais soutenue par le pape Léon XIV",
+      "url": "https://www.lemonde.fr/international/article/2026/11/11/paola-ugaz-la-journaliste-a-l-origine-des-revelations-sur-le-plus-grand-scandale-de-violences-lie-a-l-eglise-peruvienne-harcelee-par-la-justice-mais-soutenue-par-le-pape-leon-xiv_6808943_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-11T12:37:27.305Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "7415181b6912": {
+      "title": "Le journaliste Christophe Gleizes, en détention en Algérie, compose avec la routine de la vie carcérale : « Ce sont cinq cents jours de trop »",
+      "url": "https://www.lemonde.fr/international/article/2026/11/11/le-journaliste-christophe-gleizes-en-detention-en-algerie-compose-avec-la-routine-de-la-vie-carcerale-ce-sont-500-jours-de-trop_6808926_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-11T12:37:27.305Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "d3e2b8e7e856": {
+      "title": "Guerre en Ukraine : à Abou Dhabi, les pourparlers russo-ukrainiens condamnés à l’impasse",
+      "url": "https://www.lemonde.fr/international/article/2026/11/11/guerre-en-ukraine-a-abu-dhabi-les-pourparlers-russo-ukrainiens-condamnes-a-l-impasse_6808927_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-11T12:37:27.305Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "3affe27e36d4": {
+      "title": "Comment Nvidia s’est retrouvée au cœur d’un scandale international, entre espionne chinoise, guerre des puces et indifférence de Donald Trump",
+      "url": "https://www.lemonde.fr/economie/article/2026/11/11/comment-nvidia-s-est-retrouve-au-c-ur-d-un-scandale-international-entre-espionne-chinoise-guerre-des-puces-et-indifference-de-donald-trump_6808922_3234.html",
+      "category": "monde",
+      "seenAt": "2026-11-11T12:37:27.305Z",
+      "status": "excluded",
+      "reason": "sensitive"
     }
   },
   "slots": {
@@ -3166,12 +3430,43 @@
         "status": "abandoned",
         "lastError": "fenetre_de_rattrapage_depassee"
       }
+    },
+    "2026-11-11": {
+      "0": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "1": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "2": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "3": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "4": {
+        "attempts": 1,
+        "status": "published",
+        "startedAt": "2026-11-11T12:37:08.820Z",
+        "articleId": "6adc0e62a0d0",
+        "publishedAt": "2026-11-11T12:37:08.820Z",
+        "topicId": "bc42b653ae79",
+        "lastError": null
+      }
     }
   },
   "lastRun": {
-    "at": "2026-11-08T11:51:14.800Z",
-    "runId": "20261108115114-823b",
-    "published": 2,
+    "at": "2026-11-11T12:37:08.181Z",
+    "runId": "20261111123708-a3ae",
+    "published": 1,
     "stopped": null
   },
   "caricatures": {
@@ -3249,6 +3544,11 @@
       "status": "failed",
       "attempts": 1,
       "lastError": "UnavailableError: Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status"
+    },
+    "2026-11-11": {
+      "status": "failed",
+      "attempts": 1,
+      "lastError": "image_indisponible"
     }
   }
 }
