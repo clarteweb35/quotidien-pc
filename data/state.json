@@ -2781,6 +2781,134 @@
       "seenAt": "2026-11-11T12:37:27.305Z",
       "status": "excluded",
       "reason": "sensitive"
+    },
+    "d49f0ec0dfc4": {
+      "title": "Christophe Gleizes: mobiliser contre l'oubli",
+      "url": "https://www.france24.com/fr/%C3%A9missions/on-va-plus-loin/20261112-christophe-gleizes-mobiliser-contre-l-oubli",
+      "category": "monde",
+      "seenAt": "2026-11-12T13:40:25.218Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "f99ca92fee5d": {
+      "title": "RD Congo : ouverture du procès de l'opposant politique Prince Epenge",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261112-rd-congo-ouverture-du-proc%C3%A8s-de-l-opposant-politique-prince-epenge",
+      "category": "monde",
+      "seenAt": "2026-11-12T13:40:25.218Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "5081e341a50a": {
+      "title": "États-Unis : au moins deux morts suite à l'effondrement d'un immeuble",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261112-%C3%A9tats-unis-au-moins-deux-morts-suite-%C3%A0-l-effondrement-d-un-immeuble",
+      "category": "monde",
+      "seenAt": "2026-11-12T13:40:25.218Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "a0ae94e99935": {
+      "title": "\"Éclats de guerre\" : le photoreporter Patrick Chauvel témoigne de ses 60 ans de carrière",
+      "url": "https://www.france24.com/fr/%C3%A9missions/parlons-en-les-invit%C3%A9s/20261112-%C3%A9clats-de-guerre-le-photoreporter-patrick-chauvel-t%C3%A9moigne-de-ses-60-ans-de-carri%C3%A8re",
+      "category": "monde",
+      "seenAt": "2026-11-12T13:40:25.218Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "68b3ef6c3b50": {
+      "title": "Occupation du Sud-Liban par Israël : le désespoir des déplacés",
+      "url": "https://www.france24.com/fr/%C3%A9missions/focus/20261112-reportage-sud-liban-guerre-israel-deplaces",
+      "category": "monde",
+      "seenAt": "2026-11-12T13:40:25.218Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "f3808dec3012": {
+      "title": "Guerre en Ukraine : une \"fenêtre d'opportunité\" pour un cessez-le-feu d'après Zelensky",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261112-guerre-en-ukraine-une-fen%C3%AAtre-d-opportunit%C3%A9-pour-un-cessez-le-feu-d-apr%C3%A8s-zelensky",
+      "category": "monde",
+      "seenAt": "2026-11-12T13:40:25.218Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "80432f6c4676": {
+      "title": "Guerre hybride : l'Europe de plus en plus cible de la cybercriminalité",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261112-guerre-hybride-l-europe-de-plus-en-plus-cible-de-la-cybercriminalit%C3%A9",
+      "category": "monde",
+      "seenAt": "2026-11-12T13:40:25.218Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "0a8fe9f81df1": {
+      "title": "\"Agir pour la France\" : les propos glaçants de l'auteur de l'attentat raciste de Trappes",
+      "url": "https://www.france24.com/fr/france/20261112-agir-pour-la-france-garde-%C3%A0-vue-propos-gla%C3%A7ants-auteur-attentat-trappes",
+      "category": "monde",
+      "seenAt": "2026-11-12T13:40:25.218Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "ba3aa3c2e571": {
+      "title": "« Un sommet Xi-Trump-Poutine serait le symbole de la multipolarité du XXIᵉ siècle, ou la réunion des croque-morts de l’ordre libéral international »",
+      "url": "https://www.lemonde.fr/idees/article/2026/11/12/un-sommet-xi-trump-poutine-serait-le-symbole-de-la-multipolarite-du-xxi-siecle-ou-la-reunion-des-croque-morts-de-l-ordre-liberal-international_6809099_3232.html",
+      "category": "monde",
+      "seenAt": "2026-11-12T13:40:25.218Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "ded9a0c83a7d": {
+      "title": "Au Canada, « une usine fantôme de Stellantis est ballottée au rythme de la guerre commerciale et du réarmement mondial »",
+      "url": "https://www.lemonde.fr/economie/article/2026/11/12/au-canada-une-usine-fantome-de-stellantis-est-ballottee-au-rythme-des-grands-bouleversements-economiques-de-la-guerre-commerciale-au-rearmement-mondial_6809084_3234.html",
+      "category": "monde",
+      "seenAt": "2026-11-12T13:40:25.218Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "443188636eb6": {
+      "title": "En Pologne, les nationalistes défilent en nombre quatre jours après l’attentat de Cracovie",
+      "url": "https://www.lemonde.fr/international/article/2026/11/12/en-pologne-les-nationalistes-defilent-en-nombre-quatre-jours-apres-l-attentat-de-cracovie_6809074_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-12T13:40:25.218Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "ba623ad296a5": {
+      "title": "Les images de l’effondrement d’un immeuble de Brooklyn, à New York",
+      "url": "https://www.lemonde.fr/international/video/2026/11/12/les-images-de-l-effondrement-d-un-immeuble-de-brooklyn-a-new-york_6809073_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-12T13:40:25.218Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "78cbf076e6b8": {
+      "title": "« Le soleil de l’Ukraine se lève dans le Donbass », un livre de photos en hommage au travail d’Antoni Lallican, photoreporter français tué en Ukraine",
+      "url": "https://www.lemonde.fr/international/article/2026/11/12/le-soleil-de-l-ukraine-se-leve-dans-le-donbass-un-livre-de-photos-en-hommage-au-travail-d-antoni-lallican-photoreporter-francais-tue-en-ukraine_6809066_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-12T13:40:25.218Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "046aa8eba779": {
+      "title": "Soudan du Sud : Amnesty International dénonce l’inaction tragique des autorités et de l’ONU",
+      "url": "https://www.lemonde.fr/afrique/article/2026/11/12/soudan-du-sud-amnesty-international-denonce-l-inaction-tragique-des-autorites-et-de-l-onu_6809060_3212.html",
+      "category": "monde",
+      "seenAt": "2026-11-12T13:40:25.218Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "eb553cec8e13": {
+      "title": "Génocide des Tutsi : au Sénégal, l’avenir incertain des génocidaires condamnés par la justice internationale",
+      "url": "https://www.lemonde.fr/afrique/article/2026/11/12/genocide-des-tutsi-au-senegal-l-avenir-incertain-des-genocidaires-condamnes-par-la-justice-internationale_6809053_3212.html",
+      "category": "monde",
+      "seenAt": "2026-11-12T13:40:25.218Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "68d57d5e1003": {
+      "title": "Guerre en Iran : la population à bout de souffle",
+      "url": "https://www.lemonde.fr/podcasts/article/2026/11/12/guerre-en-iran-la-population-a-bout-de-souffle_6809043_5463015.html",
+      "category": "monde",
+      "seenAt": "2026-11-12T13:40:25.218Z",
+      "status": "excluded",
+      "reason": "sensitive"
     }
   },
   "slots": {
@@ -3461,6 +3589,33 @@
         "topicId": "bc42b653ae79",
         "lastError": null
       }
+    },
+    "2026-11-12": {
+      "0": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "1": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "2": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "3": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "4": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      }
     }
   },
   "lastRun": {
@@ -3549,6 +3704,11 @@
       "status": "failed",
       "attempts": 1,
       "lastError": "image_indisponible"
+    },
+    "2026-11-12": {
+      "status": "failed",
+      "attempts": 1,
+      "lastError": "UnavailableError: Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status"
     }
   }
 }
