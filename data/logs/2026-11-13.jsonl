@@ -18,3 +18,4 @@
 {"ts":"2026-11-13T13:00:54.525Z","runId":"20261113125908-92c3","level":"info","event":"gemini.call","purpose":"image_judge","model":"gemini-3.5-flash-lite","inputTokens":1254,"outputTokens":60,"costUsd":0.000526}
 {"ts":"2026-11-13T13:00:54.525Z","runId":"20261113125908-92c3","level":"info","event":"image.ok","slot":"caricature#2026-11-13","bytes":92972,"costUsd":0}
 {"ts":"2026-11-13T13:00:54.528Z","runId":"20261113125908-92c3","level":"info","event":"caricature.ok","date":"2026-11-13","titre":"La pause-café de trente jours"}
+{"ts":"2026-11-13T20:26:44.630Z","runId":"20261113202644-7940","level":"info","event":"cycle.start","date":"2026-11-13","due":[],"remainingToday":5,"dryRun":false}
