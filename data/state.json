@@ -2909,6 +2909,118 @@
       "seenAt": "2026-11-12T13:40:25.218Z",
       "status": "excluded",
       "reason": "sensitive"
+    },
+    "15c9710d3a31": {
+      "title": "Gaza : au moins 11 morts après des frappes israéliennes malgré le cessez-le-feu",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261113-gaza-au-moins-11-morts-apr%C3%A8s-des-frappes-isra%C3%A9liennes-malgr%C3%A9-le-cessez-le-feu",
+      "category": "monde",
+      "seenAt": "2026-11-13T12:59:08.932Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "2253bd2b21d8": {
+      "title": "13-Novembre : près de 500 000 euros récoltés pour celle qui avait permis de localiser Abaaoud",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261113-13-novembre-pr%C3%A8s-de-500-000-euros-r%C3%A9colt%C3%A9s-pour-celle-qui-avait-permis-de-localiser-abaaoud",
+      "category": "monde",
+      "seenAt": "2026-11-13T12:59:08.932Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "8fa19bde7fc1": {
+      "title": "Guerre en Ukraine : Poutine, maître du jeu dans le processus de négociation ?",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261113-guerre-en-ukraine-poutine-ma%C3%AEtre-du-jeu-dans-le-processus-de-n%C3%A9gociation",
+      "category": "monde",
+      "seenAt": "2026-11-13T12:59:08.932Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "f39b5b0717b2": {
+      "title": "Derrière l’image : en Colombie, la communication controversée du président d’extrême droite",
+      "url": "https://www.france24.com/fr/%C3%A9missions/les-observateurs/20261113-derri%C3%A8re-image-colombie-communication-controversee-president-extreme-droite-abelardo-de-la-espriella",
+      "category": "monde",
+      "seenAt": "2026-11-13T12:59:08.932Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "31020733d00b": {
+      "title": "Colombie : les dessous d’une communication présidentielle controversée",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261113-derri%C3%A8re-l-image-en-colombie-la-communication-controvers%C3%A9e-du-pr%C3%A9sident-d-extr%C3%AAme-droite",
+      "category": "monde",
+      "seenAt": "2026-11-13T12:59:08.932Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "29e1b119a146": {
+      "title": "Manifestations du 14 novembre : parcours, revendications, sécurité... Ce qu'il faut savoir",
+      "url": "https://www.france24.com/fr/france/20261113-manifestations-du-14-novembre-parcours-revendications-s%C3%A9curit%C3%A9-ce-qu-il-faut-savoir",
+      "category": "monde",
+      "seenAt": "2026-11-13T12:59:08.932Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "ba71de82d6f7": {
+      "title": "Colère sociale : l'arsenal antiterroriste né des attentats de 2015 utilisé contre les manifestants",
+      "url": "https://www.france24.com/fr/france/20261113-col%C3%A8re-sociale-l-arsenal-antiterroriste-n%C3%A9-des-attentats-de-2015-utilis%C3%A9-contre-les-manifestants",
+      "category": "monde",
+      "seenAt": "2026-11-13T12:59:08.932Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "57673c8a75a6": {
+      "title": "Fléau des féminicides au Mexique : dans le Morelos règne l'impunité",
+      "url": "https://www.france24.com/fr/%C3%A9missions/focus/20261113-fl%C3%A9au-des-f%C3%A9minicides-au-mexique-dans-le-morelos-r%C3%A8gne-l-impunit%C3%A9",
+      "category": "monde",
+      "seenAt": "2026-11-13T12:59:08.932Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "6f1ec8ca68ee": {
+      "title": "Amnesty affirme que l'ONU n'a pas empêché un massacre au Soudan du Sud",
+      "url": "https://www.france24.com/fr/%C3%A9missions/journal-de-l-afrique/20261113-amnesty-affirme-que-l-onu-n-a-pas-emp%C3%AAch%C3%A9-un-massacre-au-soudan-du-sud",
+      "category": "monde",
+      "seenAt": "2026-11-13T12:59:08.932Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "6c845750ffab": {
+      "title": "Ukraine en direct : les Européens ne doivent pas \"tomber dans les pièges\" de la Russie, dit Kallas",
+      "url": "https://www.france24.com/fr/europe/20261113-en-direct-ukraine-russie-europeens-presents-prochaines-negociations-zelensky-poutine",
+      "category": "monde",
+      "seenAt": "2026-11-13T12:59:08.932Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "24f9440c040c": {
+      "title": "L’interminable combat pour obtenir justice des trois fils de Daphne Caruana Galizia, la journaliste maltaise assassinée en 2017",
+      "url": "https://www.lemonde.fr/m-le-mag/article/2026/11/13/l-interminable-combat-pour-obtenir-justice-des-trois-fils-de-daphne-caruana-galizia-la-journaliste-maltaise-assassinee-en-2017_6809271_4500055.html",
+      "category": "monde",
+      "seenAt": "2026-11-13T12:59:08.932Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "b9679b310e02": {
+      "title": "Guerre en Ukraine : les émissaires de Donald Trump admettent la nécessité de voir les Européens associés aux négociations de paix",
+      "url": "https://www.lemonde.fr/international/article/2026/11/13/guerre-en-ukraine-les-emissaires-americains-assurent-que-les-europeens-seront-associes-aux-prochaines-reunions-de-negociation-de-paix_6809269_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-13T12:59:08.932Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "773c27be3727": {
+      "title": "En Moldavie, la mémoire retrouvée de la grande famine planifiée par l’URSS en 1946-1947",
+      "url": "https://www.lemonde.fr/international/article/2026/11/12/en-moldavie-la-memoire-retrouvee-de-la-grande-famine-planifiee-par-l-urss-en-1946-1947_6809151_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-13T12:59:08.932Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "c2184e478591": {
+      "title": "Fonction publique : Lecornu ouvre un mois de discussions sur cinq chantiers, dont les bas salaires",
+      "url": "https://www.france24.com/fr/france/20261113-fonction-publique-lecornu-ouvre-mois-discussions-cinq-chantiers-bas-salaires",
+      "category": "monde",
+      "seenAt": "2026-11-13T12:59:08.932Z",
+      "status": "used",
+      "usedAt": "2026-11-13T12:59:08.932Z"
     }
   },
   "slots": {
@@ -3616,6 +3728,33 @@
         "status": "abandoned",
         "lastError": "fenetre_de_rattrapage_depassee"
       }
+    },
+    "2026-11-13": {
+      "0": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "1": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "2": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "3": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "4": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      }
     }
   },
   "lastRun": {
@@ -3709,6 +3848,11 @@
       "status": "failed",
       "attempts": 1,
       "lastError": "UnavailableError: Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status"
+    },
+    "2026-11-13": {
+      "status": "published",
+      "attempts": 1,
+      "lastError": null
     }
   }
 }

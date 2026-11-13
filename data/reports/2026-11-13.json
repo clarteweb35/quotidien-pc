@@ -7,43 +7,48 @@
     {
       "idx": 0,
       "hhmm": "09:10",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 0,
+      "status": "abandoned",
+      "lastError": "fenetre_de_rattrapage_depassee"
     },
     {
       "idx": 1,
       "hhmm": "09:40",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 0,
+      "status": "abandoned",
+      "lastError": "fenetre_de_rattrapage_depassee"
     },
     {
       "idx": 2,
       "hhmm": "10:10",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 0,
+      "status": "abandoned",
+      "lastError": "fenetre_de_rattrapage_depassee"
     },
     {
       "idx": 3,
       "hhmm": "10:40",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 0,
+      "status": "abandoned",
+      "lastError": "fenetre_de_rattrapage_depassee"
     },
     {
       "idx": 4,
       "hhmm": "11:10",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 0,
+      "status": "abandoned",
+      "lastError": "fenetre_de_rattrapage_depassee"
     }
   ],
   "rejections": 0,
   "quarantined": 0,
   "api": {
-    "calls": 0,
-    "inputTokens": 0,
-    "outputTokens": 0,
-    "costUsd": 0,
+    "calls": 3,
+    "inputTokens": 1562,
+    "outputTokens": 1038,
+    "costUsd": 0.008323,
     "dailyCapUsd": 1,
-    "monthCostUsd": 0.2839,
+    "monthCostUsd": 0.292223,
     "monthlyCapUsd": 15
   },
   "paused": false,

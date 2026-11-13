@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-13",
+    "titre": "La pause-café de trente jours",
+    "legende": "Rien de tel qu'un mois entier de réunions autour d'une table vide pour meubler le pouvoir d'achat des agents publics.",
+    "alt": "Un bureaucrate offre une chaise vide et un sablier d'escargots à des fonctionnaires patients.",
+    "image": "images/caricatures/2026-11-13.webp",
+    "credit": "Dessin généré par IA · Le Quotidien Presque Certain",
+    "publishedAt": "2026-11-13T12:59:08.932Z",
+    "source": {
+      "name": "France 24",
+      "title": "Fonction publique : Lecornu ouvre un mois de discussions sur cinq chantiers, dont les bas salaires",
+      "url": "https://www.france24.com/fr/france/20261113-fonction-publique-lecornu-ouvre-mois-discussions-cinq-chantiers-bas-salaires"
+    }
+  },
+  {
     "date": "2026-11-06",
     "titre": "Lecture surveillée",
     "legende": "Dans le pays du grand portrait officiel, la presse est parfaitement lisible : il n’y manque que les mots.",
