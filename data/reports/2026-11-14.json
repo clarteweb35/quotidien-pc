@@ -1,56 +1,81 @@
 {
   "date": "2026-11-14",
   "target": 5,
-  "publishedCount": 0,
-  "articles": [],
+  "publishedCount": 1,
+  "articles": [
+    {
+      "id": "manchette-d11",
+      "ref": "261114-D1",
+      "title": "Les femmes : des hommes qui auraient en plus la possibilité de faire des enfants ?",
+      "category": "editos",
+      "slug": "les-femmes-des-hommes-qui-auraient-en-plus-la-possibilite-de-faire-des-enfants"
+    },
+    {
+      "id": "b689da745cfa",
+      "ref": "261114-04",
+      "title": "Victoire du XV de France (21-19) : la Fédération confirme après audit que 21 est supérieur à 19",
+      "category": "sport",
+      "slug": "victoire-du-xv-de-france-21-19-la-federation-confirme-apres"
+    }
+  ],
   "slots": [
     {
       "idx": 0,
       "hhmm": "09:10",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 0,
+      "status": "abandoned",
+      "lastError": "fenetre_de_rattrapage_depassee"
     },
     {
       "idx": 1,
       "hhmm": "09:40",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 0,
+      "status": "abandoned",
+      "lastError": "fenetre_de_rattrapage_depassee"
     },
     {
       "idx": 2,
       "hhmm": "10:10",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 0,
+      "status": "abandoned",
+      "lastError": "fenetre_de_rattrapage_depassee"
     },
     {
       "idx": 3,
       "hhmm": "10:40",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 1,
+      "status": "published",
+      "startedAt": "2026-11-14T12:03:41.999Z",
+      "articleId": "b689da745cfa",
+      "publishedAt": "2026-11-14T12:03:41.999Z",
+      "topicId": "96103edccf3d",
+      "lastError": null
     },
     {
       "idx": 4,
       "hhmm": "11:10",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 1,
+      "status": "failed",
+      "startedAt": "2026-11-14T12:03:58.213Z",
+      "lastError": "gemini_unavailable: Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}"
     }
   ],
   "rejections": 0,
   "quarantined": 0,
   "api": {
-    "calls": 0,
-    "inputTokens": 0,
-    "outputTokens": 0,
-    "costUsd": 0,
+    "calls": 6,
+    "inputTokens": 11654,
+    "outputTokens": 7412,
+    "costUsd": 0.069722,
     "dailyCapUsd": 1,
-    "monthCostUsd": 0.292223,
+    "monthCostUsd": 0.361945,
     "monthlyCapUsd": 15
   },
   "paused": false,
   "lastRun": {
-    "at": "2026-11-11T12:37:08.181Z",
-    "runId": "20261111123708-a3ae",
+    "at": "2026-11-14T12:03:41.409Z",
+    "runId": "20261114120341-9d0e",
     "published": 1,
-    "stopped": null
+    "stopped": "gemini_unavailable"
   }
 }

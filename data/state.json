@@ -3021,6 +3021,117 @@
       "seenAt": "2026-11-13T12:59:08.932Z",
       "status": "used",
       "usedAt": "2026-11-13T12:59:08.932Z"
+    },
+    "2faa88cd560a": {
+      "title": "France-Afrique du Sud : la nouvelle défense des Bleus au révélateur du rouleau compresseur des Springboks",
+      "url": "https://www.lemonde.fr/sport/article/2026/11/13/france-afrique-du-sud-la-nouvelle-defense-des-bleus-au-revelateur-du-rouleau-compresseur-des-springboks_6809328_3242.html",
+      "category": "sport",
+      "seenAt": "2026-11-14T12:03:41.999Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "96103edccf3d": {
+      "title": "France - Afrique du Sud : le résumé de la victoire sur le fil des Bleus face aux Springboks",
+      "url": "https://www.lemonde.fr/sport/article/2026/11/13/france-afrique-du-sud-le-resume-de-la-victoire-sur-le-fil-des-bleus-face-aux-springboks_6809393_3242.html",
+      "category": "sport",
+      "seenAt": "2026-11-14T12:03:41.999Z",
+      "status": "used",
+      "usedAt": "2026-11-14T12:03:41.999Z"
+    },
+    "b0fe1cd19d18": {
+      "title": "Avec « Everytime », la réalisatrice Sandra Wollner peint le tableau mélancolique de vies désaccordées par le deuil",
+      "url": "https://www.lemonde.fr/culture/article/2026/11/14/avec-everytime-la-realisatrice-sandra-wollner-peint-le-tableau-melancolique-de-vies-desaccordees-par-le-deuil_6808891_3247.html",
+      "category": "culture",
+      "seenAt": "2026-11-14T12:03:58.213Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "b41a310f9b8b": {
+      "title": "Avec « La Mort du môme », Sébastien Kheroufi quitte l’enfance dans un fracas de mots, de musiques et d’images",
+      "url": "https://www.lemonde.fr/culture/article/2026/11/13/avec-la-mort-du-mome-sebastien-kheroufi-quitte-l-enfance-dans-un-fracas-de-mots-de-musiques-et-d-images_6809307_3246.html",
+      "category": "culture",
+      "seenAt": "2026-11-14T12:03:58.213Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "0b4d66b3e121": {
+      "title": "A la foire Paris Photo, la photographie du XIXᵉ siècle en quête d’une nouvelle jeunesse : « Si les premiers collectionneurs ont disparu, une deuxième génération monte en puissance »",
+      "url": "https://www.lemonde.fr/culture/article/2026/11/13/la-photographie-du-xix-siecle-en-quete-d-une-nouvelle-jeunesse-a-la-foire-paris-photo-si-les-premiers-collectionneurs-ont-disparu-une-deuxieme-generation-monte-en-puissance_6809284_3246.html",
+      "category": "culture",
+      "seenAt": "2026-11-14T12:03:58.213Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "8bfa606f92b4": {
+      "title": "Le rappeur SDM : « Les jeunes m’ont donné envie de descendre dans la rue avec eux »",
+      "url": "https://www.lemonde.fr/culture/article/2026/11/13/le-rappeur-sdm-les-jeunes-m-ont-donne-envie-de-descendre-dans-la-rue-avec-eux_6809381_3246.html",
+      "category": "culture",
+      "seenAt": "2026-11-14T12:03:58.213Z",
+      "status": "in_progress"
+    },
+    "6bdec137bb9f": {
+      "title": "Manifestations : qui sont les \"street medics\" qui soignent les blessés ?",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261114-manifestations-qui-sont-les-street-medics-qui-soignent-les-bless%C3%A9s",
+      "category": "monde",
+      "seenAt": "2026-11-14T12:04:22.413Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "2124da7c16c7": {
+      "title": "Manifestations du 14 novembre en direct : des revendications variées pour l'acte V du mouvement social",
+      "url": "https://www.france24.com/fr/france/20261114-manifestations-du-14-novembre-en-direct-des-revendications-diverses-en-amont-de-l-acte-v",
+      "category": "monde",
+      "seenAt": "2026-11-14T12:04:22.413Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "a88b3eef0044": {
+      "title": "Rugby : les Bleus signent un succès majeur face aux Springboks",
+      "url": "https://www.france24.com/fr/sports/20261113-rugby-les-bleus-signent-un-succ%C3%A8s-majeur-face-aux-springboks",
+      "category": "monde",
+      "seenAt": "2026-11-14T12:04:22.413Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "6667ccdb94ad": {
+      "title": "Mort de Jesus de Miguel : l'équato-guinéen Jesus Owono fixé sur son sort",
+      "url": "https://www.france24.com/fr/sports/20261113-mort-de-jesus-de-miguel-l-%C3%A9quato-guin%C3%A9en-jesus-owono-conna%C3%AEt-la-dur%C3%A9e-de-sa-suspension",
+      "category": "monde",
+      "seenAt": "2026-11-14T12:04:22.413Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "d1294ee76548": {
+      "title": "A Baltimore, la formule gagnante pour faire chuter la criminalité",
+      "url": "https://www.lemonde.fr/m-le-mag/article/2026/11/14/a-baltimore-la-formule-gagnante-pour-faire-chuter-la-criminalite-apres-les-evenements-entourant-la-mort-de-freddie-gray-il-a-fallu-passer-d-une-culture-de-la-force-a-une-culture-de-la-protection_6809587_4500055.html",
+      "category": "monde",
+      "seenAt": "2026-11-14T12:04:22.413Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "6b43daae4325": {
+      "title": "Un navire-citerne percute un bateau de croisière à La Nouvelle-Orléans, aucun blessé grave",
+      "url": "https://www.lemonde.fr/international/article/2026/11/14/un-navire-citerne-percute-un-bateau-de-croisiere-a-la-nouvelle-orleans-aucun-blesse-grave_6809455_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-14T12:04:22.413Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "7209fecd05eb": {
+      "title": "Le Burkina Faso annonce lancer des mandats d’arrêt contre des journalistes et des activistes en exil pour des faits de « terrorisme »",
+      "url": "https://www.lemonde.fr/international/article/2026/11/13/le-burkina-faso-annonce-lancer-des-mandats-d-arret-contre-des-journalistes-et-des-activistes-en-exil-pour-des-faits-de-terrorisme_6809388_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-14T12:04:22.413Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "ff5f63d1cc54": {
+      "title": "Au Cameroun, les parlementaires sous la pression de la société civile pour légiférer contre les féminicides",
+      "url": "https://www.lemonde.fr/afrique/article/2026/11/13/au-cameroun-les-parlementaires-sous-la-pression-de-la-societe-civile-pour-legiferer-contre-les-feminicides_6809373_3212.html",
+      "category": "monde",
+      "seenAt": "2026-11-14T12:04:22.413Z",
+      "status": "excluded",
+      "reason": "sensitive"
     }
   },
   "slots": {
@@ -3755,13 +3866,45 @@
         "status": "abandoned",
         "lastError": "fenetre_de_rattrapage_depassee"
       }
+    },
+    "2026-11-14": {
+      "0": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "1": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "2": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "3": {
+        "attempts": 1,
+        "status": "published",
+        "startedAt": "2026-11-14T12:03:41.999Z",
+        "articleId": "b689da745cfa",
+        "publishedAt": "2026-11-14T12:03:41.999Z",
+        "topicId": "96103edccf3d",
+        "lastError": null
+      },
+      "4": {
+        "attempts": 1,
+        "status": "failed",
+        "startedAt": "2026-11-14T12:03:58.213Z",
+        "lastError": "gemini_unavailable: Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}"
+      }
     }
   },
   "lastRun": {
-    "at": "2026-11-11T12:37:08.181Z",
-    "runId": "20261111123708-a3ae",
+    "at": "2026-11-14T12:03:41.409Z",
+    "runId": "20261114120341-9d0e",
     "published": 1,
-    "stopped": null
+    "stopped": "gemini_unavailable"
   },
   "caricatures": {
     "2026-10-27": {
@@ -3853,6 +3996,11 @@
       "status": "published",
       "attempts": 1,
       "lastError": null
+    },
+    "2026-11-14": {
+      "status": "failed",
+      "attempts": 1,
+      "lastError": "image_indisponible"
     }
   }
 }

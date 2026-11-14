@@ -5,9 +5,14 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 
 ## Sans image (6)
 
-### `261111-05` — Selon un rapport scientifique choc de 4 000 pages, gagner plus d'argent permettrait d'acheter plus de choses
-- Rubrique : societe
-- Description suggérée : Un scientifique en blouse blanche étudie minutieusement un billet de banque avec une loupe géante devant un tableau noir couvert d'équations mathématiques complexes, style dessin de presse satirique.
+### `261114-D1` — Les femmes : des hommes qui auraient en plus la possibilité de faire des enfants ?
+- Rubrique : editos
+- Description suggérée : Dessin de presse satirique : un éditorialiste en costume, perplexe devant un tableau noir où il a tracé une flèche « Homme + option maternité = Femme ? », tandis que derrière lui des femmes de tous âges dirigent une réunion, opèrent, pilotent et enseignent sans lui prêter attention. Style encre et aquarelle.
+- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
+
+### `261114-04` — Victoire du XV de France (21-19) : la Fédération confirme après audit que 21 est supérieur à 19
+- Rubrique : sport
+- Description suggérée : Un grand tableau noir de vestiaire couvert d'équations mathématiques complexes, posé à côté d'un ballon de rugby et d'une calculatrice géante sur une table de massage, style dessin de presse satirique.
 - Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
 ### `261106-D1` — Syndicats français : protéger le passé, bloquer le présent et sacrifier l’avenir
@@ -30,13 +35,16 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 - Description suggérée : Dessin de presse satirique : un isoloir dont le rideau laisse dépasser une paire de chaussures arc-en-ciel, tandis qu’un bulletin de vote tend la main à un vieux dossier poussiéreux marqué « Mémoire », posé sur un tabouret. Personnages génériques, sans ressemblance avec une personne réelle. Style encre et aquarelle.
 - Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
-### `261031-D6` — Génération Z : sauver la planète depuis son canapé, avec 400 applications et 4 % de batterie
-- Rubrique : editos
-- Description suggérée : Dessin de presse satirique : un jeune assis dans un canapé, le smartphone à la main, devant une pancarte « Sauvons la planète » appuyée contre une prise électrique surchargée de chargeurs, un petit nuage de data center au-dessus de sa tête. Style encre et aquarelle.
-- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
-
 ## Déjà illustrés (34)
 
+- `261114-D11` — L’IA menace les écoles de management : les futurs cadres vont devoir apprendre à faire le travail des stagiaires (261114-D11.jpg)
+- `261114-D9` — Norvège : la Cour suprême invalide trois licences pétrolières, le baril prend l’air du pays (261114-D9-dessin.jpg)
+- `261114-D8` — Nvidia : Jensen Huang démissionne, le marché cherche quelqu’un qui sache faire pousser les puces (261114-D8-dessin.jpg)
+- `261114-D6` — Salaires des fonctionnaires : le gouvernement annonce des mesures d’urgence, les syndicats cherchent l’urgence (261114-D6.jpg)
+- `261114-D4` — Smic à 1 502 euros net : un nouveau record de pouvoir d’achat, avant d’aller faire les courses (261114-D4.jpg)
+- `261114-D3` — États-Unis : tous les vols suspendus pour un « problème de communication », le retard devient national (261114-D3-dessin.jpg)
+- `261114-D2` — Panne Microsoft : le fax revient, et il n’a rien perdu de son charme (261114-D2.jpg)
+- `261111-05` — Selon un rapport scientifique choc de 4 000 pages, gagner plus d'argent permettrait d'acheter plus de choses (261111-05.jpg)
 - `261103-D1` — Australie : les gros salaires, le grand mirage des expatriés (261103-D1.jpg)
 - `261106-D5` — Pantouflage : le Conseil d’État desserre l’étau, les hauts fonctionnaires desserrent la cravate (261106-D5.jpg)
 - `261106-D7` — Chamonix : pour admirer le lac Blanc, il faudra bientôt réserver, comme pour un restaurant avec une très belle vue (261106-D7.jpg)
@@ -63,11 +71,3 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 - `261102-D5` — Trump : le roi du golf, l’empereur de l’IA et le bassin à 14 millions qui a tourné au vert (261102-D5.png)
 - `261102-D3` — Bernard Arnault compte ses milliards, les politiques comptent leurs mandats : devinez qui fait scandale ! (261102-D3-dessin.jpg)
 - `261102-D1` — La France cherche un pilote, mais tout le monde veut être copilote (261102-D1.png)
-- `261031-D1` — Biodiversité : après deux semaines de négociations, 200 pays s’accordent pour continuer à sauver la planète, si possible sans trop changer leurs habitudes (261031-D1.jpg)
-- `261101-D4` — Binance : 6,3 milliards envolés. La sécurité, elle, était en télétravail. (261101-D4-dessin.png)
-- `261101-04` — Contestation en ligne : un expert recommande d'imposer un formulaire Cerfa avant chaque partage de hashtag (261101-04.jpg)
-- `261101-D1` — « Melania » : notre critique a vu les deux tiers du film et estime que c’était déjà très généreux (261101-D1-dessin.png)
-- `261031-03` — COP17 : les États s'accordent enfin sur un texte historique confirmant que les arbres sont des végétaux (261031-03.jpg)
-- `261031-02` — Art contemporain : trois visiteurs restent figés quarante-huit minutes devant un panneau d'évacuation d'urgence (261031-02.jpg)
-- `261031-D5` — France 2030 : 54 milliards annoncés, dont 19 encore à retrouver (261031-D5-dessin.jpg)
-- `261031-D4` — Charité bien ordonnée : pourquoi la chrétienté se défend d’autant mieux qu’on évite de la pratiquer (261031-D4-dessin.jpg)
