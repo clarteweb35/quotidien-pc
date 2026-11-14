@@ -55,7 +55,7 @@
       "idx": 4,
       "hhmm": "11:10",
       "attempts": 1,
-      "status": "failed",
+      "status": "abandoned",
       "startedAt": "2026-11-14T12:03:58.213Z",
       "lastError": "gemini_unavailable: Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}"
     }
