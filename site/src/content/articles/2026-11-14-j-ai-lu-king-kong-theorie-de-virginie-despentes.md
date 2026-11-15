@@ -1,4 +1,5 @@
 ---
+author: "Bertrand Ragé"
 id: "lecture-king-kong-01"
 ref: "LECTURE-01"
 title: "J’ai lu King Kong théorie de Virginie Despentes : mon confort a demandé un droit de réponse"
