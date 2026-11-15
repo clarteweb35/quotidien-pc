@@ -34,3 +34,5 @@
 {"ts":"2026-11-15T12:39:58.388Z","runId":"20261115123850-e8c3","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":5}
 {"ts":"2026-11-15T12:40:04.291Z","runId":"20261115123850-e8c3","level":"info","event":"gemini.call","purpose":"caricature","model":"gemini-3.6-flash","inputTokens":319,"outputTokens":934,"costUsd":0.007484}
 {"ts":"2026-11-15T12:40:05.474Z","runId":"20261115123850-e8c3","level":"warn","event":"image.error","slot":"caricature#2026-11-15","attempt":1,"status":400,"error":"Cloudflare Workers AI HTTP 400: {\"errors\":[{\"message\":\"AiError: AiError: Input prompt contains NSFW content. (6988f85d-72b1-48de-a93a-c3c0bc1f8568)\",\"code\":8007}],\"success\":false,\"result\":{},\"messages"}
+{"ts":"2026-11-15T19:19:57.173Z","runId":"20261115191956-9129","level":"warn","event":"cycle.slots_abandoned","count":1}
+{"ts":"2026-11-15T19:19:57.174Z","runId":"20261115191956-9129","level":"info","event":"cycle.start","date":"2026-11-15","due":[],"remainingToday":5,"dryRun":false}

@@ -44,7 +44,7 @@
       "idx": 4,
       "hhmm": "11:10",
       "attempts": 1,
-      "status": "failed",
+      "status": "abandoned",
       "startedAt": "2026-11-15T12:38:50.943Z",
       "lastError": "chapo_trop_long"
     }
