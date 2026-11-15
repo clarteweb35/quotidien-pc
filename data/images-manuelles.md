@@ -5,19 +5,24 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 
 ## Sans image (6)
 
+### `261115-D1` — IA : la fin du monopole des branleurs prétentieux des grandes écoles ?
+- Rubrique : editos
+- Description suggérée : Dessin de presse satirique : un cadre en costume sur une estrade, devant un écran de 80 diapositives incompréhensibles, tandis qu'un petit robot à côté, avec une seule feuille, répond à la question posée par un client ; le diplôme encadré du cadre glisse du mur. Style encre et aquarelle.
+- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
+
 ### `261114-D1` — Les femmes : des hommes qui auraient en plus la possibilité de faire des enfants ?
 - Rubrique : editos
 - Description suggérée : Dessin de presse satirique : un éditorialiste en costume, perplexe devant un tableau noir où il a tracé une flèche « Homme + option maternité = Femme ? », tandis que derrière lui des femmes de tous âges dirigent une réunion, opèrent, pilotent et enseignent sans lui prêter attention. Style encre et aquarelle.
 - Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
-### `261114-04` — Victoire du XV de France (21-19) : la Fédération confirme après audit que 21 est supérieur à 19
-- Rubrique : sport
-- Description suggérée : Un grand tableau noir de vestiaire couvert d'équations mathématiques complexes, posé à côté d'un ballon de rugby et d'une calculatrice géante sur une table de massage, style dessin de presse satirique.
-- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
-
 ### `261106-D1` — Syndicats français : protéger le passé, bloquer le présent et sacrifier l’avenir
 - Rubrique : editos
 - Description suggérée : Dessin de presse satirique : un syndicaliste en gilet, assis sur une pile de vieilles rotatives, brandit fièrement un panneau « Acquis d’hier » devant une usine dont la cheminée ne fume plus, tandis qu’un calendrier arraché s’envole au vent. Personnages génériques, sans ressemblance avec une personne réelle. Style encre et aquarelle.
+- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
+
+### `261106-D12` — Létang suspendu quatre mois ferme : au football, on peut tout dire, sauf ce qu’on pense de l’arbitre
+- Rubrique : sport
+- Description suggérée : Dessin de presse satirique : un dirigeant en costume sur un banc de touche, un sifflet géant posé sur ses lèvres comme un bâillon, tandis qu’un arbitre en noir tient un chronomètre et un calendrier de six mois dont deux pages sont barrées au crayon. Personnages génériques, sans ressemblance avec une personne réelle. Style encre et aquarelle.
 - Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
 ### `261105-D1` — Trump : la grande claque, le petit homme et le début de la fin
@@ -30,16 +35,14 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 - Description suggérée : Dessin de presse satirique : un homme en colère devant un café brandit le poing contre un chèque, qu’il glisse en même temps discrètement dans sa poche, sous une banderole « Tout est la faute de… ». Personnages génériques, sans ressemblance avec une personne réelle. Style encre et aquarelle.
 - Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
-### `261102-D2` — Gay et RN : quand on vote pour ceux qui n’ont pas toujours voulu de vous
-- Rubrique : editos
-- Description suggérée : Dessin de presse satirique : un isoloir dont le rideau laisse dépasser une paire de chaussures arc-en-ciel, tandis qu’un bulletin de vote tend la main à un vieux dossier poussiéreux marqué « Mémoire », posé sur un tabouret. Personnages génériques, sans ressemblance avec une personne réelle. Style encre et aquarelle.
-- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
-
 ## Déjà illustrés (34)
 
+- `LECTURE-01` — J’ai lu King Kong théorie de Virginie Despentes : mon confort a demandé un droit de réponse (LECTURE-01-dessin.jpg)
+- `261114-04` — Victoire du XV de France (21-19) : la Fédération confirme après audit que 21 est supérieur à 19 (261114-04.jpg)
 - `261114-D11` — L’IA menace les écoles de management : les futurs cadres vont devoir apprendre à faire le travail des stagiaires (261114-D11.jpg)
 - `261114-D9` — Norvège : la Cour suprême invalide trois licences pétrolières, le baril prend l’air du pays (261114-D9-dessin.jpg)
 - `261114-D8` — Nvidia : Jensen Huang démissionne, le marché cherche quelqu’un qui sache faire pousser les puces (261114-D8-dessin.jpg)
+- `261114-D7` — Présidentielle 2027 : Teddy Riner se lance, la politique découvre qu’on peut perdre par immobilisation (261114-D7.jpg)
 - `261114-D6` — Salaires des fonctionnaires : le gouvernement annonce des mesures d’urgence, les syndicats cherchent l’urgence (261114-D6.jpg)
 - `261114-D4` — Smic à 1 502 euros net : un nouveau record de pouvoir d’achat, avant d’aller faire les courses (261114-D4.jpg)
 - `261114-D3` — États-Unis : tous les vols suspendus pour un « problème de communication », le retard devient national (261114-D3-dessin.jpg)
@@ -68,6 +71,3 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 - `261030-D3` — Plan clim' du RN : Marine Le Pen veut rafraîchir la France… et réchauffer les factures ! (261030-D3.jpg)
 - `261103-D4` — De Fès à Ceuta : le Maroc des vitrines et celui des salles d’attente (261103-D4.png)
 - `261103-D2` — RH : et si l’IA nous débarrassait enfin de la machine administrative ? (261103-D2.jpg)
-- `261102-D5` — Trump : le roi du golf, l’empereur de l’IA et le bassin à 14 millions qui a tourné au vert (261102-D5.png)
-- `261102-D3` — Bernard Arnault compte ses milliards, les politiques comptent leurs mandats : devinez qui fait scandale ! (261102-D3-dessin.jpg)
-- `261102-D1` — La France cherche un pilote, mais tout le monde veut être copilote (261102-D1.png)

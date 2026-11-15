@@ -1,5 +1,107 @@
 {
-  "items": [],
+  "items": [
+    {
+      "id": "446268d2acdb",
+      "createdAt": "2026-11-15T12:38:50.943Z",
+      "slotKey": "2026-11-15#4",
+      "topic": {
+        "id": "836c48fc5f18",
+        "title": "\"Inside Gaza\" de la réalisatrice Hélène Lam Trong prix du meilleur documentaire au festival Cinemania",
+        "summary": "Ce documentaire sur le quotidien des reporters de l'AFP à Gaza a déjà été primé au festival Doc Edge en Nouvelle-Zélande et a remporté en France le Grand prix du 33e Festival international du grand reportage d'actualité et du documentaire de société.",
+        "url": "https://www.franceinfo.fr/culture/cinema/inside-gaza-de-la-realisatrice-helene-lam-trong-prix-du-meilleur-documentaire-au-festival-cinemania_8283296.html#xtor=RSS-3-[lestitres]",
+        "publishedAt": "2026-11-15T10:12:27.000Z",
+        "feedId": "franceinfo-une",
+        "sourceName": "franceinfo",
+        "category": "societe",
+        "score": 8.5,
+        "kind": "news",
+        "forcedCategory": "societe"
+      },
+      "article": {
+        "status": "ready_for_review",
+        "rejection_reason": "",
+        "title": "Médias : les rédactions contraintes d'embaucher des journalistes uniquement pour récupérer les prix en festival",
+        "chapo": "Alors que les documentaires sur le métier d'informer accumulent les récompenses dans les festivals nationaux et internationaux, les entreprises de presse font face à un défi logistique inédit : trouver des équipes qui acceptent de faire du terrain plutôt que d'enchaîner les discours de remerciement.",
+        "category": "societe",
+        "tags": [
+          "medias",
+          "documentaire",
+          "festivals",
+          "journalisme",
+          "cinema"
+        ],
+        "seo_description": "Face à la multiplication des prix décernés aux documentaires, les rédactions s'organisent pour gérer l'agenda surchargé des cérémonies de récompense.",
+        "angle": "Pousser à l'absurde la prolifération des récompenses pour les documentaires de presse en imaginant la création d'un métier de reporter spécialisé dans la récolte de trophées.",
+        "fictional_elements": [
+          "Création du poste de reporter d'estrade",
+          "Déclarations du responsable fictif du pôle audiovisuel",
+          "Stage d'entraînement au serrage de mains en cérémonie"
+        ],
+        "author": "",
+        "image_prompt": "Une étagère en bois surchargée de trophees en bronze et de statuettes de festivals dans un bureau de redaction encombre de dossiers, style dessin de presse satirique",
+        "image_alt": "Une etagere d un bureau de presse croulant sous une accumulation de trophees et de statuettes dorees",
+        "quality_checks": {
+          "facts_verified": true,
+          "fiction_clearly_satirical": true,
+          "no_invented_quotes": true,
+          "no_personal_attack": true,
+          "original_angle": true,
+          "no_known_duplicate": true
+        },
+        "body": [
+          {
+            "kind": "h2",
+            "text": "Une crise de suraccumulation de trophées dorés"
+          },
+          {
+            "kind": "p",
+            "text": "La scène est devenue une habitude bien rodée dans le paysage audiovisuel contemporain : sous les projecteurs d'une grande salle de projection, un jury international s'incline, une assistance se lève pour applaudir et une statuette en bronze de trois kilos vient alourdir le sac à dos d'une équipe de tournage. Mais derrière la dorure des soirées de gala se cache un problème managérial d'une gravité souvent sous-estimée par les observateurs de la profession."
+          },
+          {
+            "kind": "p",
+            "text": "Selon plusieurs responsables administratifs de structures d'information fictives, la logistique liée à la réception des prix menacerait désormais le bon fonctionnement des calendriers de production. Le temps consacré à monter sur les planches risquerait même de dépasser celui passé à enquêter."
+          },
+          {
+            "kind": "p",
+            "text": "« Jusqu'à présent, un grand reportage nécessitait trois semaines de terrain et quatre semaines de montage », explique le responsable fictif d'un pôle audiovisuel. « Aujourd'hui, il faut ajouter sept mois d'allers-retours entre les festivals de province et du bout du monde, cinquante-deux séances de questions-réponses avec le public et trois réunions d'organisation interne pour décider sur quelle étagère poser la dernière distinction reçue. Nos équipes sont épuisées avant même de pouvoir traiter le sujet suivant. »"
+          },
+          {
+            "kind": "h2",
+            "text": "Vers l'émergence des rédactions de gala"
+          },
+          {
+            "kind": "p",
+            "text": "Pour faire face à cette saturation des agendas, plusieurs médias envisagent très sérieusement de modifier leurs grilles RH en créant une nouvelle fiche de poste : le reporter d'estrade. La mission de ce professionnel ne consisterait pas à prendre des notes sur le terrain ou à régler les niveaux sonores d'une caméra, mais à se tenir prêt, en tenue de soirée, à s'avancer vers le micro dès que le nom de son entreprise est prononcé par un maître de cérémonie."
+          },
+          {
+            "kind": "p",
+            "text": "« Il s'agit d'un travail exigeant une grande maîtrise de soi », précise un formateur imaginaire spécialisé dans les relations publiques. « Il faut savoir exprimer une émotion retenue mais sincère tout en veillant à ne jamais dépasser les quarante-cinq secondes de parole accordées par le protocole. Nous entraînons nos candidats à serrer des mains en continu pendant deux heures sans contracter la moindre crampe à l'avant-bras. »"
+          },
+          {
+            "kind": "h2",
+            "text": "Le risque du reportage au second degré"
+          },
+          {
+            "kind": "p",
+            "text": "Le phénomène prend une telle ampleur dans le secteur que certains observateurs redoutent une surenchère narrative inédite. À force de filmer des journalistes en train d'exercer leur métier, puis de filmer des équipes de tournage en train de filmer ces mêmes journalistes, l'industrie du documentaire risquerait de s'enfermer dans une boucle infinie d'enquêtes sur l'enquête."
+          },
+          {
+            "kind": "p",
+            "text": "En attendant la création probable d'un festival réservé exclusivement aux discours de remerciement prononcés lors de la remise des prix récompensant les films sur le travail de la presse, les rédactions tentent de garder les pieds sur terre. Et de rappeler gentiment à leurs troupes que, entre deux coupes de champagne et deux remises de diplômes, il reste parfois quelques dépêches d'actualité brute à rédiger."
+          }
+        ]
+      },
+      "issues": [
+        {
+          "code": "chapo_trop_long",
+          "msg": "Chapo: 300 caracteres (maximum 260)"
+        }
+      ],
+      "judge": null,
+      "status": "quarantined",
+      "retries": 0
+    }
+  ],
   "history": [
     {
       "ts": "2026-11-01T11:47:29.365Z",
@@ -8,6 +110,18 @@
       "stage": "generation",
       "reasons": [
         "rejet_du_redacteur: Le sujet concerne des accusations d'abus sexuels et la protection de l'enfance, ce qui entre dans la catégorie des sujets sensibles et dramatiques exclus par la ligne éditoriale du journal."
+      ]
+    },
+    {
+      "ts": "2026-11-15T12:38:50.943Z",
+      "slot": "2026-11-15#4",
+      "topic": "\"Inside Gaza\" de la réalisatrice Hélène Lam Trong prix du meilleur documentaire au festival Cinemania",
+      "stage": "validation",
+      "reasons": [
+        "chapo_trop_long"
+      ],
+      "messages": [
+        "Chapo: 300 caracteres (maximum 260)"
       ]
     }
   ]

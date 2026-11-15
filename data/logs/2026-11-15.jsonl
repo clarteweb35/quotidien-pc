@@ -1,0 +1,36 @@
+{"ts":"2026-11-15T12:38:50.716Z","runId":"20261115123850-e8c3","level":"warn","event":"cycle.slots_abandoned","count":4}
+{"ts":"2026-11-15T12:38:50.717Z","runId":"20261115123850-e8c3","level":"info","event":"cycle.start","date":"2026-11-15","due":["2026-11-15#4"],"remainingToday":5,"dryRun":false}
+{"ts":"2026-11-15T12:38:50.942Z","runId":"20261115123850-e8c3","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":31,"kept":25}
+{"ts":"2026-11-15T12:38:50.942Z","runId":"20261115123850-e8c3","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-11-15T12:38:50.942Z","runId":"20261115123850-e8c3","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":20}
+{"ts":"2026-11-15T12:38:50.942Z","runId":"20261115123850-e8c3","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":23}
+{"ts":"2026-11-15T12:38:50.942Z","runId":"20261115123850-e8c3","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":15}
+{"ts":"2026-11-15T12:38:50.942Z","runId":"20261115123850-e8c3","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":20,"kept":12}
+{"ts":"2026-11-15T12:38:50.942Z","runId":"20261115123850-e8c3","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":14}
+{"ts":"2026-11-15T12:38:50.942Z","runId":"20261115123850-e8c3","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":9}
+{"ts":"2026-11-15T12:38:50.942Z","runId":"20261115123850-e8c3","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":8}
+{"ts":"2026-11-15T12:38:50.942Z","runId":"20261115123850-e8c3","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":15}
+{"ts":"2026-11-15T12:38:50.942Z","runId":"20261115123850-e8c3","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":6}
+{"ts":"2026-11-15T12:38:50.942Z","runId":"20261115123850-e8c3","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":5}
+{"ts":"2026-11-15T12:38:50.942Z","runId":"20261115123850-e8c3","level":"info","event":"collect.done","items":168}
+{"ts":"2026-11-15T12:38:51.057Z","runId":"20261115123850-e8c3","level":"info","event":"topic.selection","slot":"2026-11-15#4","target":"societe","candidates":168,"rejected":16,"chosen":"\"Inside Gaza\" de la réalisatrice Hélène Lam Trong prix du meilleur documentaire au festival Cinemania","score":8.5}
+{"ts":"2026-11-15T12:39:06.289Z","runId":"20261115123850-e8c3","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4591,"outputTokens":2013,"costUsd":0.021984}
+{"ts":"2026-11-15T12:39:06.322Z","runId":"20261115123850-e8c3","level":"warn","event":"validate.deterministic_failed","slot":"2026-11-15#4","attempt":1,"issues":["corps_trop_court"]}
+{"ts":"2026-11-15T12:39:58.220Z","runId":"20261115123850-e8c3","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4640,"outputTokens":3201,"costUsd":0.030968}
+{"ts":"2026-11-15T12:39:58.261Z","runId":"20261115123850-e8c3","level":"warn","event":"validate.deterministic_failed","slot":"2026-11-15#4","attempt":2,"issues":["chapo_trop_long"]}
+{"ts":"2026-11-15T12:39:58.261Z","runId":"20261115123850-e8c3","level":"warn","event":"slot.quarantined","slot":"2026-11-15#4","reasons":["chapo_trop_long"]}
+{"ts":"2026-11-15T12:39:58.263Z","runId":"20261115123850-e8c3","level":"warn","event":"slot.failed","slot":"2026-11-15#4","reason":"chapo_trop_long"}
+{"ts":"2026-11-15T12:39:58.388Z","runId":"20261115123850-e8c3","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":31,"kept":25}
+{"ts":"2026-11-15T12:39:58.388Z","runId":"20261115123850-e8c3","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-11-15T12:39:58.388Z","runId":"20261115123850-e8c3","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":20}
+{"ts":"2026-11-15T12:39:58.388Z","runId":"20261115123850-e8c3","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":23}
+{"ts":"2026-11-15T12:39:58.388Z","runId":"20261115123850-e8c3","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":15}
+{"ts":"2026-11-15T12:39:58.388Z","runId":"20261115123850-e8c3","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":20,"kept":12}
+{"ts":"2026-11-15T12:39:58.388Z","runId":"20261115123850-e8c3","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":14}
+{"ts":"2026-11-15T12:39:58.388Z","runId":"20261115123850-e8c3","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":9}
+{"ts":"2026-11-15T12:39:58.388Z","runId":"20261115123850-e8c3","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":8}
+{"ts":"2026-11-15T12:39:58.388Z","runId":"20261115123850-e8c3","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":15}
+{"ts":"2026-11-15T12:39:58.388Z","runId":"20261115123850-e8c3","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":6}
+{"ts":"2026-11-15T12:39:58.388Z","runId":"20261115123850-e8c3","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":5}
+{"ts":"2026-11-15T12:40:04.291Z","runId":"20261115123850-e8c3","level":"info","event":"gemini.call","purpose":"caricature","model":"gemini-3.6-flash","inputTokens":319,"outputTokens":934,"costUsd":0.007484}
+{"ts":"2026-11-15T12:40:05.474Z","runId":"20261115123850-e8c3","level":"warn","event":"image.error","slot":"caricature#2026-11-15","attempt":1,"status":400,"error":"Cloudflare Workers AI HTTP 400: {\"errors\":[{\"message\":\"AiError: AiError: Input prompt contains NSFW content. (6988f85d-72b1-48de-a93a-c3c0bc1f8568)\",\"code\":8007}],\"success\":false,\"result\":{},\"messages"}
