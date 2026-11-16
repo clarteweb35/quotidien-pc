@@ -3331,6 +3331,70 @@
       "seenAt": "2026-11-15T12:39:58.265Z",
       "status": "excluded",
       "reason": "sensitive"
+    },
+    "fb5a8472e978": {
+      "title": "Ebola en RDC : l'épidémie a fait plus de 5400 mort en six mois",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261116-ebola-en-rdc-l-%C3%A9pid%C3%A9mie-a-fait-plus-de-5400-mort-en-six-mois",
+      "category": "monde",
+      "seenAt": "2026-11-16T13:31:31.316Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "4c55d6070cf2": {
+      "title": "Ukraine : le prince Harry aux côtés des soldats blessées et des soignants à Lviv",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261116-ukraine-le-prince-harry-aux-c%C3%B4t%C3%A9s-des-soldats-bless%C3%A9es-et-des-soignants-%C3%A0-lviv",
+      "category": "monde",
+      "seenAt": "2026-11-16T13:31:31.316Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "9ec2a4106b36": {
+      "title": "Les Bleus affrontent la Turquie pour le retour de Zinédine Zidane à Bordeaux",
+      "url": "https://www.france24.com/fr/%C3%A9missions/sports/20261116-les-bleus-affrontent-la-turquie-pour-le-retour-de-zin%C3%A9dine-zidane-%C3%A0-bordeaux-1",
+      "category": "monde",
+      "seenAt": "2026-11-16T13:31:31.316Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "205c56b886aa": {
+      "title": "La \"paix mondiale\" au menu de la rencontre trilatérale en Chine entre Xi, Trump et Poutine",
+      "url": "https://www.france24.com/fr/asie-pacifique/20261116-paix-mondiale-menu-rencontre-trilat%C3%A9rale-chine-xi-trump-poutine",
+      "category": "monde",
+      "seenAt": "2026-11-16T13:31:31.316Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "b26a787223f4": {
+      "title": "Les Bleus affrontent la Turquie pour le retour de Zinédine Zidane à Bordeaux",
+      "url": "https://www.france24.com/fr/%C3%A9missions/sports/20261116-les-bleus-affrontent-la-turquie-pour-le-retour-de-zin%C3%A9dine-zidane-%C3%A0-bordeaux",
+      "category": "monde",
+      "seenAt": "2026-11-16T13:31:31.316Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "88a2d27b4ba1": {
+      "title": "« Nous, soutiens en France du mouvement Femme, vie, liberté, refusons que ce slogan serve de caution à une décoration qui le trahit »",
+      "url": "https://www.lemonde.fr/idees/article/2026/11/16/nous-soutiens-en-france-du-mouvement-femme-vie-liberte-refusons-que-ce-slogan-serve-de-caution-a-une-decoration-qui-le-trahit_6811770_3232.html",
+      "category": "monde",
+      "seenAt": "2026-11-16T13:31:31.316Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "e867a7602148": {
+      "title": "EN DIRECT, guerre en Ukraine : des coupures d’électricité dans six oblasts ukrainiens après des attaques russes",
+      "url": "https://www.lemonde.fr/international/live/2026/11/16/en-direct-guerre-en-ukraine-une-attaque-russe-prive-plus-de-50-000-foyers-d-electricite-dans-l-oblast-d-odessa_6810982_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-16T13:31:31.316Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "6a50a1dd979f": {
+      "title": "Miguel Angel Félix Gallardo, l’un des narcotrafiquants mexicains les plus puissants, est mort après trente-sept ans passés en prison",
+      "url": "https://www.lemonde.fr/disparitions/article/2026/11/16/miguel-angel-felix-gallardo-l-un-des-narcotrafiquants-mexicains-les-plus-reputes-est-mort-apres-trente-sept-ans-passes-en-prison_6811303_3382.html",
+      "category": "monde",
+      "seenAt": "2026-11-16T13:31:31.316Z",
+      "status": "excluded",
+      "reason": "sensitive"
     }
   },
   "slots": {
@@ -4125,6 +4189,33 @@
         "startedAt": "2026-11-15T12:38:50.943Z",
         "lastError": "chapo_trop_long"
       }
+    },
+    "2026-11-16": {
+      "0": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "1": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "2": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "3": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "4": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      }
     }
   },
   "lastRun": {
@@ -4230,6 +4321,11 @@
       "lastError": "image_indisponible"
     },
     "2026-11-15": {
+      "status": "failed",
+      "attempts": 1,
+      "lastError": "image_indisponible"
+    },
+    "2026-11-16": {
       "status": "failed",
       "attempts": 1,
       "lastError": "image_indisponible"
