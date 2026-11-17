@@ -16,3 +16,4 @@
 {"ts":"2026-11-17T14:16:26.565Z","runId":"20261117141620-47e9","level":"warn","event":"caricature.fallback_model","from":"gemini-3.6-flash","to":"gemini-3.8-flash"}
 {"ts":"2026-11-17T14:16:30.516Z","runId":"20261117141620-47e9","level":"warn","event":"gemini.retry","purpose":"caricature","status":503,"attempt":1,"delayMs":4499}
 {"ts":"2026-11-17T14:16:42.622Z","runId":"20261117141620-47e9","level":"warn","event":"caricature.error","date":"2026-11-17","error":"Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status"}
+{"ts":"2026-11-17T22:36:28.595Z","runId":"20261117223628-b1ba","level":"info","event":"cycle.start","date":"2026-11-17","due":[],"remainingToday":5,"dryRun":false}
