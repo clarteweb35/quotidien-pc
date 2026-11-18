@@ -3395,6 +3395,38 @@
       "seenAt": "2026-11-16T13:31:31.316Z",
       "status": "excluded",
       "reason": "sensitive"
+    },
+    "2b1a645def73": {
+      "title": "Au Bangladesh, la perspective d’un retour au pays de l’ancienne première ministre Sheikh Hasina attise les tensions politiques",
+      "url": "https://www.lemonde.fr/international/article/2026/11/18/au-bangladesh-la-perspective-d-un-retour-au-pays-de-l-ancienne-premiere-ministre-sheikh-hasina-attise-les-tensions-politiques_6813116_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-18T13:48:07.519Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "3ae65e41e297": {
+      "title": "EN DIRECT, guerre en Ukraine : les attaques russes se poursuivent à Odessa, où le bilan s’alourdit",
+      "url": "https://www.lemonde.fr/international/live/2026/11/18/en-direct-guerre-en-ukraine-le-pont-de-crimee-lourdement-endommage-la-section-ferroviaire-reste-en-service_6810982_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-18T13:48:07.519Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "23e632ca0beb": {
+      "title": "En RDC, Ebola tue massivement les enfants : « Je ne peux même pas le prendre dans mes bras pour le réconforter »",
+      "url": "https://www.lemonde.fr/afrique/article/2026/11/18/en-rdc-ebola-tue-massivement-les-enfants-je-ne-peux-meme-pas-le-prendre-dans-mes-bras-pour-le-reconforter_6813071_3212.html",
+      "category": "monde",
+      "seenAt": "2026-11-18T13:48:07.519Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "8d59725dbe32": {
+      "title": "« Vingt-trois minutes pour être exposé à des contenus extrémistes » : l’Australie s’inquiète de l’impact des réseaux sociaux et de l’IA sur la radicalisation des jeunes",
+      "url": "https://www.lemonde.fr/international/article/2026/11/18/vingt-trois-minutes-pour-etre-expose-a-des-contenus-extremistes-l-australie-s-inquiete-de-l-impact-des-reseaux-sociaux-et-de-l-ia-dans-la-radicalisation-des-jeunes_6813068_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-18T13:48:07.519Z",
+      "status": "excluded",
+      "reason": "sensitive"
     }
   },
   "slots": {
@@ -4243,6 +4275,33 @@
         "status": "abandoned",
         "lastError": "fenetre_de_rattrapage_depassee"
       }
+    },
+    "2026-11-18": {
+      "0": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "1": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "2": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "3": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "4": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      }
     }
   },
   "lastRun": {
@@ -4358,6 +4417,11 @@
       "lastError": "image_indisponible"
     },
     "2026-11-17": {
+      "status": "failed",
+      "attempts": 1,
+      "lastError": "UnavailableError: Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status"
+    },
+    "2026-11-18": {
       "status": "failed",
       "attempts": 1,
       "lastError": "UnavailableError: Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status"
