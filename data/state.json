@@ -3427,6 +3427,94 @@
       "seenAt": "2026-11-18T13:48:07.519Z",
       "status": "excluded",
       "reason": "sensitive"
+    },
+    "9660fc3b70c8": {
+      "title": "Sénégal : le surf fait de plus en plus d’adeptes chez les jeunes",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261119-s%C3%A9n%C3%A9gal-le-surf-fait-de-plus-en-plus-d-adeptes-chez-les-jeunes",
+      "category": "monde",
+      "seenAt": "2026-11-19T14:18:27.289Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "2d27a52ac9cb": {
+      "title": "Ce qu'il faut retenir du sommet inédit entre Donald Trump, Xi Jinping et Vladimir Poutine",
+      "url": "https://www.france24.com/fr/asie-pacifique/20261119-ce-qu-il-faut-retenir-du-sommet-in%C3%A9dit-entre-donald-trump-xi-jinping-et-vladimir-poutine",
+      "category": "monde",
+      "seenAt": "2026-11-19T14:18:27.289Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "4b3bf5c69112": {
+      "title": "🔴 La Birmanie a commis un génocide à l'encontre des Rohingya, statue la Cour internationale de justice",
+      "url": "https://www.france24.com/fr/asie-pacifique/20261119-la-cij-juge-les-forces-birmanes-coupables-d-avoir-tu%C3%A9-des-milliers-de-civils-rohingyas",
+      "category": "monde",
+      "seenAt": "2026-11-19T14:18:27.289Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "b0309df12983": {
+      "title": "Guerre en Ukraine : le difficile exil des habitants du Donbass",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261119-guerre-en-ukraine-le-difficile-exil-des-habitants-du-donbass",
+      "category": "monde",
+      "seenAt": "2026-11-19T14:18:27.289Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "a7390446609d": {
+      "title": "Sénégal : une école pour démocratiser le surf auprès des jeunes",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261119-s%C3%A9n%C3%A9gal-une-%C3%A9cole-pour-d%C3%A9mocratiser-le-surf-aupr%C3%A8s-des-jeunes",
+      "category": "monde",
+      "seenAt": "2026-11-19T14:18:27.289Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "898d08378738": {
+      "title": "La Coalition des volontaires pour l'Ukraine à Berlin concurrencée par le sommet tripartite en Chine",
+      "url": "https://www.france24.com/fr/europe/20261119-coalition-volontaires-ukraine-berlin-sommet-tripartite-chine-poutine-jinping-trump-zelensky",
+      "category": "monde",
+      "seenAt": "2026-11-19T14:18:27.289Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "d53a1c256ad4": {
+      "title": "En Corée du Sud, les femmes prostituées de force sur les bases américaines demandent réparation",
+      "url": "https://www.france24.com/fr/%C3%A9missions/focus/20261119-coree-sud-prostituees-de-force-bases-am%C3%A9ricaines-demandent-r%C3%A9paration",
+      "category": "monde",
+      "seenAt": "2026-11-19T14:18:27.289Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "359ffa2540f5": {
+      "title": "« En attaquant l’Iran, Trump voulait se dégager du Moyen-Orient, il s’y installe »",
+      "url": "https://www.lemonde.fr/idees/article/2026/11/19/en-attaquant-l-iran-trump-voulait-se-degager-du-moyen-orient-il-s-y-installe_6813312_3232.html",
+      "category": "monde",
+      "seenAt": "2026-11-19T14:18:27.289Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "00e4f86c6eb7": {
+      "title": "Victoria Ivleva, la photographe russe qui regarde la guerre du côté ukrainien",
+      "url": "https://www.lemonde.fr/m-le-mag/article/2026/11/19/victoria-ivleva-la-photographe-russe-qui-regarde-la-guerre-du-cote-ukrainien_6813301_4500055.html",
+      "category": "monde",
+      "seenAt": "2026-11-19T14:18:27.289Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "d0b7cdc68322": {
+      "title": "Dans les camps de réfugiés au Bangladesh, la situation des Rohingya se détériore en raison de la crise de financement",
+      "url": "https://www.lemonde.fr/international/article/2026/11/19/dans-les-camps-de-refugies-au-bangladesh-la-situation-des-rohingya-se-deteriore-en-raison-de-la-crise-de-financement_6813265_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-19T14:18:27.289Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "dac3169e013f": {
+      "title": "La crise dans le détroit d’Ormuz favorise une « étroite convergence entre sécurité énergétique et objectifs climatiques », selon le directeur de l’AIE, Fatih Birol",
+      "url": "https://www.lemonde.fr/economie/article/2026/11/19/la-crise-du-detroit-d-ormuz-favorise-une-etroite-convergence-entre-securite-energetique-et-objectifs-climatiques-selon-le-directeur-de-l-aie-fatih-birol_6813236_3234.html",
+      "category": "monde",
+      "seenAt": "2026-11-19T14:18:27.289Z",
+      "status": "excluded",
+      "reason": "sensitive"
     }
   },
   "slots": {
@@ -4302,6 +4390,33 @@
         "status": "abandoned",
         "lastError": "fenetre_de_rattrapage_depassee"
       }
+    },
+    "2026-11-19": {
+      "0": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "1": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "2": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "3": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "4": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      }
     }
   },
   "lastRun": {
@@ -4425,6 +4540,11 @@
       "status": "failed",
       "attempts": 1,
       "lastError": "UnavailableError: Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status"
+    },
+    "2026-11-19": {
+      "status": "failed",
+      "attempts": 1,
+      "lastError": "image_indisponible"
     }
   }
 }
