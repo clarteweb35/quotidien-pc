@@ -15,3 +15,4 @@
 {"ts":"2026-11-20T13:57:19.266Z","runId":"20261120135624-4884","level":"info","event":"gemini.call","purpose":"caricature","model":"gemini-3.6-flash","inputTokens":265,"outputTokens":955,"costUsd":0.00756}
 {"ts":"2026-11-20T13:57:25.430Z","runId":"20261120135624-4884","level":"info","event":"gemini.call","purpose":"image_judge","model":"gemini-3.5-flash-lite","inputTokens":1272,"outputTokens":76,"costUsd":0.000572}
 {"ts":"2026-11-20T13:57:25.430Z","runId":"20261120135624-4884","level":"warn","event":"image.rejected","slot":"caricature#2026-11-20","problems":["presence of text or signature at the bottom right"],"flags":{"person":false,"text":true,"photo":false,"disturbing":false}}
+{"ts":"2026-11-20T21:45:35.700Z","runId":"20261120214535-3d4f","level":"info","event":"cycle.start","date":"2026-11-20","due":[],"remainingToday":5,"dryRun":false}
