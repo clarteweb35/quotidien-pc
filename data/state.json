@@ -3515,6 +3515,110 @@
       "seenAt": "2026-11-19T14:18:27.289Z",
       "status": "excluded",
       "reason": "sensitive"
+    },
+    "f7ed95cc804e": {
+      "title": "Deux missiles russes chutent en Pologne, le Premier ministre Tusk dénonce \"une provocation\"",
+      "url": "https://www.france24.com/fr/europe/20261120-deux-missiles-chutent-pologne-premier-ministre-donald-tusk-d%C3%A9nonce-provocation-russie",
+      "category": "monde",
+      "seenAt": "2026-11-20T13:56:24.306Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "a814cc4e9aac": {
+      "title": "Madagascar : le procès de l'empoisonnement présumé de 31 personnes s'est ouvert",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261120-madagascar-le-proc%C3%A8s-de-l-empoisonnement-pr%C3%A9sum%C3%A9-de-31-personnes-s-est-ouvert",
+      "category": "monde",
+      "seenAt": "2026-11-20T13:56:24.306Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "83b54174d50f": {
+      "title": "COP31 : les énergies fossiles disparaissent du projet de décision finale",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261120-cop31-les-%C3%A9nergies-fossiles-disparaissent-du-projet-de-d%C3%A9cision-finale",
+      "category": "monde",
+      "seenAt": "2026-11-20T13:56:24.306Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "f1c131b8ef1f": {
+      "title": "Génocide des Rohingya : en Malaisie, une communauté de plus en plus rejetée",
+      "url": "https://www.france24.com/fr/%C3%A9missions/focus/20261120-g%C3%A9nocide-des-rohingya-en-malaisie-une-communaut%C3%A9-de-plus-en-plus-rejet%C3%A9e",
+      "category": "monde",
+      "seenAt": "2026-11-20T13:56:24.306Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "0b6cd6285522": {
+      "title": "Le Paris des Arts avec Mariam Doumbia et Zaho",
+      "url": "https://www.france24.com/fr/%C3%A9missions/le-paris-des-arts/20261120-le-paris-des-arts-avec-mariam-doumbia-et-zaho",
+      "category": "monde",
+      "seenAt": "2026-11-20T13:56:24.306Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "ae91358d9d8d": {
+      "title": "L'actu en dessin : à Shenzhen, le sommet tripartite débouche sur une étonnante \"déclaration de paix\"",
+      "url": "https://www.france24.com/fr/plan%C3%A8te/20261120-l-actu-en-dessin-%C3%A0-shenzhen-le-sommet-tripartite-d%C3%A9bouche-sur-une-%C3%A9tonnante-d%C3%A9claration-de-paix",
+      "category": "monde",
+      "seenAt": "2026-11-20T13:56:24.306Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "74119789701c": {
+      "title": "En Amérique latine, l’intervention militaire des Etats-Unis gagne du terrain",
+      "url": "https://www.lemonde.fr/international/article/2026/11/20/en-amerique-latine-l-intervention-militaire-des-etats-unis-gagne-du-terrain_6813642_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-20T13:56:24.306Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "a81c6e19b55e": {
+      "title": "Rohingya : le courage de la Cour internationale de justice",
+      "url": "https://www.lemonde.fr/idees/article/2026/11/20/rohingya-le-courage-de-la-cour-internationale-de-justice_6813621_3232.html",
+      "category": "monde",
+      "seenAt": "2026-11-20T13:56:24.306Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "fc94d710c0e8": {
+      "title": "Guerre en Ukraine : Kiev mise sur l’isolement stratégique de la Crimée occupée",
+      "url": "https://www.lemonde.fr/international/article/2026/11/20/l-ukraine-mise-sur-l-isolement-strategique-de-la-crimee-occupee_6813616_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-20T13:56:24.306Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "05e0c3b3dca7": {
+      "title": "« La Birmanie doit ramener les Rohingya chez eux », exhorte le président de l’Assemblée générale de l’ONU, après la décision historique de la CIJ sur le génocide de 2017",
+      "url": "https://www.lemonde.fr/international/article/2026/11/20/le-chef-de-l-assemblee-generale-de-l-onu-appelle-la-birmanie-a-ramener-les-rohingya-chez-eux_6813602_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-20T13:56:24.306Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "f37dd5aab8da": {
+      "title": "Deux mois après l’exécution ratée de Christa Pike, la longue mise à mort d’un détenu de 70 ans au Texas",
+      "url": "https://www.lemonde.fr/international/article/2026/11/20/deux-mois-apres-l-execution-ratee-de-christa-pike-la-longue-mise-a-mort-de-reinaldo-dennes-au-texas_6813583_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-20T13:56:24.306Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "32a990d00e97": {
+      "title": "Guerre en Ukraine : à Berlin, les alliés de Kiev répondent aux provocations de Donald Trump et de Vladimir Poutine, réunis à Shenzhen",
+      "url": "https://www.lemonde.fr/international/article/2026/11/20/guerre-en-ukraine-a-berlin-la-reunion-des-allies-de-kiev-miroir-inverse-de-la-rencontre-de-shenzhen-entre-xi-trump-et-poutine_6813557_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-20T13:56:24.306Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "fc32d2b63f5e": {
+      "title": "Au Brésil, une ethnie autochtone isolée réapparaît et suscite l’inquiétude pour sa survie",
+      "url": "https://www.lemonde.fr/planete/article/2026/11/20/au-bresil-l-apparition-d-une-ethnie-autochtone-non-contactee-suscite-l-inquietude-pour-sa-survie_6813552_3244.html",
+      "category": "monde",
+      "seenAt": "2026-11-20T13:56:24.306Z",
+      "status": "excluded",
+      "reason": "sensitive"
     }
   },
   "slots": {
@@ -4417,6 +4521,33 @@
         "status": "abandoned",
         "lastError": "fenetre_de_rattrapage_depassee"
       }
+    },
+    "2026-11-20": {
+      "0": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "1": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "2": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "3": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "4": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      }
     }
   },
   "lastRun": {
@@ -4542,6 +4673,11 @@
       "lastError": "UnavailableError: Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status"
     },
     "2026-11-19": {
+      "status": "failed",
+      "attempts": 1,
+      "lastError": "image_indisponible"
+    },
+    "2026-11-20": {
       "status": "failed",
       "attempts": 1,
       "lastError": "image_indisponible"
