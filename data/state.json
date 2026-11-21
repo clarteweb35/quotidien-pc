@@ -3619,6 +3619,70 @@
       "seenAt": "2026-11-20T13:56:24.306Z",
       "status": "excluded",
       "reason": "sensitive"
+    },
+    "0d6380bfdf4f": {
+      "title": "Manifestations à travers l'Europe contre la guerre et pour la jeunesse",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261121-manifestations-%C3%A0-travers-l-europe-contre-la-guerre-et-pour-la-jeunesse",
+      "category": "monde",
+      "seenAt": "2026-11-21T13:22:35.628Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "83aeddbc6ed6": {
+      "title": "Le Danemark accuse la Russie d'avoir tenté d'assassiner un rappeur ukrainien",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261121-le-danemark-accuse-la-russie-d-avoir-tent%C3%A9-d-assassiner-un-rappeur-ukrainien",
+      "category": "monde",
+      "seenAt": "2026-11-21T13:22:35.628Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "451abc9cc0a0": {
+      "title": "En Pologne, la coalition pour l'Ukraine s'exerce à l'ombre de la guerre",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261121-en-pologne-la-coalition-pour-l-ukraine-s-exerce-%C3%A0-l-ombre-de-la-guerre",
+      "category": "monde",
+      "seenAt": "2026-11-21T13:22:35.628Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "2c0e76fc02f3": {
+      "title": "Enigma : le général Bertrand, le Français qui a contribué à casser la machine de cryptage des nazis",
+      "url": "https://www.france24.com/fr/europe/20261121-enigma-role-francais-machine-crypter-nazis-general-bertrand-guerre-mondiale",
+      "category": "monde",
+      "seenAt": "2026-11-21T13:22:35.628Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "151d1a0c71b7": {
+      "title": "Aux États-Unis, le ministère de l'Agriculture et le FBI victimes d'une cyber-attaque",
+      "url": "https://www.france24.com/fr/am%C3%A9riques/20261121-%C3%A9tats-unis-le-minist%C3%A8re-de-l-agriculture-et-le-fbi-victimes-de-piratages-informatiques",
+      "category": "monde",
+      "seenAt": "2026-11-21T13:22:35.628Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "16a6d5717e41": {
+      "title": "Mission Volia : la France en guerre contre la Russie ?",
+      "url": "https://www.france24.com/fr/%C3%A9missions/la-question-qui-f%C3%A2che/20261120-mission-volia-la-france-en-guerre-contre-la-russie",
+      "category": "monde",
+      "seenAt": "2026-11-21T13:22:35.628Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "056e024c9fdb": {
+      "title": "Anaïs Barbeau-Lavalette, écrivaine et réalisatrice québécoise : « Le fait que je sois mortelle m’habite. C’est très vivifiant et ça fait de moi une femme qui prend des risques »",
+      "url": "https://www.lemonde.fr/m-le-mag/article/2026/11/21/l-ecrivaine-et-realisatrice-quebecoise-anais-barbeau-lavalette-le-fait-que-je-sois-mortelle-m-habite-c-est-tres-vivifiant-et-ca-fait-de-moi-une-femme-qui-prend-des-risques_6813917_4500055.html",
+      "category": "monde",
+      "seenAt": "2026-11-21T13:22:35.628Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "79568b7a5bdc": {
+      "title": "Cisjordanie occupée : un Palestinien tué par un garde de sécurité d’une colonie israélienne près de Ramallah",
+      "url": "https://www.lemonde.fr/international/article/2026/11/20/cisjordanie-occupee-un-palestinien-tue-par-un-garde-de-securite-d-une-colonie-israelienne-pres-de-ramallah_6813716_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-21T13:22:35.628Z",
+      "status": "excluded",
+      "reason": "sensitive"
     }
   },
   "slots": {
@@ -4548,6 +4612,33 @@
         "status": "abandoned",
         "lastError": "fenetre_de_rattrapage_depassee"
       }
+    },
+    "2026-11-21": {
+      "0": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "1": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "2": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "3": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "4": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      }
     }
   },
   "lastRun": {
@@ -4678,6 +4769,11 @@
       "lastError": "image_indisponible"
     },
     "2026-11-20": {
+      "status": "failed",
+      "attempts": 1,
+      "lastError": "image_indisponible"
+    },
+    "2026-11-21": {
       "status": "failed",
       "attempts": 1,
       "lastError": "image_indisponible"
