@@ -3683,6 +3683,86 @@
       "seenAt": "2026-11-21T13:22:35.628Z",
       "status": "excluded",
       "reason": "sensitive"
+    },
+    "0f29bd8cb8f9": {
+      "title": "France : cinquantenaire de la mort d’André Malraux ce lundi",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261122-france-cinquantenaire-de-la-mort-d-andr%C3%A9-malraux-ce-lundi",
+      "category": "monde",
+      "seenAt": "2026-11-22T13:15:08.662Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "a0fbd6a777df": {
+      "title": "Italie : décès de Gianni De Gennaro, ex-chef de la police",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261122-italie-d%C3%A9c%C3%A8s-de-gianni-de-gennaro-ex-chef-de-la-police",
+      "category": "monde",
+      "seenAt": "2026-11-22T13:15:08.662Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "97f9797ab7b2": {
+      "title": "Guerre au Moyen-Orient : un nageur britannique traverse le détroit d'Ormuz",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261122-guerre-au-moyen-orient-un-nageur-britannique-traverse-le-d%C3%A9troit-d-ormuz",
+      "category": "monde",
+      "seenAt": "2026-11-22T13:15:08.662Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "830628c2eaf4": {
+      "title": "🔴 En direct : l'effondrement d'un immeuble frappé par un drone russe fait 14 disparus près de Kiev",
+      "url": "https://www.france24.com/fr/europe/20261122-en-direct-la-finlande-d%C3%A9nonce-une-attaque-de-drone-ukrainien-contre-un-cargo-russe-en-mer-baltique",
+      "category": "monde",
+      "seenAt": "2026-11-22T13:15:08.662Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "fbfb536d8d45": {
+      "title": "Le Mexique arrête un baron de la drogue recherché par les États-Unis",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261122-le-mexique-arr%C3%AAte-un-baron-de-la-drogue-recherch%C3%A9-par-les-%C3%A9tats-unis",
+      "category": "monde",
+      "seenAt": "2026-11-22T13:15:08.662Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "dfe59a945376": {
+      "title": "Ligue 1 : Le Paris Saint-Germain enchaîne à Nice (3-2) mais perd Désiré Doué",
+      "url": "https://www.france24.com/fr/%C3%A9missions/sports/20261122-ligue-1-le-paris-saint-germain-encha%C3%AEne-%C3%A0-nice-3-2-mais-perd-d%C3%A9sir%C3%A9-dou%C3%A9",
+      "category": "monde",
+      "seenAt": "2026-11-22T13:15:08.662Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "8efbb3578c65": {
+      "title": "Guerre en Ukraine : deux personnes tuées à Kryvyï Rih",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261121-guerre-en-ukraine-deux-personnes-tu%C3%A9es-%C3%A0-kryvy%C3%AF-rih",
+      "category": "monde",
+      "seenAt": "2026-11-22T13:15:08.662Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "0d0c2f284b2b": {
+      "title": "Le Groupe Castel, empire discret de la bière et du vin, secoué par une guerre de pouvoir",
+      "url": "https://www.lemonde.fr/economie/article/2026/11/22/le-groupe-castel-empire-discret-de-la-biere-et-du-vin-secoue-par-une-guerre-de-pouvoir_6814179_3234.html",
+      "category": "monde",
+      "seenAt": "2026-11-22T13:15:08.662Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "0cb85d689d51": {
+      "title": "« J’avais des pensées suicidaires, j’ai été délaissée par les médecins » : aux Etats-Unis, la mauvaise prise en charge du post-partum fait de nombreuses victimes chez les mères",
+      "url": "https://www.lemonde.fr/sante/article/2026/11/22/j-avais-des-pensees-suicidaires-j-ai-ete-delaissee-par-les-medecins-aux-etats-unis-la-mauvaise-prise-en-charge-du-post-partum-fait-de-nombreuses-victimes-chez-les-meres_6814178_1651302.html",
+      "category": "monde",
+      "seenAt": "2026-11-22T13:15:08.662Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "4143483f9ae3": {
+      "title": "A Londres, une église éthiopienne orthodoxe devenue le refuge d’une communauté exilée par la guerre",
+      "url": "https://www.lemonde.fr/le-monde-des-religions/article/2026/11/22/a-londres-une-eglise-ethiopienne-orthodoxe-devenue-le-refuge-d-une-communaute-exilee-par-la-guerre_6814174_6038514.html",
+      "category": "monde",
+      "seenAt": "2026-11-22T13:15:08.662Z",
+      "status": "excluded",
+      "reason": "sensitive"
     }
   },
   "slots": {
@@ -4639,6 +4719,33 @@
         "status": "abandoned",
         "lastError": "fenetre_de_rattrapage_depassee"
       }
+    },
+    "2026-11-22": {
+      "0": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "1": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "2": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "3": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      },
+      "4": {
+        "attempts": 0,
+        "status": "abandoned",
+        "lastError": "fenetre_de_rattrapage_depassee"
+      }
     }
   },
   "lastRun": {
@@ -4777,6 +4884,11 @@
       "status": "failed",
       "attempts": 1,
       "lastError": "image_indisponible"
+    },
+    "2026-11-22": {
+      "status": "failed",
+      "attempts": 1,
+      "lastError": "UnavailableError: Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status"
     }
   }
 }

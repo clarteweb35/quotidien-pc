@@ -1,1 +1,19 @@
 {"ts":"2026-11-22T00:37:44.606Z","runId":"20261122003744-9465","level":"info","event":"cycle.start","date":"2026-11-22","due":[],"remainingToday":5,"dryRun":false}
+{"ts":"2026-11-22T13:15:08.660Z","runId":"20261122131508-ccc3","level":"warn","event":"cycle.slots_abandoned","count":5}
+{"ts":"2026-11-22T13:15:08.661Z","runId":"20261122131508-ccc3","level":"info","event":"cycle.start","date":"2026-11-22","due":[],"remainingToday":5,"dryRun":false}
+{"ts":"2026-11-22T13:15:09.452Z","runId":"20261122131508-ccc3","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":30,"kept":25}
+{"ts":"2026-11-22T13:15:09.452Z","runId":"20261122131508-ccc3","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-11-22T13:15:09.452Z","runId":"20261122131508-ccc3","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":18}
+{"ts":"2026-11-22T13:15:09.452Z","runId":"20261122131508-ccc3","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":22}
+{"ts":"2026-11-22T13:15:09.452Z","runId":"20261122131508-ccc3","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":18}
+{"ts":"2026-11-22T13:15:09.452Z","runId":"20261122131508-ccc3","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":20,"kept":14}
+{"ts":"2026-11-22T13:15:09.452Z","runId":"20261122131508-ccc3","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":12}
+{"ts":"2026-11-22T13:15:09.453Z","runId":"20261122131508-ccc3","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":12}
+{"ts":"2026-11-22T13:15:09.453Z","runId":"20261122131508-ccc3","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":3}
+{"ts":"2026-11-22T13:15:09.453Z","runId":"20261122131508-ccc3","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":13}
+{"ts":"2026-11-22T13:15:09.453Z","runId":"20261122131508-ccc3","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":12}
+{"ts":"2026-11-22T13:15:09.453Z","runId":"20261122131508-ccc3","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":6}
+{"ts":"2026-11-22T13:15:09.778Z","runId":"20261122131508-ccc3","level":"warn","event":"gemini.retry","purpose":"caricature","status":503,"attempt":1,"delayMs":4540}
+{"ts":"2026-11-22T13:15:18.119Z","runId":"20261122131508-ccc3","level":"warn","event":"caricature.fallback_model","from":"gemini-3.6-flash","to":"gemini-3.8-flash"}
+{"ts":"2026-11-22T13:15:19.109Z","runId":"20261122131508-ccc3","level":"warn","event":"gemini.retry","purpose":"caricature","status":503,"attempt":1,"delayMs":4593}
+{"ts":"2026-11-22T13:15:55.403Z","runId":"20261122131508-ccc3","level":"warn","event":"caricature.error","date":"2026-11-22","error":"Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status"}
