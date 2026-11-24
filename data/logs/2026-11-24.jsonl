@@ -19,3 +19,22 @@
 {"ts":"2026-11-24T08:13:17.143Z","runId":"20261124081234-9649","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":843,"outputTokens":56,"costUsd":0.000393}
 {"ts":"2026-11-24T08:13:17.143Z","runId":"20261124081234-9649","level":"info","event":"judge.result","slot":"2026-11-24#0","attempt":1,"humor":8,"coherence":9,"risk":0,"issues":[]}
 {"ts":"2026-11-24T08:13:17.146Z","runId":"20261124081234-9649","level":"info","event":"publish.ok","slot":"2026-11-24#0","id":"22dea753feff","slug":"pourquoi-la-lethargie-economique-est-notre-meilleure-arme","url":"/articles/pourquoi-la-lethargie-economique-est-notre-meilleure-arme/","attempt":1,"dryRun":false}
+{"ts":"2026-11-24T08:42:34.277Z","runId":"20261124084234-b380","level":"info","event":"cycle.start","date":"2026-11-24","due":["2026-11-24#1"],"remainingToday":4,"dryRun":false}
+{"ts":"2026-11-24T08:42:36.289Z","runId":"20261124084234-b380","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":28,"kept":25}
+{"ts":"2026-11-24T08:42:36.289Z","runId":"20261124084234-b380","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-11-24T08:42:36.289Z","runId":"20261124084234-b380","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":20}
+{"ts":"2026-11-24T08:42:36.289Z","runId":"20261124084234-b380","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":23}
+{"ts":"2026-11-24T08:42:36.290Z","runId":"20261124084234-b380","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":17}
+{"ts":"2026-11-24T08:42:36.290Z","runId":"20261124084234-b380","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":20,"kept":20}
+{"ts":"2026-11-24T08:42:36.290Z","runId":"20261124084234-b380","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":14}
+{"ts":"2026-11-24T08:42:36.290Z","runId":"20261124084234-b380","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":12}
+{"ts":"2026-11-24T08:42:36.290Z","runId":"20261124084234-b380","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":4}
+{"ts":"2026-11-24T08:42:36.290Z","runId":"20261124084234-b380","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":7}
+{"ts":"2026-11-24T08:42:36.290Z","runId":"20261124084234-b380","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":5}
+{"ts":"2026-11-24T08:42:36.290Z","runId":"20261124084234-b380","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":12}
+{"ts":"2026-11-24T08:42:36.291Z","runId":"20261124084234-b380","level":"info","event":"collect.done","items":175}
+{"ts":"2026-11-24T08:42:36.352Z","runId":"20261124084234-b380","level":"info","event":"topic.selection","slot":"2026-11-24#1","target":"environnement","candidates":175,"rejected":3,"chosen":"Au Pays basque, le crépuscule de la chasse traditionnelle aux alouettes des champs, une espèce en déclin","score":5}
+{"ts":"2026-11-24T08:42:36.720Z","runId":"20261124084234-b380","level":"warn","event":"gemini.retry","purpose":"generate","status":503,"attempt":1,"delayMs":4440}
+{"ts":"2026-11-24T08:42:52.693Z","runId":"20261124084234-b380","level":"warn","event":"gemini.fallback_model","from":"gemini-3.6-flash","to":"gemini-3.8-flash"}
+{"ts":"2026-11-24T08:42:53.708Z","runId":"20261124084234-b380","level":"warn","event":"gemini.retry","purpose":"generate","status":503,"attempt":1,"delayMs":4870}
+{"ts":"2026-11-24T08:43:01.134Z","runId":"20261124084234-b380","level":"error","event":"cycle.stopped","reason":"gemini_unavailable","error":"Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}"}

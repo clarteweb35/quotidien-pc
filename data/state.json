@@ -3907,6 +3907,29 @@
       "seenAt": "2026-11-24T08:12:35.740Z",
       "status": "used",
       "usedAt": "2026-11-24T08:12:35.740Z"
+    },
+    "f1fc877b81b0": {
+      "title": "Glyphosate : la cancérogénicité de l’herbicide de Bayer reconnue par une institution scientifique majeure aux Etats-Unis",
+      "url": "https://www.lemonde.fr/planete/article/2026/11/23/glyphosate-la-cancerogenicite-de-l-herbicide-de-bayer-reconnue-par-une-institution-scientifique-majeure-aux-etats-unis_6814434_3244.html",
+      "category": "environnement",
+      "seenAt": "2026-11-24T08:42:36.291Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "4ce47b61c58a": {
+      "title": "Inondations au Népal : l’Inde offre à son voisin et allié un « plan de coopération » et une aide à la reconstruction de 1,6 milliard de dollars",
+      "url": "https://www.lemonde.fr/international/article/2026/11/23/inondations-au-nepal-l-inde-offre-a-son-voisin-et-allie-un-plan-de-cooperation-et-une-aide-a-la-reconstruction-de-1-6-milliard-de-dollars_6814377_3210.html",
+      "category": "environnement",
+      "seenAt": "2026-11-24T08:42:36.291Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "e52e72d4efa2": {
+      "title": "Au Pays basque, le crépuscule de la chasse traditionnelle aux alouettes des champs, une espèce en déclin",
+      "url": "https://www.lemonde.fr/planete/article/2026/11/24/au-pays-basque-le-crepuscule-de-la-chasse-traditionnelle-aux-alouettes-des-champs-une-espece-en-declin_6814710_3244.html",
+      "category": "environnement",
+      "seenAt": "2026-11-24T08:42:36.291Z",
+      "status": "in_progress"
     }
   },
   "slots": {
@@ -4927,14 +4950,20 @@
         "publishedAt": "2026-11-24T08:12:35.740Z",
         "topicId": "11f4da5aaae2",
         "lastError": null
+      },
+      "1": {
+        "attempts": 1,
+        "status": "failed",
+        "startedAt": "2026-11-24T08:42:36.291Z",
+        "lastError": "gemini_unavailable: Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}"
       }
     }
   },
   "lastRun": {
-    "at": "2026-11-24T08:12:34.684Z",
-    "runId": "20261124081234-9649",
-    "published": 1,
-    "stopped": null
+    "at": "2026-11-24T08:42:34.261Z",
+    "runId": "20261124084234-b380",
+    "published": 0,
+    "stopped": "gemini_unavailable"
   },
   "caricatures": {
     "2026-10-27": {
