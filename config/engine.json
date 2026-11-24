@@ -78,7 +78,7 @@
   "caricature": {
     "enabled": true,
     "at": "11:40",
-    "catchupMinutes": 300,
+    "catchupMinutes": 420,
     "category": "monde",
     "legendeMaxChars": 200,
     "styleGuide": "Dessin de presse caricatural français, trait à l'encre noire vif et expressif, aplats d'aquarelle, personnages génériques aux proportions exagérées, humour visuel, sur papier ivoire.",

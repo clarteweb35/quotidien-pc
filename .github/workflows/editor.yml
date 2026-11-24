@@ -1,6 +1,7 @@
 name: Rédaction automatique
 
-# Exécute le moteur éditorial. Le cron GitHub peut avoir du retard (parfois plusieurs minutes) ou sauter
+# Exécute le moteur éditorial. Déclencheur principal : cron-job.org (workflow_dispatch, voir docs/EXPLOITATION.md).
+# Le cron GitHub ci-dessous sert de secours : il peut avoir des heures de retard ou sauter
 # une exécution en période de charge : le moteur rattrape les créneaux manqués dans la limite configurée.
 on:
   schedule:

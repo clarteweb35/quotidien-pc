@@ -41,7 +41,7 @@ test('jamais plus de maxPerDay, meme avec rattrapage force et publications extra
 });
 
 test('creneaux hors fenetre de rattrapage: ignores', () => {
-  const ctx = makeCtx({ at: '2026-10-24T19:00:00Z' }); // 21:00 Paris
+  const ctx = makeCtx({ at: '2026-10-24T19:00:00Z', mutateCfg: (c) => (c.schedule.catchupMinutes = 150) }); // 21:00 Paris ; fenetre fixee ici pour ne pas dependre du reglage
   const { due } = dueSlots({ now: ctx.now(), schedule: ctx.cfg.schedule, store: ctx.store });
   assert.deepEqual(due.map((d) => d.hhmm), ['19:30', '21:30'].filter((h) => h === '19:30'));
   cleanup(ctx);

@@ -3,6 +3,6 @@
   "slots": ["09:10", "09:40", "10:10", "10:40", "11:10"],
   "editoSlot": 0,
   "maxPerDay": 5,
-  "catchupMinutes": 150,
+  "catchupMinutes": 540,
   "maxPublicationsPerRun": 2
 }
