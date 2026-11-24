@@ -4010,6 +4010,61 @@
       "seenAt": "2026-11-24T10:14:31.967Z",
       "status": "used",
       "usedAt": "2026-11-24T10:14:31.967Z"
+    },
+    "8de9af884e76": {
+      "title": "« Les Enfances coloniales », sur RFI : une enquête sur les traces intimes de la guerre d’Algérie",
+      "url": "https://www.lemonde.fr/culture/article/2026/11/23/les-enfances-coloniales-sur-rfi-une-enquete-sur-les-traces-intimes-de-la-guerre-d-algerie_6814420_3246.html",
+      "category": "culture",
+      "seenAt": "2026-11-24T10:42:36.181Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "822fee86b61b": {
+      "title": "Catherine Clément, philosophe passionnée de l’Inde, est morte à 87 ans",
+      "url": "https://www.lemonde.fr/disparitions/article/2026/11/23/catherine-clement-philosophe-passionnee-de-l-inde-est-morte-a-87-ans_6814414_3382.html",
+      "category": "culture",
+      "seenAt": "2026-11-24T10:42:36.181Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "8d6e78dc6592": {
+      "title": "« Making Marie Antoinette », sur Mubi : la cinéaste Sofia Coppola révélée par la caméra de sa mère",
+      "url": "https://www.lemonde.fr/culture/article/2026/11/23/making-marie-antoinette-sur-mubi-la-cineaste-sofia-coppola-revelee-par-la-camera-de-sa-mere_6814410_3246.html",
+      "category": "culture",
+      "seenAt": "2026-11-24T10:42:36.181Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "e8c66a45e74b": {
+      "title": "Cyril Hanouna arrête son émission sur Fun Radio, après une forte baisse d’audience",
+      "url": "https://www.lemonde.fr/culture/article/2026/11/23/cyril-hanouna-arrete-son-emission-sur-fun-radio-apres-une-forte-baisse-d-audience_6814432_3246.html",
+      "category": "culture",
+      "seenAt": "2026-11-24T10:42:36.181Z",
+      "status": "in_progress"
+    },
+    "ea160f290f41": {
+      "title": "\"L'espace en 100 questions\" : Thomas Pesquet répond aux enfants",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261124-l-espace-en-100-questions-thomas-pesquet-r%C3%A9pond-aux-enfants",
+      "category": "monde",
+      "seenAt": "2026-11-24T10:43:11.595Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "46c146788314": {
+      "title": "🔴 Mort de Nahel Merzouk : la justice ordonne un procès pour meurtre à l'encontre du policier",
+      "url": "https://www.france24.com/fr/france/20261124-mort-nahel-merzouk-justice-ordonne-proc%C3%A8s-pour-meurtre-policier",
+      "category": "monde",
+      "seenAt": "2026-11-24T10:43:11.595Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "a29bdc7d5c66": {
+      "title": "Gaza : six personnes tuées par des frappes israéliennes, selon les services de secours palestiniens",
+      "url": "https://www.lemonde.fr/international/article/2026/11/24/gaza-six-personnes-tuees-par-des-frappes-israeliennes-selon-les-services-de-secours-palestiniens_6814740_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-24T10:43:11.595Z",
+      "status": "excluded",
+      "reason": "sensitive"
     }
   },
   "slots": {
@@ -5050,10 +5105,10 @@
         "lastError": null
       },
       "3": {
-        "attempts": 2,
+        "attempts": 3,
         "status": "failed",
-        "startedAt": "2026-11-24T10:12:35.451Z",
-        "lastError": "copie_source"
+        "startedAt": "2026-11-24T10:42:36.181Z",
+        "lastError": "gemini_unavailable: Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}"
       },
       "4": {
         "attempts": 1,
@@ -5067,10 +5122,10 @@
     }
   },
   "lastRun": {
-    "at": "2026-11-24T10:12:34.709Z",
-    "runId": "20261124101234-47b6",
-    "published": 1,
-    "stopped": null
+    "at": "2026-11-24T10:42:35.046Z",
+    "runId": "20261124104235-b8e8",
+    "published": 0,
+    "stopped": "gemini_unavailable"
   },
   "caricatures": {
     "2026-10-27": {
@@ -5207,6 +5262,11 @@
       "status": "failed",
       "attempts": 1,
       "lastError": "UnavailableError: Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status"
+    },
+    "2026-11-24": {
+      "status": "failed",
+      "attempts": 1,
+      "lastError": "UnavailableError: Gemini indisponible apres 2 tentatives (504): {\"error\":{\"code\":504,\"message\":\"Deadline expired before operation could complete.\",\"status\":\"DEADLINE_EXCEEDED\"}}"
     }
   }
 }
