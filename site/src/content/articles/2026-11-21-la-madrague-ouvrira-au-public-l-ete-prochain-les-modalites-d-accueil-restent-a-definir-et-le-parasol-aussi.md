@@ -7,7 +7,7 @@ chapo: "La Madrague, maison mythique de Brigitte Bardot à Saint-Tropez, ouvrira
 description: "Satire : la Madrague, à Saint-Tropez, sera visitable l’été prochain. Les modalités d’accueil ne sont pas encore arrêtées avec précision."
 category: "culture"
 tags: ["culture","saint-tropez","la madrague","patrimoine","tourisme"]
-publishedAt: "2026-11-14T09:40:00.000Z"
+publishedAt: "2026-11-21T08:40:00.000Z"
 kind: "news"
 satire: true
 sources: [{"name":"Le Monde","title":"La Madrague, maison mythique de Brigitte Bardot à Saint-Tropez, ouvrira ses portes au public dès l’été prochain","url":"https://www.lemonde.fr/culture/article/2026/11/13/la-madrague-maison-mythique-de-brigitte-bardot-a-saint-tropez-ouvrira-ses-portes-au-public-des-l-ete-prochain_6809382_3246.html"}]

@@ -7,7 +7,7 @@ chapo: "Plus d’espace pour les jambes, des wagons bar, du confort : le « TGV 
 description: "Satire : avec près de deux ans de retard, le nouveau TGV Inoui de la SNCF a réalisé son premier trajet commercial entre Paris et Marseille."
 category: "societe"
 tags: ["société","sncf","tgv","transports","retard"]
-publishedAt: "2026-11-06T08:10:00.000Z"
+publishedAt: "2026-11-17T08:10:00.000Z"
 kind: "news"
 satire: true
 sources: [{"name":"franceinfo","title":"« On a surmonté les difficultés et on a un très bon train » : le nouveau TGV de la SNCF a réalisé son premier trajet commercial entre Paris et Marseille","url":"https://www.franceinfo.fr/economie/transports/sncf/on-a-surmonte-les-difficultes-et-on-a-un-tres-bon-train-le-nouveau-tgv-de-la-sncf-a-realise-son-premier-trajet-commercial-entre-paris-et-marseille_8270894.html"}]

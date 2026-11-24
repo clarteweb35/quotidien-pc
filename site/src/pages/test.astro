@@ -5,7 +5,9 @@ import { category, formatDate, readingMinutes, url } from '../lib/site';
 import { journalist, authorSlug, deskLabel } from '../lib/authors';
 
 // Page de relecture: articles ecrits a la main, pas encore publies (non indexee).
-const enAttente = (await getCollection('enAttente')).sort((a, b) => a.data.id.localeCompare(b.data.id));
+// Tri par reference (261124-D1, D2… D10) : l'ordre de la liste correspond a la numerotation de l'editeur
+const cle = (a) => a.data.ref ?? a.data.id;
+const enAttente = (await getCollection('enAttente')).sort((a, b) => cle(a).localeCompare(cle(b), 'fr', { numeric: true }));
 const rendus = await Promise.all(enAttente.map(async (a) => ({ a, Content: (await render(a)).Content })));
 ---
 <Base manchette={false} noindex title="Articles en attente" description="Page de relecture: articles pas encore publiés.">

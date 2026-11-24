@@ -7,7 +7,7 @@ chapo: "Au Stade de France, les Bleus ont renversé les Springboks, double champ
 description: "Satire : victoire de justesse du XV de France sur l’Afrique du Sud (21-19) au Stade de France. Un match à haute tension artérielle."
 category: "sport"
 tags: ["sport","rugby","xv de france","afrique du sud","antoine dupont"]
-publishedAt: "2026-11-14T08:45:00.000Z"
+publishedAt: "2026-11-15T08:40:00.000Z"
 kind: "news"
 satire: true
 sources: [{"name":"Le Monde","title":"Porté par un Antoine Dupont omniprésent, le XV de France, héroïque, se défait de l’Afrique du Sud","url":"https://www.lemonde.fr/sport/article/2026/11/14/porte-par-un-antoine-dupont-omnipresent-le-xv-de-france-heroique-se-defait-de-l-afrique-du-sud_6809521_3242.html"},{"name":"Le Monde","title":"France – Afrique du Sud : le résumé de la victoire sur le fil des Bleus face aux Springboks","url":"https://www.lemonde.fr/sport/article/2026/11/13/france-afrique-du-sud-le-resume-de-la-victoire-sur-le-fil-des-bleus-face-aux-springboks_6809393_3242.html"}]
