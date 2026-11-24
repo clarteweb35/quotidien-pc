@@ -7,7 +7,7 @@ chapo: "Pendant que la COP31 piétinait, un sommet inédit réunissait en Chine 
 description: "Satire : en pleine COP31, un sommet inédit en Chine réunit trois grandes puissances autour d’une déclaration de paix… et de davantage de pétrole raffiné."
 category: "monde"
 tags: ["diplomatie","chine","pétrole","sommet"]
-publishedAt: "2026-11-24T08:10:00.000Z"
+publishedAt: "2026-11-24T04:30:00.000Z"
 kind: "news"
 satire: true
 sources: [{"name":"France 24","title":"Ce qu’il faut retenir du sommet inédit entre Donald Trump, Xi Jinping et Vladimir Poutine","url":"https://www.france24.com/fr/asie-pacifique/20261119-ce-qu-il-faut-retenir-du-sommet-in%C3%A9dit-entre-donald-trump-xi-jinping-et-vladimir-poutine"},{"name":"franceinfo","title":"Xi Jinping, Vladimir Poutine et Donald Trump adoptent une « déclaration de paix » après un sommet inédit","url":"https://www.franceinfo.fr/monde/usa/presidentielle/donald-trump/xi-jinping-vladimir-poutine-et-donald-trump-adoptent-une-declaration-de-paix-apres-un-sommet-inedit_8290064.html"}]

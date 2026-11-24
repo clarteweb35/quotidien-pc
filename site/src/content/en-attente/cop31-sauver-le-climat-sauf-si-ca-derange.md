@@ -1,12 +1,12 @@
 ---
-id: "rivard-d41"
+id: "manchette-d13"
 ref: "261124-D1"
-author: "Jeanne Rivard"
+author: "Jean-Eudes de la Manchette"
 title: "COP31 : sauver le climat, sauf si ça dérange"
 chapo: "À Antalya, la COP31 s’est achevée sans accord final, faute d’entente sur les énergies fossiles. Les dirigeants ont déclaré l’urgence au conditionnel ; la planète, elle, n’a pas demandé de prolongation."
-description: "Satire : À Antalya, la COP31 s’est achevée sans accord final, faute d’entente sur les énergies fossiles."
-category: "environnement"
-tags: ["cop31","climat","énergies fossiles","diplomatie"]
+description: "Édito satirique de Jean-Eudes de la Manchette : la COP31 finit sans accord, l’urgence se déclare au conditionnel et la planète chauffe."
+category: "editos"
+tags: ["édito","cop31","climat","énergies fossiles","diplomatie"]
 publishedAt: "2026-11-24T08:10:00.000Z"
 kind: "news"
 satire: true

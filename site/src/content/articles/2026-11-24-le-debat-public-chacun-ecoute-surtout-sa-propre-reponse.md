@@ -7,7 +7,7 @@ chapo: "Chaque camp affirme vouloir renouer le dialogue, puis attend patiemment 
 description: "Satire : Chaque camp affirme vouloir renouer le dialogue, puis attend patiemment que l’autre se taise."
 category: "politique"
 tags: ["débat public","médias","réseaux sociaux","dialogue"]
-publishedAt: "2026-11-24T08:10:00.000Z"
+publishedAt: "2026-11-24T04:40:00.000Z"
 kind: "evergreen"
 satire: true
 sources: []

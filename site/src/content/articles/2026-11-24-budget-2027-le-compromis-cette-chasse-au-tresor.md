@@ -7,7 +7,7 @@ chapo: "Rejeté à l’unanimité par les députés, le budget 2027 poursuit sa 
 description: "Satire : Rejeté à l’unanimité par les députés, le budget 2027 poursuit sa route au Sénat en quête d’un compromis."
 category: "economie"
 tags: ["budget 2027","assemblée nationale","sénat","économies"]
-publishedAt: "2026-11-24T08:10:00.000Z"
+publishedAt: "2026-11-24T04:25:00.000Z"
 kind: "news"
 satire: true
 sources: [{"name":"France 24","title":"L’Assemblée nationale rejette le budget de l’État 2027 à l’unanimité en première lecture","url":"https://www.france24.com/fr/france/20261104-assemblee-nationale-rejette-unanimite-en-premiere-lecture-budget-etat-2027-pib-finances"},{"name":"Public Sénat","title":"Budget 2027 : calendrier, 49.3, ordonnances… Quelles sont les échéances à venir et les scénarios possibles ?","url":"https://www.publicsenat.fr/actualites/politique/budget-2027-calendrier-49-3-ordonnancesquelles-sont-les-echeances-a-venir-et-les-scenarios-possibles"}]

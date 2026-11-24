@@ -7,7 +7,7 @@ chapo: "Les entreprises adoptent l’intelligence artificielle avec enthousiasme
 description: "Satire : Les entreprises adoptent l’intelligence artificielle avec enthousiasme, à condition d’embaucher des équipes pour vérifier qu’elle n’a rien inventé."
 category: "tech"
 tags: ["intelligence artificielle","travail","entreprise","productivité"]
-publishedAt: "2026-11-24T08:10:00.000Z"
+publishedAt: "2026-11-24T04:35:00.000Z"
 kind: "evergreen"
 satire: true
 sources: []
