@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-24",
+    "titre": "Les pieds dans l’eau",
+    "legende": "À la COP31, l’eau monte jusqu’aux genoux des délégués : la déclaration finale, elle, n’a jamais réussi à sortir la tête de l’eau.",
+    "alt": "Dessin de presse : des délégués assis autour d’une grande table de conférence, de l’eau jusqu’aux genoux, lisent des documents pendant qu’un orateur annonce sur scène un accord final « We will think about it » ; au mur, une courbe de température en flammes.",
+    "image": "images/caricatures/2026-11-24-cop31.webp",
+    "credit": "Dessin généré par IA · Le Quotidien Presque Certain",
+    "publishedAt": "2026-11-24T04:12:56.351Z",
+    "source": {
+      "name": "franceinfo",
+      "title": "COP31 : le sommet pour le climat s’achève à Antalya sans accord final, de nombreux pays restant divisés sur la question des énergies fossiles",
+      "url": "https://www.franceinfo.fr/environnement/crise-climatique/cop-climat/la-cop31-s-acheve-a-antalya-sans-que-les-pays-ne-s-accordent-sur-une-declaration-finale-divises-sur-la-question-des-energies-fossiles_8295011.html"
+    }
+  },
+  {
     "date": "2026-11-13",
     "titre": "La pause-café de trente jours",
     "legende": "Rien de tel qu'un mois entier de réunions autour d'une table vide pour meubler le pouvoir d'achat des agents publics.",
