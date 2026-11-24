@@ -1,7 +1,7 @@
 {
   "date": "2026-11-24",
   "target": 5,
-  "publishedCount": 3,
+  "publishedCount": 4,
   "articles": [
     {
       "id": "2fe9de155a32",
@@ -9,6 +9,13 @@
       "title": "Chimie : la direction félicite des salariés devenus entièrement imperméables grâce aux PFAS",
       "category": "environnement",
       "slug": "chimie-la-direction-felicite-des-salaries-devenus"
+    },
+    {
+      "id": "50c5c5e5dc75",
+      "ref": "261124-05",
+      "title": "JO d’hiver 2030 : 12 000 gendarmes déployés dans les Alpes pour vérifier que les skieurs font bien leur chasse-neige",
+      "category": "sport",
+      "slug": "jo-d-hiver-2030-12-000-gendarmes-deployes-dans-les-alpes"
     },
     {
       "id": "39eb916b526d",
@@ -62,34 +69,39 @@
     {
       "idx": 3,
       "hhmm": "10:40",
-      "attempts": 1,
+      "attempts": 2,
       "status": "failed",
-      "startedAt": "2026-11-24T09:42:33.405Z",
-      "lastError": "corps_trop_court"
+      "startedAt": "2026-11-24T10:12:35.451Z",
+      "lastError": "copie_source"
     },
     {
       "idx": 4,
       "hhmm": "11:10",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 1,
+      "status": "published",
+      "startedAt": "2026-11-24T10:14:31.967Z",
+      "articleId": "50c5c5e5dc75",
+      "publishedAt": "2026-11-24T10:14:31.967Z",
+      "topicId": "642f96bd5d67",
+      "lastError": null
     }
   ],
-  "rejections": 1,
-  "quarantined": 2,
+  "rejections": 2,
+  "quarantined": 3,
   "api": {
-    "calls": 11,
-    "inputTokens": 31637,
-    "outputTokens": 17755,
-    "costUsd": 0.174532,
+    "calls": 16,
+    "inputTokens": 50929,
+    "outputTokens": 29822,
+    "costUsd": 0.292572,
     "dailyCapUsd": 1,
-    "monthCostUsd": 0.632837,
+    "monthCostUsd": 0.750877,
     "monthlyCapUsd": 15
   },
   "paused": false,
   "lastRun": {
-    "at": "2026-11-24T09:42:32.933Z",
-    "runId": "20261124094232-f56d",
-    "published": 0,
+    "at": "2026-11-24T10:12:34.709Z",
+    "runId": "20261124101234-47b6",
+    "published": 1,
     "stopped": null
   }
 }

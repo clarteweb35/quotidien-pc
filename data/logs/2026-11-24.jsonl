@@ -87,3 +87,31 @@
 {"ts":"2026-11-24T09:44:09.344Z","runId":"20261124094232-f56d","level":"warn","event":"validate.deterministic_failed","slot":"2026-11-24#3","attempt":2,"issues":["corps_trop_court"]}
 {"ts":"2026-11-24T09:44:09.344Z","runId":"20261124094232-f56d","level":"warn","event":"slot.quarantined","slot":"2026-11-24#3","reasons":["corps_trop_court"]}
 {"ts":"2026-11-24T09:44:09.346Z","runId":"20261124094232-f56d","level":"warn","event":"slot.failed","slot":"2026-11-24#3","reason":"corps_trop_court"}
+{"ts":"2026-11-24T10:12:34.727Z","runId":"20261124101234-47b6","level":"info","event":"cycle.start","date":"2026-11-24","due":["2026-11-24#3","2026-11-24#4"],"remainingToday":2,"dryRun":false}
+{"ts":"2026-11-24T10:12:35.449Z","runId":"20261124101234-47b6","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":28,"kept":25}
+{"ts":"2026-11-24T10:12:35.449Z","runId":"20261124101234-47b6","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-11-24T10:12:35.449Z","runId":"20261124101234-47b6","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":20}
+{"ts":"2026-11-24T10:12:35.449Z","runId":"20261124101234-47b6","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":23}
+{"ts":"2026-11-24T10:12:35.449Z","runId":"20261124101234-47b6","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":17}
+{"ts":"2026-11-24T10:12:35.449Z","runId":"20261124101234-47b6","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":20,"kept":20}
+{"ts":"2026-11-24T10:12:35.450Z","runId":"20261124101234-47b6","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":13}
+{"ts":"2026-11-24T10:12:35.450Z","runId":"20261124101234-47b6","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":11}
+{"ts":"2026-11-24T10:12:35.450Z","runId":"20261124101234-47b6","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":4}
+{"ts":"2026-11-24T10:12:35.450Z","runId":"20261124101234-47b6","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":8}
+{"ts":"2026-11-24T10:12:35.450Z","runId":"20261124101234-47b6","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":5}
+{"ts":"2026-11-24T10:12:35.450Z","runId":"20261124101234-47b6","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":10}
+{"ts":"2026-11-24T10:12:35.450Z","runId":"20261124101234-47b6","level":"info","event":"collect.done","items":172}
+{"ts":"2026-11-24T10:12:35.494Z","runId":"20261124101234-47b6","level":"info","event":"topic.selection","slot":"2026-11-24#3","target":"sport","candidates":172,"rejected":1,"chosen":"Plus de 12 000 policiers et gendarmes seront mobilisés pour la sécurité des Alpes françaises 2030 « au plus fort des Jeux »","score":4.5}
+{"ts":"2026-11-24T10:14:02.469Z","runId":"20261124101234-47b6","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4582,"outputTokens":3346,"costUsd":0.031968}
+{"ts":"2026-11-24T10:14:02.529Z","runId":"20261124101234-47b6","level":"warn","event":"validate.deterministic_failed","slot":"2026-11-24#3","attempt":1,"issues":["chapo_trop_long"]}
+{"ts":"2026-11-24T10:14:31.912Z","runId":"20261124101234-47b6","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4632,"outputTokens":3239,"costUsd":0.031241}
+{"ts":"2026-11-24T10:14:31.963Z","runId":"20261124101234-47b6","level":"warn","event":"validate.deterministic_failed","slot":"2026-11-24#3","attempt":2,"issues":["copie_source"]}
+{"ts":"2026-11-24T10:14:31.963Z","runId":"20261124101234-47b6","level":"warn","event":"slot.quarantined","slot":"2026-11-24#3","reasons":["copie_source"]}
+{"ts":"2026-11-24T10:14:31.966Z","runId":"20261124101234-47b6","level":"warn","event":"slot.failed","slot":"2026-11-24#3","reason":"copie_source"}
+{"ts":"2026-11-24T10:14:32.003Z","runId":"20261124101234-47b6","level":"info","event":"topic.selection","slot":"2026-11-24#4","target":"sport","candidates":172,"rejected":1,"chosen":"Plus de 12 000 policiers et gendarmes seront mobilisés pour la sécurité des Alpes françaises 2030 « au plus fort des Jeux »","score":4.5}
+{"ts":"2026-11-24T10:15:02.134Z","runId":"20261124101234-47b6","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4588,"outputTokens":2173,"costUsd":0.02318}
+{"ts":"2026-11-24T10:15:02.180Z","runId":"20261124101234-47b6","level":"warn","event":"validate.deterministic_failed","slot":"2026-11-24#4","attempt":1,"issues":["chapo_trop_long"]}
+{"ts":"2026-11-24T10:16:15.429Z","runId":"20261124101234-47b6","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4638,"outputTokens":3233,"costUsd":0.031205}
+{"ts":"2026-11-24T10:16:16.753Z","runId":"20261124101234-47b6","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":852,"outputTokens":76,"costUsd":0.000446}
+{"ts":"2026-11-24T10:16:16.754Z","runId":"20261124101234-47b6","level":"info","event":"judge.result","slot":"2026-11-24#4","attempt":2,"humor":7,"coherence":9,"risk":1,"issues":[]}
+{"ts":"2026-11-24T10:16:16.758Z","runId":"20261124101234-47b6","level":"info","event":"publish.ok","slot":"2026-11-24#4","id":"50c5c5e5dc75","slug":"jo-d-hiver-2030-12-000-gendarmes-deployes-dans-les-alpes","url":"/articles/jo-d-hiver-2030-12-000-gendarmes-deployes-dans-les-alpes/","attempt":2,"dryRun":false}

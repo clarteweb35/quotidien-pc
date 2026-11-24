@@ -189,6 +189,99 @@
       "judge": null,
       "status": "quarantined",
       "retries": 0
+    },
+    {
+      "id": "3c90de242a84",
+      "createdAt": "2026-11-24T10:12:35.451Z",
+      "slotKey": "2026-11-24#3",
+      "topic": {
+        "id": "642f96bd5d67",
+        "title": "Plus de 12 000 policiers et gendarmes seront mobilisés pour la sécurité des Alpes françaises 2030 « au plus fort des Jeux »",
+        "summary": "L’Etat et le Comité d’organisation des Jeux olympiques et paralympiques ont signé, lundi, au ministère de l’intérieur, un protocole relatif à la sécurité et à la sûreté de l’événement.",
+        "url": "https://www.lemonde.fr/sport/article/2026/11/23/plus-de-12-000-policiers-et-gendarmes-seront-mobilises-pour-la-securite-des-alpes-francaises-2030-au-plus-fort-des-jeux_6814436_3242.html",
+        "publishedAt": "2026-11-23T17:58:28.000Z",
+        "feedId": "lemonde-sport",
+        "sourceName": "Le Monde - Sport",
+        "category": "sport",
+        "score": 4.5,
+        "kind": "news",
+        "forcedCategory": "sport"
+      },
+      "article": {
+        "status": "ready_for_review",
+        "rejection_reason": "",
+        "title": "JO d’hiver 2030 : 12 000 forces de l’ordre déployées dès maintenant pour vérifier les papiers des marmottes",
+        "chapo": "Pour sécuriser les Jeux olympiques des Alpes françaises en 2030, l’État déploie déjà 12 000 policiers et gendarmes sur les pistes enneigées. Objectif : contrôler le matériel et verbaliser tout flocon suspect.",
+        "category": "sport",
+        "tags": [
+          "jo 2030",
+          "alpes",
+          "sécurité",
+          "sports d'hiver",
+          "police"
+        ],
+        "seo_description": "12 000 policiers et gendarmes mobilisés pour les JO 2030 dans les Alpes : découvrez le plan de sécurité sur les pistes enneigées.",
+        "angle": "Pousser l'annonce du déploiement massif de 12 000 forces de l'ordre pour les JO 2030 jusqu'à l'absurde en les faisant patrouiller immédiatement sur des sommets déserts.",
+        "fictional_elements": [
+          "Patrouilles de gendarmes à skis contrôlant l'identité des marmottes en hibernation",
+          "Procès-verbaux dressés contre les bonhommes de neige non déclarés",
+          "Barrages filtrants au sommet des couloirs d'avalanche déserts"
+        ],
+        "author": "Pauline Roussel",
+        "image_prompt": "Dessin humoristique montrant un gendarme en tenue d'hiver lourde et skis aux pieds, contrôlant les papiers d'identité d'un petit rongeur au sommet d'une montagne enneigée et déserte.",
+        "image_alt": "Un gendarme à skis contrôle une marmotte sur un sommet enneigé au milieu de nulle part.",
+        "quality_checks": {
+          "facts_verified": true,
+          "fiction_clearly_satirical": true,
+          "no_invented_quotes": true,
+          "no_personal_attack": true,
+          "original_angle": true,
+          "no_known_duplicate": true
+        },
+        "body": [
+          {
+            "kind": "p",
+            "text": "À quelques années de l'événement, les sommets alpins s'apprêtent à connaître une animation sécuritaire sans précédent. Alors que le protocole relatif à la sécurité et à la sûreté vient d'être officiellement signé pour les Jeux olympiques et paralympiques d'hiver de 2030, les autorités ont décidé de ne laisser aucune place au hasard. Au plus fort de la compétition, pas moins de 12 000 policiers et gendarmes seront mobilisés pour veiller sur le massif. Une présence d'une ampleur inédite, calibrée pour répondre à toutes les éventualités."
+          },
+          {
+            "kind": "h2",
+            "text": "Des patrouilles préventives sur les crêtes désertes"
+          },
+          {
+            "kind": "p",
+            "text": "Sur le terrain, la culture de l'anticipation est poussée à son paroxysme. Dans plusieurs stations des Alpes du Nord, des détachements s'entraînent déjà à établir des barrages filtrants au beau milieu des couloirs d'avalanche. L'objectif consiste à accoutumer les effectifs au vent glacial tout en s'assurant qu'aucun flocon hors norme ne franchisse le périmètre de sécurité sans accréditation préalable."
+          },
+          {
+            "kind": "p",
+            "text": "Les patrouilles de montagne veillent désormais au grain. Équipés de jumelles thermiques et de skis de randonnée de service, les agents arpentent les crêtes balayées par les rafales pour effectuer des vérifications de routine auprès de la faune locale. Les rongeurs et animaux sauvages apprennent ainsi à composer avec des contrôles d'identité inopinés au fond des tanières, afin de garantir la neutralité absolue du manteau neigeux avant le début des épreuves."
+          },
+          {
+            "kind": "h2",
+            "text": "Contrôles renforcés aux abords des téléphériques à l'arrêt"
+          },
+          {
+            "kind": "p",
+            "text": "Au pied des pistes, le dispositif prend la forme de chicanes de sécurité installées devant des caisses de forfaits désertes. Les forces de l'ordre y appliquent scrupuleusement les consignes : fouille systématique des sacs des promeneurs et vérification de la conformité réglementaire des luges en plastique. Tout rassemblement de plus de trois bonhommes de neige fait immédiatement l'objet d'une procédure pour attroupement non déclaré sur la voie publique."
+          },
+          {
+            "kind": "p",
+            "text": "Les spécialistes du maintien de l'ordre se félicitent de cette posture proactive. Sécuriser un espace totalement vide plusieurs saisons avant l'arrivée des spectateurs permet de détecter d'éventuelles failles logistiques, comme le gel prématuré des stylos à bille lors de la rédaction des procès-verbaux d'infraction."
+          },
+          {
+            "kind": "p",
+            "text": "Si la compétition ne s'ouvrira que dans plusieurs années, la haute montagne française peut déjà s'enorgueillir d'être le territoire le mieux gardé du continent. Quant aux futurs athlètes, ils sont prévenus : en 2030, franchir la ligne d'arrivée nécessitera non seulement un excellent chrono, mais aussi un titre de séjour en règle et un contrôle technique valide sur chaque ski."
+          }
+        ]
+      },
+      "issues": [
+        {
+          "code": "copie_source",
+          "msg": "Passage recopie de la source"
+        }
+      ],
+      "judge": null,
+      "status": "quarantined",
+      "retries": 0
     }
   ],
   "history": [
@@ -223,6 +316,18 @@
       ],
       "messages": [
         "Corps: 265 mots (minimum 280)"
+      ]
+    },
+    {
+      "ts": "2026-11-24T10:12:35.451Z",
+      "slot": "2026-11-24#3",
+      "topic": "Plus de 12 000 policiers et gendarmes seront mobilisés pour la sécurité des Alpes françaises 2030 « au plus fort des Jeux »",
+      "stage": "validation",
+      "reasons": [
+        "copie_source"
+      ],
+      "messages": [
+        "Passage recopie de la source"
       ]
     }
   ]

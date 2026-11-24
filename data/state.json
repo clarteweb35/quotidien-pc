@@ -4007,8 +4007,9 @@
       "title": "Plus de 12 000 policiers et gendarmes seront mobilisés pour la sécurité des Alpes françaises 2030 « au plus fort des Jeux »",
       "url": "https://www.lemonde.fr/sport/article/2026/11/23/plus-de-12-000-policiers-et-gendarmes-seront-mobilises-pour-la-securite-des-alpes-francaises-2030-au-plus-fort-des-jeux_6814436_3242.html",
       "category": "sport",
-      "seenAt": "2026-11-24T09:42:33.405Z",
-      "status": "rejected"
+      "seenAt": "2026-11-24T10:14:31.967Z",
+      "status": "used",
+      "usedAt": "2026-11-24T10:14:31.967Z"
     }
   },
   "slots": {
@@ -5049,17 +5050,26 @@
         "lastError": null
       },
       "3": {
-        "attempts": 1,
+        "attempts": 2,
         "status": "failed",
-        "startedAt": "2026-11-24T09:42:33.405Z",
-        "lastError": "corps_trop_court"
+        "startedAt": "2026-11-24T10:12:35.451Z",
+        "lastError": "copie_source"
+      },
+      "4": {
+        "attempts": 1,
+        "status": "published",
+        "startedAt": "2026-11-24T10:14:31.967Z",
+        "articleId": "50c5c5e5dc75",
+        "publishedAt": "2026-11-24T10:14:31.967Z",
+        "topicId": "642f96bd5d67",
+        "lastError": null
       }
     }
   },
   "lastRun": {
-    "at": "2026-11-24T09:42:32.933Z",
-    "runId": "20261124094232-f56d",
-    "published": 0,
+    "at": "2026-11-24T10:12:34.709Z",
+    "runId": "20261124101234-47b6",
+    "published": 1,
     "stopped": null
   },
   "caricatures": {

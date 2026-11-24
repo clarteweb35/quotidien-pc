@@ -3,7 +3,12 @@
 Nommez votre image **exactement comme la référence** (ex. `261024-X1.jpg`) et déposez-la dans `site/src/assets/manual/`.
 Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large minimum.
 
-## Sans image (12)
+## Sans image (13)
+
+### `261124-05` — JO d’hiver 2030 : 12 000 gendarmes déployés dans les Alpes pour vérifier que les skieurs font bien leur chasse-neige
+- Rubrique : sport
+- Description suggérée : Un groupe de gendarmes en tenue d'hiver et matériel de montagne effectuant un contrôle de papier au sommet d'un col enneigé près d'un panneau de piste noire. Style dessin de presse satirique.
+- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
 ### `261124-03` — Livret A : le gouvernement rappelle que l'épargne est faite pour rester sur un compte, pas pour être dépensée
 - Rubrique : societe
@@ -65,7 +70,7 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 - Description suggérée : Dessin de presse satirique : un syndicaliste en gilet, assis sur une pile de vieilles rotatives, brandit fièrement un panneau « Acquis d’hier » devant une usine dont la cheminée ne fume plus, tandis qu’un calendrier arraché s’envole au vent. Personnages génériques, sans ressemblance avec une personne réelle. Style encre et aquarelle.
 - Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
-## Déjà illustrés (28)
+## Déjà illustrés (27)
 
 - `261114-D10` — La Madrague ouvrira au public l’été prochain, les modalités d’accueil restent à définir… et le parasol aussi (261114-D10.jpg)
 - `261114-D5` — Rugby : le XV de France bat l’Afrique du Sud 21-19, le cardiologue du Stade de France fait des heures sup (261114-D5.jpg)
@@ -94,4 +99,3 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 - `261107-04` — Musées : les visiteurs invités à ramener leur cadenas et assurer deux heures de ronde pour financer la sécurité (261107-04.jpg)
 - `261107-03` — Route du Rhum : Une étude de 850 pages révèle qu'il faut un port pour accueillir des bateaux à l'arrivée (261107-03.jpg)
 - `261103-D7` — École : et si on envoyait les meilleurs là où les élèves en ont le plus besoin ? (261103-D7.png)
-- `261103-D5` — Russie : la dictature qui a peur de son propre peuple (261103-D5.png)
