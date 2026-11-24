@@ -1,8 +1,22 @@
 {
   "date": "2026-11-24",
   "target": 5,
-  "publishedCount": 1,
+  "publishedCount": 3,
   "articles": [
+    {
+      "id": "2fe9de155a32",
+      "ref": "261124-02",
+      "title": "Chimie : la direction félicite des salariés devenus entièrement imperméables grâce aux PFAS",
+      "category": "environnement",
+      "slug": "chimie-la-direction-felicite-des-salaries-devenus"
+    },
+    {
+      "id": "39eb916b526d",
+      "ref": "261124-03",
+      "title": "Livret A : le gouvernement rappelle que l'épargne est faite pour rester sur un compte, pas pour être dépensée",
+      "category": "societe",
+      "slug": "livret-a-le-gouvernement-rappelle-que-l-epargne-est-faite"
+    },
     {
       "id": "22dea753feff",
       "ref": "261124-01",
@@ -26,16 +40,24 @@
     {
       "idx": 1,
       "hhmm": "09:40",
-      "attempts": 1,
-      "status": "failed",
-      "startedAt": "2026-11-24T08:42:36.291Z",
-      "lastError": "gemini_unavailable: Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}"
+      "attempts": 2,
+      "status": "published",
+      "startedAt": "2026-11-24T09:12:30.375Z",
+      "lastError": null,
+      "articleId": "2fe9de155a32",
+      "publishedAt": "2026-11-24T09:12:30.375Z",
+      "topicId": "76f747653827"
     },
     {
       "idx": 2,
       "hhmm": "10:10",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 1,
+      "status": "published",
+      "startedAt": "2026-11-24T09:13:14.669Z",
+      "articleId": "39eb916b526d",
+      "publishedAt": "2026-11-24T09:13:14.669Z",
+      "topicId": "fcb35dc5177b",
+      "lastError": null
     },
     {
       "idx": 3,
@@ -53,19 +75,19 @@
   "rejections": 0,
   "quarantined": 1,
   "api": {
-    "calls": 2,
-    "inputTokens": 5581,
-    "outputTokens": 3717,
-    "costUsd": 0.034958,
+    "calls": 9,
+    "inputTokens": 22436,
+    "outputTokens": 13546,
+    "costUsd": 0.129162,
     "dailyCapUsd": 1,
-    "monthCostUsd": 0.493263,
+    "monthCostUsd": 0.587467,
     "monthlyCapUsd": 15
   },
   "paused": false,
   "lastRun": {
-    "at": "2026-11-24T08:42:34.261Z",
-    "runId": "20261124084234-b380",
-    "published": 0,
-    "stopped": "gemini_unavailable"
+    "at": "2026-11-24T09:12:29.754Z",
+    "runId": "20261124091229-63f2",
+    "published": 2,
+    "stopped": null
   }
 }

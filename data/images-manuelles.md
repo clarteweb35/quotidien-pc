@@ -3,7 +3,17 @@
 Nommez votre image **exactement comme la référence** (ex. `261024-X1.jpg`) et déposez-la dans `site/src/assets/manual/`.
 Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large minimum.
 
-## Sans image (10)
+## Sans image (12)
+
+### `261124-03` — Livret A : le gouvernement rappelle que l'épargne est faite pour rester sur un compte, pas pour être dépensée
+- Rubrique : societe
+- Description suggérée : Une tirelire en forme de cochon en plastique rose fermée par un cadenas doré géant, posée au milieu d'une assiette vide sur une table de cuisine au décor sobre.
+- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
+
+### `261124-02` — Chimie : la direction félicite des salariés devenus entièrement imperméables grâce aux PFAS
+- Rubrique : environnement
+- Description suggérée : Un ouvrier en tenue d'usine marchant sous une averse battante sans parapluie, l'eau glissant en perles parfaites sur sa veste sans l'imprégner, style dessin de presse satirique.
+- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
 ### `261124-01` — Pourquoi la léthargie économique est notre meilleure arme contre la hausse des prix
 - Rubrique : editos
@@ -55,7 +65,7 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 - Description suggérée : Dessin de presse satirique : un syndicaliste en gilet, assis sur une pile de vieilles rotatives, brandit fièrement un panneau « Acquis d’hier » devant une usine dont la cheminée ne fume plus, tandis qu’un calendrier arraché s’envole au vent. Personnages génériques, sans ressemblance avec une personne réelle. Style encre et aquarelle.
 - Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
-## Déjà illustrés (30)
+## Déjà illustrés (28)
 
 - `261114-D10` — La Madrague ouvrira au public l’été prochain, les modalités d’accueil restent à définir… et le parasol aussi (261114-D10.jpg)
 - `261114-D5` — Rugby : le XV de France bat l’Afrique du Sud 21-19, le cardiologue du Stade de France fait des heures sup (261114-D5.jpg)
@@ -85,5 +95,3 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 - `261107-03` — Route du Rhum : Une étude de 850 pages révèle qu'il faut un port pour accueillir des bateaux à l'arrivée (261107-03.jpg)
 - `261103-D7` — École : et si on envoyait les meilleurs là où les élèves en ont le plus besoin ? (261103-D7.png)
 - `261103-D5` — Russie : la dictature qui a peur de son propre peuple (261103-D5.png)
-- `261106-D14` — Le petit chef : la vengeance du loser de la cour de récré (261106-D14.jpg)
-- `261106-D13` — Test psycho : plus votre voiture a de boutons, moins vous êtes mature (261106-D13.jpg)

@@ -3930,6 +3930,78 @@
       "category": "environnement",
       "seenAt": "2026-11-24T08:42:36.291Z",
       "status": "in_progress"
+    },
+    "76f747653827": {
+      "title": "« On nous a empoisonnés » : dans l’industrie de la chimie, des travailleurs surexposés aux PFAS",
+      "url": "https://www.lemonde.fr/planete/article/2026/11/23/on-nous-a-empoisonnes-dans-l-industrie-de-la-chimie-des-travailleurs-surexposes-aux-pfas_6814409_3244.html",
+      "category": "environnement",
+      "seenAt": "2026-11-24T09:12:30.375Z",
+      "status": "used",
+      "usedAt": "2026-11-24T09:12:30.375Z"
+    },
+    "ad16bdf48a3c": {
+      "title": "Mort de Nahel Merzouk en 2023 : la cour d'appel de Versailles confirme le renvoi du policier devant les assises pour meurtre",
+      "url": "https://www.franceinfo.fr/faits-divers/adolescent-tue-par-un-policier-a-nanterre/mort-de-nahel-merzouk-en-2023-la-cour-d-appel-de-versailles-confirme-le-renvoi-du-policier-devant-les-assises-pour-meurtre_8295785.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-11-24T09:13:14.669Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "cb0a474d8144": {
+      "title": "Mort de Nahel : la cour d’appel de Versailles ordonne un procès pour meurtre à l’encontre du policier",
+      "url": "https://www.lemonde.fr/societe/article/2026/11/24/mort-de-nahel-la-cour-d-appel-de-versailles-ordonne-un-proces-pour-meurtre-a-l-encontre-du-policier_6814726_3224.html",
+      "category": "societe",
+      "seenAt": "2026-11-24T09:13:14.669Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "2b5cf3be7d27": {
+      "title": "Féminicides : 47 000 femmes ont été tuées par des proches dans le monde en 2025, un nombre qui n’évolue pas",
+      "url": "https://www.lemonde.fr/societe/article/2026/11/24/feminicides-47-000-femmes-ont-ete-tuees-par-des-proches-dans-le-monde-en-2025-un-nombre-qui-n-evolue-pas_6814722_3224.html",
+      "category": "societe",
+      "seenAt": "2026-11-24T09:13:14.669Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "facd13b77c6f": {
+      "title": "Michel Dumas, cuisinier star des réseaux sociaux, est mort à 72 ans",
+      "url": "https://www.lemonde.fr/disparitions/article/2026/11/24/michel-dumas-cuisinier-star-des-reseaux-sociaux-est-mort-a-72-ans_6814724_3382.html",
+      "category": "societe",
+      "seenAt": "2026-11-24T09:13:14.669Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "6fd40bab815f": {
+      "title": "Mort de Nahel Merzouk : la cour d’appel de Versailles ordonne un procès pour meurtre contre le policier qui l’a tué",
+      "url": "https://www.liberation.fr/societe/police-justice/mort-de-nahel-merzouk-la-cour-dappel-de-versailles-ordonne-un-proces-pour-meurtre-contre-le-policier-qui-la-tue-20261124_HLTCW73RNRDUPJOWTA4ET4ZAEY/",
+      "category": "societe",
+      "seenAt": "2026-11-24T09:13:14.669Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "d35745200def": {
+      "title": "Etienne C., éborgné par un tir de LBD le 17 octobre à Strasbourg : «Ce qu’ils font, c’est gouverner par la trouille»",
+      "url": "https://www.liberation.fr/societe/police-justice/etienne-c-eborgne-par-un-tir-de-lbd-le-17-octobre-a-strasbourg-ce-quils-font-cest-gouverner-par-la-trouille-20261124_PHP7SX6A4JGXRD624GQCOZRLKQ/",
+      "category": "societe",
+      "seenAt": "2026-11-24T09:13:14.669Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "4fa2bcf006f3": {
+      "title": "Contre les violences, la République protège toutes les femmes, ou elle renonce à sa promesse, par Najat Vallaud-Belkacem",
+      "url": "https://www.liberation.fr/idees-et-debats/tribunes/contre-les-violences-la-republique-protege-toutes-les-femmes-ou-elle-renonce-a-sa-promesse-par-najat-vallaud-belkacem-20261124_V462BPHY7BE4VNXO5LXAG4H5ZI/",
+      "category": "societe",
+      "seenAt": "2026-11-24T09:13:14.669Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "fcb35dc5177b": {
+      "title": "Depuis janvier, les Français ont retiré près de 10 milliards d'euros de leur livret A, qui connaît sa pire année depuis 2008",
+      "url": "https://www.franceinfo.fr/economie/votre-argent/livret-a/depuis-janvier-les-francais-ont-retire-pres-de-10-milliards-d-euros-de-leurs-livrets-a-qui-connait-sa-pire-annee-depuis-2008_8297058.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-11-24T09:13:14.669Z",
+      "status": "used",
+      "usedAt": "2026-11-24T09:13:14.669Z"
     }
   },
   "slots": {
@@ -4952,18 +5024,30 @@
         "lastError": null
       },
       "1": {
+        "attempts": 2,
+        "status": "published",
+        "startedAt": "2026-11-24T09:12:30.375Z",
+        "lastError": null,
+        "articleId": "2fe9de155a32",
+        "publishedAt": "2026-11-24T09:12:30.375Z",
+        "topicId": "76f747653827"
+      },
+      "2": {
         "attempts": 1,
-        "status": "failed",
-        "startedAt": "2026-11-24T08:42:36.291Z",
-        "lastError": "gemini_unavailable: Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}"
+        "status": "published",
+        "startedAt": "2026-11-24T09:13:14.669Z",
+        "articleId": "39eb916b526d",
+        "publishedAt": "2026-11-24T09:13:14.669Z",
+        "topicId": "fcb35dc5177b",
+        "lastError": null
       }
     }
   },
   "lastRun": {
-    "at": "2026-11-24T08:42:34.261Z",
-    "runId": "20261124084234-b380",
-    "published": 0,
-    "stopped": "gemini_unavailable"
+    "at": "2026-11-24T09:12:29.754Z",
+    "runId": "20261124091229-63f2",
+    "published": 2,
+    "stopped": null
   },
   "caricatures": {
     "2026-10-27": {

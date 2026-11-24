@@ -38,3 +38,31 @@
 {"ts":"2026-11-24T08:42:52.693Z","runId":"20261124084234-b380","level":"warn","event":"gemini.fallback_model","from":"gemini-3.6-flash","to":"gemini-3.8-flash"}
 {"ts":"2026-11-24T08:42:53.708Z","runId":"20261124084234-b380","level":"warn","event":"gemini.retry","purpose":"generate","status":503,"attempt":1,"delayMs":4870}
 {"ts":"2026-11-24T08:43:01.134Z","runId":"20261124084234-b380","level":"error","event":"cycle.stopped","reason":"gemini_unavailable","error":"Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}"}
+{"ts":"2026-11-24T09:12:29.778Z","runId":"20261124091229-63f2","level":"info","event":"cycle.start","date":"2026-11-24","due":["2026-11-24#1","2026-11-24#2"],"remainingToday":4,"dryRun":false}
+{"ts":"2026-11-24T09:12:30.373Z","runId":"20261124091229-63f2","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":28,"kept":25}
+{"ts":"2026-11-24T09:12:30.374Z","runId":"20261124091229-63f2","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-11-24T09:12:30.374Z","runId":"20261124091229-63f2","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":20}
+{"ts":"2026-11-24T09:12:30.374Z","runId":"20261124091229-63f2","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":23}
+{"ts":"2026-11-24T09:12:30.374Z","runId":"20261124091229-63f2","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":17}
+{"ts":"2026-11-24T09:12:30.374Z","runId":"20261124091229-63f2","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":20,"kept":20}
+{"ts":"2026-11-24T09:12:30.374Z","runId":"20261124091229-63f2","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":13}
+{"ts":"2026-11-24T09:12:30.374Z","runId":"20261124091229-63f2","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":13}
+{"ts":"2026-11-24T09:12:30.374Z","runId":"20261124091229-63f2","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":5}
+{"ts":"2026-11-24T09:12:30.374Z","runId":"20261124091229-63f2","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":8}
+{"ts":"2026-11-24T09:12:30.374Z","runId":"20261124091229-63f2","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":5}
+{"ts":"2026-11-24T09:12:30.374Z","runId":"20261124091229-63f2","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":10}
+{"ts":"2026-11-24T09:12:30.374Z","runId":"20261124091229-63f2","level":"info","event":"collect.done","items":175}
+{"ts":"2026-11-24T09:12:30.402Z","runId":"20261124091229-63f2","level":"info","event":"topic.selection","slot":"2026-11-24#1","target":"environnement","candidates":175,"rejected":1,"chosen":"« On nous a empoisonnés » : dans l’industrie de la chimie, des travailleurs surexposés aux PFAS","score":4.5}
+{"ts":"2026-11-24T09:13:04.580Z","runId":"20261124091229-63f2","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4590,"outputTokens":2958,"costUsd":0.02907}
+{"ts":"2026-11-24T09:13:10.914Z","runId":"20261124091229-63f2","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":940,"outputTokens":80,"costUsd":0.000482}
+{"ts":"2026-11-24T09:13:10.914Z","runId":"20261124091229-63f2","level":"info","event":"judge.result","slot":"2026-11-24#1","attempt":1,"humor":8,"coherence":9,"risk":1,"issues":[]}
+{"ts":"2026-11-24T09:13:14.666Z","runId":"20261124091229-63f2","level":"info","event":"gemini.call","purpose":"image_judge","model":"gemini-3.5-flash-lite","inputTokens":1244,"outputTokens":78,"costUsd":0.000568}
+{"ts":"2026-11-24T09:13:14.666Z","runId":"20261124091229-63f2","level":"warn","event":"image.rejected","slot":"2026-11-24#1","problems":["presence of a signature/text in the bottom right corner"],"flags":{"person":false,"text":true,"photo":false,"disturbing":false}}
+{"ts":"2026-11-24T09:13:14.669Z","runId":"20261124091229-63f2","level":"info","event":"publish.ok","slot":"2026-11-24#1","id":"2fe9de155a32","slug":"chimie-la-direction-felicite-des-salaries-devenus","url":"/articles/chimie-la-direction-felicite-des-salaries-devenus/","attempt":1,"dryRun":false}
+{"ts":"2026-11-24T09:13:14.770Z","runId":"20261124091229-63f2","level":"info","event":"topic.selection","slot":"2026-11-24#2","target":"societe","candidates":175,"rejected":7,"chosen":"Depuis janvier, les Français ont retiré près de 10 milliards d'euros de leur livret A, qui connaît sa pire année depuis 2008","score":7.5}
+{"ts":"2026-11-24T09:13:53.464Z","runId":"20261124091229-63f2","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4582,"outputTokens":3385,"costUsd":0.03226}
+{"ts":"2026-11-24T09:13:53.493Z","runId":"20261124091229-63f2","level":"warn","event":"validate.deterministic_failed","slot":"2026-11-24#2","attempt":1,"issues":["titre_trop_long","chapo_trop_long"]}
+{"ts":"2026-11-24T09:14:08.679Z","runId":"20261124091229-63f2","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4649,"outputTokens":3255,"costUsd":0.031386}
+{"ts":"2026-11-24T09:14:09.373Z","runId":"20261124091229-63f2","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":850,"outputTokens":73,"costUsd":0.000438}
+{"ts":"2026-11-24T09:14:09.373Z","runId":"20261124091229-63f2","level":"info","event":"judge.result","slot":"2026-11-24#2","attempt":2,"humor":8,"coherence":9,"risk":1,"issues":[]}
+{"ts":"2026-11-24T09:14:09.376Z","runId":"20261124091229-63f2","level":"info","event":"publish.ok","slot":"2026-11-24#2","id":"39eb916b526d","slug":"livret-a-le-gouvernement-rappelle-que-l-epargne-est-faite","url":"/articles/livret-a-le-gouvernement-rappelle-que-l-epargne-est-faite/","attempt":2,"dryRun":false}
