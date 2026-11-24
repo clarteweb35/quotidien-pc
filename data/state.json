@@ -3763,6 +3763,150 @@
       "seenAt": "2026-11-22T13:15:08.662Z",
       "status": "excluded",
       "reason": "sensitive"
+    },
+    "115f0fabf4cc": {
+      "title": "Mort de Nahel : la justice retiendra-t-elle la qualification de meurtre ?",
+      "url": "https://france3-regions.franceinfo.fr/paris-ile-de-france/yvelines/mort-de-nahel-la-justice-retiendra-t-elle-la-qualification-de-meurtre-3454775.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-11-24T08:12:35.740Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "118f8a5145b8": {
+      "title": "Disparition de Sophie Chéênne en 1996 à Laval : de nouvelles investigations vont être menées par les gendarmes",
+      "url": "https://www.franceinfo.fr/faits-divers/info-radio-france-disparition-de-sophie-cheenne-en-1996-a-laval-de-nouvelles-investigations-vont-etre-menees-par-les-gendarmes_8297088.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-11-24T08:12:35.740Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "57750dc29b74": {
+      "title": "Le chef Michel Dumas, connu pour ses vidéos de cuisine sur les réseaux sociaux, est mort à l'âge de 72 ans, annonce son fils",
+      "url": "https://www.franceinfo.fr/culture/cuisine/le-chef-michel-dumas-connu-pour-ses-videos-de-cuisine-sur-les-reseaux-sociaux-est-mort-a-l-age-de-72-ans-annonce-son-fils_8297175.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-11-24T08:12:35.740Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "d3f3e57578f5": {
+      "title": "Le système d'alerte canicule mis en place en France a fait baisser la mortalité, surtout des plus âgés",
+      "url": "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/vagues-de-chaleur-canicules/le-systeme-d-alertes-canicules-mis-en-place-en-france-a-fait-baisser-la-mortalite-surtout-des-plus-ages_8297031.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-11-24T08:12:35.740Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "f21d719f4837": {
+      "title": "L’alcool, toujours un fléau sur les routes, en hausse d’expérimentation chez les mineurs",
+      "url": "https://www.lemonde.fr/societe/article/2026/11/24/l-alcool-toujours-un-fleau-sur-les-routes-en-hausse-d-experimentation-chez-les-mineurs_6814713_3224.html",
+      "category": "societe",
+      "seenAt": "2026-11-24T08:12:35.740Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "ad17d7efc6b2": {
+      "title": "« Je suis une enfant gâtée, c’est sûr » : en Inde, la jeunesse dorée profite de ses privilèges",
+      "url": "https://www.lemonde.fr/international/article/2026/11/24/je-suis-une-enfant-gatee-c-est-sur-en-inde-la-jeunesse-doree-profite-de-ses-privileges_6814709_3210.html",
+      "category": "societe",
+      "seenAt": "2026-11-24T08:12:35.740Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "9877f8af9c7a": {
+      "title": "Déraillement d’un TER en Normandie : quatre hommes interpellés pour acte de malveillance présumé",
+      "url": "https://www.lemonde.fr/societe/article/2026/11/24/deraillement-d-un-ter-en-normandie-quatre-hommes-interpelles-pour-acte-de-malveillance-presume_6814711_3224.html",
+      "category": "societe",
+      "seenAt": "2026-11-24T08:12:35.740Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "af739b779fb5": {
+      "title": "Six députés LFI portent plainte à la suite de menaces de mort anonymes",
+      "url": "https://www.lemonde.fr/societe/article/2026/11/24/six-deputes-lfi-portent-plainte-pour-des-menaces-de-mort-anonymes_6814471_3224.html",
+      "category": "societe",
+      "seenAt": "2026-11-24T08:12:35.740Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "54dacc6b6269": {
+      "title": "De Marseille à Trappes, une nouvelle marche contre le racisme, quarante-trois ans après : «On essaie de réparer quelque chose»",
+      "url": "https://www.liberation.fr/societe/de-marseille-a-trappes-une-nouvelle-marche-contre-le-racisme-quarante-trois-ans-apres-on-essaie-de-reparer-quelque-chose-20261123_J74N53HD3VA5XFXDYOEZUCYNP4/",
+      "category": "societe",
+      "seenAt": "2026-11-24T08:12:35.740Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "56cc4172e060": {
+      "title": "Ukraine en direct : au moins deux morts dans des frappes russes sur la ville ‌de Zaporijjia",
+      "url": "https://www.france24.com/fr/europe/20261124-en-direct-ukraine-russie-libye-attaques-benghazi-zelensky-poutine",
+      "category": "monde",
+      "seenAt": "2026-11-24T08:12:35.740Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "abb1af947913": {
+      "title": "Au Yémen, les Houthis déplorent 25 morts ou disparus dans des frappes saoudiennes",
+      "url": "https://www.france24.com/fr/moyen-orient/20261124-yemen-houthis-deplorent-25-morts-disparus-frappes-saoudiennes",
+      "category": "monde",
+      "seenAt": "2026-11-24T08:12:35.740Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "382d957d7e60": {
+      "title": "Reconnaissance du génocide des Rohingya par la CIJ : 14 pays condamnent la Birmanie",
+      "url": "https://www.france24.com/fr/asie-pacifique/20261123-birmanie-genocide-rohingya-14-pays-reconnaissent-decision-cij",
+      "category": "monde",
+      "seenAt": "2026-11-24T08:12:35.740Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "80de303510ba": {
+      "title": "L'attaque ukrainienne à Benghazi attise les tensions en Libye et en Méditerranée",
+      "url": "https://www.france24.com/fr/%C3%A9missions/info-ou-intox/20261123-l-attaque-ukrainienne-%C3%A0-benghazi-attise-les-tensions-en-libye-et-en-m%C3%A9diterran%C3%A9e",
+      "category": "monde",
+      "seenAt": "2026-11-24T08:12:35.740Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "bad42ffcfebb": {
+      "title": "\"Notre avenir plutôt que leurs guerres\" : en Europe, la jeunesse se mobilise contre le réarmement",
+      "url": "https://www.france24.com/fr/europe/20261123-notre-avenir-plut%C3%B4t-guerres-europe-jeunesse-mobilise-contre-r%C3%A9armement",
+      "category": "monde",
+      "seenAt": "2026-11-24T08:12:35.740Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "a7cae7a97ef5": {
+      "title": "EN DIRECT, guerre en Ukraine : au moins deux morts et plus de 30 blessés dans des attaques nocturnes sur Zaporijia",
+      "url": "https://www.lemonde.fr/international/live/2026/11/24/en-direct-guerre-en-ukraine-au-moins-deux-morts-et-plus-de-30-blesses-dans-des-frappes-nocturnes-sur-zaporijia_6814183_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-24T08:12:35.740Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "e5af14f49903": {
+      "title": "Donald Trump demande au ministère de la justice de requérir la peine de mort pour les meurtriers d’enfants",
+      "url": "https://www.lemonde.fr/international/article/2026/11/24/donald-trump-demande-au-ministere-de-la-justice-de-requerir-la-peine-de-mort-pour-les-meurtriers-d-enfants_6814537_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-24T08:12:35.740Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "c324a2291dc1": {
+      "title": "« Après le jugement de la Cour internationale de justice sur le Myanmar, la qualification de génocide à Gaza peut désormais s’appuyer sur sa jurisprudence »",
+      "url": "https://www.lemonde.fr/idees/article/2026/11/23/apres-le-jugement-de-la-cour-internationale-de-justice-sur-le-myanmar-la-qualification-de-genocide-a-gaza-peut-desormais-s-appuyer-sur-sa-jurisprudence_6814439_3232.html",
+      "category": "monde",
+      "seenAt": "2026-11-24T08:12:35.740Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "11f4da5aaae2": {
+      "title": "Inflation : pourquoi la hausse des cours de l’énergie tarde à se répercuter sur l’ensemble des prix en France",
+      "url": "https://www.lemonde.fr/economie/article/2026/11/24/inflation-pourquoi-la-hausse-des-cours-de-l-energie-tarde-a-se-repercuter-sur-l-ensemble-des-prix-en-france_6814604_3234.html",
+      "category": "editos",
+      "seenAt": "2026-11-24T08:12:35.740Z",
+      "status": "used",
+      "usedAt": "2026-11-24T08:12:35.740Z"
     }
   },
   "slots": {
@@ -4773,12 +4917,23 @@
         "status": "abandoned",
         "lastError": "fenetre_de_rattrapage_depassee"
       }
+    },
+    "2026-11-24": {
+      "0": {
+        "attempts": 1,
+        "status": "published",
+        "startedAt": "2026-11-24T08:12:35.740Z",
+        "articleId": "22dea753feff",
+        "publishedAt": "2026-11-24T08:12:35.740Z",
+        "topicId": "11f4da5aaae2",
+        "lastError": null
+      }
     }
   },
   "lastRun": {
-    "at": "2026-11-15T12:38:50.390Z",
-    "runId": "20261115123850-e8c3",
-    "published": 0,
+    "at": "2026-11-24T08:12:34.684Z",
+    "runId": "20261124081234-9649",
+    "published": 1,
     "stopped": null
   },
   "caricatures": {

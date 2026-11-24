@@ -1,2 +1,21 @@
 {"ts":"2026-11-24T02:51:27.790Z","runId":"20261124025127-db69","level":"info","event":"cycle.start","date":"2026-11-24","due":[],"remainingToday":5,"dryRun":false}
 {"ts":"2026-11-24T04:28:46.892Z","runId":"20261124042846-2f87","level":"info","event":"cycle.start","date":"2026-11-24","due":[],"remainingToday":5,"dryRun":false}
+{"ts":"2026-11-24T08:12:34.710Z","runId":"20261124081234-9649","level":"info","event":"cycle.start","date":"2026-11-24","due":["2026-11-24#0"],"remainingToday":5,"dryRun":false}
+{"ts":"2026-11-24T08:12:35.738Z","runId":"20261124081234-9649","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":30,"kept":25}
+{"ts":"2026-11-24T08:12:35.738Z","runId":"20261124081234-9649","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-11-24T08:12:35.738Z","runId":"20261124081234-9649","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":20}
+{"ts":"2026-11-24T08:12:35.739Z","runId":"20261124081234-9649","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":24}
+{"ts":"2026-11-24T08:12:35.739Z","runId":"20261124081234-9649","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":17}
+{"ts":"2026-11-24T08:12:35.739Z","runId":"20261124081234-9649","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":20,"kept":20}
+{"ts":"2026-11-24T08:12:35.739Z","runId":"20261124081234-9649","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":15}
+{"ts":"2026-11-24T08:12:35.739Z","runId":"20261124081234-9649","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":11}
+{"ts":"2026-11-24T08:12:35.739Z","runId":"20261124081234-9649","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":4}
+{"ts":"2026-11-24T08:12:35.739Z","runId":"20261124081234-9649","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":7}
+{"ts":"2026-11-24T08:12:35.739Z","runId":"20261124081234-9649","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":5}
+{"ts":"2026-11-24T08:12:35.739Z","runId":"20261124081234-9649","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":11}
+{"ts":"2026-11-24T08:12:35.739Z","runId":"20261124081234-9649","level":"info","event":"collect.done","items":175}
+{"ts":"2026-11-24T08:12:35.908Z","runId":"20261124081234-9649","level":"info","event":"topic.selection","slot":"2026-11-24#0","target":"editos","candidates":175,"rejected":27,"chosen":"Inflation : pourquoi la hausse des cours de l’énergie tarde à se répercuter sur l’ensemble des prix en France","score":8.5}
+{"ts":"2026-11-24T08:13:16.247Z","runId":"20261124081234-9649","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4738,"outputTokens":3661,"costUsd":0.034565}
+{"ts":"2026-11-24T08:13:17.143Z","runId":"20261124081234-9649","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":843,"outputTokens":56,"costUsd":0.000393}
+{"ts":"2026-11-24T08:13:17.143Z","runId":"20261124081234-9649","level":"info","event":"judge.result","slot":"2026-11-24#0","attempt":1,"humor":8,"coherence":9,"risk":0,"issues":[]}
+{"ts":"2026-11-24T08:13:17.146Z","runId":"20261124081234-9649","level":"info","event":"publish.ok","slot":"2026-11-24#0","id":"22dea753feff","slug":"pourquoi-la-lethargie-economique-est-notre-meilleure-arme","url":"/articles/pourquoi-la-lethargie-economique-est-notre-meilleure-arme/","attempt":1,"dryRun":false}

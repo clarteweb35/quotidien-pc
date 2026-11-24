@@ -1,14 +1,27 @@
 {
   "date": "2026-11-24",
   "target": 5,
-  "publishedCount": 0,
-  "articles": [],
+  "publishedCount": 1,
+  "articles": [
+    {
+      "id": "22dea753feff",
+      "ref": "261124-01",
+      "title": "Pourquoi la léthargie économique est notre meilleure arme contre la hausse des prix",
+      "category": "editos",
+      "slug": "pourquoi-la-lethargie-economique-est-notre-meilleure-arme"
+    }
+  ],
   "slots": [
     {
       "idx": 0,
       "hhmm": "09:10",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 1,
+      "status": "published",
+      "startedAt": "2026-11-24T08:12:35.740Z",
+      "articleId": "22dea753feff",
+      "publishedAt": "2026-11-24T08:12:35.740Z",
+      "topicId": "11f4da5aaae2",
+      "lastError": null
     },
     {
       "idx": 1,
@@ -38,19 +51,19 @@
   "rejections": 0,
   "quarantined": 1,
   "api": {
-    "calls": 0,
-    "inputTokens": 0,
-    "outputTokens": 0,
-    "costUsd": 0,
+    "calls": 2,
+    "inputTokens": 5581,
+    "outputTokens": 3717,
+    "costUsd": 0.034958,
     "dailyCapUsd": 1,
-    "monthCostUsd": 0.458305,
+    "monthCostUsd": 0.493263,
     "monthlyCapUsd": 15
   },
   "paused": false,
   "lastRun": {
-    "at": "2026-11-15T12:38:50.390Z",
-    "runId": "20261115123850-e8c3",
-    "published": 0,
+    "at": "2026-11-24T08:12:34.684Z",
+    "runId": "20261124081234-9649",
+    "published": 1,
     "stopped": null
   }
 }
