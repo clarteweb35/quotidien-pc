@@ -66,3 +66,24 @@
 {"ts":"2026-11-24T09:14:09.373Z","runId":"20261124091229-63f2","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":850,"outputTokens":73,"costUsd":0.000438}
 {"ts":"2026-11-24T09:14:09.373Z","runId":"20261124091229-63f2","level":"info","event":"judge.result","slot":"2026-11-24#2","attempt":2,"humor":8,"coherence":9,"risk":1,"issues":[]}
 {"ts":"2026-11-24T09:14:09.376Z","runId":"20261124091229-63f2","level":"info","event":"publish.ok","slot":"2026-11-24#2","id":"39eb916b526d","slug":"livret-a-le-gouvernement-rappelle-que-l-epargne-est-faite","url":"/articles/livret-a-le-gouvernement-rappelle-que-l-epargne-est-faite/","attempt":2,"dryRun":false}
+{"ts":"2026-11-24T09:42:32.954Z","runId":"20261124094232-f56d","level":"info","event":"cycle.start","date":"2026-11-24","due":["2026-11-24#3"],"remainingToday":2,"dryRun":false}
+{"ts":"2026-11-24T09:42:33.404Z","runId":"20261124094232-f56d","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":28,"kept":25}
+{"ts":"2026-11-24T09:42:33.404Z","runId":"20261124094232-f56d","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-11-24T09:42:33.404Z","runId":"20261124094232-f56d","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":20}
+{"ts":"2026-11-24T09:42:33.404Z","runId":"20261124094232-f56d","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":23}
+{"ts":"2026-11-24T09:42:33.404Z","runId":"20261124094232-f56d","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":17}
+{"ts":"2026-11-24T09:42:33.404Z","runId":"20261124094232-f56d","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":20,"kept":20}
+{"ts":"2026-11-24T09:42:33.404Z","runId":"20261124094232-f56d","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":12}
+{"ts":"2026-11-24T09:42:33.404Z","runId":"20261124094232-f56d","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":12}
+{"ts":"2026-11-24T09:42:33.405Z","runId":"20261124094232-f56d","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":5}
+{"ts":"2026-11-24T09:42:33.405Z","runId":"20261124094232-f56d","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":8}
+{"ts":"2026-11-24T09:42:33.405Z","runId":"20261124094232-f56d","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":5}
+{"ts":"2026-11-24T09:42:33.405Z","runId":"20261124094232-f56d","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":10}
+{"ts":"2026-11-24T09:42:33.405Z","runId":"20261124094232-f56d","level":"info","event":"collect.done","items":173}
+{"ts":"2026-11-24T09:42:33.432Z","runId":"20261124094232-f56d","level":"info","event":"topic.selection","slot":"2026-11-24#3","target":"sport","candidates":173,"rejected":0,"chosen":"Plus de 12 000 policiers et gendarmes seront mobilisés pour la sécurité des Alpes françaises 2030 « au plus fort des Jeux »","score":4.5}
+{"ts":"2026-11-24T09:42:45.609Z","runId":"20261124094232-f56d","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4580,"outputTokens":1875,"costUsd":0.020933}
+{"ts":"2026-11-24T09:42:45.643Z","runId":"20261124094232-f56d","level":"warn","event":"validate.deterministic_failed","slot":"2026-11-24#3","attempt":1,"issues":["copie_source"]}
+{"ts":"2026-11-24T09:44:09.318Z","runId":"20261124094232-f56d","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4621,"outputTokens":2334,"costUsd":0.024437}
+{"ts":"2026-11-24T09:44:09.344Z","runId":"20261124094232-f56d","level":"warn","event":"validate.deterministic_failed","slot":"2026-11-24#3","attempt":2,"issues":["corps_trop_court"]}
+{"ts":"2026-11-24T09:44:09.344Z","runId":"20261124094232-f56d","level":"warn","event":"slot.quarantined","slot":"2026-11-24#3","reasons":["corps_trop_court"]}
+{"ts":"2026-11-24T09:44:09.346Z","runId":"20261124094232-f56d","level":"warn","event":"slot.failed","slot":"2026-11-24#3","reason":"corps_trop_court"}

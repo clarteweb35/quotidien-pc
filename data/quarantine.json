@@ -100,6 +100,95 @@
       "judge": null,
       "status": "quarantined",
       "retries": 0
+    },
+    {
+      "id": "3c90de242a84",
+      "createdAt": "2026-11-24T09:42:33.405Z",
+      "slotKey": "2026-11-24#3",
+      "topic": {
+        "id": "642f96bd5d67",
+        "title": "Plus de 12 000 policiers et gendarmes seront mobilisés pour la sécurité des Alpes françaises 2030 « au plus fort des Jeux »",
+        "summary": "L’Etat et le Comité d’organisation des Jeux olympiques et paralympiques ont signé, lundi, au ministère de l’intérieur, un protocole relatif à la sécurité et à la sûreté de l’événement.",
+        "url": "https://www.lemonde.fr/sport/article/2026/11/23/plus-de-12-000-policiers-et-gendarmes-seront-mobilises-pour-la-securite-des-alpes-francaises-2030-au-plus-fort-des-jeux_6814436_3242.html",
+        "publishedAt": "2026-11-23T17:58:28.000Z",
+        "feedId": "lemonde-sport",
+        "sourceName": "Le Monde - Sport",
+        "category": "sport",
+        "score": 4.5,
+        "kind": "news",
+        "forcedCategory": "sport"
+      },
+      "article": {
+        "status": "ready_for_review",
+        "rejection_reason": "",
+        "title": "JO d’hiver 2030 : Les Alpes prévoient d’aligner un gendarme au mètre carré sur les pistes de descente",
+        "chapo": "Avec l'annonce d'un dispositif de sécurité massif pour les Jeux alpins de 2030, les organisateurs hésitent désormais à inscrire le contrôle de passeport au sommet des sommets parmi les épreuves démonstratives.",
+        "category": "sport",
+        "tags": [
+          "jo 2030",
+          "sports d'hiver",
+          "alpes",
+          "sécurité",
+          "gendarmerie"
+        ],
+        "seo_description": "Le plan de sécurité pour les Jeux olympiques d'hiver de 2030 promet une densité d'uniformes jamais vue au mètre carré de poudreuse.",
+        "angle": "Traiter le déploiement massif des forces de l'ordre aux JO d'hiver 2030 comme une nouvelle discipline olympique d'encadrement des pistes.",
+        "fictional_elements": [
+          "L'épreuve olympique de vérification de forfait à 3000 mètres d'altitude",
+          "La patrouille en bobsleigh réglementaire",
+          "La brigade d'intervention en raquettes pour les excès de vitesse en poudreuse"
+        ],
+        "author": "Pauline Roussel",
+        "image_prompt": "Un groupe de gendarmes en tenue d'hiver descendant une piste enneigée à skis en formation parfaite dans les Alpes, style dessin de presse.",
+        "image_alt": "Des gendarmes à skis descendant une pente enneigée dans les Alpes.",
+        "quality_checks": {
+          "facts_verified": true,
+          "fiction_clearly_satirical": true,
+          "no_invented_quotes": true,
+          "no_personal_attack": true,
+          "original_angle": true,
+          "no_known_duplicate": true
+        },
+        "body": [
+          {
+            "kind": "p",
+            "text": "L’anticipation est la mère de la sérénité. En officialisant la présence de 12 000 membres des forces de l’ordre au plus fort des épreuves hivernales de 2030, les autorités ont pris les devants. À ce niveau de mobilisation dans le relief alpestre, les sportifs ne risquent plus de se perdre : le moindre hors-piste sera immédiatement recadré par un agent en chasuble fluorescente positionné derrière chaque sapin."
+          },
+          {
+            "kind": "h2",
+            "text": "Une densité record au mètre carré de sapin"
+          },
+          {
+            "kind": "p",
+            "text": "Avec une telle concentration d'effectifs sur les massifs, la répartition tactique devient un casse-tête passionnant. Les experts suggèrent d'échelonner un patrouilleur tous les cinq mètres le long du tracé du Super-G, garantissant ainsi une assistance immédiate en cas de perte de bâton ou de défaut de port du casque."
+          },
+          {
+            "kind": "p",
+            "text": "Les usagers des stations hôtes devront également s'habituer à une fluidité renouvelée aux abords des remontées mécaniques. Les files d'attente au télésiège seront encadrées avec la rigueur d'un couloir de filtrage aéroportuaire, permettant d'inspecter les forfaits et le contenu des gourdes isothermes avant le franchissement du portique."
+          },
+          {
+            "kind": "h2",
+            "text": "Le slalom administratif comme discipline phare"
+          },
+          {
+            "kind": "p",
+            "text": "Face à cette logistique d'envergure, certains observateurs suggèrent d'intégrer directement la démonstration de maintien de l'ordre alpin au calendrier officiel. Le relais en motoneige d'interception et le freinage d'urgence sur plaque de verglas pourraient offrir des finales palpitantes aux spectateurs munis des autorisations nécessaires."
+          },
+          {
+            "kind": "p",
+            "text": "Seule inconnue à ce stade : l'hébergement de ce contingent en haute altitude. Les refuges de montagne étudient déjà la conversion de leurs dortoirs en postes de commandement, où la traditionnelle soupe à l'oignon sera servie dans le respect strict des horaires de service."
+          }
+        ]
+      },
+      "issues": [
+        {
+          "code": "corps_trop_court",
+          "msg": "Corps: 265 mots (minimum 280)"
+        }
+      ],
+      "judge": null,
+      "status": "quarantined",
+      "retries": 0
     }
   ],
   "history": [
@@ -122,6 +211,18 @@
       ],
       "messages": [
         "Chapo: 300 caracteres (maximum 260)"
+      ]
+    },
+    {
+      "ts": "2026-11-24T09:42:33.405Z",
+      "slot": "2026-11-24#3",
+      "topic": "Plus de 12 000 policiers et gendarmes seront mobilisés pour la sécurité des Alpes françaises 2030 « au plus fort des Jeux »",
+      "stage": "validation",
+      "reasons": [
+        "corps_trop_court"
+      ],
+      "messages": [
+        "Corps: 265 mots (minimum 280)"
       ]
     }
   ]
