@@ -3,7 +3,12 @@
 Nommez votre image **exactement comme la référence** (ex. `261024-X1.jpg`) et déposez-la dans `site/src/assets/manual/`.
 Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large minimum.
 
-## Sans image (14)
+## Sans image (15)
+
+### `261125-03` — Emploi : Pour sauver le marché du travail, des experts suggèrent d’imposer aux IA le rythme des réunions de cadrage
+- Rubrique : economie
+- Description suggérée : Un imposant serveur informatique installe au milieu d un bureau de travail classique, avec un mug de cafe pose sur son boitier et des piles de dossiers administratifs accumulees autour, style dessin de presse
+- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
 ### `261125-02` — Cinéma : Disney teste un film si prévisible que les spectateurs connaissent la fin dès l'affiche
 - Rubrique : culture
@@ -75,7 +80,7 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 - Description suggérée : Dessin de presse satirique : un éditorialiste en costume, perplexe devant un tableau noir où il a tracé une flèche « Homme + option maternité = Femme ? », tandis que derrière lui des femmes de tous âges dirigent une réunion, opèrent, pilotent et enseignent sans lui prêter attention. Style encre et aquarelle.
 - Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
-## Déjà illustrés (26)
+## Déjà illustrés (25)
 
 - `261114-D10` — La Madrague ouvrira au public l’été prochain, les modalités d’accueil restent à définir… et le parasol aussi (261114-D10.jpg)
 - `261114-D5` — Rugby : le XV de France bat l’Afrique du Sud 21-19, le cardiologue du Stade de France fait des heures sup (261114-D5.jpg)
@@ -102,4 +107,3 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 - `261108-05` — Inflation : les Français pris d’une terrifiante crise de « déconsommation » dès que le yaourt augmente de trois centimes (261108-05.jpg)
 - `261108-04` — Transition écologique : le gouvernement fixe un objectif national de trois litres d’urine par habitant et par jour (261108-04.jpg)
 - `261107-04` — Musées : les visiteurs invités à ramener leur cadenas et assurer deux heures de ronde pour financer la sécurité (261107-04.jpg)
-- `261107-03` — Route du Rhum : Une étude de 850 pages révèle qu'il faut un port pour accueillir des bateaux à l'arrivée (261107-03.jpg)

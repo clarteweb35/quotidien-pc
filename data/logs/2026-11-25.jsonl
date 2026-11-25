@@ -39,3 +39,22 @@
 {"ts":"2026-11-25T08:43:21.771Z","runId":"20261125084244-08ba","level":"info","event":"gemini.call","purpose":"image_judge","model":"gemini-3.5-flash-lite","inputTokens":1235,"outputTokens":60,"costUsd":0.000521}
 {"ts":"2026-11-25T08:43:21.772Z","runId":"20261125084244-08ba","level":"info","event":"image.ok","slot":"2026-11-25#1","bytes":37620,"costUsd":0}
 {"ts":"2026-11-25T08:43:21.776Z","runId":"20261125084244-08ba","level":"info","event":"publish.ok","slot":"2026-11-25#1","id":"d8664ffaee79","slug":"cinema-disney-teste-un-film-si-previsible-que-les","url":"/articles/cinema-disney-teste-un-film-si-previsible-que-les/","attempt":1,"dryRun":false}
+{"ts":"2026-11-25T09:12:35.165Z","runId":"20261125091235-efb7","level":"info","event":"cycle.start","date":"2026-11-25","due":["2026-11-25#2"],"remainingToday":3,"dryRun":false}
+{"ts":"2026-11-25T09:12:36.098Z","runId":"20261125091235-efb7","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":31,"kept":25}
+{"ts":"2026-11-25T09:12:36.098Z","runId":"20261125091235-efb7","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-11-25T09:12:36.099Z","runId":"20261125091235-efb7","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":19}
+{"ts":"2026-11-25T09:12:36.099Z","runId":"20261125091235-efb7","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":23}
+{"ts":"2026-11-25T09:12:36.099Z","runId":"20261125091235-efb7","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":16}
+{"ts":"2026-11-25T09:12:36.099Z","runId":"20261125091235-efb7","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":19,"kept":19}
+{"ts":"2026-11-25T09:12:36.099Z","runId":"20261125091235-efb7","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":12}
+{"ts":"2026-11-25T09:12:36.099Z","runId":"20261125091235-efb7","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":15}
+{"ts":"2026-11-25T09:12:36.099Z","runId":"20261125091235-efb7","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":7}
+{"ts":"2026-11-25T09:12:36.099Z","runId":"20261125091235-efb7","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":16}
+{"ts":"2026-11-25T09:12:36.099Z","runId":"20261125091235-efb7","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":8}
+{"ts":"2026-11-25T09:12:36.099Z","runId":"20261125091235-efb7","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":11}
+{"ts":"2026-11-25T09:12:36.099Z","runId":"20261125091235-efb7","level":"info","event":"collect.done","items":187}
+{"ts":"2026-11-25T09:12:36.173Z","runId":"20261125091235-efb7","level":"info","event":"topic.selection","slot":"2026-11-25#2","target":"economie","candidates":187,"rejected":0,"chosen":"IA et travail : « On peut se borner à remplacer les emplois existants, mais on peut aussi repenser le travail et la formation professionnelle »","score":6}
+{"ts":"2026-11-25T09:13:08.550Z","runId":"20261125091235-efb7","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4596,"outputTokens":2573,"costUsd":0.026192}
+{"ts":"2026-11-25T09:13:09.616Z","runId":"20261125091235-efb7","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":1073,"outputTokens":57,"costUsd":0.000464}
+{"ts":"2026-11-25T09:13:09.617Z","runId":"20261125091235-efb7","level":"info","event":"judge.result","slot":"2026-11-25#2","attempt":1,"humor":9,"coherence":10,"risk":0,"issues":[]}
+{"ts":"2026-11-25T09:13:09.622Z","runId":"20261125091235-efb7","level":"info","event":"publish.ok","slot":"2026-11-25#2","id":"ba39f67e5e4b","slug":"emploi-pour-sauver-le-marche-du-travail-des-experts","url":"/articles/emploi-pour-sauver-le-marche-du-travail-des-experts/","attempt":1,"dryRun":false}

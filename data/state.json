@@ -4313,6 +4313,14 @@
       "seenAt": "2026-11-25T08:42:45.703Z",
       "status": "used",
       "usedAt": "2026-11-25T08:42:45.703Z"
+    },
+    "ccd35068b514": {
+      "title": "IA et travail : « On peut se borner à remplacer les emplois existants, mais on peut aussi repenser le travail et la formation professionnelle »",
+      "url": "https://www.lemonde.fr/idees/article/2026/11/25/ia-et-travail-on-peut-se-borner-a-remplacer-les-emplois-existants-mais-on-peut-aussi-repenser-le-travail-et-la-formation-professionnelle_6815063_3232.html",
+      "category": "economie",
+      "seenAt": "2026-11-25T09:12:36.100Z",
+      "status": "used",
+      "usedAt": "2026-11-25T09:12:36.100Z"
     }
   },
   "slots": {
@@ -5386,12 +5394,21 @@
         "publishedAt": "2026-11-25T08:42:45.703Z",
         "topicId": "1aa5e0e49bd5",
         "lastError": null
+      },
+      "2": {
+        "attempts": 1,
+        "status": "published",
+        "startedAt": "2026-11-25T09:12:36.100Z",
+        "articleId": "ba39f67e5e4b",
+        "publishedAt": "2026-11-25T09:12:36.100Z",
+        "topicId": "ccd35068b514",
+        "lastError": null
       }
     }
   },
   "lastRun": {
-    "at": "2026-11-25T08:42:44.831Z",
-    "runId": "20261125084244-08ba",
+    "at": "2026-11-25T09:12:35.130Z",
+    "runId": "20261125091235-efb7",
     "published": 1,
     "stopped": null
   },

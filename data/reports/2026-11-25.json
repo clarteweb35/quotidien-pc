@@ -1,7 +1,7 @@
 {
   "date": "2026-11-25",
   "target": 5,
-  "publishedCount": 2,
+  "publishedCount": 3,
   "articles": [
     {
       "id": "d8664ffaee79",
@@ -9,6 +9,13 @@
       "title": "Cinéma : Disney teste un film si prévisible que les spectateurs connaissent la fin dès l'affiche",
       "category": "culture",
       "slug": "cinema-disney-teste-un-film-si-previsible-que-les"
+    },
+    {
+      "id": "ba39f67e5e4b",
+      "ref": "261125-03",
+      "title": "Emploi : Pour sauver le marché du travail, des experts suggèrent d’imposer aux IA le rythme des réunions de cadrage",
+      "category": "economie",
+      "slug": "emploi-pour-sauver-le-marche-du-travail-des-experts"
     },
     {
       "id": "04cc7ae786f7",
@@ -44,8 +51,13 @@
     {
       "idx": 2,
       "hhmm": "10:10",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 1,
+      "status": "published",
+      "startedAt": "2026-11-25T09:12:36.100Z",
+      "articleId": "ba39f67e5e4b",
+      "publishedAt": "2026-11-25T09:12:36.100Z",
+      "topicId": "ccd35068b514",
+      "lastError": null
     },
     {
       "idx": 3,
@@ -63,18 +75,18 @@
   "rejections": 0,
   "quarantined": 3,
   "api": {
-    "calls": 6,
-    "inputTokens": 12381,
-    "outputTokens": 6541,
-    "costUsd": 0.062788,
+    "calls": 8,
+    "inputTokens": 18050,
+    "outputTokens": 9171,
+    "costUsd": 0.089444,
     "dailyCapUsd": 1,
-    "monthCostUsd": 0.831879,
+    "monthCostUsd": 0.858535,
     "monthlyCapUsd": 15
   },
   "paused": false,
   "lastRun": {
-    "at": "2026-11-25T08:42:44.831Z",
-    "runId": "20261125084244-08ba",
+    "at": "2026-11-25T09:12:35.130Z",
+    "runId": "20261125091235-efb7",
     "published": 1,
     "stopped": null
   }
