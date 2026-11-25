@@ -4345,6 +4345,22 @@
       "seenAt": "2026-11-25T09:42:35.256Z",
       "status": "used",
       "usedAt": "2026-11-25T09:42:35.256Z"
+    },
+    "17339efb4239": {
+      "title": "Arnaque aux sentiments : la banque doit-elle rembourser la victime ?",
+      "url": "https://www.lemonde.fr/argent/article/2026/11/24/arnaque-aux-sentiments-la-banque-doit-elle-rembourser-la-victime_6814746_1657007.html",
+      "category": "tech",
+      "seenAt": "2026-11-25T10:12:37.125Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "e79fa65cb8e7": {
+      "title": "« GTA VI » piraté : comment des hackeurs assistés par IA font la course pour adapter le jeu vidéo sur PC",
+      "url": "https://www.lemonde.fr/pixels/article/2026/11/24/gta-vi-pirate-comment-des-hackeurs-assistes-par-ia-font-la-course-pour-adapter-le-jeu-video-sur-pc_6814851_4408996.html",
+      "category": "tech",
+      "seenAt": "2026-11-25T10:12:37.125Z",
+      "status": "used",
+      "usedAt": "2026-11-25T10:12:37.125Z"
     }
   },
   "slots": {
@@ -5436,12 +5452,21 @@
         "publishedAt": "2026-11-25T09:42:35.256Z",
         "topicId": "3d93ea465f02",
         "lastError": null
+      },
+      "4": {
+        "attempts": 1,
+        "status": "published",
+        "startedAt": "2026-11-25T10:12:37.125Z",
+        "articleId": "5c1738b4822b",
+        "publishedAt": "2026-11-25T10:12:37.125Z",
+        "topicId": "e79fa65cb8e7",
+        "lastError": null
       }
     }
   },
   "lastRun": {
-    "at": "2026-11-25T09:42:34.604Z",
-    "runId": "20261125094234-1cac",
+    "at": "2026-11-25T10:12:36.289Z",
+    "runId": "20261125101236-6a15",
     "published": 1,
     "stopped": null
   },

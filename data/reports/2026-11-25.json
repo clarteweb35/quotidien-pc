@@ -1,7 +1,7 @@
 {
   "date": "2026-11-25",
   "target": 5,
-  "publishedCount": 4,
+  "publishedCount": 5,
   "articles": [
     {
       "id": "d8664ffaee79",
@@ -23,6 +23,13 @@
       "title": "Emploi : Pour sauver le marché du travail, des experts suggèrent d’imposer aux IA le rythme des réunions de cadrage",
       "category": "economie",
       "slug": "emploi-pour-sauver-le-marche-du-travail-des-experts"
+    },
+    {
+      "id": "5c1738b4822b",
+      "ref": "261125-05",
+      "title": "GTA VI sur PC : ces héroïques hackeurs qui sacrifient leur jeunesse pour sauver les joueurs sans console",
+      "category": "tech",
+      "slug": "gta-vi-sur-pc-ces-heroiques-hackeurs-qui-sacrifient-leur"
     },
     {
       "id": "04cc7ae786f7",
@@ -80,25 +87,30 @@
     {
       "idx": 4,
       "hhmm": "11:10",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 1,
+      "status": "published",
+      "startedAt": "2026-11-25T10:12:37.125Z",
+      "articleId": "5c1738b4822b",
+      "publishedAt": "2026-11-25T10:12:37.125Z",
+      "topicId": "e79fa65cb8e7",
+      "lastError": null
     }
   ],
   "rejections": 0,
   "quarantined": 3,
   "api": {
-    "calls": 11,
-    "inputTokens": 28197,
-    "outputTokens": 13880,
-    "costUsd": 0.138696,
+    "calls": 13,
+    "inputTokens": 33674,
+    "outputTokens": 16811,
+    "costUsd": 0.167197,
     "dailyCapUsd": 1,
-    "monthCostUsd": 0.907787,
+    "monthCostUsd": 0.936288,
     "monthlyCapUsd": 15
   },
   "paused": false,
   "lastRun": {
-    "at": "2026-11-25T09:42:34.604Z",
-    "runId": "20261125094234-1cac",
+    "at": "2026-11-25T10:12:36.289Z",
+    "runId": "20261125101236-6a15",
     "published": 1,
     "stopped": null
   }

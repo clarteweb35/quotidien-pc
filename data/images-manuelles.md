@@ -3,7 +3,12 @@
 Nommez votre image **exactement comme la référence** (ex. `261024-X1.jpg`) et déposez-la dans `site/src/assets/manual/`.
 Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large minimum.
 
-## Sans image (16)
+## Sans image (17)
+
+### `261125-05` — GTA VI sur PC : ces héroïques hackeurs qui sacrifient leur jeunesse pour sauver les joueurs sans console
+- Rubrique : tech
+- Description suggérée : Un pirate informatique vu de dos assis à son bureau dans une pièce sombre remplie d'écrans d'ordinateur affichant des lignes de code et des palmiers virtuels, style dessin de presse.
+- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
 ### `261125-04` — Élections en Espagne : les partis politiques remplacent leurs militants par des algorithmes de rancœur
 - Rubrique : monde
@@ -85,7 +90,7 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 - Description suggérée : Dessin de presse satirique : un éditorialiste en costume, perplexe devant un tableau noir où il a tracé une flèche « Homme + option maternité = Femme ? », tandis que derrière lui des femmes de tous âges dirigent une réunion, opèrent, pilotent et enseignent sans lui prêter attention. Style encre et aquarelle.
 - Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
-## Déjà illustrés (24)
+## Déjà illustrés (23)
 
 - `261114-D10` — La Madrague ouvrira au public l’été prochain, les modalités d’accueil restent à définir… et le parasol aussi (261114-D10.jpg)
 - `261114-D5` — Rugby : le XV de France bat l’Afrique du Sud 21-19, le cardiologue du Stade de France fait des heures sup (261114-D5.jpg)
@@ -110,4 +115,3 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 - `261106-D3` — Smic : le coup de pouce, ce sport national où tout le monde veut aider… à condition de ne pas payer (261106-D3-dessin.png)
 - `261106-D2` — Corruption : les dirigeants du monde ont trouvé la recette pour ne jamais perdre… leur argent (261106-D2.jpg)
 - `261108-05` — Inflation : les Français pris d’une terrifiante crise de « déconsommation » dès que le yaourt augmente de trois centimes (261108-05.jpg)
-- `261108-04` — Transition écologique : le gouvernement fixe un objectif national de trois litres d’urine par habitant et par jour (261108-04.jpg)
