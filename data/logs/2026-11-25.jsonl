@@ -58,3 +58,24 @@
 {"ts":"2026-11-25T09:13:09.616Z","runId":"20261125091235-efb7","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":1073,"outputTokens":57,"costUsd":0.000464}
 {"ts":"2026-11-25T09:13:09.617Z","runId":"20261125091235-efb7","level":"info","event":"judge.result","slot":"2026-11-25#2","attempt":1,"humor":9,"coherence":10,"risk":0,"issues":[]}
 {"ts":"2026-11-25T09:13:09.622Z","runId":"20261125091235-efb7","level":"info","event":"publish.ok","slot":"2026-11-25#2","id":"ba39f67e5e4b","slug":"emploi-pour-sauver-le-marche-du-travail-des-experts","url":"/articles/emploi-pour-sauver-le-marche-du-travail-des-experts/","attempt":1,"dryRun":false}
+{"ts":"2026-11-25T09:42:34.911Z","runId":"20261125094234-1cac","level":"info","event":"cycle.start","date":"2026-11-25","due":["2026-11-25#3"],"remainingToday":2,"dryRun":false}
+{"ts":"2026-11-25T09:42:35.254Z","runId":"20261125094234-1cac","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":31,"kept":25}
+{"ts":"2026-11-25T09:42:35.254Z","runId":"20261125094234-1cac","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-11-25T09:42:35.254Z","runId":"20261125094234-1cac","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":19}
+{"ts":"2026-11-25T09:42:35.254Z","runId":"20261125094234-1cac","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":23}
+{"ts":"2026-11-25T09:42:35.254Z","runId":"20261125094234-1cac","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":16}
+{"ts":"2026-11-25T09:42:35.255Z","runId":"20261125094234-1cac","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":19,"kept":19}
+{"ts":"2026-11-25T09:42:35.255Z","runId":"20261125094234-1cac","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":13}
+{"ts":"2026-11-25T09:42:35.255Z","runId":"20261125094234-1cac","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":14}
+{"ts":"2026-11-25T09:42:35.255Z","runId":"20261125094234-1cac","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":7}
+{"ts":"2026-11-25T09:42:35.255Z","runId":"20261125094234-1cac","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":16}
+{"ts":"2026-11-25T09:42:35.255Z","runId":"20261125094234-1cac","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":8}
+{"ts":"2026-11-25T09:42:35.255Z","runId":"20261125094234-1cac","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":11}
+{"ts":"2026-11-25T09:42:35.255Z","runId":"20261125094234-1cac","level":"info","event":"collect.done","items":187}
+{"ts":"2026-11-25T09:42:35.373Z","runId":"20261125094234-1cac","level":"info","event":"topic.selection","slot":"2026-11-25#3","target":"monde","candidates":187,"rejected":2,"chosen":"Législatives en Espagne : l'utilisation massive de l'IA cultive la \"haine viscérale\" de l'adversaire","score":6}
+{"ts":"2026-11-25T09:42:49.619Z","runId":"20261125094234-1cac","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4621,"outputTokens":2107,"costUsd":0.022734}
+{"ts":"2026-11-25T09:42:49.681Z","runId":"20261125094234-1cac","level":"warn","event":"validate.deterministic_failed","slot":"2026-11-25#3","attempt":1,"issues":["titre_trop_long","chapo_trop_long"]}
+{"ts":"2026-11-25T09:43:08.282Z","runId":"20261125094234-1cac","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4688,"outputTokens":2546,"costUsd":0.026127}
+{"ts":"2026-11-25T09:43:10.285Z","runId":"20261125094234-1cac","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":838,"outputTokens":56,"costUsd":0.000391}
+{"ts":"2026-11-25T09:43:10.286Z","runId":"20261125094234-1cac","level":"info","event":"judge.result","slot":"2026-11-25#3","attempt":2,"humor":8,"coherence":9,"risk":1,"issues":[]}
+{"ts":"2026-11-25T09:43:10.290Z","runId":"20261125094234-1cac","level":"info","event":"publish.ok","slot":"2026-11-25#3","id":"91eb73c82e3b","slug":"elections-en-espagne-les-partis-politiques-remplacent-leurs","url":"/articles/elections-en-espagne-les-partis-politiques-remplacent-leurs/","attempt":2,"dryRun":false}

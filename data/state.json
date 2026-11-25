@@ -4321,6 +4321,30 @@
       "seenAt": "2026-11-25T09:12:36.100Z",
       "status": "used",
       "usedAt": "2026-11-25T09:12:36.100Z"
+    },
+    "1db2a05471d3": {
+      "title": "A Gaza, un bombardement israélien tue un responsable de la sécurité du Hamas et des membres de sa famille",
+      "url": "https://www.lemonde.fr/international/article/2026/11/25/a-gaza-un-bombardement-israelien-tue-un-responsable-de-la-securite-du-hamas-et-des-membres-de-sa-famille_6815073_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-25T09:42:35.256Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "0e47c491803a": {
+      "title": "EN DIRECT, guerre en Ukraine : Kiev a exercé son droit « à la légitime défense » en attaquant des navires russes en Libye, considère le Quai d’Orsay",
+      "url": "https://www.lemonde.fr/international/live/2026/11/25/en-direct-guerre-en-ukraine-kiev-a-exerce-son-droit-a-la-legitime-defense-en-attaquant-des-navires-russes-en-libye-considere-le-quai-d-orsay_6814183_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-25T09:42:35.256Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "3d93ea465f02": {
+      "title": "Législatives en Espagne : l'utilisation massive de l'IA cultive la \"haine viscérale\" de l'adversaire",
+      "url": "https://www.france24.com/fr/europe/20261125-elections-legislatives-espagne-videos-intelligence-artificielle-pedro-sanchez-vox-pp",
+      "category": "monde",
+      "seenAt": "2026-11-25T09:42:35.256Z",
+      "status": "used",
+      "usedAt": "2026-11-25T09:42:35.256Z"
     }
   },
   "slots": {
@@ -5403,12 +5427,21 @@
         "publishedAt": "2026-11-25T09:12:36.100Z",
         "topicId": "ccd35068b514",
         "lastError": null
+      },
+      "3": {
+        "attempts": 1,
+        "status": "published",
+        "startedAt": "2026-11-25T09:42:35.256Z",
+        "articleId": "91eb73c82e3b",
+        "publishedAt": "2026-11-25T09:42:35.256Z",
+        "topicId": "3d93ea465f02",
+        "lastError": null
       }
     }
   },
   "lastRun": {
-    "at": "2026-11-25T09:12:35.130Z",
-    "runId": "20261125091235-efb7",
+    "at": "2026-11-25T09:42:34.604Z",
+    "runId": "20261125094234-1cac",
     "published": 1,
     "stopped": null
   },
