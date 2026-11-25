@@ -1,14 +1,27 @@
 {
   "date": "2026-11-25",
   "target": 5,
-  "publishedCount": 0,
-  "articles": [],
+  "publishedCount": 1,
+  "articles": [
+    {
+      "id": "04cc7ae786f7",
+      "ref": "261125-01",
+      "title": "Robots de la « Gen Z » : enfin des travailleurs qui s’adaptent sans réclamer de RTT",
+      "category": "editos",
+      "slug": "robots-de-la-gen-z-enfin-des-travailleurs-qui-s-adaptent"
+    }
+  ],
   "slots": [
     {
       "idx": 0,
       "hhmm": "09:10",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 1,
+      "status": "published",
+      "startedAt": "2026-11-25T08:12:39.054Z",
+      "articleId": "04cc7ae786f7",
+      "publishedAt": "2026-11-25T08:12:39.054Z",
+      "topicId": "9bde93feab25",
+      "lastError": null
     },
     {
       "idx": 1,
@@ -38,19 +51,19 @@
   "rejections": 0,
   "quarantined": 3,
   "api": {
-    "calls": 0,
-    "inputTokens": 0,
-    "outputTokens": 0,
-    "costUsd": 0,
+    "calls": 2,
+    "inputTokens": 5717,
+    "outputTokens": 3165,
+    "costUsd": 0.030711,
     "dailyCapUsd": 1,
-    "monthCostUsd": 0.769091,
+    "monthCostUsd": 0.799802,
     "monthlyCapUsd": 15
   },
   "paused": false,
   "lastRun": {
-    "at": "2026-11-24T10:42:35.046Z",
-    "runId": "20261124104235-b8e8",
-    "published": 0,
-    "stopped": "gemini_unavailable"
+    "at": "2026-11-25T08:12:38.021Z",
+    "runId": "20261125081238-df4e",
+    "published": 1,
+    "stopped": null
   }
 }

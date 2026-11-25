@@ -1,1 +1,20 @@
 {"ts":"2026-11-25T00:33:58.238Z","runId":"20261125003358-94cc","level":"info","event":"cycle.start","date":"2026-11-25","due":[],"remainingToday":5,"dryRun":false}
+{"ts":"2026-11-25T08:12:38.095Z","runId":"20261125081238-df4e","level":"info","event":"cycle.start","date":"2026-11-25","due":["2026-11-25#0"],"remainingToday":5,"dryRun":false}
+{"ts":"2026-11-25T08:12:39.053Z","runId":"20261125081238-df4e","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":30,"kept":25}
+{"ts":"2026-11-25T08:12:39.053Z","runId":"20261125081238-df4e","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-11-25T08:12:39.053Z","runId":"20261125081238-df4e","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":19}
+{"ts":"2026-11-25T08:12:39.053Z","runId":"20261125081238-df4e","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":23}
+{"ts":"2026-11-25T08:12:39.053Z","runId":"20261125081238-df4e","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":16}
+{"ts":"2026-11-25T08:12:39.053Z","runId":"20261125081238-df4e","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":19,"kept":19}
+{"ts":"2026-11-25T08:12:39.053Z","runId":"20261125081238-df4e","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":12}
+{"ts":"2026-11-25T08:12:39.053Z","runId":"20261125081238-df4e","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":14}
+{"ts":"2026-11-25T08:12:39.054Z","runId":"20261125081238-df4e","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":6}
+{"ts":"2026-11-25T08:12:39.054Z","runId":"20261125081238-df4e","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":18}
+{"ts":"2026-11-25T08:12:39.054Z","runId":"20261125081238-df4e","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":8}
+{"ts":"2026-11-25T08:12:39.054Z","runId":"20261125081238-df4e","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":12}
+{"ts":"2026-11-25T08:12:39.054Z","runId":"20261125081238-df4e","level":"info","event":"collect.done","items":188}
+{"ts":"2026-11-25T08:12:39.259Z","runId":"20261125081238-df4e","level":"info","event":"topic.selection","slot":"2026-11-25#0","target":"editos","candidates":188,"rejected":25,"chosen":"Robotique et IA : sur le marché, une «gen Z» d’automates en puissance","score":8}
+{"ts":"2026-11-25T08:12:55.564Z","runId":"20261125081238-df4e","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4719,"outputTokens":3084,"costUsd":0.030209}
+{"ts":"2026-11-25T08:12:57.280Z","runId":"20261125081238-df4e","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":998,"outputTokens":81,"costUsd":0.000502}
+{"ts":"2026-11-25T08:12:57.281Z","runId":"20261125081238-df4e","level":"info","event":"judge.result","slot":"2026-11-25#0","attempt":1,"humor":7,"coherence":9,"risk":1,"issues":[]}
+{"ts":"2026-11-25T08:12:57.284Z","runId":"20261125081238-df4e","level":"info","event":"publish.ok","slot":"2026-11-25#0","id":"04cc7ae786f7","slug":"robots-de-la-gen-z-enfin-des-travailleurs-qui-s-adaptent","url":"/articles/robots-de-la-gen-z-enfin-des-travailleurs-qui-s-adaptent/","attempt":1,"dryRun":false}
