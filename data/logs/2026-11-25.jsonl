@@ -99,3 +99,21 @@
 {"ts":"2026-11-25T10:13:15.551Z","runId":"20261125101236-6a15","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":893,"outputTokens":125,"costUsd":0.00058}
 {"ts":"2026-11-25T10:13:15.551Z","runId":"20261125101236-6a15","level":"info","event":"judge.result","slot":"2026-11-25#4","attempt":1,"humor":6,"coherence":8,"risk":1,"issues":[]}
 {"ts":"2026-11-25T10:13:15.566Z","runId":"20261125101236-6a15","level":"info","event":"publish.ok","slot":"2026-11-25#4","id":"5c1738b4822b","slug":"gta-vi-sur-pc-ces-heroiques-hackeurs-qui-sacrifient-leur","url":"/articles/gta-vi-sur-pc-ces-heroiques-hackeurs-qui-sacrifient-leur/","attempt":1,"dryRun":false}
+{"ts":"2026-11-25T10:42:34.496Z","runId":"20261125104234-05ef","level":"info","event":"cycle.start","date":"2026-11-25","due":[],"remainingToday":0,"dryRun":false}
+{"ts":"2026-11-25T10:42:35.197Z","runId":"20261125104234-05ef","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":28,"kept":25}
+{"ts":"2026-11-25T10:42:35.198Z","runId":"20261125104234-05ef","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-11-25T10:42:35.198Z","runId":"20261125104234-05ef","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":19}
+{"ts":"2026-11-25T10:42:35.198Z","runId":"20261125104234-05ef","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":24}
+{"ts":"2026-11-25T10:42:35.198Z","runId":"20261125104234-05ef","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":16}
+{"ts":"2026-11-25T10:42:35.198Z","runId":"20261125104234-05ef","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":19,"kept":19}
+{"ts":"2026-11-25T10:42:35.198Z","runId":"20261125104234-05ef","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":13}
+{"ts":"2026-11-25T10:42:35.198Z","runId":"20261125104234-05ef","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":14}
+{"ts":"2026-11-25T10:42:35.198Z","runId":"20261125104234-05ef","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":8}
+{"ts":"2026-11-25T10:42:35.199Z","runId":"20261125104234-05ef","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":16}
+{"ts":"2026-11-25T10:42:35.199Z","runId":"20261125104234-05ef","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":8}
+{"ts":"2026-11-25T10:42:35.199Z","runId":"20261125104234-05ef","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":12}
+{"ts":"2026-11-25T10:42:41.323Z","runId":"20261125104234-05ef","level":"info","event":"gemini.call","purpose":"caricature","model":"gemini-3.6-flash","inputTokens":275,"outputTokens":1148,"costUsd":0.009023}
+{"ts":"2026-11-25T10:42:45.094Z","runId":"20261125104234-05ef","level":"warn","event":"gemini.retry","purpose":"image_judge","status":503,"attempt":1,"delayMs":4172}
+{"ts":"2026-11-25T10:42:50.238Z","runId":"20261125104234-05ef","level":"info","event":"gemini.call","purpose":"image_judge","model":"gemini-3.5-flash-lite","inputTokens":1254,"outputTokens":60,"costUsd":0.000526}
+{"ts":"2026-11-25T10:42:50.239Z","runId":"20261125104234-05ef","level":"info","event":"image.ok","slot":"caricature#2026-11-25","bytes":56926,"costUsd":0}
+{"ts":"2026-11-25T10:42:50.243Z","runId":"20261125104234-05ef","level":"info","event":"caricature.ok","date":"2026-11-25","titre":"Recharge interrompue"}
