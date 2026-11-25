@@ -4289,6 +4289,30 @@
       "seenAt": "2026-11-25T08:12:39.054Z",
       "status": "used",
       "usedAt": "2026-11-25T08:12:39.054Z"
+    },
+    "83d88e392290": {
+      "title": "« Congo Boy » : un jeune réfugié en Centrafrique tente sa chance dans un concours musical",
+      "url": "https://www.lemonde.fr/culture/article/2026/11/24/congo-boy-un-jeune-refugie-en-centrafrique-tente-sa-chance-dans-un-concours-musical_6814809_3246.html",
+      "category": "culture",
+      "seenAt": "2026-11-25T08:42:45.703Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "aae0ba3ba15f": {
+      "title": "« Espoir, Sierra de Teruel », l’exceptionnel film d’André Malraux sur la guerre d’Espagne ressort en salle",
+      "url": "https://www.lemonde.fr/culture/article/2026/11/24/espoir-sierra-de-teruel-l-exceptionnel-film-d-andre-malraux-sur-la-guerre-d-espagne-ressort-en-salle_6814774_3246.html",
+      "category": "culture",
+      "seenAt": "2026-11-25T08:42:45.703Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "1aa5e0e49bd5": {
+      "title": "Dans « Billie, à la croisée des mondes », une nouvelle héroïne Disney qui peine à enchanter",
+      "url": "https://www.lemonde.fr/culture/article/2026/11/24/dans-billie-a-la-croisee-des-mondes-une-nouvelle-heroine-disney-qui-peine-a-enchanter_6814826_3246.html",
+      "category": "culture",
+      "seenAt": "2026-11-25T08:42:45.703Z",
+      "status": "used",
+      "usedAt": "2026-11-25T08:42:45.703Z"
     }
   },
   "slots": {
@@ -5353,12 +5377,21 @@
         "publishedAt": "2026-11-25T08:12:39.054Z",
         "topicId": "9bde93feab25",
         "lastError": null
+      },
+      "1": {
+        "attempts": 1,
+        "status": "published",
+        "startedAt": "2026-11-25T08:42:45.703Z",
+        "articleId": "d8664ffaee79",
+        "publishedAt": "2026-11-25T08:42:45.703Z",
+        "topicId": "1aa5e0e49bd5",
+        "lastError": null
       }
     }
   },
   "lastRun": {
-    "at": "2026-11-25T08:12:38.021Z",
-    "runId": "20261125081238-df4e",
+    "at": "2026-11-25T08:42:44.831Z",
+    "runId": "20261125084244-08ba",
     "published": 1,
     "stopped": null
   },

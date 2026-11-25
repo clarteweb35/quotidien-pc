@@ -1,8 +1,15 @@
 {
   "date": "2026-11-25",
   "target": 5,
-  "publishedCount": 1,
+  "publishedCount": 2,
   "articles": [
+    {
+      "id": "d8664ffaee79",
+      "ref": "261125-02",
+      "title": "Cinéma : Disney teste un film si prévisible que les spectateurs connaissent la fin dès l'affiche",
+      "category": "culture",
+      "slug": "cinema-disney-teste-un-film-si-previsible-que-les"
+    },
     {
       "id": "04cc7ae786f7",
       "ref": "261125-01",
@@ -26,8 +33,13 @@
     {
       "idx": 1,
       "hhmm": "09:40",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 1,
+      "status": "published",
+      "startedAt": "2026-11-25T08:42:45.703Z",
+      "articleId": "d8664ffaee79",
+      "publishedAt": "2026-11-25T08:42:45.703Z",
+      "topicId": "1aa5e0e49bd5",
+      "lastError": null
     },
     {
       "idx": 2,
@@ -51,18 +63,18 @@
   "rejections": 0,
   "quarantined": 3,
   "api": {
-    "calls": 2,
-    "inputTokens": 5717,
-    "outputTokens": 3165,
-    "costUsd": 0.030711,
+    "calls": 6,
+    "inputTokens": 12381,
+    "outputTokens": 6541,
+    "costUsd": 0.062788,
     "dailyCapUsd": 1,
-    "monthCostUsd": 0.799802,
+    "monthCostUsd": 0.831879,
     "monthlyCapUsd": 15
   },
   "paused": false,
   "lastRun": {
-    "at": "2026-11-25T08:12:38.021Z",
-    "runId": "20261125081238-df4e",
+    "at": "2026-11-25T08:42:44.831Z",
+    "runId": "20261125084244-08ba",
     "published": 1,
     "stopped": null
   }

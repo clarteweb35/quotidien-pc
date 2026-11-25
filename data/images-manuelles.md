@@ -5,6 +5,11 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 
 ## Sans image (14)
 
+### `261125-02` — Cinéma : Disney teste un film si prévisible que les spectateurs connaissent la fin dès l'affiche
+- Rubrique : culture
+- Description suggérée : Une salle de cinéma sombre vue de dos où des spectateurs observent un écran géant affichant une courbe statistique parfaitement plate à la place d'un dessin animé.
+- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
+
 ### `261125-01` — Robots de la « Gen Z » : enfin des travailleurs qui s’adaptent sans réclamer de RTT
 - Rubrique : editos
 - Description suggérée : Un robot humanoïde élégant vêtu d'un costume-cravate mal ajusté debout devant une machine à café d'entreprise, tenant une tasse en céramique, style dessin de presse.
@@ -68,11 +73,6 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 ### `261114-D1` — Les femmes : des hommes qui auraient en plus la possibilité de faire des enfants ?
 - Rubrique : editos
 - Description suggérée : Dessin de presse satirique : un éditorialiste en costume, perplexe devant un tableau noir où il a tracé une flèche « Homme + option maternité = Femme ? », tandis que derrière lui des femmes de tous âges dirigent une réunion, opèrent, pilotent et enseignent sans lui prêter attention. Style encre et aquarelle.
-- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
-
-### `261106-D1` — Syndicats français : protéger le passé, bloquer le présent et sacrifier l’avenir
-- Rubrique : editos
-- Description suggérée : Dessin de presse satirique : un syndicaliste en gilet, assis sur une pile de vieilles rotatives, brandit fièrement un panneau « Acquis d’hier » devant une usine dont la cheminée ne fume plus, tandis qu’un calendrier arraché s’envole au vent. Personnages génériques, sans ressemblance avec une personne réelle. Style encre et aquarelle.
 - Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
 ## Déjà illustrés (26)
