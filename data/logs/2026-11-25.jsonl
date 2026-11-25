@@ -117,3 +117,4 @@
 {"ts":"2026-11-25T10:42:50.238Z","runId":"20261125104234-05ef","level":"info","event":"gemini.call","purpose":"image_judge","model":"gemini-3.5-flash-lite","inputTokens":1254,"outputTokens":60,"costUsd":0.000526}
 {"ts":"2026-11-25T10:42:50.239Z","runId":"20261125104234-05ef","level":"info","event":"image.ok","slot":"caricature#2026-11-25","bytes":56926,"costUsd":0}
 {"ts":"2026-11-25T10:42:50.243Z","runId":"20261125104234-05ef","level":"info","event":"caricature.ok","date":"2026-11-25","titre":"Recharge interrompue"}
+{"ts":"2026-11-25T11:12:37.825Z","runId":"20261125111237-e22c","level":"info","event":"cycle.start","date":"2026-11-25","due":[],"remainingToday":0,"dryRun":false}
