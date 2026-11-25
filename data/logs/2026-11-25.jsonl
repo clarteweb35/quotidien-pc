@@ -119,3 +119,4 @@
 {"ts":"2026-11-25T10:42:50.243Z","runId":"20261125104234-05ef","level":"info","event":"caricature.ok","date":"2026-11-25","titre":"Recharge interrompue"}
 {"ts":"2026-11-25T11:12:37.825Z","runId":"20261125111237-e22c","level":"info","event":"cycle.start","date":"2026-11-25","due":[],"remainingToday":0,"dryRun":false}
 {"ts":"2026-11-25T11:42:41.108Z","runId":"20261125114240-41d1","level":"info","event":"cycle.start","date":"2026-11-25","due":[],"remainingToday":0,"dryRun":false}
+{"ts":"2026-11-25T15:28:01.503Z","runId":"20261125152801-edc3","level":"info","event":"cycle.start","date":"2026-11-25","due":[],"remainingToday":0,"dryRun":false}
