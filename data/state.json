@@ -4686,7 +4686,7 @@
       "title": "Violences sur des élus : plus de 3 100 faits comptabilisés depuis le début 2026 ; une hausse de 25 % par rapport à 2025, annonce Laurent Nuñez",
       "url": "https://www.lemonde.fr/societe/article/2026/11/25/violences-sur-des-elus-plus-de-3-100-faits-comptabilises-depuis-le-debut-2026-en-hausse-de-25-par-rapport-a-2025-annonce-laurent-nunez_6815158_3224.html",
       "category": "politique",
-      "seenAt": "2026-11-26T08:42:32.792Z",
+      "seenAt": "2026-11-26T09:12:36.942Z",
       "status": "in_progress"
     }
   },
@@ -5801,16 +5801,16 @@
         "lastError": null
       },
       "1": {
-        "attempts": 1,
+        "attempts": 2,
         "status": "failed",
-        "startedAt": "2026-11-26T08:42:32.792Z",
-        "lastError": "gemini_unavailable: Gemini indisponible apres 2 tentatives (504): {\"error\":{\"code\":504,\"message\":\"Deadline expired before operation could complete.\",\"status\":\"DEADLINE_EXCEEDED\"}}"
+        "startedAt": "2026-11-26T09:12:36.942Z",
+        "lastError": "gemini_unavailable: Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}"
       }
     }
   },
   "lastRun": {
-    "at": "2026-11-26T08:42:32.092Z",
-    "runId": "20261126084232-c2a7",
+    "at": "2026-11-26T09:12:36.307Z",
+    "runId": "20261126091236-ea5c",
     "published": 0,
     "stopped": "gemini_unavailable"
   },
