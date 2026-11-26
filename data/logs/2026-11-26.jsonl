@@ -200,3 +200,20 @@
 {"ts":"2026-11-26T11:45:10.225Z","runId":"20261126114250-33c2","level":"warn","event":"caricature.fallback_model","from":"gemini-3.6-flash","to":"gemini-3.8-flash"}
 {"ts":"2026-11-26T11:45:13.891Z","runId":"20261126114250-33c2","level":"warn","event":"gemini.retry","purpose":"caricature","status":503,"attempt":1,"delayMs":4182}
 {"ts":"2026-11-26T11:45:19.098Z","runId":"20261126114250-33c2","level":"warn","event":"caricature.error","date":"2026-11-26","error":"Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status"}
+{"ts":"2026-11-26T14:59:05.085Z","runId":"20261126145905-4254","level":"info","event":"cycle.start","date":"2026-11-26","due":["2026-11-26#3","2026-11-26#4"],"remainingToday":4,"dryRun":false}
+{"ts":"2026-11-26T14:59:05.420Z","runId":"20261126145905-4254","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":29,"kept":25}
+{"ts":"2026-11-26T14:59:05.421Z","runId":"20261126145905-4254","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-11-26T14:59:05.421Z","runId":"20261126145905-4254","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":19}
+{"ts":"2026-11-26T14:59:05.421Z","runId":"20261126145905-4254","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":23}
+{"ts":"2026-11-26T14:59:05.421Z","runId":"20261126145905-4254","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":12}
+{"ts":"2026-11-26T14:59:05.421Z","runId":"20261126145905-4254","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":20,"kept":20}
+{"ts":"2026-11-26T14:59:05.422Z","runId":"20261126145905-4254","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":14}
+{"ts":"2026-11-26T14:59:05.422Z","runId":"20261126145905-4254","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":14}
+{"ts":"2026-11-26T14:59:05.422Z","runId":"20261126145905-4254","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":5}
+{"ts":"2026-11-26T14:59:05.422Z","runId":"20261126145905-4254","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":14}
+{"ts":"2026-11-26T14:59:05.422Z","runId":"20261126145905-4254","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":6}
+{"ts":"2026-11-26T14:59:05.422Z","runId":"20261126145905-4254","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":13}
+{"ts":"2026-11-26T14:59:05.422Z","runId":"20261126145905-4254","level":"info","event":"collect.done","items":181}
+{"ts":"2026-11-26T14:59:05.565Z","runId":"20261126145905-4254","level":"info","event":"topic.selection","slot":"2026-11-26#3","target":"politique","candidates":181,"rejected":1,"chosen":"De nouvelles preuves des messages antisémites attribués à Jordan Bardella dévoilées par Le Monde et Mediapart","score":7.5}
+{"ts":"2026-11-26T14:59:05.680Z","runId":"20261126145905-4254","level":"warn","event":"gemini.retry","purpose":"generate","status":429,"attempt":1,"delayMs":4239}
+{"ts":"2026-11-26T14:59:10.006Z","runId":"20261126145905-4254","level":"error","event":"cycle.stopped","reason":"quota","error":"Quota Gemini epuise ou limite de debit (HTTP 429): {\"error\":{\"code\":429,\"message\":\"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. "}

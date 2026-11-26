@@ -4783,6 +4783,21 @@
       "category": "politique",
       "seenAt": "2026-11-26T11:42:51.713Z",
       "status": "in_progress"
+    },
+    "b59826ca746b": {
+      "title": "Présidentielle 2027 : David Lisnard réclame \"l'anonymat des parrainages\" pour \"enlever la pression sur les maires\"",
+      "url": "https://www.franceinfo.fr/elections/presidentielle-2027-david-lisnard-reclame-l-anonymat-des-parrainages-pour-enlever-la-pression-sur-les-maires_8301468.html#xtor=RSS-3-%5Bpolitique%5D",
+      "category": "politique",
+      "seenAt": "2026-11-26T14:59:05.423Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "64e252bdec1d": {
+      "title": "De nouvelles preuves des messages antisémites attribués à Jordan Bardella dévoilées par Le Monde et Mediapart",
+      "url": "https://www.franceinfo.fr/politique/jordan-bardella/propos-antisemites-attribues-a-jordan-bardella/de-nouvelles-preuves-des-messages-antisemites-attribues-a-jordan-bardella-devoilees-par-le-monde-et-mediapart_8301447.html#xtor=RSS-3-%5Bpolitique%5D",
+      "category": "politique",
+      "seenAt": "2026-11-26T14:59:05.423Z",
+      "status": "in_progress"
     }
   },
   "slots": {
@@ -5908,18 +5923,18 @@
         "lastError": "gemini_unavailable: Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}"
       },
       "3": {
-        "attempts": 1,
+        "attempts": 2,
         "status": "failed",
-        "startedAt": "2026-11-26T11:42:51.713Z",
-        "lastError": "gemini_unavailable: Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}"
+        "startedAt": "2026-11-26T14:59:05.423Z",
+        "lastError": "quota: Quota Gemini epuise ou limite de debit (HTTP 429): {\"error\":{\"code\":429,\"message\":\"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. "
       }
     }
   },
   "lastRun": {
-    "at": "2026-11-26T11:42:50.181Z",
-    "runId": "20261126114250-33c2",
+    "at": "2026-11-26T14:59:05.069Z",
+    "runId": "20261126145905-4254",
     "published": 0,
-    "stopped": "gemini_unavailable"
+    "stopped": "quota"
   },
   "caricatures": {
     "2026-10-27": {

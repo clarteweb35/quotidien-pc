@@ -42,10 +42,10 @@
     {
       "idx": 3,
       "hhmm": "10:40",
-      "attempts": 1,
+      "attempts": 2,
       "status": "failed",
-      "startedAt": "2026-11-26T11:42:51.713Z",
-      "lastError": "gemini_unavailable: Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}"
+      "startedAt": "2026-11-26T14:59:05.423Z",
+      "lastError": "quota: Quota Gemini epuise ou limite de debit (HTTP 429): {\"error\":{\"code\":429,\"message\":\"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. "
     },
     {
       "idx": 4,
@@ -67,9 +67,9 @@
   },
   "paused": false,
   "lastRun": {
-    "at": "2026-11-26T11:42:50.181Z",
-    "runId": "20261126114250-33c2",
+    "at": "2026-11-26T14:59:05.069Z",
+    "runId": "20261126145905-4254",
     "published": 0,
-    "stopped": "gemini_unavailable"
+    "stopped": "quota"
   }
 }
