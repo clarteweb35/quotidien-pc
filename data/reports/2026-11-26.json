@@ -42,8 +42,10 @@
     {
       "idx": 3,
       "hhmm": "10:40",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 1,
+      "status": "failed",
+      "startedAt": "2026-11-26T11:42:51.713Z",
+      "lastError": "gemini_unavailable: Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}"
     },
     {
       "idx": 4,
@@ -65,8 +67,8 @@
   },
   "paused": false,
   "lastRun": {
-    "at": "2026-11-26T11:12:42.456Z",
-    "runId": "20261126111242-c7af",
+    "at": "2026-11-26T11:42:50.181Z",
+    "runId": "20261126114250-33c2",
     "published": 0,
     "stopped": "gemini_unavailable"
   }

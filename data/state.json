@@ -4781,7 +4781,7 @@
       "title": "Présidentielle 2027 : depuis la Mayenne, Raphaël Glucksmann dévoile son projet de \"Conseil des territoires\" pour donner plus de pouvoir aux élus locaux",
       "url": "https://www.franceinfo.fr/elections/presidentielle/presidentielle-2027-depuis-la-mayenne-raphael-glucksmann-devoile-son-projet-de-conseil-des-territoires-pour-donner-plus-de-pouvoir-aux-elus-locaux_8300955.html#xtor=RSS-3-%5Bpolitique%5D",
       "category": "politique",
-      "seenAt": "2026-11-26T11:12:42.974Z",
+      "seenAt": "2026-11-26T11:42:51.713Z",
       "status": "in_progress"
     }
   },
@@ -5906,12 +5906,18 @@
         "status": "failed",
         "startedAt": "2026-11-26T11:12:42.974Z",
         "lastError": "gemini_unavailable: Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}"
+      },
+      "3": {
+        "attempts": 1,
+        "status": "failed",
+        "startedAt": "2026-11-26T11:42:51.713Z",
+        "lastError": "gemini_unavailable: Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}"
       }
     }
   },
   "lastRun": {
-    "at": "2026-11-26T11:12:42.456Z",
-    "runId": "20261126111242-c7af",
+    "at": "2026-11-26T11:42:50.181Z",
+    "runId": "20261126114250-33c2",
     "published": 0,
     "stopped": "gemini_unavailable"
   },
@@ -6063,7 +6069,7 @@
     },
     "2026-11-26": {
       "status": "failed",
-      "attempts": 2,
+      "attempts": 3,
       "lastError": "UnavailableError: Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status"
     }
   }
