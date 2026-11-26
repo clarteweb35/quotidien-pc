@@ -4401,6 +4401,270 @@
       "seenAt": "2026-11-25T10:42:34.497Z",
       "status": "used",
       "usedAt": "2026-11-25T10:42:34.497Z"
+    },
+    "1733f1fc97e4": {
+      "title": "\"Bien sûr que je regrette\" : de la Bretagne à l'Etat islamique en Syrie, comment Emilie König, jugée à Paris, a basculé dans le jihadisme",
+      "url": "https://www.franceinfo.fr/faits-divers/terrorisme/bien-sur-que-je-regrette-de-la-bretagne-a-l-etat-islamique-en-syrie-comment-emilie-konig-jugee-a-paris-a-bascule-dans-le-jihadisme_8298870.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-11-26T08:12:33.893Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "951ac7fbaa1f": {
+      "title": "La justice se prononce sur le renvoi de Gérard Depardieu en procès pour des viols sur l'actrice Charlotte Arnould",
+      "url": "https://www.franceinfo.fr/faits-divers/justice-proces/la-justice-se-prononce-sur-le-renvoi-de-gerard-depardieu-en-proces-pour-des-viols-sur-l-actrice-charlotte-arnould_8300862.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-11-26T08:12:33.893Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "46dd1de8cddd": {
+      "title": "\"Je les utilise tout le temps !\" : des Parisiens surpris par la décision de la mairie d'enlever les panneaux de direction dans les rues de la capitale",
+      "url": "https://www.franceinfo.fr/france/ile-de-france/je-les-utilise-tout-le-temps-des-parisiens-surpris-par-la-decision-de-la-mairie-d-enlever-les-panneaux-de-direction-dans-les-rues-de-la-capitale_8300763.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-11-26T08:12:33.893Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "55105cf824c7": {
+      "title": "Une attaque de drone ukrainienne fait cinq morts en territoire occupé par Moscou, selon les autorités prorusses",
+      "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/une-attaque-de-drone-ukrainienne-a-fait-cinq-morts-en-territoire-occupe-par-moscou-annoncent-les-autorites-prorusses_8300877.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-11-26T08:12:33.893Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "c847595b3135": {
+      "title": "Aide à l'Ukraine : où se situe la France parmi les principaux pays donateurs ?",
+      "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/infographies-aide-a-l-ukraine-ou-se-situe-la-france-parmi-les-principaux-pays-donateurs_8300007.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-11-26T08:12:33.893Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "b6bda7488059": {
+      "title": "Donald Trump et le secrétaire général de l'Otan, Mark Rutte, exhortent la Russie à ne pas \"étendre la guerre\" avec l'Ukraine",
+      "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/donald-trump-et-le-secretaire-general-de-l-otan-mark-rutte-exhortent-la-russie-a-ne-pas-etendre-la-guerre-avec-l-ukraine_8300721.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-11-26T08:12:33.893Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "648eee5b1d0d": {
+      "title": "Guerre en Ukraine : les Européens prêts à parler à Vladimir Poutine pour imposer leur vision de l’architecture de sécurité du Vieux Continent",
+      "url": "https://www.lemonde.fr/international/article/2026/11/26/guerre-en-ukraine-les-europeens-prets-a-parler-a-vladimir-poutine-pour-imposer-leur-vision-de-l-architecture-de-securite-du-vieux-continent_6815467_3210.html",
+      "category": "societe",
+      "seenAt": "2026-11-26T08:12:33.893Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "7ce4faea67cb": {
+      "title": "Emilie König, la plus médiatique des djihadistes françaises, devant la justice",
+      "url": "https://www.lemonde.fr/societe/article/2026/11/26/emilie-konig-la-plus-mediatique-des-djihadistes-francaises-devant-la-justice_6815463_3224.html",
+      "category": "societe",
+      "seenAt": "2026-11-26T08:12:33.893Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "9895a2d43bd8": {
+      "title": "Derrière la mort de migrants dans la Manche, un vendeur allemand de pneumatiques : enquête sur une filière mise en cause pour « homicides involontaires »",
+      "url": "https://www.lemonde.fr/societe/article/2026/11/26/derriere-la-mort-de-migrants-dans-la-manche-un-vendeur-allemand-de-pneumatiques-enquete-sur-une-filiere-mise-en-cause-pour-homicides-involontaires_6815477_3224.html",
+      "category": "societe",
+      "seenAt": "2026-11-26T08:12:33.893Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "ba86e69fec7b": {
+      "title": "Des laits infantiles vendus en France sont contaminés par des PFAS interdits et cancérogènes",
+      "url": "https://www.lemonde.fr/planete/article/2026/11/26/des-laits-infantiles-vendus-en-france-sont-contamines-par-des-pfas-interdits-et-cancerogenes_6815474_3244.html",
+      "category": "societe",
+      "seenAt": "2026-11-26T08:12:33.893Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "376176a9d94d": {
+      "title": "Droits de douane : Donald Trump s’entête dans le protectionnisme",
+      "url": "https://www.liberation.fr/international/amerique/droits-de-douane-donald-trump-sentete-dans-le-protectionnisme-20261126_EGD25SQXFJFNJJVUSHSMJXWH54/",
+      "category": "societe",
+      "seenAt": "2026-11-26T08:12:33.893Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "205a0f16e393": {
+      "title": "Le «vortex polaire», un tourbillon géant et glacial qui fait planer le doute sur la météo de l’hiver en Europe",
+      "url": "https://www.liberation.fr/environnement/le-vortex-polaire-un-tourbillon-geant-et-glacial-qui-fait-planer-le-doute-sur-la-meteo-de-lhiver-en-europe-20261126_OJMYNYTQ4JEFXK5PZRJUMO45PE/",
+      "category": "societe",
+      "seenAt": "2026-11-26T08:12:33.893Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "9bd81963a23a": {
+      "title": "Duran Duran : Andy Taylor, guitariste et compositeur du groupe, est mort à 65 ans",
+      "url": "https://www.liberation.fr/culture/musique/duran-duran-andy-taylor-guitariste-et-compositeur-du-groupe-est-mort-a-65-ans-20261126_SLA7SRUR6RCMNJCEXHOPDESYDI/",
+      "category": "societe",
+      "seenAt": "2026-11-26T08:12:33.893Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "b74966386dbc": {
+      "title": "Classements sans suite de plaintes pour VSS : les viols conjugaux, ces invisibles",
+      "url": "https://www.liberation.fr/societe/droits-des-femmes/classements-sans-suite-de-plaintes-pour-vss-les-viols-conjugaux-ces-invisibles-20261126_EN5GAVANXJFI7GAZQFRAC76MMA/",
+      "category": "societe",
+      "seenAt": "2026-11-26T08:12:33.893Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "12446e70d452": {
+      "title": "Jugé pour avoir mis fin aux souffrances de son épouse : «Je ne suis pas un assassin»",
+      "url": "https://www.liberation.fr/societe/sante/juge-pour-avoir-mis-fin-aux-souffrances-de-son-epouse-je-ne-suis-pas-un-assassin-20261126_IP5YNKDJVJHPXBGGCHSGB5FNWA/",
+      "category": "societe",
+      "seenAt": "2026-11-26T08:12:33.893Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "46339c5d504f": {
+      "title": "«Ce n’est pas notre guerre» : Teddy Riner veut stopper l’aide à l’Ukraine",
+      "url": "https://www.liberation.fr/sports/lukraine-nest-pas-notre-guerre-teddy-riner-se-prend-les-pieds-dans-le-tatami-avant-de-retropedaler-20261125_7JEBWXSMBRH3VHKPFGQKYILKCM/",
+      "category": "societe",
+      "seenAt": "2026-11-26T08:12:33.893Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "ed1c0c441f0e": {
+      "title": "Le procès d'Émilie König, propagandiste du jihad, s'ouvre devant la cour d'assises spéciale de Paris",
+      "url": "https://www.france24.com/fr/france/20261126-le-proc%C3%A8s-d-%C3%A9milie-k%C3%B6nig-propagandiste-du-jihad-s-ouvre-devant-la-cour-d-assises-sp%C3%A9ciale-de-paris",
+      "category": "monde",
+      "seenAt": "2026-11-26T08:12:33.893Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "ba77e7848730": {
+      "title": "Génocide des Rohingyas : la Birmanie refusera les exigences de la CIJ qu'elle juge \"inappropriées\"",
+      "url": "https://www.france24.com/fr/asie-pacifique/20261126-genocide-rohingya-birmanie-ne-se-conformera-pas-exigences-cij-inappropriees",
+      "category": "monde",
+      "seenAt": "2026-11-26T08:12:33.893Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "f60a58896f88": {
+      "title": "En direct : Trump et le chef de l'Otan exhortent Moscou à ne pas \"étendre la guerre\" avec l'Ukraine",
+      "url": "https://www.france24.com/fr/europe/20261126-en-direct-ukraine-russie-ue-sommet-aide-zelensky-poutine",
+      "category": "monde",
+      "seenAt": "2026-11-26T08:12:33.893Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "3b0ac0f39740": {
+      "title": "Andy Taylor, ex-guitariste de Duran Duran, est décédé à l'âge de 65 ans",
+      "url": "https://www.france24.com/fr/culture/20261125-andy-taylor-ex-guitariste-de-duran-duran-est-d%C3%A9c%C3%A9d%C3%A9-%C3%A0-l-%C3%A2ge-de-65-ans",
+      "category": "monde",
+      "seenAt": "2026-11-26T08:12:33.893Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "77eec42ef6db": {
+      "title": "\"Ce n'est pas notre guerre\" : Teddy Riner exhorte à arrêter de donner de l'argent à l'Ukraine",
+      "url": "https://www.france24.com/fr/france/20261125-notre-guerre-teddy-riner-exhorte-arr%C3%AAter-donner-argent-ukraine-%C3%A9lection-fran%C3%A7aise-pr%C3%A9sidentielle",
+      "category": "monde",
+      "seenAt": "2026-11-26T08:12:33.893Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "231539b67e25": {
+      "title": "En Égypte, un incendie sur une autoroute du Caire fait une trentaine de morts",
+      "url": "https://www.france24.com/fr/afrique/20261125-en-%C3%A9gypte-un-incendie-sur-une-autoroute-du-caire-fait-une-trentaine-de-morts",
+      "category": "monde",
+      "seenAt": "2026-11-26T08:12:33.893Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "b40680c39e28": {
+      "title": "Non,\"toute la diaspora chinoise\" n'est pas composée d'espions, mais elle subit une pression de Pékin",
+      "url": "https://www.france24.com/fr/france/20261125-non-toute-diaspora-chinoise-pas-compos%C3%A9e-espions-mais-subit-pressions-p%C3%A9kin",
+      "category": "monde",
+      "seenAt": "2026-11-26T08:12:33.893Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "152745035384": {
+      "title": "Un bilan toujours plus alarmant",
+      "url": "https://www.france24.com/fr/%C3%A9missions/questions-directes/20261125-un-bilan-toujours-plus-alarmant",
+      "category": "monde",
+      "seenAt": "2026-11-26T08:12:33.893Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "29c964d9ce1d": {
+      "title": "L’Afrique en tête des féminicides dans le monde en 2025",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261125-l-afrique-en-t%C3%AAte-des-f%C3%A9minicides-dans-le-monde-en-2025",
+      "category": "monde",
+      "seenAt": "2026-11-26T08:12:33.893Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "f34ad7311944": {
+      "title": "L'actu en dessin : le 25 novembre, une journée contre les violences faites aux femmes et aux filles",
+      "url": "https://www.france24.com/fr/france/20261125-actu-dessin-25-novembre-journ%C3%A9e-contre-violences-faites-femmes-filles-physiques-sexuelles-sexistes-psychologiques",
+      "category": "monde",
+      "seenAt": "2026-11-26T08:12:33.893Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "9142bbe52ddc": {
+      "title": "Irak : huit nouveaux djihadistes français, dont Romain Garnier, condamnés à la perpétuité",
+      "url": "https://www.lemonde.fr/international/article/2026/11/26/irak-huit-nouveaux-djihadistes-francais-dont-romain-garnier-condamnes-a-la-perpetuite_6815494_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-26T08:12:33.893Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "d6519170a252": {
+      "title": "EN DIRECT, guerre en Ukraine : Donald Trump et le secrétaire général de l’OTAN, Mark Rutte, exhortent Moscou à ne pas « étendre la guerre » avec Kiev",
+      "url": "https://www.lemonde.fr/international/live/2026/11/26/en-direct-guerre-en-ukraine-donald-trump-et-le-secretaire-general-de-l-otan-mark-rutte-exhortent-moscou-a-ne-pas-etendre-la-guerre-avec-kiev_6814183_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-26T08:12:33.893Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "b34e120954e3": {
+      "title": "Au Mexique, le calvaire numérique d’une écrivaine féministe",
+      "url": "https://www.lemonde.fr/international/article/2026/11/26/au-mexique-le-calvaire-numerique-d-une-ecrivaine-feministe_6815332_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-26T08:12:33.893Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "2c144c48347e": {
+      "title": "En Egypte, un incendie meurtrier sur une autoroute de l’agglomération du Caire fait une trentaine de victimes",
+      "url": "https://www.lemonde.fr/afrique/article/2026/11/26/en-egypte-un-incendie-meurtrier-sur-une-autoroute-de-l-agglomeration-du-caire-fait-une-trentaine-de-victimes_6815263_3212.html",
+      "category": "monde",
+      "seenAt": "2026-11-26T08:12:33.893Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "67b25cdac419": {
+      "title": "Au Yémen, des positions des houthistes à nouveau bombardées ; des ports saoudiens pris pour cible en représailles",
+      "url": "https://www.lemonde.fr/international/article/2026/11/25/au-yemen-des-positions-des-houthistes-a-nouveau-bombardees-des-ports-saoudiens-pris-pour-cible-en-represailles_6815174_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-26T08:12:33.893Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "a32498777f28": {
+      "title": "Sur la piste de Robert Surcouf et de son implication dans l’esclavage, une histoire française passée sous silence",
+      "url": "https://www.lemonde.fr/histoire/article/2026/11/25/sur-la-piste-de-robert-surcouf-et-de-son-implication-dans-l-esclavage-une-histoire-francaise-passee-sous-silence_6815166_4655323.html",
+      "category": "monde",
+      "seenAt": "2026-11-26T08:12:33.893Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "51027ffef9a6": {
+      "title": "Reporters sans frontières demande à l’Arcom la suspension de CNews pour une durée d’un mois",
+      "url": "https://www.lemonde.fr/economie/article/2026/11/26/reporters-sans-frontieres-demande-la-suspension-de-cnews-pour-une-duree-d-un-mois_6815475_3234.html",
+      "category": "editos",
+      "seenAt": "2026-11-26T08:12:33.893Z",
+      "status": "used",
+      "usedAt": "2026-11-26T08:12:33.893Z"
     }
   },
   "slots": {
@@ -5502,11 +5766,22 @@
         "topicId": "e79fa65cb8e7",
         "lastError": null
       }
+    },
+    "2026-11-26": {
+      "0": {
+        "attempts": 1,
+        "status": "published",
+        "startedAt": "2026-11-26T08:12:33.893Z",
+        "articleId": "2bda898968fd",
+        "publishedAt": "2026-11-26T08:12:33.893Z",
+        "topicId": "51027ffef9a6",
+        "lastError": null
+      }
     }
   },
   "lastRun": {
-    "at": "2026-11-25T10:12:36.289Z",
-    "runId": "20261125101236-6a15",
+    "at": "2026-11-26T08:12:33.049Z",
+    "runId": "20261126081233-24b0",
     "published": 1,
     "stopped": null
   },
