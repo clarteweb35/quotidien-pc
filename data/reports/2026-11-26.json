@@ -26,8 +26,10 @@
     {
       "idx": 1,
       "hhmm": "09:40",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 1,
+      "status": "failed",
+      "startedAt": "2026-11-26T08:42:32.792Z",
+      "lastError": "gemini_unavailable: Gemini indisponible apres 2 tentatives (504): {\"error\":{\"code\":504,\"message\":\"Deadline expired before operation could complete.\",\"status\":\"DEADLINE_EXCEEDED\"}}"
     },
     {
       "idx": 2,
@@ -61,9 +63,9 @@
   },
   "paused": false,
   "lastRun": {
-    "at": "2026-11-26T08:12:33.049Z",
-    "runId": "20261126081233-24b0",
-    "published": 1,
-    "stopped": null
+    "at": "2026-11-26T08:42:32.092Z",
+    "runId": "20261126084232-c2a7",
+    "published": 0,
+    "stopped": "gemini_unavailable"
   }
 }

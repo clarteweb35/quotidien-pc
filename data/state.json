@@ -4665,6 +4665,29 @@
       "seenAt": "2026-11-26T08:12:33.893Z",
       "status": "used",
       "usedAt": "2026-11-26T08:12:33.893Z"
+    },
+    "ff589c383a2a": {
+      "title": "Teddy Riner affirme, à propos de la guerre en Ukraine, que la France doit « arrêter de donner de l’argent » qu’elle n’a pas",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/25/teddy-riner-affirme-a-propos-de-la-guerre-en-ukraine-que-la-france-doit-arreter-de-donner-de-l-argent-que-nous-n-avons-pas_6815137_823449.html",
+      "category": "politique",
+      "seenAt": "2026-11-26T08:42:32.792Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "d14b9d4fd4ca": {
+      "title": "À suivre Loïc de la Mornais : la guerre des droites est-elle déclarée entre Édouard Philippe et David Lisnard ?",
+      "url": "https://www.franceinfo.fr/replay-magazine/franceinfo/a-suivre-avec-loic-de-la-mornais/a-suivre-loic-de-la-mornais-la-guerre-des-droites-est-elle-declaree-entre-edouard-philippe-et-david-lisnard_8300895.html#xtor=RSS-3-%5Bpolitique%5D",
+      "category": "politique",
+      "seenAt": "2026-11-26T08:42:32.792Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "533410cba33f": {
+      "title": "Violences sur des élus : plus de 3 100 faits comptabilisés depuis le début 2026 ; une hausse de 25 % par rapport à 2025, annonce Laurent Nuñez",
+      "url": "https://www.lemonde.fr/societe/article/2026/11/25/violences-sur-des-elus-plus-de-3-100-faits-comptabilises-depuis-le-debut-2026-en-hausse-de-25-par-rapport-a-2025-annonce-laurent-nunez_6815158_3224.html",
+      "category": "politique",
+      "seenAt": "2026-11-26T08:42:32.792Z",
+      "status": "in_progress"
     }
   },
   "slots": {
@@ -5776,14 +5799,20 @@
         "publishedAt": "2026-11-26T08:12:33.893Z",
         "topicId": "51027ffef9a6",
         "lastError": null
+      },
+      "1": {
+        "attempts": 1,
+        "status": "failed",
+        "startedAt": "2026-11-26T08:42:32.792Z",
+        "lastError": "gemini_unavailable: Gemini indisponible apres 2 tentatives (504): {\"error\":{\"code\":504,\"message\":\"Deadline expired before operation could complete.\",\"status\":\"DEADLINE_EXCEEDED\"}}"
       }
     }
   },
   "lastRun": {
-    "at": "2026-11-26T08:12:33.049Z",
-    "runId": "20261126081233-24b0",
-    "published": 1,
-    "stopped": null
+    "at": "2026-11-26T08:42:32.092Z",
+    "runId": "20261126084232-c2a7",
+    "published": 0,
+    "stopped": "gemini_unavailable"
   },
   "caricatures": {
     "2026-10-27": {
