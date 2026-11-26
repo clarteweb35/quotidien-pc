@@ -76,3 +76,22 @@
 {"ts":"2026-11-26T09:44:08.520Z","runId":"20261126094234-a9af","level":"warn","event":"gemini.fallback_model","from":"gemini-3.6-flash","to":"gemini-3.8-flash"}
 {"ts":"2026-11-26T09:44:24.172Z","runId":"20261126094234-a9af","level":"warn","event":"gemini.retry","purpose":"generate","status":503,"attempt":1,"delayMs":4538}
 {"ts":"2026-11-26T09:45:23.309Z","runId":"20261126094234-a9af","level":"error","event":"cycle.stopped","reason":"gemini_unavailable","error":"Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}"}
+{"ts":"2026-11-26T10:12:33.514Z","runId":"20261126101233-c3fe","level":"info","event":"cycle.start","date":"2026-11-26","due":["2026-11-26#2","2026-11-26#3"],"remainingToday":4,"dryRun":false}
+{"ts":"2026-11-26T10:12:34.162Z","runId":"20261126101233-c3fe","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":31,"kept":25}
+{"ts":"2026-11-26T10:12:34.162Z","runId":"20261126101233-c3fe","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-11-26T10:12:34.162Z","runId":"20261126101233-c3fe","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":19}
+{"ts":"2026-11-26T10:12:34.163Z","runId":"20261126101233-c3fe","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":22}
+{"ts":"2026-11-26T10:12:34.163Z","runId":"20261126101233-c3fe","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":16}
+{"ts":"2026-11-26T10:12:34.163Z","runId":"20261126101233-c3fe","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":20,"kept":20}
+{"ts":"2026-11-26T10:12:34.163Z","runId":"20261126101233-c3fe","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":11}
+{"ts":"2026-11-26T10:12:34.163Z","runId":"20261126101233-c3fe","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":15}
+{"ts":"2026-11-26T10:12:34.163Z","runId":"20261126101233-c3fe","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":5}
+{"ts":"2026-11-26T10:12:34.163Z","runId":"20261126101233-c3fe","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":13}
+{"ts":"2026-11-26T10:12:34.163Z","runId":"20261126101233-c3fe","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":6}
+{"ts":"2026-11-26T10:12:34.164Z","runId":"20261126101233-c3fe","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":11}
+{"ts":"2026-11-26T10:12:34.164Z","runId":"20261126101233-c3fe","level":"info","event":"collect.done","items":179}
+{"ts":"2026-11-26T10:12:34.319Z","runId":"20261126101233-c3fe","level":"info","event":"topic.selection","slot":"2026-11-26#2","target":"politique","candidates":179,"rejected":2,"chosen":"Violences sur des élus : plus de 3 100 faits comptabilisés depuis le début 2026 ; une hausse de 25 % par rapport à 2025, annonce Laurent Nuñez","score":8}
+{"ts":"2026-11-26T10:12:45.049Z","runId":"20261126101233-c3fe","level":"warn","event":"gemini.retry","purpose":"generate","status":503,"attempt":1,"delayMs":4658}
+{"ts":"2026-11-26T10:12:52.048Z","runId":"20261126101233-c3fe","level":"warn","event":"gemini.fallback_model","from":"gemini-3.6-flash","to":"gemini-3.8-flash"}
+{"ts":"2026-11-26T10:14:20.581Z","runId":"20261126101233-c3fe","level":"warn","event":"gemini.retry","purpose":"generate","status":504,"attempt":1,"delayMs":4827}
+{"ts":"2026-11-26T10:14:31.003Z","runId":"20261126101233-c3fe","level":"error","event":"cycle.stopped","reason":"gemini_unavailable","error":"Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}"}

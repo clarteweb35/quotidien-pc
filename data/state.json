@@ -4686,8 +4686,24 @@
       "title": "Violences sur des élus : plus de 3 100 faits comptabilisés depuis le début 2026 ; une hausse de 25 % par rapport à 2025, annonce Laurent Nuñez",
       "url": "https://www.lemonde.fr/societe/article/2026/11/25/violences-sur-des-elus-plus-de-3-100-faits-comptabilises-depuis-le-debut-2026-en-hausse-de-25-par-rapport-a-2025-annonce-laurent-nunez_6815158_3224.html",
       "category": "politique",
-      "seenAt": "2026-11-26T09:42:34.803Z",
+      "seenAt": "2026-11-26T10:12:34.164Z",
       "status": "in_progress"
+    },
+    "7b6a89b55d7b": {
+      "title": "« A l’hôpital, ils ne savaient pas si je passerais la nuit » : les grenades assourdissantes blessent toujours plus gravement les manifestants",
+      "url": "https://www.lemonde.fr/societe/article/2026/11/26/a-l-hopital-ils-ne-savaient-pas-si-je-passerais-la-nuit-les-grenades-assourdissantes-blessent-toujours-plus-gravement-les-manifestants_6815510_3224.html",
+      "category": "politique",
+      "seenAt": "2026-11-26T10:12:34.164Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "a5d87877511a": {
+      "title": "EN DIRECT, propos antisémites : Jordan Bardella réitère « sa contestation formelle » ; mais « les nombreux éléments ne laissent aucun doute » affirme notre journaliste Clément Guillou",
+      "url": "https://www.lemonde.fr/politique/live/2026/11/26/en-direct-david-lisnard-assure-garder-la-tete-froide-apres-sa-reelection-a-l-amf-retour-sur-les-propos-antisemites-de-jordan-bardella_6815062_823448.html",
+      "category": "politique",
+      "seenAt": "2026-11-26T10:12:34.164Z",
+      "status": "excluded",
+      "reason": "sensitive"
     }
   },
   "slots": {
@@ -5805,12 +5821,18 @@
         "status": "failed",
         "startedAt": "2026-11-26T09:42:34.803Z",
         "lastError": "gemini_unavailable: Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}"
+      },
+      "2": {
+        "attempts": 1,
+        "status": "failed",
+        "startedAt": "2026-11-26T10:12:34.164Z",
+        "lastError": "gemini_unavailable: Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}"
       }
     }
   },
   "lastRun": {
-    "at": "2026-11-26T09:42:34.267Z",
-    "runId": "20261126094234-a9af",
+    "at": "2026-11-26T10:12:33.483Z",
+    "runId": "20261126101233-c3fe",
     "published": 0,
     "stopped": "gemini_unavailable"
   },
