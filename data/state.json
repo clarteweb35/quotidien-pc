@@ -4768,6 +4768,21 @@
       "seenAt": "2026-11-26T10:44:23.513Z",
       "status": "excluded",
       "reason": "sensitive"
+    },
+    "605890f1dd31": {
+      "title": "Présidentielle 2027 : Les Ecologistes confrontés au risque de leur disparition",
+      "url": "https://www.lemonde.fr/idees/article/2026/11/26/presidentielle-2027-les-ecologistes-confrontes-au-risque-de-leur-disparition_6815522_3232.html",
+      "category": "politique",
+      "seenAt": "2026-11-26T11:12:42.974Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "e35e06b2633f": {
+      "title": "Présidentielle 2027 : depuis la Mayenne, Raphaël Glucksmann dévoile son projet de \"Conseil des territoires\" pour donner plus de pouvoir aux élus locaux",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/presidentielle-2027-depuis-la-mayenne-raphael-glucksmann-devoile-son-projet-de-conseil-des-territoires-pour-donner-plus-de-pouvoir-aux-elus-locaux_8300955.html#xtor=RSS-3-%5Bpolitique%5D",
+      "category": "politique",
+      "seenAt": "2026-11-26T11:12:42.974Z",
+      "status": "in_progress"
     }
   },
   "slots": {
@@ -5887,16 +5902,16 @@
         "lastError": "gemini_unavailable: Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}"
       },
       "2": {
-        "attempts": 2,
+        "attempts": 3,
         "status": "failed",
-        "startedAt": "2026-11-26T10:42:34.603Z",
-        "lastError": "gemini_unavailable: Gemini indisponible apres 2 tentatives (504): {\"error\":{\"code\":504,\"message\":\"Deadline expired before operation could complete.\",\"status\":\"DEADLINE_EXCEEDED\"}}"
+        "startedAt": "2026-11-26T11:12:42.974Z",
+        "lastError": "gemini_unavailable: Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}"
       }
     }
   },
   "lastRun": {
-    "at": "2026-11-26T10:42:34.028Z",
-    "runId": "20261126104234-179a",
+    "at": "2026-11-26T11:12:42.456Z",
+    "runId": "20261126111242-c7af",
     "published": 0,
     "stopped": "gemini_unavailable"
   },
@@ -6048,7 +6063,7 @@
     },
     "2026-11-26": {
       "status": "failed",
-      "attempts": 1,
+      "attempts": 2,
       "lastError": "UnavailableError: Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status"
     }
   }

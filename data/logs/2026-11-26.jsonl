@@ -130,3 +130,38 @@
 {"ts":"2026-11-26T10:45:59.584Z","runId":"20261126104234-179a","level":"warn","event":"caricature.fallback_model","from":"gemini-3.6-flash","to":"gemini-3.8-flash"}
 {"ts":"2026-11-26T10:46:00.552Z","runId":"20261126104234-179a","level":"warn","event":"gemini.retry","purpose":"caricature","status":503,"attempt":1,"delayMs":4924}
 {"ts":"2026-11-26T10:46:06.062Z","runId":"20261126104234-179a","level":"warn","event":"caricature.error","date":"2026-11-26","error":"Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status"}
+{"ts":"2026-11-26T11:12:42.756Z","runId":"20261126111242-c7af","level":"info","event":"cycle.start","date":"2026-11-26","due":["2026-11-26#2","2026-11-26#3"],"remainingToday":4,"dryRun":false}
+{"ts":"2026-11-26T11:12:42.972Z","runId":"20261126111242-c7af","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":31,"kept":25}
+{"ts":"2026-11-26T11:12:42.973Z","runId":"20261126111242-c7af","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-11-26T11:12:42.973Z","runId":"20261126111242-c7af","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":19}
+{"ts":"2026-11-26T11:12:42.973Z","runId":"20261126111242-c7af","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":22}
+{"ts":"2026-11-26T11:12:42.973Z","runId":"20261126111242-c7af","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":15}
+{"ts":"2026-11-26T11:12:42.973Z","runId":"20261126111242-c7af","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":20,"kept":20}
+{"ts":"2026-11-26T11:12:42.973Z","runId":"20261126111242-c7af","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":13}
+{"ts":"2026-11-26T11:12:42.973Z","runId":"20261126111242-c7af","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":15}
+{"ts":"2026-11-26T11:12:42.973Z","runId":"20261126111242-c7af","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":6}
+{"ts":"2026-11-26T11:12:42.973Z","runId":"20261126111242-c7af","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":13}
+{"ts":"2026-11-26T11:12:42.973Z","runId":"20261126111242-c7af","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":6}
+{"ts":"2026-11-26T11:12:42.973Z","runId":"20261126111242-c7af","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":11}
+{"ts":"2026-11-26T11:12:42.973Z","runId":"20261126111242-c7af","level":"info","event":"collect.done","items":181}
+{"ts":"2026-11-26T11:12:43.088Z","runId":"20261126111242-c7af","level":"info","event":"topic.selection","slot":"2026-11-26#2","target":"politique","candidates":181,"rejected":1,"chosen":"Présidentielle 2027 : depuis la Mayenne, Raphaël Glucksmann dévoile son projet de \"Conseil des territoires\" pour donner plus de pouvoir aux élus locaux","score":7.5}
+{"ts":"2026-11-26T11:12:44.124Z","runId":"20261126111242-c7af","level":"warn","event":"gemini.retry","purpose":"generate","status":503,"attempt":1,"delayMs":4315}
+{"ts":"2026-11-26T11:13:00.742Z","runId":"20261126111242-c7af","level":"warn","event":"gemini.fallback_model","from":"gemini-3.6-flash","to":"gemini-3.8-flash"}
+{"ts":"2026-11-26T11:13:08.710Z","runId":"20261126111242-c7af","level":"warn","event":"gemini.retry","purpose":"generate","status":503,"attempt":1,"delayMs":4813}
+{"ts":"2026-11-26T11:13:14.057Z","runId":"20261126111242-c7af","level":"error","event":"cycle.stopped","reason":"gemini_unavailable","error":"Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}"}
+{"ts":"2026-11-26T11:13:14.304Z","runId":"20261126111242-c7af","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":31,"kept":25}
+{"ts":"2026-11-26T11:13:14.304Z","runId":"20261126111242-c7af","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-11-26T11:13:14.304Z","runId":"20261126111242-c7af","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":19}
+{"ts":"2026-11-26T11:13:14.304Z","runId":"20261126111242-c7af","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":22}
+{"ts":"2026-11-26T11:13:14.304Z","runId":"20261126111242-c7af","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":15}
+{"ts":"2026-11-26T11:13:14.304Z","runId":"20261126111242-c7af","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":20,"kept":20}
+{"ts":"2026-11-26T11:13:14.304Z","runId":"20261126111242-c7af","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":13}
+{"ts":"2026-11-26T11:13:14.304Z","runId":"20261126111242-c7af","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":15}
+{"ts":"2026-11-26T11:13:14.304Z","runId":"20261126111242-c7af","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":6}
+{"ts":"2026-11-26T11:13:14.304Z","runId":"20261126111242-c7af","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":13}
+{"ts":"2026-11-26T11:13:14.305Z","runId":"20261126111242-c7af","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":6}
+{"ts":"2026-11-26T11:13:14.305Z","runId":"20261126111242-c7af","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":11}
+{"ts":"2026-11-26T11:13:15.640Z","runId":"20261126111242-c7af","level":"warn","event":"gemini.retry","purpose":"caricature","status":503,"attempt":1,"delayMs":4921}
+{"ts":"2026-11-26T11:13:21.589Z","runId":"20261126111242-c7af","level":"warn","event":"caricature.fallback_model","from":"gemini-3.6-flash","to":"gemini-3.8-flash"}
+{"ts":"2026-11-26T11:13:24.158Z","runId":"20261126111242-c7af","level":"warn","event":"gemini.retry","purpose":"caricature","status":503,"attempt":1,"delayMs":4970}
+{"ts":"2026-11-26T11:13:37.352Z","runId":"20261126111242-c7af","level":"warn","event":"caricature.error","date":"2026-11-26","error":"Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status"}
