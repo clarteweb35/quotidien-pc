@@ -3,7 +3,12 @@
 Nommez votre image **exactement comme la référence** (ex. `261024-X1.jpg`) et déposez-la dans `site/src/assets/manual/`.
 Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large minimum.
 
-## Sans image (22)
+## Sans image (23)
+
+### `261127-05` — Pas-de-Calais : Face à l’érosion des terrils, les traileurs sommés de courir sans toucher le sol
+- Rubrique : sport
+- Description suggérée : Un coureur en tenue de trail colorée suspendu à deux mètres au-dessus du sommet d'une colline noire, retenu par des ballons gonflés à l'hélium, dans un paysage de terrils du Nord, style dessin de presse.
+- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
 ### `261127-04` — Économie de précision : les Français invités à respirer 0,2 % moins fort pour respecter les chiffres de l'Insee
 - Rubrique : societe
@@ -115,7 +120,7 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 - Description suggérée : Dessin de presse satirique : un éditorialiste en costume, perplexe devant un tableau noir où il a tracé une flèche « Homme + option maternité = Femme ? », tandis que derrière lui des femmes de tous âges dirigent une réunion, opèrent, pilotent et enseignent sans lui prêter attention. Style encre et aquarelle.
 - Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
-## Déjà illustrés (18)
+## Déjà illustrés (17)
 
 - `261114-D10` — La Madrague ouvrira au public l’été prochain, les modalités d’accueil restent à définir… et le parasol aussi (261114-D10.jpg)
 - `261114-D5` — Rugby : le XV de France bat l’Afrique du Sud 21-19, le cardiologue du Stade de France fait des heures sup (261114-D5.jpg)
@@ -134,4 +139,3 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 - `261106-D5` — Pantouflage : le Conseil d’État desserre l’étau, les hauts fonctionnaires desserrent la cravate (261106-D5.jpg)
 - `261106-D7` — Chamonix : pour admirer le lac Blanc, il faudra bientôt réserver, comme pour un restaurant avec une très belle vue (261106-D7.jpg)
 - `261106-D10` — Rock en Seine annulé en 2027 : le festival fait une pause, le public découvre la tranquillité (261106-D10.jpg)
-- `261106-D9` — Les assistants IA se rebiffent : après des mois de compliments, ils ont décidé de nous dire ce qu’ils pensent vraiment (261106-D9.jpg)

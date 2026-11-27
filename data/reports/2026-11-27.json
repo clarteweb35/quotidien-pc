@@ -1,7 +1,7 @@
 {
   "date": "2026-11-27",
   "target": 5,
-  "publishedCount": 4,
+  "publishedCount": 5,
   "articles": [
     {
       "id": "096ef3e04f6a",
@@ -16,6 +16,13 @@
       "title": "Logement : et si nous remerciions enfin ceux qui ont le courage de posséder plusieurs appartements ?",
       "category": "editos",
       "slug": "logement-et-si-nous-remerciions-enfin-ceux-qui-ont-le"
+    },
+    {
+      "id": "e6214f62b15e",
+      "ref": "261127-05",
+      "title": "Pas-de-Calais : Face à l’érosion des terrils, les traileurs sommés de courir sans toucher le sol",
+      "category": "sport",
+      "slug": "pas-de-calais-face-a-l-erosion-des-terrils-les-traileurs"
     },
     {
       "id": "37ecd5af4703",
@@ -80,25 +87,30 @@
     {
       "idx": 4,
       "hhmm": "11:10",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 1,
+      "status": "published",
+      "startedAt": "2026-11-27T10:12:36.777Z",
+      "articleId": "e6214f62b15e",
+      "publishedAt": "2026-11-27T10:12:36.777Z",
+      "topicId": "358aeabfb9c8",
+      "lastError": null
     }
   ],
   "rejections": 1,
   "quarantined": 4,
   "api": {
-    "calls": 13,
-    "inputTokens": 37217,
-    "outputTokens": 20332,
-    "costUsd": 0.200521,
+    "calls": 15,
+    "inputTokens": 42641,
+    "outputTokens": 22269,
+    "costUsd": 0.221912,
     "dailyCapUsd": 1,
-    "monthCostUsd": 1.207879,
+    "monthCostUsd": 1.22927,
     "monthlyCapUsd": 15
   },
   "paused": false,
   "lastRun": {
-    "at": "2026-11-27T09:42:33.972Z",
-    "runId": "20261127094233-83bd",
+    "at": "2026-11-27T10:12:36.186Z",
+    "runId": "20261127101236-5adb",
     "published": 1,
     "stopped": null
   }

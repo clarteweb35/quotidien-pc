@@ -5078,6 +5078,22 @@
       "seenAt": "2026-11-27T09:42:34.438Z",
       "status": "used",
       "usedAt": "2026-11-27T09:42:34.438Z"
+    },
+    "19b5c178ea3d": {
+      "title": "Le football peine encore à protéger les joueurs des chocs et commotions cérébrales",
+      "url": "https://www.lemonde.fr/sport/article/2026/11/27/le-football-peine-encore-a-proteger-les-joueurs-des-chocs-et-commotions-cerebrales_6815821_3242.html",
+      "category": "sport",
+      "seenAt": "2026-11-27T10:12:36.777Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "358aeabfb9c8": {
+      "title": "Dans le Pas-de-Calais, le trail met les terrils en péril",
+      "url": "https://www.lemonde.fr/m-le-mag/article/2026/11/27/dans-le-pas-de-calais-le-trail-met-les-terrils-en-peril_6815758_4500055.html",
+      "category": "sport",
+      "seenAt": "2026-11-27T10:12:36.777Z",
+      "status": "used",
+      "usedAt": "2026-11-27T10:12:36.777Z"
     }
   },
   "slots": {
@@ -6245,12 +6261,21 @@
         "publishedAt": "2026-11-27T09:42:34.438Z",
         "topicId": "125503ad31be",
         "lastError": null
+      },
+      "4": {
+        "attempts": 1,
+        "status": "published",
+        "startedAt": "2026-11-27T10:12:36.777Z",
+        "articleId": "e6214f62b15e",
+        "publishedAt": "2026-11-27T10:12:36.777Z",
+        "topicId": "358aeabfb9c8",
+        "lastError": null
       }
     }
   },
   "lastRun": {
-    "at": "2026-11-27T09:42:33.972Z",
-    "runId": "20261127094233-83bd",
+    "at": "2026-11-27T10:12:36.186Z",
+    "runId": "20261127101236-5adb",
     "published": 1,
     "stopped": null
   },
