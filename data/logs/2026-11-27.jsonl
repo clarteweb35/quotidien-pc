@@ -153,3 +153,4 @@
 {"ts":"2026-11-27T11:43:08.194Z","runId":"20261127114233-ca1b","level":"info","event":"gemini.call","purpose":"caricature","model":"gemini-3.6-flash","inputTokens":316,"outputTokens":1017,"costUsd":0.008101}
 {"ts":"2026-11-27T11:43:11.316Z","runId":"20261127114233-ca1b","level":"info","event":"gemini.call","purpose":"image_judge","model":"gemini-3.5-flash-lite","inputTokens":1272,"outputTokens":81,"costUsd":0.000584}
 {"ts":"2026-11-27T11:43:11.317Z","runId":"20261127114233-ca1b","level":"warn","event":"image.rejected","slot":"caricature#2026-11-27","problems":["presence of numbers and illegible text on the pig body/calendar grid"],"flags":{"person":false,"text":true,"photo":false,"disturbing":false}}
+{"ts":"2026-11-27T14:54:54.175Z","runId":"20261127145454-6564","level":"info","event":"cycle.start","date":"2026-11-27","due":[],"remainingToday":0,"dryRun":false}
