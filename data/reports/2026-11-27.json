@@ -1,14 +1,27 @@
 {
   "date": "2026-11-27",
   "target": 5,
-  "publishedCount": 0,
-  "articles": [],
+  "publishedCount": 1,
+  "articles": [
+    {
+      "id": "4911fa391809",
+      "ref": "261127-01",
+      "title": "Logement : et si nous remerciions enfin ceux qui ont le courage de posséder plusieurs appartements ?",
+      "category": "editos",
+      "slug": "logement-et-si-nous-remerciions-enfin-ceux-qui-ont-le"
+    }
+  ],
   "slots": [
     {
       "idx": 0,
       "hhmm": "09:10",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 1,
+      "status": "published",
+      "startedAt": "2026-11-27T08:12:37.906Z",
+      "articleId": "4911fa391809",
+      "publishedAt": "2026-11-27T08:12:37.906Z",
+      "topicId": "fc6f4b2eaf21",
+      "lastError": null
     },
     {
       "idx": 1,
@@ -38,19 +51,19 @@
   "rejections": 0,
   "quarantined": 3,
   "api": {
-    "calls": 0,
-    "inputTokens": 0,
-    "outputTokens": 0,
-    "costUsd": 0,
+    "calls": 2,
+    "inputTokens": 5745,
+    "outputTokens": 2921,
+    "costUsd": 0.029006,
     "dailyCapUsd": 1,
-    "monthCostUsd": 1.007358,
+    "monthCostUsd": 1.036364,
     "monthlyCapUsd": 15
   },
   "paused": false,
   "lastRun": {
-    "at": "2026-11-26T14:59:05.069Z",
-    "runId": "20261126145905-4254",
-    "published": 0,
-    "stopped": "quota"
+    "at": "2026-11-27T08:12:36.924Z",
+    "runId": "20261127081236-0beb",
+    "published": 1,
+    "stopped": null
   }
 }

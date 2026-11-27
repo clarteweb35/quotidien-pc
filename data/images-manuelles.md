@@ -3,7 +3,12 @@
 Nommez votre image **exactement comme la référence** (ex. `261024-X1.jpg`) et déposez-la dans `site/src/assets/manual/`.
 Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large minimum.
 
-## Sans image (18)
+## Sans image (19)
+
+### `261127-01` — Logement : et si nous remerciions enfin ceux qui ont le courage de posséder plusieurs appartements ?
+- Rubrique : editos
+- Description suggérée : Dessin de presse humoristique représentant un homme en costume élégant portant avec peine sur son dos une pyramide de petits immeubles haussmanniens en miniature, un trousseau de clés géant à la ceinture.
+- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
 ### `261126-01` — Suspension de chaîne : et si l’on remplaçait le pluralisme par du silence ?
 - Rubrique : editos
@@ -95,7 +100,7 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 - Description suggérée : Dessin de presse satirique : un éditorialiste en costume, perplexe devant un tableau noir où il a tracé une flèche « Homme + option maternité = Femme ? », tandis que derrière lui des femmes de tous âges dirigent une réunion, opèrent, pilotent et enseignent sans lui prêter attention. Style encre et aquarelle.
 - Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
-## Déjà illustrés (22)
+## Déjà illustrés (21)
 
 - `261114-D10` — La Madrague ouvrira au public l’été prochain, les modalités d’accueil restent à définir… et le parasol aussi (261114-D10.jpg)
 - `261114-D5` — Rugby : le XV de France bat l’Afrique du Sud 21-19, le cardiologue du Stade de France fait des heures sup (261114-D5.jpg)
@@ -118,4 +123,3 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 - `261106-D6` — A69 : le péage est cher, mais il faut bien payer le droit de rouler sur une autoroute qu’on a longtemps discutée (261106-D6.jpg)
 - `261106-D8` — Taïwan : la Bourse, nouveau sport familial, où l’on achète le matin ce qu’on revend à midi (261106-D8.jpg)
 - `261106-D3` — Smic : le coup de pouce, ce sport national où tout le monde veut aider… à condition de ne pas payer (261106-D3-dessin.png)
-- `261106-D2` — Corruption : les dirigeants du monde ont trouvé la recette pour ne jamais perdre… leur argent (261106-D2.jpg)
