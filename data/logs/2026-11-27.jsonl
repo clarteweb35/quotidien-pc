@@ -66,3 +66,22 @@
 {"ts":"2026-11-27T09:15:22.382Z","runId":"20261127091234-9d35","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":801,"outputTokens":114,"costUsd":0.000525}
 {"ts":"2026-11-27T09:15:22.382Z","runId":"20261127091234-9d35","level":"info","event":"judge.result","slot":"2026-11-27#2","attempt":2,"humor":7,"coherence":9,"risk":1,"issues":[]}
 {"ts":"2026-11-27T09:15:22.386Z","runId":"20261127091234-9d35","level":"info","event":"publish.ok","slot":"2026-11-27#2","id":"d9a1d9831f43","slug":"renovation-energetique-l-etat-conseille-d-attendre-le","url":"/articles/renovation-energetique-l-etat-conseille-d-attendre-le/","attempt":2,"dryRun":false}
+{"ts":"2026-11-27T09:42:34.010Z","runId":"20261127094233-83bd","level":"info","event":"cycle.start","date":"2026-11-27","due":["2026-11-27#3"],"remainingToday":2,"dryRun":false}
+{"ts":"2026-11-27T09:42:34.435Z","runId":"20261127094233-83bd","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":31,"kept":25}
+{"ts":"2026-11-27T09:42:34.435Z","runId":"20261127094233-83bd","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-11-27T09:42:34.436Z","runId":"20261127094233-83bd","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":20}
+{"ts":"2026-11-27T09:42:34.436Z","runId":"20261127094233-83bd","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":24}
+{"ts":"2026-11-27T09:42:34.436Z","runId":"20261127094233-83bd","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":17}
+{"ts":"2026-11-27T09:42:34.436Z","runId":"20261127094233-83bd","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":20,"kept":20}
+{"ts":"2026-11-27T09:42:34.436Z","runId":"20261127094233-83bd","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":12}
+{"ts":"2026-11-27T09:42:34.436Z","runId":"20261127094233-83bd","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":9}
+{"ts":"2026-11-27T09:42:34.436Z","runId":"20261127094233-83bd","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":4}
+{"ts":"2026-11-27T09:42:34.437Z","runId":"20261127094233-83bd","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":14}
+{"ts":"2026-11-27T09:42:34.437Z","runId":"20261127094233-83bd","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":6}
+{"ts":"2026-11-27T09:42:34.437Z","runId":"20261127094233-83bd","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":12}
+{"ts":"2026-11-27T09:42:34.437Z","runId":"20261127094233-83bd","level":"info","event":"collect.done","items":179}
+{"ts":"2026-11-27T09:42:34.643Z","runId":"20261127094233-83bd","level":"info","event":"topic.selection","slot":"2026-11-27#3","target":"societe","candidates":179,"rejected":4,"chosen":"Le PIB recule de 0,2% en France au troisième trimestre, après une révision à la baisse de l'Insee","score":7.5}
+{"ts":"2026-11-27T09:43:34.038Z","runId":"20261127094233-83bd","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4568,"outputTokens":3171,"costUsd":0.030635}
+{"ts":"2026-11-27T09:43:34.723Z","runId":"20261127094233-83bd","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":944,"outputTokens":56,"costUsd":0.000423}
+{"ts":"2026-11-27T09:43:34.724Z","runId":"20261127094233-83bd","level":"info","event":"judge.result","slot":"2026-11-27#3","attempt":1,"humor":7,"coherence":9,"risk":0,"issues":[]}
+{"ts":"2026-11-27T09:43:34.729Z","runId":"20261127094233-83bd","level":"info","event":"publish.ok","slot":"2026-11-27#3","id":"096ef3e04f6a","slug":"economie-de-precision-les-francais-invites-a-respirer-0-2","url":"/articles/economie-de-precision-les-francais-invites-a-respirer-0-2/","attempt":1,"dryRun":false}

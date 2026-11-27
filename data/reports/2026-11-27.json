@@ -1,8 +1,15 @@
 {
   "date": "2026-11-27",
   "target": 5,
-  "publishedCount": 3,
+  "publishedCount": 4,
   "articles": [
+    {
+      "id": "096ef3e04f6a",
+      "ref": "261127-04",
+      "title": "Économie de précision : les Français invités à respirer 0,2 % moins fort pour respecter les chiffres de l'Insee",
+      "category": "societe",
+      "slug": "economie-de-precision-les-francais-invites-a-respirer-0-2"
+    },
     {
       "id": "4911fa391809",
       "ref": "261127-01",
@@ -62,8 +69,13 @@
     {
       "idx": 3,
       "hhmm": "10:40",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 1,
+      "status": "published",
+      "startedAt": "2026-11-27T09:42:34.438Z",
+      "articleId": "096ef3e04f6a",
+      "publishedAt": "2026-11-27T09:42:34.438Z",
+      "topicId": "125503ad31be",
+      "lastError": null
     },
     {
       "idx": 4,
@@ -75,19 +87,19 @@
   "rejections": 1,
   "quarantined": 4,
   "api": {
-    "calls": 11,
-    "inputTokens": 31705,
-    "outputTokens": 17105,
-    "costUsd": 0.169463,
+    "calls": 13,
+    "inputTokens": 37217,
+    "outputTokens": 20332,
+    "costUsd": 0.200521,
     "dailyCapUsd": 1,
-    "monthCostUsd": 1.176821,
+    "monthCostUsd": 1.207879,
     "monthlyCapUsd": 15
   },
   "paused": false,
   "lastRun": {
-    "at": "2026-11-27T09:12:34.740Z",
-    "runId": "20261127091234-9d35",
-    "published": 2,
+    "at": "2026-11-27T09:42:33.972Z",
+    "runId": "20261127094233-83bd",
+    "published": 1,
     "stopped": null
   }
 }

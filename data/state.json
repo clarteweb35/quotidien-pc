@@ -5046,6 +5046,38 @@
       "seenAt": "2026-11-27T09:12:53.850Z",
       "status": "used",
       "usedAt": "2026-11-27T09:12:53.850Z"
+    },
+    "52c4f8f6d0f1": {
+      "title": "Saluts nazis, supporters hospitalisés, réaction de Macron... Ce que l'on sait des graves violences lors du match OM-Levski Sofia",
+      "url": "https://france3-regions.franceinfo.fr/provence-alpes-cote-d-azur/bouches-du-rhone/marseille/saluts-nazis-supporters-hospitalises-reaction-de-macron-ce-que-l-on-sait-des-graves-violences-lors-du-match-om-levski-sofia-3456848.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-11-27T09:42:34.438Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "841a3cfba10a": {
+      "title": "Les hospitalisations de jeunes pour tentatives de suicide ou automutilations encore en hausse en 2025, surtout chez les femmes",
+      "url": "https://www.franceinfo.fr/sante/les-hospitalisations-des-jeunes-femmes-pour-tentatives-de-suicide-ou-automutilations-encore-en-hausse-en-2025_8302632.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-11-27T09:42:34.438Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "47ba31a5a80b": {
+      "title": "En Irlande du Nord, une enquête révèle les circonstances du meurtre d’une femme 2 000 ans plus tard",
+      "url": "https://www.liberation.fr/sciences/archeologie/en-irlande-du-nord-une-enquete-revele-les-circonstances-du-meurtre-dune-femme-2-000-ans-plus-tard-20261127_H4Z225LHKRE7TNDAVMOZYQ3MZ4/",
+      "category": "societe",
+      "seenAt": "2026-11-27T09:42:34.438Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "125503ad31be": {
+      "title": "Le PIB recule de 0,2% en France au troisième trimestre, après une révision à la baisse de l'Insee",
+      "url": "https://www.franceinfo.fr/economie/croissance/le-pib-recule-de-0-2-en-france-au-troisieme-trimestre-apres-une-revision-a-la-baisse-de-l-insee_8302671.html#xtor=RSS-3-[lestitres]",
+      "category": "societe",
+      "seenAt": "2026-11-27T09:42:34.438Z",
+      "status": "used",
+      "usedAt": "2026-11-27T09:42:34.438Z"
     }
   },
   "slots": {
@@ -6204,13 +6236,22 @@
         "publishedAt": "2026-11-27T09:12:53.850Z",
         "topicId": "3152899eafd7",
         "lastError": null
+      },
+      "3": {
+        "attempts": 1,
+        "status": "published",
+        "startedAt": "2026-11-27T09:42:34.438Z",
+        "articleId": "096ef3e04f6a",
+        "publishedAt": "2026-11-27T09:42:34.438Z",
+        "topicId": "125503ad31be",
+        "lastError": null
       }
     }
   },
   "lastRun": {
-    "at": "2026-11-27T09:12:34.740Z",
-    "runId": "20261127091234-9d35",
-    "published": 2,
+    "at": "2026-11-27T09:42:33.972Z",
+    "runId": "20261127094233-83bd",
+    "published": 1,
     "stopped": null
   },
   "caricatures": {
