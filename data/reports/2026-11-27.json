@@ -1,7 +1,7 @@
 {
   "date": "2026-11-27",
   "target": 5,
-  "publishedCount": 1,
+  "publishedCount": 3,
   "articles": [
     {
       "id": "4911fa391809",
@@ -9,6 +9,20 @@
       "title": "Logement : et si nous remerciions enfin ceux qui ont le courage de posséder plusieurs appartements ?",
       "category": "editos",
       "slug": "logement-et-si-nous-remerciions-enfin-ceux-qui-ont-le"
+    },
+    {
+      "id": "37ecd5af4703",
+      "ref": "261127-02",
+      "title": "Présidentielle 2027 : La stratégie audacieuse d'une campagne visant la perfection absolue du 0 %",
+      "category": "politique",
+      "slug": "presidentielle-2027-la-strategie-audacieuse-d-une-campagne"
+    },
+    {
+      "id": "d9a1d9831f43",
+      "ref": "261127-03",
+      "title": "Rénovation énergétique : l’État conseille d'attendre le réchauffement climatique pour chauffer les logements",
+      "category": "environnement",
+      "slug": "renovation-energetique-l-etat-conseille-d-attendre-le"
     }
   ],
   "slots": [
@@ -26,16 +40,24 @@
     {
       "idx": 1,
       "hhmm": "09:40",
-      "attempts": 1,
-      "status": "failed",
-      "startedAt": "2026-11-27T08:42:34.649Z",
-      "lastError": "corps_trop_court"
+      "attempts": 2,
+      "status": "published",
+      "startedAt": "2026-11-27T09:12:35.424Z",
+      "lastError": null,
+      "articleId": "37ecd5af4703",
+      "publishedAt": "2026-11-27T09:12:35.424Z",
+      "topicId": "40a6eb38e9b2"
     },
     {
       "idx": 2,
       "hhmm": "10:10",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 1,
+      "status": "published",
+      "startedAt": "2026-11-27T09:12:53.850Z",
+      "articleId": "d9a1d9831f43",
+      "publishedAt": "2026-11-27T09:12:53.850Z",
+      "topicId": "3152899eafd7",
+      "lastError": null
     },
     {
       "idx": 3,
@@ -53,19 +75,19 @@
   "rejections": 1,
   "quarantined": 4,
   "api": {
-    "calls": 4,
-    "inputTokens": 14979,
-    "outputTokens": 7907,
-    "costUsd": 0.080253,
+    "calls": 11,
+    "inputTokens": 31705,
+    "outputTokens": 17105,
+    "costUsd": 0.169463,
     "dailyCapUsd": 1,
-    "monthCostUsd": 1.087611,
+    "monthCostUsd": 1.176821,
     "monthlyCapUsd": 15
   },
   "paused": false,
   "lastRun": {
-    "at": "2026-11-27T08:42:34.173Z",
-    "runId": "20261127084234-c634",
-    "published": 0,
+    "at": "2026-11-27T09:12:34.740Z",
+    "runId": "20261127091234-9d35",
+    "published": 2,
     "stopped": null
   }
 }

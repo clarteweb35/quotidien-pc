@@ -3,7 +3,17 @@
 Nommez votre image **exactement comme la référence** (ex. `261024-X1.jpg`) et déposez-la dans `site/src/assets/manual/`.
 Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large minimum.
 
-## Sans image (19)
+## Sans image (21)
+
+### `261127-03` — Rénovation énergétique : l’État conseille d'attendre le réchauffement climatique pour chauffer les logements
+- Rubrique : environnement
+- Description suggérée : Un maire dubitatif devant une maquette de maison en carton sans isolation sous un gros soleil en plastique suspendu par une ficelle.
+- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
+
+### `261127-02` — Présidentielle 2027 : La stratégie audacieuse d'une campagne visant la perfection absolue du 0 %
+- Rubrique : politique
+- Description suggérée : Dessin satirique montrant un graphique avec une courbe rouge en forme de toboggan s'enfonçant sous le niveau du sol dans un bureau de vote totalement vide, style dessin de presse.
+- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
 ### `261127-01` — Logement : et si nous remerciions enfin ceux qui ont le courage de posséder plusieurs appartements ?
 - Rubrique : editos
@@ -100,7 +110,7 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 - Description suggérée : Dessin de presse satirique : un éditorialiste en costume, perplexe devant un tableau noir où il a tracé une flèche « Homme + option maternité = Femme ? », tandis que derrière lui des femmes de tous âges dirigent une réunion, opèrent, pilotent et enseignent sans lui prêter attention. Style encre et aquarelle.
 - Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
-## Déjà illustrés (21)
+## Déjà illustrés (19)
 
 - `261114-D10` — La Madrague ouvrira au public l’été prochain, les modalités d’accueil restent à définir… et le parasol aussi (261114-D10.jpg)
 - `261114-D5` — Rugby : le XV de France bat l’Afrique du Sud 21-19, le cardiologue du Stade de France fait des heures sup (261114-D5.jpg)
@@ -121,5 +131,3 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 - `261106-D10` — Rock en Seine annulé en 2027 : le festival fait une pause, le public découvre la tranquillité (261106-D10.jpg)
 - `261106-D9` — Les assistants IA se rebiffent : après des mois de compliments, ils ont décidé de nous dire ce qu’ils pensent vraiment (261106-D9.jpg)
 - `261106-D6` — A69 : le péage est cher, mais il faut bien payer le droit de rouler sur une autoroute qu’on a longtemps discutée (261106-D6.jpg)
-- `261106-D8` — Taïwan : la Bourse, nouveau sport familial, où l’on achète le matin ce qu’on revend à midi (261106-D8.jpg)
-- `261106-D3` — Smic : le coup de pouce, ce sport national où tout le monde veut aider… à condition de ne pas payer (261106-D3-dessin.png)

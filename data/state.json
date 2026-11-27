@@ -5003,8 +5003,49 @@
       "title": "Présidentielle 2027 : Eric Zemmour annonce sa « dernière campagne »",
       "url": "https://www.lemonde.fr/politique/article/2026/11/27/presidentielle-2027-eric-zemmour-annonce-sa-derniere-campagne_6815659_823448.html",
       "category": "politique",
-      "seenAt": "2026-11-27T08:42:34.649Z",
-      "status": "rejected"
+      "seenAt": "2026-11-27T09:12:35.424Z",
+      "status": "used",
+      "usedAt": "2026-11-27T09:12:35.424Z"
+    },
+    "7e1e45744f62": {
+      "title": "Les images du Med Emre, un pétrolier chargé de diesel chaviré au large de l’Espagne",
+      "url": "https://www.lemonde.fr/planete/video/2026/11/26/les-images-du-med-emre-un-petrolier-charge-de-diesel-chavire-au-large-de-l-espagne_6815578_3244.html",
+      "category": "environnement",
+      "seenAt": "2026-11-27T09:12:53.850Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "461b65459f94": {
+      "title": "Fumées toxiques : « Les mégafeux de l’été sont éteints, les cancers, eux, ne s’éteignent pas l’hiver »",
+      "url": "https://www.lemonde.fr/idees/article/2026/11/26/fumees-toxiques-les-megafeux-de-l-ete-sont-eteints-les-cancers-eux-ne-s-eteignent-pas-l-hiver_6815541_3232.html",
+      "category": "environnement",
+      "seenAt": "2026-11-27T09:12:53.850Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "262846c8c8af": {
+      "title": "Le Népal s’apprête à déclarer mortes les plus de 5 000 personnes disparues dans les inondations de l’Himalaya",
+      "url": "https://www.lemonde.fr/planete/article/2026/11/26/le-nepal-s-apprete-a-declarer-mortes-les-plus-de-5-000-personnes-disparues-dans-les-inondations-de-l-himalaya_6815520_3244.html",
+      "category": "environnement",
+      "seenAt": "2026-11-27T09:12:53.850Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "c1fdb15b4ecc": {
+      "title": "Espagne : le naufrage d’un pétrolier chargé de diesel fait un mort au large d’Ibiza, sans « indice de pollution » provisoirement observé",
+      "url": "https://www.lemonde.fr/international/article/2026/11/26/espagne-un-petrolier-charge-de-diesel-coule-au-large-d-ibiza-faisant-un-mort_6815505_3210.html",
+      "category": "environnement",
+      "seenAt": "2026-11-27T09:12:53.850Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "3152899eafd7": {
+      "title": "Rénovation énergétique : le gouvernement inflexible face aux maires inquiets des coupes budgétaires",
+      "url": "https://www.lemonde.fr/planete/article/2026/11/26/renovation-energetique-le-gouvernement-inflexible-face-aux-maires-inquiets-des-coupes-budgetaires_6815563_3244.html",
+      "category": "environnement",
+      "seenAt": "2026-11-27T09:12:53.850Z",
+      "status": "used",
+      "usedAt": "2026-11-27T09:12:53.850Z"
     }
   },
   "slots": {
@@ -6147,17 +6188,29 @@
         "lastError": null
       },
       "1": {
+        "attempts": 2,
+        "status": "published",
+        "startedAt": "2026-11-27T09:12:35.424Z",
+        "lastError": null,
+        "articleId": "37ecd5af4703",
+        "publishedAt": "2026-11-27T09:12:35.424Z",
+        "topicId": "40a6eb38e9b2"
+      },
+      "2": {
         "attempts": 1,
-        "status": "failed",
-        "startedAt": "2026-11-27T08:42:34.649Z",
-        "lastError": "corps_trop_court"
+        "status": "published",
+        "startedAt": "2026-11-27T09:12:53.850Z",
+        "articleId": "d9a1d9831f43",
+        "publishedAt": "2026-11-27T09:12:53.850Z",
+        "topicId": "3152899eafd7",
+        "lastError": null
       }
     }
   },
   "lastRun": {
-    "at": "2026-11-27T08:42:34.173Z",
-    "runId": "20261127084234-c634",
-    "published": 0,
+    "at": "2026-11-27T09:12:34.740Z",
+    "runId": "20261127091234-9d35",
+    "published": 2,
     "stopped": null
   },
   "caricatures": {
