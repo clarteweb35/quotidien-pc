@@ -5118,6 +5118,22 @@
       "seenAt": "2026-11-27T10:42:42.309Z",
       "status": "excluded",
       "reason": "sensitive"
+    },
+    "a82ecf29c091": {
+      "title": "Japon : de la révolte étudiante à la lutte armée, sur les traces de l'Armée rouge",
+      "url": "https://www.france24.com/fr/%C3%A9missions/billet-retour/20261127-japon-r%C3%A9volte-%C3%A9tudiante-lutte-arm%C3%A9e-sur-les-traces-arm%C3%A9e-rouge",
+      "category": "monde",
+      "seenAt": "2026-11-27T11:12:31.579Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "d7b81b6e6951": {
+      "title": "Espagne : le navire naufragé au large d’Ibiza va être « remorqué », annonce le premier ministre, Pedro Sanchez",
+      "url": "https://www.lemonde.fr/international/article/2026/11/27/espagne-le-navire-naufrage-au-large-d-ibiza-va-etre-remorque-annonce-le-premier-ministre-pedro-sanchez_6815846_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-27T11:12:31.579Z",
+      "status": "excluded",
+      "reason": "sensitive"
     }
   },
   "slots": {
@@ -6456,7 +6472,7 @@
     },
     "2026-11-27": {
       "status": "failed",
-      "attempts": 1,
+      "attempts": 2,
       "lastError": "image_indisponible"
     }
   }
