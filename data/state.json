@@ -5094,6 +5094,30 @@
       "seenAt": "2026-11-27T10:12:36.777Z",
       "status": "used",
       "usedAt": "2026-11-27T10:12:36.777Z"
+    },
+    "832f1009780f": {
+      "title": "Guerre en Ukraine : pour arrêter la boucherie, il faut désigner le boucher",
+      "url": "https://www.lemonde.fr/idees/article/2026/11/27/guerre-en-ukraine-pour-arreter-la-boucherie-il-faut-designer-le-boucher_6815842_3232.html",
+      "category": "monde",
+      "seenAt": "2026-11-27T10:42:42.309Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "5125afea3b69": {
+      "title": "Birmanie : le dictateur birman Min Aung Hlaing fait peu de cas du verdict de la CIJ",
+      "url": "https://www.lemonde.fr/international/article/2026/11/27/birmanie-le-dictateur-birman-min-aung-hlaing-fait-peu-de-cas-du-verdict-de-la-cij_6815834_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-27T10:42:42.309Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "461042b6bad0": {
+      "title": "La Pologne plus divisée que jamais après le premier attentat majeur de son histoire récente",
+      "url": "https://www.lemonde.fr/idees/article/2026/11/27/la-pologne-plus-divisee-que-jamais-apres-le-premier-attentat-majeur-de-son-histoire-recente_6815822_3232.html",
+      "category": "monde",
+      "seenAt": "2026-11-27T10:42:42.309Z",
+      "status": "excluded",
+      "reason": "sensitive"
     }
   },
   "slots": {
@@ -6429,6 +6453,11 @@
       "status": "failed",
       "attempts": 3,
       "lastError": "UnavailableError: Gemini indisponible apres 2 tentatives (503): {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status"
+    },
+    "2026-11-27": {
+      "status": "failed",
+      "attempts": 1,
+      "lastError": "image_indisponible"
     }
   }
 }

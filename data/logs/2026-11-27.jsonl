@@ -104,3 +104,20 @@
 {"ts":"2026-11-27T10:12:53.942Z","runId":"20261127101236-5adb","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":827,"outputTokens":56,"costUsd":0.000388}
 {"ts":"2026-11-27T10:12:53.942Z","runId":"20261127101236-5adb","level":"info","event":"judge.result","slot":"2026-11-27#4","attempt":1,"humor":8,"coherence":9,"risk":0,"issues":[]}
 {"ts":"2026-11-27T10:12:53.947Z","runId":"20261127101236-5adb","level":"info","event":"publish.ok","slot":"2026-11-27#4","id":"e6214f62b15e","slug":"pas-de-calais-face-a-l-erosion-des-terrils-les-traileurs","url":"/articles/pas-de-calais-face-a-l-erosion-des-terrils-les-traileurs/","attempt":1,"dryRun":false}
+{"ts":"2026-11-27T10:42:42.307Z","runId":"20261127104242-b0e6","level":"info","event":"cycle.start","date":"2026-11-27","due":[],"remainingToday":0,"dryRun":false}
+{"ts":"2026-11-27T10:42:43.243Z","runId":"20261127104242-b0e6","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":31,"kept":25}
+{"ts":"2026-11-27T10:42:43.243Z","runId":"20261127104242-b0e6","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-11-27T10:42:43.243Z","runId":"20261127104242-b0e6","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":20}
+{"ts":"2026-11-27T10:42:43.244Z","runId":"20261127104242-b0e6","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":24}
+{"ts":"2026-11-27T10:42:43.244Z","runId":"20261127104242-b0e6","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":17}
+{"ts":"2026-11-27T10:42:43.244Z","runId":"20261127104242-b0e6","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":20,"kept":20}
+{"ts":"2026-11-27T10:42:43.244Z","runId":"20261127104242-b0e6","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":12}
+{"ts":"2026-11-27T10:42:43.244Z","runId":"20261127104242-b0e6","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":10}
+{"ts":"2026-11-27T10:42:43.244Z","runId":"20261127104242-b0e6","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":4}
+{"ts":"2026-11-27T10:42:43.244Z","runId":"20261127104242-b0e6","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":15}
+{"ts":"2026-11-27T10:42:43.245Z","runId":"20261127104242-b0e6","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":5}
+{"ts":"2026-11-27T10:42:43.245Z","runId":"20261127104242-b0e6","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":12}
+{"ts":"2026-11-27T10:44:04.341Z","runId":"20261127104242-b0e6","level":"info","event":"gemini.call","purpose":"caricature","model":"gemini-3.6-flash","inputTokens":316,"outputTokens":896,"costUsd":0.007194}
+{"ts":"2026-11-27T10:44:09.013Z","runId":"20261127104242-b0e6","level":"warn","event":"gemini.retry","purpose":"image_judge","status":503,"attempt":1,"delayMs":4163}
+{"ts":"2026-11-27T10:44:14.785Z","runId":"20261127104242-b0e6","level":"info","event":"gemini.call","purpose":"image_judge","model":"gemini-3.5-flash-lite","inputTokens":1269,"outputTokens":89,"costUsd":0.000603}
+{"ts":"2026-11-27T10:44:14.785Z","runId":"20261127104242-b0e6","level":"warn","event":"image.rejected","slot":"caricature#2026-11-27","problems":["Présence d'un texte ou d'une signature visible en haut à droite (@ORCE VERL-)"],"flags":{"person":false,"text":true,"photo":false,"disturbing":false}}

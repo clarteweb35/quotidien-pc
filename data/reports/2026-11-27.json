@@ -99,12 +99,12 @@
   "rejections": 1,
   "quarantined": 4,
   "api": {
-    "calls": 15,
-    "inputTokens": 42641,
-    "outputTokens": 22269,
-    "costUsd": 0.221912,
+    "calls": 18,
+    "inputTokens": 44226,
+    "outputTokens": 23254,
+    "costUsd": 0.229709,
     "dailyCapUsd": 1,
-    "monthCostUsd": 1.22927,
+    "monthCostUsd": 1.237067,
     "monthlyCapUsd": 15
   },
   "paused": false,
