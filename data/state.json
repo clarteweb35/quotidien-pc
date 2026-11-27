@@ -5134,6 +5134,14 @@
       "seenAt": "2026-11-27T11:12:31.579Z",
       "status": "excluded",
       "reason": "sensitive"
+    },
+    "2400cb163ea7": {
+      "title": "Incidents et blessés à Marseille lors d'OM-Levski Sofia : ce que l'on sait",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261127-incidents-et-bless%C3%A9s-%C3%A0-marseille-lors-d-om-levski-sofia-ce-que-l-on-sait",
+      "category": "monde",
+      "seenAt": "2026-11-27T11:42:33.716Z",
+      "status": "excluded",
+      "reason": "sensitive"
     }
   },
   "slots": {
@@ -6472,7 +6480,7 @@
     },
     "2026-11-27": {
       "status": "failed",
-      "attempts": 2,
+      "attempts": 3,
       "lastError": "image_indisponible"
     }
   }
