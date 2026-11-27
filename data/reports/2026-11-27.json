@@ -26,8 +26,10 @@
     {
       "idx": 1,
       "hhmm": "09:40",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 1,
+      "status": "failed",
+      "startedAt": "2026-11-27T08:42:34.649Z",
+      "lastError": "corps_trop_court"
     },
     {
       "idx": 2,
@@ -48,22 +50,22 @@
       "attempts": 0
     }
   ],
-  "rejections": 0,
-  "quarantined": 3,
+  "rejections": 1,
+  "quarantined": 4,
   "api": {
-    "calls": 2,
-    "inputTokens": 5745,
-    "outputTokens": 2921,
-    "costUsd": 0.029006,
+    "calls": 4,
+    "inputTokens": 14979,
+    "outputTokens": 7907,
+    "costUsd": 0.080253,
     "dailyCapUsd": 1,
-    "monthCostUsd": 1.036364,
+    "monthCostUsd": 1.087611,
     "monthlyCapUsd": 15
   },
   "paused": false,
   "lastRun": {
-    "at": "2026-11-27T08:12:36.924Z",
-    "runId": "20261127081236-0beb",
-    "published": 1,
+    "at": "2026-11-27T08:42:34.173Z",
+    "runId": "20261127084234-c634",
+    "published": 0,
     "stopped": null
   }
 }

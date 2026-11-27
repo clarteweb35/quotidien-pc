@@ -4974,6 +4974,37 @@
       "seenAt": "2026-11-27T08:12:37.906Z",
       "status": "used",
       "usedAt": "2026-11-27T08:12:37.906Z"
+    },
+    "e78606bb1788": {
+      "title": "L’Algérie accuse les autorités françaises d’avoir maltraité un agent consulaire détenu en France depuis 2025, critiquant une « démonstration hollywoodienne »",
+      "url": "https://www.lemonde.fr/afrique/article/2026/11/26/l-algerie-accuse-les-autorites-francaises-d-avoir-maltraite-un-agent-consulaire-detenu-en-france-depuis-2025-critiquant-une-demonstration-hollywoodienne_6815597_3212.html",
+      "category": "politique",
+      "seenAt": "2026-11-27T08:42:34.649Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "6657b17056a9": {
+      "title": "Négociations annuelles entre la grande distribution et l'industrie agroalimentaire : \"Le sujet des prix ne peut pas devenir une guerre contre nos producteurs\", avertit la ministre de l'Agriculture",
+      "url": "https://www.franceinfo.fr/politique/negociations-annuelles-entre-la-grande-distribution-et-l-industrie-agroalimentaire-le-sujet-des-prix-ne-peut-pas-devenir-une-guerre-contre-nos-producteurs-avertit-la-ministre-de-l-agriculture_8302668.html#xtor=RSS-3-%5Bpolitique%5D",
+      "category": "politique",
+      "seenAt": "2026-11-27T08:42:34.649Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "08970bda6c7b": {
+      "title": "\"Si on abandonnait l'Ukraine, on mettrait en péril notre sécurité à court ou moyen terme\", affirme Emmanuel Macron",
+      "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/si-on-abandonnait-l-ukraine-on-mettrait-en-peril-notre-securite-a-court-ou-moyen-terme-affirme-emmanuel-macron_8302044.html#xtor=RSS-3-%5Bpolitique%5D",
+      "category": "politique",
+      "seenAt": "2026-11-27T08:42:34.649Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "40a6eb38e9b2": {
+      "title": "Présidentielle 2027 : Eric Zemmour annonce sa « dernière campagne »",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/27/presidentielle-2027-eric-zemmour-annonce-sa-derniere-campagne_6815659_823448.html",
+      "category": "politique",
+      "seenAt": "2026-11-27T08:42:34.649Z",
+      "status": "rejected"
     }
   },
   "slots": {
@@ -6114,13 +6145,19 @@
         "publishedAt": "2026-11-27T08:12:37.906Z",
         "topicId": "fc6f4b2eaf21",
         "lastError": null
+      },
+      "1": {
+        "attempts": 1,
+        "status": "failed",
+        "startedAt": "2026-11-27T08:42:34.649Z",
+        "lastError": "corps_trop_court"
       }
     }
   },
   "lastRun": {
-    "at": "2026-11-27T08:12:36.924Z",
-    "runId": "20261127081236-0beb",
-    "published": 1,
+    "at": "2026-11-27T08:42:34.173Z",
+    "runId": "20261127084234-c634",
+    "published": 0,
     "stopped": null
   },
   "caricatures": {

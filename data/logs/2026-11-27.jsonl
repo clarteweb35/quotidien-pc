@@ -17,3 +17,24 @@
 {"ts":"2026-11-27T08:13:01.637Z","runId":"20261127081236-0beb","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":1033,"outputTokens":56,"costUsd":0.00045}
 {"ts":"2026-11-27T08:13:01.637Z","runId":"20261127081236-0beb","level":"info","event":"judge.result","slot":"2026-11-27#0","attempt":1,"humor":8,"coherence":9,"risk":0,"issues":[]}
 {"ts":"2026-11-27T08:13:01.730Z","runId":"20261127081236-0beb","level":"info","event":"publish.ok","slot":"2026-11-27#0","id":"4911fa391809","slug":"logement-et-si-nous-remerciions-enfin-ceux-qui-ont-le","url":"/articles/logement-et-si-nous-remerciions-enfin-ceux-qui-ont-le/","attempt":1,"dryRun":false}
+{"ts":"2026-11-27T08:42:34.212Z","runId":"20261127084234-c634","level":"info","event":"cycle.start","date":"2026-11-27","due":["2026-11-27#1"],"remainingToday":4,"dryRun":false}
+{"ts":"2026-11-27T08:42:34.646Z","runId":"20261127084234-c634","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":31,"kept":25}
+{"ts":"2026-11-27T08:42:34.647Z","runId":"20261127084234-c634","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-11-27T08:42:34.647Z","runId":"20261127084234-c634","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":20}
+{"ts":"2026-11-27T08:42:34.647Z","runId":"20261127084234-c634","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":24}
+{"ts":"2026-11-27T08:42:34.647Z","runId":"20261127084234-c634","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":17}
+{"ts":"2026-11-27T08:42:34.647Z","runId":"20261127084234-c634","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":20,"kept":20}
+{"ts":"2026-11-27T08:42:34.647Z","runId":"20261127084234-c634","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":10}
+{"ts":"2026-11-27T08:42:34.648Z","runId":"20261127084234-c634","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":10}
+{"ts":"2026-11-27T08:42:34.648Z","runId":"20261127084234-c634","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":4}
+{"ts":"2026-11-27T08:42:34.648Z","runId":"20261127084234-c634","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":14}
+{"ts":"2026-11-27T08:42:34.648Z","runId":"20261127084234-c634","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":5}
+{"ts":"2026-11-27T08:42:34.648Z","runId":"20261127084234-c634","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":11}
+{"ts":"2026-11-27T08:42:34.648Z","runId":"20261127084234-c634","level":"info","event":"collect.done","items":176}
+{"ts":"2026-11-27T08:42:34.806Z","runId":"20261127084234-c634","level":"info","event":"topic.selection","slot":"2026-11-27#1","target":"politique","candidates":176,"rejected":3,"chosen":"Présidentielle 2027 : Eric Zemmour annonce sa « dernière campagne »","score":8}
+{"ts":"2026-11-27T08:42:52.366Z","runId":"20261127084234-c634","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4592,"outputTokens":3177,"costUsd":0.030716}
+{"ts":"2026-11-27T08:42:52.433Z","runId":"20261127084234-c634","level":"warn","event":"validate.deterministic_failed","slot":"2026-11-27#1","attempt":1,"issues":["titre_trop_long"]}
+{"ts":"2026-11-27T08:43:02.315Z","runId":"20261127084234-c634","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4642,"outputTokens":1809,"costUsd":0.020531}
+{"ts":"2026-11-27T08:43:02.359Z","runId":"20261127084234-c634","level":"warn","event":"validate.deterministic_failed","slot":"2026-11-27#1","attempt":2,"issues":["corps_trop_court"]}
+{"ts":"2026-11-27T08:43:02.359Z","runId":"20261127084234-c634","level":"warn","event":"slot.quarantined","slot":"2026-11-27#1","reasons":["corps_trop_court"]}
+{"ts":"2026-11-27T08:43:02.364Z","runId":"20261127084234-c634","level":"warn","event":"slot.failed","slot":"2026-11-27#1","reason":"corps_trop_court"}

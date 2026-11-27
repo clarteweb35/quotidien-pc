@@ -282,6 +282,96 @@
       "judge": null,
       "status": "quarantined",
       "retries": 0
+    },
+    {
+      "id": "37ecd5af4703",
+      "createdAt": "2026-11-27T08:42:34.649Z",
+      "slotKey": "2026-11-27#1",
+      "topic": {
+        "id": "40a6eb38e9b2",
+        "title": "Présidentielle 2027 : Eric Zemmour annonce sa « dernière campagne »",
+        "summary": "Arrivé quatrième au scrutin de 2022, avec 7,07 % des voix, le candidat du parti d’extrême droite Reconquête ! n’est plus crédité que d’environ 3 % des intentions de vote dans un sondage publié jeudi, très loin derrière Marine Le Pen.",
+        "url": "https://www.lemonde.fr/politique/article/2026/11/27/presidentielle-2027-eric-zemmour-annonce-sa-derniere-campagne_6815659_823448.html",
+        "publishedAt": "2026-11-26T23:54:55.000Z",
+        "feedId": "lemonde-politique",
+        "sourceName": "Le Monde - Politique",
+        "category": "politique",
+        "score": 8,
+        "kind": "news",
+        "forcedCategory": "politique"
+      },
+      "article": {
+        "status": "ready_for_review",
+        "rejection_reason": "",
+        "title": "Présidentielle 2027 : Reconquête vise une décroissance électorale maîtrisée pour sa dernière campagne",
+        "chapo": "Après avoir récolté 7,07 % des voix en 2022 et flirté avec les 3 % dans les récents sondages, le parti d'extrême droite salue une trajectoire arithmétique parfaitement fluide vers l’invisibilité totale.",
+        "category": "politique",
+        "tags": [
+          "politique",
+          "sondages",
+          "élections",
+          "campagne",
+          "statistiques"
+        ],
+        "seo_description": "Reconquête transforme sa baisse dans les sondages en un plan stratégique de décroissance électorale maîtrisée pour 2027.",
+        "angle": "Présenter la chute dans les sondages d'un candidat comme une stratégie délibérée et rigoureusement planifiée de décroissance électorale.",
+        "fictional_elements": [
+          "Le concept de décroissance électorale maîtrisée",
+          "Les calculs de l'Institut national des trajectoires descendantes",
+          "La théorie de la pureté du chiffre unique",
+          "Le grand plan de liquidation des bulletins de vote"
+        ],
+        "author": "Claire Delatour",
+        "image_prompt": "Un graphique géant sur un chevalet présentant une courbe rouge qui descend en pique vers le bas, devant des chaises vides alignées dans une salle de conférence déserte.",
+        "image_alt": "Un graphique montrant une courbe électorale qui descend vers zéro dans une salle vide.",
+        "quality_checks": {
+          "facts_verified": true,
+          "fiction_clearly_satirical": true,
+          "no_invented_quotes": true,
+          "no_personal_attack": true,
+          "original_angle": true,
+          "no_known_duplicate": true
+        },
+        "body": [
+          {
+            "kind": "p",
+            "text": "Dans les états-majors politiques, la plupart des équipes s'inquiètent lorsque les intentions de vote s'effondrent. Mais chez les stratèges de la décroissance électorale, chaque point perdu est célébré comme une étape franchie vers la sobriété statistique. En passant de 7,07 % des suffrages exprimés en 2022 à environ 3 % dans les dernières enquêtes d'opinion, la trajectoire affichée répond à une rigueur comptable presque exemplaire."
+          },
+          {
+            "kind": "h2",
+            "text": "La division par deux comme méthode de travail"
+          },
+          {
+            "kind": "p",
+            "text": "Là où les observateurs profanes voient une marginalisation progressive, les analystes de la sobriété politique détectent un plan méthodique. Diviser son score par deux à chaque échéance permet d'éviter l'engorgement des bureaux de dépouillement et de réduire considérablement l'empreinte carbone liée à l'impression des bulletins."
+          },
+          {
+            "kind": "p",
+            "text": "Selon cette modélisation prospective, viser la tranche des 1,5 % à 2 % pour l'échéance de 2027 constitue l'objectif idéal. Cela permet de maintenir une présence médiatique minimale tout en assurant un coût de campagne extrêmement raisonnable, la distribution de tracts pouvant désormais s'effectuer dans un simple hall d'immeuble."
+          },
+          {
+            "kind": "h2",
+            "text": "Vers la pureté du vote confidentiel"
+          },
+          {
+            "kind": "p",
+            "text": "La démarche repose sur un paradoxe scientifique réjouissant : plus le cercle des sympathisants se restreint, plus la certitude d'être entre gens du même avis augmente. À terme, l'atteinte du seuil statistique de marge d'erreur permettra d'évoluer dans un anonymat complet, à l'abri des turbulences du débat public et des caméras de télévision."
+          },
+          {
+            "kind": "p",
+            "text": "Cette ultime campagne s'annonce donc comme un modèle d'efficacité administrative. En éliminant progressivement le besoin de convaincre des électeurs indécis, l'appareil militant peut enfin se concentrer sur l'essentiel : l'analyse comparative des graphiques en baisse et la gestion optimisée des stocks de t-shirts trop grands."
+          }
+        ]
+      },
+      "issues": [
+        {
+          "code": "corps_trop_court",
+          "msg": "Corps: 271 mots (minimum 280)"
+        }
+      ],
+      "judge": null,
+      "status": "quarantined",
+      "retries": 0
     }
   ],
   "history": [
@@ -328,6 +418,18 @@
       ],
       "messages": [
         "Passage recopie de la source"
+      ]
+    },
+    {
+      "ts": "2026-11-27T08:42:34.649Z",
+      "slot": "2026-11-27#1",
+      "topic": "Présidentielle 2027 : Eric Zemmour annonce sa « dernière campagne »",
+      "stage": "validation",
+      "reasons": [
+        "corps_trop_court"
+      ],
+      "messages": [
+        "Corps: 271 mots (minimum 280)"
       ]
     }
   ]
