@@ -1,7 +1,7 @@
 {
   "date": "2026-11-28",
   "target": 5,
-  "publishedCount": 2,
+  "publishedCount": 3,
   "articles": [
     {
       "id": "956ee9d33121",
@@ -9,6 +9,13 @@
       "title": "Culture : le gouvernement crée une Fédération nationale pour bureaucratiser les concours loufoques du terroir",
       "category": "culture",
       "slug": "culture-le-gouvernement-cree-une-federation-nationale-pour"
+    },
+    {
+      "id": "81b822df7eda",
+      "ref": "261128-03",
+      "title": "Pénurie de PS5 : Bercy décrète la réquisition des consoles et distribue des tickets de rationnement",
+      "category": "economie",
+      "slug": "penurie-de-ps5-bercy-decrete-la-requisition-des-consoles-et"
     },
     {
       "id": "a0fead4c3bc0",
@@ -44,8 +51,13 @@
     {
       "idx": 2,
       "hhmm": "10:10",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 1,
+      "status": "published",
+      "startedAt": "2026-11-28T09:12:50.046Z",
+      "articleId": "81b822df7eda",
+      "publishedAt": "2026-11-28T09:12:50.046Z",
+      "topicId": "698cb465256f",
+      "lastError": null
     },
     {
       "idx": 3,
@@ -63,19 +75,19 @@
   "rejections": 1,
   "quarantined": 5,
   "api": {
-    "calls": 10,
-    "inputTokens": 31447,
-    "outputTokens": 18011,
-    "costUsd": 0.177452,
+    "calls": 12,
+    "inputTokens": 37196,
+    "outputTokens": 21886,
+    "costUsd": 0.213456,
     "dailyCapUsd": 1,
-    "monthCostUsd": 1.431493,
+    "monthCostUsd": 1.467497,
     "monthlyCapUsd": 15
   },
   "paused": false,
   "lastRun": {
-    "at": "2026-11-28T08:42:32.814Z",
-    "runId": "20261128084232-7ab3",
-    "published": 2,
+    "at": "2026-11-28T09:12:48.265Z",
+    "runId": "20261128091248-88fd",
+    "published": 1,
     "stopped": null
   }
 }

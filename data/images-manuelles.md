@@ -3,7 +3,12 @@
 Nommez votre image **exactement comme la référence** (ex. `261024-X1.jpg`) et déposez-la dans `site/src/assets/manual/`.
 Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large minimum.
 
-## Sans image (25)
+## Sans image (26)
+
+### `261128-03` — Pénurie de PS5 : Bercy décrète la réquisition des consoles et distribue des tickets de rationnement
+- Rubrique : economie
+- Description suggérée : Une file d'attente résignée de parents devant un guichet administratif terne surmonté d'un panneau Bureau du Rationnement des Consoles, style dessin de presse satirique.
+- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
 ### `261128-02` — Culture : le gouvernement crée une Fédération nationale pour bureaucratiser les concours loufoques du terroir
 - Rubrique : culture
@@ -130,7 +135,7 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 - Description suggérée : Dessin de presse satirique : un éditorialiste en costume, perplexe devant un tableau noir où il a tracé une flèche « Homme + option maternité = Femme ? », tandis que derrière lui des femmes de tous âges dirigent une réunion, opèrent, pilotent et enseignent sans lui prêter attention. Style encre et aquarelle.
 - Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
-## Déjà illustrés (15)
+## Déjà illustrés (14)
 
 - `261114-D10` — La Madrague ouvrira au public l’été prochain, les modalités d’accueil restent à définir… et le parasol aussi (261114-D10.jpg)
 - `261114-D5` — Rugby : le XV de France bat l’Afrique du Sud 21-19, le cardiologue du Stade de France fait des heures sup (261114-D5.jpg)
@@ -146,4 +151,3 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 - `261114-D2` — Panne Microsoft : le fax revient, et il n’a rien perdu de son charme (261114-D2.jpg)
 - `261111-05` — Selon un rapport scientifique choc de 4 000 pages, gagner plus d'argent permettrait d'acheter plus de choses (261111-05.jpg)
 - `261103-D1` — Australie : les gros salaires, le grand mirage des expatriés (261103-D1.jpg)
-- `261106-D5` — Pantouflage : le Conseil d’État desserre l’étau, les hauts fonctionnaires desserrent la cravate (261106-D5.jpg)
