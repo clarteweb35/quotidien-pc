@@ -5486,6 +5486,14 @@
       "seenAt": "2026-11-28T10:42:34.484Z",
       "status": "excluded",
       "reason": "sensitive"
+    },
+    "4f60db5a78f4": {
+      "title": "Nouvelle journée de manifestation samedi, notamment contre les violences sexistes et sexuelles",
+      "url": "https://www.france24.com/fr/france/20261128-une-nouvelle-journ%C3%A9e-de-mobilisation-samedi-notamment-contre-les-violences-faites-aux-femmes",
+      "category": "monde",
+      "seenAt": "2026-11-28T11:12:40.939Z",
+      "status": "used",
+      "usedAt": "2026-11-28T11:12:40.939Z"
     }
   },
   "slots": {
@@ -6875,9 +6883,9 @@
       "lastError": "image_indisponible"
     },
     "2026-11-28": {
-      "status": "failed",
-      "attempts": 1,
-      "lastError": "image_indisponible"
+      "status": "published",
+      "attempts": 2,
+      "lastError": null
     }
   }
 }
