@@ -5446,6 +5446,46 @@
       "seenAt": "2026-11-28T10:12:48.618Z",
       "status": "used",
       "usedAt": "2026-11-28T10:12:48.618Z"
+    },
+    "062700dee502": {
+      "title": "France : nouvelle mobilisation contre les violences faites aux femmes",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261128-france-nouvelle-mobilisation-contre-les-violences-faites-aux-femmes",
+      "category": "monde",
+      "seenAt": "2026-11-28T10:42:34.484Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "20f0255049fd": {
+      "title": "Deux employés de MSF tués par une frappe israélienne à Gaza",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261128-deux-employ%C3%A9s-de-msf-tu%C3%A9s-par-une-frappe-isra%C3%A9lienne-%C3%A0-gaza",
+      "category": "monde",
+      "seenAt": "2026-11-28T10:42:34.484Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "db426eb06e54": {
+      "title": "Rougeole : l'OMS alerte sur un retour de la maladie",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261128-rougeole-l-oms-alerte-sur-un-retour-de-la-maladie",
+      "category": "monde",
+      "seenAt": "2026-11-28T10:42:34.484Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "76a32afe90c7": {
+      "title": "Le lac Trasimène, en Italie, chronique en images d’une disparition annoncée",
+      "url": "https://www.lemonde.fr/m-le-mag/article/2026/11/28/le-lac-trasimene-en-italie-chronique-en-images-d-une-disparition-annoncee_6816094_4500055.html",
+      "category": "monde",
+      "seenAt": "2026-11-28T10:42:34.484Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "8ce288ee95e0": {
+      "title": "EN DIRECT, guerre en Ukraine : Vladimir Poutine, « grand maître de la politique » ? Les propos de Jared Kushner suscitent des critiques à Kiev et en Europe",
+      "url": "https://www.lemonde.fr/international/live/2026/11/28/en-direct-guerre-en-ukraine-vladimir-poutine-grand-maitre-de-la-politique-les-propos-de-jared-kushner-suscitent-des-critiques-a-kiev-et-en-europe_6814183_3210.html",
+      "category": "monde",
+      "seenAt": "2026-11-28T10:42:34.484Z",
+      "status": "excluded",
+      "reason": "sensitive"
     }
   },
   "slots": {
@@ -6832,6 +6872,11 @@
     "2026-11-27": {
       "status": "failed",
       "attempts": 3,
+      "lastError": "image_indisponible"
+    },
+    "2026-11-28": {
+      "status": "failed",
+      "attempts": 1,
       "lastError": "image_indisponible"
     }
   }
