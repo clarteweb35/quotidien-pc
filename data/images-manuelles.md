@@ -3,7 +3,17 @@
 Nommez votre image **exactement comme la référence** (ex. `261024-X1.jpg`) et déposez-la dans `site/src/assets/manual/`.
 Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large minimum.
 
-## Sans image (23)
+## Sans image (25)
+
+### `261128-02` — Culture : le gouvernement crée une Fédération nationale pour bureaucratiser les concours loufoques du terroir
+- Rubrique : culture
+- Description suggérée : Un bureaucrate en costume strict mesurant avec un ruban métrique une grande pierre posée sur une pelouse sous un chapiteau de fête villageoise, style dessin de presse.
+- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
+
+### `261128-01` — « Raz de marée » dans trente villes : il est grand temps de consolider nos digues
+- Rubrique : editos
+- Description suggérée : Dessin de presse représentant une grande rue piétonne de ville où des passants marchent sereinement, tandis qu'un personnage vu de dos installe méticuleusement une rangée de sacs de sable devant une vitrine.
+- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
 ### `261127-05` — Pas-de-Calais : Face à l’érosion des terrils, les traileurs sommés de courir sans toucher le sol
 - Rubrique : sport
@@ -120,7 +130,7 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 - Description suggérée : Dessin de presse satirique : un éditorialiste en costume, perplexe devant un tableau noir où il a tracé une flèche « Homme + option maternité = Femme ? », tandis que derrière lui des femmes de tous âges dirigent une réunion, opèrent, pilotent et enseignent sans lui prêter attention. Style encre et aquarelle.
 - Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
-## Déjà illustrés (17)
+## Déjà illustrés (15)
 
 - `261114-D10` — La Madrague ouvrira au public l’été prochain, les modalités d’accueil restent à définir… et le parasol aussi (261114-D10.jpg)
 - `261114-D5` — Rugby : le XV de France bat l’Afrique du Sud 21-19, le cardiologue du Stade de France fait des heures sup (261114-D5.jpg)
@@ -137,5 +147,3 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 - `261111-05` — Selon un rapport scientifique choc de 4 000 pages, gagner plus d'argent permettrait d'acheter plus de choses (261111-05.jpg)
 - `261103-D1` — Australie : les gros salaires, le grand mirage des expatriés (261103-D1.jpg)
 - `261106-D5` — Pantouflage : le Conseil d’État desserre l’étau, les hauts fonctionnaires desserrent la cravate (261106-D5.jpg)
-- `261106-D7` — Chamonix : pour admirer le lac Blanc, il faudra bientôt réserver, comme pour un restaurant avec une très belle vue (261106-D7.jpg)
-- `261106-D10` — Rock en Seine annulé en 2027 : le festival fait une pause, le public découvre la tranquillité (261106-D10.jpg)

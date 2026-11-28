@@ -1,22 +1,45 @@
 {
   "date": "2026-11-28",
   "target": 5,
-  "publishedCount": 0,
-  "articles": [],
+  "publishedCount": 2,
+  "articles": [
+    {
+      "id": "956ee9d33121",
+      "ref": "261128-02",
+      "title": "Culture : le gouvernement crée une Fédération nationale pour bureaucratiser les concours loufoques du terroir",
+      "category": "culture",
+      "slug": "culture-le-gouvernement-cree-une-federation-nationale-pour"
+    },
+    {
+      "id": "a0fead4c3bc0",
+      "ref": "261128-01",
+      "title": "« Raz de marée » dans trente villes : il est grand temps de consolider nos digues",
+      "category": "editos",
+      "slug": "raz-de-maree-dans-trente-villes-il-est-grand-temps-de"
+    }
+  ],
   "slots": [
     {
       "idx": 0,
       "hhmm": "09:10",
-      "attempts": 1,
-      "status": "failed",
-      "startedAt": "2026-11-28T08:12:37.477Z",
-      "lastError": "chapo_trop_long"
+      "attempts": 2,
+      "status": "published",
+      "startedAt": "2026-11-28T08:42:33.223Z",
+      "lastError": null,
+      "articleId": "a0fead4c3bc0",
+      "publishedAt": "2026-11-28T08:42:33.223Z",
+      "topicId": "92a628abb7ab"
     },
     {
       "idx": 1,
       "hhmm": "09:40",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 1,
+      "status": "published",
+      "startedAt": "2026-11-28T08:43:41.073Z",
+      "articleId": "956ee9d33121",
+      "publishedAt": "2026-11-28T08:43:41.073Z",
+      "topicId": "566877b7790e",
+      "lastError": null
     },
     {
       "idx": 2,
@@ -40,19 +63,19 @@
   "rejections": 1,
   "quarantined": 5,
   "api": {
-    "calls": 2,
-    "inputTokens": 9514,
-    "outputTokens": 6529,
-    "costUsd": 0.063239,
+    "calls": 10,
+    "inputTokens": 31447,
+    "outputTokens": 18011,
+    "costUsd": 0.177452,
     "dailyCapUsd": 1,
-    "monthCostUsd": 1.31728,
+    "monthCostUsd": 1.431493,
     "monthlyCapUsd": 15
   },
   "paused": false,
   "lastRun": {
-    "at": "2026-11-28T08:12:36.893Z",
-    "runId": "20261128081236-dd04",
-    "published": 0,
+    "at": "2026-11-28T08:42:32.814Z",
+    "runId": "20261128084232-7ab3",
+    "published": 2,
     "stopped": null
   }
 }

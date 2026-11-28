@@ -19,3 +19,34 @@
 {"ts":"2026-11-28T08:13:12.231Z","runId":"20261128081236-dd04","level":"warn","event":"validate.deterministic_failed","slot":"2026-11-28#0","attempt":2,"issues":["chapo_trop_long"]}
 {"ts":"2026-11-28T08:13:12.231Z","runId":"20261128081236-dd04","level":"warn","event":"slot.quarantined","slot":"2026-11-28#0","reasons":["chapo_trop_long"]}
 {"ts":"2026-11-28T08:13:12.236Z","runId":"20261128081236-dd04","level":"warn","event":"slot.failed","slot":"2026-11-28#0","reason":"chapo_trop_long"}
+{"ts":"2026-11-28T08:42:32.837Z","runId":"20261128084232-7ab3","level":"info","event":"cycle.start","date":"2026-11-28","due":["2026-11-28#0","2026-11-28#1"],"remainingToday":5,"dryRun":false}
+{"ts":"2026-11-28T08:42:33.221Z","runId":"20261128084232-7ab3","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":30,"kept":25}
+{"ts":"2026-11-28T08:42:33.221Z","runId":"20261128084232-7ab3","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-11-28T08:42:33.221Z","runId":"20261128084232-7ab3","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":19}
+{"ts":"2026-11-28T08:42:33.221Z","runId":"20261128084232-7ab3","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":24}
+{"ts":"2026-11-28T08:42:33.221Z","runId":"20261128084232-7ab3","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":14}
+{"ts":"2026-11-28T08:42:33.222Z","runId":"20261128084232-7ab3","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":19,"kept":19}
+{"ts":"2026-11-28T08:42:33.222Z","runId":"20261128084232-7ab3","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":13}
+{"ts":"2026-11-28T08:42:33.222Z","runId":"20261128084232-7ab3","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":13}
+{"ts":"2026-11-28T08:42:33.222Z","runId":"20261128084232-7ab3","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":5}
+{"ts":"2026-11-28T08:42:33.222Z","runId":"20261128084232-7ab3","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":13}
+{"ts":"2026-11-28T08:42:33.222Z","runId":"20261128084232-7ab3","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":8}
+{"ts":"2026-11-28T08:42:33.222Z","runId":"20261128084232-7ab3","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":10}
+{"ts":"2026-11-28T08:42:33.222Z","runId":"20261128084232-7ab3","level":"info","event":"collect.done","items":179}
+{"ts":"2026-11-28T08:42:33.466Z","runId":"20261128084232-7ab3","level":"info","event":"topic.selection","slot":"2026-11-28#0","target":"editos","candidates":179,"rejected":0,"chosen":"«Un raz de marée féministe» : nouvelle journée de mobilisation en France, sous le signe des violences faites aux femmes","score":7.5}
+{"ts":"2026-11-28T08:43:17.251Z","runId":"20261128084232-7ab3","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4726,"outputTokens":2892,"costUsd":0.028779}
+{"ts":"2026-11-28T08:43:17.295Z","runId":"20261128084232-7ab3","level":"warn","event":"validate.deterministic_failed","slot":"2026-11-28#0","attempt":1,"issues":["signature_dans_le_texte"]}
+{"ts":"2026-11-28T08:43:39.835Z","runId":"20261128084232-7ab3","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4788,"outputTokens":3029,"costUsd":0.0299}
+{"ts":"2026-11-28T08:43:41.067Z","runId":"20261128084232-7ab3","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":831,"outputTokens":78,"costUsd":0.000444}
+{"ts":"2026-11-28T08:43:41.068Z","runId":"20261128084232-7ab3","level":"info","event":"judge.result","slot":"2026-11-28#0","attempt":2,"humor":7,"coherence":9,"risk":1,"issues":[]}
+{"ts":"2026-11-28T08:43:41.073Z","runId":"20261128084232-7ab3","level":"info","event":"publish.ok","slot":"2026-11-28#0","id":"a0fead4c3bc0","slug":"raz-de-maree-dans-trente-villes-il-est-grand-temps-de","url":"/articles/raz-de-maree-dans-trente-villes-il-est-grand-temps-de/","attempt":2,"dryRun":false}
+{"ts":"2026-11-28T08:43:41.124Z","runId":"20261128084232-7ab3","level":"info","event":"topic.selection","slot":"2026-11-28#1","target":"culture","candidates":179,"rejected":4,"chosen":"« On lance un menhir et puis on fait la fête » : la France s’enthousiasme pour les concours loufoques","score":5}
+{"ts":"2026-11-28T08:45:10.967Z","runId":"20261128084232-7ab3","level":"warn","event":"gemini.retry","purpose":"generate","status":504,"attempt":1,"delayMs":4959}
+{"ts":"2026-11-28T08:45:39.097Z","runId":"20261128084232-7ab3","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4621,"outputTokens":2168,"costUsd":0.023192}
+{"ts":"2026-11-28T08:45:39.139Z","runId":"20261128084232-7ab3","level":"warn","event":"validate.deterministic_failed","slot":"2026-11-28#1","attempt":1,"issues":["chapo_trop_long","copie_source"]}
+{"ts":"2026-11-28T08:46:18.174Z","runId":"20261128084232-7ab3","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4679,"outputTokens":3181,"costUsd":0.030876}
+{"ts":"2026-11-28T08:46:18.819Z","runId":"20261128084232-7ab3","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":1052,"outputTokens":74,"costUsd":0.000501}
+{"ts":"2026-11-28T08:46:18.819Z","runId":"20261128084232-7ab3","level":"info","event":"judge.result","slot":"2026-11-28#1","attempt":2,"humor":7,"coherence":9,"risk":1,"issues":[]}
+{"ts":"2026-11-28T08:46:29.747Z","runId":"20261128084232-7ab3","level":"info","event":"gemini.call","purpose":"image_judge","model":"gemini-3.5-flash-lite","inputTokens":1236,"outputTokens":60,"costUsd":0.000521}
+{"ts":"2026-11-28T08:46:29.747Z","runId":"20261128084232-7ab3","level":"info","event":"image.ok","slot":"2026-11-28#1","bytes":90670,"costUsd":0}
+{"ts":"2026-11-28T08:46:29.751Z","runId":"20261128084232-7ab3","level":"info","event":"publish.ok","slot":"2026-11-28#1","id":"956ee9d33121","slug":"culture-le-gouvernement-cree-une-federation-nationale-pour","url":"/articles/culture-le-gouvernement-cree-une-federation-nationale-pour/","attempt":2,"dryRun":false}

@@ -5355,8 +5355,41 @@
       "title": "«Un raz de marée féministe» : nouvelle journée de mobilisation en France, sous le signe des violences faites aux femmes",
       "url": "https://www.liberation.fr/societe/droits-des-femmes/un-raz-de-maree-feministe-nouvelle-journee-de-mobilisation-en-france-sous-le-signe-des-violences-faites-aux-femmes-20261128_MDA2BP5B5RF3RMNCM3MB7G5ANQ/",
       "category": "editos",
-      "seenAt": "2026-11-28T08:12:37.477Z",
-      "status": "rejected"
+      "seenAt": "2026-11-28T08:42:33.223Z",
+      "status": "used",
+      "usedAt": "2026-11-28T08:42:33.223Z"
+    },
+    "e7378446843d": {
+      "title": "MC Solaar et Youssoupha célèbrent leur amitié et la musique noire dans « Supersonic Social Club »",
+      "url": "https://www.lemonde.fr/culture/article/2026/11/27/mc-solaar-et-youssoupha-celebrent-leur-amitie-et-la-musique-noire-dans-supersonic-social-club_6815917_3246.html",
+      "category": "culture",
+      "seenAt": "2026-11-28T08:43:41.073Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "14de0daa6b81": {
+      "title": "« Sexe faible, l’Amérique en guerre contre ses femmes », sur Arte.tv : un film choc pour dénoncer une misogynie institutionnalisée",
+      "url": "https://www.lemonde.fr/culture/article/2026/11/27/sexe-faible-l-amerique-en-guerre-contre-ses-femmes-sur-arte-tv-un-film-choc-pour-denoncer-une-misogynie-institutionnalisee_6815900_3246.html",
+      "category": "culture",
+      "seenAt": "2026-11-28T08:43:41.073Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "974821703093": {
+      "title": "Jean-Claude Vannier, arrangeur indissociable de Serge Gainsbourg et père de l’album-concept « Histoire de Melody Nelson », est mort à l’âge de 83 ans",
+      "url": "https://www.lemonde.fr/disparitions/article/2026/11/27/jean-claude-vannier-arrangeur-indissociable-de-serge-gainsbourg-et-pere-de-l-album-concept-histoire-de-melody-nelson-est-mort-a-l-age-de-83-ans_6815859_3382.html",
+      "category": "culture",
+      "seenAt": "2026-11-28T08:43:41.073Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "566877b7790e": {
+      "title": "« On lance un menhir et puis on fait la fête » : la France s’enthousiasme pour les concours loufoques",
+      "url": "https://www.lemonde.fr/m-perso/article/2026/11/28/on-lance-un-menhir-et-puis-on-fait-la-fete-la-france-s-enthousiasme-pour-les-concours-loufoques_6816062_4497916.html",
+      "category": "culture",
+      "seenAt": "2026-11-28T08:43:41.073Z",
+      "status": "used",
+      "usedAt": "2026-11-28T08:43:41.073Z"
     }
   },
   "slots": {
@@ -6537,17 +6570,29 @@
     },
     "2026-11-28": {
       "0": {
+        "attempts": 2,
+        "status": "published",
+        "startedAt": "2026-11-28T08:42:33.223Z",
+        "lastError": null,
+        "articleId": "a0fead4c3bc0",
+        "publishedAt": "2026-11-28T08:42:33.223Z",
+        "topicId": "92a628abb7ab"
+      },
+      "1": {
         "attempts": 1,
-        "status": "failed",
-        "startedAt": "2026-11-28T08:12:37.477Z",
-        "lastError": "chapo_trop_long"
+        "status": "published",
+        "startedAt": "2026-11-28T08:43:41.073Z",
+        "articleId": "956ee9d33121",
+        "publishedAt": "2026-11-28T08:43:41.073Z",
+        "topicId": "566877b7790e",
+        "lastError": null
       }
     }
   },
   "lastRun": {
-    "at": "2026-11-28T08:12:36.893Z",
-    "runId": "20261128081236-dd04",
-    "published": 0,
+    "at": "2026-11-28T08:42:32.814Z",
+    "runId": "20261128084232-7ab3",
+    "published": 2,
     "stopped": null
   },
   "caricatures": {
