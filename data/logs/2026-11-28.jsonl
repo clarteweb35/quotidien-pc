@@ -88,3 +88,24 @@
 {"ts":"2026-11-28T09:42:52.394Z","runId":"20261128094233-e3d4","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":875,"outputTokens":103,"costUsd":0.00052}
 {"ts":"2026-11-28T09:42:52.395Z","runId":"20261128094233-e3d4","level":"info","event":"judge.result","slot":"2026-11-28#3","attempt":1,"humor":7,"coherence":9,"risk":1,"issues":[]}
 {"ts":"2026-11-28T09:42:52.399Z","runId":"20261128094233-e3d4","level":"info","event":"publish.ok","slot":"2026-11-28#3","id":"98d6086f3a9d","slug":"sondages-en-france-un-sommet-diplomatique-etudie-une","url":"/articles/sondages-en-france-un-sommet-diplomatique-etudie-une/","attempt":1,"dryRun":false}
+{"ts":"2026-11-28T10:12:47.835Z","runId":"20261128101247-eac8","level":"info","event":"cycle.start","date":"2026-11-28","due":["2026-11-28#4"],"remainingToday":1,"dryRun":false}
+{"ts":"2026-11-28T10:12:48.616Z","runId":"20261128101247-eac8","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":31,"kept":25}
+{"ts":"2026-11-28T10:12:48.616Z","runId":"20261128101247-eac8","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-11-28T10:12:48.616Z","runId":"20261128101247-eac8","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":19}
+{"ts":"2026-11-28T10:12:48.616Z","runId":"20261128101247-eac8","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":24}
+{"ts":"2026-11-28T10:12:48.617Z","runId":"20261128101247-eac8","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":14}
+{"ts":"2026-11-28T10:12:48.617Z","runId":"20261128101247-eac8","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":19,"kept":19}
+{"ts":"2026-11-28T10:12:48.617Z","runId":"20261128101247-eac8","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":14}
+{"ts":"2026-11-28T10:12:48.617Z","runId":"20261128101247-eac8","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":13}
+{"ts":"2026-11-28T10:12:48.617Z","runId":"20261128101247-eac8","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":5}
+{"ts":"2026-11-28T10:12:48.617Z","runId":"20261128101247-eac8","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":15}
+{"ts":"2026-11-28T10:12:48.617Z","runId":"20261128101247-eac8","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":8}
+{"ts":"2026-11-28T10:12:48.617Z","runId":"20261128101247-eac8","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":10}
+{"ts":"2026-11-28T10:12:48.617Z","runId":"20261128101247-eac8","level":"info","event":"collect.done","items":182}
+{"ts":"2026-11-28T10:12:48.649Z","runId":"20261128101247-eac8","level":"info","event":"topic.selection","slot":"2026-11-28#4","target":"tech","candidates":182,"rejected":1,"chosen":"Pologne : l’armée annonce qu’elle utilisera l’IA de l’entreprise américaine Palantir","score":6}
+{"ts":"2026-11-28T10:13:10.793Z","runId":"20261128101247-eac8","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4563,"outputTokens":2301,"costUsd":0.024102}
+{"ts":"2026-11-28T10:13:10.843Z","runId":"20261128101247-eac8","level":"warn","event":"validate.deterministic_failed","slot":"2026-11-28#4","attempt":1,"issues":["chapo_trop_long"]}
+{"ts":"2026-11-28T10:13:41.165Z","runId":"20261128101247-eac8","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4613,"outputTokens":3440,"costUsd":0.03272}
+{"ts":"2026-11-28T10:13:43.029Z","runId":"20261128101247-eac8","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":884,"outputTokens":56,"costUsd":0.000405}
+{"ts":"2026-11-28T10:13:43.030Z","runId":"20261128101247-eac8","level":"info","event":"judge.result","slot":"2026-11-28#4","attempt":2,"humor":8,"coherence":9,"risk":1,"issues":[]}
+{"ts":"2026-11-28T10:13:43.034Z","runId":"20261128101247-eac8","level":"info","event":"publish.ok","slot":"2026-11-28#4","id":"956b537b4936","slug":"l-armee-polonaise-adopte-une-ia-de-defense-mais-lui","url":"/articles/l-armee-polonaise-adopte-une-ia-de-defense-mais-lui/","attempt":2,"dryRun":false}

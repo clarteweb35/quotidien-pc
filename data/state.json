@@ -5430,6 +5430,22 @@
       "seenAt": "2026-11-28T09:42:33.655Z",
       "status": "used",
       "usedAt": "2026-11-28T09:42:33.655Z"
+    },
+    "9ba900bcc796": {
+      "title": "« Pour la littérature, le recours à l’IA est un vrai naufrage ! » : après l’affaire Thélyson Orélien, des écrivains face à l’intelligence artificielle",
+      "url": "https://www.lemonde.fr/livres/article/2026/11/27/pour-la-litterature-le-recours-a-l-ia-est-un-vrai-naufrage-apres-l-affaire-thelyson-orelien-les-ecrivains-face-a-l-intelligence-artificielle_6815797_3260.html",
+      "category": "tech",
+      "seenAt": "2026-11-28T10:12:48.618Z",
+      "status": "excluded",
+      "reason": "sensitive"
+    },
+    "d5c77d851750": {
+      "title": "Pologne : l’armée annonce qu’elle utilisera l’IA de l’entreprise américaine Palantir",
+      "url": "https://www.lemonde.fr/international/article/2026/11/27/en-pologne-l-armee-choisit-l-ia-de-palantir-pour-l-aide-a-la-decision_6815890_3210.html",
+      "category": "tech",
+      "seenAt": "2026-11-28T10:12:48.618Z",
+      "status": "used",
+      "usedAt": "2026-11-28T10:12:48.618Z"
     }
   },
   "slots": {
@@ -6644,12 +6660,21 @@
         "publishedAt": "2026-11-28T09:42:33.655Z",
         "topicId": "d4bd10f3e576",
         "lastError": null
+      },
+      "4": {
+        "attempts": 1,
+        "status": "published",
+        "startedAt": "2026-11-28T10:12:48.618Z",
+        "articleId": "956b537b4936",
+        "publishedAt": "2026-11-28T10:12:48.618Z",
+        "topicId": "d5c77d851750",
+        "lastError": null
       }
     }
   },
   "lastRun": {
-    "at": "2026-11-28T09:42:33.286Z",
-    "runId": "20261128094233-e3d4",
+    "at": "2026-11-28T10:12:47.354Z",
+    "runId": "20261128101247-eac8",
     "published": 1,
     "stopped": null
   },

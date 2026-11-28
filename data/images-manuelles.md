@@ -3,7 +3,12 @@
 Nommez votre image **exactement comme la référence** (ex. `261024-X1.jpg`) et déposez-la dans `site/src/assets/manual/`.
 Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large minimum.
 
-## Sans image (27)
+## Sans image (28)
+
+### `261128-05` — L’armée polonaise adopte une IA de défense mais lui interdit poliment d’avoir accès aux données
+- Rubrique : tech
+- Description suggérée : Un serveur informatique ultra-moderne enfermé derrière d'épaisses grilles dans un bunker, relié à aucun câble, avec un cadenas géant posé sur l'interrupteur principal.
+- Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
 ### `261128-04` — Sondages en France : Un sommet diplomatique étudie une dynamique politique sans prononcer un seul mot précis
 - Rubrique : monde
@@ -140,7 +145,7 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 - Description suggérée : Dessin de presse satirique : un éditorialiste en costume, perplexe devant un tableau noir où il a tracé une flèche « Homme + option maternité = Femme ? », tandis que derrière lui des femmes de tous âges dirigent une réunion, opèrent, pilotent et enseignent sans lui prêter attention. Style encre et aquarelle.
 - Style conseillé : Illustration éditoriale de presse française, dessin à l'encre et aquarelle sur papier ivoire, trait expressif, palette sobre (noir, ivoire, rouge sombre, touches de couleur douce), composition lisible en format paysage.
 
-## Déjà illustrés (13)
+## Déjà illustrés (12)
 
 - `261114-D10` — La Madrague ouvrira au public l’été prochain, les modalités d’accueil restent à définir… et le parasol aussi (261114-D10.jpg)
 - `261114-D5` — Rugby : le XV de France bat l’Afrique du Sud 21-19, le cardiologue du Stade de France fait des heures sup (261114-D5.jpg)
@@ -154,4 +159,3 @@ Formats : `.jpg`, `.png`, `.webp` · paysage 16:9 conseillé, 1280 px de large m
 - `261114-D4` — Smic à 1 502 euros net : un nouveau record de pouvoir d’achat, avant d’aller faire les courses (261114-D4.jpg)
 - `261114-D3` — États-Unis : tous les vols suspendus pour un « problème de communication », le retard devient national (261114-D3-dessin.jpg)
 - `261114-D2` — Panne Microsoft : le fax revient, et il n’a rien perdu de son charme (261114-D2.jpg)
-- `261111-05` — Selon un rapport scientifique choc de 4 000 pages, gagner plus d'argent permettrait d'acheter plus de choses (261111-05.jpg)

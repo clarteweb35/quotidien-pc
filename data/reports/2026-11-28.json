@@ -1,7 +1,7 @@
 {
   "date": "2026-11-28",
   "target": 5,
-  "publishedCount": 4,
+  "publishedCount": 5,
   "articles": [
     {
       "id": "956ee9d33121",
@@ -9,6 +9,13 @@
       "title": "Culture : le gouvernement crée une Fédération nationale pour bureaucratiser les concours loufoques du terroir",
       "category": "culture",
       "slug": "culture-le-gouvernement-cree-une-federation-nationale-pour"
+    },
+    {
+      "id": "956b537b4936",
+      "ref": "261128-05",
+      "title": "L’armée polonaise adopte une IA de défense mais lui interdit poliment d’avoir accès aux données",
+      "category": "tech",
+      "slug": "l-armee-polonaise-adopte-une-ia-de-defense-mais-lui"
     },
     {
       "id": "81b822df7eda",
@@ -80,25 +87,30 @@
     {
       "idx": 4,
       "hhmm": "11:10",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 1,
+      "status": "published",
+      "startedAt": "2026-11-28T10:12:48.618Z",
+      "articleId": "956b537b4936",
+      "publishedAt": "2026-11-28T10:12:48.618Z",
+      "topicId": "d5c77d851750",
+      "lastError": null
     }
   ],
   "rejections": 1,
   "quarantined": 5,
   "api": {
-    "calls": 14,
-    "inputTokens": 42674,
-    "outputTokens": 25374,
-    "costUsd": 0.246268,
+    "calls": 17,
+    "inputTokens": 52734,
+    "outputTokens": 31171,
+    "costUsd": 0.303495,
     "dailyCapUsd": 1,
-    "monthCostUsd": 1.500309,
+    "monthCostUsd": 1.557536,
     "monthlyCapUsd": 15
   },
   "paused": false,
   "lastRun": {
-    "at": "2026-11-28T09:42:33.286Z",
-    "runId": "20261128094233-e3d4",
+    "at": "2026-11-28T10:12:47.354Z",
+    "runId": "20261128101247-eac8",
     "published": 1,
     "stopped": null
   }
