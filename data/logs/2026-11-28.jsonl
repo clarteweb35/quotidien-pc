@@ -69,3 +69,22 @@
 {"ts":"2026-11-28T09:13:18.119Z","runId":"20261128091248-88fd","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":1169,"outputTokens":56,"costUsd":0.000491}
 {"ts":"2026-11-28T09:13:18.119Z","runId":"20261128091248-88fd","level":"info","event":"judge.result","slot":"2026-11-28#2","attempt":1,"humor":8,"coherence":9,"risk":0,"issues":[]}
 {"ts":"2026-11-28T09:13:18.123Z","runId":"20261128091248-88fd","level":"info","event":"publish.ok","slot":"2026-11-28#2","id":"81b822df7eda","slug":"penurie-de-ps5-bercy-decrete-la-requisition-des-consoles-et","url":"/articles/penurie-de-ps5-bercy-decrete-la-requisition-des-consoles-et/","attempt":1,"dryRun":false}
+{"ts":"2026-11-28T09:42:33.329Z","runId":"20261128094233-e3d4","level":"info","event":"cycle.start","date":"2026-11-28","due":["2026-11-28#3"],"remainingToday":2,"dryRun":false}
+{"ts":"2026-11-28T09:42:33.653Z","runId":"20261128094233-e3d4","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":30,"kept":25}
+{"ts":"2026-11-28T09:42:33.653Z","runId":"20261128094233-e3d4","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-11-28T09:42:33.653Z","runId":"20261128094233-e3d4","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":19}
+{"ts":"2026-11-28T09:42:33.654Z","runId":"20261128094233-e3d4","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":24}
+{"ts":"2026-11-28T09:42:33.654Z","runId":"20261128094233-e3d4","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":14}
+{"ts":"2026-11-28T09:42:33.654Z","runId":"20261128094233-e3d4","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":19,"kept":19}
+{"ts":"2026-11-28T09:42:33.654Z","runId":"20261128094233-e3d4","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":14}
+{"ts":"2026-11-28T09:42:33.654Z","runId":"20261128094233-e3d4","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":13}
+{"ts":"2026-11-28T09:42:33.654Z","runId":"20261128094233-e3d4","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":5}
+{"ts":"2026-11-28T09:42:33.654Z","runId":"20261128094233-e3d4","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":15}
+{"ts":"2026-11-28T09:42:33.654Z","runId":"20261128094233-e3d4","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":8}
+{"ts":"2026-11-28T09:42:33.655Z","runId":"20261128094233-e3d4","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":10}
+{"ts":"2026-11-28T09:42:33.655Z","runId":"20261128094233-e3d4","level":"info","event":"collect.done","items":182}
+{"ts":"2026-11-28T09:42:33.791Z","runId":"20261128094233-e3d4","level":"info","event":"topic.selection","slot":"2026-11-28#3","target":"monde","candidates":182,"rejected":2,"chosen":"Présidentielle 2027: la dynamique David Lisnard à la loupe","score":6.5}
+{"ts":"2026-11-28T09:42:50.909Z","runId":"20261128094233-e3d4","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4603,"outputTokens":3385,"costUsd":0.032292}
+{"ts":"2026-11-28T09:42:52.394Z","runId":"20261128094233-e3d4","level":"info","event":"gemini.call","purpose":"judge","model":"gemini-3.5-flash-lite","inputTokens":875,"outputTokens":103,"costUsd":0.00052}
+{"ts":"2026-11-28T09:42:52.395Z","runId":"20261128094233-e3d4","level":"info","event":"judge.result","slot":"2026-11-28#3","attempt":1,"humor":7,"coherence":9,"risk":1,"issues":[]}
+{"ts":"2026-11-28T09:42:52.399Z","runId":"20261128094233-e3d4","level":"info","event":"publish.ok","slot":"2026-11-28#3","id":"98d6086f3a9d","slug":"sondages-en-france-un-sommet-diplomatique-etudie-une","url":"/articles/sondages-en-france-un-sommet-diplomatique-etudie-une/","attempt":1,"dryRun":false}

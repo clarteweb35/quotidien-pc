@@ -1,7 +1,7 @@
 {
   "date": "2026-11-28",
   "target": 5,
-  "publishedCount": 3,
+  "publishedCount": 4,
   "articles": [
     {
       "id": "956ee9d33121",
@@ -23,6 +23,13 @@
       "title": "« Raz de marée » dans trente villes : il est grand temps de consolider nos digues",
       "category": "editos",
       "slug": "raz-de-maree-dans-trente-villes-il-est-grand-temps-de"
+    },
+    {
+      "id": "98d6086f3a9d",
+      "ref": "261128-04",
+      "title": "Sondages en France : Un sommet diplomatique étudie une dynamique politique sans prononcer un seul mot précis",
+      "category": "monde",
+      "slug": "sondages-en-france-un-sommet-diplomatique-etudie-une"
     }
   ],
   "slots": [
@@ -62,8 +69,13 @@
     {
       "idx": 3,
       "hhmm": "10:40",
-      "status": "pending",
-      "attempts": 0
+      "attempts": 1,
+      "status": "published",
+      "startedAt": "2026-11-28T09:42:33.655Z",
+      "articleId": "98d6086f3a9d",
+      "publishedAt": "2026-11-28T09:42:33.655Z",
+      "topicId": "d4bd10f3e576",
+      "lastError": null
     },
     {
       "idx": 4,
@@ -75,18 +87,18 @@
   "rejections": 1,
   "quarantined": 5,
   "api": {
-    "calls": 12,
-    "inputTokens": 37196,
-    "outputTokens": 21886,
-    "costUsd": 0.213456,
+    "calls": 14,
+    "inputTokens": 42674,
+    "outputTokens": 25374,
+    "costUsd": 0.246268,
     "dailyCapUsd": 1,
-    "monthCostUsd": 1.467497,
+    "monthCostUsd": 1.500309,
     "monthlyCapUsd": 15
   },
   "paused": false,
   "lastRun": {
-    "at": "2026-11-28T09:12:48.265Z",
-    "runId": "20261128091248-88fd",
+    "at": "2026-11-28T09:42:33.286Z",
+    "runId": "20261128094233-e3d4",
     "published": 1,
     "stopped": null
   }
