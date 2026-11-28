@@ -1,0 +1,21 @@
+{"ts":"2026-11-28T08:12:36.908Z","runId":"20261128081236-dd04","level":"info","event":"cycle.start","date":"2026-11-28","due":["2026-11-28#0"],"remainingToday":5,"dryRun":false}
+{"ts":"2026-11-28T08:12:37.475Z","runId":"20261128081236-dd04","level":"info","event":"collect.feed_ok","feed":"franceinfo-une","parsed":30,"kept":25}
+{"ts":"2026-11-28T08:12:37.475Z","runId":"20261128081236-dd04","level":"info","event":"collect.feed_ok","feed":"lemonde-une","parsed":16,"kept":16}
+{"ts":"2026-11-28T08:12:37.475Z","runId":"20261128081236-dd04","level":"info","event":"collect.feed_ok","feed":"liberation","parsed":20,"kept":19}
+{"ts":"2026-11-28T08:12:37.475Z","runId":"20261128081236-dd04","level":"info","event":"collect.feed_ok","feed":"france24","parsed":24,"kept":24}
+{"ts":"2026-11-28T08:12:37.475Z","runId":"20261128081236-dd04","level":"info","event":"collect.feed_ok","feed":"lemonde-politique","parsed":20,"kept":14}
+{"ts":"2026-11-28T08:12:37.475Z","runId":"20261128081236-dd04","level":"info","event":"collect.feed_ok","feed":"franceinfo-politique","parsed":19,"kept":19}
+{"ts":"2026-11-28T08:12:37.475Z","runId":"20261128081236-dd04","level":"info","event":"collect.feed_ok","feed":"lemonde-international","parsed":20,"kept":13}
+{"ts":"2026-11-28T08:12:37.476Z","runId":"20261128081236-dd04","level":"info","event":"collect.feed_ok","feed":"lemonde-eco","parsed":20,"kept":11}
+{"ts":"2026-11-28T08:12:37.476Z","runId":"20261128081236-dd04","level":"info","event":"collect.feed_ok","feed":"lemonde-pixels","parsed":20,"kept":5}
+{"ts":"2026-11-28T08:12:37.476Z","runId":"20261128081236-dd04","level":"info","event":"collect.feed_ok","feed":"lemonde-culture","parsed":20,"kept":13}
+{"ts":"2026-11-28T08:12:37.476Z","runId":"20261128081236-dd04","level":"info","event":"collect.feed_ok","feed":"lemonde-sport","parsed":20,"kept":8}
+{"ts":"2026-11-28T08:12:37.476Z","runId":"20261128081236-dd04","level":"info","event":"collect.feed_ok","feed":"lemonde-planete","parsed":20,"kept":10}
+{"ts":"2026-11-28T08:12:37.476Z","runId":"20261128081236-dd04","level":"info","event":"collect.done","items":177}
+{"ts":"2026-11-28T08:12:37.824Z","runId":"20261128081236-dd04","level":"info","event":"topic.selection","slot":"2026-11-28#0","target":"editos","candidates":177,"rejected":26,"chosen":"«Un raz de marée féministe» : nouvelle journée de mobilisation en France, sous le signe des violences faites aux femmes","score":7.5}
+{"ts":"2026-11-28T08:12:54.668Z","runId":"20261128081236-dd04","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4732,"outputTokens":3362,"costUsd":0.032313}
+{"ts":"2026-11-28T08:12:54.720Z","runId":"20261128081236-dd04","level":"warn","event":"validate.deterministic_failed","slot":"2026-11-28#0","attempt":1,"issues":["chapo_trop_long"]}
+{"ts":"2026-11-28T08:13:12.182Z","runId":"20261128081236-dd04","level":"info","event":"gemini.call","purpose":"generate","model":"gemini-3.6-flash","inputTokens":4782,"outputTokens":3167,"costUsd":0.030926}
+{"ts":"2026-11-28T08:13:12.231Z","runId":"20261128081236-dd04","level":"warn","event":"validate.deterministic_failed","slot":"2026-11-28#0","attempt":2,"issues":["chapo_trop_long"]}
+{"ts":"2026-11-28T08:13:12.231Z","runId":"20261128081236-dd04","level":"warn","event":"slot.quarantined","slot":"2026-11-28#0","reasons":["chapo_trop_long"]}
+{"ts":"2026-11-28T08:13:12.236Z","runId":"20261128081236-dd04","level":"warn","event":"slot.failed","slot":"2026-11-28#0","reason":"chapo_trop_long"}

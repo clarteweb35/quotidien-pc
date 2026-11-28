@@ -372,6 +372,103 @@
       "judge": null,
       "status": "quarantined",
       "retries": 0
+    },
+    {
+      "id": "a0fead4c3bc0",
+      "createdAt": "2026-11-28T08:12:37.477Z",
+      "slotKey": "2026-11-28#0",
+      "topic": {
+        "id": "92a628abb7ab",
+        "title": "«Un raz de marée féministe» : nouvelle journée de mobilisation en France, sous le signe des violences faites aux femmes",
+        "summary": "De multiples appels à manifester ont de nouveau été lancés pour ce samedi 28 novembre dans une trentaine de villes, trois jours après la journée internationale de lutte contre les violences faites aux femmes.",
+        "url": "https://www.liberation.fr/societe/droits-des-femmes/un-raz-de-maree-feministe-nouvelle-journee-de-mobilisation-en-france-sous-le-signe-des-violences-faites-aux-femmes-20261128_MDA2BP5B5RF3RMNCM3MB7G5ANQ/",
+        "publishedAt": "2026-11-28T08:07:20.000Z",
+        "feedId": "liberation",
+        "sourceName": "Libération",
+        "category": "editos",
+        "score": 7.5,
+        "kind": "news",
+        "forcedCategory": "editos"
+      },
+      "article": {
+        "status": "ready_for_review",
+        "rejection_reason": "",
+        "title": "Marches féministes : quand les chiffres refusent d’entrer sagement dans mes tableaux Excel",
+        "chapo": "En constatant la nouvelle journée de mobilisation dans une trentaine de villes, notre rédacteur en chef a sorti sa calculatrice. Résultat : la protestation manque manifestement de colonnes et de graphiques en camembert pour être prise au sérieux par la préfecture.",
+        "category": "editos",
+        "tags": [
+          "manifestation",
+          "mobilisation",
+          "chiffres",
+          "edito",
+          "bureaucratie"
+        ],
+        "seo_description": "L’édito de Jean-Eudes de la Manchette : pourquoi les rassemblements de rue manquent d’indicateurs de performance et de tableaux croisés dynamiques.",
+        "angle": "Évaluer l’ampleur des mobilisations féministes uniquement à travers des critères managériaux et des tableaux Excel déconnectés.",
+        "fictional_elements": [
+          "L'utilisation d'indicateurs de performance (KPI) pour mesurer les cortèges de rue",
+          "La proposition d'un tableur d'État unifié pour lisser les revendications sociales",
+          "La création d'un Haut Conseil aux Indicateurs de Rue"
+        ],
+        "author": "Jean-Eudes de la Manchette",
+        "image_prompt": "Dessin de presse montrant un homme en costume élégant assis à un bureau en plein milieu d'une rue, mesurant des silhouettes de manifestants floues au loin avec une règle graduée géante et un ordinateur portable.",
+        "image_alt": "Un homme à son bureau en pleine rue mesure un cortège au loin avec une grande règle.",
+        "quality_checks": {
+          "facts_verified": true,
+          "fiction_clearly_satirical": true,
+          "no_invented_quotes": true,
+          "no_personal_attack": true,
+          "original_angle": true,
+          "no_known_duplicate": true
+        },
+        "body": [
+          {
+            "kind": "h2",
+            "text": "Des cortèges qui manquent de rigueur comptable"
+          },
+          {
+            "kind": "p",
+            "text": "J’ai sorti mon double décimètre et mon tableur habituel ce samedi matin. Comme à chaque grande journée de mobilisation dans une trentaine de villes de France, on nous parle de raz de marée, de déferlante, de marée humaine. Des mots, mes chers lecteurs, toujours des mots. Mais où sont les métriques ? Où sont les diagrammes en cascade capables de nous indiquer si cette indignation collective s'inscrit dans les objectifs trimestriels de la nation ?"
+          },
+          {
+            "kind": "p",
+            "text": "Je le dis sans hésiter : manifester dans la rue sans fournir un compte-rendu au format CSV à la fin du parcours relève d'une légèreté coupable. Comment voulez-vous que les pouvoirs publics réagissent efficacement si les cortèges ne sont pas subdivisés en sous-commissions fonctionnelles dotées d'objectifs chiffrés à l'horizon 2035 ?"
+          },
+          {
+            "kind": "h2",
+            "text": "L'urgence d'une gouvernance par le camembert"
+          },
+          {
+            "kind": "p",
+            "text": "En observant les défilés depuis mon balcon du boulevard, une évidence m'a frappé : personne ne semble mesurer le rendement au mètre carré des pancartes. Certaines personnes marchent vite, d'autres s'arrêtent pour chanter. Sur le plan de l'optimisation des flux, c'est un véritable désastre opérationnel. Un cabinet de conseil digne de ce nom aurait immédiatement préconisé d'aligner les manifestants par ordre alphabétique ou par niveau de maîtrise du logiciel Excel."
+          },
+          {
+            "kind": "p",
+            "text": "Qu'on ne s'y trompe pas : je ne conteste pas le droit de battre le pavé. Je demande simplement que la colère populaire respecte une charte graphique claire. Pourquoi les slogans ne comportent-ils pas de notes de bas de page renvoyant à des études d'impact ? Pourquoi aucun rapport d'étonnement n'est-il remis au préfet à l'arrivée du cortège ?"
+          },
+          {
+            "kind": "h2",
+            "text": "Vers un baromètre unifié de l'indignation"
+          },
+          {
+            "kind": "p",
+            "text": "Pour remédier à cette imprécision chronique, je propose la création immédiate d'un Haut Conseil aux Indicateurs de Rue. Cet organisme indépendant serait chargé de distribuer des bons points de ponctualité aux cortèges et de délivrer une certification de qualité aux rassemblements les mieux organisés."
+          },
+          {
+            "kind": "p",
+            "text": "La lutte pour l'égalité est un sujet trop sérieux pour être abandonné à l'improvisation du samedi après-midi. Sans tableau croisé dynamique, une revendication n'est qu'un souhait. Il est temps que la rue apprenne enfin à parler le langage de l'administration : celui des colonnes, des ratios et des pourcentages arrondis au dixième."
+          }
+        ]
+      },
+      "issues": [
+        {
+          "code": "chapo_trop_long",
+          "msg": "Chapo: 264 caracteres (maximum 260)"
+        }
+      ],
+      "judge": null,
+      "status": "quarantined",
+      "retries": 0
     }
   ],
   "history": [
@@ -430,6 +527,18 @@
       ],
       "messages": [
         "Corps: 271 mots (minimum 280)"
+      ]
+    },
+    {
+      "ts": "2026-11-28T08:12:37.477Z",
+      "slot": "2026-11-28#0",
+      "topic": "«Un raz de marée féministe» : nouvelle journée de mobilisation en France, sous le signe des violences faites aux femmes",
+      "stage": "validation",
+      "reasons": [
+        "chapo_trop_long"
+      ],
+      "messages": [
+        "Chapo: 264 caracteres (maximum 260)"
       ]
     }
   ]
